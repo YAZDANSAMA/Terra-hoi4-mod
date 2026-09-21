@@ -1,0 +1,4105 @@
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = british_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	default = no
+	shared_focus = ABDA_abdacom
+
+	focus = {
+		id = crypto_bomb_focus
+		available = {}
+		
+		bypass = {}
+		
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = 0
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = tizard_mission_focus
+		available = {} 
+		prerequisite = { focus = crypto_bomb_focus }
+		prerequisite = { focus = radar_focus }
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 3
+		relative_position_id = crypto_bomb_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}	
+		completion_reward = {}
+	}
+	focus = {
+		id = maud_focus
+		available = {}
+		prerequisite = { focus = tizard_mission_focus }
+		icon = GFX_focus_wonderweapons
+		x = 0
+		y = 1
+		relative_position_id = tizard_mission_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	
+	
+	focus = {
+		id = limited_rearmament_focus
+		icon = GFX_goal_generic_build_tank
+		x = 5
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ENG_limited_rearmament_focus_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_motorized_focus
+		prerequisite = { focus = limited_rearmament_focus }
+		available = {}
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		relative_position_id = limited_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_tank_focus
+		prerequisite = { focus = ENG_motorized_focus }
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		relative_position_id = ENG_motorized_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_expand_the_secret_intelligence_service_focus 
+
+		prerequisite = { focus = limited_rearmament_focus }
+
+		dynamic = yes
+
+		available = {} 
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+
+		icon = GFX_focus_generic_secret_service_agency
+
+		x = 2
+		y = 1
+		relative_position_id = limited_rearmament_focus
+
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = air_defense_focus
+		prerequisite = { focus = limited_rearmament_focus }
+		available = {}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		icon = GFX_goal_generic_construct_military
+		x = -4
+		y = 1
+		relative_position_id = limited_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {}
+
+		complete_tooltip = {
+			air_experience = 25
+			if = {
+				limit = { has_country_flag = air_defense_focus_built_max }
+				custom_effect_tooltip = air_defense_focus_tt			
+			}
+			if = {
+				limit = { NOT = { has_country_flag = air_defense_focus_built_max } }
+				every_state = {
+					limit = { has_state_flag = ENG_air_defense_focus_built_2 }
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = radar_focus
+		prerequisite = { focus = air_defense_focus }
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 1
+		relative_position_id = air_defense_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = shadow_scheme_focus
+
+		prerequisite = { focus = limited_rearmament_focus }
+
+		available = {}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		
+		icon = GFX_goal_generic_construct_mil_factory
+
+		x = -2
+		y = 1
+		relative_position_id = limited_rearmament_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }	
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_industrial_focus
+		text = industrial_effort
+		prerequisite = { focus = shadow_scheme_focus }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = shadow_scheme_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_vickers_experimental_facility_focus 
+
+		prerequisite = { focus = uk_industrial_focus }
+
+		dynamic = yes
+
+		available = {} 
+
+		icon = GFX_focus_generic_aircraft_production
+
+		x = 1
+		y = 2
+		
+		relative_position_id = uk_industrial_focus
+
+		cost = 5
+
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_extra_tech_slot
+		text = extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = uk_industrial_focus }
+		x = 0
+		y = 1
+		relative_position_id = uk_industrial_focus
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = general_rearmament_focus
+		prerequisite = { focus = limited_rearmament_focus }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_consumer_goods
+		x = 5
+		y = 1
+		relative_position_id = limited_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_special_air_service
+		prerequisite = { focus = general_rearmament_focus }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_special_air_service
+		x = 0
+		y = 1
+		relative_position_id = general_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = ENG_parachute_regiments
+		prerequisite = { focus = ENG_special_air_service }
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 1
+		relative_position_id = ENG_special_air_service
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = royal_ordinance_focus
+		available = {} 
+		prerequisite = { focus = uk_industrial_focus }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 2
+		relative_position_id = uk_industrial_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		continue_if_invalid = yes
+
+		bypass = {}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = royal_ordinance_focus_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = uk_small_arms_focus
+		prerequisite = { focus = royal_ordinance_focus }
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		relative_position_id = royal_ordinance_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = UK_secret_focus
+		prerequisite = { focus = royal_ordinance_focus }
+		prerequisite = { focus = maud_focus }
+		icon = GFX_goal_generic_secret_weapon
+		x = -1
+		y = 1
+		relative_position_id = royal_ordinance_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = air_rearmament_focus
+		prerequisite = { focus = general_rearmament_focus }
+		icon = GFX_goal_generic_air_doctrine
+		x = -2
+		y = 2
+		relative_position_id = general_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = air_rearmament_focus_2AirBase }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}		
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_chiefs_of_staff_committee
+		prerequisite = { focus = air_rearmament_focus }
+		prerequisite = { focus = naval_rearmament_focus }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		x = 2
+		y = 1
+		relative_position_id = air_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = fighter_command_focus
+		prerequisite = { focus = air_rearmament_focus }
+		icon = GFX_goal_generic_air_fighter
+		x = -1
+		y = 2
+		relative_position_id = air_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	focus = {
+		id = bomber_command_focus
+		prerequisite = { focus = air_rearmament_focus }
+		icon = GFX_goal_generic_air_bomber
+		x = 0
+		y = 1
+		relative_position_id = air_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	focus = {
+		id = coastal_command_focus
+		prerequisite = { focus = air_rearmament_focus }
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 1
+		y = 2
+		relative_position_id = air_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	focus = {
+		id = aircraft_production_focus
+		prerequisite = { focus = fighter_command_focus focus = bomber_command_focus focus = coastal_command_focus }
+		icon = GFX_goal_generic_air_production
+		x = 1
+		y = 1
+		relative_position_id = fighter_command_focus
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+	focus = {
+		id = uk_jet_focus
+		prerequisite = { focus = aircraft_production_focus }
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		relative_position_id = aircraft_production_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = naval_rearmament_focus
+		prerequisite = { focus = general_rearmament_focus }
+		icon = GFX_goal_generic_construct_naval_dockyard 
+		x = 2
+		y = 2
+		relative_position_id = general_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ENG_naval_rearmament_focus_1dockyard }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_anti_non_contact_committee
+		prerequisite = { focus = naval_rearmament_focus }
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 2
+		y = 1
+		relative_position_id = naval_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_secure_the_imperial_shipping_routes
+		prerequisite = { focus = naval_rearmament_focus }
+		prerequisite = { focus = uk_service_focus }
+		icon = GFX_focus_generic_cruiser2
+		x = 3
+		y = 2
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = naval_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_destroyer_focus
+		prerequisite = { focus = naval_rearmament_focus }
+		icon = GFX_focus_generic_destroyer
+		x = -1
+		y = 2
+		relative_position_id = naval_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_a_s_warfare
+		prerequisite = { focus = uk_destroyer_focus }
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 0
+		y = 2
+		relative_position_id = uk_destroyer_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_convoy_focus
+		prerequisite = { focus = uk_destroyer_focus }
+		icon = GFX_goal_generic_navy_cruiser
+		x = -1
+		y = 1
+		relative_position_id = uk_destroyer_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_anti_submarine_training_school
+		prerequisite = { focus = uk_convoy_focus }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = uk_convoy_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_waves_focus
+		prerequisite = { focus = naval_rearmament_focus }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 1
+		y = 2
+		relative_position_id = naval_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	focus = {
+		id = uk_carrier_focus
+		prerequisite = { focus = uk_waves_focus }
+		mutually_exclusive = { focus = uk_battleship_focus }
+		icon = GFX_goal_generic_navy_carrier
+		x = -1
+		y = 1
+		relative_position_id = uk_waves_focus
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	focus = {
+		id = uk_battleship_focus
+		prerequisite = { focus = uk_waves_focus }
+		mutually_exclusive = { focus = uk_carrier_focus }
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 1
+		relative_position_id = uk_waves_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+	focus = {
+		id = uk_amphibious_focus
+		prerequisite = { focus = naval_rearmament_focus }
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 1
+		relative_position_id = naval_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes	
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_expand_the_repair_yards
+		prerequisite = { focus = uk_battleship_focus focus = uk_carrier_focus }
+		icon = GFX_goal_generic_production
+		x = -1
+		y = 1
+		relative_position_id = uk_battleship_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ENG_expand_the_repair_yards_2dockyard }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_vanguard
+		prerequisite = { focus = uk_battleship_focus }
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 2
+		relative_position_id = uk_battleship_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	focus = {
+		id = uk_empire_focus 
+		mutually_exclusive = { focus = ENG_revisit_colonial_policy }
+		available = {} 
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_revisit_colonial_policy
+				}
+			}
+		}
+
+		icon = GFX_goal_generic_national_unity
+		x = 29
+		y = 0
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "Man the Guns" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = uk_empire_focus
+					}
+				}
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}	
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_service_focus 
+		prerequisite = { focus = uk_empire_focus }
+		available = {} 
+		icon = GFX_goal_generic_position_armies
+		x = -2
+		y = 1
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "Man the Guns" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = uk_empire_focus
+					}
+				}
+			}
+		}
+		relative_position_id = uk_empire_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_mediterranean_focus 
+		prerequisite = { focus = uk_service_focus }
+		available = {} 
+		icon = GFX_goal_generic_construct_military
+		x = 5
+		y = 1
+		relative_position_id = uk_service_focus
+		cost = 10
+		completion_reward = {}
+	}
+	focus = {
+		id = uk_rock_focus 
+		prerequisite = { focus = uk_mediterranean_focus }
+		mutually_exclusive = { focus = uk_spain_focus }
+		available = {} 
+		icon = GFX_goal_generic_construct_military
+		x = -3
+		y = 1
+		relative_position_id = uk_mediterranean_focus
+		cost = 10
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_spain_focus
+
+		prerequisite = { focus = uk_mediterranean_focus }
+
+		mutually_exclusive = { focus = uk_rock_focus }
+
+		available = {} 
+		
+		icon = GFX_focus_generic_befriend_republican_spain_focus
+
+		x = -1
+		y = 1
+		relative_position_id = uk_mediterranean_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_protect_suez
+		prerequisite = { focus = uk_mediterranean_focus }
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 2
+		relative_position_id = uk_mediterranean_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		 
+		bypass = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_balkan_strategy
+		prerequisite = { focus = uk_protect_suez }
+		prerequisite = { focus = uk_malta_focus }
+		icon = GFX_goal_generic_improve_relations
+		available = {}
+		bypass = {}
+		x = 1
+		y = 1
+		relative_position_id = uk_protect_suez
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_sanction_italy_focus
+		available = {}
+		bypass = {}
+		prerequisite = { focus = uk_balkan_strategy }
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+		relative_position_id = uk_balkan_strategy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ENG_war_with_italy
+		available = {}
+		bypass = {}
+		will_lead_to_war_with = ITA
+		prerequisite = { focus = uk_sanction_italy_focus }
+		icon = GFX_focus_attack_italy
+		x = 0
+		y = 1
+		relative_position_id = uk_sanction_italy_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}	
+
+	focus = {
+		id = uk_turkey_focus
+
+		prerequisite = { focus = uk_protect_suez }
+
+		mutually_exclusive = { focus = uk_greece_focus }
+
+		available = {} 
+		
+		icon = GFX_focus_generic_befriend_turkey
+
+		x = -3
+		y = 1
+		relative_position_id = uk_protect_suez
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_greece_focus 
+
+		prerequisite = { focus = uk_protect_suez } 
+
+		mutually_exclusive = { focus = uk_turkey_focus }
+
+		available = {} 
+
+		icon = GFX_focus_generic_befriend_greece
+
+		x = -1
+		y = 1
+		relative_position_id = uk_protect_suez
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_malta_focus 
+		prerequisite = { focus = uk_mediterranean_focus }
+		available = {}		
+		icon = GFX_focus_generic_coastal_fort
+		x = 2
+		y = 2
+		relative_position_id = uk_mediterranean_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {}
+
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_revisit_colonial_policy
+		mutually_exclusive = { focus = uk_empire_focus }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = uk_empire_focus
+				}
+			}
+		}
+
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 34
+		y = 0
+
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = ENG_global_defense
+					has_country_leader = {
+					    character = ENG_winston_churchill
+					    ruling_only = yes
+					}
+				}
+			}
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_guide_the_colonies
+		prerequisite = { focus = ENG_revisit_colonial_policy }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_chi_british_cooperation
+		x = 3
+		y = 1
+		relative_position_id = ENG_revisit_colonial_policy
+
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_towards_dominion_independence
+		prerequisite = { focus = ENG_guide_the_colonies }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = -1
+		y = 1
+		relative_position_id = ENG_guide_the_colonies
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_foundations_for_an_indian_state
+		prerequisite = { focus = ENG_towards_dominion_independence }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_RAJ_all_india_forward_bloc
+		x = -1
+		y = 1
+		relative_position_id = ENG_towards_dominion_independence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+
+		complete_tooltip = {
+			RAJ = {
+				every_state = {
+					limit = { has_state_flag = ENG_foundations_for_an_indian_state_2IC }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_the_three_nation_solution
+		prerequisite = { focus = ENG_foundations_for_an_indian_state }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_RAJ_two_nation_theory
+		x = 1
+		y = 1
+		relative_position_id = ENG_foundations_for_an_indian_state
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		allow_branch = { NOT = { has_dlc = "Graveyard of Empires" } } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_towards_indian_independence
+		prerequisite = { focus = ENG_foundations_for_an_indian_state }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 0
+		y = 2
+		relative_position_id = ENG_foundations_for_an_indian_state
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_withdraw_from_contested_territories
+		prerequisite = { focus = ENG_guide_the_colonies }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		relative_position_id = ENG_guide_the_colonies
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_self_government_for_the_mediterranean
+		prerequisite = { focus = ENG_withdraw_from_contested_territories }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 1
+		relative_position_id = ENG_withdraw_from_contested_territories
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_self_government_for_africa
+		prerequisite = { focus = ENG_self_government_for_the_mediterranean }
+		available = {}
+
+		bypass = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 2
+		relative_position_id = ENG_self_government_for_the_mediterranean
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_self_government_for_the_middle_east
+		prerequisite = { focus = ENG_withdraw_from_contested_territories }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 1
+		relative_position_id = ENG_withdraw_from_contested_territories
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_self_government_for_the_americas
+		prerequisite = { focus = ENG_self_government_for_the_middle_east }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = ENG_self_government_for_the_middle_east
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_self_government_for_asia
+		prerequisite = { focus = ENG_self_government_for_the_americas }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = ENG_self_government_for_the_americas
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_decolonization
+		prerequisite = { focus = ENG_self_government_for_africa }
+		prerequisite = { focus = ENG_self_government_for_asia }
+		prerequisite = { focus = ENG_towards_indian_independence }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_decolonization
+		x = 0
+		y = 1
+		relative_position_id = ENG_self_government_for_africa
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_the_winds_of_change
+		prerequisite = { focus = ENG_decolonization }
+
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_devaluation
+		x = 0
+		y = 1
+		relative_position_id = ENG_decolonization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+
+	}
+
+	
+	
+	focus = {
+		id = uk_colonial_focus 
+		prerequisite = { focus = uk_service_focus }
+		icon = GFX_focus_research2
+		x = -5
+		y = 1
+		relative_position_id = uk_service_focus
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_asia_focus 
+		prerequisite = { focus = uk_colonial_focus }
+		
+		available = {}
+
+		icon = GFX_goal_generic_construct_civilian
+		x = -4
+		y = 1
+		relative_position_id = uk_colonial_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = uk_burma_focus
+		prerequisite = { focus = uk_asia_focus } 
+		available = {}
+
+		bypass = {}
+
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -2
+		y = 1
+		relative_position_id = uk_asia_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_sanction_japan_focus
+		available = {}
+		bypass = {}
+		prerequisite = { focus = uk_burma_focus }
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 4
+		relative_position_id = uk_burma_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_war_with_japan
+
+		available = {}
+
+		bypass = {}
+
+		will_lead_to_war_with = JAP
+
+		prerequisite = { focus = uk_sanction_japan_focus }
+		prerequisite = { focus = ENG_sarawakrangers_focus }
+		prerequisite = { focus = ENG_east_indies_fleet_focus }
+
+		icon = GFX_focus_attack_japan
+		x = 2
+		y = 1
+		relative_position_id = uk_sanction_japan_focus
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		completion_reward = {}
+
+	}
+
+
+	focus = {
+		id = singapore_focus
+		prerequisite = { focus = uk_asia_focus }
+		icon = GFX_focus_SWE_hedgehog_defense
+		x = 0
+		y = 1
+		relative_position_id = uk_asia_focus
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_royal_malay_regiment_focus
+
+		prerequisite = { focus = singapore_focus }
+
+		icon = GFX_focus_generic_manpower
+
+		x = -1
+		y = 1
+		relative_position_id = singapore_focus
+
+		mutually_exclusive = { focus = ENG_territorial_army_of_malaysia_focus }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available = {}
+
+		available_if_capitulated = no
+
+		bypass = {}
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_territorial_army_of_malaysia_focus
+
+		prerequisite = { focus = singapore_focus }
+
+		icon = GFX_focus_RAJ_indian_gurkhas
+
+		x = 1
+		y = 1
+		relative_position_id = singapore_focus
+
+		mutually_exclusive = { focus = ENG_royal_malay_regiment_focus }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available = {}
+
+		available_if_capitulated = no
+
+		bypass = {}
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = peninsular_focus
+		prerequisite = { focus = ENG_royal_malay_regiment_focus focus = ENG_territorial_army_of_malaysia_focus }
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 1
+		relative_position_id = ENG_royal_malay_regiment_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		available = {}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_sarawakrangers_focus 
+
+		prerequisite = { focus = peninsular_focus }
+
+		icon = GFX_focus_CHI_guerrilla_warfare
+
+		x = -1
+		y = 1
+		relative_position_id = peninsular_focus
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available = {}
+
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = hongkong_focus
+		prerequisite = { focus = uk_asia_focus }
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 1
+		relative_position_id = uk_asia_focus
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_south_east_asia_air_command_focus
+
+		prerequisite = { focus = hongkong_focus }
+
+		icon = GFX_focus_generic_air_bases
+
+		x = 0
+		y = 2
+		relative_position_id = hongkong_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		available_if_capitulated = no
+
+		bypass = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_east_indies_fleet_focus 
+
+		prerequisite = { focus = peninsular_focus }
+		prerequisite = { focus = ENG_south_east_asia_air_command_focus }
+
+		icon = GFX_focus_JAP_assure_superior_naval_quality
+
+		x = 1
+		y = 1
+		relative_position_id = peninsular_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = uk_china_focus 
+
+		prerequisite = { focus = ENG_south_east_asia_air_command_focus  }
+
+		available = {} 
+
+		cancel = {
+			CHI = { exists = no }
+		}
+
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+
+		x = 1
+		y = 1
+		relative_position_id = ENG_south_east_asia_air_command_focus
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = uk_commonwealth_focus 
+		prerequisite = { focus = uk_colonial_focus }
+
+		available = {}
+
+		bypass = {}
+
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+
+		x = 4
+		y = 1
+		relative_position_id = uk_colonial_focus
+
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_british_commonwealth_air_training_plan
+		prerequisite = { focus = uk_commonwealth_focus }
+		icon = GFX_goal_generic_air_fighter2
+		x = -1
+		y = 1
+		relative_position_id = uk_commonwealth_focus
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_india_focus 
+		prerequisite = { focus = uk_commonwealth_focus }
+		available = {} 
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -3
+		y = 1
+		relative_position_id = uk_commonwealth_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {}
+
+		complete_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = RAJ
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				every_state = { limit = { has_state_flag = ENG_uk_india_focus_2IC }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_india_focus_1IC }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				ENG_viceroy_reduce_autonomy_effect = yes
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = uk_free_india_focus 
+		prerequisite = { focus = uk_india_focus }
+		mutually_exclusive = { focus = ENG_indian_autonomy }
+		available = {} 
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = uk_india_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+	
+	
+	focus = {
+		id = uk_australia_focus 
+		prerequisite = { focus = uk_commonwealth_focus }
+		available = {}
+
+		bypass = {}
+		icon = GFX_goal_generic_construct_civilian
+		x = 1
+		y = 1
+		relative_position_id = uk_commonwealth_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = AST
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				every_state = { limit = { has_state_flag = ENG_uk_australia_focus_1IC }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_australia_focus_2dockyards }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_australia_focus_1dockyard }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = uk_australia_focus
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = uk_new_zealand_focus 
+		prerequisite = { focus = uk_australia_focus }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		relative_position_id = uk_australia_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = NZL
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				every_state = { limit = { has_state_flag = ENG_uk_new_zealand_focus_1IC }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_new_zealand_focus_2dockyards }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_new_zealand_focus_1dockyard }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = uk_new_zealand_focus
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = uk_canada_focus 
+		prerequisite = { focus = uk_commonwealth_focus }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 3
+		relative_position_id = uk_commonwealth_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = CAN
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				every_state = { limit = { has_state_flag = ENG_uk_canada_focus_2IC }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_canada_focus_1IC }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_canada_focus_1dockyard }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = uk_canada_focus
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = uk_south_africa_focus
+		prerequisite = { focus = uk_commonwealth_focus }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 3
+		relative_position_id = uk_commonwealth_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = SAF
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				every_state = { limit = { has_state_flag = ENG_uk_south_africa_focus_2IC }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_south_africa_focus_1IC }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = { limit = { has_state_flag = ENG_uk_south_africa_focus_1dockyard }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = uk_south_africa_focus
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_indian_autonomy
+		prerequisite = { focus = uk_india_focus }
+		mutually_exclusive = { focus = uk_free_india_focus }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_revisit_colonial_policy
+				}
+			}
+		}
+
+		available = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_focus_RAJ_british_investors
+
+		x = 1
+		y = 1
+		relative_position_id = uk_india_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			
+			
+			
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_imperial_conference
+		prerequisite = { focus = uk_canada_focus }
+		prerequisite = { focus = uk_new_zealand_focus }
+		prerequisite = { focus = uk_south_africa_focus }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_revisit_colonial_policy
+				}
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		continue_if_invalid = no
+
+		icon = GFX_goal_generic_national_unity
+
+		x = 0
+		y = 2
+		relative_position_id = uk_new_zealand_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			
+			
+			
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_imperial_federation
+		prerequisite = { focus = ENG_imperial_conference }
+		available = {}
+
+		icon = GFX_focus_eng_imperial_federation
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_imperial_conference
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			
+			
+			
+		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_steady_as_she_goes
+		mutually_exclusive = { focus = ENG_a_change_in_course }
+		icon = GFX_goal_support_democracy
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_a_change_in_course
+				}
+			}
+		}
+
+		x = 14
+		y = 0
+		relative_position_id = ENG_revisit_colonial_policy
+
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_dlc = "Man the Guns"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = uk_empire_focus
+			}
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_home_defence
+			}
+		}
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ENG_abdication_crisis_normal_marriage
+					has_country_flag = ENG_abdication_crisis_morganatic_marriage
+				}
+			}
+		}
+
+		available = {}
+		cancel_if_invalid = yes
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_global_defense
+		prerequisite = { focus = ENG_steady_as_she_goes }
+		mutually_exclusive = { focus = ENG_home_defence }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_home_defence
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+			}
+		}
+
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_global_defense
+		x = -4
+		y = 1
+		relative_position_id = ENG_steady_as_she_goes
+
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
+		}
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_every_man_will_do_his_duty
+		prerequisite = { focus = ENG_global_defense }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = -1
+		y = 1
+		relative_position_id = ENG_global_defense
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_motion_of_no_confidence
+		prerequisite = { focus = ENG_global_defense }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_motion_of_no_confidence
+		x = 1
+		y = 1
+		relative_position_id = ENG_global_defense
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_no_further_appeasement
+		prerequisite = { focus = ENG_every_man_will_do_his_duty }
+		prerequisite = { focus = ENG_motion_of_no_confidence }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		relative_position_id = ENG_motion_of_no_confidence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_kickstart_the_war_industry
+		prerequisite = { focus = ENG_no_further_appeasement }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -3
+		y = 1
+		relative_position_id = ENG_no_further_appeasement
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = kickstart_the_war_industry_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_secure_the_oil_imports
+
+		prerequisite = { focus = ENG_kickstart_the_war_industry }
+
+		available = {}
+
+		will_lead_to_war_with = IRQ
+		will_lead_to_war_with = PER
+		will_lead_to_war_with = HOL
+		will_lead_to_war_with = VEN
+		will_lead_to_war_with = CRC
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_kickstart_the_war_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_maintaining_imperial_integrity
+		prerequisite = { focus = ENG_no_further_appeasement }
+		mutually_exclusive = { focus = ENG_maintaining_the_balance_of_power }
+		available = {}
+		bypass = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_chi_british_cooperation
+		x = -1
+		y = 1
+		relative_position_id = ENG_no_further_appeasement
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_enforce_the_naval_treaties
+		prerequisite = { focus = ENG_maintaining_imperial_integrity }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		relative_position_id = ENG_maintaining_imperial_integrity
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_maintaining_the_balance_of_power
+		prerequisite = { focus = ENG_no_further_appeasement }
+		mutually_exclusive = { focus = ENG_maintaining_imperial_integrity }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		relative_position_id = ENG_no_further_appeasement
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_continental_intervention
+		prerequisite = { focus = ENG_maintaining_the_balance_of_power }
+		available = {}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		relative_position_id = ENG_maintaining_the_balance_of_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {}
+	}
+
+	
+
+	
+
+	focus = {
+		id = ENG_home_defence
+		prerequisite = { focus = ENG_steady_as_she_goes }
+		mutually_exclusive = { focus = ENG_global_defense }
+		icon = GFX_focus_generic_home_defense
+
+		x = 5
+		y = 1
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_dlc = "Man the Guns"
+				has_completed_focus = ENG_home_defence
+			}
+		}
+		relative_position_id = ENG_steady_as_she_goes
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_global_defense
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
+
+		completion_reward = {}
+
+	}
+
+	
+
+	focus = {
+		id = uk_iraq_focus
+		available = {} 
+
+		bypass = {}
+
+		will_lead_to_war_with = IRQ
+		prerequisite = { focus = ENG_home_defence }
+		icon = GFX_focus_generic_attack_iraq
+		x = -6
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_home_defence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+	focus = {
+		id = uk_iran_focus
+		prerequisite = { focus = uk_iraq_focus }
+		icon = GFX_focus_generic_attack_iran
+		x = 0
+		y = 1
+		relative_position_id = uk_iraq_focus
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 0
+				PER = {
+					has_government = ROOT
+				}
+			}	
+		}
+		will_lead_to_war_with = PER
+		available = {}
+
+		bypass = {}
+		
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ENG_embargo_ussr 
+		prerequisite = { focus = uk_iran_focus focus = ENG_no_further_appeasement }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_a_change_in_course
+				}
+			}
+		}
+
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
+		}
+
+		available = {} 
+
+		bypass = {}
+
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+		relative_position_id = uk_iran_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ENG_war_with_ussr 
+		prerequisite = { focus = ENG_embargo_ussr }
+		available = {} 
+		bypass = {}
+		will_lead_to_war_with = SOV
+		icon = GFX_focus_attack_soviet
+		x = 0
+		y = 1
+		relative_position_id = ENG_embargo_ussr
+		cost = 10
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_issue_gasmasks
+		available = {}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_home_defence }
+		icon = GFX_goal_generic_construct_military
+		x = 4
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_home_defence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_military_training_act
+		available = {}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_issue_gasmasks }
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 0
+		y = 1
+		relative_position_id = ENG_issue_gasmasks
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_embargo_germany
+		available = {}
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_military_training_act }
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+		relative_position_id = ENG_military_training_act
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_war_with_germany
+		available = {}
+		bypass = {}
+		will_lead_to_war_with = GER
+		prerequisite = { focus = ENG_embargo_germany }
+		icon = GFX_focus_attack_germany
+		x = 0
+		y = 1
+		relative_position_id = ENG_embargo_germany
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	
+
+	
+
+	focus = {
+		id = uk_scandinavian_focus
+		available = {}
+		prerequisite = { focus = ENG_home_defence }
+		icon = GFX_focus_generic_attack_nordic_territory
+		x = -3
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_home_defence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_swedish_intervention
+		available = {}
+
+		will_lead_to_war_with = SWE
+
+		prerequisite = { focus = uk_scandinavian_focus }
+		icon = GFX_focus_generic_attack_sweden
+
+		x = -1
+		y = 1
+		relative_position_id = uk_scandinavian_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_norwegian_intervention
+
+		available = {}	
+
+		will_lead_to_war_with = NOR
+
+		prerequisite = { focus = uk_scandinavian_focus }
+
+		icon = GFX_focus_generic_attack_norway
+
+		x = 0
+		y = 2
+		relative_position_id = uk_scandinavian_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_danish_intervention
+		available = {}	
+
+		will_lead_to_war_with = DEN
+
+		prerequisite = { focus = uk_scandinavian_focus }
+
+		icon = GFX_focus_generic_attack_denmark
+
+		x = 1
+		y = 1
+		relative_position_id = uk_scandinavian_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		completion_reward = {}
+
+	}
+
+	
+
+	focus = {
+		id = ENG_prepare_for_the_inevitable
+		available = {}		
+		prerequisite = { focus = ENG_home_defence }
+
+		icon = GFX_goal_generic_construction
+
+		x = -1
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_home_defence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }	
+
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_benelux_intervention
+		available = {}
+		prerequisite = { focus = ENG_home_defence }
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_home_defence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_belgium_security
+		available = {}		
+		prerequisite = { focus = ENG_benelux_intervention }
+		icon = GFX_goal_generic_attack_allies
+		x = -1
+		y = 1
+		relative_position_id = ENG_benelux_intervention
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+	focus = {
+		id = ENG_dutch_security
+		available = {}		
+		will_lead_to_war_with = HOL
+		prerequisite = { focus = ENG_benelux_intervention }
+		icon = GFX_goal_generic_attack_allies
+		x = 1
+		y = 1
+		relative_position_id = ENG_benelux_intervention
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	
+	
+
+	
+
+	focus = {
+		id = ENG_a_change_in_course
+		mutually_exclusive = { focus = ENG_steady_as_she_goes }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_steady_as_she_goes
+				}
+			}
+		}
+
+		available = {}
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 18
+		y = 0
+		relative_position_id = ENG_steady_as_she_goes
+
+		offset = {
+			x = -18
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_a_change_in_course
+			}
+		}
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_the_kings_party
+			}
+		}
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_organize_the_blackshirts
+				has_completed_focus = uk_empire_focus
+			}
+		}
+
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_the_kings_party
+		prerequisite = { focus = ENG_a_change_in_course }
+		mutually_exclusive = { focus = ENG_organize_the_blackshirts focus = ENG_concessions_to_the_trade_unions }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_organize_the_blackshirts
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+						has_completed_focus = ENG_steady_as_she_goes
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_the_kings_party
+			}
+		}
+
+		available = {}
+
+		icon = GFX_focus_eng_the_kings_party
+
+		x = -5
+		y = 1
+		relative_position_id = ENG_a_change_in_course
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_reassess_continental_commitments
+		prerequisite = { focus = ENG_the_kings_party }
+		available = {}
+		icon = GFX_goal_generic_position_armies
+		x = -1
+		y = 1
+		relative_position_id = ENG_the_kings_party
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_isolate_the_mediterranean_threat
+		prerequisite = { focus = ENG_reassess_continental_commitments }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		relative_position_id = ENG_reassess_continental_commitments
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_alliance_with_germany
+		prerequisite = { focus = ENG_isolate_the_mediterranean_threat }
+		mutually_exclusive = { focus = ENG_noninterference_treaty_with_germany }
+		available = {}
+		bypass = {}
+		icon = GFX_focus_chi_mission_to_germany
+		x = -1
+		y = 1
+		relative_position_id = ENG_isolate_the_mediterranean_threat
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_noninterference_treaty_with_germany
+		prerequisite = { focus = ENG_isolate_the_mediterranean_threat }
+		mutually_exclusive = { focus = ENG_alliance_with_germany }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		relative_position_id = ENG_isolate_the_mediterranean_threat
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_take_out_the_regia_marina
+		prerequisite = { focus = ENG_noninterference_treaty_with_germany focus = ENG_alliance_with_germany }
+		available = {}
+		icon = GFX_goal_generic_major_war
+		will_lead_to_war_with = ITA
+		x = -1
+		y = 1
+		relative_position_id = ENG_noninterference_treaty_with_germany
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_organize_the_blackshirts
+		prerequisite = { focus = ENG_a_change_in_course }
+		mutually_exclusive = { focus = ENG_the_kings_party focus = ENG_concessions_to_the_trade_unions }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_the_kings_party
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+						has_completed_focus = ENG_steady_as_she_goes
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_organize_the_blackshirts
+			}
+		}
+
+		available = {}
+		icon = GFX_focus_eng_organise_the_blackshirts
+		x = -1
+		y = 1
+		relative_position_id = ENG_a_change_in_course
+		cancel_if_invalid = yes
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ENG_abdication_crisis_normal_marriage
+					has_country_flag = ENG_abdication_crisis_morganatic_marriage
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_the_british_path_to_fascism
+		prerequisite = { focus = ENG_organize_the_blackshirts }
+		available = {}
+		icon = GFX_goal_support_fascism
+		x = 1
+		y = 1
+		relative_position_id = ENG_organize_the_blackshirts
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_secure_the_italian_alliance
+		prerequisite = { focus = ENG_the_british_path_to_fascism }
+
+		available = {}
+
+		bypass = {}
+
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 1
+		relative_position_id = ENG_the_british_path_to_fascism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}	
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_gibraltar_for_spanish_support
+		prerequisite = { focus = ENG_secure_the_italian_alliance }
+		mutually_exclusive = { focus = ENG_pre_empt_spanish_alignment }
+		available = {}
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 1
+		relative_position_id = ENG_secure_the_italian_alliance
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_pre_empt_spanish_alignment
+		prerequisite = { focus = ENG_secure_the_italian_alliance }
+		mutually_exclusive = { focus = ENG_gibraltar_for_spanish_support }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 1
+		relative_position_id = ENG_secure_the_italian_alliance
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				if = {
+					limit = {
+						NOT = { has_dlc = "La Resistance" }
+					}
+					any_country = {
+						original_tag = SPR
+						has_government = fascism
+						exists = yes
+						is_in_faction_with = GER
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "La Resistance"
+					}
+					SPA = {
+						exists = yes
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_prevent_a_continental_hegemony
+		prerequisite = { focus = ENG_gibraltar_for_spanish_support focus = ENG_pre_empt_spanish_alignment }
+		available = {}
+		will_lead_to_war_with = GER
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 1
+		relative_position_id = ENG_gibraltar_for_spanish_support
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_enact_the_mosley_manifesto
+		prerequisite = { focus = ENG_the_british_path_to_fascism }
+		available = {}
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 1
+		relative_position_id = ENG_the_british_path_to_fascism
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = enact_the_mosley_memorandum_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = { has_state_flag = enact_the_mosley_memorandum_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_god_save_the_king
+		prerequisite = { focus = ENG_the_kings_party focus = ENG_organize_the_blackshirts }
+		available = {}
+		icon = GFX_focus_eng_god_save_the_king
+		x = 2
+		y = 1
+		relative_position_id = ENG_the_kings_party
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_ceylon_forward_operating_base
+		prerequisite = { focus = ENG_god_save_the_king }
+		available = {}
+		bypass = {}
+
+		icon = GFX_goal_generic_position_armies
+		x = -1
+		y = 1
+		relative_position_id = ENG_god_save_the_king
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_imperial_conscription
+		prerequisite = { focus = ENG_ceylon_forward_operating_base }	
+		available = {}
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 0
+		y = 2
+		relative_position_id = ENG_ceylon_forward_operating_base
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_MANPOWER}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_reclaim_burma
+		prerequisite = { focus = ENG_imperial_conscription }	
+		available = {}
+		bypass = {}
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		will_lead_to_war_with = BRM
+		x = 1
+		y = 2
+		relative_position_id = ENG_imperial_conscription
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_pre_empt_the_ideological_threat
+		prerequisite = { focus = ENG_imperial_conscription focus = ENG_take_out_the_regia_marina }	
+		available = {}
+		will_lead_to_war_with = SOU
+		icon = GFX_focus_attack_soviet
+		x = -2
+		y = 1
+		relative_position_id = ENG_imperial_conscription
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_expose_the_belly_of_the_bear
+		prerequisite = { focus = ENG_pre_empt_the_ideological_threat }	
+		available = {}
+		will_lead_to_war_with = PER
+		will_lead_to_war_with = AFG
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = -1
+		y = 1
+		relative_position_id = ENG_pre_empt_the_ideological_threat
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_reclaim_the_jewel_in_the_crown
+		prerequisite = { focus = ENG_imperial_conscription }	
+		available = {}
+		bypass = {}
+		icon = GFX_focus_RAJ_british_investors
+		will_lead_to_war_with = RAJ
+		will_lead_to_war_with = PAK
+		will_lead_to_war_with = BAN
+		x = -1
+		y = 2
+		relative_position_id = ENG_imperial_conscription
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_consolidate_the_british_isles
+		prerequisite = { focus = ENG_god_save_the_king }	
+		available = {}
+		bypass = {}
+		will_lead_to_war_with = IRE
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0
+		y = 2
+		relative_position_id = ENG_god_save_the_king
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_unite_the_anglosphere
+		
+		prerequisite = { focus = ENG_imperial_conscription }
+		prerequisite = { focus = ENG_bring_the_dominions_back_into_the_fold }
+		available = {}
+		will_lead_to_war_with = USA
+		icon = GFX_focus_eng_unite_the_anglosphere
+		x = 1
+		y = 2
+		relative_position_id = ENG_consolidate_the_british_isles
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_appeal_to_imperial_loyalists
+		prerequisite = { focus = ENG_god_save_the_king }	
+		available = {}
+		bypass = {}
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 1
+		relative_position_id = ENG_god_save_the_king
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_bring_the_dominions_back_into_the_fold
+		prerequisite = { focus = ENG_appeal_to_imperial_loyalists }	
+		available = {}
+		bypass = {}
+		will_lead_to_war_with = CAN
+		will_lead_to_war_with = SAF
+		will_lead_to_war_with = AST
+		will_lead_to_war_with = NZL
+		icon = GFX_focus_eng_bring_the_dominions_back_into_the_fold
+		x = 0
+		y = 2
+		relative_position_id = ENG_appeal_to_imperial_loyalists
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_the_sun_never_sets
+		prerequisite = { focus = ENG_bring_the_dominions_back_into_the_fold }	
+		available = {}
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 1
+		y = 2
+		relative_position_id = ENG_bring_the_dominions_back_into_the_fold
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_pre_empt_the_strategic_threat
+		prerequisite = { focus = ENG_bring_the_dominions_back_into_the_fold }	
+		available = {}
+		bypass = {}
+		will_lead_to_war_with = JAP
+		icon = GFX_focus_attack_japan
+		x = 2
+		y = 1
+		relative_position_id = ENG_bring_the_dominions_back_into_the_fold
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_concessions_to_the_trade_unions
+		prerequisite = { focus = ENG_a_change_in_course }
+		mutually_exclusive = { focus = ENG_the_kings_party focus = ENG_organize_the_blackshirts }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_the_kings_party
+						has_completed_focus = ENG_organize_the_blackshirts
+						has_completed_focus = ENG_steady_as_she_goes
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}
+
+		available = {}
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 5
+		y = 1
+		relative_position_id = ENG_a_change_in_course
+		cancel_if_invalid = yes
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ENG_abdication_crisis_normal_marriage
+					has_country_flag = ENG_abdication_crisis_morganatic_marriage
+				}
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = uk_empire_focus
+			}
+		}
+		search_filters = {FOCUS_FILTER_STABILITY}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_move_to_secure_the_dominions
+		prerequisite = { focus = ENG_organize_the_blackshirts focus = ENG_concessions_to_the_trade_unions }
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}
+
+		available = {}
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 3
+		y = 1
+		relative_position_id = ENG_organize_the_blackshirts
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_the_fate_of_the_royal_family
+		prerequisite = { focus = ENG_concessions_to_the_trade_unions }
+		available = {}
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = -1
+		y = 1
+		relative_position_id = ENG_concessions_to_the_trade_unions
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_eliminate_the_upper_class
+		prerequisite = { focus = ENG_concessions_to_the_trade_unions }
+		available = {}
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = ENG_concessions_to_the_trade_unions
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_for_the_good_of_the_revolution
+		prerequisite = { focus = ENG_the_fate_of_the_royal_family }
+		prerequisite = { focus = ENG_eliminate_the_upper_class }
+		available = {}
+		icon = GFX_focus_generic_soviet_politics
+		x = 1
+		y = 1
+		relative_position_id = ENG_the_fate_of_the_royal_family
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_the_british_communist_alternative
+		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		mutually_exclusive = { focus = ENG_follow_moscow }
+
+		available = {}
+
+		icon = GFX_focus_generic_join_comintern
+		x = -2
+		y = 1
+		relative_position_id = ENG_for_the_good_of_the_revolution
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {FOCUS_FILTER_STABILITY}	
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = ENG_enforce_decolonization
+		prerequisite = { focus = ENG_the_british_communist_alternative }
+		mutually_exclusive = { focus = ENG_reach_out_across_the_channel }
+		available = {}
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		relative_position_id = ENG_the_british_communist_alternative
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_reach_out_across_the_channel
+		prerequisite = { focus = ENG_the_british_communist_alternative }
+		mutually_exclusive = { focus = ENG_enforce_decolonization }
+		available = {}
+		icon = GFX_goal_tripartite_pact
+		x = 1
+		y = 1
+		relative_position_id = ENG_the_british_communist_alternative
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_soviet_cooperation
+		prerequisite = { focus = ENG_enforce_decolonization focus = ENG_reach_out_across_the_channel }
+		mutually_exclusive = { focus = ENG_the_one_true_revolution }
+		available = {}
+		bypass = {}
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 0
+		y = 1
+		relative_position_id = ENG_enforce_decolonization
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_the_one_true_revolution
+		prerequisite = { focus = ENG_enforce_decolonization focus = ENG_reach_out_across_the_channel }
+		mutually_exclusive = { focus = ENG_soviet_cooperation }
+		available = {}
+		bypass = {}
+		will_lead_to_war_with = SOU
+		icon = GFX_focus_attack_soviet
+		x = 0
+		y = 1
+		relative_position_id = ENG_reach_out_across_the_channel
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_follow_moscow
+		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		mutually_exclusive = { focus = ENG_the_british_communist_alternative }
+		available = {}
+		bypass = {}
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 1
+		relative_position_id = ENG_for_the_good_of_the_revolution
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {FOCUS_FILTER_STABILITY}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_tackle_fascism
+		prerequisite = { focus = ENG_follow_moscow }
+		mutually_exclusive = { focus = ENG_tackle_capitalism }
+		available = {}
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = -1
+		y = 1
+		relative_position_id = ENG_follow_moscow
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_preparing_the_second_front
+		prerequisite = { focus = ENG_tackle_fascism }
+		available = {}
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 1
+		relative_position_id = ENG_tackle_fascism
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_tackle_capitalism
+		prerequisite = { focus = ENG_follow_moscow }
+		mutually_exclusive = { focus = ENG_tackle_fascism }
+		available = {}
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = 1
+		y = 1
+		relative_position_id = ENG_follow_moscow
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_bermuda_invasion_launch_point
+		prerequisite = { focus = ENG_tackle_capitalism }
+		available = {}
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = ENG_tackle_capitalism
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_crush_the_dream
+		prerequisite = { focus = ENG_bermuda_invasion_launch_point }
+		available = {}
+		will_lead_to_war_with = USA
+		icon = GFX_focus_eng_crush_the_dream
+		x = 0
+		y = 1
+		relative_position_id = ENG_bermuda_invasion_launch_point
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_socialist_science_pool
+		prerequisite = { focus = ENG_follow_moscow }
+		available = {}
+		icon = GFX_focus_generic_socialist_science
+		x = 3
+		y = 1
+		relative_position_id = ENG_follow_moscow
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = ENG_liberate_the_home_of_marx
+		prerequisite = { focus = ENG_the_one_true_revolution focus = ENG_preparing_the_second_front }
+		available = {}
+		will_lead_to_war_with = GER
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		x = 1
+		y = 1
+		relative_position_id = ENG_the_one_true_revolution
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ENG_spirit_of_the_industrial_revolution
+		prerequisite = { focus = ENG_soviet_cooperation focus = ENG_liberate_the_home_of_marx focus = ENG_crush_the_dream }
+		available = {}
+		icon = GFX_goal_generic_soviet_construction
+		x = -3
+		y = 1
+		relative_position_id = ENG_liberate_the_home_of_marx
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {}
+	}
+
+}

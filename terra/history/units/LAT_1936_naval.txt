@@ -1,0 +1,76 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Laterano Fleet"			
+		naval_base = 8243
+		task_force = {
+			name = "Laterano Fleet"
+			location = 8243
+			
+						ship = { name = "Kelajahariat" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Perjatangang" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Pensir" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Bulap" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Cintu" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Legenjelajag" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Tramhariasji" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Apintang" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Tramhariasji 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Lelat" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Padik" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Anah" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Toma" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Lelat 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Trang" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Bahu" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Buari" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Pindelak" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Senaka" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Perjatangang 2" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Keramain" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Cintuahang" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Nafasaris" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Keriat" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Trama" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Pohonkepulap" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Toko" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Tebing" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Takuman" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Legenci" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Nafasaris 2" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Daung" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Cintuahang 2" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Peruhat" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Cintu 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Pensir 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Sensilaut" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Penci" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Periata" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Anah 2" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Ayaremi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Ayaremi 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Perjatangang 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Mulit" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Bulap 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Gung" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Penci 2" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+			ship = { name = "Peruhat 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Pindelak 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT version_name = "Purgai Class" } }	}
+			ship = { name = "Toko 2" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "Buari Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

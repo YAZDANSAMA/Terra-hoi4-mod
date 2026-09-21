@@ -1,0 +1,7478 @@
+focus_tree = {
+	id = polish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = POL
+			OR = {
+				has_dlc = "Poland: United and Ready"
+				has_dlc = "No Step Back"
+			}
+		}
+	}
+	default = no
+
+
+	
+	
+	
+
+	focus = {
+		id = POL_the_four_year_plan
+		icon = GFX_focus_POL_the_four_year_plan
+		x = 2
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_additional_research_slot1
+		icon = GFX_focus_research
+		prerequisite = { focus = POL_the_four_year_plan }
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_central_region_strategy
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = POL_the_four_year_plan }
+		x = 4
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_start_central_industrial_region_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_start_central_industrial_region_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = POL_central_region_strategy
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expansion_of_new_towns
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = POL_central_region_strategy }
+		x = 2
+		y = 1
+		relative_position_id = POL_central_region_strategy
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_expansion_of_new_towns_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_expansion_of_new_towns_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_start_central_industrial_region
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = POL_expansion_of_new_towns }
+		x = 0
+		y = 1
+		relative_position_id = POL_expansion_of_new_towns
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_start_central_industrial_region_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+
+	}
+	
+	focus = {
+		id = POL_expand_central_industrial_region
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = POL_start_central_industrial_region }
+		x = 0
+		y = 1
+		relative_position_id = POL_start_central_industrial_region
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_start_central_industrial_region_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_start_central_industrial_region_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_katowice_mines
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = POL_expansion_of_new_towns }
+		x = 2
+		y = 1
+		relative_position_id = POL_expansion_of_new_towns
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_additional_research_slot2
+		icon = GFX_focus_research
+		prerequisite = { focus = POL_expansion_of_new_towns }
+	
+		available = {}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		x = 4
+		y = 1
+		relative_position_id = POL_expansion_of_new_towns
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_ideological_fanaticism
+		icon = GFX_focus_POL_nationalist_education
+		prerequisite = { focus = POL_additional_research_slot2 }
+		mutually_exclusive = { focus = POL_abolish_segregated_seating }
+		available = {}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		x = -2
+		y = 1
+		relative_position_id = POL_additional_research_slot2
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_abolish_segregated_seating
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = POL_additional_research_slot2 }
+		mutually_exclusive = { focus = POL_ideological_fanaticism }
+		available = {}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+		x = 0
+		y = 1
+		relative_position_id = POL_additional_research_slot2
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_fill_the_railways_gaps
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_the_four_year_plan }
+		x = 0
+		y = 1
+		cost = 10 
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_national_defence_fund
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = POL_fill_the_railways_gaps }
+		x = 0
+		y = 1
+		relative_position_id = POL_fill_the_railways_gaps
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_central_defence_of_poland
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_fill_the_railways_gaps focus = POL_central_region_strategy }
+		x = 2
+		y = 1
+		relative_position_id = POL_fill_the_railways_gaps
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_develop_upper_silesia
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = POL_central_defence_of_poland }
+		x = 0
+		y = 1
+		relative_position_id = POL_central_defence_of_poland
+		cost = 5
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_develop_upper_silesia_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_agrarian_reform
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = POL_fill_the_railways_gaps }
+		x = -1
+		y = 2
+		relative_position_id = POL_fill_the_railways_gaps
+		cost = 10
+
+		cancelable = no
+
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		available = {}
+		
+		bypass = {}
+
+		select_effect = {
+			if = {
+				limit = {
+					has_active_mission = POL_looming_peasants_strike_mission
+				}
+				add_days_mission_timeout  = {
+					mission = POL_looming_peasants_strike_mission
+					days = 70
+				}
+			}
+			if = {
+				limit = {
+					has_active_mission = POL_peasants_strike
+				}
+				add_days_mission_timeout  = {
+					mission = POL_peasants_strike
+					days = 70
+				}
+			}
+		}
+
+		completion_reward = {}		
+	}
+	
+	focus = {
+		id = POL_invest_in_eastern_poland
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = POL_agrarian_reform focus = POL_develop_upper_silesia }
+		x = 0
+		y = 2
+		relative_position_id = POL_national_defence_fund
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_develop_east_poland_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_develop_east_poland_2 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_develop_east_poland_3 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_develop_east_poland_4 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invest_in_the_old_polish_region
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = POL_central_region_strategy }
+		x = 0
+		y = 1
+		relative_position_id = POL_central_region_strategy
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_invest_in_the_old_polish_region_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_modernize_congressional_factories
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = POL_invest_in_the_old_polish_region }
+		x = 0
+		y = 1
+		relative_position_id = POL_invest_in_the_old_polish_region
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				limit = { has_state_flag = POL_modernize_congressional_factories_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_modernize_congressional_factories_2 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = POL_modernize_congressional_factories_3 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_warsaw_main_railway_station
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = POL_modernize_congressional_factories }
+		x = 0
+		y = 1
+		relative_position_id = POL_modernize_congressional_factories
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			add_to_variable = {
+				var = POL_investments_var
+				value = 1
+			}
+			random_state = {
+				prioritize = { 10 }
+				limit = { has_state_flag = POL_warsaw_main_railway_station_1 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+			
+	}
+
+	
+	
+	
+
+
+	focus = {
+		id = POL_prepare_for_the_next_war
+		icon = GFX_goal_generic_build_tank
+		
+		x = 23
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_new_military_academy
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = POL_prepare_for_the_next_war }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		x = 0
+		y = 1
+		relative_position_id = POL_prepare_for_the_next_war
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_standardisation_of_equipment
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = POL_new_military_academy }
+		available = {}
+		
+		x = 0
+		y = 2
+		relative_position_id = POL_new_military_academy
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_army_modernisation
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = POL_standardisation_of_equipment }
+		
+		x = -3
+		y = 1
+		relative_position_id = POL_standardisation_of_equipment
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_modernising_the_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = POL_army_modernisation }
+		mutually_exclusive = { focus = POL_attract_foreign_motors }
+		
+		x = -3
+		y = 1
+		relative_position_id = POL_army_modernisation
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_attract_foreign_motors
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = POL_army_modernisation }
+		mutually_exclusive = { focus = POL_modernising_the_cavalry }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_army_modernisation
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_study_foreign_tanks
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = POL_modernising_the_cavalry focus = POL_attract_foreign_motors }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_modernising_the_cavalry
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_cruiser_tank_experiments
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = POL_study_foreign_tanks }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_study_foreign_tanks
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_artillery_modernisation
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = POL_army_modernisation }
+		
+		x = 3
+		y = 1
+		relative_position_id = POL_army_modernisation
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_tank_guns
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = POL_army_modernisation }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_army_modernisation
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_blitz_vehicles
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = POL_study_foreign_tanks }
+		prerequisite = { focus = POL_anti_tank_guns }
+		
+		x = 4
+		y = 1
+		relative_position_id = POL_study_foreign_tanks
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_adaptive_designs
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = POL_attract_foreign_motors }
+		prerequisite = { focus = POL_anti_tank_guns }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_attract_foreign_motors
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+
+	
+	
+	
+
+
+	focus = {
+		id = POL_air_base_expansion
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = POL_standardisation_of_equipment }
+		relative_position_id = POL_standardisation_of_equipment
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		x = 3
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = POL_air_base_expansion_1 }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_fighter_modernisation
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = POL_air_base_expansion }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_air_base_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = POL_air_innovations
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = POL_air_base_expansion }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_air_base_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_heavy_fighter_concept
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = POL_air_innovations focus = POL_fighter_modernisation }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_air_innovations
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_naval_bomber_experiments
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = POL_air_innovations }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_air_innovations
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_medium_bomber_focus
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = POL_heavy_fighter_concept focus = POL_air_innovations }
+		mutually_exclusive = { focus = POL_light_bomber_focus }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_heavy_fighter_concept
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_light_bomber_focus
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = POL_heavy_fighter_concept focus = POL_fighter_modernisation }
+		mutually_exclusive = { focus = POL_medium_bomber_focus }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_heavy_fighter_concept
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_air_modernisations_programme
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = POL_light_bomber_focus focus = POL_medium_bomber_focus }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_light_bomber_focus
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_rocket_development
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = POL_air_modernisations_programme }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_air_modernisations_programme
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = POL_complete_april_constitution
+		icon = GFX_focus_POL_complete_april_constitution
+		mutually_exclusive = { focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution focus = POL_assemble_the_regency_council focus = POL_restore_the_sejm }
+		
+		x = 49
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_nationalist_constitution
+						has_completed_focus = POL_assemble_the_regency_council
+					}
+				}
+			}
+		}
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_polish_militarism
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = POL_complete_april_constitution }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_complete_april_constitution
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_consolidate_sanation_government
+		icon = GFX_focus_POL_consolidate_sanation_government
+		prerequisite = { focus = POL_polish_militarism }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_polish_militarism
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = POL_the_castle
+		icon = GFX_focus_POL_the_castle
+		prerequisite = { focus = POL_consolidate_sanation_government }
+		
+		x = 4
+		y = 1
+		relative_position_id = POL_consolidate_sanation_government
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_eliminate_socialist_parties
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = POL_the_castle }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_the_castle
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_dissolve_the_sejm
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = POL_eliminate_socialist_parties }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_eliminate_socialist_parties
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_promote_chemical_industry
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = POL_the_castle }
+		x = -1
+		y = 1
+		relative_position_id = POL_the_castle
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_camp_of_national_unity
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = POL_the_castle }
+		prerequisite = { focus = POL_the_left_chairman focus = POL_second_man_of_the_state }
+		mutually_exclusive = { focus = POL_dissolve_the_bbwr focus = POL_ozon }
+		x = 0
+		y = 4
+		relative_position_id = POL_the_castle
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = POL_the_sanation_left
+		icon = GFX_focus_POL_sanation_left
+		prerequisite = { focus = POL_consolidate_sanation_government }
+		
+		x = -4
+		y = 1
+		relative_position_id = POL_consolidate_sanation_government
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_modus_vivendi
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = POL_the_sanation_left }
+		
+		x = -2
+		y = 2
+		relative_position_id = POL_the_sanation_left
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_draft_a_new_constitution
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = POL_the_sanation_left }
+		mutually_exclusive = { focus = POL_codify_national_unity }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_the_sanation_left
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_legion_of_merit
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = POL_the_sanation_left }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_the_sanation_left
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_left_chairman
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = POL_the_sanation_left }
+		mutually_exclusive = { focus = POL_second_man_of_the_state }
+		x = 0
+		y = 2
+		relative_position_id = POL_the_sanation_left
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_common_organization_of_society
+		icon = GFX_focus_POL_common_organization_of_society
+		prerequisite = { focus = POL_the_left_chairman }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_the_left_chairman
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_dissolve_the_bbwr
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = POL_common_organization_of_society }
+		mutually_exclusive = { focus = POL_ozon focus = POL_camp_of_national_unity }
+		x = 0
+		y = 1
+		relative_position_id = POL_common_organization_of_society
+		cost = 5
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = POL_the_sanation_right
+		icon = GFX_focus_POL_sanation_right
+		prerequisite = { focus = POL_consolidate_sanation_government }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_consolidate_sanation_government
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_department_for_home_defence
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = POL_the_sanation_right }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_the_sanation_right
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_support_right_paramilitaries
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = POL_the_sanation_right }
+		
+		x = 2
+		y = 2
+		relative_position_id = POL_the_sanation_right
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_codify_national_unity
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_the_sanation_right }
+		mutually_exclusive = { focus = POL_draft_a_new_constitution }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_the_sanation_right
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_second_man_of_the_state
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = POL_the_sanation_right }
+		mutually_exclusive = { focus = POL_the_left_chairman }
+		x = 0
+		y = 2
+		relative_position_id = POL_the_sanation_right
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_ozon
+		icon = GFX_focus_POL_OZON
+		prerequisite = { focus = POL_second_man_of_the_state }
+		mutually_exclusive = { focus = POL_dissolve_the_bbwr focus = POL_camp_of_national_unity }
+		x = 0
+		y = 2
+		relative_position_id = POL_second_man_of_the_state
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = POL_polish_revanchism
+		icon = GFX_focus_POL_polish_revanchism
+		prerequisite = { focus = POL_ozon }
+		mutually_exclusive = { focus = POL_align_with_the_west focus = POL_baltic_security }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_ozon
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_baltic_ultimatums
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_polish_revanchism }
+		prerequisite = { focus = POL_lithuanian_annexation }
+		will_lead_to_war_with = LAT
+		will_lead_to_war_with = EST
+		
+		x = 1
+		y = 2
+		relative_position_id = POL_polish_revanchism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_pan_slavic_revanchism
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POL_polish_revanchism }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_polish_revanchism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_old_borders
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_pan_slavic_revanchism }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_pan_slavic_revanchism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_annex_czech
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = POL_pan_slavic_revanchism }
+		will_lead_to_war_with = CZE
+		
+		x = -1
+		y = 2
+		relative_position_id = POL_pan_slavic_revanchism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_sea_to_sea
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = POL_baltic_ultimatums }
+		prerequisite = { focus = POL_the_old_borders }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_baltic_ultimatums
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = POL_baltic_security
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = POL_dissolve_the_bbwr }
+		mutually_exclusive = { focus = POL_align_with_the_west focus = POL_polish_revanchism }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_dissolve_the_bbwr
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_protect_czechozlovakia
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_baltic_security }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_baltic_security
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_baltic_alliance_focus
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = POL_baltic_security }
+		
+		x = 1
+		y = 1
+		relative_position_id = POL_baltic_security
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_romanian_alliance
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = POL_protect_czechozlovakia }
+		prerequisite = { focus = POL_baltic_alliance_focus }
+		
+		x = 0
+		y = 2
+		relative_position_id = POL_baltic_security
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_plan_west
+		icon = GFX_focus_POL_plan_west
+		prerequisite = { focus = POL_prepare_for_the_next_war }
+		x = -14
+		y = 1
+		relative_position_id = POL_complete_april_constitution
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_prusya_line
+		icon = GFX_focus_POL_prussia_line
+		prerequisite = { focus = POL_plan_west }
+		x = 4
+		y = 1
+		relative_position_id = POL_plan_west
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invest_anti_air
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = POL_plan_west }
+		x = 2
+		y = 1
+		relative_position_id = POL_plan_west
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_prusya_army
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = POL_plan_west }
+		x = -1
+		y = 1
+		relative_position_id = POL_the_prusya_line
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_poznan_forts
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_plan_west }
+		x = 1
+		y = 1
+		relative_position_id = POL_the_prusya_line
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_hel_fortified_area
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_plan_west }
+		x = 3
+		y = 1
+		relative_position_id = POL_the_prusya_line
+		cost = 10
+		
+		available = {}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_local_western_plans
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = POL_plan_west }
+		x = 0
+		y = 1
+		relative_position_id = POL_plan_west
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_sudeten_mountaineers
+		icon = GFX_focus_GRE_a_land_of_mountains
+		prerequisite = { focus = POL_plan_west }
+		x = 1
+		y = 2
+		relative_position_id = POL_plan_west
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_silesia_fortified_area
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_plan_west }
+		x = 6
+		y = 1
+		relative_position_id = POL_plan_west
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_complete_plan_west
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		relative_position_id = POL_the_prusya_army
+		cost = 0
+		prerequisite = {
+			focus = POL_the_prusya_army
+			focus = POL_silesia_fortified_area
+			focus = POL_local_western_plans
+			focus = POL_sudeten_mountaineers
+			focus = POL_invest_anti_air
+			focus = POL_the_prusya_line
+			focus = POL_expand_poznan_forts
+			focus = POL_hel_fortified_area
+		}
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	focus = {
+		id = POL_plan_east
+		icon = GFX_focus_POL_plan_east
+		prerequisite = { focus = POL_prepare_for_the_next_war }
+		x = -16
+		y = 1
+		relative_position_id = POL_complete_april_constitution
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_eastern_conscripts
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = POL_plan_east }
+		x = -2
+		y = 1
+		relative_position_id = POL_plan_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_belorussian_army
+		icon = GFX_focus_POL_belarus_army
+		prerequisite = { focus = POL_plan_east }
+		x = -1
+		y = 1
+		relative_position_id = POL_eastern_conscripts
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_ruthenian_army
+		icon = GFX_focus_POL_ukrainian_army
+		prerequisite = { focus = POL_plan_east }
+		x = 1
+		y = 1
+		relative_position_id = POL_eastern_conscripts
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_fortification_of_belarus
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_plan_east }
+		x = -4
+		y = 1
+		relative_position_id = POL_plan_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_fortification_of_ukraine
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_plan_east }
+		x = -6
+		y = 1
+		relative_position_id = POL_plan_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_supply_the_rail_nexus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_plan_east }
+		x = -1
+		y = 1
+		relative_position_id = POL_fortification_of_belarus
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {}
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_local_eastern_plans
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = POL_plan_east }
+		x = 0
+		y = 1
+		relative_position_id = POL_plan_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_complete_plan_east
+		icon = GFX_focus_generic_treaty
+		x = -3
+		y = 3
+		relative_position_id = POL_plan_east
+		cost = 0
+		prerequisite = {
+			focus = POL_fortification_of_belarus
+			focus = POL_fortification_of_ukraine
+			focus = POL_supply_the_rail_nexus
+			focus = POL_eastern_conscripts
+			focus = POL_belorussian_army
+			focus = POL_ruthenian_army
+			focus = POL_local_eastern_plans
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_sabotage_polish_industry
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = POL_plan_east focus = POL_plan_west }
+		x = 1
+		y = 2
+		relative_position_id = POL_plan_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = {  } 
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_align_with_the_west
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = POL_camp_of_national_unity focus = POL_dissolve_the_bbwr focus = POL_ozon focus = POL_draw_closer_to_britain }
+		x = 0
+		y = 1
+		relative_position_id = POL_camp_of_national_unity
+		cost = 5
+		mutually_exclusive = { focus = POL_polish_revanchism focus = POL_baltic_security }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_assemble_the_regency_council
+						has_completed_focus = POL_nationalist_constitution
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		bypass = {}
+
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_join_allies
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_align_with_the_west }
+		x = 2
+		y = 1
+		relative_position_id = POL_align_with_the_west
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					ENG = {
+						has_capitulated = yes
+					}
+					FRA = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+		
+		available = {}
+
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_romanian_bridgehead_strategy
+		icon = GFX_focus_POL_romania_bridgehead_strategy
+		prerequisite = { focus = POL_join_allies }
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_join_allies
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_lithuanian_ultimatum
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = POL_align_with_the_west }
+		mutually_exclusive = { focus = POL_lithuanian_annexation }
+		x = 0
+		y = 1
+		relative_position_id = POL_align_with_the_west
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_lithuanian_alliance
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = POL_lithuanian_ultimatum }
+		x = 0
+		y = 1
+		relative_position_id = POL_lithuanian_ultimatum
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_lithuanian_annexation
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_align_with_the_west focus = POL_polish_revanchism }
+		mutually_exclusive = { focus = POL_lithuanian_ultimatum }
+		x = -2
+		y = 1
+		relative_position_id = POL_align_with_the_west
+		cost = 5
+		will_lead_to_war_with = LIT
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		bypass = {}
+		available = {}
+
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	focus = {
+		id = POL_restore_the_sejm
+		icon = GFX_goal_support_democracy
+		mutually_exclusive = { focus = POL_complete_april_constitution }
+		allow_branch = { NOT = { has_dlc = "No Step Back" } }
+
+		x = 10
+		y = 0
+		relative_position_id = POL_complete_april_constitution
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	
+	
+	
+	focus = {
+		id = POL_organize_the_peasants_strike
+		icon = GFX_goal_generic_war_with_comintern
+		allow_branch = { has_dlc = "No Step Back" }
+		
+		mutually_exclusive = { focus = POL_complete_april_constitution focus = POL_assemble_the_regency_council focus = POL_nationalist_constitution }
+
+		x = 61
+		y = 0
+		cost = 10
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_nationalist_constitution
+						has_completed_focus = POL_assemble_the_regency_council
+						has_completed_focus = POL_restore_the_sejm
+					}
+				}
+			}
+		}
+		
+		offset = {
+			x = -13
+			y = 0
+			trigger = {
+				has_completed_focus = POL_organize_the_peasants_strike
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_woo_morges_staff
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_organize_the_peasants_strike }
+		relative_position_id = POL_organize_the_peasants_strike
+
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_ease_sanationist_tensions
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_woo_morges_staff }
+		mutually_exclusive = { focus = POL_arm_peasant_militia }
+		relative_position_id = POL_woo_morges_staff
+
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_arm_peasant_militia
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = POL_woo_morges_staff }
+		mutually_exclusive = { focus = POL_ease_sanationist_tensions }
+		relative_position_id = POL_woo_morges_staff
+
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_state_national_council
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = POL_woo_morges_staff }
+		relative_position_id = POL_woo_morges_staff
+
+		x = 3
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_communal_governance
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = POL_state_national_council }
+		relative_position_id = POL_state_national_council
+
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_a_leftist_sejm
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = POL_state_national_council }
+		relative_position_id = POL_state_national_council
+
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_raise_the_black_madonna
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = POL_woo_morges_staff }
+		relative_position_id = POL_woo_morges_staff
+
+		x = -3
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_reassemble_the_sejm
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = POL_raise_the_black_madonna }
+		relative_position_id = POL_raise_the_black_madonna
+
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_empower_the_morges
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = POL_raise_the_black_madonna }
+		relative_position_id = POL_raise_the_black_madonna
+
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_KPP_focus
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = POL_state_national_council }
+		
+		
+		mutually_exclusive = { focus = POL_elect_a_PSL_leader }
+		relative_position_id = POL_state_national_council
+
+		x = -2
+		y = 2
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_surrender_the_east
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = POL_KPP_focus }
+		mutually_exclusive = { focus = POL_polish_path_to_socialism }
+		relative_position_id = POL_KPP_focus
+		
+		available = {}
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_polish_peoples_republic
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = POL_surrender_the_east }
+		relative_position_id = POL_surrender_the_east
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_soviet_industry
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = POL_polish_peoples_republic }
+		relative_position_id = POL_polish_peoples_republic
+		dynamic = yes
+		x = -2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+		
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = POL_soviet_factory
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_pressure_for_the_west
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POL_polish_peoples_republic }
+		relative_position_id = POL_polish_peoples_republic
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_soviet_military_staff
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = POL_polish_peoples_republic }
+		relative_position_id = POL_polish_peoples_republic
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_com_independence
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = POL_soviet_industry }
+		prerequisite = { focus = POL_pressure_for_the_west }
+		prerequisite = { focus = POL_soviet_military_staff }
+		relative_position_id = POL_soviet_industry
+		will_lead_to_war_with = SOU
+
+		x = 1
+		y = 1
+		cost = 10
+
+		mutually_exclusive = { focus = POL_greater_polish_SSR }
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_greater_polish_SSR
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = POL_soviet_industry }
+		prerequisite = { focus = POL_pressure_for_the_west }
+		prerequisite = { focus = POL_soviet_military_staff }
+		relative_position_id = POL_soviet_industry
+
+		x = 3
+		y = 1
+		cost = 10
+
+		mutually_exclusive = { focus = POL_com_independence }
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = POL_polish_path_to_socialism
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = POL_KPP_focus }
+		mutually_exclusive = { focus = POL_surrender_the_east }
+		relative_position_id = POL_KPP_focus
+		
+		available = {}
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_imperialism
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = POL_polish_path_to_socialism }
+		relative_position_id = POL_polish_path_to_socialism
+
+		x = 0
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_capitalist_revolution
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_anti_imperialism }
+		relative_position_id = POL_anti_imperialism
+		
+		mutually_exclusive = { focus = POL_preserve_bougoise_democracy focus = POL_morges_pact }
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_morges_pact
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = POL_invest_in_the_peasantry }
+		relative_position_id = POL_anti_imperialism
+		
+		mutually_exclusive = { focus = POL_anti_capitalist_revolution focus = POL_preserve_bougoise_democracy }
+
+		x = -3
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				OR = {
+					ENG = {
+						has_capitulated = yes
+					}
+					ENG = {
+						has_government = fascism
+					}
+					ENG = {
+						has_government = neutrality
+					}
+					FRA = {
+						has_capitulated = no
+					}
+				}
+			}
+		}
+		
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_morges_economic_union
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = POL_morges_pact }
+		relative_position_id = POL_morges_pact
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_purchase_madagascar
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = POL_morges_economic_union }
+		relative_position_id = POL_morges_economic_union
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_romania_to_morges
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = POL_morges_economic_union }
+		prerequisite = { focus = POL_preserve_baltic_independence }
+		relative_position_id = POL_morges_economic_union
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_preserve_bougoise_democracy
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = POL_anti_imperialism focus = POL_com_independence focus = POL_invest_in_the_peasantry }
+		relative_position_id = POL_anti_imperialism
+		
+		mutually_exclusive = { focus = POL_anti_capitalist_revolution focus = POL_morges_pact }
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				OR = {
+					ENG = {
+						has_capitulated = yes
+					}
+					ENG = {
+						has_government = fascism
+					}
+					ENG = {
+						has_government = neutrality
+					} 
+					FRA = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+		
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_baltic_socialism
+		icon = GFX_focus_eng_global_defense
+		prerequisite = { focus = POL_anti_capitalist_revolution }
+		relative_position_id = POL_anti_capitalist_revolution
+		will_lead_to_war_with = LIT
+		will_lead_to_war_with = LAT
+		will_lead_to_war_with = EST
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_dismantle_capitalist_empires
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		prerequisite = { focus = POL_baltic_socialism }
+		relative_position_id = POL_baltic_socialism
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_fascist_military
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = POL_preserve_bougoise_democracy focus = POL_morges_pact }
+		relative_position_id = POL_preserve_bougoise_democracy
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_preserve_baltic_independence
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_anti_fascist_military }
+		relative_position_id = POL_anti_fascist_military
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_dismantle_fascist_empires
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = POL_dismantle_capitalist_empires focus = POL_preserve_baltic_independence }
+		relative_position_id = POL_dismantle_capitalist_empires
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_dismantle_soviet_empire
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = POL_dismantle_fascist_empires }
+		relative_position_id = POL_dismantle_fascist_empires
+		will_lead_to_war_with = SOV
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+
+		available = {}
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_social_commonwealth
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = POL_preserve_baltic_independence focus = POL_dismantle_capitalist_empires }
+		relative_position_id = POL_preserve_baltic_independence
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	focus = {
+		id = POL_elect_a_PSL_leader
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = POL_raise_the_black_madonna }
+		
+		
+		relative_position_id = POL_raise_the_black_madonna
+		mutually_exclusive = { focus = POL_KPP_focus }
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_assemble_the_regency_council
+						has_completed_focus = POL_nationalist_constitution
+					}
+				}
+			}
+		}
+
+		available = {}
+
+		x = 2
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invest_in_the_peasantry
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_elect_a_PSL_leader }
+		relative_position_id = POL_elect_a_PSL_leader
+
+		x = 0
+		y = 1
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	
+	
+	
+
+	focus = {
+		id = POL_dabrowszczacy
+		icon = GFX_focus_focus_fra_intervention_spain
+		prerequisite = { focus = POL_polish_path_to_socialism focus = POL_surrender_the_east focus = POL_invest_in_the_peasantry }
+		relative_position_id = POL_polish_path_to_socialism
+
+		x = -2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = no
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_leftist_economics
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = POL_polish_path_to_socialism focus = POL_surrender_the_east focus = POL_invest_in_the_peasantry }
+		relative_position_id = POL_polish_path_to_socialism
+
+		x = -5
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_committee_of_national_liberation
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		prerequisite = { focus = POL_leftist_economics }
+		relative_position_id = POL_leftist_economics
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = {  }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_non_discriminatory_recruitment
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = POL_leftist_economics }
+		relative_position_id = POL_leftist_economics
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_armia_ludowa
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = POL_committee_of_national_liberation }
+		prerequisite = { focus = POL_non_discriminatory_recruitment }
+		relative_position_id = POL_committee_of_national_liberation
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_lower_class_education
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = POL_leftist_economics }
+		relative_position_id = POL_leftist_economics
+
+		x = -2
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_press_for_liberia
+		icon = GFX_focus_generic_africa_factory
+		prerequisite = { focus = POL_anti_capitalist_revolution focus = POL_preserve_bougoise_democracy focus = POL_morges_pact }
+		relative_position_id = POL_preserve_bougoise_democracy
+
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_support_colonial_workers_strikes
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = POL_press_for_liberia }
+		prerequisite = { focus = POL_anti_capitalist_revolution }
+		relative_position_id = POL_press_for_liberia
+		
+		available = {}
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_reopen_the_maritime_and_colonial_league
+		icon = GFX_focus_POL_colonial_league
+		prerequisite = { focus = POL_press_for_liberia }
+		prerequisite = { focus = POL_preserve_bougoise_democracy }
+		relative_position_id = POL_press_for_liberia
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_assemble_the_regency_council
+		icon = GFX_focus_generic_monarchy_2
+		allow_branch = { has_dlc = "No Step Back" }
+		mutually_exclusive = { focus = POL_complete_april_constitution focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution }
+		
+		available = {}
+
+		x = 77
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_nationalist_constitution
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+					}
+				}
+			}
+		}
+		
+		offset = {
+			x = -24
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_fulfil_fifth_of_november
+		icon = GFX_focus_POL_end_the_regency
+		prerequisite = { focus = POL_assemble_the_regency_council }
+
+		relative_position_id = POL_assemble_the_regency_council
+		
+		available = {}
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		select_effect = {
+			hidden_effect = { set_country_flag = POL_searching_for_monarch_flag }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_habsburg
+		icon = GFX_focus_POL_habsburg
+		prerequisite = { focus = POL_fulfil_fifth_of_november }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_hohenzollern focus = POL_claiming_lithuania focus = POL_cossack_king focus = POL_romanov }
+
+		x = -8
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_restore_the_diet_of_galicia
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = POL_habsburg }
+		relative_position_id = POL_habsburg
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_support_monarchy_in_CZE
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_restore_the_diet_of_galicia }
+		relative_position_id = POL_restore_the_diet_of_galicia
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_royal_hussars
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = POL_restore_the_diet_of_galicia }
+		prerequisite = { focus = POL_soldier_king }
+		relative_position_id = POL_restore_the_diet_of_galicia
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = no
+		
+		available = {}
+		
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_habsburg_monarchist_militants
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = POL_support_monarchy_in_CZE }
+		prerequisite = { focus = POL_royal_hussars }
+		relative_position_id = POL_support_monarchy_in_CZE
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_king_of_bohemia
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = POL_support_monarchy_in_CZE }
+		prerequisite = { focus = POL_royal_hussars }
+		relative_position_id = POL_royal_hussars
+
+		will_lead_to_war_with = CZE
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_unite_west_slavia
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POL_king_of_bohemia }
+		prerequisite = { focus = POL_habsburg_monarchist_militants }
+		relative_position_id = POL_king_of_bohemia
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_soldier_king
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = { focus = POL_habsburg }
+		relative_position_id = POL_habsburg
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_kings_guard
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = POL_soldier_king }
+		relative_position_id = POL_soldier_king
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_press_the_habsburg_claim
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = POL_kings_guard }
+		relative_position_id = POL_kings_guard
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_royal_officer_corps
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = POL_kings_guard }
+		relative_position_id = POL_kings_guard
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_trust_in_the_west
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = POL_royal_officer_corps }
+		relative_position_id = POL_royal_officer_corps
+		
+		mutually_exclusive = { focus = POL_align_with_habsburgs }
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_align_with_habsburgs
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		prerequisite = { focus = POL_royal_officer_corps }
+		relative_position_id = POL_royal_officer_corps
+		
+		mutually_exclusive = { focus = POL_trust_in_the_west }
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_reclaim_west_slavia
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_align_with_habsburgs focus = POL_trust_in_the_west }
+		prerequisite = { focus = POL_unite_west_slavia }
+		relative_position_id = POL_trust_in_the_west
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_join_CZE_rails
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_unite_west_slavia }
+		relative_position_id = POL_unite_west_slavia
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_join_CZE_industry
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = POL_unite_west_slavia }
+		relative_position_id = POL_unite_west_slavia
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_join_CZE_military
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = POL_join_CZE_industry }
+		prerequisite = { focus = POL_join_CZE_rails }
+		relative_position_id = POL_join_CZE_industry
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_hohenzollern
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = POL_fulfil_fifth_of_november }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_habsburg focus = POL_claiming_lithuania focus = POL_cossack_king focus = POL_romanov }
+
+		x = -2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_cossack_king
+		icon = GFX_focus_POL_cossack_king
+		prerequisite = { focus = POL_fulfil_fifth_of_november }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_habsburg focus = POL_hohenzollern focus = POL_claiming_lithuania focus = POL_romanov }
+
+		x = 7
+		y = 1
+		cost = 10
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = romanov_enabled
+			}
+		}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_restore_bermontians
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = POL_cossack_king }
+		relative_position_id = POL_cossack_king
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_demand_LIT_pavel
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_restore_bermontians focus = POL_invite_exiled_nobility }
+		relative_position_id = POL_restore_bermontians
+		will_lead_to_war_with = LIT
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_nationalist_constitution
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = no
+		
+		available = {}
+		
+		bypass = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_demand_slovakia_pavel
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_demand_LIT_pavel }
+		relative_position_id = POL_demand_LIT_pavel
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_governorate_livonia
+		icon = GFX_focus_LIT_reclaim_courland
+		prerequisite = { focus = POL_demand_LIT_pavel }
+		relative_position_id = POL_demand_LIT_pavel
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_seek_german_alignment
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = POL_demand_slovakia_pavel }
+		prerequisite = { focus = POL_governorate_livonia }
+		relative_position_id = POL_demand_LIT_pavel
+		mutually_exclusive = { focus = POL_assert_western_claims focus = POL_claim_russia }
+
+		x = 1
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_assert_eastern_claims_pavel
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = POL_seek_german_alignment }
+		relative_position_id = POL_seek_german_alignment
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_assert_western_claims
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = POL_demand_slovakia_pavel }
+		prerequisite = { focus = POL_governorate_livonia }
+		relative_position_id = POL_demand_LIT_pavel
+		mutually_exclusive = { focus = POL_seek_german_alignment focus = POL_claim_russia }
+
+		x = -1
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_demand_pomerania
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_assert_western_claims focus = POL_claim_russia }
+		relative_position_id = POL_assert_western_claims
+		
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_nationalist_constitution
+					}
+				}
+			}
+		}
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_complete_the_bermontian_mission
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = POL_demand_pomerania focus = POL_assert_eastern_claims_pavel }
+		relative_position_id = POL_demand_LIT_pavel
+
+		x = 0
+		y = 4
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	
+	
+	
+	focus = {
+		id = POL_romanov
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = POL_fulfil_fifth_of_november }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_habsburg focus = POL_hohenzollern focus = POL_claiming_lithuania focus = POL_cossack_king }
+		
+		allow_branch = { has_country_flag = romanov_enabled }
+
+		x = 6
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_exiled_nobility
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = POL_romanov }
+		relative_position_id = POL_romanov
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_pan_slavism
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POL_invite_exiled_nobility }
+		relative_position_id = POL_invite_exiled_nobility
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_demand_yugoslav_subjugation
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_pan_slavism }
+		prerequisite = { focus = POL_demand_LIT_pavel }
+		relative_position_id = POL_pan_slavism
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_claim_russia
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = POL_governorate_livonia }
+		prerequisite = { focus = POL_demand_slovakia_pavel }
+		prerequisite = { focus = POL_demand_yugoslav_subjugation }
+		relative_position_id = POL_demand_yugoslav_subjugation
+		mutually_exclusive = { focus = POL_assert_western_claims focus = POL_seek_german_alignment }
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+				
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_proclaim_slavic_unity
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = POL_claim_russia }
+		prerequisite = { focus = POL_demand_pomerania }
+		relative_position_id = POL_claim_russia
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_claiming_lithuania
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = POL_fulfil_fifth_of_november }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_habsburg focus = POL_hohenzollern focus = POL_cossack_king focus = POL_romanov }
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_restoration_of_the_royal_sejm
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = POL_claiming_lithuania focus = POL_hohenzollern }
+		relative_position_id = POL_claiming_lithuania
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_institute_royal_guards
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = POL_restoration_of_the_royal_sejm }
+		relative_position_id = POL_restoration_of_the_royal_sejm
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_support_monarchism_in_LIT
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = POL_restoration_of_the_royal_sejm }
+		prerequisite = { focus = POL_claiming_lithuania }
+		relative_position_id = POL_restoration_of_the_royal_sejm
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_arm_monarchist_militants
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = POL_support_monarchism_in_LIT focus = POL_internal_romanian_support }
+		relative_position_id = POL_institute_royal_guards
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_king_of_lithuania
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = POL_support_monarchism_in_LIT }
+		prerequisite = { focus = POL_institute_royal_guards }
+		relative_position_id = POL_institute_royal_guards
+
+		x = 2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_LIT_union
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = POL_king_of_lithuania focus = POL_demand_LIT_pavel }
+		relative_position_id = POL_king_of_lithuania
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_lithuanian_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = POL_LIT_union }
+		relative_position_id = POL_LIT_union
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_lithuanian_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_LIT_union }
+		relative_position_id = POL_LIT_union
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_merge_the_arms_industries
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = POL_lithuanian_rail }
+		relative_position_id = POL_lithuanian_rail
+
+		x = -1
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_merge_civilian_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = POL_merge_the_arms_industries }
+		relative_position_id = POL_merge_the_arms_industries
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_push_for_ruthenia
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_lithuanian_rail }
+		relative_position_id = POL_lithuanian_rail
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_warsaw_to_crimea_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_push_for_ruthenia }
+		relative_position_id = POL_push_for_ruthenia
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_claim_livonia
+		icon = GFX_focus_LIT_reclaim_courland
+		prerequisite = { focus = POL_LIT_union }
+		prerequisite = { focus = POL_king_of_lithuania }
+		prerequisite = { focus = POL_arm_monarchist_militants }
+		relative_position_id = POL_LIT_union
+
+		x = -3
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_claim_prussia
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = POL_claim_livonia }
+		relative_position_id = POL_claim_livonia
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_claim_greater_lithuania
+		icon = GFX_focus_LIT_restore_the_grand_duchy
+		prerequisite = { focus = POL_claim_livonia }
+		relative_position_id = POL_claim_livonia
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_greater_commonwealth
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = POL_claim_greater_lithuania }
+		prerequisite = { focus = POL_claim_prussia }
+		relative_position_id = POL_claim_prussia
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = POL_internal_romanian_support
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = POL_hohenzollern }
+		prerequisite = { focus = POL_restoration_of_the_royal_sejm }
+		relative_position_id = POL_hohenzollern
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_king_michaels_coup
+		icon = GFX_focus_rom_coup
+		prerequisite = { focus = POL_internal_romanian_support }
+		prerequisite = { focus = POL_arm_monarchist_militants }
+		relative_position_id = POL_internal_romanian_support
+
+		x = -1
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_merge_internal_governments
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = POL_king_michaels_coup }
+		relative_position_id = POL_king_michaels_coup
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_pro_allied_government
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = POL_merge_internal_governments focus = POL_claim_livonia }
+		relative_position_id = POL_merge_internal_governments
+
+		mutually_exclusive = { focus = POL_royal_dictatorship }
+
+		x = 1
+		y = 1
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_ROM_join_allies
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = POL_pro_allied_government }
+		relative_position_id = POL_pro_allied_government
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_royal_dictatorship
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = POL_merge_internal_governments }
+		relative_position_id = POL_merge_internal_governments
+
+		x = -1
+		y = 1
+		cost = 10
+
+		mutually_exclusive = { focus = POL_pro_allied_government }
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_demand_slovakia
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_royal_dictatorship }
+		relative_position_id = POL_royal_dictatorship
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_restore_poland_hungary
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = POL_demand_slovakia }
+		relative_position_id = POL_demand_slovakia
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_seek_an_alliance_with_kaiser
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = POL_assemble_the_regency_council }
+		relative_position_id = POL_assemble_the_regency_council
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_nationalist_constitution
+		icon = GFX_goal_support_fascism
+		allow_branch = { has_dlc = "No Step Back" }
+
+		available = {}
+
+		mutually_exclusive = { focus = POL_complete_april_constitution  focus = POL_organize_the_peasants_strike focus = POL_assemble_the_regency_council }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_assemble_the_regency_council
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+					}
+				}
+			}
+		}
+
+		x = 91
+		y = 0
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = romanov_enabled
+			}
+		}
+		
+		offset = {
+			x = -47
+			y = 0
+			trigger = {
+				has_completed_focus = POL_nationalist_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_integrate_the_falanga
+		icon = GFX_focus_LIT_support_polish_fascists
+		prerequisite = { focus = POL_nationalist_constitution }
+		relative_position_id = POL_nationalist_constitution
+
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_empower_falangist_militants
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = POL_integrate_the_falanga }
+		relative_position_id = POL_integrate_the_falanga
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = POL_integrate_the_endecja
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = POL_nationalist_constitution }
+		relative_position_id = POL_nationalist_constitution
+
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_siodemki
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_integrate_the_endecja }
+		relative_position_id = POL_integrate_the_endecja
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_sideline_the_sanacja
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = POL_empower_falangist_militants focus = POL_siodemki }
+		relative_position_id = POL_empower_falangist_militants
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_riot_of_37
+		icon = GFX_focus_POL_riot_of_37
+		prerequisite = { focus = POL_sideline_the_sanacja }
+		prerequisite = { focus = POL_empower_falangist_militants }
+		mutually_exclusive = { focus = POL_reopen_national_elections }
+		relative_position_id = POL_sideline_the_sanacja
+
+		x = 1
+		y = 1
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_reopen_national_elections
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = POL_sideline_the_sanacja }
+		prerequisite = { focus = POL_siodemki }
+		mutually_exclusive = { focus = POL_riot_of_37 }
+		relative_position_id = POL_sideline_the_sanacja
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_beck_ribbentrop
+		icon = GFX_focus_POL_beck_ribbentrop
+		prerequisite = { focus = POL_riot_of_37 focus = POL_reopen_national_elections }
+		relative_position_id = POL_riot_of_37
+
+		mutually_exclusive = { focus = POL_reassert_silesian_claims }
+
+		x = -2
+		y = 1
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_divide_lit
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_beck_ribbentrop }
+		relative_position_id = POL_beck_ribbentrop
+		will_lead_to_war_with = LIT
+
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_german_training
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = POL_divide_lit focus = POL_seek_german_alignment }
+		mutually_exclusive = { focus = POL_konfederacja_narodu }
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+
+					}
+				}
+			}
+		}
+
+		x = 87
+		y = 7
+		cost = 10
+		
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = romanov_enabled
+			}
+		}
+		
+		offset = {
+			x = -24
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -48
+			y = 0
+			trigger = {
+				has_completed_focus = POL_nationalist_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_konfederacja_narodu
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = POL_divide_lit focus = POL_seek_german_alignment focus = POL_support_global_falangism }
+		mutually_exclusive = { focus = POL_german_training }
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+					}
+				}
+			}
+		}
+
+		x = 89
+		y = 7
+		cost = 10
+		
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = romanov_enabled
+			}
+		}
+		
+		offset = {
+			x = -24
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -48
+			y = 0
+			trigger = {
+				has_completed_focus = POL_nationalist_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_german_staff
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = POL_german_training focus = POL_konfederacja_narodu }
+		mutually_exclusive = { focus = POL_polish_shock_battallions }
+		relative_position_id = POL_german_training
+
+		available = {}
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_polish_shock_battallions
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = POL_german_training focus = POL_konfederacja_narodu }
+		mutually_exclusive = { focus = POL_german_staff }
+		relative_position_id = POL_konfederacja_narodu
+
+		available = {}
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_request_autonomous_status
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = POL_german_staff focus = POL_polish_shock_battallions }
+		mutually_exclusive = { focus = POL_reach_out_to_underground_state }
+		relative_position_id = POL_german_staff
+
+		available = {}
+
+		bypass = {}
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_reach_out_to_underground_state
+		icon = GFX_focus_POL_reach_out_to_underground_state
+		prerequisite = { focus = POL_german_staff focus = POL_polish_shock_battallions }
+		mutually_exclusive = { focus = POL_request_autonomous_status }
+		relative_position_id = POL_polish_shock_battallions
+
+		available = {}
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_assurance_of_loyalty
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_request_autonomous_status }
+		mutually_exclusive = { focus = POL_declare_independence }
+		relative_position_id = POL_request_autonomous_status
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_declare_independence
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = POL_request_autonomous_status focus = POL_reach_out_to_underground_state }
+		mutually_exclusive = { focus = POL_assurance_of_loyalty }
+		relative_position_id = POL_assurance_of_loyalty
+		will_lead_to_war_with = GER
+
+		x = 2
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_reassert_silesian_claims
+		icon = GFX_focus_POL_reassert_silesian_claims
+		prerequisite = { focus = POL_riot_of_37 focus = POL_reopen_national_elections }
+		relative_position_id = POL_riot_of_37
+
+		mutually_exclusive = { focus = POL_beck_ribbentrop }
+
+		x = 0
+		y = 1
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_force_polish_upper_class
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = POL_divide_lit focus = POL_support_global_falangism }
+		relative_position_id = POL_divide_lit
+
+		x = 2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_privatize_education
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = POL_force_polish_upper_class }
+		relative_position_id = POL_force_polish_upper_class
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_support_global_falangism
+		icon = GFX_focus_POL_support_global_falangism
+		prerequisite = { focus = POL_reassert_silesian_claims }
+		relative_position_id = POL_reassert_silesian_claims
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_state_catholicism
+		icon = GFX_focus_por_concordat
+		prerequisite = { focus = POL_support_global_falangism }
+		relative_position_id = POL_support_global_falangism
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_falangist_international
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = POL_support_global_falangism }
+		relative_position_id = POL_support_global_falangism
+
+		x = 4
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_the_lowlands
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = POL_falangist_international }
+		relative_position_id = POL_falangist_international
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		
+		select_effect = { 
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = HOL
+						original_tag = BEL
+						original_tag = LUX
+					}
+					OR = {
+						has_government = fascism
+						fascism > 0.2
+					}
+				}
+				set_country_flag = POL_valid_fascist_invitee
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_the_baltics
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = POL_falangist_international }
+		prerequisite = { focus = POL_anti_germans_abroad }
+		relative_position_id = POL_falangist_international
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_support_falangists_in_the_americas
+		icon = GFX_focus_por_recover_latin_america
+		prerequisite = { focus = POL_falangist_international }
+		relative_position_id = POL_falangist_international
+
+		x = 3
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+
+		available_if_capitulated = no
+		
+		select_effect = { 
+			every_other_country = {
+				limit = {
+					is_latin_american_country = yes
+					OR = {
+						has_government = fascism
+						fascism > 0.4
+					}
+				}
+				set_country_flag = POL_valid_fascist_invitee
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_demand_LIT
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_support_global_falangism }
+		relative_position_id = POL_support_global_falangism
+		mutually_exclusive = { focus = POL_anti_germans_abroad }
+		will_lead_to_war_with = LIT
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = no
+		
+		available = {}
+		
+		bypass = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_national_commonwealth
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = POL_demand_LIT }
+		relative_position_id = POL_demand_LIT
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+		
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_germans_abroad
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = POL_support_global_falangism }
+		relative_position_id = POL_support_global_falangism
+		mutually_exclusive = { focus = POL_demand_LIT }
+
+		x = 2
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_prepare_german_line
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = POL_demand_LIT focus = POL_anti_germans_abroad }
+		relative_position_id = POL_demand_LIT
+
+		x = 1
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_integrate_greater_kashubia
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POL_demand_LIT focus = POL_anti_germans_abroad }
+		relative_position_id = POL_demand_LIT
+
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_radicalize_poles_in_germany
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = POL_prepare_german_line focus = POL_declare_independence }
+		relative_position_id = POL_declare_independence
+
+		x = 3
+		y = 1
+		cost = 10
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+					}
+				}
+			}
+		}
+		
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_anti_blitz_tactics
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = POL_prepare_german_line focus = POL_declare_independence }
+		relative_position_id = POL_declare_independence
+
+		x = 1
+		y = 1
+		cost = 10
+		allow_branch = {
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = POL_complete_april_constitution
+						has_completed_focus = POL_organize_the_peasants_strike
+						has_completed_focus = POL_restore_the_sejm
+					}
+				}
+			}
+		}
+		
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_assert_eastern_claims
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = POL_beck_ribbentrop focus = POL_reassert_silesian_claims }
+		relative_position_id = POL_beck_ribbentrop
+
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	
+	focus = {
+		id = POL_internationalism
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = POL_restore_the_sejm }
+		relative_position_id = POL_restore_the_sejm
+		allow_branch = { NOT = { has_dlc = "No Step Back" } }
+
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_authoritarianism
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = POL_internationalism }
+		mutually_exclusive = { focus = POL_liberalism_focus }
+
+		x = 1
+		y = 1
+		relative_position_id = POL_internationalism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = POL_authoritarianism }
+
+		x = -1
+		y = 1
+		relative_position_id = POL_authoritarianism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_go_right
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = POL_authoritarianism }
+		mutually_exclusive = { focus = POL_go_left }
+
+		x = 1
+		y = 1
+		relative_position_id = POL_authoritarianism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_military_youth
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = POL_go_right }
+
+		x = -1
+		y = 2
+		relative_position_id = POL_go_right
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_seek_accommodation_with_germany
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = POL_go_right }
+		available = {}
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_go_right
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_go_left
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = POL_authoritarianism }
+		mutually_exclusive = { focus = POL_go_right }
+
+		x = 3
+		y = 1
+		relative_position_id = POL_authoritarianism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_political_commissars
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = POL_go_left }
+
+		x = 1
+		y = 2
+		relative_position_id = POL_go_left
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_seek_accommodation_with_USSR
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = POL_go_left }
+		available = {}
+		x = 0
+		y = 1
+		relative_position_id = POL_go_left
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_liberalism_focus
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = POL_internationalism }
+		mutually_exclusive = { focus = POL_authoritarianism }
+
+		x = -1
+		y = 1
+		relative_position_id = POL_internationalism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_intervention_focus
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = POL_liberalism_focus }
+
+		x = -1
+		y = 1
+		relative_position_id = POL_liberalism_focus
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_draw_closer_to_britain
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_liberalism_focus }
+		available = {}
+
+		x = -2
+		y = 5
+		relative_position_id = POL_liberalism_focus
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_volunteer_corps
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POL_intervention_focus }
+
+		x = 0
+		y = 1
+		relative_position_id = POL_intervention_focus
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	focus = {
+		id = POL_the_between_the_seas_concept
+		icon = GFX_goal_anschluss
+		available = {}
+		bypass = {}
+		x = 97
+		y = 0
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = romanov_enabled
+			}
+		}
+		offset = {
+			x = -27
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+		}
+		
+		offset = {
+			x = -38
+			y = 0
+			trigger = {
+				has_dlc = "No Step Back"
+				has_completed_focus = POL_complete_april_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -39
+			y = 0
+			trigger = {
+				has_completed_focus = POL_organize_the_peasants_strike
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -31
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -47
+			y = 0
+			trigger = {
+				has_completed_focus = POL_nationalist_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_idea = anti_soviet_pact
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = POL_seek_accommodation_with_USSR
+					has_completed_focus = POL_seek_accommodation_with_germany
+				}
+			}
+			modifier = {
+				factor = 0
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_completed_focus = POL_complete_april_constitution
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_baltic_alliance
+		icon = GFX_focus_generic_baltic_entente
+		prerequisite = { focus = POL_the_between_the_seas_concept }
+		available = {}
+
+		bypass = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_the_between_the_seas_concept
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_treaty_with_lithuania
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_the_baltic_alliance }
+
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_the_baltic_alliance
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_north_sea
+		icon = GFX_focus_generic_scandinavian_alliance
+		prerequisite = { focus = POL_the_between_the_seas_concept }
+		available = {}
+
+		x = -2
+		y = 1
+		relative_position_id = POL_the_between_the_seas_concept
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_finno_polish_pact
+		icon = GFX_focus_invite_finland
+		prerequisite = { focus = POL_the_north_sea }
+		available = {}
+
+		bypass = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_the_north_sea
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_denmark
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = POL_finno_polish_pact }
+		available = {}
+
+		x = -2
+		y = 1
+		relative_position_id = POL_finno_polish_pact
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_sweden
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = POL_finno_polish_pact }
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_finno_polish_pact
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_norway
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = POL_finno_polish_pact }
+		available = {}
+
+		x = 2
+		y = 1
+		relative_position_id = POL_finno_polish_pact
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_mediterranean
+		icon = GFX_focus_BUL_free_balkan_states
+		prerequisite = { focus = POL_the_between_the_seas_concept }
+		available = {}
+		bypass = {}
+		x = 2
+		y = 1
+		relative_position_id = POL_the_between_the_seas_concept
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_coerce_czechoslovakia
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = POL_the_mediterranean }
+		available = {}
+		bypass = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_the_mediterranean
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_austro_hungarian_alliance
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		prerequisite = { focus = POL_coerce_czechoslovakia }
+		available = {}
+		bypass = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_coerce_czechoslovakia
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_protect_yugoslavia
+		icon = GFX_focus_invite_yugoslavia
+		prerequisite = { focus = POL_the_mediterranean }
+		available = {}
+
+		bypass = {}
+
+		x = 2
+		y = 1
+		relative_position_id = POL_the_mediterranean
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_invite_greece
+		icon = GFX_focus_generic_befriend_greece
+		prerequisite = { focus = POL_protect_yugoslavia }
+		mutually_exclusive = { focus = POL_control_the_bosporus }
+		available = {}
+
+		bypass = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_protect_yugoslavia
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_control_the_bosporus
+		icon = GFX_focus_generic_befriend_turkey
+		prerequisite = { focus = POL_protect_yugoslavia }
+		mutually_exclusive = { focus = POL_invite_greece }
+		available = {}
+
+		bypass = {}
+
+		x = 2
+		y = 1
+		relative_position_id = POL_protect_yugoslavia
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_italian_alliance
+		icon = GFX_focus_befriend_italy
+		prerequisite = { focus = POL_control_the_bosporus focus = POL_invite_greece }
+		prerequisite = { focus = POL_austro_hungarian_alliance }
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_invite_greece
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	focus = {
+		id = POL_prepare_for_the_inevitable
+		icon = GFX_focus_POL_prepare_for_the_inevitable
+		available = {}
+		allow_branch = { has_dlc = "Man the Guns" }
+		x = 106
+		y = 0
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = romanov_enabled
+			}
+		}
+		offset = {
+			x = -27
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+		}
+		
+		offset = {
+			x = -38
+			y = 0
+			trigger = {
+				has_dlc = "No Step Back"
+				has_completed_focus = POL_complete_april_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -39
+			y = 0
+			trigger = {
+				has_completed_focus = POL_organize_the_peasants_strike
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -31
+			y = 0
+			trigger = {
+				has_completed_focus = POL_assemble_the_regency_council
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		offset = {
+			x = -47
+			y = 0
+			trigger = {
+				has_completed_focus = POL_nationalist_constitution
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_foreign_air_support
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = POL_prepare_for_the_inevitable }
+		available = {}
+
+		x = -3
+		y = 1
+		relative_position_id = POL_prepare_for_the_inevitable
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_foreign_army_support
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = POL_foreign_air_support }
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_foreign_air_support
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_aces_in_exile
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = POL_foreign_air_support }
+		available = {}
+
+		x = 2
+		y = 1
+		relative_position_id = POL_foreign_air_support
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_foreign_naval_support
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = POL_prepare_for_the_inevitable }
+		available = {}
+
+		x = -1
+		y = 1
+		relative_position_id = POL_prepare_for_the_inevitable
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_resistance_industries
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = POL_prepare_for_the_inevitable }
+		available = {}
+
+		x = 1
+		y = 1
+		relative_position_id = POL_prepare_for_the_inevitable
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_exile_industries
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = POL_resistance_industries }
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_resistance_industries
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_polish_intelligence
+		icon = GFX_focus_POL_expand_polish_intelligence
+		prerequisite = { focus = POL_prepare_for_the_inevitable }
+		available = {}
+		allow_branch = {
+			has_dlc = "La Resistance"
+			has_dlc = "Man the Guns"
+		}
+
+		x = 3
+		y = 1
+		relative_position_id = POL_prepare_for_the_inevitable
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_polish_intelligence_no_mtg
+		icon = GFX_focus_POL_expand_polish_intelligence
+		available = {}
+		allow_branch = {
+			has_dlc = "La Resistance"
+			NOT = { has_dlc = "Man the Guns" }
+		}
+
+		x = -2
+		y = 0
+		relative_position_id = POL_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_niech_zyje_opor
+		icon = GFX_focus_POL_resistance
+		prerequisite = { focus = POL_expand_polish_intelligence }
+		available = {}
+
+		x = -1
+		y = 2
+		relative_position_id = POL_expand_polish_intelligence
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_niech_zyje_opor_no_mtg
+		icon = GFX_focus_POL_resistance
+		prerequisite = { focus = POL_expand_polish_intelligence_no_mtg }
+		available = {}
+
+		x = -1
+		y = 2
+		relative_position_id = POL_expand_polish_intelligence_no_mtg
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_long_push_home
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = POL_expand_polish_intelligence }
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_expand_polish_intelligence
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_long_push_home_no_mtg
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = POL_expand_polish_intelligence_no_mtg }
+		available = {}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_expand_polish_intelligence_no_mtg
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_the_bombe
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = POL_expand_polish_intelligence }
+		available = {}
+
+		x = 4
+		y = 1
+		relative_position_id = POL_expand_polish_intelligence
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_bombe_no_mtg
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = POL_expand_polish_intelligence_no_mtg }
+		available = {}
+
+		x = 4
+		y = 1
+		relative_position_id = POL_expand_polish_intelligence_no_mtg
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_cyclometer
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = POL_expand_polish_intelligence }
+		available = {}
+
+		x = 2
+		y = 1
+		relative_position_id = POL_expand_polish_intelligence
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_the_cyclometer_no_mtg
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = POL_expand_polish_intelligence_no_mtg }
+		available = {}
+
+		x = 2
+		y = 1
+		relative_position_id = POL_expand_polish_intelligence_no_mtg
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_atomic_physics_institute
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = POL_ideological_fanaticism focus = POL_abolish_segregated_seating }
+		x = 1
+		y = 1
+		relative_position_id = POL_ideological_fanaticism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = POL_develop_polish_ship_building
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		mutually_exclusive = { focus = POL_clamp_down_on_danzig }
+		x = 14
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = POL_develop_polish_ship_building_1 }
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_clamp_down_on_danzig
+		icon = GFX_focus_POL_clamp_down_on_danzig
+		mutually_exclusive = { focus = POL_develop_polish_ship_building }
+		x = 2
+		y = 0
+		relative_position_id = POL_develop_polish_ship_building
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {}
+		
+		bypass = {}
+		bypass_effect = {
+			85 = {
+				remove_dynamic_modifier = {
+					modifier = international_city
+				}
+				add_dynamic_modifier = {
+					modifier = international_city_2
+				}
+				force_enable_resistance = { 
+					clear = no
+					occupier = POL
+					occupied = DNZ
+				}
+				start_resistance = DNZ
+				set_resistance = 40
+				set_compliance = 30
+				add_resistance_target = { 
+					amount = 30
+					tooltip = clamp_down_on_danzig_tt
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_attract_poles_to_gdynia
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = POL_develop_polish_ship_building }
+		x = -1
+		y = 1
+		relative_position_id = POL_develop_polish_ship_building
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		available_if_capitulated = yes
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_study_foreign_built_ships
+		icon = GFX_focus_ger_accept_british_naval_dominance
+		prerequisite = { focus = POL_develop_polish_ship_building focus = POL_clamp_down_on_danzig }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = POL_develop_polish_ship_building
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_ban_the_nazi_party
+		icon = GFX_focus_POL_ban_nazi_party
+		prerequisite = { focus = POL_clamp_down_on_danzig }
+		x = 1
+		y = 1
+		relative_position_id = POL_clamp_down_on_danzig
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+		completion_reward = {}
+		bypass_effect = {
+			85 = {
+				force_enable_resistance = { 
+					clear = yes
+					occupier = POL
+					occupied = DNZ
+				}
+				POL_remove_danzig_effect = yes
+				set_state_name = "Gdańsk"
+			}
+			set_province_name = {
+				id = 362
+				name = "Gdańsk"
+			}
+		}
+	}
+
+	focus = {
+		id = POL_develop_gdansk_ship_building
+		icon = GFX_goal_generic_construct_naval_dockyard
+		available = {}
+		prerequisite = { focus = POL_ban_the_nazi_party }
+		x = 1
+		y = 1
+		cost = 10
+		
+		relative_position_id = POL_ban_the_nazi_party
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_gdynia_seaport
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = POL_attract_poles_to_gdynia }
+		prerequisite = { focus = POL_study_foreign_built_ships }
+		x = 1
+		y = 1
+		relative_position_id = POL_attract_poles_to_gdynia
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		available_if_capitulated = yes
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_integrate_gdansk_industries
+		icon = GFX_goal_generic_construct_naval_dockyard
+		available = {}	
+		prerequisite = { focus = POL_ban_the_nazi_party }
+		x = -1
+		y = 1
+		relative_position_id = POL_ban_the_nazi_party
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_expand_northern_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POL_integrate_gdansk_industries focus = POL_expand_gdynia_seaport }
+		x = 1
+		y = 1
+		relative_position_id = POL_expand_gdynia_seaport
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		bypass = {}
+
+		available_if_capitulated = yes
+		completion_reward = {}
+	}
+	
+	
+
+	focus = {
+		id = POL_the_twin_threats
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = POL_integrate_gdansk_industries focus = POL_expand_gdynia_seaport }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_expand_gdynia_seaport
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_a_cruiser_navy
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = POL_the_twin_threats }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_the_twin_threats
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_import_submarine_technology
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = POL_integrate_gdansk_industries focus = POL_expand_gdynia_seaport }
+		x = 1
+		y = 1
+		relative_position_id = POL_integrate_gdansk_industries
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_commerce_attack
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = POL_import_submarine_technology }
+		x = 1
+		y = 1
+		relative_position_id = POL_import_submarine_technology
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_coastal_defense
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = POL_the_twin_threats }
+		prerequisite = { focus = POL_import_submarine_technology }
+		mutually_exclusive = { focus = POL_strike_force }
+		x = 1
+		y = 1
+		relative_position_id = POL_the_twin_threats
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = POL_strike_force
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = POL_the_twin_threats }
+		prerequisite = { focus = POL_import_submarine_technology }
+		mutually_exclusive = { focus = POL_coastal_defense }
+		x = 3
+		y = 1
+		relative_position_id = POL_the_twin_threats
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = POL_baltic_navy
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = POL_strike_force focus = POL_coastal_defense }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_strike_force
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+}

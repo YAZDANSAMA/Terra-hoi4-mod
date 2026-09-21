@@ -1,0 +1,111 @@
+division_template = {
+	name = "Militia Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Artillery Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 1 y = 3 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+			artillery_brigade = {  x = 3 y = 0 }
+			artillery_brigade = {  x = 3 y = 1 }
+
+	}
+	
+	support = {
+			artillery = {  x = 0 y = 0 }
+
+	}
+}
+division_template = {
+	name = "Cavalry Division"
+
+	regiments = {
+			cavalry = {  x = 0 y = 0 }
+			cavalry = {  x = 0 y = 1 }
+			cavalry = {  x = 1 y = 0 }
+			cavalry = {  x = 2 y = 0 }
+
+	}
+	
+	support = {
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "1st 'Petirmalutah' Militia Division"
+		location = 3522
+		division_template = "Militia Division"
+		start_experience_factor = 0.505983
+		start_equipment_factor = 0.901373
+	}
+	division= {
+		name = "1st 'Kale' Infantry Division"
+		location = 84
+		division_template = "Infantry Division"
+		start_experience_factor = 0.070077
+		start_equipment_factor = 0.790262
+	}
+	division= {
+		name = "2nd 'Gece' Infantry Division"
+		location = 7745
+		division_template = "Infantry Division"
+		start_experience_factor = 0.286262
+		start_equipment_factor = 0.771656
+	}
+	division= {
+		name = "1st 'Lelat' Cavalry Division"
+		location = 5151
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.514575
+		start_equipment_factor = 0.798364
+	}
+	division= {
+		name = "2nd 'Arwa' Cavalry Division"
+		location = 3006
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.163182
+		start_equipment_factor = 0.768108
+	}
+
+}

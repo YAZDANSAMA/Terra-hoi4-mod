@@ -1,0 +1,26 @@
+state = {
+    id = 402
+    name="Volgrad"
+    manpower = 0
+    state_category = wasteland
+
+    history={
+		victory_points = { 1 1}
+		
+		owner = URS
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = URS
+	}
+
+    provinces = {
+    }
+
+    local_supplies = 0
+}

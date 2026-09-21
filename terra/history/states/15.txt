@@ -1,0 +1,37 @@
+
+state={
+	id=15
+	name="STATE_15"
+	manpower = 283159
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		owner = MIN
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = MIN
+	}
+
+	provinces={
+		349 350 467 468 469 470 471 472 3664 3797 3798 3799 3800 3801 3802 4178 4179 4180 4533 4538 4542 4544 4546 4547 4884 4920 4921 5587 6729 6730 6731 6732 7017 7018 7019 7020 7021 7022 7023 7024 7025 7026 7027 7406 7550 7551 7552
+	}
+	local_supplies=0.0 
+}

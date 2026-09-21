@@ -1,0 +1,39 @@
+
+state={
+	id=24
+
+	name="Toron"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = VIC
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = VIC
+	}
+
+	provinces={
+		114 115 116 117 118 119 120 121 122 724 1301 1667 1668 1669 2377 2379 2674 2677 2919 2920 2921 3994 3996 4588 4589 4590 4591 5258 5940 5941 5942 5943 5944 5947 5949 5950 5951 6411 6412 6413 6414 6415 6416 6417 6834 6835 6836 6837 6838 6839 6840 6895 6896 6897 6913 6914 6915 6916 7165 7166 7170 7317 7442 7443 8073 8076
+	}
+	local_supplies=0.0 
+}

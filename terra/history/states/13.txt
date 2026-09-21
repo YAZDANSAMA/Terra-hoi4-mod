@@ -1,0 +1,39 @@
+
+state={
+	id=13
+	name="STATE_13"
+	manpower = 2792936
+	
+	state_category = large_city
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		
+		
+		owner = KZL
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			
+		}
+		add_core_of = KZL
+	}
+
+	provinces={
+		454 455 457 459 466 3304 3306 3308 3310
+	}
+	local_supplies=0.0 
+}

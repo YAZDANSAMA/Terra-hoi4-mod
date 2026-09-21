@@ -1,0 +1,27 @@
+state = {
+    id = 403
+    name="Shmyrsky"
+    manpower = 0
+    state_category = wasteland
+
+   history={
+		victory_points = { 1 1}
+		
+		owner = URS
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = URS
+	}
+
+    provinces = {
+		955 956 957 958 959 3187 3188 3189 3190 6144 6145 6146 6244 6245 6246 6248 6249 6250 6252
+	}
+
+    local_supplies = 0
+}

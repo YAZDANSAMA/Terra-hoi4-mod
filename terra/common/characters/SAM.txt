@@ -1,0 +1,1083 @@
+characters = {
+	SAM_Tanes_Sonbahar={
+		name="Tanes Sonbahar"
+
+		
+		country_leader={
+			ideology=despotism
+			traits = { agricultural_nationalist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAM_Talil_Sabahar={
+		name="Talil Sabahar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Talil_Sabahar
+			traits = {	humble 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Talilmaz_Efsam={
+		name="Talilmaz Efsam"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Talilmaz_Efsam
+			traits = {	agricultural_capitalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Serhaner_Servara={
+		name="Serhaner Servara"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Serhaner_Servara
+			traits = {	national_determinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Farulendem_Golge={
+		name="Farulendem Golge"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Farulendem_Golge
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Selih_Sesiman={
+		name="Selih Sesiman"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Selih_Sesiman
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Cemaz_Akin={
+		name="Cemaz Akin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Cemaz_Akin
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Iskendem_Yilik={
+		name="Iskendem Yilik"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Iskendem_Yilik
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	SAM_Salcin_Sehirlisla={
+		name="Salcin Sehirlisla"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Salcin_Sehirlisla
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	SAM_Cemazan_Sonba={
+		name="Cemazan Sonba"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Cemazan_Sonba
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	SAM_Talim_Isil={
+		name="Talim Isil"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Talim_Isil
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	SAM_Kadir_Saat={
+		name="Kadir Saat"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Kadir_Saat
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	SAM_Yusuf_Aksar={
+		name="Yusuf Aksar"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Yusuf_Aksar
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	SAM_Adem_Yilderis={
+		name="Adem Yilderis"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Adem_Yilderis
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	SAM_Barulent_Ordu={
+		name="Barulent Ordu"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Barulent_Ordu
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	SAM_Zafa_Servanlik={
+		name="Zafa Servanlik"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Zafa_Servanlik
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	SAM_Farat_Aksamaniz={
+		name="Farat Aksamaniz"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Farat_Aksamaniz
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	SAM_Cemazan_Uzakinak={
+		name="Cemazan Uzakinak"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Cemazan_Uzakinak
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	SAM_Tanes_Ormani={
+		name="Tanes Ormani"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Tanes_Ormani
+			traits = {	army_cavalry_1 	}
+		}
+
+
+	}
+	SAM_Arif_Yilik={
+		name="Arif Yilik"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Arif_Yilik
+			traits = {	army_cavalry_1 	}
+		}
+
+
+	}
+	SAM_Arif_Isikarinda={
+		name="Arif Isikarinda"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Arif_Isikarinda
+			traits = {	air_bomber_interception_2 	}
+		}
+
+
+	}
+	SAM_Suat_Kaderef={
+		name="Suat Kaderef"
+
+		
+		country_leader={
+			ideology=nazism
+			traits = { inexperienced_imperialist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAM_Yalim_Sehirlikaylu={
+		name="Yalim Sehirlikaylu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Yalim_Sehirlikaylu
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Kadir_Servara={
+		name="Kadir Servara"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Kadir_Servara
+			traits = {	vapsid_economist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Savas_Ormani={
+		name="Savas Ormani"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Savas_Ormani
+			traits = {	autocratic_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Emin_Hisam={
+		name="Emin Hisam"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Emin_Hisam
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Tanes_Yanide={
+		name="Tanes Yanide"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Tanes_Yanide
+			traits = {	vapsid_economist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Salhan_Yukar={
+		name="Salhan Yukar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Salhan_Yukar
+			traits = {	militant_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Ramazan_Akin={
+		name="Ramazan Akin"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Ramazan_Akin
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	SAM_Onuran_Sonbahar={
+		name="Onuran Sonbahar"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Onuran_Sonbahar
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	SAM_Boran_Berek={
+		name="Boran Berek"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Boran_Berek
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	SAM_Zafa_Isildizci={
+		name="Zafa Isildizci"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Zafa_Isildizci
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	SAM_Talil_Beris={
+		name="Talil Beris"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Talil_Beris
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	SAM_Halhan_Efsam={
+		name="Halhan Efsam"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Halhan_Efsam
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	SAM_Emin_Bultur={
+		name="Emin Bultur"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Emin_Bultur
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	SAM_Suat_Isildizci={
+		name="Suat Isildizci"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Suat_Isildizci
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	SAM_Selih_Haylutlukluk={
+		name="Selih Haylutlukluk"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Selih_Haylutlukluk
+			traits = {	air_strategic_bombing_2 	}
+		}
+
+
+	}
+	SAM_Boran_Bahirlikar={
+		name="Boran Bahirlikar"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Boran_Bahirlikar
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	SAM_Kadir_Dillili={
+		name="Kadir Dillili"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Kadir_Dillili
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	SAM_Musul_Sogac={
+		name="Musul Sogac"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Musul_Sogac
+			traits = {	navy_amphibious_assault_2 	}
+		}
+
+
+	}
+	SAM_Utku_Yasket={
+		name="Utku Yasket"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Utku_Yasket
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	SAM_Onur_Sogruklu={
+		name="Onur Sogruklu"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Onur_Sogruklu
+			traits = {	air_bomber_interception_2 	}
+		}
+
+
+	}
+	SAM_Salhan_Kaderef={
+		name="Salhan Kaderef"
+
+		
+		country_leader={
+			ideology=anarchist_communism
+			traits = { socialist_justice  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAM_Musul_Yolge={
+		name="Musul Yolge"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Musul_Yolge
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Borat_Sonbahar={
+		name="Borat Sonbahar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Borat_Sonbahar
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Talim_Isimane={
+		name="Talim Isimane"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Talim_Isimane
+			traits = {	mastermind_code_cracker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Farulendem_Saat={
+		name="Farulendem Saat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Farulendem_Saat
+			traits = {	revolutionary_poet 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Musul_Isimane={
+		name="Musul Isimane"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Musul_Isimane
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Iskenderha_Uzakinda={
+		name="Iskenderha Uzakinda"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Iskenderha_Uzakinda
+			traits = {	indomitable_perseverance 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Sinan_Gulutlu={
+		name="Sinan Gulutlu"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Sinan_Gulutlu
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	SAM_Zaferem_Duvas={
+		name="Zaferem Duvas"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Zaferem_Duvas
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	SAM_Kadir_Dagli={
+		name="Kadir Dagli"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Kadir_Dagli
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	SAM_Halhan_Obah={
+		name="Halhan Obah"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Halhan_Obah
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	SAM_Serhat_Koyla={
+		name="Serhat Koyla"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Serhat_Koyla
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	SAM_Farat_Gecmiz={
+		name="Farat Gecmiz"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Farat_Gecmiz
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	SAM_Talil_Gecmiz={
+		name="Talil Gecmiz"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Talil_Gecmiz
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	SAM_Onuratuhan_Yeni={
+		name="Onuratuhan Yeni"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Onuratuhan_Yeni
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	SAM_Onur_Golge={
+		name="Onur Golge"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Onur_Golge
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	SAM_Kadir_Yasket={
+		name="Kadir Yasket"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Kadir_Yasket
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	SAM_Barulender_Uzakin={
+		name="Barulender Uzakin"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Barulender_Uzakin
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	SAM_Adem_Uzakin={
+		name="Adem Uzakin"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Adem_Uzakin
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	SAM_Sinanes_Kaderef={
+		name="Sinanes Kaderef"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Sinanes_Kaderef
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	SAM_Iskendem_Yasket={
+		name="Iskendem Yasket"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Iskendem_Yasket
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	SAM_Talilmaz_Bultur={
+		name="Talilmaz Bultur"
+
+		
+		country_leader={
+			ideology=socialism
+			traits = { the_young_magnate  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAM_Harul_Efsam={
+		name="Harul Efsam"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Harul_Efsam
+			traits = {	democratic_crusader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Yalih_Sogruklu={
+		name="Yalih Sogruklu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Yalih_Sogruklu
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Mustafa_Hikaylu={
+		name="Mustafa Hikaylu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Mustafa_Hikaylu
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SAM_Bara_Saharakil={
+		name="Bara Saharakil"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Bara_Saharakil
+			traits = {	leftist_legionary 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Farulendem_Sonbahtara={
+		name="Farulendem Sonbahtara"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Farulendem_Sonbahtara
+			traits = {	democratic_crusader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SAM_Yalih_Atesilik={
+		name="Yalih Atesilik"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAM_Yalih_Atesilik
+			traits = {	rearmer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SAM_Adem_Yolge={
+		name="Adem Yolge"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Adem_Yolge
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	SAM_Eferemazan_Bultur={
+		name="Eferemazan Bultur"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Eferemazan_Bultur
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	SAM_Ramazan_Doru={
+		name="Ramazan Doru"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Ramazan_Doru
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	SAM_Arif_Bultur={
+		name="Arif Bultur"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAM_Arif_Bultur
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	SAM_Emin_Uzakin={
+		name="Emin Uzakin"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Emin_Uzakin
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	SAM_Iskenderha_Aksam={
+		name="Iskenderha Aksam"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAM_Iskenderha_Aksam
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	SAM_Onuratuhan_Baharlik={
+		name="Onuratuhan Baharlik"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Onuratuhan_Baharlik
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	SAM_Zaferem_Uzakinda={
+		name="Zaferem Uzakinda"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAM_Zaferem_Uzakinda
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	SAM_Talim_Sonba={
+		name="Talim Sonba"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Talim_Sonba
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	SAM_Talilmaz_Doru={
+		name="Talilmaz Doru"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Talilmaz_Doru
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	SAM_Yalim_Yanide={
+		name="Yalim Yanide"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Yalim_Yanide
+			traits = {	navy_screen_2 	}
+		}
+
+
+	}
+	SAM_Arif_Duyum={
+		name="Arif Duyum"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Arif_Duyum
+			traits = {	air_close_air_support_1 	}
+		}
+
+
+	}
+	SAM_Serhat_Sogun={
+		name="Serhat Sogun"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Serhat_Sogun
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	SAM_Yalih_Bultur={
+		name="Yalih Bultur"
+
+		advisor={
+			slot = high_command
+			idea_token = SAM_Yalih_Bultur
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	SAM_Tanes_Gulu={
+		name="Tanes Gulu"
+
+		advisor={
+			slot = theorist
+			idea_token = SAM_Tanes_Gulu
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	SAM_Zafe_Duvanlik={
+		name="Zafe Duvanlik"
+
+		advisor={
+			slot = theorist
+			idea_token = SAM_Zafe_Duvanlik
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	SAM_Barulender_Yildiz={
+		name="Barulender Yildiz"
+
+		advisor={
+			slot = theorist
+			idea_token = SAM_Barulender_Yildiz
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

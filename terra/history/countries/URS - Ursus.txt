@@ -1,0 +1,303 @@
+capital = 1182
+
+oob = "URS_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "URS_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "URS_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_trucks= 1
+	tech_support= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "URS_1936_air_bba"
+		set_technology = {
+			photo_reconnaisance = 1
+			
+		}
+
+	else = {
+		set_air_oob = "URS_1936_air_legacy"
+		set_technology = {
+			scout_plane1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_destroyer = 1
+	early_submarine = 1
+	
+	}
+	set_naval_oob = "URS_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Buluk Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Kalece Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_torpedo_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_depth_charges = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	sonar = 1
+	
+	}
+	set_naval_oob = "URS_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Buluk Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = ship_depth_charge_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Kalece Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = sub_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				rear_1_custom_slot = empty
+			}
+		}
+
+	}
+
+
+recruit_character = URS_Cemalilmalim_Koylu
+recruit_character = URS_Kadir_Baharak
+recruit_character = URS_Onur_Buzgac
+recruit_character = URS_Ader_Gemis
+recruit_character = URS_Halhan_Gunce
+recruit_character = URS_Mehmet_Sogru
+recruit_character = URS_Ramaz_Sevda
+recruit_character = URS_Ertuha_Kultur
+recruit_character = URS_Selih_Birla
+recruit_character = URS_Keremazan_Aksar
+recruit_character = URS_Hakan_Kaye
+recruit_character = URS_Utku_Basari
+recruit_character = URS_Ilker_Sehirlis
+recruit_character = URS_Harulent_Isik
+recruit_character = URS_Mustaferhat_Ulket
+recruit_character = URS_Halim_Baharak
+recruit_character = URS_Ertuhan_Hisla
+recruit_character = URS_Ener_Soga
+recruit_character = URS_Adem_Yesimsek
+recruit_character = URS_Ilkenderemal_Sonba
+recruit_character = URS_Kaan_Doguk
+recruit_character = URS_Ertuha_Duvar
+recruit_character = URS_Aderkan_Sehildir
+recruit_character = URS_Ramal_Gecmizci
+recruit_character = URS_Halilmalcin_Simsek
+recruit_character = URS_Keremazan_Sehil
+recruit_character = URS_Suat_Duvasan
+recruit_character = URS_Ertuha_Umut
+recruit_character = URS_Emin_Gece
+recruit_character = URS_Mehmet_Sane
+recruit_character = URS_Yalcin_Koylu
+recruit_character = URS_Mehmet_Sonbaharlil
+recruit_character = URS_Selih_Buzgac
+recruit_character = URS_Boran_Yayla
+recruit_character = URS_Keremazan_Serin
+recruit_character = URS_Ertugrul_Bolge
+recruit_character = URS_Yustafe_Yayla
+recruit_character = URS_Talim_Aksar
+recruit_character = URS_Hakan_Koylu
+recruit_character = URS_Ramal_Belece
+recruit_character = URS_Ramal_Seref
+recruit_character = URS_Zafa_Sonbaharlil
+recruit_character = URS_Emir_Ulket
+recruit_character = URS_Baruk_Sicak
+recruit_character = URS_Resulendemal_Savaskervas
+recruit_character = URS_Baruk_Busunce
+recruit_character = URS_Selih_Kayluk
+recruit_character = URS_Eferhan_Sehirlik
+recruit_character = URS_Hakanesul_Bahtar
+recruit_character = URS_Efer_Nehirlik
+recruit_character = URS_Kaaner_Ormanlik
+recruit_character = URS_Adem_Haylutlutlul
+recruit_character = URS_Aderkan_Soguk
+recruit_character = URS_Cemalim_Aksar
+recruit_character = URS_Halim_Gecmis
+recruit_character = URS_Bekir_Sehil
+recruit_character = URS_Savas_Umur
+recruit_character = URS_Bora_Servane
+recruit_character = URS_Halhan_Gecmis
+recruit_character = URS_Halim_Kaye
+recruit_character = URS_Bekir_Baharak
+recruit_character = URS_Sinan_Belece
+recruit_character = URS_Ramal_Temiz
+recruit_character = URS_Hakan_Sehirlis
+recruit_character = URS_Serkan_Birla
+recruit_character = URS_Boran_Kader
+recruit_character = URS_Kaaner_Serin
+recruit_character = URS_Resul_Kaye
+recruit_character = URS_Baruk_Yoldent
+recruit_character = URS_Bekir_Simsek
+recruit_character = URS_Selih_Gemis
+recruit_character = URS_Kerhat_Saat
+recruit_character = URS_Ramaz_Temiz
+recruit_character = URS_Savas_Basaman
+recruit_character = URS_Aderkan_Sevda
+recruit_character = URS_Ilkendem_Doruk
+recruit_character = URS_Halim_Beden
+recruit_character = URS_Halilmalcin_Kayla
+recruit_character = URS_Talim_Kaye
+recruit_character = URS_Onur_Kultur
+recruit_character = URS_Ader_Tasamane
+recruit_character = URS_Hakan_Aksar
+recruit_character = URS_Harulent_Belece
+recruit_character = URS_Utku_Duyum
+recruit_character = URS_Yalcin_Kultur
+recruit_character = URS_Enes_Sehirlis
+recruit_character = URS_Talcin_Duyum
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 3
+set_convoys = 0
+set_stability = 0.89
+set_war_support = 0.50
+
+add_ideas = {
+limited_conscription
+civilian_economy
+closed_economy
+}
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1909.10.13"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 24
+	fascism = 8
+	communism = 49
+	neutrality = 19
+}
+
+
+
+
+

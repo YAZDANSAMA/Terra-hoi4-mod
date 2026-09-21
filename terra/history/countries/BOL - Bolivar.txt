@@ -1,0 +1,453 @@
+capital = 755
+
+oob = "BOL_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "BOL_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "BOL_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_trucks= 1
+	gw_artillery= 1
+	tech_mountaineers= 1
+	fuel_silos= 1
+	electronic_mechanical_engineering= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_heavy_tank = 1
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+		create_equipment_variant = {
+		name = "Berejaang Mk 0"
+		type = heavy_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = smoke_launchers
+			special_type_slot_2 = expanded_fuel_tank
+			special_type_slot_3 = wet_ammo_storage
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_heavy_three_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Keriat Mk 1"
+		type = heavy_tank_chassis_1
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_petrol_electric_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = secondary_turret_hmg
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_heavy_three_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Senaka Mk 2"
+		type = light_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_small_cannon
+			special_type_slot_1 = secondary_turret_hmg
+			special_type_slot_2 = wet_ammo_storage
+			special_type_slot_3 = expanded_fuel_tank
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_light_one_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Perisaan Mk 2"
+		type = medium_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_medium_cannon
+			special_type_slot_1 = wet_ammo_storage
+			special_type_slot_2 = extra_ammo_storage
+			special_type_slot_3 = expanded_fuel_tank
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_medium_one_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BOL_1936_air_bba"
+		set_technology = {
+			
+		}
+
+	else = {
+		set_air_oob = "BOL_1936_air_legacy"
+		set_technology = {
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_battlecruiser = 1
+	early_battleship = 1
+	early_destroyer = 1
+	early_submarine = 1
+	
+	}
+	set_naval_oob = "BOL_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Nafasaris Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Apin Class"
+			type = battle_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Anah Class"
+			type = battleship_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Kebiasa Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_torpedo_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_depth_charges = 1
+	basic_naval_mines = 1
+	basic_torpedo = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	mtg_transport = 1
+	sonar = 1
+	submarine_mine_laying = 1
+	
+	}
+	set_naval_oob = "BOL_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Nafasaris Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_depth_charge_1
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Apin Class"
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_bc_1
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_anti_air_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_heavy_battery_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Anah Class"
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_bb_1
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_anti_air_1
+				mid_2_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Kebiasa Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = sub_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				rear_1_custom_slot = empty
+			}
+		}
+
+	}
+
+
+recruit_character = BOL_Bama_Toko
+recruit_character = BOL_Sakti_Padan
+recruit_character = BOL_Rama_Damhalusaan
+recruit_character = BOL_Hari_Legenci
+recruit_character = BOL_Agus_Cintu
+recruit_character = BOL_Wayan_Perakitteris
+recruit_character = BOL_Hari_Toma
+recruit_character = BOL_Sakti_Suci
+recruit_character = BOL_Putra_Tang
+recruit_character = BOL_Rambang_Berejaang
+recruit_character = BOL_Fajari_Senjatu
+recruit_character = BOL_Sakti_Gung
+recruit_character = BOL_Agus_Padih
+recruit_character = BOL_Mario_Lang
+recruit_character = BOL_Dewa_Perisaan
+recruit_character = BOL_Hari_Tariasjid
+recruit_character = BOL_Fajario_Tertanan
+recruit_character = BOL_Lutra_Pensir
+recruit_character = BOL_Lutfi_Suci
+recruit_character = BOL_Lutfi_Kerang
+recruit_character = BOL_Agus_Kelajahariat
+recruit_character = BOL_Hario_Perisaan
+recruit_character = BOL_Hari_Legenja
+recruit_character = BOL_Putra_Sahrohabahar
+recruit_character = BOL_Hario_Rohon
+recruit_character = BOL_Lutra_Purgai
+recruit_character = BOL_Fajar_Kebiasan
+recruit_character = BOL_Fajari_Tariasjid
+recruit_character = BOL_Fajario_Perta
+recruit_character = BOL_Bamban_Purumata
+recruit_character = BOL_Bama_Tombanahat
+recruit_character = BOL_Fajar_Peruhat
+recruit_character = BOL_Bambang_Bulap
+recruit_character = BOL_Wayan_Petir
+recruit_character = BOL_Lutra_Perang
+recruit_character = BOL_Suryang_Perjaharan
+recruit_character = BOL_Hario_Toko
+recruit_character = BOL_Hari_Apin
+recruit_character = BOL_Lutra_Damhalusaan
+recruit_character = BOL_Rambang_Pindelak
+recruit_character = BOL_Rizal_Laingitang
+recruit_character = BOL_Surya_Penci
+recruit_character = BOL_Hari_Padik
+recruit_character = BOL_Arjuna_Trang
+recruit_character = BOL_Lutra_Padik
+recruit_character = BOL_Bama_Cinta
+recruit_character = BOL_Ketutfi_Peruhat
+recruit_character = BOL_Ramban_Toma
+recruit_character = BOL_Lutra_Anah
+recruit_character = BOL_Rama_Kelajahariat
+recruit_character = BOL_Mari_Senjatu
+recruit_character = BOL_Suryan_Cintuahang
+recruit_character = BOL_Ramban_Keramain
+recruit_character = BOL_Ketutfi_Takuman
+recruit_character = BOL_Dewa_Penci
+recruit_character = BOL_Waya_Terempulawan
+recruit_character = BOL_Bambang_Perta
+recruit_character = BOL_Mari_Purgai
+recruit_character = BOL_Fajari_Keramain
+recruit_character = BOL_Fajari_Apin
+recruit_character = BOL_Suryan_Petirmalutah
+recruit_character = BOL_Lutfi_Nafsuh
+recruit_character = BOL_Andi_Toko
+recruit_character = BOL_Rizal_Perang
+recruit_character = BOL_Hari_Penjat
+recruit_character = BOL_Sakti_Bumbah
+recruit_character = BOL_Mari_Bulap
+recruit_character = BOL_Agus_Rohon
+recruit_character = BOL_Putfi_Upacakmati
+recruit_character = BOL_Wayan_Periata
+recruit_character = BOL_Fajar_Gurnanak
+recruit_character = BOL_Wayan_Nafsu
+recruit_character = BOL_Rizal_Penjat
+recruit_character = BOL_Mario_Anah
+recruit_character = BOL_Sakti_Daung
+recruit_character = BOL_Ramban_Badang
+recruit_character = BOL_Hario_Nafsu
+recruit_character = BOL_Fajario_Cintuahang
+recruit_character = BOL_Hari_Kelajahariat
+recruit_character = BOL_Rizal_Penci
+recruit_character = BOL_Hari_Petirmalutah
+recruit_character = BOL_Fajar_Berejaang
+recruit_character = BOL_Surya_Pindelak
+recruit_character = BOL_Putfi_Penjat
+recruit_character = BOL_Hari_Buari
+recruit_character = BOL_Ramban_Nafsuh
+recruit_character = BOL_Ketutfi_Nafsu
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 3
+set_convoys = 0
+set_stability = 0.78
+set_war_support = 0.66
+
+add_ideas = {
+extensive_conscription
+low_economic_mobilisation
+autarkic_economy
+}
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1889.1.11"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 26
+	fascism = 34
+	communism = 21
+	neutrality = 19
+}
+
+
+
+
+

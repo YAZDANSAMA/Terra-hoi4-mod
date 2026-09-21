@@ -1,0 +1,1083 @@
+characters = {
+	VIC_Niaran_Luatheachas={
+		name="Niaran Luatheachas"
+
+		
+		country_leader={
+			ideology=oligarchism
+			traits = { headstrong  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	VIC_Niamus_Cnuaidh={
+		name="Niamus Cnuaidh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Niamus_Cnuaidh
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Niamus_Glamhain={
+		name="Niamus Glamhain"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Niamus_Glamhain
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Quin_Failte={
+		name="Quin Failte"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Quin_Failte
+			traits = {	national_determinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Ciall_Aisce={
+		name="Ciall Aisce"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ciall_Aisce
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Keiraig_Baine={
+		name="Keiraig Baine"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Keiraig_Baine
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Rhys_Fona={
+		name="Rhys Fona"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Rhys_Fona
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Eoinn_Cnuarnamh={
+		name="Eoinn Cnuarnamh"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Eoinn_Cnuarnamh
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	VIC_Ciam_Fona={
+		name="Ciam Fona"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Ciam_Fona
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	VIC_Bran_Cnuarnamh={
+		name="Bran Cnuarnamh"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Bran_Cnuarnamh
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	VIC_Rhys_Luatheachas={
+		name="Rhys Luatheachas"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Rhys_Luatheachas
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	VIC_Quin_Buathe={
+		name="Quin Buathe"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Quin_Buathe
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	VIC_Quinn_Corath={
+		name="Quinn Corath"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Quinn_Corath
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	VIC_Hugh_Anamh={
+		name="Hugh Anamh"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Hugh_Anamh
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	VIC_Liamus_Luan={
+		name="Liamus Luan"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Liamus_Luan
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	VIC_Niaraig_Ceann={
+		name="Niaraig Ceann"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Niaraig_Ceann
+			traits = {	army_infantry_1 	}
+		}
+
+
+	}
+	VIC_Liamus_Solas={
+		name="Liamus Solas"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Liamus_Solas
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	VIC_Malcolm_Troin={
+		name="Malcolm Troin"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Malcolm_Troin
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	VIC_Niaraig_Loch={
+		name="Niaraig Loch"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Niaraig_Loch
+			traits = {	army_concealment_1 	}
+		}
+
+
+	}
+	VIC_Mall_Cuidir={
+		name="Mall Cuidir"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Mall_Cuidir
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	VIC_Padraig_Atharcradh={
+		name="Padraig Atharcradh"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Padraig_Atharcradh
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	VIC_Gareth_Ceilt={
+		name="Gareth Ceilt"
+
+		
+		country_leader={
+			ideology=fascism_ideology
+			traits = { dictator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	VIC_Owen_Sceanwa={
+		name="Owen Sceanwa"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Owen_Sceanwa
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Padran_Tair={
+		name="Padran Tair"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Padran_Tair
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Ciam_Faighe={
+		name="Ciam Faighe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ciam_Faighe
+			traits = {	warmonger 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Ulrich_Tuach={
+		name="Ulrich Tuach"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ulrich_Tuach
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Gareth_Porg={
+		name="Gareth Porg"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Gareth_Porg
+			traits = {	autocratic_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Ciall_Cairioras={
+		name="Ciall Cairioras"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ciall_Cairioras
+			traits = {	archon_basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Niaran_Ceann={
+		name="Niaran Ceann"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Niaran_Ceann
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	VIC_Ciamus_Buachas={
+		name="Ciamus Buachas"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Ciamus_Buachas
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	VIC_Gareth_Fona={
+		name="Gareth Fona"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Gareth_Fona
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	VIC_Gareth_Maigheanrimh={
+		name="Gareth Maigheanrimh"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Gareth_Maigheanrimh
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	VIC_Rhys_Ceann={
+		name="Rhys Ceann"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Rhys_Ceann
+			traits = {	navy_chief_naval_aviation_2 	}
+		}
+
+
+	}
+	VIC_Taran_Clam={
+		name="Taran Clam"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Taran_Clam
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	VIC_Taran_Radaill={
+		name="Taran Radaill"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Taran_Radaill
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	VIC_Ciall_Greas={
+		name="Ciall Greas"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Ciall_Greas
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	VIC_Malcolm_Loch={
+		name="Malcolm Loch"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Malcolm_Loch
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	VIC_Liamus_Ruarradann={
+		name="Liamus Ruarradann"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Liamus_Ruarradann
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	VIC_Rhys_Tair={
+		name="Rhys Tair"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Rhys_Tair
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	VIC_Declan_Luch={
+		name="Declan Luch"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Declan_Luch
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	VIC_Fergus_Buir={
+		name="Fergus Buir"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Fergus_Buir
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	VIC_Quinn_Fona={
+		name="Quinn Fona"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Quinn_Fona
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	VIC_Niam_Laoilina={
+		name="Niam Laoilina"
+
+		
+		country_leader={
+			ideology=stalinism
+			traits = { leftist_legionary  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	VIC_Declan_Tras={
+		name="Declan Tras"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Declan_Tras
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Quin_Lear={
+		name="Quin Lear"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Quin_Lear
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Keiraig_Eolamh={
+		name="Keiraig Eolamh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Keiraig_Eolamh
+			traits = {	mastermind_code_cracker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Ciamus_Tair={
+		name="Ciamus Tair"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ciamus_Tair
+			traits = {	anti_bolshevik_leftist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Niamus_Tuach={
+		name="Niamus Tuach"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Niamus_Tuach
+			traits = {	reluctant_stalinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Ciam_Dorchaill={
+		name="Ciam Dorchaill"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ciam_Dorchaill
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Malcolm_Greas={
+		name="Malcolm Greas"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Malcolm_Greas
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	VIC_Keiraig_Bain={
+		name="Keiraig Bain"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Keiraig_Bain
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	VIC_Ciam_Eolamh={
+		name="Ciam Eolamh"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Ciam_Eolamh
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	VIC_Iwan_Slisline={
+		name="Iwan Slisline"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Iwan_Slisline
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	VIC_Rhys_Baine={
+		name="Rhys Baine"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Rhys_Baine
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	VIC_Malcolm_Teil={
+		name="Malcolm Teil"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Malcolm_Teil
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	VIC_Seam_Buai={
+		name="Seam Buai"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Seam_Buai
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	VIC_Bran_Talamhreoith={
+		name="Bran Talamhreoith"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Bran_Talamhreoith
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	VIC_Seam_Ceilte={
+		name="Seam Ceilte"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Seam_Ceilte
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	VIC_Fergus_Atharcradh={
+		name="Fergus Atharcradh"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Fergus_Atharcradh
+			traits = {	air_airborne_1 	}
+		}
+
+
+	}
+	VIC_Taran_Dorcrad={
+		name="Taran Dorcrad"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Taran_Dorcrad
+			traits = {	air_naval_strike_2 	}
+		}
+
+
+	}
+	VIC_Iwan_Gluailt={
+		name="Iwan Gluailt"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Iwan_Gluailt
+			traits = {	air_naval_strike_2 	}
+		}
+
+
+	}
+	VIC_Keiran_Dubh={
+		name="Keiran Dubh"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Keiran_Dubh
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	VIC_Ciamus_Geanwa={
+		name="Ciamus Geanwa"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Ciamus_Geanwa
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	VIC_Cialcolm_Troin={
+		name="Cialcolm Troin"
+
+		
+		country_leader={
+			ideology=liberalism
+			traits = { rearmer  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	VIC_Declan_Corath={
+		name="Declan Corath"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Declan_Corath
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Declan_Lear={
+		name="Declan Lear"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Declan_Lear
+			traits = {	the_banker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_1_small
+			}
+		}
+
+
+	}
+	VIC_Niamus_Ruarradann={
+		name="Niamus Ruarradann"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Niamus_Ruarradann
+			traits = {	veteran_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_3_small
+			}
+		}
+
+
+	}
+	VIC_Seam_Cealte={
+		name="Seam Cealte"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Seam_Cealte
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Ciamus_Maine={
+		name="Ciamus Maine"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Ciamus_Maine
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Niall_Torm={
+		name="Niall Torm"
+
+		advisor={
+			slot = political_advisor
+			idea_token = VIC_Niall_Torm
+			traits = {	democratic_crusader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_America_Generic_2_small
+			}
+		}
+
+
+	}
+	VIC_Gareth_Fuair={
+		name="Gareth Fuair"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Gareth_Fuair
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	VIC_Bran_Liochantarg={
+		name="Bran Liochantarg"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Bran_Liochantarg
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	VIC_Declan_Bain={
+		name="Declan Bain"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Declan_Bain
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	VIC_Niaraig_Atharcradh={
+		name="Niaraig Atharcradh"
+
+		advisor={
+			slot = army_chief
+			idea_token = VIC_Niaraig_Atharcradh
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	VIC_Eoin_Torm={
+		name="Eoin Torm"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Eoin_Torm
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	VIC_Malcolm_Glamhain={
+		name="Malcolm Glamhain"
+
+		advisor={
+			slot = navy_chief
+			idea_token = VIC_Malcolm_Glamhain
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	VIC_Niamus_Tirseart={
+		name="Niamus Tirseart"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Niamus_Tirseart
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	VIC_Taraig_Neas={
+		name="Taraig Neas"
+
+		advisor={
+			slot = air_chief
+			idea_token = VIC_Taraig_Neas
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	VIC_Ciam_Seanch={
+		name="Ciam Seanch"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Ciam_Seanch
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	VIC_Malcolm_Liathanbha={
+		name="Malcolm Liathanbha"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Malcolm_Liathanbha
+			traits = {	army_radio_intelligence_1 	}
+		}
+
+
+	}
+	VIC_Niaraig_Neas={
+		name="Niaraig Neas"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Niaraig_Neas
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	VIC_Cialcolm_Glamhain={
+		name="Cialcolm Glamhain"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Cialcolm_Glamhain
+			traits = {	air_bomber_interception_1 	}
+		}
+
+
+	}
+	VIC_Keiraig_Lear={
+		name="Keiraig Lear"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Keiraig_Lear
+			traits = {	army_infantry_1 	}
+		}
+
+
+	}
+	VIC_Malcolm_Cluaithainta={
+		name="Malcolm Cluaithainta"
+
+		advisor={
+			slot = high_command
+			idea_token = VIC_Malcolm_Cluaithainta
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	VIC_Eoin_Talamhreoith={
+		name="Eoin Talamhreoith"
+
+		advisor={
+			slot = theorist
+			idea_token = VIC_Eoin_Talamhreoith
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	VIC_Quin_Cealte={
+		name="Quin Cealte"
+
+		advisor={
+			slot = theorist
+			idea_token = VIC_Quin_Cealte
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	VIC_Niall_Baile={
+		name="Niall Baile"
+
+		advisor={
+			slot = theorist
+			idea_token = VIC_Niall_Baile
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

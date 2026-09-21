@@ -1,0 +1,1083 @@
+characters = {
+	KJE_Suryang_Gerja={
+		name="Suryang Gerja"
+
+		
+		country_leader={
+			ideology=despotism
+			traits = { veteran_anti_bolshevik  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KJE_Dewa_Dama={
+		name="Dewa Dama"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Dewa_Dama
+			traits = {	agricultural_capitalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Putra_Bukuta={
+		name="Putra Bukuta"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Putra_Bukuta
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Rama_Bukuta={
+		name="Rama Bukuta"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Rama_Bukuta
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Bambang_Cahayi={
+		name="Bambang Cahayi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Bambang_Cahayi
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Mari_Rajaan={
+		name="Mari Rajaan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Mari_Rajaan
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Dewa_Puluah={
+		name="Dewa Puluah"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Dewa_Puluah
+			traits = {	national_determinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Lutfi_Tangitus={
+		name="Lutfi Tangitus"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Lutfi_Tangitus
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	KJE_Fajario_Pang={
+		name="Fajario Pang"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Fajario_Pang
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	KJE_Waya_Gerjan={
+		name="Waya Gerjan"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Waya_Gerjan
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	KJE_Rambang_Tangitus={
+		name="Rambang Tangitus"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Rambang_Tangitus
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	KJE_Wayang_Desai={
+		name="Wayang Desai"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Wayang_Desai
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	KJE_Wayang_Saka={
+		name="Wayang Saka"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Wayang_Saka
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	KJE_Suryang_Aroman={
+		name="Suryang Aroman"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Suryang_Aroman
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	KJE_Suryan_Gunung={
+		name="Suryan Gunung"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Suryan_Gunung
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	KJE_Rambang_Kertah={
+		name="Rambang Kertah"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Rambang_Kertah
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	KJE_Fajari_Penda={
+		name="Fajari Penda"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Fajari_Penda
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	KJE_Putra_Pahlan={
+		name="Putra Pahlan"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Putra_Pahlan
+			traits = {	navy_anti_submarine_2 	}
+		}
+
+
+	}
+	KJE_Lutra_Perang={
+		name="Lutra Perang"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Lutra_Perang
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	KJE_Bambang_Pasar={
+		name="Bambang Pasar"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Bambang_Pasar
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	KJE_Rama_Kakil={
+		name="Rama Kakil"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Rama_Kakil
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	KJE_Bambang_Badang={
+		name="Bambang Badang"
+
+		
+		country_leader={
+			ideology=rexism
+			traits = { autokrator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KJE_Putfi_Sedih={
+		name="Putfi Sedih"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Putfi_Sedih
+			traits = {	warmonger 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Bambang_Bula={
+		name="Bambang Bula"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Bambang_Bula
+			traits = {	vapsid_economist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Ketut_Kulaut={
+		name="Ketut Kulaut"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Ketut_Kulaut
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Agus_Surnah={
+		name="Agus Surnah"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Agus_Surnah
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Surya_Senjelaja={
+		name="Surya Senjelaja"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Surya_Senjelaja
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Andi_Badang={
+		name="Andi Badang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Andi_Badang
+			traits = {	collaborator_king 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Putra_Tradalaut={
+		name="Putra Tradalaut"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Putra_Tradalaut
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	KJE_Ketutra_Dama={
+		name="Ketutra Dama"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Ketutra_Dama
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	KJE_Ketut_Gerja={
+		name="Ketut Gerja"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Ketut_Gerja
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	KJE_Waya_Nagu={
+		name="Waya Nagu"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Waya_Nagu
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	KJE_Arjuna_Terjaga={
+		name="Arjuna Terjaga"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Arjuna_Terjaga
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	KJE_Dewa_Mendelambah={
+		name="Dewa Mendelambah"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Dewa_Mendelambah
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	KJE_Wayan_Upan={
+		name="Wayan Upan"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Wayan_Upan
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	KJE_Ketutra_Gurum={
+		name="Ketutra Gurum"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Ketutra_Gurum
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	KJE_Suryan_Cahayi={
+		name="Suryan Cahayi"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Suryan_Cahayi
+			traits = {	navy_capital_ship_2 	}
+		}
+
+
+	}
+	KJE_Fajari_Arwanah={
+		name="Fajari Arwanah"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Fajari_Arwanah
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	KJE_Suryang_Arwa={
+		name="Suryang Arwa"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Suryang_Arwa
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	KJE_Bama_Masa={
+		name="Bama Masa"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Bama_Masa
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	KJE_Ketutra_Toko={
+		name="Ketutra Toko"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Ketutra_Toko
+			traits = {	navy_anti_submarine_2 	}
+		}
+
+
+	}
+	KJE_Lutfi_Bula={
+		name="Lutfi Bula"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Lutfi_Bula
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	KJE_Surya_Seja={
+		name="Surya Seja"
+
+		
+		country_leader={
+			ideology=stalinism
+			traits = { socialist_justice  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KJE_Ramban_Pohonkerbubu={
+		name="Ramban Pohonkerbubu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Ramban_Pohonkerbubu
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Lutfi_Alajaang={
+		name="Lutfi Alajaang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Lutfi_Alajaang
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Putfi_Desai={
+		name="Putfi Desai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Putfi_Desai
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Lutfi_Terjaga={
+		name="Lutfi Terjaga"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Lutfi_Terjaga
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Fajario_Penyi={
+		name="Fajario Penyi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Fajario_Penyi
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	KJE_Fajari_Pang={
+		name="Fajari Pang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Fajari_Pang
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Sakti_Kulan={
+		name="Sakti Kulan"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Sakti_Kulan
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	KJE_Fajar_Kakil={
+		name="Fajar Kakil"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Fajar_Kakil
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	KJE_Wayang_Pohaya={
+		name="Wayang Pohaya"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Wayang_Pohaya
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	KJE_Bambang_Perang={
+		name="Bambang Perang"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Bambang_Perang
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	KJE_Fajar_Rimpung={
+		name="Fajar Rimpung"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Fajar_Rimpung
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	KJE_Agus_Pasar={
+		name="Agus Pasar"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Agus_Pasar
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	KJE_Rizal_Surnah={
+		name="Rizal Surnah"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Rizal_Surnah
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	KJE_Dewa_Upan={
+		name="Dewa Upan"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Dewa_Upan
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	KJE_Arjuna_Danga={
+		name="Arjuna Danga"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Arjuna_Danga
+			traits = {	army_CombinedArms_1 	}
+		}
+
+
+	}
+	KJE_Sakti_Terjaga={
+		name="Sakti Terjaga"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Sakti_Terjaga
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	KJE_Wayang_Alajaang={
+		name="Wayang Alajaang"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Wayang_Alajaang
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	KJE_Putra_Jalutah={
+		name="Putra Jalutah"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Putra_Jalutah
+			traits = {	navy_anti_submarine_1 	}
+		}
+
+
+	}
+	KJE_Fajario_Masa={
+		name="Fajario Masa"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Fajario_Masa
+			traits = {	army_infantry_2 	}
+		}
+
+
+	}
+	KJE_Andi_Pang={
+		name="Andi Pang"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Andi_Pang
+			traits = {	air_airborne_1 	}
+		}
+
+
+	}
+	KJE_Putra_Bukut={
+		name="Putra Bukut"
+
+		
+		country_leader={
+			ideology=socialism
+			traits = { liberal_democratic_paragon  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KJE_Fajario_Pasar={
+		name="Fajario Pasar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Fajario_Pasar
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Lutfi_Penyi={
+		name="Lutfi Penyi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Lutfi_Penyi
+			traits = {	veteran_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Mari_Suci={
+		name="Mari Suci"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Mari_Suci
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	KJE_Bambang_Nafsu={
+		name="Bambang Nafsu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Bambang_Nafsu
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Fajari_Ratu={
+		name="Fajari Ratu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Fajari_Ratu
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Ketutra_Nafsu={
+		name="Ketutra Nafsu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KJE_Ketutra_Nafsu
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	KJE_Bambang_Mulamai={
+		name="Bambang Mulamai"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Bambang_Mulamai
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	KJE_Sakti_Petir={
+		name="Sakti Petir"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Sakti_Petir
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	KJE_Fajari_Takil={
+		name="Fajari Takil"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Fajari_Takil
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	KJE_Andi_Padandalauan={
+		name="Andi Padandalauan"
+
+		advisor={
+			slot = army_chief
+			idea_token = KJE_Andi_Padandalauan
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	KJE_Andi_Kota={
+		name="Andi Kota"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Andi_Kota
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	KJE_Rizal_Jalutah={
+		name="Rizal Jalutah"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KJE_Rizal_Jalutah
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	KJE_Surya_Perang={
+		name="Surya Perang"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Surya_Perang
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	KJE_Surya_Alajaang={
+		name="Surya Alajaang"
+
+		advisor={
+			slot = air_chief
+			idea_token = KJE_Surya_Alajaang
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	KJE_Bambang_Beremuruhana={
+		name="Bambang Beremuruhana"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Bambang_Beremuruhana
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	KJE_Suryan_Laualut={
+		name="Suryan Laualut"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Suryan_Laualut
+			traits = {	navy_submarine_1 	}
+		}
+
+
+	}
+	KJE_Wayang_Musai={
+		name="Wayang Musai"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Wayang_Musai
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	KJE_Fajario_Ratu={
+		name="Fajario Ratu"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Fajario_Ratu
+			traits = {	army_CombinedArms_1 	}
+		}
+
+
+	}
+	KJE_Mario_Rimpi={
+		name="Mario Rimpi"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Mario_Rimpi
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	KJE_Ketut_Padik={
+		name="Ketut Padik"
+
+		advisor={
+			slot = high_command
+			idea_token = KJE_Ketut_Padik
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	KJE_Lutra_Nagu={
+		name="Lutra Nagu"
+
+		advisor={
+			slot = theorist
+			idea_token = KJE_Lutra_Nagu
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	KJE_Rizal_Gungit={
+		name="Rizal Gungit"
+
+		advisor={
+			slot = theorist
+			idea_token = KJE_Rizal_Gungit
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	KJE_Mario_Arwahatuan={
+		name="Mario Arwahatuan"
+
+		advisor={
+			slot = theorist
+			idea_token = KJE_Mario_Arwahatuan
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

@@ -1,0 +1,5847 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = italian_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = ITA
+				tag = RSI
+				tag = RDS
+			}
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 1500 y = 1500 }
+
+	initial_show_position = {
+		x = 0
+		y = 0
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+	focus = {
+		id = ITA_ethiopian_war_logistics_bba
+		icon = GFX_goal_generic_position_armies
+
+		x = 2
+		y = 0
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				ITA_cw_branches_are_visible = yes
+			}
+		}
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italian_highways_bba
+		icon = GFX_focus_generic_truck
+		x = 6
+		y = 0
+		relative_position_id = ITA_ethiopian_war_logistics_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_ministry_of_italian_africa
+		icon = GFX_focus_ITA_ministry_of_italian_africa
+		prerequisite = { focus = ITA_italian_highways_bba }
+		prerequisite = { focus = ITA_ethiopian_war_logistics_bba }
+
+		x = -5
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_develop_ethiopia
+		icon = GFX_focus_generic_develop_ethiopia
+		prerequisite = { focus = ITA_ministry_of_italian_africa }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_ministry_of_italian_africa
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_develop_libya
+		icon = GFX_focus_generic_develop_libya
+		prerequisite = { focus = ITA_ministry_of_italian_africa }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_ministry_of_italian_africa
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_develop_eritrea
+		icon = GFX_focus_generic_develop_eritrea
+		prerequisite = { focus = ITA_ministry_of_italian_africa }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_ministry_of_italian_africa
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_develop_somaliland
+		icon = GFX_focus_generic_develop_somaliland
+		prerequisite = { focus = ITA_ministry_of_italian_africa }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_ministry_of_italian_africa
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_regional_development
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = ITA_develop_eritrea focus = ITA_develop_libya focus = ITA_develop_somaliland focus = ITA_develop_ethiopia }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_develop_libya
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_litoranea_balbo
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = ITA_regional_development }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_via_della_vittoria
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = ITA_litoranea_balbo }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_litoranea_balbo
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_libyan_railway
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = ITA_litoranea_balbo }
+		prerequisite = { focus = ITA_prospect_for_oil }
+		x = 1
+		y = 2
+		relative_position_id = ITA_litoranea_balbo
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_prospect_for_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ITA_regional_development }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_libyan_refineries
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = ITA_prospect_for_oil }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_prospect_for_oil
+		cost = 5
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_polizia_dell_africa_italiana
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = ITA_regional_development }
+		mutually_exclusive = { focus = ITA_strengthen_ascari_corps }
+		x = 1
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_strengthen_ascari_corps
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		prerequisite = { focus = ITA_regional_development }
+		mutually_exclusive = { focus = ITA_polizia_dell_africa_italiana }
+		x = 3
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_comandante_diavolo
+		icon = GFX_focus_ITA_comandante_diavolo
+		prerequisite = { focus = ITA_polizia_dell_africa_italiana focus = ITA_strengthen_ascari_corps }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_polizia_dell_africa_italiana
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_steel_industry_in_terni
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = ITA_italian_highways_bba }
+		mutually_exclusive = { focus = ITA_power_plants_in_terni }
+		x = -1
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_power_plants_in_terni
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ITA_italian_highways_bba }
+		mutually_exclusive = { focus = ITA_steel_industry_in_terni }
+		x = 1
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_industria_della_gomma_sintetica
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = ITA_steel_industry_in_terni focus = ITA_power_plants_in_terni }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_steel_industry_in_terni
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_strengthen_northern_industry
+		icon = GFX_focus_ITA_northern_industry
+		prerequisite = { focus = ITA_industria_della_gomma_sintetica }
+		mutually_exclusive = { focus = ITA_modernize_the_mezzogiorno }
+		x = -1
+		y = 1
+		relative_position_id = ITA_industria_della_gomma_sintetica
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_modernize_the_mezzogiorno
+		icon = GFX_focus_ITA_southern_industry
+		prerequisite = { focus = ITA_industria_della_gomma_sintetica }
+		mutually_exclusive = { focus = ITA_strengthen_northern_industry }
+		x = 1
+		y = 1
+		relative_position_id = ITA_industria_della_gomma_sintetica
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_new_industrialization_program
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ITA_strengthen_northern_industry focus = ITA_modernize_the_mezzogiorno }
+		prerequisite = { focus = ITA_expand_national_universities }
+
+		x = 1
+		y = 2
+		relative_position_id = ITA_strengthen_northern_industry
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_railway_innovations
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ITA_italian_highways_bba }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_foggia_farm_fields
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ITA_railway_innovations }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_railway_innovations
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_investments_in_edison
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = ITA_railway_innovations }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_railway_innovations
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_national_universities
+		icon = GFX_focus_research
+		prerequisite = { focus = ITA_investments_in_edison }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_investments_in_edison
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_fiocchi_munizioni
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ITA_italian_highways_bba }
+
+		x = 5
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_brescia_small_arms_industry
+		icon = GFX_focus_focus_fra_maquis
+		prerequisite = { focus = ITA_fiocchi_munizioni }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_fiocchi_munizioni
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_milan_comms_industry
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = ITA_fiocchi_munizioni }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_fiocchi_munizioni
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_redirect_alfa_romeo_production
+		icon = GFX_focus_ITA_redirect_alfa_romeo_production
+		prerequisite = { focus = ITA_brescia_small_arms_industry focus = ITA_milan_comms_industry }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_brescia_small_arms_industry
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_increase_production
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = ITA_expand_national_universities }
+		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
+		mutually_exclusive = { focus = ITA_keep_specialization }
+		x = -1
+		y = 2
+		relative_position_id = ITA_redirect_alfa_romeo_production
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_keep_specialization
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ITA_expand_national_universities }
+		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
+		mutually_exclusive = { focus = ITA_increase_production }
+		x = 1
+		y = 2
+		relative_position_id = ITA_redirect_alfa_romeo_production
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_thermojet_research
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = ITA_increase_production focus = ITA_keep_specialization }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_increase_production
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_army_primacy_bba
+		icon = GFX_goal_generic_axis_build_infantry
+
+		x = 13
+		y = 0
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_preserve_army_traditions
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = ITA_army_primacy_bba }
+		mutually_exclusive = { focus = ITA_a_bandits_war }
+		x = -3
+		y = 1
+		relative_position_id = ITA_army_primacy_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_increase_artillery_production
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = ITA_fiocchi_munizioni }
+		prerequisite = { focus = ITA_army_primacy_bba }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_fiocchi_munizioni
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_vallo_alpino_del_littorio
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = ITA_milan_comms_industry }
+		prerequisite = { focus = ITA_increase_artillery_production }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_milan_comms_industry
+		cost = 5
+		
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_moschettieri_del_duce
+		icon = GFX_focus_ITA_moschettieri_del_duce
+		prerequisite = { focus = ITA_preserve_army_traditions }
+
+		dynamic = yes
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_a_bandits_war
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ITA_army_primacy_bba }
+		mutually_exclusive = { focus = ITA_preserve_army_traditions }
+		x = 3
+		y = 1
+		relative_position_id = ITA_army_primacy_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_carica_di_isbuscenskij
+		icon = GFX_focus_ITA_cavalry_charge
+		prerequisite = { focus = ITA_a_bandits_war }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_a_bandits_war
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_army_leaders
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_a_bandits_war }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_superesercito
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_a_bandits_war }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italian_tankettes
+		icon = GFX_focus_generic_tankette
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_a_bandits_war }
+
+		x = 5
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_bersaglieri
+		icon = GFX_focus_ITA_bersaglieri
+		prerequisite = { focus = ITA_army_leaders }
+		prerequisite = { focus = ITA_superesercito }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_army_leaders
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_divisioni_alpine
+		icon = GFX_focus_ITA_alpine_division
+		prerequisite = { focus = ITA_bersaglieri }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_bersaglieri
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_fanti_dell_aria
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = ITA_bersaglieri }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_bersaglieri
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_self_propelled_guns
+		icon = GFX_focus_generic_self_propelled_gun
+		prerequisite = { focus = ITA_superesercito }
+		prerequisite = { focus = ITA_italian_tankettes }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_superesercito
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_end_fiat_ansaldo_duopoly
+		icon = GFX_focus_ITA_fiat_ansaldo_duopoly
+		prerequisite = { focus = ITA_self_propelled_guns }
+		mutually_exclusive = { focus = ITA_modernize_ansaldo_facilities }
+		x = -1
+		y = 1
+		relative_position_id = ITA_self_propelled_guns
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_modernize_ansaldo_facilities
+		icon = GFX_focus_ITA_modernize_ansaldo_facilities
+		prerequisite = { focus = ITA_self_propelled_guns }
+		mutually_exclusive = { focus = ITA_end_fiat_ansaldo_duopoly }
+		x = 1
+		y = 1
+		relative_position_id = ITA_self_propelled_guns
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_ferrea_mole_ferreo_cuore
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
+		prerequisite = { focus = ITA_end_fiat_ansaldo_duopoly focus = ITA_modernize_ansaldo_facilities }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_end_fiat_ansaldo_duopoly
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_air_innovations_bba
+		icon = GFX_goal_expand_the_luftwaffe
+
+		x = 7
+		y = 0
+		relative_position_id = ITA_army_primacy_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_citta_dell_aria
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = ITA_air_innovations_bba }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_air_innovations_bba
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_rome_flying_school
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = ITA_air_innovations_bba }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_air_innovations_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_reggianes_exports
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = ITA_citta_dell_aria }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_diving_bombers
+		icon = GFX_goal_poland_goal
+		prerequisite = { focus = ITA_citta_dell_aria }
+		prerequisite = { focus = ITA_expand_rome_flying_school }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_superaereo
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = ITA_citta_dell_aria }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_officers_of_the_service_role
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = ITA_superaereo }
+		prerequisite = { focus = ITA_expand_rome_flying_school }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_superaereo
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_standardization
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = ITA_superaereo }
+		mutually_exclusive = { focus = ITA_specialization }
+		x = -1
+		y = 1
+		relative_position_id = ITA_superaereo
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_specialization
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = ITA_superaereo }
+		mutually_exclusive = { focus = ITA_standardization }
+		x = 1
+		y = 1
+		relative_position_id = ITA_superaereo
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ITA_long_range_aircraft
+		icon = GFX_focus_generic_long_range_aircraft
+		prerequisite = { focus = ITA_standardization }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_standardization
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_bomber_designs
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
+
+		x = 2
+		y = 0
+		relative_position_id = ITA_long_range_aircraft
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_fighter_designs
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
+
+		x = 4
+		y = 0
+		relative_position_id = ITA_long_range_aircraft
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_multirole_aircraft
+		icon = GFX_focus_generic_multi_role_aircraft
+		prerequisite = { focus = ITA_specialization }
+
+		x = 6
+		y = 0
+		relative_position_id = ITA_long_range_aircraft
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_supremacy_in_the_skies
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ITA_multirole_aircraft focus = ITA_long_range_aircraft focus = ITA_fighter_designs focus = ITA_bomber_designs }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_bomber_designs
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_naval_power_projection
+		icon = GFX_goal_generic_build_navy
+
+		x = 11
+		y = 0
+		relative_position_id = ITA_air_innovations_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_intensify_torpedo_manufacturing
+		icon = GFX_focus_generic_torpedo_production
+		prerequisite = { focus = ITA_naval_power_projection }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_naval_power_projection
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_naval_facilities
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ITA_naval_power_projection }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_naval_power_projection
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_oto_naval_guns
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = ITA_naval_power_projection }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_naval_power_projection
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_improve_overseas_naval_bases
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = -4
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_milizia_marittima_di_artiglieria
+		icon = GFX_focus_ITA_milizia_marittima_di_artiglieria
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_supermarina
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_stockpile_fuel
+		icon = GFX_focus_generic_stockpile_fuel
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_forza_navale_especiale
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_naval_air_coordination
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = ITA_supermarina }
+		prerequisite = { focus = ITA_expand_rome_flying_school }
+
+		x = -6
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_decima_flottiglia_mas
+		icon = GFX_focus_ITA_decima_flottiglia_mas
+		prerequisite = { focus = ITA_supermarina }
+
+		x = -4
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_incrociatori_leggeri
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = ITA_supermarina }
+		mutually_exclusive = { focus = ITA_incrociatori_pesanti }
+		x = -2
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_incrociatori_pesanti
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = ITA_supermarina }
+		mutually_exclusive = { focus = ITA_incrociatori_leggeri }
+		x = 2
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_naval_intelligence
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = ITA_supermarina }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_cooperation_programs
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = ITA_supermarina }
+
+		x = 6
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_cruiser_submarines
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = ITA_incrociatori_leggeri }
+		mutually_exclusive = { focus = ITA_midget_submarines }
+		x = -4
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_midget_submarines
+		icon = GFX_focus_generic_midget_submarines
+		prerequisite = { focus = ITA_incrociatori_leggeri }
+		mutually_exclusive = { focus = ITA_cruiser_submarines }
+		x = -2
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_cacciatorpediniere_di_scorta
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = ITA_incrociatori_leggeri }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_ispettorato_dei_mezzi_antisommergibili
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = ITA_incrociatori_leggeri focus = ITA_incrociatori_pesanti }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_navi_da_battaglia
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = ITA_incrociatori_pesanti }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_incrociatori_pesanti
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_proper_carriers
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = ITA_incrociatori_pesanti }
+		mutually_exclusive = { focus = ITA_refit_civilian_ships }
+		x = 2
+		y = 1
+		relative_position_id = ITA_incrociatori_pesanti
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_refit_civilian_ships
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = ITA_incrociatori_pesanti }
+		mutually_exclusive = { focus = ITA_proper_carriers }
+		x = 4
+		y = 1
+		relative_position_id = ITA_incrociatori_pesanti
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_flotta_d_evasione
+		icon = GFX_focus_ITA_new_horizons
+		prerequisite = { focus = ITA_ispettorato_dei_mezzi_antisommergibili focus = ITA_cacciatorpediniere_di_scorta focus = ITA_navi_da_battaglia }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_ispettorato_dei_mezzi_antisommergibili
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_the_abyssinian_fiasco
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		mutually_exclusive = { focus = ITA_solid_progress focus = ITA_struggle_in_ethiopia }
+		x = 29
+		y = 0
+		relative_position_id = ITA_naval_power_projection
+		cost = 5
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+				NOT = { has_completed_focus = ITA_convene_the_grand_council }
+			}
+		}
+
+		offset = {
+			x = -14
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_defy_the_duce
+			}
+		}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_solid_progress
+		icon = GFX_focus_generic_attack_ethiopia
+		mutually_exclusive = { focus = ITA_the_abyssinian_fiasco focus = ITA_struggle_in_ethiopia }
+		x = 2
+		y = 0
+		offset = {
+			x = -20
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "By Blood Alone" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						OR = {
+							has_completed_focus = ITA_culto_del_duce
+							has_completed_focus = ITA_convene_the_grand_council
+						}
+					}
+				}
+			}
+		}
+
+		relative_position_id = ITA_the_abyssinian_fiasco
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_struggle_in_ethiopia
+		icon = GFX_goal_generic_major_war
+		mutually_exclusive = { focus = ITA_the_abyssinian_fiasco focus = ITA_solid_progress }
+		x = 2
+		y = 0
+		relative_position_id = ITA_solid_progress
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_undermine_the_duce
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = ITA_struggle_in_ethiopia }
+		x = 6
+		y = 1
+		relative_position_id = ITA_struggle_in_ethiopia
+		cost = 5
+		available = {}
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_servizio_informazione_militare
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = ITA_solid_progress focus = ITA_the_abyssinian_fiasco focus = ITA_struggle_in_ethiopia }
+
+		x = 0
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "By Blood Alone" }
+					AND = {
+						has_dlc = "By Blood Alone"
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						OR = {
+							has_completed_focus = ITA_culto_del_duce
+							has_completed_focus = ITA_convene_the_grand_council
+						}
+					}
+				}
+			}
+		}
+		relative_position_id = ITA_solid_progress
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_conspiracies_in_the_shadows
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = ITA_undermine_the_duce }
+		x = 0
+		y = 1
+		relative_position_id = ITA_undermine_the_duce
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_triumph_in_africa_bba
+		icon = GFX_focus_ETH_the_second_italo_ethiopian_war
+		prerequisite = { focus = ITA_servizio_informazione_militare }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_servizio_informazione_militare
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ITA_convene_the_grand_council
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = ITA_triumph_in_africa_bba focus = ITA_conspiracies_in_the_shadows }
+
+		mutually_exclusive = { focus = ITA_culto_del_duce focus = ITA_defy_the_duce }
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce	}
+			}
+		}
+
+		x = 20
+		y = 2
+		relative_position_id = ITA_triumph_in_africa_bba
+
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_culto_del_duce
+			}
+		}
+
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ITA_devaluate_the_lire
+		icon = GFX_focus_ITA_devaluate_the_lire
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_anglo_italian_agreements
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+
+		bypass = {} 
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_topple_amhara_rulers
+		icon = GFX_focus_ITA_topple_amhara_rulers
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_new_emperor_of_ethiopia
+		icon = GFX_focus_ITA_the_new_emperor_of_ethiopia
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_culto_del_duce
+		icon = GFX_focus_ITA_culto_del_duce
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		mutually_exclusive = { focus = ITA_convene_the_grand_council focus = ITA_defy_the_duce }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+				NOT = { has_completed_focus = ITA_convene_the_grand_council }
+			}
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = ITA_the_man_of_providence
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = ITA_culto_del_duce }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_legge_bottai
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ITA_the_man_of_providence }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_man_of_providence
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_boost_the_grand_council_of_fascism
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = ITA_the_man_of_providence }
+		mutually_exclusive = { focus = ITA_to_live_as_a_lion }
+		x = -1
+		y = 3
+		relative_position_id = ITA_the_man_of_providence
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_ITA_MISSIOLINI}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_to_live_as_a_lion
+		icon = GFX_focus_ITA_to_live_as_a_lion
+		prerequisite = { focus = ITA_the_man_of_providence }
+		mutually_exclusive = { focus = ITA_boost_the_grand_council_of_fascism }
+		x = 2
+		y = 0
+		relative_position_id = ITA_boost_the_grand_council_of_fascism
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_ITA_MISSIOLINI}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_la_battaglia_del_grano
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = ITA_culto_del_duce }
+		mutually_exclusive = { focus = ITA_la_battaglia_per_la_terra }
+		x = -1
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_la_battaglia_per_la_terra
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = ITA_culto_del_duce }
+		mutually_exclusive = { focus = ITA_la_battaglia_del_grano }
+		x = 1
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_la_battaglia_per_le_nascite
+		icon = GFX_focus_generic_population_growth
+		prerequisite = { focus = ITA_la_battaglia_del_grano focus = ITA_la_battaglia_per_la_terra }
+
+		x = 1
+		y = 2
+		relative_position_id = ITA_la_battaglia_del_grano
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_strengthen_the_regime
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ITA_la_battaglia_per_le_nascite }
+
+		x = 0
+		y = 5
+		relative_position_id = ITA_la_battaglia_per_le_nascite
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_devotion
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ITA_to_live_as_a_lion focus = ITA_boost_the_grand_council_of_fascism }
+		prerequisite = { focus = ITA_strengthen_the_regime }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_strengthen_the_regime
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_ministero_della_cultura_popolare 
+		icon = GFX_focus_generic_italy_propaganda
+		prerequisite = { focus = ITA_culto_del_duce focus = ITA_convene_the_grand_council }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_believe_obey_fight
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = ITA_ministero_della_cultura_popolare }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_ministero_della_cultura_popolare
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_banda_carita
+		icon = GFX_focus_ITA_banda_carita
+		prerequisite = { focus = ITA_believe_obey_fight }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_believe_obey_fight
+		cost = 10
+
+		allow_branch = {
+			OR = {
+				has_dlc = "La Resistance"
+				has_dlc = "Waking the Tiger"
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+			}
+		}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+	
+
+	focus = {
+		id = ITA_banda_koch
+		icon = GFX_focus_generic_national_security
+		prerequisite = { focus = ITA_banda_carita }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_banda_carita
+		cost = 10
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+			}
+		}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ITA_security_militias
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = ITA_culto_del_duce focus = ITA_convene_the_grand_council }
+
+		x = 6
+		y = 2
+		relative_position_id = ITA_culto_del_duce
+
+		offset = {
+			x = -11
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_battaglioni_d_assalto
+		icon = GFX_focus_ITA_blackshirts
+		prerequisite = { focus = ITA_security_militias }
+		mutually_exclusive = { focus = ITA_strengthen_the_blackshirts }
+		x = -1
+		y = 2
+		relative_position_id = ITA_security_militias
+
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_strengthen_the_blackshirts
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = ITA_security_militias }
+		mutually_exclusive = { focus = ITA_battaglioni_d_assalto }
+		x = 2
+		y = 0
+		relative_position_id = ITA_battaglioni_d_assalto
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_milizia_coloniale
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = ITA_battaglioni_d_assalto focus = ITA_strengthen_the_blackshirts }
+
+		x = 1
+		y = 2
+		relative_position_id = ITA_battaglioni_d_assalto
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_towards_a_greater_italy
+		icon = GFX_focus_ITA_greater_italy
+		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty focus = ITA_setting_course }
+		mutually_exclusive = { focus = ITA_mare_nostrum_bba }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_strengthen_the_regime
+		cost = 5
+
+		offset = {
+			x = 8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_heroes_of_the_nation
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = ITA_towards_a_greater_italy }
+		prerequisite = { focus = ITA_devotion }
+		mutually_exclusive = { focus = ITA_capo_supremo }
+		x = -4
+		y = 1
+		relative_position_id = ITA_towards_a_greater_italy
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_capo_supremo
+		icon = GFX_focus_ITA_capo_supremo
+		prerequisite = { focus = ITA_towards_a_greater_italy }
+		prerequisite = { focus = ITA_devotion }
+		mutually_exclusive = { focus = ITA_heroes_of_the_nation }
+		x = -2
+		y = 1
+		relative_position_id = ITA_towards_a_greater_italy
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_bend_the_bars
+		icon = GFX_focus_ITA_bend_the_bars
+		prerequisite = { focus = ITA_towards_a_greater_italy }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_towards_a_greater_italy
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_subdue_the_sentinels
+		icon = GFX_focus_ITA_subdue_the_sentinels
+		prerequisite = { focus = ITA_bend_the_bars }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_bend_the_bars
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_a_colonial_empire
+		icon = GFX_focus_ITA_a_colonial_empire
+		prerequisite = { focus = ITA_subdue_the_sentinels }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_subdue_the_sentinels
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_by_blood_alone
+		icon = GFX_focus_ITA_by_blood_alone
+		prerequisite = { focus = ITA_a_colonial_empire }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_a_colonial_empire
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_masters_of_the_aegean
+		icon = GFX_focus_generic_aegean_sea_focus
+		prerequisite = { focus = ITA_bend_the_bars }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_bend_the_bars
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_masters_of_the_mediterranean
+		icon = GFX_focus_generic_mediterranean_sea_focus
+		prerequisite = { focus = ITA_masters_of_the_aegean }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_masters_of_the_aegean
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_depose_mussolini
+		icon = GFX_focus_ITA_depose_mussolini
+		prerequisite = { focus = ITA_convene_the_grand_council }
+		relative_position_id = ITA_convene_the_grand_council
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+			}
+		}
+
+		x = 0
+		y = 1
+		
+		cost = 5
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italo_balbo_focus
+		icon = GFX_focus_ITA_italo_balbo
+		prerequisite = { focus = ITA_depose_mussolini }
+		mutually_exclusive = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
+		relative_position_id = ITA_depose_mussolini
+		x = -10
+		y = 1
+
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_dino_grandi_focus
+		icon = GFX_focus_ITA_dino_grandi
+		prerequisite = { focus = ITA_depose_mussolini }
+		mutually_exclusive = { focus = ITA_italo_balbo_focus focus = ITA_monarchia_d_italia }
+		relative_position_id = ITA_depose_mussolini
+		x = 0
+		y = 1
+
+		cost = 5
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = ITA_stop_the_squandering
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = ITA_italo_balbo_focus focus = ITA_dino_grandi_focus }
+		relative_position_id = ITA_italo_balbo_focus
+		x = 5
+		y = 1
+
+		cost = 10
+		available = {}
+		
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_consolidate_power
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = ITA_italo_balbo_focus focus = ITA_dino_grandi_focus }
+		relative_position_id = ITA_stop_the_squandering
+		x = 2
+		y = 0
+
+		cost = 10
+		available = {}
+		
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_purge_the_party
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = ITA_consolidate_power }
+		prerequisite = { focus = ITA_stop_the_squandering}
+		relative_position_id = ITA_stop_the_squandering
+		x = 1
+		y = 1
+
+		cost = 5
+		available = {}
+		
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_fate_of_mussolini
+		icon = GFX_focus_ger_assassinate_mussolini
+		prerequisite = { focus = ITA_purge_the_party }
+		relative_position_id = ITA_purge_the_party
+		x = 0
+		y = 1
+
+		cost = 5
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_divino_duce
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = ITA_the_fate_of_mussolini }
+		mutually_exclusive = { focus = ITA_a_greater_purpose }
+		relative_position_id = ITA_the_fate_of_mussolini
+		x = -1
+		y = 1
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_blackshirt_loyalty
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = ITA_divino_duce }
+		relative_position_id = ITA_divino_duce
+		x = 0
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_a_greater_purpose
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ITA_the_fate_of_mussolini }
+		mutually_exclusive = { focus = ITA_divino_duce }
+		relative_position_id = ITA_the_fate_of_mussolini
+		x = 1
+		y = 1
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_spreading_the_eagles_wings
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = ITA_a_greater_purpose }
+		relative_position_id = ITA_a_greater_purpose
+		x = 0
+		y = 1
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italian_hegemony
+		icon = GFX_focus_ITA_italian_hegemony
+		prerequisite = { focus = ITA_spreading_the_eagles_wings }
+		relative_position_id = ITA_a_greater_purpose
+		x = 0
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+
+
+	
+	
+	
+
+	focus = {
+		id = ITA_reorganize_regio_esercito
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = ITA_italo_balbo_focus }
+		prerequisite = { focus =  ITA_stop_the_squandering }
+		mutually_exclusive = { focus = ITA_reinforce_regia_aeronautica }
+		relative_position_id = ITA_italo_balbo_focus
+		x = -1
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_reinforce_regia_aeronautica
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = ITA_italo_balbo_focus }
+		prerequisite = { focus =  ITA_stop_the_squandering }
+		mutually_exclusive = { focus = ITA_reorganize_regio_esercito }
+		relative_position_id = ITA_italo_balbo_focus
+		x = 1
+		y = 2		
+		relative_position_id = ITA_italo_balbo_focus
+
+		cost = 10
+		available = {}		
+
+		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = ITA_compagnie_auto_avio_sahariane
+		icon = GFX_focus_generic_armored_air_support
+		prerequisite = { focus = ITA_reorganize_regio_esercito focus = ITA_reinforce_regia_aeronautica }
+		relative_position_id = ITA_reorganize_regio_esercito
+		x = 1
+		y = 1
+
+		cost = 10
+		available = {}
+		
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_combined_land_and_air_warfare
+		icon = GFX_focus_generic_tank_air_support
+		prerequisite = { focus = ITA_compagnie_auto_avio_sahariane }
+		relative_position_id = ITA_reorganize_regio_esercito
+		x = 1
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_fourth_shore
+		icon = GFX_focus_generic_develop_libya
+		prerequisite = { focus = ITA_italo_balbo_focus }
+		prerequisite = { focus = ITA_stop_the_squandering }
+		relative_position_id = ITA_italo_balbo_focus
+		x = 3
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_oil_in_tripoli
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ITA_the_fourth_shore }
+		mutually_exclusive = { focus = ITA_steel_in_tripoli }
+		relative_position_id = ITA_the_fourth_shore
+		x = -1
+		y = 1
+
+		cost = 5
+		available = {}		
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		available = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_steel_in_tripoli
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = ITA_the_fourth_shore }
+		mutually_exclusive = { focus = ITA_oil_in_tripoli }
+		relative_position_id = ITA_the_fourth_shore
+		x = 1
+		y = 1
+
+		cost = 5
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		available = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_novus_ordo
+		icon = GFX_focus_ITA_strengthen_ascari_corps 
+		prerequisite = { focus = ITA_steel_in_tripoli focus = ITA_oil_in_tripoli }
+		relative_position_id = ITA_the_fourth_shore
+		x = 0
+		y = 2
+
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = ITA_seek_british_military_cooperation
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
+		mutually_exclusive = { focus = ITA_invite_france_to_military_partnership }
+		relative_position_id = ITA_dino_grandi_focus
+		x = 2
+		y = 1
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_anglo_italian_pact
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = ITA_seek_british_military_cooperation }
+		relative_position_id = ITA_seek_british_military_cooperation
+		x = 0
+		y = 1
+
+		cost = 5
+		available = {}
+		Bypass = { is_in_faction_with = ENG }	
+
+		search_filters = {}
+
+		completion_reward = {}
+	}	
+
+	focus = {
+		id = ITA_invite_france_to_military_partnership
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
+		mutually_exclusive = { focus = ITA_seek_british_military_cooperation }
+		relative_position_id = ITA_seek_british_military_cooperation
+		x = 2
+		y = 0
+
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_franco_italian_pact
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = ITA_invite_france_to_military_partnership }
+		relative_position_id = ITA_seek_british_military_cooperation
+		x = 2
+		y = 1
+
+		cost = 5
+		available = {}
+		Bypass = { is_in_faction_with = FRA }
+		
+		search_filters = {}
+
+		completion_reward = {}
+	}	
+
+	focus = {
+		id = ITA_proclaim_the_italian_empire
+		icon = GFX_focus_ITA_imperial_recognition
+		prerequisite = { focus = ITA_anglo_italian_pact focus = ITA_franco_italian_pact }
+		relative_position_id = ITA_seek_british_military_cooperation
+		x = 1
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}	
+
+	focus = {
+		id = ITA_reorganize_the_party
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ITA_dino_grandi_focus }
+		prerequisite = { focus = ITA_consolidate_power }
+		relative_position_id = ITA_dino_grandi_focus
+		x = -1
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_meritocracy
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ITA_reorganize_the_party }
+		prerequisite = { focus = ITA_purge_the_party }
+		relative_position_id = ITA_reorganize_the_party
+		x = 0
+		y = 2
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_economic_reforms
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = ITA_reorganize_the_party }
+
+		
+		relative_position_id = ITA_reorganize_the_party
+		x = 2
+		y = 1
+
+		cost = 10
+		available = {}
+		
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_improve_the_industries
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = ITA_economic_reforms }
+		relative_position_id = ITA_economic_reforms
+		x = 0
+		y = 1
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expanded_corporatism
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = ITA_meritocracy }
+		prerequisite = { focus = ITA_improve_the_industries }
+		relative_position_id = ITA_reorganize_the_party
+		x = 1
+		y = 3
+
+		cost = 10
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_monarchia_d_italia
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = ITA_depose_mussolini }
+
+		mutually_exclusive = { focus = ITA_dino_grandi_focus focus = ITA_italo_balbo_focus }
+
+		x = 9
+		y = 1
+		relative_position_id = ITA_depose_mussolini
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_extraction_industry
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = ITA_monarchia_d_italia }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_monarchia_d_italia
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_new_corporations
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ITA_extraction_industry }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_extraction_industry
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_prepare_for_the_coming_wars
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ITA_extraction_industry }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_extraction_industry
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_mobilize_the_railway_guns
+		icon = GFX_focus_generic_railway_gun
+		prerequisite = { focus = ITA_prepare_for_the_coming_wars }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_prepare_for_the_coming_wars
+		cost = 5
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			has_dlc = "No Step Back"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+			}
+		}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_bring_back_old_glories
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = ITA_prepare_for_the_coming_wars }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_prepare_for_the_coming_wars
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_new_forms_of_weaponry
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = ITA_prepare_for_the_coming_wars }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_prepare_for_the_coming_wars
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_revoke_the_acerbo_law
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = ITA_monarchia_d_italia }
+		mutually_exclusive = { focus = ITA_power_to_the_king }
+		x = 1
+		y = 1
+		relative_position_id = ITA_monarchia_d_italia
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_christian_democracy
+		icon = GFX_focus_ITA_alcide_de_gasperi
+		prerequisite = { focus = ITA_revoke_the_acerbo_law }
+		mutually_exclusive = { focus = ITA_democratic_king }
+		x = -1
+		y = 1
+		relative_position_id = ITA_revoke_the_acerbo_law
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_democratic_king
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = ITA_revoke_the_acerbo_law }
+		mutually_exclusive = { focus = ITA_christian_democracy }
+		x = 1
+		y = 1
+		relative_position_id = ITA_revoke_the_acerbo_law
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_XP FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_cooperate_with_moderates
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ITA_christian_democracy focus = ITA_democratic_king }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_christian_democracy
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_intelligence_services
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ITA_democratic_king focus = ITA_christian_democracy }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_democratic_king
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_crush_opposition
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = ITA_cooperate_with_moderates focus = ITA_expand_intelligence_services }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_cooperate_with_moderates
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_power_to_the_king
+		icon = GFX_focus_ITA_king_vittorio
+		prerequisite = { focus = ITA_monarchia_d_italia }
+		mutually_exclusive = { focus = ITA_revoke_the_acerbo_law }
+		x = 5
+		y = 0
+		relative_position_id = ITA_revoke_the_acerbo_law
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_disband_the_blackshirts
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = ITA_power_to_the_king focus = ITA_revoke_the_acerbo_law }
+		mutually_exclusive = { focus = ITA_utilize_the_blackshirts }
+		x = -2
+		y = 1
+		relative_position_id = ITA_power_to_the_king
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_utilize_the_blackshirts
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = ITA_power_to_the_king }
+		mutually_exclusive = { focus = ITA_disband_the_blackshirts }
+		x = 0
+		y = 1
+		relative_position_id = ITA_power_to_the_king
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_expand_the_royal_guard
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = ITA_disband_the_blackshirts focus = ITA_utilize_the_blackshirts }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_disband_the_blackshirts
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_gloria_al_regno_d_italia
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = ITA_expand_the_royal_guard focus = ITA_democratic_king }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_expand_the_royal_guard
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_paramilitary_training
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = ITA_expand_the_royal_guard }
+		prerequisite = { focus = ITA_utilize_the_blackshirts }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_expand_the_royal_guard
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_seek_papal_support
+		icon = GFX_focus_por_concordat
+		prerequisite = { focus = ITA_power_to_the_king }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_power_to_the_king
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_agents_of_the_church
+		icon = GFX_focus_generic_vatican_agents
+		prerequisite = { focus = ITA_seek_papal_support }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_seek_papal_support
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_strengthen_the_papacy
+		icon = GFX_focus_generic_pope
+		prerequisite = { focus = ITA_agents_of_the_church }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_agents_of_the_church
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_setting_course
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ITA_gloria_al_regno_d_italia focus = ITA_crush_opposition focus = ITA_strengthen_the_papacy }
+
+		x = -1
+		y = 2
+		relative_position_id = ITA_gloria_al_regno_d_italia
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_mare_nostrum_bba
+		icon = GFX_focus_ITA_mare_nostrum
+		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
+		mutually_exclusive = { focus = ITA_towards_a_greater_italy }
+		x = 31
+		y = 0
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "By Blood Alone" }
+					AND = {
+						has_dlc = "By Blood Alone"
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						OR = {
+							has_completed_focus = ITA_convene_the_grand_council
+							has_completed_focus = ITA_culto_del_duce
+						}
+					}
+				}
+			}
+		}
+		
+		relative_position_id = ITA_towards_a_greater_italy
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_auxiliaries
+		icon = GFX_focus_ETH_peacekeeping_forces
+		prerequisite = { focus = ITA_mare_nostrum_bba }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_mare_nostrum_bba
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_italian_legions
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = ITA_mare_nostrum_bba }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_mare_nostrum_bba
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_new_roman_citizens
+		icon = GFX_focus_ETH_invite_italian_settlers
+		prerequisite = { focus = ITA_mare_nostrum_bba }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_mare_nostrum_bba
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_all_roads_lead_to_rome
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = ITA_the_italian_legions }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_italian_legions
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_king_of_the_skies
+		icon = GFX_focus_generic_long_range_aircraft
+		prerequisite = { focus = ITA_all_roads_lead_to_rome }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_all_roads_lead_to_rome
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_modern_musculus
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = ITA_all_roads_lead_to_rome }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_all_roads_lead_to_rome
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_caligulas_pride
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = ITA_all_roads_lead_to_rome }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_all_roads_lead_to_rome
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_iberian_protection
+		icon = GFX_focus_generic_free_iberia
+		prerequisite = { focus = ITA_mare_nostrum_bba focus = ITA_deus_vult }
+
+		x = 4
+		y = 2
+		relative_position_id = ITA_mare_nostrum_bba
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_south_american_alliances
+		icon = GFX_focus_por_recover_latin_america
+		prerequisite = { focus = ITA_iberian_protection }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_iberian_protection
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_papacy_reborn
+		icon = GFX_focus_generic_vatican_state
+		prerequisite = { focus = ITA_strengthen_the_papacy }
+		x = 0
+		y = 3
+		relative_position_id = ITA_strengthen_the_papacy
+		cost = 5
+
+		allow_branch = {
+			has_country_flag = ITA_pope_took_over_italy_flag
+		}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_deus_vult
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = ITA_the_papacy_reborn }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_papacy_reborn
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_il_vento_aureo
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = ITA_deus_vult }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_deus_vult
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_catholic_action
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = ITA_the_papacy_reborn }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_the_papacy_reborn
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_a_time_for_war
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_deus_vult }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_deus_vult
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_holy_lands
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ITA_deus_vult }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_deus_vult
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_catholic_dominion
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = ITA_a_time_for_war }
+		prerequisite = { focus = ITA_the_holy_lands }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_a_time_for_war
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_foreign_affairs
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ITA_triumph_in_africa_bba focus = ITA_conspiracies_in_the_shadows }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce }
+			}
+		}
+
+		x = 50
+		y = 1
+		offset = {
+			x = -29
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "By Blood Alone" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_culto_del_duce
+					}
+				}
+			}
+		}
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_balkan_ambition
+		icon = GFX_focus_generic_balkans_focus
+		prerequisite = { focus = ITA_foreign_affairs }
+		mutually_exclusive = { focus = ITA_potential_allies_in_the_balkans }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_potential_allies_in_the_balkans
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = ITA_foreign_affairs }
+		mutually_exclusive = { focus = ITA_balkan_ambition }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_albanian_occupation
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
+
+		x = -12
+		y = 1
+		relative_position_id = ITA_potential_allies_in_the_balkans
+		cost = 5
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_albanian_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ITA_albanian_occupation }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_albanian_occupation
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_support_albanian_irredentism
+		icon = GFX_focus_ITA_albanian_irredentism
+		prerequisite = { focus = ITA_albanian_occupation }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_albanian_occupation
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_albanian_fascist_militia
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		prerequisite = { focus = ITA_support_albanian_irredentism }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_support_albanian_irredentism
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_guarantee_austrian_independence
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
+		mutually_exclusive = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+		x = -10
+		y = 1
+		relative_position_id = ITA_potential_allies_in_the_balkans
+		cost = 5
+		available = {}
+
+		bypass = {}		 
+
+		search_filters = {} 
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ITA_negotiate_italian_claims
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ITA_guarantee_austrian_independence }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_guarantee_austrian_independence
+		cost = 10
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_ratify_the_stresa_front
+		icon = GFX_focus_focus_fra_ratify_stresa
+		prerequisite = { focus = ITA_negotiate_italian_claims }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_negotiate_italian_claims
+		cost = 10
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_joint_military_programs
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = ITA_ratify_the_stresa_front }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_ratify_the_stresa_front
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italys_destiny
+		icon = GFX_focus_generic_balkans_focus
+		prerequisite = { focus = ITA_ratify_the_stresa_front }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_ratify_the_stresa_front
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_eastern_threat
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = ITA_italys_destiny }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_italys_destiny
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_pact_of_steel
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
+		mutually_exclusive = { focus = ITA_guarantee_austrian_independence focus = ITA_italy_first }
+		x = -4
+		y = 1
+		relative_position_id = ITA_potential_allies_in_the_balkans
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_german_military_cooperation
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = ITA_pact_of_steel }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_sea_wolves_bba
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = ITA_german_military_cooperation }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_german_military_cooperation
+		cost = 5
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = ITA_german_military_cooperation }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_german_military_cooperation
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_treaty_with_germany
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = ITA_pact_of_steel }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 5
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_request_control_of_french_territories
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = ITA_pact_of_steel }
+		prerequisite = { focus = ITA_italian_irredentism }
+		mutually_exclusive = { focus = ITA_war_with_france }
+		x = 0
+		y = 2
+		relative_position_id = ITA_pact_of_steel
+		cost = 5
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ITA_italy_first
+		icon = GFX_focus_generic_italy_first
+		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
+		mutually_exclusive = { focus = ITA_guarantee_austrian_independence focus = ITA_pact_of_steel }
+		x = 0
+		y = 1
+		relative_position_id = ITA_potential_allies_in_the_balkans
+		cost = 10
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_befriend_japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 10
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italian_irredentism
+		icon = GFX_focus_ITA_italian_irredentism
+		prerequisite = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_war_with_france
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = ITA_italian_irredentism }
+
+		mutually_exclusive = { focus = ITA_request_control_of_french_territories }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_italian_irredentism
+		cost = 10
+
+		bypass = {}
+
+		available = {}
+
+		will_lead_to_war_with = FRA
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_demand_ticino
+		icon = GFX_focus_attack_switzerland
+		prerequisite = { 
+			focus = ITA_war_with_france
+			focus = ITA_request_control_of_french_territories 
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_war_with_france
+		cost = 10
+		available = {}
+
+		will_lead_to_war_with = SWI
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_war_with_the_uk
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = ITA_italy_first }
+		prerequisite = { focus = ITA_italian_irredentism }
+		x = 0
+		y = 2
+		relative_position_id = ITA_italy_first
+		cost = 10
+		available = {}
+
+		will_lead_to_war_with = ENG
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_war_with_greece
+		icon = GFX_focus_generic_attack_greece
+		prerequisite = { focus = ITA_italian_irredentism }
+		mutually_exclusive = { focus = ITA_befriend_greece }
+		x = 0
+		y = 2
+		relative_position_id = ITA_italian_irredentism
+		cost = 5
+
+		select_effect = {
+			every_country = {
+				limit = {
+					NOT = { is_in_faction_with = ROOT }
+					original_tag = GRE
+				}
+				ROOT = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = PREV
+						value = 50
+					}
+				}
+			}
+		}
+
+		bypass = {}
+
+		available = {}
+
+		will_lead_to_war_with = GRE
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_befriend_greece
+		icon = GFX_focus_generic_befriend_greece
+		prerequisite = { focus = ITA_italy_first }
+		mutually_exclusive = { focus = ITA_war_with_greece }
+		x = 1
+		y = 3
+		relative_position_id = ITA_italy_first
+		cost = 10
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_claims_on_turkey_bba
+		icon = GFX_focus_generic_attack_turkey
+		prerequisite = { focus = ITA_war_with_greece focus = ITA_befriend_greece }
+		mutually_exclusive = { focus = ITA_befriend_turkey }
+		x = 0
+		y = 1
+		relative_position_id = ITA_war_with_greece
+		cost = 5
+		available = {}
+		
+		will_lead_to_war_with = TUR
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_befriend_turkey
+		icon = GFX_focus_generic_befriend_turkey
+		prerequisite = { focus = ITA_war_with_greece focus = ITA_befriend_greece }
+		mutually_exclusive = { focus = ITA_claims_on_turkey_bba }
+		x = 2
+		y = 0
+		relative_position_id = ITA_claims_on_turkey_bba
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_corpo_di_truppe_volontarie
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = ITA_foreign_affairs }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+		cancel = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				SPR = {
+					has_civil_war = no
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = { has_civil_war = no }
+			}
+		}
+
+		cancel_if_invalid = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_spanish_italian_alliance
+		icon = GFX_focus_intervention_spain_nationalists
+		prerequisite = { focus = ITA_corpo_di_truppe_volontarie }
+		prerequisite = { focus = ITA_italy_first }
+		mutually_exclusive = { focus = ITA_demand_balearic_islands_bba }
+		x = -1
+		y = 2
+		relative_position_id = ITA_corpo_di_truppe_volontarie
+		cost = 5
+
+		bypass = {}
+
+		available = {}		
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_demand_balearic_islands_bba
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ITA_corpo_di_truppe_volontarie }
+		mutually_exclusive = { focus = ITA_spanish_italian_alliance }
+		x = 1
+		y = 2
+		relative_position_id = ITA_corpo_di_truppe_volontarie
+		cost = 5
+		available = {}
+		cancel = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				any_other_country = {
+					original_tag = SPR
+					has_government = fascism
+					has_war_with = ROOT
+					owns_state = 177
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				has_war_with = ROOT
+				owns_state = 177
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_befriend_portugal
+		icon = GFX_focus_generic_befriend_portugal
+		prerequisite = { focus = ITA_spanish_italian_alliance focus = ITA_demand_balearic_islands_bba }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_spanish_italian_alliance
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+	focus = {
+		id = ITA_the_italian_liberation_war
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = -6
+		y = 0
+		relative_position_id = ITA_ethiopian_war_logistics_bba
+		cost = 5
+		
+		allow_branch = {
+			has_global_flag = ITA_antifascist_civil_war_triggered_flag
+			tag = RDS
+		}
+		
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_fronte_militare_clandestino
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = ITA_the_italian_liberation_war }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_italian_liberation_war
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_corpo_volontari_della_liberta
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		prerequisite = { focus = ITA_fronte_militare_clandestino }
+		mutually_exclusive = { focus = ITA_the_carabinieri }
+		x = -1
+		y = 1
+		relative_position_id = ITA_fronte_militare_clandestino
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_carabinieri
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ITA_fronte_militare_clandestino }
+		mutually_exclusive = { focus = ITA_corpo_volontari_della_liberta }
+		x = 2
+		y = 0
+		relative_position_id = ITA_corpo_volontari_della_liberta
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_gappisti
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = ITA_corpo_volontari_della_liberta }
+		x = -1
+		y = 1
+		relative_position_id = ITA_corpo_volontari_della_liberta
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_partisan_republics
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = ITA_corpo_volontari_della_liberta focus = ITA_the_carabinieri }
+		x = 2
+		y = 0
+		relative_position_id = ITA_gappisti
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_kings_finest
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = ITA_the_carabinieri }
+		x = 4
+		y = 0
+		relative_position_id = ITA_gappisti
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_grande_rivolta_rurale
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		prerequisite = { focus = ITA_partisan_republics }
+		prerequisite = { focus = ITA_gappisti focus = ITA_the_kings_finest }
+		x = 0
+		y = 1
+		relative_position_id = ITA_partisan_republics
+		cost = 5
+
+		
+		
+		
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_liberation_or_death
+		icon = GFX_focus_ITA_liberation_or_death
+		prerequisite = { focus = ITA_grande_rivolta_rurale }
+		x = 0
+		y = 1
+		relative_position_id = ITA_grande_rivolta_rurale
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_independence_rds
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_liberation_or_death }
+		x = 0
+		y = 1
+		relative_position_id = ITA_liberation_or_death
+		cost = 5
+		available = {}
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 	focus = {
+		id = ITA_the_italian_social_republic
+		icon = GFX_goal_support_fascism
+		x = -6
+		y = 0
+		relative_position_id = ITA_ethiopian_war_logistics_bba
+		cost = 5
+		
+		allow_branch = {
+			has_global_flag = ITA_antifascist_civil_war_triggered_flag
+			tag = RSI
+		}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_guardia_nazionale_repubblicana
+		icon = GFX_focus_ITA_guardia_nazionale_repubblicana
+		prerequisite = { focus = ITA_the_italian_social_republic }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_italian_social_republic
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_integrate_polizia_dell_africa_italiana
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = ITA_guardia_nazionale_repubblicana }
+		x = -1
+		y = 1
+		relative_position_id = ITA_guardia_nazionale_repubblicana
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_anti_partisan_measures
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = ITA_integrate_polizia_dell_africa_italiana }
+		x = -1
+		y = 1
+		relative_position_id = ITA_integrate_polizia_dell_africa_italiana
+		cost = 5
+		
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_all_within_the_state
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = ITA_guardia_nazionale_repubblicana }
+		x = 0
+		y = 2
+		relative_position_id = ITA_guardia_nazionale_repubblicana
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_battaglioni_m
+		icon = GFX_focus_ITA_battaglioni_m
+		prerequisite = { focus = ITA_guardia_nazionale_repubblicana }
+		x = 1
+		y = 1
+		relative_position_id = ITA_guardia_nazionale_repubblicana
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_reinforce_the_gustav_line
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = ITA_battaglioni_m }
+		x = 1
+		y = 1
+		relative_position_id = ITA_battaglioni_m
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_social_republic_prevails
+		icon = GFX_focus_ITA_the_social_republic_prevails
+		prerequisite = { focus = ITA_anti_partisan_measures }
+		prerequisite = { focus = ITA_all_within_the_state }
+		prerequisite = { focus = ITA_reinforce_the_gustav_line }
+		x = 0
+		y = 1
+		relative_position_id = ITA_all_within_the_state
+		cost = 5
+
+		
+		
+		
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_independence_rsi
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_the_social_republic_prevails }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_social_republic_prevails
+		cost = 5
+		available = {}
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+   
+  
+ 
+
+
+
+
+
+
+	focus = {
+		id = ITA_unite_the_opposition
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = ITA_the_abyssinian_fiasco }
+
+		x = -19
+		y = 1
+		relative_position_id = ITA_the_abyssinian_fiasco
+		cost = 5
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+				NOT = { has_completed_focus = ITA_convene_the_grand_council }
+			}
+		}
+
+		offset = {
+			x = 14
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_defy_the_duce
+			}
+		}
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_liberate_gramsci
+		icon = GFX_focus_ITA_liberate_gramsci
+		prerequisite = { focus = ITA_unite_the_opposition focus = ITA_triumph_in_africa_bba }
+
+		x = 2
+		y = 2
+		relative_position_id = ITA_unite_the_opposition
+		cost = 5
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+				NOT = { has_completed_focus = ITA_convene_the_grand_council }
+			}
+		}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_organize_strikes_in_the_north
+		icon = GFX_focus_SOV_organize_wreckers
+		prerequisite = { focus = ITA_unite_the_opposition }
+		mutually_exclusive = { focus = ITA_the_southern_farmlands }
+		x = -1
+		y = 1
+		relative_position_id = ITA_unite_the_opposition
+		cost = 5
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_southern_farmlands
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = ITA_unite_the_opposition }
+		mutually_exclusive = { focus = ITA_organize_strikes_in_the_north }
+		x = 1
+		y = 1
+		relative_position_id = ITA_unite_the_opposition
+		cost = 5
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_defy_the_duce
+		icon = GFX_focus_ITA_liberation_or_death
+		prerequisite = { focus = ITA_organize_strikes_in_the_north focus = ITA_the_southern_farmlands focus = ITA_triumph_in_africa_bba }
+		mutually_exclusive = { focus = ITA_culto_del_duce focus = ITA_convene_the_grand_council }
+		x = 1
+		y = 2
+		relative_position_id = ITA_organize_strikes_in_the_north
+		cost = 5
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+				NOT = { has_completed_focus = ITA_convene_the_grand_council }
+			}
+		}
+		
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_appeal_to_the_bourgeoisie
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = ITA_defy_the_duce }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_defy_the_duce
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_seize_old_equipment
+		icon = GFX_focus_generic_railway_gun
+		prerequisite = { focus = ITA_defy_the_duce }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_defy_the_duce
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_italian_republic
+		icon = GFX_focus_ITA_the_italian_republic
+		prerequisite = { focus = ITA_defy_the_duce }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_defy_the_duce
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+	focus = {
+		id = ITA_the_popular_front
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = ITA_the_italian_republic }
+		mutually_exclusive = { focus = ITA_italian_socialism }
+		x = -5
+		y = 1
+		relative_position_id = ITA_the_italian_republic
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_garibaldi_legion
+		icon = GFX_focus_ITA_garibaldi_legion
+		prerequisite = { focus = ITA_the_popular_front }
+
+		x = -5
+		y = 1
+		relative_position_id = ITA_the_popular_front
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_gruppi_di_difesa_della_donna
+		icon = GFX_focus_generic_women_in_military
+		prerequisite = { focus = ITA_the_garibaldi_legion }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_garibaldi_legion
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_a_new_era_for_the_red_shirts
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = ITA_the_garibaldi_legion }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_garibaldi_legion
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_pugno_alzato
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		prerequisite = { focus = ITA_gruppi_di_difesa_della_donna focus = ITA_a_new_era_for_the_red_shirts }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_gruppi_di_difesa_della_donna
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_a_leader_steps_forward
+		icon = GFX_focus_ITA_communist_leadership
+		prerequisite = { focus = ITA_the_popular_front }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_the_popular_front
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_path_to_progress
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		prerequisite = { focus = ITA_a_leader_steps_forward }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_a_leader_steps_forward
+		cost = 5
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_industrial_socialization
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = ITA_the_popular_front }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_popular_front
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_institute_the_five_year_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ITA_industrial_socialization }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_industrial_socialization
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_new_ricostruzione_industriale
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ITA_institute_the_five_year_plan }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_institute_the_five_year_plan
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_political_commissars
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = ITA_industrial_socialization }
+		mutually_exclusive = { focus = ITA_appease_the_military focus = ITA_empower_the_carabinieri }
+		x = 2
+		y = 1
+		relative_position_id = ITA_industrial_socialization
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_common_ground
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ITA_the_popular_front focus = ITA_italian_socialism }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_the_popular_front
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_appease_the_military
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = ITA_common_ground }
+		mutually_exclusive = { focus = ITA_political_commissars focus = ITA_empower_the_carabinieri }
+		x = 0
+		y = 1
+		relative_position_id = ITA_common_ground
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_crush_the_mafia
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = ITA_the_popular_front focus = ITA_italian_socialism }
+		mutually_exclusive = { focus = ITA_cooperate_with_the_mafia }
+		x = 6
+		y = 1
+		relative_position_id = ITA_the_popular_front
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_empower_the_carabinieri
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ITA_crush_the_mafia }
+		mutually_exclusive = { focus = ITA_political_commissars focus = ITA_appease_the_military }
+		x = 0
+		y = 1
+		relative_position_id = ITA_crush_the_mafia
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_army_modernization
+		icon = GFX_focus_generic_tank_air_support
+		prerequisite = { focus = ITA_appease_the_military focus = ITA_political_commissars focus = ITA_empower_the_carabinieri }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_appease_the_military
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_union_in_the_party
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = ITA_the_path_to_progress }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_the_path_to_progress
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_follow_the_soviet_union
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = ITA_union_in_the_party }
+		mutually_exclusive = { focus = ITA_defend_the_land }
+		x = -2
+		y = 1
+		relative_position_id = ITA_union_in_the_party
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+		
+		search_filters = {}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_military_cooperation
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = ITA_follow_the_soviet_union }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_follow_the_soviet_union
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_defense_against_capitalism
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = ITA_military_cooperation }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_military_cooperation
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_combined_research_effort
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = ITA_military_cooperation }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_military_cooperation
+		cost = 5
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_special_brigades
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = ITA_follow_the_soviet_union focus = ITA_defend_the_land }
+
+		x = 2
+		y = 2
+		relative_position_id = ITA_follow_the_soviet_union
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_defend_the_land
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = ITA_union_in_the_party }
+		mutually_exclusive = { focus = ITA_follow_the_soviet_union }
+		x = 2
+		y = 1
+		relative_position_id = ITA_union_in_the_party
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_united_anarchist_confederations
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = ITA_defend_the_land }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_defend_the_land
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_fight_against_stalinism
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = ITA_defend_the_land }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_defend_the_land
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_raise_the_peoples
+		icon = GFX_focus_ITA_peasants_rise
+		prerequisite = { focus = ITA_defend_the_land }
+
+		x = 0
+		y = 3
+		relative_position_id = ITA_defend_the_land
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_il_sol_dell_avvenire
+		icon = GFX_focus_ITA_il_sol_dell_avvenire
+		prerequisite = { focus = ITA_combined_research_effort focus = ITA_raise_the_peoples }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_combined_research_effort
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = ITA_italian_socialism
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = ITA_the_italian_republic }
+		mutually_exclusive = { focus = ITA_the_popular_front }
+		x = 11
+		y = 0
+		relative_position_id = ITA_the_popular_front
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_cooperate_with_the_mafia
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ITA_italian_socialism }
+		mutually_exclusive = { focus = ITA_crush_the_mafia }
+		x = -3
+		y = 1
+		relative_position_id = ITA_italian_socialism
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_mafia_abroad
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = ITA_cooperate_with_the_mafia }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_cooperate_with_the_mafia
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_empower_the_unions
+		icon = GFX_focus_ITA_workers_unions
+		prerequisite = { focus = ITA_italian_socialism }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_italian_socialism
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_production_lines
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ITA_empower_the_unions }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_empower_the_unions
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_republics_leadership
+		icon = GFX_focus_ITA_democratic_leadership
+		prerequisite = { focus = ITA_italian_socialism }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_italian_socialism
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_bring_back_exiled_intellectuals
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = ITA_the_republics_leadership }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_republics_leadership
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_social_stability
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ITA_bring_back_exiled_intellectuals }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_bring_back_exiled_intellectuals
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_aid_for_the_spanish_republic
+		icon = GFX_focus_intervention_spain_republic
+		prerequisite = { focus = ITA_italian_socialism }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_italian_socialism
+		cost = 10
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_italia_libera
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_social_stability }
+		mutually_exclusive = { focus = ITA_reestablish_old_alliances }
+		x = -1
+		y = 2
+		relative_position_id = ITA_social_stability
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_european_democracies
+		icon = GFX_focus_generic_italy_propaganda
+		prerequisite = { focus = ITA_italia_libera }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_italia_libera
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_peace_preservation
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = ITA_european_democracies }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_european_democracies
+		cost = 10
+		
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_scientific_cooperation
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = ITA_italia_libera focus = ITA_reestablish_old_alliances }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_italia_libera
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_secure_the_borders
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = ITA_scientific_cooperation }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_scientific_cooperation
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_bring_down_fascist_strongholds
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = ITA_scientific_cooperation }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_scientific_cooperation
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_reestablish_old_alliances
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = ITA_social_stability }
+		mutually_exclusive = { focus = ITA_italia_libera }
+		x = 1
+		y = 2
+		relative_position_id = ITA_social_stability
+		cost = 5
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_military_agreements
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = ITA_reestablish_old_alliances }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_reestablish_old_alliances
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_enemies_of_capitalism
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = ITA_military_agreements }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_military_agreements
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_ethiopian_question
+		icon = GFX_focus_ETH_the_emperor_stays
+		prerequisite = { focus = ITA_defy_the_duce }
+
+		x = 13
+		y = 1
+		relative_position_id = ITA_defy_the_duce
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_abolish_the_colonies
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = ITA_the_ethiopian_question }
+		mutually_exclusive = { focus = ITA_new_colonial_policies }
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_ethiopian_question
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_cooperatives_for_intensive_exploitation
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = ITA_abolish_the_colonies }
+
+		x = -1
+		y = 2
+		relative_position_id = ITA_abolish_the_colonies
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_condemn_colonialism
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = ITA_cooperatives_for_intensive_exploitation }
+		x = 0
+		y = 1
+		relative_position_id = ITA_cooperatives_for_intensive_exploitation
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_new_colonial_policies
+		icon = GFX_focus_ETH_invite_italian_settlers
+		prerequisite = { focus = ITA_the_ethiopian_question }
+		mutually_exclusive = { focus = ITA_abolish_the_colonies }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_ethiopian_question
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_negotiations_with_albania
+		icon = GFX_focus_generic_befriend_albania
+		prerequisite = { focus = ITA_abolish_the_colonies focus = ITA_new_colonial_policies }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_abolish_the_colonies
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_enlist_the_bashkimi_kombetar
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		prerequisite = { focus = ITA_negotiations_with_albania }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_negotiations_with_albania
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_italian_confederation
+		icon = GFX_focus_ITA_a_colonial_empire
+		prerequisite = { focus = ITA_new_colonial_policies }
+
+		x = 1
+		y = 2
+		relative_position_id = ITA_new_colonial_policies
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_planned_economy
+		icon = GFX_focus_ETH_adopt_the_lira
+		prerequisite = { focus = ITA_the_italian_confederation }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_italian_confederation
+		cost = 5
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_the_fight_overseas
+		icon = GFX_focus_generic_africa_defense
+		prerequisite = { focus = ITA_cooperatives_for_intensive_exploitation focus = ITA_the_italian_confederation }
+
+		x = 2
+		y = 2
+		relative_position_id = ITA_cooperatives_for_intensive_exploitation
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_irregulars
+		icon = GFX_focus_ETH_peacekeeping_forces
+		prerequisite = { focus = ITA_the_fight_overseas }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_the_fight_overseas
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_liberate_the_workers_of_africa
+		icon = GFX_focus_generic_africa_liberation
+		prerequisite = { focus = ITA_the_fight_overseas }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_fight_overseas
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ITA_ascari
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		prerequisite = { focus = ITA_the_fight_overseas }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_the_fight_overseas
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+
+
+}

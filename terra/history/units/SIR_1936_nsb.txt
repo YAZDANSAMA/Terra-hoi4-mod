@@ -1,0 +1,470 @@
+division_template = {
+	name = "Militia Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Supported Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+
+	}
+	
+	support = {
+			recon = {  x = 0 y = 0 }
+
+	}
+}
+division_template = {
+	name = "Artillery Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+			artillery_brigade = {  x = 3 y = 0 }
+
+	}
+	
+	support = {
+			engineer = {  x = 0 y = 0 }
+
+	}
+}
+division_template = {
+	name = "Cavalry Division"
+
+	regiments = {
+			cavalry = {  x = 0 y = 0 }
+			cavalry = {  x = 0 y = 1 }
+			cavalry = {  x = 1 y = 0 }
+			cavalry = {  x = 2 y = 0 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Motorized Division"
+
+	regiments = {
+			motorized = {  x = 0 y = 0 }
+			motorized = {  x = 0 y = 1 }
+			motorized = {  x = 1 y = 0 }
+			motorized = {  x = 2 y = 0 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Supported Motorized Division"
+
+	regiments = {
+			motorized = {  x = 0 y = 0 }
+			motorized = {  x = 0 y = 1 }
+			motorized = {  x = 1 y = 0 }
+			motorized = {  x = 2 y = 0 }
+
+	}
+	
+	support = {
+			maintenance_company = {  x = 0 y = 0 }
+
+	}
+}
+division_template = {
+	name = "Motorized Artillery Division"
+
+	regiments = {
+			motorized = {  x = 0 y = 0 }
+			motorized = {  x = 0 y = 1 }
+			motorized = {  x = 1 y = 0 }
+			motorized = {  x = 1 y = 1 }
+			mot_artillery_brigade = {  x = 2 y = 0 }
+			mot_artillery_brigade = {  x = 2 y = 1 }
+
+	}
+	
+	support = {
+			artillery = {  x = 0 y = 0 }
+			recon = {  x = 0 y = 1 }
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "1st 'Unam' Militia Division"
+		location = 3659
+		division_template = "Militia Division"
+		start_experience_factor = 0.815003
+		start_equipment_factor = 0.864196
+	}
+	division= {
+		name = "2nd 'Velimayam' Militia Division"
+		location = 3261
+		division_template = "Militia Division"
+		start_experience_factor = 0.989640
+		start_equipment_factor = 0.881477
+	}
+	division= {
+		name = "3rd 'Thogugam' Militia Division"
+		location = 1585
+		division_template = "Militia Division"
+		start_experience_factor = 0.107907
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "4th 'Pasiravithag' Militia Division"
+		location = 7734
+		division_template = "Militia Division"
+		start_experience_factor = 0.856459
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "5th 'Putham' Militia Division"
+		location = 7729
+		division_template = "Militia Division"
+		start_experience_factor = 0.475099
+		start_equipment_factor = 0.850819
+	}
+	division= {
+		name = "6th 'Idappu' Militia Division"
+		location = 2404
+		division_template = "Militia Division"
+		start_experience_factor = 0.143782
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "1st 'Siraivizhai' Infantry Division"
+		location = 5456
+		division_template = "Infantry Division"
+		start_experience_factor = 0.957187
+		start_equipment_factor = 0.973985
+	}
+	division= {
+		name = "2nd 'Kuriyan' Infantry Division"
+		location = 2401
+		division_template = "Infantry Division"
+		start_experience_factor = 0.606562
+		start_equipment_factor = 0.931187
+	}
+	division= {
+		name = "1st 'Thunam' Supported Infantry Division"
+		location = 2867
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.963981
+		start_equipment_factor = 0.913376
+	}
+	division= {
+		name = "2nd 'Puyanneer' Supported Infantry Division"
+		location = 3281
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.827169
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "3rd 'Kalai' Supported Infantry Division"
+		location = 6634
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.751277
+		start_equipment_factor = 0.970520
+	}
+	division= {
+		name = "4th 'Nool' Supported Infantry Division"
+		location = 5750
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.350090
+		start_equipment_factor = 0.952365
+	}
+	division= {
+		name = "5th 'Servane' Supported Infantry Division"
+		location = 2254
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.800534
+		start_equipment_factor = 0.999721
+	}
+	division= {
+		name = "6th 'Sanippu' Supported Infantry Division"
+		location = 3387
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.460729
+		start_equipment_factor = 0.884426
+	}
+	division= {
+		name = "7th 'Kaattidi' Supported Infantry Division"
+		location = 2004
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.783757
+		start_equipment_factor = 0.915097
+	}
+	division= {
+		name = "1st 'Sehil' Artillery Division"
+		location = 2976
+		division_template = "Artillery Division"
+		start_experience_factor = 0.718108
+		start_equipment_factor = 0.975878
+	}
+	division= {
+		name = "2nd 'Thozhi' Artillery Division"
+		location = 1240
+		division_template = "Artillery Division"
+		start_experience_factor = 0.931372
+		start_equipment_factor = 0.963258
+	}
+	division= {
+		name = "3rd 'Kader' Artillery Division"
+		location = 7259
+		division_template = "Artillery Division"
+		start_experience_factor = 0.844929
+		start_equipment_factor = 0.918770
+	}
+	division= {
+		name = "4th 'Thakkam' Artillery Division"
+		location = 7384
+		division_template = "Artillery Division"
+		start_experience_factor = 0.643574
+		start_equipment_factor = 0.963899
+	}
+	division= {
+		name = "1st 'Aaram' Cavalry Division"
+		location = 412
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.402842
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "2nd 'Kuditham' Cavalry Division"
+		location = 2002
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.857252
+		start_equipment_factor = 0.828172
+	}
+	division= {
+		name = "3rd 'Theerku' Cavalry Division"
+		location = 3284
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.126039
+		start_equipment_factor = 0.842562
+	}
+	division= {
+		name = "4th 'Thogugam' Cavalry Division"
+		location = 6508
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.884500
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "5th 'Kaadal' Cavalry Division"
+		location = 7385
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.826191
+		start_equipment_factor = 0.965096
+	}
+	division= {
+		name = "6th 'Kulimai' Cavalry Division"
+		location = 3974
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.904382
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "1st 'Sehirlik' Motorized Division"
+		location = 2978
+		division_template = "Motorized Division"
+		start_experience_factor = 0.772327
+		start_equipment_factor = 0.864757
+	}
+	division= {
+		name = "2nd 'Pasi' Motorized Division"
+		location = 3660
+		division_template = "Motorized Division"
+		start_experience_factor = 0.648971
+		start_equipment_factor = 0.908517
+	}
+	division= {
+		name = "3rd 'Thozhi' Motorized Division"
+		location = 1247
+		division_template = "Motorized Division"
+		start_experience_factor = 0.414753
+		start_equipment_factor = 0.936493
+	}
+	division= {
+		name = "4th 'Kayla' Motorized Division"
+		location = 6591
+		division_template = "Motorized Division"
+		start_experience_factor = 0.114408
+		start_equipment_factor = 0.843566
+	}
+	division= {
+		name = "5th 'Then' Motorized Division"
+		location = 2059
+		division_template = "Motorized Division"
+		start_experience_factor = 0.356660
+		start_equipment_factor = 0.978147
+	}
+	division= {
+		name = "6th 'Bahtar' Motorized Division"
+		location = 1202
+		division_template = "Motorized Division"
+		start_experience_factor = 0.704174
+		start_equipment_factor = 0.838403
+	}
+	division= {
+		name = "7th 'Kuranai' Motorized Division"
+		location = 5461
+		division_template = "Motorized Division"
+		start_experience_factor = 0.516508
+		start_equipment_factor = 0.954978
+	}
+	division= {
+		name = "1st 'Thudi' Supported Motorized Division"
+		location = 1674
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.042904
+		start_equipment_factor = 0.987900
+	}
+	division= {
+		name = "2nd 'Sanneeramizh' Supported Motorized Division"
+		location = 1998
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.256281
+		start_equipment_factor = 0.908177
+	}
+	division= {
+		name = "3rd 'Vadal' Supported Motorized Division"
+		location = 937
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.951495
+		start_equipment_factor = 0.934636
+	}
+	division= {
+		name = "4th 'Iramai' Supported Motorized Division"
+		location = 6987
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.577247
+		start_equipment_factor = 0.998358
+	}
+	division= {
+		name = "5th 'Uyiram' Supported Motorized Division"
+		location = 430
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.595941
+		start_equipment_factor = 0.855407
+	}
+	division= {
+		name = "6th 'Islit' Supported Motorized Division"
+		location = 486
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.080502
+		start_equipment_factor = 0.844029
+	}
+	division= {
+		name = "7th 'Mozhiraikkal' Supported Motorized Division"
+		location = 1086
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.023918
+		start_equipment_factor = 0.953540
+	}
+	division= {
+		name = "8th 'Sehil' Supported Motorized Division"
+		location = 2976
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.664324
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "9th 'Muravar' Supported Motorized Division"
+		location = 4717
+		division_template = "Supported Motorized Division"
+		start_experience_factor = 0.775779
+		start_equipment_factor = 0.898508
+	}
+	division= {
+		name = "1st 'Kaattidi' Motorized Artillery Division"
+		location = 2285
+		division_template = "Motorized Artillery Division"
+		start_experience_factor = 0.766164
+		start_equipment_factor = 0.995340
+	}
+	division= {
+		name = "2nd 'Doru' Motorized Artillery Division"
+		location = 1203
+		division_template = "Motorized Artillery Division"
+		start_experience_factor = 0.172730
+		start_equipment_factor = 0.995032
+	}
+	division= {
+		name = "3rd 'Ooru' Motorized Artillery Division"
+		location = 3814
+		division_template = "Motorized Artillery Division"
+		start_experience_factor = 0.204297
+		start_equipment_factor = 0.861398
+	}
+	division= {
+		name = "4th 'Oosai' Motorized Artillery Division"
+		location = 1045
+		division_template = "Motorized Artillery Division"
+		start_experience_factor = 0.120583
+		start_equipment_factor = 0.906299
+	}
+	division= {
+		name = "5th 'Kaadal' Motorized Artillery Division"
+		location = 7385
+		division_template = "Motorized Artillery Division"
+		start_experience_factor = 0.298399
+		start_equipment_factor = 1.000000
+	}
+
+}

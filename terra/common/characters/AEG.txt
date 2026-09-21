@@ -1,0 +1,1083 @@
+characters = {
+	AEG_Ahmal_Giah={
+		name="Ahmal Giah"
+
+		
+		country_leader={
+			ideology=oligarchism
+			traits = { socialite_connections  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	AEG_Arma_Mazaashgarga={
+		name="Arma Mazaashgarga"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Arma_Mazaashgarga
+			traits = {	veteran_anti_bolshevik 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	AEG_Parhahrahrah_Aziz={
+		name="Parhahrahrah Aziz"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Parhahrahrah_Aziz
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Peyma_Atar={
+		name="Peyma Atar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Peyma_Atar
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Parhahiman_Pashabazeshg={
+		name="Parhahiman Pashabazeshg"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Parhahiman_Pashabazeshg
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Parhahrahrah_Sedandaastab={
+		name="Parhahrahrah Sedandaastab"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Parhahrahrah_Sedandaastab
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Hassan_Cheghl={
+		name="Hassan Cheghl"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Hassan_Cheghl
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Parhahrahrah_Mazaashgarga={
+		name="Parhahrahrah Mazaashgarga"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Parhahrahrah_Mazaashgarga
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	AEG_Shad_Zarfan={
+		name="Shad Zarfan"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Shad_Zarfan
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	AEG_Kavehdi_Ghaftayi={
+		name="Kavehdi Ghaftayi"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Kavehdi_Ghaftayi
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	AEG_Omin_Kharghaddogh={
+		name="Omin Kharghaddogh"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Omin_Kharghaddogh
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	AEG_Shama_Honarikh={
+		name="Shama Honarikh"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Shama_Honarikh
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	AEG_Parhahramal_Dashr={
+		name="Parhahramal Dashr"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Parhahramal_Dashr
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	AEG_Nima_Shogh={
+		name="Nima Shogh"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Nima_Shogh
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	AEG_Parhad_Kavir={
+		name="Parhad Kavir"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Parhad_Kavir
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	AEG_Shad_Shosh={
+		name="Shad Shosh"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Shad_Shosh
+			traits = {	air_naval_strike_2 	}
+		}
+
+
+	}
+	AEG_Armad_Kharghaddogh={
+		name="Armad Kharghaddogh"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Armad_Kharghaddogh
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	AEG_Behzad_Shan={
+		name="Behzad Shan"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Behzad_Shan
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	AEG_Milad_Toftayehesh={
+		name="Milad Toftayehesh"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Milad_Toftayehesh
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	AEG_Rezad_Azizaranin={
+		name="Rezad Azizaranin"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Rezad_Azizaranin
+			traits = {	army_cavalry_1 	}
+		}
+
+
+	}
+	AEG_Peymad_Sahirooz={
+		name="Peymad Sahirooz"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Peymad_Sahirooz
+			traits = {	army_infantry_2 	}
+		}
+
+
+	}
+	AEG_Parhad_Behr={
+		name="Parhad Behr"
+
+		
+		country_leader={
+			ideology=rexism
+			traits = { autokrator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	AEG_Kavehdi_Gofan={
+		name="Kavehdi Gofan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Kavehdi_Gofan
+			traits = {	warmonger 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	AEG_Majid_Shang={
+		name="Majid Shang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Majid_Shang
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Babak_Shil={
+		name="Babak Shil"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Babak_Shil
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Kama_Jonarma={
+		name="Kama Jonarma"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Kama_Jonarma
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Farhad_Shan={
+		name="Farhad Shan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Farhad_Shan
+			traits = {	autokrator 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Ahma_Mazeh={
+		name="Ahma Mazeh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Ahma_Mazeh
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	AEG_Ahman_Sedamadam={
+		name="Ahman Sedamadam"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Ahman_Sedamadam
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	AEG_Amir_Shogh={
+		name="Amir Shogh"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Amir_Shogh
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	AEG_Farhahramin_Honarikh={
+		name="Farhahramin Honarikh"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Farhahramin_Honarikh
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	AEG_Arma_Dashr={
+		name="Arma Dashr"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Arma_Dashr
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	AEG_Farhad_Setaryamraha={
+		name="Farhad Setaryamraha"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Farhad_Setaryamraha
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	AEG_Peyma_Mangood={
+		name="Peyma Mangood"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Peyma_Mangood
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	AEG_Amin_Shosh={
+		name="Amin Shosh"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Amin_Shosh
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	AEG_Parhad_Randan={
+		name="Parhad Randan"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Parhad_Randan
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	AEG_Omin_Shogh={
+		name="Omin Shogh"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Omin_Shogh
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	AEG_Farhad_Zarfan={
+		name="Farhad Zarfan"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Farhad_Zarfan
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	AEG_Nima_Tanin={
+		name="Nima Tanin"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Nima_Tanin
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	AEG_Mossan_Sedan={
+		name="Mossan Sedan"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Mossan_Sedan
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	AEG_Parham_Maht={
+		name="Parham Maht"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Parham_Maht
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	AEG_Navid_Behr={
+		name="Navid Behr"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Navid_Behr
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	AEG_Amid_Sahirooz={
+		name="Amid Sahirooz"
+
+		
+		country_leader={
+			ideology=anarchist_communism
+			traits = { polemarch  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	AEG_Kaveh_Sorkh={
+		name="Kaveh Sorkh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Kaveh_Sorkh
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Hossein_Tooz={
+		name="Hossein Tooz"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Hossein_Tooz
+			traits = {	leftist_independent 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Parhahimal_Sabbati={
+		name="Parhahimal Sabbati"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Parhahimal_Sabbati
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Armal_Nashtarenji={
+		name="Armal Nashtarenji"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Armal_Nashtarenji
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	AEG_Mehdi_Sabbati={
+		name="Mehdi Sabbati"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Mehdi_Sabbati
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	AEG_Nima_Behr={
+		name="Nima Behr"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Nima_Behr
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Behzad_Sepid={
+		name="Behzad Sepid"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Behzad_Sepid
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	AEG_Shama_Shirdar={
+		name="Shama Shirdar"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Shama_Shirdar
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	AEG_Milad_Toot={
+		name="Milad Toot"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Milad_Toot
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	AEG_Amid_Dashr={
+		name="Amid Dashr"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Amid_Dashr
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	AEG_Parhahiman_Mazeh={
+		name="Parhahiman Mazeh"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Parhahiman_Mazeh
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	AEG_Kama_Pash={
+		name="Kama Pash"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Kama_Pash
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	AEG_Ahman_Rooriz={
+		name="Ahman Rooriz"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Ahman_Rooriz
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	AEG_Peyman_Sedandaastab={
+		name="Peyman Sedandaastab"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Peyman_Sedandaastab
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	AEG_Ahmal_Darahnar={
+		name="Ahmal Darahnar"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Ahmal_Darahnar
+			traits = {	army_infantry_2 	}
+		}
+
+
+	}
+	AEG_Shad_Tood={
+		name="Shad Tood"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Shad_Tood
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	AEG_Armal_Zarfan={
+		name="Armal Zarfan"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Armal_Zarfan
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	AEG_Shad_Tooz={
+		name="Shad Tooz"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Shad_Tooz
+			traits = {	army_armored_2 	}
+		}
+
+
+	}
+	AEG_Farhahramin_Dashr={
+		name="Farhahramin Dashr"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Farhahramin_Dashr
+			traits = {	navy_amphibious_assault_2 	}
+		}
+
+
+	}
+	AEG_Armad_Tooz={
+		name="Armad Tooz"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Armad_Tooz
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	AEG_Nima_Darahnar={
+		name="Nima Darahnar"
+
+		
+		country_leader={
+			ideology=liberalism
+			traits = { leftist_independent  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	AEG_Navid_Tareh={
+		name="Navid Tareh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Navid_Tareh
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	AEG_Majid_Shogh={
+		name="Majid Shogh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Majid_Shogh
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Mossan_Shoghl={
+		name="Mossan Shoghl"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Mossan_Shoghl
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Behza_Toot={
+		name="Behza Toot"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Behza_Toot
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	AEG_Navid_Neshgash={
+		name="Navid Neshgash"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Navid_Neshgash
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Parhaman_Pashabazeshg={
+		name="Parhaman Pashabazeshg"
+
+		advisor={
+			slot = political_advisor
+			idea_token = AEG_Parhaman_Pashabazeshg
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	AEG_Behzad_Shirdang={
+		name="Behzad Shirdang"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Behzad_Shirdang
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	AEG_Parhahimal_Honarikh={
+		name="Parhahimal Honarikh"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Parhahimal_Honarikh
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	AEG_Ahmal_Sepid={
+		name="Ahmal Sepid"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Ahmal_Sepid
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	AEG_Naveh_Mangood={
+		name="Naveh Mangood"
+
+		advisor={
+			slot = army_chief
+			idea_token = AEG_Naveh_Mangood
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	AEG_Parhahramal_Jonarma={
+		name="Parhahramal Jonarma"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Parhahramal_Jonarma
+			traits = {	navy_chief_naval_aviation_2 	}
+		}
+
+
+	}
+	AEG_Omid_Hunaryayamam={
+		name="Omid Hunaryayamam"
+
+		advisor={
+			slot = navy_chief
+			idea_token = AEG_Omid_Hunaryayamam
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	AEG_Parhaman_Behr={
+		name="Parhaman Behr"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Parhaman_Behr
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	AEG_Parham_Mazad={
+		name="Parham Mazad"
+
+		advisor={
+			slot = air_chief
+			idea_token = AEG_Parham_Mazad
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	AEG_Parhahiman_Mogh={
+		name="Parhahiman Mogh"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Parhahiman_Mogh
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	AEG_Armal_Atar={
+		name="Armal Atar"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Armal_Atar
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	AEG_Behza_Yoot={
+		name="Behza Yoot"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Behza_Yoot
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	AEG_Peymal_Mogh={
+		name="Peymal Mogh"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Peymal_Mogh
+			traits = {	navy_screen_2 	}
+		}
+
+
+	}
+	AEG_Behzad_Darahnar={
+		name="Behzad Darahnar"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Behzad_Darahnar
+			traits = {	navy_fleet_logistics_1 	}
+		}
+
+
+	}
+	AEG_Ahmal_Mazad={
+		name="Ahmal Mazad"
+
+		advisor={
+			slot = high_command
+			idea_token = AEG_Ahmal_Mazad
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	AEG_Shad_Ghada={
+		name="Shad Ghada"
+
+		advisor={
+			slot = theorist
+			idea_token = AEG_Shad_Ghada
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	AEG_Kaveh_Namang={
+		name="Kaveh Namang"
+
+		advisor={
+			slot = theorist
+			idea_token = AEG_Kaveh_Namang
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	AEG_Parhahramal_Zamrahr={
+		name="Parhahramal Zamrahr"
+
+		advisor={
+			slot = theorist
+			idea_token = AEG_Parhahramal_Zamrahr
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

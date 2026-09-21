@@ -1,0 +1,479 @@
+capital = 1353
+
+oob = "KZL_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "KZL_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "KZL_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	tech_trucks= 1
+	tech_support= 1
+	gw_artillery= 1
+	marines= 1
+	tech_mountaineers= 1
+	motorised_infantry= 1
+	armored_car1= 1
+	tech_engineers= 1
+	tech_recon= 1
+	tech_military_police= 1
+	tech_maintenance_company= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	construction1= 1
+	fuel_refining= 1
+	electronic_mechanical_engineering= 1
+	basic_fire_control_system= 1
+	basic_fortification_tech= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+		improved_light_tank = 1
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+		improved_light_tank_chassis = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+		create_equipment_variant = {
+		name = "Yoldent Mk 1"
+		type = heavy_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_3 = wet_ammo_storage
+			suspension_type_slot = tank_bogie_suspension
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Koyla Mk 0"
+		type = heavy_tank_chassis_1
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_petrol_electric_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = smoke_launchers
+			special_type_slot_2 = expanded_fuel_tank
+			special_type_slot_3 = wet_ammo_storage
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Saat Mk 1"
+		type = light_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_small_cannon
+			special_type_slot_1 = smoke_launchers
+			special_type_slot_2 = wet_ammo_storage
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_light_three_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Gece Mk 0"
+		type = light_tank_chassis_1
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_small_cannon
+			special_type_slot_1 = smoke_launchers
+			special_type_slot_2 = extra_ammo_storage
+			suspension_type_slot = tank_interleaved_suspension
+			turret_type_slot = tank_light_two_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Koylu Mk 1"
+		type = light_tank_chassis_2
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_small_cannon
+			special_type_slot_1 = expanded_fuel_tank
+			special_type_slot_2 = extra_ammo_storage
+			special_type_slot_3 = smoke_launchers
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_light_two_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Doguk Mk 2"
+		type = medium_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_medium_cannon
+			special_type_slot_1 = wet_ammo_storage
+			special_type_slot_3 = smoke_launchers
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_medium_three_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "KZL_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			photo_reconnaisance = 1
+			air_torpedoe_1 = 1
+			aa_lmg = 1
+			iw_small_airframe = 1
+			early_bombs = 1
+			
+		}
+		create_equipment_variant = {
+			name = "Duvasan Mk 0"
+			type = small_plane_cas_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Ulket Mk 1"
+			type = small_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Golge Mk 1"
+			type = small_plane_naval_bomber_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = torpedo_mounting
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Hisla Mk 0"
+			type = medium_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+
+	else = {
+		set_air_oob = "KZL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			scout_plane1 = 1
+			naval_bomber1 = 1
+			early_fighter = 1
+			CAS1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_destroyer = 1
+	
+	}
+	set_naval_oob = "KZL_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Barin Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	early_ship_hull_light = 1
+	sonar = 1
+	
+	}
+	set_naval_oob = "KZL_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Barin Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+
+	}
+
+
+recruit_character = KZL_Adem_Sonbaharlil
+recruit_character = KZL_Savas_Yayla
+recruit_character = KZL_Cemalilmalim_Sogun
+recruit_character = KZL_Talih_Gecmi
+recruit_character = KZL_Aderkan_Anak
+recruit_character = KZL_Talcin_Belece
+recruit_character = KZL_Mustaferhat_Sicakin
+recruit_character = KZL_Talim_Duyum
+recruit_character = KZL_Yilmalilmali_Kaye
+recruit_character = KZL_Haran_Servane
+recruit_character = KZL_Taylan_Buzgac
+recruit_character = KZL_Ertuhan_Sehirlik
+recruit_character = KZL_Ilkerkan_Seref
+recruit_character = KZL_Mehmet_Sogru
+recruit_character = KZL_Cemalilmalim_Sehil
+recruit_character = KZL_Haran_Yakin
+recruit_character = KZL_Zafa_Birla
+recruit_character = KZL_Resulendemal_Karlikayla
+recruit_character = KZL_Ilker_Kayluk
+recruit_character = KZL_Ilkenderemal_Gemis
+recruit_character = KZL_Cemalilmalim_Sogru
+recruit_character = KZL_Talih_Koylu
+recruit_character = KZL_Talim_Barim
+recruit_character = KZL_Suat_Duvar
+recruit_character = KZL_Halilmalcin_Kalece
+recruit_character = KZL_Ramal_Temiz
+recruit_character = KZL_Eferhan_Ormanlik
+recruit_character = KZL_Talim_Isik
+recruit_character = KZL_Efer_Soguk
+recruit_character = KZL_Ertuha_Saat
+recruit_character = KZL_Kaan_Aksar
+recruit_character = KZL_Ramal_Belece
+recruit_character = KZL_Cemalilmalim_Bahtar
+recruit_character = KZL_Ramal_Hisamanakind
+recruit_character = KZL_Tunc_Doguk
+recruit_character = KZL_Eferhan_Hisla
+recruit_character = KZL_Harul_Kultur
+recruit_character = KZL_Keremazan_Sehirlis
+recruit_character = KZL_Selih_Ulket
+recruit_character = KZL_Batugrunc_Karlikayla
+recruit_character = KZL_Emir_Bolge
+recruit_character = KZL_Utku_Gemis
+recruit_character = KZL_Salcinan_Haylutlutlul
+recruit_character = KZL_Selih_Kader
+recruit_character = KZL_Bora_Sogun
+recruit_character = KZL_Zafa_Oyku
+recruit_character = KZL_Selih_Sogun
+recruit_character = KZL_Resul_Hisamanakind
+recruit_character = KZL_Enes_Serin
+recruit_character = KZL_Yustafe_Gecmis
+recruit_character = KZL_Isker_Sehirlik
+recruit_character = KZL_Kadir_Soga
+recruit_character = KZL_Sinan_Bolge
+recruit_character = KZL_Tunc_Belece
+recruit_character = KZL_Ertuhan_Kayla
+recruit_character = KZL_Bekir_Temiz
+recruit_character = KZL_Kadir_Sane
+recruit_character = KZL_Kaan_Sonbaharlil
+recruit_character = KZL_Resul_Kultur
+recruit_character = KZL_Halhan_Simsek
+recruit_character = KZL_Farunc_Oyku
+recruit_character = KZL_Bekir_Gece
+recruit_character = KZL_Bora_Koylu
+recruit_character = KZL_Eferhan_Sehil
+recruit_character = KZL_Yilmalilmali_Tasamane
+recruit_character = KZL_Farunc_Saat
+recruit_character = KZL_Sinan_Kader
+recruit_character = KZL_Mustaferhat_Gunce
+recruit_character = KZL_Boran_Koyla
+recruit_character = KZL_Taylan_Umurt
+recruit_character = KZL_Ilkerkan_Gunce
+recruit_character = KZL_Zafa_Barin
+recruit_character = KZL_Kaaner_Birlis
+recruit_character = KZL_Resulendemal_Soguk
+recruit_character = KZL_Utku_Gecmis
+recruit_character = KZL_Talim_Basari
+recruit_character = KZL_Ener_Serin
+recruit_character = KZL_Keremazan_Gemis
+recruit_character = KZL_Yalcin_Bolge
+recruit_character = KZL_Resul_Baharak
+recruit_character = KZL_Talcin_Gunce
+recruit_character = KZL_Kaan_Basari
+recruit_character = KZL_Yalim_Kalece
+recruit_character = KZL_Mehmet_Sehildir
+recruit_character = KZL_Bekir_Barin
+recruit_character = KZL_Resuf_Yaylutlukaye
+recruit_character = KZL_Mehmet_Yesimsek
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 4
+set_convoys = 0
+set_stability = 0.71
+set_war_support = 0.35
+
+add_ideas = {
+limited_conscription
+low_economic_mobilisation
+export_focus
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1899.9.19"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 2
+	fascism = 43
+	communism = 11
+	neutrality = 44
+}
+
+
+
+
+

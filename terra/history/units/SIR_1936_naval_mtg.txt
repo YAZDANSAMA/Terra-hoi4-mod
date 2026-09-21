@@ -1,0 +1,27 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Siracusa Fleet"			
+		naval_base = 7049
+		task_force = {
+			name = "Siracusa Fleet"
+			location = 7049
+			
+						ship = { name = "Oorul" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIR version_name = "Thanneerai Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

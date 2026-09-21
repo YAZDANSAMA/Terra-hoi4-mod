@@ -1,0 +1,1083 @@
+characters = {
+	LAT_Ketut_Batan={
+		name="Ketut Batan"
+
+		
+		country_leader={
+			ideology=despotism
+			traits = { humble  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LAT_Hario_Perta={
+		name="Hario Perta"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Hario_Perta
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	LAT_Surya_Cintuahang={
+		name="Surya Cintuahang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Surya_Cintuahang
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	LAT_Suryan_Trang={
+		name="Suryan Trang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Suryan_Trang
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Putfi_Pensir={
+		name="Putfi Pensir"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Putfi_Pensir
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	LAT_Dewa_Anah={
+		name="Dewa Anah"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Dewa_Anah
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	LAT_Hari_Periata={
+		name="Hari Periata"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Hari_Periata
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	LAT_Rambang_Bindatu={
+		name="Rambang Bindatu"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Rambang_Bindatu
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	LAT_Putfi_Nafsu={
+		name="Putfi Nafsu"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Putfi_Nafsu
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	LAT_Suryan_Kelajahariat={
+		name="Suryan Kelajahariat"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Suryan_Kelajahariat
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	LAT_Joko_Toko={
+		name="Joko Toko"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Joko_Toko
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	LAT_Rambang_Daung={
+		name="Rambang Daung"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Rambang_Daung
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	LAT_Surya_Trama={
+		name="Surya Trama"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Surya_Trama
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	LAT_Bamban_Kerang={
+		name="Bamban Kerang"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Bamban_Kerang
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	LAT_Joko_Lang={
+		name="Joko Lang"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Joko_Lang
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	LAT_Ketut_Pindelak={
+		name="Ketut Pindelak"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Ketut_Pindelak
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	LAT_Agus_Bahu={
+		name="Agus Bahu"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Agus_Bahu
+			traits = {	navy_submarine_1 	}
+		}
+
+
+	}
+	LAT_Hari_Laingitang={
+		name="Hari Laingitang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Hari_Laingitang
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	LAT_Andi_Badang={
+		name="Andi Badang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Andi_Badang
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	LAT_Bama_Ayaremi={
+		name="Bama Ayaremi"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Bama_Ayaremi
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	LAT_Rizal_Laingitang={
+		name="Rizal Laingitang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Rizal_Laingitang
+			traits = {	air_airborne_1 	}
+		}
+
+
+	}
+	LAT_Andi_Perang={
+		name="Andi Perang"
+
+		
+		country_leader={
+			ideology=falangism
+			traits = { celebrity_junta_leader  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LAT_Fajari_Nafasaris={
+		name="Fajari Nafasaris"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Fajari_Nafasaris
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Putfi_Lelat={
+		name="Putfi Lelat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Putfi_Lelat
+			traits = {	autocratic_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	LAT_Joko_Kebiasan={
+		name="Joko Kebiasan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Joko_Kebiasan
+			traits = {	archon_basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Rizal_Rohon={
+		name="Rizal Rohon"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Rizal_Rohon
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Wayan_Gunci={
+		name="Wayan Gunci"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Wayan_Gunci
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Putra_Tombanahat={
+		name="Putra Tombanahat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Putra_Tombanahat
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Budi_Padik={
+		name="Budi Padik"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Budi_Padik
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	LAT_Lutfi_Peruhat={
+		name="Lutfi Peruhat"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Lutfi_Peruhat
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	LAT_Suryan_Tariasjid={
+		name="Suryan Tariasjid"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Suryan_Tariasjid
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	LAT_Suryang_Rimenang={
+		name="Suryang Rimenang"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Suryang_Rimenang
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	LAT_Waya_Cinta={
+		name="Waya Cinta"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Waya_Cinta
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	LAT_Putra_Penci={
+		name="Putra Penci"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Putra_Penci
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	LAT_Hario_Purgai={
+		name="Hario Purgai"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Hario_Purgai
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	LAT_Fajario_Upacakmati={
+		name="Fajario Upacakmati"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Fajario_Upacakmati
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	LAT_Joko_Rimenang={
+		name="Joko Rimenang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Joko_Rimenang
+			traits = {	navy_anti_submarine_1 	}
+		}
+
+
+	}
+	LAT_Agus_Awan={
+		name="Agus Awan"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Agus_Awan
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	LAT_Surya_Tera={
+		name="Surya Tera"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Surya_Tera
+			traits = {	navy_submarine_1 	}
+		}
+
+
+	}
+	LAT_Ketutfi_Tang={
+		name="Ketutfi Tang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Ketutfi_Tang
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	LAT_Rama_Tera={
+		name="Rama Tera"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Rama_Tera
+			traits = {	navy_anti_submarine_2 	}
+		}
+
+
+	}
+	LAT_Fajari_Perang={
+		name="Fajari Perang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Fajari_Perang
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	LAT_Andi_Trang={
+		name="Andi Trang"
+
+		
+		country_leader={
+			ideology=anarchist_communism
+			traits = { patriotic_socialist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LAT_Rambang_Toma={
+		name="Rambang Toma"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Rambang_Toma
+			traits = {	anti_bolshevik_leftist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	LAT_Surya_Rohon={
+		name="Surya Rohon"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Surya_Rohon
+			traits = {	anti_bolshevik_leftist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Mario_Padan={
+		name="Mario Padan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Mario_Padan
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	LAT_Sakti_Takuman={
+		name="Sakti Takuman"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Sakti_Takuman
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	LAT_Joko_Perjaharan={
+		name="Joko Perjaharan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Joko_Perjaharan
+			traits = {	anti_bolshevik_leftist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	LAT_Arjuna_Gurnanak={
+		name="Arjuna Gurnanak"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Arjuna_Gurnanak
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	LAT_Surya_Ibuku={
+		name="Surya Ibuku"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Surya_Ibuku
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	LAT_Bamban_Terempulawan={
+		name="Bamban Terempulawan"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Bamban_Terempulawan
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	LAT_Ketut_Tombanahat={
+		name="Ketut Tombanahat"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Ketut_Tombanahat
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	LAT_Waya_Bahu={
+		name="Waya Bahu"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Waya_Bahu
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	LAT_Wayan_Perjaharan={
+		name="Wayan Perjaharan"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Wayan_Perjaharan
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	LAT_Ketut_Bulau={
+		name="Ketut Bulau"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Ketut_Bulau
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	LAT_Hari_Bulap={
+		name="Hari Bulap"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Hari_Bulap
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	LAT_Hari_Lelat={
+		name="Hari Lelat"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Hari_Lelat
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	LAT_Joko_Trang={
+		name="Joko Trang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Joko_Trang
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	LAT_Sakti_Cintuahang={
+		name="Sakti Cintuahang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Sakti_Cintuahang
+			traits = {	army_armored_2 	}
+		}
+
+
+	}
+	LAT_Lutra_Bulap={
+		name="Lutra Bulap"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Lutra_Bulap
+			traits = {	army_cavalry_1 	}
+		}
+
+
+	}
+	LAT_Joko_Perta={
+		name="Joko Perta"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Joko_Perta
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	LAT_Agus_Cinta={
+		name="Agus Cinta"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Agus_Cinta
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	LAT_Fajario_Apintang={
+		name="Fajario Apintang"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Fajario_Apintang
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	LAT_Lutfi_Apintang={
+		name="Lutfi Apintang"
+
+		
+		country_leader={
+			ideology=socialism
+			traits = { leftist_legionary  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LAT_Bambang_Toma={
+		name="Bambang Toma"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Bambang_Toma
+			traits = {	veteran_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Lutra_Bahu={
+		name="Lutra Bahu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Lutra_Bahu
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	LAT_Mari_Rohon={
+		name="Mari Rohon"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Mari_Rohon
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Rizal_Tertanan={
+		name="Rizal Tertanan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Rizal_Tertanan
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Suryan_Tera={
+		name="Suryan Tera"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Suryan_Tera
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Joko_Sena={
+		name="Joko Sena"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LAT_Joko_Sena
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	LAT_Lutra_Keriat={
+		name="Lutra Keriat"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Lutra_Keriat
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	LAT_Dewa_Badang={
+		name="Dewa Badang"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Dewa_Badang
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	LAT_Bamban_Sena={
+		name="Bamban Sena"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Bamban_Sena
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	LAT_Lutra_Padih={
+		name="Lutra Padih"
+
+		advisor={
+			slot = army_chief
+			idea_token = LAT_Lutra_Padih
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	LAT_Ketutfi_Cintuahang={
+		name="Ketutfi Cintuahang"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Ketutfi_Cintuahang
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	LAT_Lutfi_Nafasaris={
+		name="Lutfi Nafasaris"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LAT_Lutfi_Nafasaris
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	LAT_Ramban_Tariasjid={
+		name="Ramban Tariasjid"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Ramban_Tariasjid
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	LAT_Sakti_Gerjang={
+		name="Sakti Gerjang"
+
+		advisor={
+			slot = air_chief
+			idea_token = LAT_Sakti_Gerjang
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	LAT_Ketut_Sena={
+		name="Ketut Sena"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Ketut_Sena
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	LAT_Fajario_Anah={
+		name="Fajario Anah"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Fajario_Anah
+			traits = {	army_armored_2 	}
+		}
+
+
+	}
+	LAT_Suryang_Lelat={
+		name="Suryang Lelat"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Suryang_Lelat
+			traits = {	navy_capital_ship_2 	}
+		}
+
+
+	}
+	LAT_Putra_Pensir={
+		name="Putra Pensir"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Putra_Pensir
+			traits = {	army_radio_intelligence_1 	}
+		}
+
+
+	}
+	LAT_Ketut_Bayapal={
+		name="Ketut Bayapal"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Ketut_Bayapal
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	LAT_Arjuna_Tombanahat={
+		name="Arjuna Tombanahat"
+
+		advisor={
+			slot = high_command
+			idea_token = LAT_Arjuna_Tombanahat
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	LAT_Ramban_Mulit={
+		name="Ramban Mulit"
+
+		advisor={
+			slot = theorist
+			idea_token = LAT_Ramban_Mulit
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	LAT_Mari_Targan={
+		name="Mari Targan"
+
+		advisor={
+			slot = theorist
+			idea_token = LAT_Mari_Targan
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	LAT_Lutra_Kerap={
+		name="Lutra Kerap"
+
+		advisor={
+			slot = theorist
+			idea_token = LAT_Lutra_Kerap
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

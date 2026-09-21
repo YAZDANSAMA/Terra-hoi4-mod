@@ -1,0 +1,38 @@
+
+state={
+	id=147
+	name="Wasserland"
+	manpower = 7270
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = {  1}
+		
+		owner = LEI
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		1670 1671 1672 1673 1674 2049 2050 2052 2053 2054 2055 2056 2057 2058 2059 5456 5459 5460 5462 5467 6591
+	}
+	local_supplies=0.0 
+}

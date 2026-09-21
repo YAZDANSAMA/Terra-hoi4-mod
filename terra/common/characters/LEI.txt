@@ -1,0 +1,1083 @@
+characters = {
+	LEI_Harkai_Izapore={
+		name="Harkai Izapore"
+
+		
+		country_leader={
+			ideology=centrism
+			traits = { first_lady  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LEI_Harka_Hodea={
+		name="Harka Hodea"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Harka_Hodea
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Xabier_Zoreko={
+		name="Xabier Zoreko"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Xabier_Zoreko
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Xanti_Harra={
+		name="Xanti Harra"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Xanti_Harra
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Ander_Indarria={
+		name="Ander Indarria"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ander_Indarria
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Xabier_Arna={
+		name="Xabier Arna"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Xabier_Arna
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	LEI_Amai_Elkaso={
+		name="Amai Elkaso"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Amai_Elkaso
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	LEI_Gaiur_Bakarroizea={
+		name="Gaiur Bakarroizea"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Gaiur_Bakarroizea
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	LEI_Ibaitz_Berrebaintza={
+		name="Ibaitz Berrebaintza"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Ibaitz_Berrebaintza
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	LEI_Unaitz_Bizirak={
+		name="Unaitz Bizirak"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Unaitz_Bizirak
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	LEI_Amaizkaitor_Arra={
+		name="Amaizkaitor Arra"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Amaizkaitor_Arra
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	LEI_Amaizka_Oihalets={
+		name="Amaizka Oihalets"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Amaizka_Oihalets
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	LEI_Harkaitz_Bakatasuntza={
+		name="Harkaitz Bakatasuntza"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Harkaitz_Bakatasuntza
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	LEI_Ekai_Oihotza={
+		name="Ekai Oihotza"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Ekai_Oihotza
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	LEI_Ibaizkaitz_Zalmenaua={
+		name="Ibaizkaitz Zalmenaua"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Ibaizkaitz_Zalmenaua
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	LEI_Aitz_Ikusmoa={
+		name="Aitz Ikusmoa"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Aitz_Ikusmoa
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	LEI_Iker_Bakarroizea={
+		name="Iker Bakarroizea"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Iker_Bakarroizea
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	LEI_Ekaitz_Uratasuna={
+		name="Ekaitz Uratasuna"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Ekaitz_Uratasuna
+			traits = {	navy_screen_2 	}
+		}
+
+
+	}
+	LEI_Iban_Zalmenaua={
+		name="Iban Zalmenaua"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Iban_Zalmenaua
+			traits = {	army_concealment_1 	}
+		}
+
+
+	}
+	LEI_Ibaitz_Gaurra={
+		name="Ibaitz Gaurra"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Ibaitz_Gaurra
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	LEI_Xanti_Zoreko={
+		name="Xanti Zoreko"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Xanti_Zoreko
+			traits = {	army_commando_1 	}
+		}
+
+
+	}
+	LEI_Gorkaitz_Hodea={
+		name="Gorkaitz Hodea"
+
+		
+		country_leader={
+			ideology=rexism
+			traits = { falangist_militarist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LEI_Gaiur_Eskua={
+		name="Gaiur Eskua"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Gaiur_Eskua
+			traits = {	subservient_ultranationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Ekaitz_Itxe={
+		name="Ekaitz Itxe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ekaitz_Itxe
+			traits = {	generallissimo 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	LEI_Iban_Indarreka={
+		name="Iban Indarreka"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Iban_Indarreka
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Unaitz_Itxe={
+		name="Unaitz Itxe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Unaitz_Itxe
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	LEI_Amai_Oihalets={
+		name="Amai Oihalets"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Amai_Oihalets
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Ibaiur_Koba={
+		name="Ibaiur Koba"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ibaiur_Koba
+			traits = {	generallissimo 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Asier_Argia={
+		name="Asier Argia"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Asier_Argia
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	LEI_Ibai_Arna={
+		name="Ibai Arna"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Ibai_Arna
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	LEI_Benaitz_Zalets={
+		name="Benaitz Zalets"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Benaitz_Zalets
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	LEI_Gaizkaitz_Abesti={
+		name="Gaizkaitz Abesti"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Gaizkaitz_Abesti
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	LEI_Miker_Oihalets={
+		name="Miker Oihalets"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Miker_Oihalets
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	LEI_Ibaizkaitz_Eguntzira={
+		name="Ibaizkaitz Eguntzira"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Ibaizkaitz_Eguntzira
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	LEI_Eneko_Mugi={
+		name="Eneko Mugi"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Eneko_Mugi
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	LEI_Gorka_Poza={
+		name="Gorka Poza"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Gorka_Poza
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	LEI_Amai_Berrebaintza={
+		name="Amai Berrebaintza"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Amai_Berrebaintza
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	LEI_Mikel_Alakets={
+		name="Mikel Alakets"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Mikel_Alakets
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	LEI_Ibaitz_Egurataskapo={
+		name="Ibaitz Egurataskapo"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Ibaitz_Egurataskapo
+			traits = {	air_strategic_bombing_2 	}
+		}
+
+
+	}
+	LEI_Asier_Ikusmoa={
+		name="Asier Ikusmoa"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Asier_Ikusmoa
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	LEI_Ibaiur_Bizirak={
+		name="Ibaiur Bizirak"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Ibaiur_Bizirak
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	LEI_Eder_Nazki={
+		name="Eder Nazki"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Eder_Nazki
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	LEI_Ibaitz_Bizirak={
+		name="Ibaitz Bizirak"
+
+		
+		country_leader={
+			ideology=anarchist_communism
+			traits = { devoted_marxist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LEI_Ibaizkaizkai_Mugi={
+		name="Ibaizkaizkai Mugi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ibaizkaizkai_Mugi
+			traits = {	indomitable_perseverance 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	LEI_Unat_Begia={
+		name="Unat Begia"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Unat_Begia
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	LEI_Gorkaitorka_Belabai={
+		name="Gorkaitorka Belabai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Gorkaitorka_Belabai
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Ibaizkaizkai_Biharrakapen={
+		name="Ibaizkaizkai Biharrakapen"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ibaizkaizkai_Biharrakapen
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Ibanti_Zubi={
+		name="Ibanti Zubi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ibanti_Zubi
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Ibaizkaitz_Pozarra={
+		name="Ibaizkaitz Pozarra"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ibaizkaitz_Pozarra
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Miker_Eguntzira={
+		name="Miker Eguntzira"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Miker_Eguntzira
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	LEI_Ibaiur_Helarrakerri={
+		name="Ibaiur Helarrakerri"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Ibaiur_Helarrakerri
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	LEI_Amaizka_Abeta={
+		name="Amaizka Abeta"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Amaizka_Abeta
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	LEI_Aitor_Eguntzira={
+		name="Aitor Eguntzira"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Aitor_Eguntzira
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	LEI_Amai_Gogoa={
+		name="Amai Gogoa"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Amai_Gogoa
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	LEI_Gorka_Grin={
+		name="Gorka Grin"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Gorka_Grin
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	LEI_Asier_Bela={
+		name="Asier Bela"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Asier_Bela
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	LEI_Ekaitz_Hodea={
+		name="Ekaitz Hodea"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Ekaitz_Hodea
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	LEI_Amai_Argia={
+		name="Amai Argia"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Amai_Argia
+			traits = {	air_airborne_1 	}
+		}
+
+
+	}
+	LEI_Ibai_Zartzuloa={
+		name="Ibai Zartzuloa"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Ibai_Zartzuloa
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	LEI_Aitorkai_Alakets={
+		name="Aitorkai Alakets"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Aitorkai_Alakets
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	LEI_Harkai_Semea={
+		name="Harkai Semea"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Harkai_Semea
+			traits = {	navy_amphibious_assault_2 	}
+		}
+
+
+	}
+	LEI_Harka_Elur={
+		name="Harka Elur"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Harka_Elur
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	LEI_Asier_Abeta={
+		name="Asier Abeta"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Asier_Abeta
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	LEI_Eder_Zuharrata={
+		name="Eder Zuharrata"
+
+		
+		country_leader={
+			ideology=conservatism
+			traits = { the_young_magnate  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	LEI_Amai_Zubi={
+		name="Amai Zubi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Amai_Zubi
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Gaizkaitz_Elur={
+		name="Gaizkaitz Elur"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Gaizkaitz_Elur
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Gaiur_Alakets={
+		name="Gaiur Alakets"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Gaiur_Alakets
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Harkaitz_Harra={
+		name="Harkaitz Harra"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Harkaitz_Harra
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Ibaiur_Alakets={
+		name="Ibaiur Alakets"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ibaiur_Alakets
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	LEI_Ander_Gizkimea={
+		name="Ander Gizkimea"
+
+		advisor={
+			slot = political_advisor
+			idea_token = LEI_Ander_Gizkimea
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	LEI_Ibaizkaitz_Kokapena={
+		name="Ibaizkaitz Kokapena"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Ibaizkaitz_Kokapena
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	LEI_Koldo_Indarria={
+		name="Koldo Indarria"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Koldo_Indarria
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	LEI_Miker_Arra={
+		name="Miker Arra"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Miker_Arra
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	LEI_Miker_Hodea={
+		name="Miker Hodea"
+
+		advisor={
+			slot = army_chief
+			idea_token = LEI_Miker_Hodea
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	LEI_Benaitz_Eguntza={
+		name="Benaitz Eguntza"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Benaitz_Eguntza
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	LEI_Harkaitz_Bakarroizea={
+		name="Harkaitz Bakarroizea"
+
+		advisor={
+			slot = navy_chief
+			idea_token = LEI_Harkaitz_Bakarroizea
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	LEI_Asier_Zora={
+		name="Asier Zora"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Asier_Zora
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	LEI_Ibaizkaitz_Elur={
+		name="Ibaizkaitz Elur"
+
+		advisor={
+			slot = air_chief
+			idea_token = LEI_Ibaizkaitz_Elur
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	LEI_Gorkaitz_Bakatasuntza={
+		name="Gorkaitz Bakatasuntza"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Gorkaitz_Bakatasuntza
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	LEI_Iker_Mugi={
+		name="Iker Mugi"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Iker_Mugi
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	LEI_Harkaiur_Eusmoa={
+		name="Harkaiur Eusmoa"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Harkaiur_Eusmoa
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	LEI_Aitorkai_Uratasuna={
+		name="Aitorkai Uratasuna"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Aitorkai_Uratasuna
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	LEI_Iban_Inguzkimena={
+		name="Iban Inguzkimena"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Iban_Inguzkimena
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	LEI_Gaitz_Amena={
+		name="Gaitz Amena"
+
+		advisor={
+			slot = high_command
+			idea_token = LEI_Gaitz_Amena
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	LEI_Ander_Hita={
+		name="Ander Hita"
+
+		advisor={
+			slot = theorist
+			idea_token = LEI_Ander_Hita
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	LEI_Gorka_Zoreko={
+		name="Gorka Zoreko"
+
+		advisor={
+			slot = theorist
+			idea_token = LEI_Gorka_Zoreko
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	LEI_Harkaiur_Abesti={
+		name="Harkaiur Abesti"
+
+		advisor={
+			slot = theorist
+			idea_token = LEI_Harkaiur_Abesti
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

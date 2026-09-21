@@ -1,0 +1,29 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Leithanien Fleet"			
+		naval_base = 8242
+		task_force = {
+			name = "Leithanien Fleet"
+			location = 8242
+			
+						ship = { name = "Bereko" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEI version_name = "Azapenaso Class" } }	}
+			ship = { name = "Arna" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEI version_name = "Azapenaso Class" } }	}
+			ship = { name = "Elkaso" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEI version_name = "Azapenaso Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

@@ -1,0 +1,491 @@
+capital = 1461
+
+oob = "SIE_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "SIE_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "SIE_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	tech_trucks= 1
+	gw_artillery= 1
+	electronic_mechanical_engineering= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		engine_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "SIE_1936_air_bba"
+		set_technology = {
+			bba_early_transport_plane = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			air_torpedoe_1 = 1
+			aa_lmg = 1
+			
+		}
+		create_equipment_variant = {
+			name = "Isimsek Mk 0"
+			type = small_plane_cas_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Yaynahar Mk 0"
+			type = small_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Hikaylu Mk 1"
+			type = small_plane_naval_bomber_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = torpedo_mounting
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Deniz Mk 1"
+			type = medium_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+
+	else = {
+		set_air_oob = "SIE_1936_air_legacy"
+		set_technology = {
+			early_transport_plane = 1
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_battlecruiser = 1
+	early_battleship = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_heavy_cruiser = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	
+	}
+	set_naval_oob = "SIE_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Yilderis Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Yilderis Class"
+			type = light_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_anti_air_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Gecmiz Class"
+			type = heavy_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Gulutlu Class"
+			type = battle_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Uzakin Class"
+			type = battleship_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Topru Class"
+			type = carrier_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_engine_upgrade = 1
+				ship_deckspace_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Servara Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_torpedo_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_depth_charges = 1
+	basic_naval_mines = 1
+	basic_torpedo = 1
+	early_ship_hull_carrier = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	mtg_transport = 1
+	smoke_generator = 1
+	sonar = 1
+	submarine_mine_laying = 1
+	
+	}
+	set_naval_oob = "SIE_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Yilderis Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Yilderis Class"
+			type = ship_hull_cruiser_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_fire_control_system_slot = ship_sonar_1
+				fixed_ship_radar_slot = empty
+				mid_1_custom_slot = ship_torpedo_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Gecmiz Class"
+			type = ship_hull_cruiser_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_fire_control_system_slot = ship_sonar_1
+				fixed_ship_radar_slot = empty
+				mid_1_custom_slot = ship_medium_battery_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Gulutlu Class"
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_bc_1
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				front_1_custom_slot = ship_heavy_battery_1
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = empty
+			}
+		}
+		create_equipment_variant = {
+			name = "Uzakin Class"
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_bb_1
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				front_1_custom_slot = ship_heavy_battery_1
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Topru Class"
+			type = ship_hull_carrier_conversion_ca
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_engine_slot = carrier_ship_engine_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_secondaries_slot = ship_secondaries_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Servara Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = sub_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				rear_1_custom_slot = ship_torpedo_sub_1
+			}
+		}
+
+	}
+
+
+recruit_character = SIE_Onuratuhan_Aksar
+recruit_character = SIE_Iskendem_Yasket
+recruit_character = SIE_Yalih_Bultur
+recruit_character = SIE_Serhat_Sogruklu
+recruit_character = SIE_Suat_Isildizci
+recruit_character = SIE_Suat_Yeni
+recruit_character = SIE_Arif_Tari
+recruit_character = SIE_Mustafa_Pazar
+recruit_character = SIE_Savas_Duvas
+recruit_character = SIE_Serhat_Golde
+recruit_character = SIE_Ener_Bahirlikar
+recruit_character = SIE_Yalim_Soguk
+recruit_character = SIE_Serhaner_Kisam
+recruit_character = SIE_Tanes_Hikaylu
+recruit_character = SIE_Resuf_Deniz
+recruit_character = SIE_Tanes_Isildizci
+recruit_character = SIE_Mustafa_Uzakinda
+recruit_character = SIE_Utku_Uzakinak
+recruit_character = SIE_Emin_Dagli
+recruit_character = SIE_Yalih_Isimsek
+recruit_character = SIE_Mustafa_Sonbahtara
+recruit_character = SIE_Talilmaz_Yanide
+recruit_character = SIE_Barulender_Isimsek
+recruit_character = SIE_Mustafa_Sehir
+recruit_character = SIE_Talhaner_Obah
+recruit_character = SIE_Ademalhan_Kereker
+recruit_character = SIE_Suat_Aksar
+recruit_character = SIE_Farulendem_Hikaylu
+recruit_character = SIE_Yusuf_Yane
+recruit_character = SIE_Cemaz_Golde
+recruit_character = SIE_Taylan_Gululut
+recruit_character = SIE_Yalim_Isimane
+recruit_character = SIE_Farulendem_Gece
+recruit_character = SIE_Emin_Sicakil
+recruit_character = SIE_Aderkan_Tari
+recruit_character = SIE_Isker_Yagmut
+recruit_character = SIE_Yusuf_Ordu
+recruit_character = SIE_Arif_Oyku
+recruit_character = SIE_Zaferem_Yanide
+recruit_character = SIE_Selih_Bultur
+recruit_character = SIE_Bara_Sicakil
+recruit_character = SIE_Ramazan_Nehir
+recruit_character = SIE_Ilkerkan_Servanlik
+recruit_character = SIE_Utku_Servara
+recruit_character = SIE_Adem_Sogun
+recruit_character = SIE_Salhan_Yolge
+recruit_character = SIE_Onuran_Duvas
+recruit_character = SIE_Utku_Dillili
+recruit_character = SIE_Salcin_Yaynahar
+recruit_character = SIE_Hakan_Golge
+recruit_character = SIE_Arif_Busun
+recruit_character = SIE_Halhan_Uzakinak
+recruit_character = SIE_Emin_Gulutlu
+recruit_character = SIE_Sinanes_Servanlik
+recruit_character = SIE_Yalil_Sehirlik
+recruit_character = SIE_Farulendem_Yanide
+recruit_character = SIE_Mehmet_Duyum
+recruit_character = SIE_Savas_Pazar
+recruit_character = SIE_Hakan_Duvanlik
+recruit_character = SIE_Serhaner_Sogun
+recruit_character = SIE_Boran_Isildizci
+recruit_character = SIE_Selilmal_Atesilik
+recruit_character = SIE_Talhaner_Sonba
+recruit_character = SIE_Hakan_Sicakil
+recruit_character = SIE_Yalil_Baskerim
+recruit_character = SIE_Iskendem_Kisar
+recruit_character = SIE_Arif_Nehir
+recruit_character = SIE_Yusuf_Yukar
+recruit_character = SIE_Musul_Saat
+recruit_character = SIE_Ramazan_Kisar
+recruit_character = SIE_Musul_Uzak
+recruit_character = SIE_Utku_Sogac
+recruit_character = SIE_Cemazan_Kanlik
+recruit_character = SIE_Zaferem_Sonbahtara
+recruit_character = SIE_Borat_Kanlik
+recruit_character = SIE_Halhan_Kisar
+recruit_character = SIE_Harul_Sehirlik
+recruit_character = SIE_Talil_Uzakin
+recruit_character = SIE_Talilmaz_Kisar
+recruit_character = SIE_Boran_Uzakinak
+recruit_character = SIE_Utku_Atesilik
+recruit_character = SIE_Boran_Berek
+recruit_character = SIE_Ademalhan_Haylutlukluk
+recruit_character = SIE_Arif_Sehirlisla
+recruit_character = SIE_Talilmaz_Yilik
+recruit_character = SIE_Emin_Deniz
+recruit_character = SIE_Yalih_Aksar
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 3
+set_convoys = 33
+set_stability = 0.30
+set_war_support = 0.23
+
+add_ideas = {
+volunteer_only
+civilian_economy
+limited_exports
+}
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.4.16"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 31
+	fascism = 27
+	communism = 9
+	neutrality = 33
+}
+
+
+
+
+

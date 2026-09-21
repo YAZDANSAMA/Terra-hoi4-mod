@@ -1,0 +1,1083 @@
+characters = {
+	URS_Cemalilmalim_Koylu={
+		name="Cemalilmalim Koylu"
+
+		
+		country_leader={
+			ideology=oligarchism
+			traits = { humble  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	URS_Kadir_Baharak={
+		name="Kadir Baharak"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Kadir_Baharak
+			traits = {	humble 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Onur_Buzgac={
+		name="Onur Buzgac"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Onur_Buzgac
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Ader_Gemis={
+		name="Ader Gemis"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Ader_Gemis
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Halhan_Gunce={
+		name="Halhan Gunce"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Halhan_Gunce
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	URS_Mehmet_Sogru={
+		name="Mehmet Sogru"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Mehmet_Sogru
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Ramaz_Sevda={
+		name="Ramaz Sevda"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Ramaz_Sevda
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Ertuha_Kultur={
+		name="Ertuha Kultur"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Ertuha_Kultur
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	URS_Selih_Birla={
+		name="Selih Birla"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Selih_Birla
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	URS_Keremazan_Aksar={
+		name="Keremazan Aksar"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Keremazan_Aksar
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	URS_Hakan_Kaye={
+		name="Hakan Kaye"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Hakan_Kaye
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	URS_Utku_Basari={
+		name="Utku Basari"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Utku_Basari
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	URS_Ilker_Sehirlis={
+		name="Ilker Sehirlis"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Ilker_Sehirlis
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	URS_Harulent_Isik={
+		name="Harulent Isik"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Harulent_Isik
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	URS_Mustaferhat_Ulket={
+		name="Mustaferhat Ulket"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Mustaferhat_Ulket
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	URS_Halim_Baharak={
+		name="Halim Baharak"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Halim_Baharak
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	URS_Ertuhan_Hisla={
+		name="Ertuhan Hisla"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ertuhan_Hisla
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	URS_Ener_Soga={
+		name="Ener Soga"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ener_Soga
+			traits = {	navy_capital_ship_2 	}
+		}
+
+
+	}
+	URS_Adem_Yesimsek={
+		name="Adem Yesimsek"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Adem_Yesimsek
+			traits = {	army_infantry_2 	}
+		}
+
+
+	}
+	URS_Ilkenderemal_Sonba={
+		name="Ilkenderemal Sonba"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ilkenderemal_Sonba
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	URS_Kaan_Doguk={
+		name="Kaan Doguk"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Kaan_Doguk
+			traits = {	army_CombinedArms_1 	}
+		}
+
+
+	}
+	URS_Ertuha_Duvar={
+		name="Ertuha Duvar"
+
+		
+		country_leader={
+			ideology=falangism
+			traits = { dictator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	URS_Aderkan_Sehildir={
+		name="Aderkan Sehildir"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Aderkan_Sehildir
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Ramal_Gecmizci={
+		name="Ramal Gecmizci"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Ramal_Gecmizci
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Halilmalcin_Simsek={
+		name="Halilmalcin Simsek"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Halilmalcin_Simsek
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Keremazan_Sehil={
+		name="Keremazan Sehil"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Keremazan_Sehil
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	URS_Suat_Duvasan={
+		name="Suat Duvasan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Suat_Duvasan
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	URS_Ertuha_Umut={
+		name="Ertuha Umut"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Ertuha_Umut
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Emin_Gece={
+		name="Emin Gece"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Emin_Gece
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	URS_Mehmet_Sane={
+		name="Mehmet Sane"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Mehmet_Sane
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	URS_Yalcin_Koylu={
+		name="Yalcin Koylu"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Yalcin_Koylu
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	URS_Mehmet_Sonbaharlil={
+		name="Mehmet Sonbaharlil"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Mehmet_Sonbaharlil
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	URS_Selih_Buzgac={
+		name="Selih Buzgac"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Selih_Buzgac
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	URS_Boran_Yayla={
+		name="Boran Yayla"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Boran_Yayla
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	URS_Keremazan_Serin={
+		name="Keremazan Serin"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Keremazan_Serin
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	URS_Ertugrul_Bolge={
+		name="Ertugrul Bolge"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Ertugrul_Bolge
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	URS_Yustafe_Yayla={
+		name="Yustafe Yayla"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Yustafe_Yayla
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	URS_Talim_Aksar={
+		name="Talim Aksar"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Talim_Aksar
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	URS_Hakan_Koylu={
+		name="Hakan Koylu"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Hakan_Koylu
+			traits = {	army_cavalry_1 	}
+		}
+
+
+	}
+	URS_Ramal_Belece={
+		name="Ramal Belece"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ramal_Belece
+			traits = {	navy_fleet_logistics_1 	}
+		}
+
+
+	}
+	URS_Ramal_Seref={
+		name="Ramal Seref"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ramal_Seref
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	URS_Zafa_Sonbaharlil={
+		name="Zafa Sonbaharlil"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Zafa_Sonbaharlil
+			traits = {	army_armored_2 	}
+		}
+
+
+	}
+	URS_Emir_Ulket={
+		name="Emir Ulket"
+
+		
+		country_leader={
+			ideology=stalinism
+			traits = { leftist_independent  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	URS_Baruk_Sicak={
+		name="Baruk Sicak"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Baruk_Sicak
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Resulendemal_Savaskervas={
+		name="Resulendemal Savaskervas"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Resulendemal_Savaskervas
+			traits = {	reluctant_stalinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	URS_Baruk_Busunce={
+		name="Baruk Busunce"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Baruk_Busunce
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	URS_Selih_Kayluk={
+		name="Selih Kayluk"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Selih_Kayluk
+			traits = {	revolutionary_poet 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Eferhan_Sehirlik={
+		name="Eferhan Sehirlik"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Eferhan_Sehirlik
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Hakanesul_Bahtar={
+		name="Hakanesul Bahtar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Hakanesul_Bahtar
+			traits = {	reluctant_stalinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Efer_Nehirlik={
+		name="Efer Nehirlik"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Efer_Nehirlik
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	URS_Kaaner_Ormanlik={
+		name="Kaaner Ormanlik"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Kaaner_Ormanlik
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	URS_Adem_Haylutlutlul={
+		name="Adem Haylutlutlul"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Adem_Haylutlutlul
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	URS_Aderkan_Soguk={
+		name="Aderkan Soguk"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Aderkan_Soguk
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	URS_Cemalim_Aksar={
+		name="Cemalim Aksar"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Cemalim_Aksar
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	URS_Halim_Gecmis={
+		name="Halim Gecmis"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Halim_Gecmis
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	URS_Bekir_Sehil={
+		name="Bekir Sehil"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Bekir_Sehil
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	URS_Savas_Umur={
+		name="Savas Umur"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Savas_Umur
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	URS_Bora_Servane={
+		name="Bora Servane"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Bora_Servane
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	URS_Halhan_Gecmis={
+		name="Halhan Gecmis"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Halhan_Gecmis
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	URS_Halim_Kaye={
+		name="Halim Kaye"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Halim_Kaye
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	URS_Bekir_Baharak={
+		name="Bekir Baharak"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Bekir_Baharak
+			traits = {	navy_anti_submarine_1 	}
+		}
+
+
+	}
+	URS_Sinan_Belece={
+		name="Sinan Belece"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Sinan_Belece
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	URS_Ramal_Temiz={
+		name="Ramal Temiz"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ramal_Temiz
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	URS_Hakan_Sehirlis={
+		name="Hakan Sehirlis"
+
+		
+		country_leader={
+			ideology=conservatism
+			traits = { staunch_constitutionalist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	URS_Serkan_Birla={
+		name="Serkan Birla"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Serkan_Birla
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Boran_Kader={
+		name="Boran Kader"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Boran_Kader
+			traits = {	the_banker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Kaaner_Serin={
+		name="Kaaner Serin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Kaaner_Serin
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	URS_Resul_Kaye={
+		name="Resul Kaye"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Resul_Kaye
+			traits = {	veteran_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	URS_Baruk_Yoldent={
+		name="Baruk Yoldent"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Baruk_Yoldent
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Bekir_Simsek={
+		name="Bekir Simsek"
+
+		advisor={
+			slot = political_advisor
+			idea_token = URS_Bekir_Simsek
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	URS_Selih_Gemis={
+		name="Selih Gemis"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Selih_Gemis
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	URS_Kerhat_Saat={
+		name="Kerhat Saat"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Kerhat_Saat
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	URS_Ramaz_Temiz={
+		name="Ramaz Temiz"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Ramaz_Temiz
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	URS_Savas_Basaman={
+		name="Savas Basaman"
+
+		advisor={
+			slot = army_chief
+			idea_token = URS_Savas_Basaman
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	URS_Aderkan_Sevda={
+		name="Aderkan Sevda"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Aderkan_Sevda
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	URS_Ilkendem_Doruk={
+		name="Ilkendem Doruk"
+
+		advisor={
+			slot = navy_chief
+			idea_token = URS_Ilkendem_Doruk
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	URS_Halim_Beden={
+		name="Halim Beden"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Halim_Beden
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	URS_Halilmalcin_Kayla={
+		name="Halilmalcin Kayla"
+
+		advisor={
+			slot = air_chief
+			idea_token = URS_Halilmalcin_Kayla
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	URS_Talim_Kaye={
+		name="Talim Kaye"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Talim_Kaye
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	URS_Onur_Kultur={
+		name="Onur Kultur"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Onur_Kultur
+			traits = {	army_regrouping_2 	}
+		}
+
+
+	}
+	URS_Ader_Tasamane={
+		name="Ader Tasamane"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Ader_Tasamane
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	URS_Hakan_Aksar={
+		name="Hakan Aksar"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Hakan_Aksar
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	URS_Harulent_Belece={
+		name="Harulent Belece"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Harulent_Belece
+			traits = {	air_naval_strike_1 	}
+		}
+
+
+	}
+	URS_Utku_Duyum={
+		name="Utku Duyum"
+
+		advisor={
+			slot = high_command
+			idea_token = URS_Utku_Duyum
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	URS_Yalcin_Kultur={
+		name="Yalcin Kultur"
+
+		advisor={
+			slot = theorist
+			idea_token = URS_Yalcin_Kultur
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	URS_Enes_Sehirlis={
+		name="Enes Sehirlis"
+
+		advisor={
+			slot = theorist
+			idea_token = URS_Enes_Sehirlis
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	URS_Talcin_Duyum={
+		name="Talcin Duyum"
+
+		advisor={
+			slot = theorist
+			idea_token = URS_Talcin_Duyum
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

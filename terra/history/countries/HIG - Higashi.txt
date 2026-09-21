@@ -1,0 +1,334 @@
+capital = 771
+
+oob = "HIG_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "HIG_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "HIG_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_trucks= 1
+	tech_support= 1
+	gw_artillery= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "HIG_1936_air_bba"
+		set_technology = {
+			bba_early_transport_plane = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			air_torpedoe_1 = 1
+			aa_lmg = 1
+			early_bombs = 1
+			
+		}
+		create_equipment_variant = {
+			name = "Simsek Mk 1"
+			type = small_plane_cas_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Aksar Mk 1"
+			type = small_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Sehildir Mk 1"
+			type = small_plane_naval_bomber_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = torpedo_mounting
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Soguk Mk 0"
+			type = medium_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+
+	else = {
+		set_air_oob = "HIG_1936_air_legacy"
+		set_technology = {
+			early_transport_plane = 1
+			early_fighter = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+			CAS1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_destroyer = 1
+	
+	}
+	set_naval_oob = "HIG_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Saat Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_depth_charges = 1
+	basic_naval_mines = 1
+	early_ship_hull_light = 1
+	mtg_transport = 1
+	smoke_generator = 1
+	sonar = 1
+	submarine_mine_laying = 1
+	
+	}
+	set_naval_oob = "HIG_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Saat Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_mine_layer_1
+			}
+		}
+
+	}
+
+
+recruit_character = HIG_Mehmet_Anak
+recruit_character = HIG_Aderkan_Yakin
+recruit_character = HIG_Hakanesul_Sevda
+recruit_character = HIG_Kerhat_Doru
+recruit_character = HIG_Yustafe_Sicak
+recruit_character = HIG_Hakan_Temiz
+recruit_character = HIG_Salcin_Doruk
+recruit_character = HIG_Yalim_Bahtar
+recruit_character = HIG_Ramal_Hisla
+recruit_character = HIG_Bekir_Duvar
+recruit_character = HIG_Ilkenderemal_Umut
+recruit_character = HIG_Baruk_Sicak
+recruit_character = HIG_Mehmet_Kayluk
+recruit_character = HIG_Ilker_Duyum
+recruit_character = HIG_Emir_Gemis
+recruit_character = HIG_Ertuhan_Basaman
+recruit_character = HIG_Harul_Haylutlutlul
+recruit_character = HIG_Cemazan_Sane
+recruit_character = HIG_Selih_Seref
+recruit_character = HIG_Harulent_Buzgac
+recruit_character = HIG_Batugrunc_Dent
+recruit_character = HIG_Orhan_Ormanlik
+recruit_character = HIG_Orhan_Golge
+recruit_character = HIG_Tunc_Isik
+recruit_character = HIG_Yalim_Hisla
+recruit_character = HIG_Ertuhan_Sehirlis
+recruit_character = HIG_Aderkan_Doruk
+recruit_character = HIG_Kaaner_Gecmis
+recruit_character = HIG_Eminan_Saat
+recruit_character = HIG_Taylan_Sonbaharlil
+recruit_character = HIG_Bora_Soguk
+recruit_character = HIG_Isker_Yaylutlukaye
+recruit_character = HIG_Utku_Karlikayla
+recruit_character = HIG_Salcin_Soga
+recruit_character = HIG_Sinan_Simsek
+recruit_character = HIG_Yalcin_Kaye
+recruit_character = HIG_Efer_Kapi
+recruit_character = HIG_Eferhan_Duvasan
+recruit_character = HIG_Cemaz_Doru
+recruit_character = HIG_Zafa_Umut
+recruit_character = HIG_Yalim_Yesimsek
+recruit_character = HIG_Suat_Ulket
+recruit_character = HIG_Taylanesulen_Simsek
+recruit_character = HIG_Ilkendem_Isik
+recruit_character = HIG_Utku_Sehirlis
+recruit_character = HIG_Selih_Kapi
+recruit_character = HIG_Halim_Oyku
+recruit_character = HIG_Salcinan_Isik
+recruit_character = HIG_Harulent_Gecmizci
+recruit_character = HIG_Enes_Koyla
+recruit_character = HIG_Ener_Yayla
+recruit_character = HIG_Halim_Sogun
+recruit_character = HIG_Ertuha_Umut
+recruit_character = HIG_Savas_Yakin
+recruit_character = HIG_Kaan_Buluk
+recruit_character = HIG_Utku_Tasamane
+recruit_character = HIG_Cemazan_Duvar
+recruit_character = HIG_Harulent_Sicak
+recruit_character = HIG_Harul_Temiz
+recruit_character = HIG_Ramaz_Ormanlik
+recruit_character = HIG_Salcinan_Anak
+recruit_character = HIG_Kaan_Sehildir
+recruit_character = HIG_Eferhan_Servar
+recruit_character = HIG_Halhan_Kaye
+recruit_character = HIG_Yilmalcin_Sehildir
+recruit_character = HIG_Baruk_Duvar
+recruit_character = HIG_Talim_Sehil
+recruit_character = HIG_Talcin_Yayla
+recruit_character = HIG_Talim_Kayluk
+recruit_character = HIG_Kerhat_Yayla
+recruit_character = HIG_Batugrunc_Gecmi
+recruit_character = HIG_Kaaner_Bolge
+recruit_character = HIG_Adem_Gecmis
+recruit_character = HIG_Mustaferhat_Temiz
+recruit_character = HIG_Talih_Yaylutlukaye
+recruit_character = HIG_Batugrunc_Barin
+recruit_character = HIG_Boran_Sogru
+recruit_character = HIG_Mehmet_Isik
+recruit_character = HIG_Ilkendem_Sehirlis
+recruit_character = HIG_Hakan_Dent
+recruit_character = HIG_Mustaferhat_Gunce
+recruit_character = HIG_Ertugrul_Isik
+recruit_character = HIG_Yusuf_Doruk
+recruit_character = HIG_Yilmalcin_Askervar
+recruit_character = HIG_Resul_Umurt
+recruit_character = HIG_Eminan_Servar
+recruit_character = HIG_Ertugrul_Gecmizci
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 3
+set_convoys = 0
+set_stability = 0.61
+set_war_support = 0.75
+
+add_ideas = {
+limited_conscription
+partial_economic_mobilisation
+closed_economy
+}
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1917.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 1
+	fascism = 35
+	communism = 40
+	neutrality = 24
+}
+
+
+
+
+

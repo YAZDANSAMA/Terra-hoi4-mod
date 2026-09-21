@@ -1,0 +1,1083 @@
+characters = {
+	KAZ_Gorka_Argia={
+		name="Gorka Argia"
+
+		
+		country_leader={
+			ideology=despotism
+			traits = { autocratic_archbishop  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KAZ_Aitor_Amena={
+		name="Aitor Amena"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Aitor_Amena
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Aitz_Gaurra={
+		name="Aitz Gaurra"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Aitz_Gaurra
+			traits = {	veteran_anti_bolshevik 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Iban_Aintzur={
+		name="Iban Aintzur"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Iban_Aintzur
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	KAZ_Ekai_Badia={
+		name="Ekai Badia"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ekai_Badia
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Iban_Helarrakerri={
+		name="Iban Helarrakerri"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Iban_Helarrakerri
+			traits = {	agricultural_capitalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Gaitz_Gautza={
+		name="Gaitz Gautza"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Gaitz_Gautza
+			traits = {	national_determinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	KAZ_Gaizkaitz_Zuhar={
+		name="Gaizkaitz Zuhar"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gaizkaitz_Zuhar
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	KAZ_Ekai_Pozarra={
+		name="Ekai Pozarra"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Ekai_Pozarra
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	KAZ_Gaizkaitz_Biharrakapen={
+		name="Gaizkaitz Biharrakapen"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gaizkaitz_Biharrakapen
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	KAZ_Aitz_Zuhar={
+		name="Aitz Zuhar"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Aitz_Zuhar
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	KAZ_Aitor_Zalmenaua={
+		name="Aitor Zalmenaua"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Aitor_Zalmenaua
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	KAZ_Harka_Arnaskua={
+		name="Harka Arnaskua"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Harka_Arnaskua
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	KAZ_Ibaitz_Begi={
+		name="Ibaitz Begi"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Ibaitz_Begi
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	KAZ_Iban_Zora={
+		name="Iban Zora"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Iban_Zora
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	KAZ_Harkaitz_Semea={
+		name="Harkaitz Semea"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Harkaitz_Semea
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	KAZ_Amaiur_Badia={
+		name="Amaiur Badia"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Amaiur_Badia
+			traits = {	army_radio_intelligence_1 	}
+		}
+
+
+	}
+	KAZ_Ekai_Zarteantza={
+		name="Ekai Zarteantza"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ekai_Zarteantza
+			traits = {	army_regrouping_2 	}
+		}
+
+
+	}
+	KAZ_Eneko_Ahaintzalmug={
+		name="Eneko Ahaintzalmug"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Eneko_Ahaintzalmug
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	KAZ_Iker_Zuharrata={
+		name="Iker Zuharrata"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Iker_Zuharrata
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	KAZ_Ibaizkaizkai_Eskua={
+		name="Ibaizkaizkai Eskua"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ibaizkaizkai_Eskua
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	KAZ_Ibaiur_Nazki={
+		name="Ibaiur Nazki"
+
+		
+		country_leader={
+			ideology=rexism
+			traits = { dictator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KAZ_Ikel_Indarreka={
+		name="Ikel Indarreka"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ikel_Indarreka
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	KAZ_Aitorkai_Nazki={
+		name="Aitorkai Nazki"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Aitorkai_Nazki
+			traits = {	subservient_ultranationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Asier_Abesti={
+		name="Asier Abesti"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Asier_Abesti
+			traits = {	collaborator_king 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Xabier_Zelmuga={
+		name="Xabier Zelmuga"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Xabier_Zelmuga
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Ibaizkaizkai_Eusmoa={
+		name="Ibaizkaizkai Eusmoa"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ibaizkaizkai_Eusmoa
+			traits = {	warmonger 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Ibaiur_Aina={
+		name="Ibaiur Aina"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ibaiur_Aina
+			traits = {	autocratic_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Koldo_Eusmoa={
+		name="Koldo Eusmoa"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Koldo_Eusmoa
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	KAZ_Gaitz_Abeta={
+		name="Gaitz Abeta"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gaitz_Abeta
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	KAZ_Ikel_Pozarra={
+		name="Ikel Pozarra"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Ikel_Pozarra
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	KAZ_Ander_Argia={
+		name="Ander Argia"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Ander_Argia
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	KAZ_Iker_Zelmuga={
+		name="Iker Zelmuga"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Iker_Zelmuga
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	KAZ_Benat_Ahaintzalmug={
+		name="Benat Ahaintzalmug"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Benat_Ahaintzalmug
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	KAZ_Unat_Bakatasuntza={
+		name="Unat Bakatasuntza"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Unat_Bakatasuntza
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	KAZ_Amaizkaitor_Kokaso={
+		name="Amaizkaitor Kokaso"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Amaizkaitor_Kokaso
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	KAZ_Ibanti_Elur={
+		name="Ibanti Elur"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ibanti_Elur
+			traits = {	army_CombinedArms_2 	}
+		}
+
+
+	}
+	KAZ_Koldo_Indartza={
+		name="Koldo Indartza"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Koldo_Indartza
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	KAZ_Amaizkaitor_Indartza={
+		name="Amaizkaitor Indartza"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Amaizkaitor_Indartza
+			traits = {	air_naval_strike_2 	}
+		}
+
+
+	}
+	KAZ_Asier_Berrebaintza={
+		name="Asier Berrebaintza"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Asier_Berrebaintza
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	KAZ_Benaitz_Eusmoa={
+		name="Benaitz Eusmoa"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Benaitz_Eusmoa
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	KAZ_Xabier_Argi={
+		name="Xabier Argi"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Xabier_Argi
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	KAZ_Ekaitz_Zarteantza={
+		name="Ekaitz Zarteantza"
+
+		
+		country_leader={
+			ideology=stalinism
+			traits = { anti_bolshevik_leftist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KAZ_Ikel_Etxeko={
+		name="Ikel Etxeko"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ikel_Etxeko
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Amaizka_Heria={
+		name="Amaizka Heria"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Amaizka_Heria
+			traits = {	devoted_marxist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Aitor_Zelmuga={
+		name="Aitor Zelmuga"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Aitor_Zelmuga
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Eneko_Jakerebazkun={
+		name="Eneko Jakerebazkun"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Eneko_Jakerebazkun
+			traits = {	revolutionary_poet 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Ekai_Begi={
+		name="Ekai Begi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ekai_Begi
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_2_small
+			}
+		}
+
+
+	}
+	KAZ_Harkaiur_Ikarrebai={
+		name="Harkaiur Ikarrebai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Harkaiur_Ikarrebai
+			traits = {	reluctant_stalinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Gorkaitz_Zubi={
+		name="Gorkaitz Zubi"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gorkaitz_Zubi
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	KAZ_Gaitz_Koba={
+		name="Gaitz Koba"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gaitz_Koba
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	KAZ_Harkai_Eguntzira={
+		name="Harkai Eguntzira"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Harkai_Eguntzira
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	KAZ_Gorkaitz_Oihotza={
+		name="Gorkaitz Oihotza"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gorkaitz_Oihotza
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	KAZ_Xanti_Herotzagunas={
+		name="Xanti Herotzagunas"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Xanti_Herotzagunas
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	KAZ_Ibaitz_Biharrakapen={
+		name="Ibaitz Biharrakapen"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Ibaitz_Biharrakapen
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	KAZ_Aitor_Hita={
+		name="Aitor Hita"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Aitor_Hita
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	KAZ_Harka_Griona={
+		name="Harka Griona"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Harka_Griona
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	KAZ_Ibaiur_Uratasuna={
+		name="Ibaiur Uratasuna"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ibaiur_Uratasuna
+			traits = {	air_airborne_2 	}
+		}
+
+
+	}
+	KAZ_Ibanti_Bela={
+		name="Ibanti Bela"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ibanti_Bela
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	KAZ_Ekaitz_Zalets={
+		name="Ekaitz Zalets"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ekaitz_Zalets
+			traits = {	navy_anti_submarine_2 	}
+		}
+
+
+	}
+	KAZ_Harkaitz_Bela={
+		name="Harkaitz Bela"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Harkaitz_Bela
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	KAZ_Xanti_Zalmenaua={
+		name="Xanti Zalmenaua"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Xanti_Zalmenaua
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	KAZ_Ekaitz_Ikartza={
+		name="Ekaitz Ikartza"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ekaitz_Ikartza
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	KAZ_Aitorkai_Zuhar={
+		name="Aitorkai Zuhar"
+
+		
+		country_leader={
+			ideology=socialism
+			traits = { liberal_democratic_paragon  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KAZ_Gorkaitorka_Bakarroizea={
+		name="Gorkaitorka Bakarroizea"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Gorkaitorka_Bakarroizea
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Aitor_Helarrakerri={
+		name="Aitor Helarrakerri"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Aitor_Helarrakerri
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Ander_Itxe={
+		name="Ander Itxe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ander_Itxe
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Harkaiur_Uratasuna={
+		name="Harkaiur Uratasuna"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Harkaiur_Uratasuna
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_1_small
+			}
+		}
+
+
+	}
+	KAZ_Benaitz_Gaurra={
+		name="Benaitz Gaurra"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Benaitz_Gaurra
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Ibanti_Inguzkimena={
+		name="Ibanti Inguzkimena"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_Ibanti_Inguzkimena
+			traits = {	democratic_crusader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Arabia_Generic_3_small
+			}
+		}
+
+
+	}
+	KAZ_Gaiur_Bela={
+		name="Gaiur Bela"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Gaiur_Bela
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	KAZ_Harka_Kantzuloa={
+		name="Harka Kantzuloa"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Harka_Kantzuloa
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	KAZ_Harkaitz_Kokaso={
+		name="Harkaitz Kokaso"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Harkaitz_Kokaso
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	KAZ_Amaiur_Nazki={
+		name="Amaiur Nazki"
+
+		advisor={
+			slot = army_chief
+			idea_token = KAZ_Amaiur_Nazki
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	KAZ_Unaitz_Grin={
+		name="Unaitz Grin"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Unaitz_Grin
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	KAZ_Koldo_Aina={
+		name="Koldo Aina"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KAZ_Koldo_Aina
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	KAZ_Amaiur_Hodea={
+		name="Amaiur Hodea"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Amaiur_Hodea
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	KAZ_Benaitz_Zalmenaua={
+		name="Benaitz Zalmenaua"
+
+		advisor={
+			slot = air_chief
+			idea_token = KAZ_Benaitz_Zalmenaua
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	KAZ_Koldo_Zuloa={
+		name="Koldo Zuloa"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Koldo_Zuloa
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	KAZ_Unat_Gargia={
+		name="Unat Gargia"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Unat_Gargia
+			traits = {	air_bomber_interception_1 	}
+		}
+
+
+	}
+	KAZ_Gorkaitorka_Elur={
+		name="Gorkaitorka Elur"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Gorkaitorka_Elur
+			traits = {	air_airborne_2 	}
+		}
+
+
+	}
+	KAZ_Ander_Zartzuloa={
+		name="Ander Zartzuloa"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Ander_Zartzuloa
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	KAZ_Koldo_Zarteantza={
+		name="Koldo Zarteantza"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Koldo_Zarteantza
+			traits = {	army_CombinedArms_1 	}
+		}
+
+
+	}
+	KAZ_Amai_Bereko={
+		name="Amai Bereko"
+
+		advisor={
+			slot = high_command
+			idea_token = KAZ_Amai_Bereko
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	KAZ_Aitz_Zarteantza={
+		name="Aitz Zarteantza"
+
+		advisor={
+			slot = theorist
+			idea_token = KAZ_Aitz_Zarteantza
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	KAZ_Amai_Bizirak={
+		name="Amai Bizirak"
+
+		advisor={
+			slot = theorist
+			idea_token = KAZ_Amai_Bizirak
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	KAZ_Benat_Zoreko={
+		name="Benat Zoreko"
+
+		advisor={
+			slot = theorist
+			idea_token = KAZ_Benat_Zoreko
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

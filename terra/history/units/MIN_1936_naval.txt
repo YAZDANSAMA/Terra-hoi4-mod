@@ -1,0 +1,64 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Minos Fleet"			
+		naval_base = 8198
+		task_force = {
+			name = "Minos Fleet"
+			location = 8198
+			
+						ship = { name = "Pohonkepulap" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = MIN version_name = "Lelat Class" } }	}
+			ship = { name = "Bahu" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = MIN version_name = "Lelat Class" } }	}
+			ship = { name = "Berejaang" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = MIN version_name = "Lelat Class" } }	}
+			ship = { name = "Tertanan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Pindelak" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Bahu 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Purgai" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Legenja" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Padik" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Takuman" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Bahu 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Pelang" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Gunci" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Oran" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Keramain" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Tebing" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Padik 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Dewa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Ayaremi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Pohonkepulap 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Padik 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Trang" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Padik 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Nafasaris" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Legenci" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Tramhariasji" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Lelat" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Ibuku" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Toma" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Padik 5" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Penanpurga" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Anah" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MIN version_name = "Senaka Class" } }	}
+			ship = { name = "Tertanan 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Pensir" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Periata" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Trama" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Toko" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+			ship = { name = "Buari" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MIN version_name = "Pensir Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

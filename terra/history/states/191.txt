@@ -1,0 +1,37 @@
+
+state={
+	id=191
+	name="Kusarikawa"
+	manpower = 28400
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		owner = HIG
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = HIG
+	}
+
+	provinces={
+		1070 1071 1686 1687 1688 1691 1692 1694 2531 2533
+	}
+	local_supplies=0.0 
+}

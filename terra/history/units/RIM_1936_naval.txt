@@ -1,0 +1,104 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "RIM Billiton Fleet"			
+		naval_base = 8059
+		task_force = {
+			name = "RIM Billiton Fleet"
+			location = 8059
+			
+						ship = { name = "Kirchreueset" definition = carrier equipment = { carrier_2 = { amount = 1 owner = RIM version_name = "Feisen Class" } }	}
+			ship = { name = "Zaum" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Lager" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Legenigiegen" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Insbrichift" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Heichlaum" definition = battleship equipment = { battleship_1 = { amount = 1 owner = RIM version_name = "Fein Class" } }	}
+			ship = { name = "Vorn" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Baum" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Vorn 2" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Legenigiegen 2" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RIM version_name = "Volkehr Class" } }	}
+			ship = { name = "Legenigiegen 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Haube" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Schte" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Graft" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Seger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Brucht" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Kirchreueset 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Koen" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Zoriedenigie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Glauss" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Seger 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Graft 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Gotter" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Koenigshoffe" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Macht" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Kirchreueset 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Koenigshoffe 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Wass" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Burg" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Legenigiegen 4" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Glaft" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Friebent" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Magen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Kriedenigshe" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Seger 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Vorn 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Geind" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Torf" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Legenigiegen 5" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Zoriedenigie 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Mach" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Burg 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Volkehr" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Zorn" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Graft 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Lagersten" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Vorn 4" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Gluchreuesta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Graft 4" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Lager 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Mach 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Steld" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Insbrichift 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Zorn 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Steld 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Koenigshoffe 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Wass 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Glaft 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Vorn 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Steld 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Burg 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Kriedenigshe 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Fein" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Ruft" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Krassin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Lagersten 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Geiselle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Macht 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Waffe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Waffe 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Helle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Koen 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Graft 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Baum 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Steld 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Baum 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RIM version_name = "Geiselle Class" } }	}
+			ship = { name = "Koen 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+			ship = { name = "Kirchreueset 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RIM version_name = "Gotter Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

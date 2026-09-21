@@ -1,0 +1,1083 @@
+characters = {
+	RIM_Rolf_Schiff={
+		name="Rolf Schiff"
+
+		
+		country_leader={
+			ideology=moderatism
+			traits = { agricultural_nationalist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	RIM_Svenrik_Hand={
+		name="Svenrik Hand"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Svenrik_Hand
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Sorne_Burg={
+		name="Sorne Burg"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Sorne_Burg
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Nielmut_Graft={
+		name="Nielmut Graft"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Nielmut_Graft
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Ansels_Dieber={
+		name="Ansels Dieber"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Ansels_Dieber
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Vold_Schiff={
+		name="Vold Schiff"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Vold_Schiff
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Leinholfred_Magen={
+		name="Leinholfred Magen"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Leinholfred_Magen
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Otthias_Baum={
+		name="Otthias Baum"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Otthias_Baum
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	RIM_Rudolkered_Wolke={
+		name="Rudolkered Wolke"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Rudolkered_Wolke
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	RIM_Eirik_Toden={
+		name="Eirik Toden"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Eirik_Toden
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	RIM_Johan_Schte={
+		name="Johan Schte"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Johan_Schte
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	RIM_Rolf_Vorheist={
+		name="Rolf Vorheist"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Rolf_Vorheist
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	RIM_Dirk_Koen={
+		name="Dirk Koen"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Dirk_Koen
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	RIM_Sven_Wass={
+		name="Sven Wass"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Sven_Wass
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	RIM_Hann_Legenigiegen={
+		name="Hann Legenigiegen"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Hann_Legenigiegen
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	RIM_Oskaranselm_Steld={
+		name="Oskaranselm Steld"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Oskaranselm_Steld
+			traits = {	army_concealment_1 	}
+		}
+
+
+	}
+	RIM_Larl_Zoriedenigie={
+		name="Larl Zoriedenigie"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Larl_Zoriedenigie
+			traits = {	air_strategic_bombing_1 	}
+		}
+
+
+	}
+	RIM_Leinholfred_Seger={
+		name="Leinholfred Seger"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Leinholfred_Seger
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	RIM_Georne_Feuscht={
+		name="Georne Feuscht"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Georne_Feuscht
+			traits = {	air_airborne_1 	}
+		}
+
+
+	}
+	RIM_Oskaranselmu_Nampel={
+		name="Oskaranselmu Nampel"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Oskaranselmu_Nampel
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	RIM_Nielmut_Schiff={
+		name="Nielmut Schiff"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Nielmut_Schiff
+			traits = {	air_naval_strike_2 	}
+		}
+
+
+	}
+	RIM_Rudolkered_Koen={
+		name="Rudolkered Koen"
+
+		
+		country_leader={
+			ideology=falangism
+			traits = { generallissimo  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	RIM_Anderend_Monne={
+		name="Anderend Monne"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Anderend_Monne
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Hann_Feisen={
+		name="Hann Feisen"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Hann_Feisen
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Helm_Wass={
+		name="Helm Wass"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Helm_Wass
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Rolfrender_Vorn={
+		name="Rolfrender Vorn"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Rolfrender_Vorn
+			traits = {	generallissimo 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Leif_Geind={
+		name="Leif Geind"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Leif_Geind
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Oskaranselmu_Gotter={
+		name="Oskaranselmu Gotter"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Oskaranselmu_Gotter
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Alfrenderenr_Burg={
+		name="Alfrenderenr Burg"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Alfrenderenr_Burg
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	RIM_Hann_Wolke={
+		name="Hann Wolke"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Hann_Wolke
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	RIM_Magnus_Sagieber={
+		name="Magnus Sagieber"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Magnus_Sagieber
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	RIM_Matto_Weitual={
+		name="Matto Weitual"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Matto_Weitual
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	RIM_Emillem_Zorfahreueri={
+		name="Emillem Zorfahreueri"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Emillem_Zorfahreueri
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	RIM_Hels_Fross={
+		name="Hels Fross"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Hels_Fross
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	RIM_Leif_Gotter={
+		name="Leif Gotter"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Leif_Gotter
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	RIM_Georg_Lichaff={
+		name="Georg Lichaff"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Georg_Lichaff
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	RIM_Bers_Gluch={
+		name="Bers Gluch"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Bers_Gluch
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	RIM_Rudolkermanz_Inser={
+		name="Rudolkermanz Inser"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Rudolkermanz_Inser
+			traits = {	army_CombinedArms_1 	}
+		}
+
+
+	}
+	RIM_Matthijs_Kirchreueset={
+		name="Matthijs Kirchreueset"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Matthijs_Kirchreueset
+			traits = {	air_close_air_support_1 	}
+		}
+
+
+	}
+	RIM_Hakon_Koen={
+		name="Hakon Koen"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Hakon_Koen
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	RIM_Oskard_Reger={
+		name="Oskard Reger"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Oskard_Reger
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	RIM_Matto_Stimm={
+		name="Matto Stimm"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Matto_Stimm
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	RIM_Rich_Glauss={
+		name="Rich Glauss"
+
+		
+		country_leader={
+			ideology=anti_revisionism
+			traits = { leftist_intellectual  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	RIM_Nielmut_Sagieber={
+		name="Nielmut Sagieber"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Nielmut_Sagieber
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Ansels_Toden={
+		name="Ansels Toden"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Ansels_Toden
+			traits = {	revolutionary_poet 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Stenrik_Glaft={
+		name="Stenrik Glaft"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Stenrik_Glaft
+			traits = {	indomitable_perseverance 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Bjorn_Brucht={
+		name="Bjorn Brucht"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Bjorn_Brucht
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Ansels_Steisen={
+		name="Ansels Steisen"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Ansels_Steisen
+			traits = {	reluctant_stalinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Leinrik_Golke={
+		name="Leinrik Golke"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Leinrik_Golke
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Leif_Geiselle={
+		name="Leif Geiselle"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Leif_Geiselle
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	RIM_Oskaranselm_Geiselle={
+		name="Oskaranselm Geiselle"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Oskaranselm_Geiselle
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	RIM_Eirich_Reger={
+		name="Eirich Reger"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Eirich_Reger
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	RIM_Thias_Lang={
+		name="Thias Lang"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Thias_Lang
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	RIM_Rudolkermanz_Bootte={
+		name="Rudolkermanz Bootte"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Rudolkermanz_Bootte
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	RIM_Leinrik_Nampel={
+		name="Leinrik Nampel"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Leinrik_Nampel
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	RIM_Stenderensel_Friebent={
+		name="Stenderensel Friebent"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Stenderensel_Friebent
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	RIM_Georg_Bott={
+		name="Georg Bott"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Georg_Bott
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	RIM_Hels_Erbe={
+		name="Hels Erbe"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Hels_Erbe
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	RIM_Emillem_Hiturg={
+		name="Emillem Hiturg"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Emillem_Hiturg
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	RIM_Ansels_Heichlaum={
+		name="Ansels Heichlaum"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Ansels_Heichlaum
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	RIM_Oskaranselm_Macht={
+		name="Oskaranselm Macht"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Oskaranselm_Macht
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	RIM_Heif_Waffe={
+		name="Heif Waffe"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Heif_Waffe
+			traits = {	air_close_air_support_1 	}
+		}
+
+
+	}
+	RIM_Knus_Gluch={
+		name="Knus Gluch"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Knus_Gluch
+			traits = {	navy_screen_2 	}
+		}
+
+
+	}
+	RIM_Knus_Bott={
+		name="Knus Bott"
+
+		
+		country_leader={
+			ideology=liberalism
+			traits = { rearmer  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	RIM_Sorne_Dieber={
+		name="Sorne Dieber"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Sorne_Dieber
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Sigurd_Bootte={
+		name="Sigurd Bootte"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Sigurd_Bootte
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Emil_Koen={
+		name="Emil Koen"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Emil_Koen
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	RIM_Knut_Kriedenigshe={
+		name="Knut Kriedenigshe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Knut_Kriedenigshe
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Sigurd_Waffe={
+		name="Sigurd Waffe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Sigurd_Waffe
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	RIM_Hann_Monne={
+		name="Hann Monne"
+
+		advisor={
+			slot = political_advisor
+			idea_token = RIM_Hann_Monne
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	RIM_Bjorn_Fross={
+		name="Bjorn Fross"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Bjorn_Fross
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	RIM_Richann_Dund={
+		name="Richann Dund"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Richann_Dund
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	RIM_Rolfrender_Sagieber={
+		name="Rolfrender Sagieber"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Rolfrender_Sagieber
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	RIM_Bers_Lager={
+		name="Bers Lager"
+
+		advisor={
+			slot = army_chief
+			idea_token = RIM_Bers_Lager
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	RIM_Magnut_Brucht={
+		name="Magnut Brucht"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Magnut_Brucht
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	RIM_Rudolkermanz_Hand={
+		name="Rudolkermanz Hand"
+
+		advisor={
+			slot = navy_chief
+			idea_token = RIM_Rudolkermanz_Hand
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	RIM_Bers_Helle={
+		name="Bers Helle"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Bers_Helle
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	RIM_Richann_Toden={
+		name="Richann Toden"
+
+		advisor={
+			slot = air_chief
+			idea_token = RIM_Richann_Toden
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	RIM_Hels_Friebent={
+		name="Hels Friebent"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Hels_Friebent
+			traits = {	navy_submarine_1 	}
+		}
+
+
+	}
+	RIM_Leif_Vorind={
+		name="Leif Vorind"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Leif_Vorind
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	RIM_Oskarl_Licht={
+		name="Oskarl Licht"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Oskarl_Licht
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	RIM_Eirich_Koenigshoffe={
+		name="Eirich Koenigshoffe"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Eirich_Koenigshoffe
+			traits = {	army_commando_1 	}
+		}
+
+
+	}
+	RIM_Oskarl_Gotter={
+		name="Oskarl Gotter"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Oskarl_Gotter
+			traits = {	navy_naval_air_defense_1 	}
+		}
+
+
+	}
+	RIM_Georg_Brucht={
+		name="Georg Brucht"
+
+		advisor={
+			slot = high_command
+			idea_token = RIM_Georg_Brucht
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	RIM_Dirk_Liesteuneer={
+		name="Dirk Liesteuneer"
+
+		advisor={
+			slot = theorist
+			idea_token = RIM_Dirk_Liesteuneer
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	RIM_Oskarl_Weitual={
+		name="Oskarl Weitual"
+
+		advisor={
+			slot = theorist
+			idea_token = RIM_Oskarl_Weitual
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	RIM_Vold_Krinzessindt={
+		name="Vold Krinzessindt"
+
+		advisor={
+			slot = theorist
+			idea_token = RIM_Vold_Krinzessindt
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

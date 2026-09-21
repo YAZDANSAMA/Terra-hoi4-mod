@@ -1,0 +1,7911 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = persian_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PER
+			has_dlc = "Graveyard of Empires"
+		} 
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 200 y = 2000 }
+
+	initial_show_position = {
+		x = 25
+		y = 0
+	}
+
+	shortcut = {
+		name = PER_navy_shortcut
+		target = PER_establish_the_navy
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+	shortcut = {
+		name = PER_air_shortcut
+		target = PER_establish_airforce
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+	shortcut = {
+		name = PER_army_shortcut
+		target = PER_restructure_army
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+	shortcut = {
+		name = PER_industry_shortcut
+		target = PER_modernizing_iran
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+	shortcut = {
+		name = PER_fight_for_iran_shortcut
+		target = PER_fight_for_iran
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+	shortcut = {
+		name = PER_neutral_shortcut
+		target = PER_the_pahlavi_imperium 
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+	shortcut = {
+		name = PER_democratic_shortcut
+		target = PER_rally_the_reformers
+		trigger = {
+		    has_dlc = "Graveyard of Empires"
+		}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_modernizing_iran
+		icon = GFX_focus_PER_modernizing_iran
+		x = 50
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		offset = {
+		    x = -50
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_legacy_of_greatness
+		    }
+		}
+
+		offset = {
+		    x = -50
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_stand_with_giants
+		    }
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_adult_literacy
+		icon = GFX_focus_generic_university_1
+		prerequisite = { focus = PER_modernizing_iran }
+		x = -8
+		y = 1
+		relative_position_id = PER_modernizing_iran
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_national_museum
+		icon = GFX_focus_PER_national_museum
+		prerequisite = { focus = PER_adult_literacy }
+		x = 0
+		y = 1
+		relative_position_id = PER_adult_literacy
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_university_of_isfahan
+		icon = GFX_focus_PER_university_of_isfahan
+		prerequisite = { focus = PER_national_museum }
+		x = -1
+		y = 1
+		relative_position_id = PER_national_museum
+		mutually_exclusive = { focus = PER_shiraz_university }
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_shiraz_university
+		icon = GFX_focus_PER_shiraz_university
+		prerequisite = { focus = PER_national_museum }
+		x = 1
+		y = 1
+		relative_position_id = PER_national_museum
+		mutually_exclusive = { focus = PER_university_of_isfahan }
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_educational_reforms
+		icon = GFX_focus_research
+		prerequisite = { focus = PER_university_of_isfahan focus = PER_shiraz_university }
+		x = 1
+		y = 1
+		relative_position_id = PER_university_of_isfahan
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_trans_iranian_railway
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = PER_modernizing_iran }
+		x = -3
+		y = 1
+		relative_position_id = PER_modernizing_iran
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_tabriz_masshad
+		icon = GFX_focus_PER_expand_tabriz_masshad
+		prerequisite = { focus = PER_trans_iranian_railway }
+		x = -2
+		y = 1
+		relative_position_id = PER_trans_iranian_railway
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_tehran_emam
+		icon = GFX_focus_PER_expand_tehran_emam
+		prerequisite = { focus = PER_trans_iranian_railway }
+		x = 0
+		y = 1
+		relative_position_id = PER_trans_iranian_railway
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_tehran_abbas
+		icon = GFX_focus_PER_expand_tehran_abbas
+		prerequisite = { focus = PER_trans_iranian_railway }
+		x = 2
+		y = 1
+		relative_position_id = PER_trans_iranian_railway
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+ 			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_trains_from_germany
+		icon = GFX_focus_generic_german_trade
+		prerequisite = { focus = PER_expand_tabriz_masshad focus = PER_expand_tehran_emam focus = PER_expand_tehran_abbas }
+		x = 1
+		y = 1
+		relative_position_id = PER_expand_tabriz_masshad
+		mutually_exclusive = { focus = PER_trains_from_britain }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_trains_from_britain
+		icon = GFX_focus_generic_british_trade
+		prerequisite = { focus = PER_expand_tabriz_masshad focus = PER_expand_tehran_emam focus = PER_expand_tehran_abbas }
+		x = -1
+		y = 1
+		relative_position_id = PER_expand_tehran_abbas
+		mutually_exclusive = { focus = PER_trains_from_germany }
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_feat_of_engineering
+		icon = GFX_focus_PER_feat_of_engineering
+		prerequisite = { focus = PER_trains_from_britain focus = PER_trains_from_germany }
+		x = 1
+		y = 1
+		relative_position_id = PER_trains_from_germany
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_white_revolution
+		icon = GFX_focus_PER_white_revolution
+		prerequisite = { focus = PER_modernizing_iran }
+		x = 3
+		y = 1
+		relative_position_id = PER_modernizing_iran
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_national_bank
+		icon = GFX_focus_PER_national_bank
+		prerequisite = { focus = PER_white_revolution }
+		x = 0
+		y = 1
+		relative_position_id = PER_white_revolution
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_price_stabilization
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = PER_national_bank }
+		x = -1
+		y = 1
+		relative_position_id = PER_national_bank
+		cost = 10
+		
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_abolish_feudalism
+		icon = GFX_focus_PER_abolish_feudalism
+		prerequisite = { focus = PER_national_bank }
+		x = 1
+		y = 1
+		relative_position_id = PER_national_bank
+		cost = 10
+	
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_women_vote
+		icon = GFX_focus_generic_universal_suffrage
+		prerequisite = { focus = PER_price_stabilization focus = PER_abolish_feudalism }
+		x = 0
+		y = 1
+		relative_position_id = PER_price_stabilization
+		cost = 5
+
+		available = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_food_for_all
+		icon = GFX_focus_generic_agricultural_subsidies
+		prerequisite = { focus = PER_price_stabilization focus = PER_abolish_feudalism }
+		x = 0
+		y = 1
+		relative_position_id = PER_abolish_feudalism
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_rapid_industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PER_modernizing_iran }
+		x = 7
+		y = 1
+		relative_position_id = PER_modernizing_iran
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_tehran_power_plant
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		prerequisite = { focus = PER_rapid_industrialization }
+		x = 0
+		y = 1
+		relative_position_id = PER_rapid_industrialization
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_develop_cities
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = PER_tehran_power_plant }
+		x = 0
+		y = 1
+		relative_position_id = PER_tehran_power_plant
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_metropolitan_iran
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = PER_develop_cities }
+		x = 0
+		y = 1
+		relative_position_id = PER_develop_cities
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_develop_oil_fields
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = PER_rapid_industrialization }
+		x = 3
+		y = 1
+		relative_position_id = PER_rapid_industrialization
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_form_oil_company
+		icon = GFX_focus_PER_form_oil_company
+		prerequisite = { focus = PER_develop_oil_fields }
+		x = 0
+		y = 1
+		relative_position_id = PER_develop_oil_fields
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_oil_baron
+		icon = GFX_focus_PER_oil_baron
+		prerequisite = { focus = PER_form_oil_company }
+		x = -1
+		y = 1
+		relative_position_id = PER_form_oil_company
+		mutually_exclusive = { focus = PER_profit_from_war }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_profit_from_war
+		icon = GFX_focus_SWI_issue_war_bonds
+		prerequisite = { focus = PER_form_oil_company }
+		x = 1
+		y = 1
+		relative_position_id = PER_form_oil_company
+		mutually_exclusive = { focus = PER_oil_baron }
+		cost = 5
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_a_modern_iran
+		icon = GFX_focus_AFG_a_modern_economy
+		prerequisite = { focus = PER_profit_from_war focus = PER_oil_baron}
+		prerequisite = { focus = PER_metropolitan_iran }
+		prerequisite = { focus = PER_food_for_all }
+		prerequisite = { focus = PER_women_vote }
+		prerequisite = { focus = PER_feat_of_engineering }
+		prerequisite = { focus = PER_educational_reforms }
+
+		x = 0
+		y = 6
+		relative_position_id = PER_modernizing_iran
+		cost = 5
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_restructure_army
+		icon = GFX_focus_PER_restructure_army
+		x = 29
+		y = 0
+		relative_position_id = PER_modernizing_iran
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+}
+
+	focus = { 
+		id = PER_expand_imperial_guard
+		icon = GFX_focus_PER_expand_imperial_guard
+		prerequisite = { focus = PER_restructure_army }
+		x = -6
+		y = 1
+		relative_position_id = PER_restructure_army
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+}
+	
+
+	focus = { 
+		id = PER_expand_military_facilities
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = PER_restructure_army }
+		x = -3
+		y = 1
+		relative_position_id = PER_restructure_army
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_czech_tanks
+		icon = GFX_focus_PER_czech_tanks
+		prerequisite = { focus = PER_expand_military_facilities }
+		x = -1
+		y = 1
+		relative_position_id = PER_expand_military_facilities
+		mutually_exclusive = { focus = PER_german_tanks }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_german_tanks
+		icon = GFX_focus_BRA_acquire_german_tanks
+		prerequisite = { focus = PER_expand_military_facilities }
+		x = 1
+		y = 1
+		relative_position_id = PER_expand_military_facilities
+		mutually_exclusive = { focus = PER_czech_tanks }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_future_of_war
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = PER_german_tanks focus = PER_czech_tanks }
+		x = 1
+		y = 1
+		relative_position_id = PER_czech_tanks
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_reverse_engineer_tanks
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = PER_german_tanks focus = PER_czech_tanks }
+		x = -1
+		y = 1
+		relative_position_id = PER_czech_tanks
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_establish_tehran_armor
+		icon = GFX_focus_PER_establish_tehran_armor
+		prerequisite = { focus = PER_reverse_engineer_tanks }
+		x = 0
+		y = 1
+		relative_position_id = PER_reverse_engineer_tanks
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_tehran_armor
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PER_establish_tehran_armor }
+		x = 0
+		y = 1
+		relative_position_id = PER_establish_tehran_armor
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_train_tank_commanders
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		prerequisite = { focus = PER_future_of_war }
+		x = 0
+		y = 2
+		relative_position_id = PER_future_of_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_foreign_retraining
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = PER_restructure_army }
+		x = 3
+		y = 1
+		relative_position_id = PER_restructure_army
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_bolster_infantry
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PER_foreign_retraining }
+		x = -1
+		y = 1
+		relative_position_id = PER_foreign_retraining
+		mutually_exclusive = { focus = PER_swedish_artillery }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_establish_motor_arms
+		icon = GFX_focus_generic_truck
+		prerequisite = { focus = PER_bolster_infantry }
+		x = -1
+		y = 1
+		relative_position_id = PER_bolster_infantry
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_motorize_infantry
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = PER_establish_motor_arms }
+		x = 0
+		y = 1
+		relative_position_id = PER_establish_motor_arms
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_swedish_artillery
+		icon = GFX_focus_PER_swedish_artillery
+		prerequisite = { focus = PER_foreign_retraining }
+		x = 1
+		y = 1
+		relative_position_id = PER_foreign_retraining
+		mutually_exclusive = { focus = PER_bolster_infantry }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_increase_heavy_arms
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = PER_swedish_artillery }
+		x = 1
+		y = 1
+		relative_position_id = PER_swedish_artillery
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_our_own_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = PER_increase_heavy_arms }
+		x = 0
+		y = 1
+		relative_position_id = PER_increase_heavy_arms
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_develop_qorkhaneh
+		icon = GFX_focus_PER_develop_qorkhaneh
+		prerequisite = { focus = PER_bolster_infantry focus = PER_swedish_artillery }
+		x = 1
+		y = 1
+		relative_position_id = PER_bolster_infantry
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_desert_training
+		icon = GFX_focus_PER_desert_training
+		prerequisite = { focus = PER_develop_qorkhaneh }
+		x = 0
+		y = 2
+		relative_position_id = PER_develop_qorkhaneh
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_every_man_serves
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = PER_desert_training focus = PER_train_tank_commanders }
+		x = -1
+		y = 1
+		relative_position_id = PER_desert_training
+		mutually_exclusive = { focus = PER_military_excellency }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_military_excellency
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = PER_desert_training focus = PER_train_tank_commanders }
+		x = 1
+		y = 1
+		relative_position_id = PER_train_tank_commanders
+		mutually_exclusive = { focus = PER_every_man_serves }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_special_units
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = PER_restructure_army }
+		x = 11
+		y = 1
+		relative_position_id = PER_restructure_army
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_form_savak
+		icon = GFX_focus_PER_form_savak
+		prerequisite = { focus = PER_special_units }
+		x = -2
+		y = 1
+		relative_position_id = PER_special_units
+		cost = 5
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fund_state_intelligence
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = PER_form_savak }
+		x = 0
+		y = 1
+		relative_position_id = PER_form_savak
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_transfer_officers_to_intelligence
+		icon = GFX_focus_SWI_embrace_rote_drei
+		prerequisite = { focus = PER_form_savak }
+		x = -2
+		y = 1
+		relative_position_id = PER_form_savak
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_special_forces_program
+		icon = GFX_focus_PER_special_forces_program
+		prerequisite = { focus = PER_special_units }
+		x = 2
+		y = 1
+		relative_position_id = PER_special_units
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_recruit_bakhtiari
+		icon = GFX_focus_PER_recruit_bakhtiari
+		prerequisite = { focus = PER_special_forces_program }
+		x = 0
+		y = 1
+		relative_position_id = PER_special_forces_program
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_unique_unit
+		icon = GFX_focus_PER_expand_unique_unit
+		prerequisite = { focus = PER_special_forces_program }
+		x = 2
+		y = 1
+		relative_position_id = PER_special_forces_program
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_import_rocketry
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = PER_special_units }
+		x = 0
+		y = 3
+		relative_position_id = PER_special_units
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_cyrus_initiative
+		icon = GFX_focus_PER_cyrus_initiative
+		prerequisite = { focus = PER_import_rocketry }
+		x = -2
+		y = 1
+		relative_position_id = PER_import_rocketry
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_negotiate_with_america
+		icon = GFX_focus_generic_befriend_usa
+		prerequisite = { focus = PER_import_rocketry }
+		prerequisite = { focus = PER_strategic_bombing }
+		x = 2
+		y = 1
+		relative_position_id = PER_import_rocketry
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_establish_nuclear_program
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = PER_negotiate_with_america }
+		x = 0
+		y = 1
+		relative_position_id = PER_negotiate_with_america
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_establish_airforce
+		icon = GFX_focus_PER_establish_airforce
+		x = 51
+		y = 0
+		relative_position_id = PER_modernizing_iran
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_pilot_training
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = PER_establish_airforce }
+		x = -3
+		y = 1
+		relative_position_id = PER_establish_airforce
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_raf_planes
+		icon = GFX_focus_PER_raf_planes
+		prerequisite = { focus = PER_pilot_training }
+		x = -1
+		y = 1
+		relative_position_id = PER_pilot_training
+		mutually_exclusive = { focus = PER_luftwaffe_planes }
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {}	
+	}
+
+	focus = { 
+		id = PER_luftwaffe_planes
+		icon = GFX_focus_PER_luftwaffe_planes
+		prerequisite = { focus = PER_pilot_training }
+		x = 1
+		y = 1
+		relative_position_id = PER_pilot_training
+		mutually_exclusive = { focus = PER_raf_planes }
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNATIONAL_TRADE
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_establish_air_academy
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = PER_luftwaffe_planes focus = PER_raf_planes }
+		x = 1
+		y = 1
+		relative_position_id = PER_raf_planes
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_own_plane_designs
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = PER_luftwaffe_planes focus = PER_raf_planes }
+		x = 1
+		y = 1
+		relative_position_id = PER_luftwaffe_planes
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_strategic_bombing
+		icon = GFX_focus_SWE_marauder_bombers
+		prerequisite = {  focus = PER_establish_air_academy }
+		x = 0
+		y = 1
+		relative_position_id = PER_establish_air_academy
+		mutually_exclusive = { focus = PER_battlefield_support focus = PER_air_superiority }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_legacy_of_gilani
+		icon = GFX_focus_PER_legacy_of_gilani
+		prerequisite = { focus = PER_establish_air_academy }
+		x = -2
+		y = 1
+		relative_position_id = PER_establish_air_academy
+		cost = 5
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_construct_air_bases
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = PER_establish_airforce }
+		x = 3
+		y = 1
+		relative_position_id = PER_establish_airforce
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_anti_air_development
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = PER_anti_air_research }
+		x = 0
+		y = 2
+		relative_position_id = PER_construct_air_bases
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_anti_air_research
+		icon = GFX_focus_SWE_let_fly_all_guns
+		prerequisite = { focus = PER_construct_air_bases }
+		x = 0
+		y = 1
+		relative_position_id = PER_construct_air_bases
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_air_superiority
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = PER_establish_air_academy focus = PER_anti_air_development }
+		x = 0
+		y = 2
+		relative_position_id = PER_anti_air_research
+		mutually_exclusive = { focus = PER_battlefield_support focus = PER_strategic_bombing }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_battlefield_support
+		icon = GFX_focus_generic_cas_aircraft
+		prerequisite = { focus = PER_establish_air_academy }
+		x = -3
+		y = 2
+		relative_position_id = PER_anti_air_research
+		mutually_exclusive = { focus = PER_strategic_bombing focus = PER_air_superiority }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_perfect_iranian_airforce
+		icon = GFX_focus_PER_perfect_iranian_airforce
+		prerequisite = { focus = PER_air_superiority focus = PER_strategic_bombing focus = PER_battlefield_support}
+		x = 0
+		y = 1
+		relative_position_id = PER_battlefield_support
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_establish_the_navy
+		icon = GFX_focus_PER_establish_the_navy
+		x = 59
+		y = 0
+		relative_position_id = PER_modernizing_iran
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				any_controlled_state = {
+					is_coastal = no
+				}
+				factor = 0	
+			}
+		}
+
+		available = {}
+
+		search_filters = {
+			FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_officers_to_italy
+		icon = GFX_focus_generic_naval_discipline
+		prerequisite = { focus = PER_establish_the_navy }
+		x = -2
+		y = 1
+		relative_position_id = PER_establish_the_navy
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_persian_gulf_fleet
+		icon = GFX_focus_PER_persian_gulf_fleet
+		prerequisite = { focus = PER_officers_to_italy focus = PER_construct_naval_bases }
+		x = 1
+		y = 1
+		relative_position_id = PER_officers_to_italy
+		mutually_exclusive = { focus = PER_bolster_the_caspian }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_construct_naval_bases
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = PER_establish_the_navy }
+		x = 2
+		y = 1
+		relative_position_id = PER_establish_the_navy
+		cost = 10
+		
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_coastal_defense_initiative
+		icon = GFX_focus_FIN_coastal_defense
+		prerequisite = { focus = PER_construct_naval_bases }
+		x = 1
+		y = 1
+		relative_position_id = PER_construct_naval_bases
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_bolster_the_caspian
+		icon = GFX_focus_PER_bolster_the_caspian
+		prerequisite = { focus = PER_construct_naval_bases focus = PER_officers_to_italy }
+		x = -1
+		y = 1
+		relative_position_id = PER_construct_naval_bases
+		mutually_exclusive = { focus = PER_persian_gulf_fleet }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_NAVY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_purchase_foreign_ships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = PER_bolster_the_caspian focus = PER_persian_gulf_fleet }
+		x = 1
+		y = 1
+		relative_position_id = PER_persian_gulf_fleet
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_found_iranian_shipyards
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = PER_purchase_foreign_ships }
+		x = 0
+		y = 1
+		relative_position_id = PER_purchase_foreign_ships
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_dockyards
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = PER_found_iranian_shipyards }
+		x = 0
+		y = 1
+		relative_position_id = PER_found_iranian_shipyards
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_merchant_navy
+		icon = GFX_focus_generic_merchant_fleet
+		prerequisite = { focus = PER_expand_dockyards }
+		x = -2
+		y = 1
+		relative_position_id = PER_expand_dockyards
+		mutually_exclusive = { focus = PER_expert_raiders }
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_NAVY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expert_raiders
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = PER_expand_dockyards }
+		x = 2
+		y = 1
+		relative_position_id = PER_expand_dockyards
+		mutually_exclusive = { focus = PER_merchant_navy }
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_the_pahlavi_imperium
+		icon = GFX_focus_PER_the_pahlavi_imperium
+		x = -35
+		y = 0
+		relative_position_id = PER_modernizing_iran
+		mutually_exclusive = { focus = PER_rally_the_reformers }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_rally_the_reformers
+				}
+			}
+		}
+
+		offset = {
+		    x = 8
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_legacy_of_greatness
+		    }
+		}
+
+		offset = {
+		    x = 18
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_stand_with_giants
+		    }
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_HISTORICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_stand_with_giants
+		icon = GFX_focus_PER_stand_with_giants
+		prerequisite = { focus = PER_the_pahlavi_imperium }
+		x = -6
+		y = 1
+		relative_position_id = PER_the_pahlavi_imperium
+		mutually_exclusive = { focus = PER_legacy_of_greatness }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_legacy_of_greatness
+					has_completed_focus = PER_rally_the_reformers
+				}
+			}
+		}
+
+		offset = {
+		    x = 6
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_stand_with_giants
+		    }
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_forced_secularization
+		icon = GFX_focus_PER_forced_secularization
+		prerequisite = { focus = PER_stand_with_giants focus = PER_legacy_of_greatness }
+		x = 0
+		y = 2
+		relative_position_id = PER_the_pahlavi_imperium
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		offset = {
+		    x = -4
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_legacy_of_greatness
+		    }
+		}
+
+		offset = {
+		    x = 5
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_stand_with_giants
+		    }
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_increase_education_funding
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = PER_stand_with_giants }
+		x = -5
+		y = 1
+		relative_position_id = PER_stand_with_giants
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_open_abadan
+		icon = GFX_focus_research
+		prerequisite = { focus = PER_increase_education_funding }
+		x = 0
+		y = 1
+		relative_position_id = PER_increase_education_funding
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_trial_fifty_three
+		icon = GFX_focus_GER_end_european_communism
+		prerequisite = { focus = PER_stand_with_giants }
+		x = -3
+		y = 1
+		relative_position_id = PER_stand_with_giants
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_persian_german_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = PER_stand_with_giants }
+		x = -1
+		y = 1
+		relative_position_id = PER_stand_with_giants
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_increase_military_funding
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = PER_stand_with_giants }
+		x = 1
+		y = 1
+		relative_position_id = PER_stand_with_giants
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_royal_visit_germany
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = PER_persian_german_trade }
+		x = 0
+		y = 1
+		relative_position_id = PER_persian_german_trade
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_military_high_schools
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = PER_increase_military_funding }
+		x = 0
+		y = 1
+		relative_position_id = PER_increase_military_funding
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_wether_the_storm
+		icon = GFX_focus_PER_wether_the_storm
+		prerequisite = { focus = PER_royal_visit_germany focus = PER_military_high_schools }
+		x = 1
+		y = 2
+		relative_position_id = PER_royal_visit_germany
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_question_of_resources
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = PER_wether_the_storm }
+		x = -2
+		y = 1
+		relative_position_id = PER_wether_the_storm
+		mutually_exclusive = { focus = PER_stand_our_ground }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_prepare_for_worst
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = PER_question_of_resources }
+		x = 1
+		y = 1
+		relative_position_id = PER_question_of_resources
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_plant_resistance_cells
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = PER_question_of_resources }
+		x = -1
+		y = 1
+		relative_position_id = PER_question_of_resources
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_preemptive_strike
+		icon = GFX_focus_generic_total_war
+		prerequisite = { focus = PER_plant_resistance_cells focus = PER_prepare_for_worst }
+		x = 1
+		y = 1
+		relative_position_id = PER_plant_resistance_cells
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+		}
+
+	focus = { 
+		id = PER_establish_northern_buffer_states
+		icon = GFX_focus_PER_establish_northern_buffer_states
+		prerequisite = { focus = PER_preemptive_strike }
+		x = 0
+		y = 1
+		relative_position_id = PER_preemptive_strike
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_stand_our_ground
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PER_wether_the_storm }
+		x = 2
+		y = 1
+		relative_position_id = PER_wether_the_storm
+		mutually_exclusive = { focus = PER_question_of_resources }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_bolster_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PER_stand_our_ground }
+		x = -1
+		y = 1
+		relative_position_id = PER_stand_our_ground
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_upscale_military_production
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PER_stand_our_ground }
+		x = 1
+		y = 1
+		relative_position_id = PER_stand_our_ground
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_preparatory_mobilization
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = PER_upscale_military_production focus = PER_bolster_civilian_industry }
+		x = 1
+		y = 1
+		relative_position_id = PER_bolster_civilian_industry
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_we_will_survive
+		icon = GFX_focus_PER_we_will_survive
+		prerequisite = { focus = PER_preparatory_mobilization }
+		x = 0
+		y = 1
+		relative_position_id = PER_preparatory_mobilization
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = { 
+		id = PER_we_survived
+		icon = GFX_focus_PER_iran_for_iranians
+		prerequisite = { focus = PER_we_will_survive focus = PER_establish_northern_buffer_states }
+		x = -2
+		y = 1
+		relative_position_id = PER_we_will_survive
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	shared_focus = SSB_the_saadabad_pact
+
+	
+	
+	
+
+	focus = { 
+		id = PER_fight_for_iran
+		icon = GFX_focus_PER_fight_for_iran
+		x = -52
+		y = 1
+		relative_position_id = PER_modernizing_iran
+		cost = 0
+		
+		available = {}
+
+		cancel_if_invalid = yes
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+        offset = {
+            x = 11
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = PER_rally_the_reformers
+            }
+        }
+
+        offset = {
+            x = 13
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                OR = {
+                	has_completed_focus = PER_rally_behind_mosaddegh
+                	has_completed_focus = PER_iranian_culture
+                	has_completed_focus = PER_united_progressive_parties
+                }
+            }
+        }
+
+        offset = {
+            x = 15
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = PER_legacy_of_greatness
+            }
+        }
+
+        offset = {
+            x = 23
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = PER_stand_with_giants
+            }
+        }
+
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_force_them_back
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = -2
+		y = 1
+		prerequisite = { focus = PER_fight_for_iran }
+		mutually_exclusive =  { focus = PER_dig_and_defend }
+		relative_position_id = PER_fight_for_iran
+		cost = 5
+		
+		available = {}
+
+		cancel_if_invalid = yes
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = PER_dig_and_defend }
+				
+			}
+		}
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PER_force_them_back 
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_dig_and_defend
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 2
+		y = 1
+		prerequisite = { focus = PER_fight_for_iran }
+		mutually_exclusive =  { focus = PER_force_them_back }
+		relative_position_id = PER_fight_for_iran
+		cost = 5
+		
+		available = {}
+
+		cancel_if_invalid = yes
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = PER_force_them_back }
+				
+			}
+		}
+
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PER_dig_and_defend
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_push_to_deserts
+		icon = GFX_focus_PER_push_to_deserts
+		x = -1
+		y = 1
+		prerequisite = { focus = PER_force_them_back }
+		mutually_exclusive = { focus = PER_push_to_mountains }
+		relative_position_id = PER_force_them_back
+		cost = 5
+		
+		available = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_push_to_mountains
+		icon = GFX_focus_PER_push_to_mountains
+		x = 1
+		y = 1
+		prerequisite = { focus = PER_force_them_back }
+		mutually_exclusive = { focus = PER_push_to_deserts }
+		relative_position_id = PER_force_them_back
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_capital_protect
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		prerequisite = { focus = PER_dig_and_defend }
+		mutually_exclusive = { focus = PER_secure_coastline }
+		relative_position_id = PER_dig_and_defend
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_secure_coastline
+		icon = GFX_focus_FIN_coastal_defense
+		x = 1
+		y = 1
+		prerequisite = { focus = PER_dig_and_defend }
+		mutually_exclusive = { focus = PER_capital_protect }
+		relative_position_id = PER_dig_and_defend
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_demand_war_reparations
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		prerequisite = { focus = PER_push_to_deserts focus = PER_push_to_mountains }
+		mutually_exclusive = { focus = PER_force_white_peace }
+		relative_position_id = PER_push_to_deserts
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_force_white_peace
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 1
+		prerequisite = { focus = PER_push_to_deserts focus = PER_push_to_mountains }
+		mutually_exclusive = { focus = PER_demand_war_reparations }
+		relative_position_id = PER_push_to_deserts
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_swear_fealty
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 1
+		prerequisite = { focus = PER_capital_protect focus = PER_secure_coastline }
+		mutually_exclusive = { focus = PER_push_negotiations }
+		relative_position_id = PER_capital_protect
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		available_if_capitulated = yes 
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_push_negotiations
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus = PER_capital_protect focus = PER_secure_coastline }
+		mutually_exclusive = { focus = PER_swear_fealty }
+		relative_position_id = PER_capital_protect
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 20
+				surrender_progress > 0.05
+			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_rebuilding_iran
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PER_swear_fealty }
+		x = 0
+		y = 1
+		relative_position_id = PER_swear_fealty
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				OR = {
+					PER = {
+						is_subject = yes
+					}
+					has_completed_focus = PER_rebuilding_iran
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_declare_loyalty_to_britain
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = PER_rebuilding_iran }
+		x = -2
+		y = 1
+		relative_position_id = PER_rebuilding_iran
+		mutually_exclusive = { focus = PER_azadi }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_reinstate_qajars
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = PER_declare_loyalty_to_britain }
+		x = -3
+		y = 1
+		relative_position_id = PER_declare_loyalty_to_britain
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			OR = {
+				PER = {
+					is_subject_of = ENG
+				}
+				has_completed_focus = PER_reinstate_qajars
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_invite_british_investors
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = PER_declare_loyalty_to_britain }
+		x = -1
+		y = 1
+		relative_position_id = PER_declare_loyalty_to_britain
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_request_british_equipment
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = PER_declare_loyalty_to_britain }
+		x = 1
+		y = 1
+		relative_position_id = PER_declare_loyalty_to_britain
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_our_place_in_empire
+		icon = GFX_focus_PER_our_place_in_empire
+		prerequisite = { focus = PER_request_british_equipment focus = PER_invite_british_investors }
+		x = 1
+		y = 1
+		relative_position_id = PER_invite_british_investors
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_retake_north_iran
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = PER_our_place_in_empire focus = PER_iran_for_iranians }
+		x = 1
+		y = 1
+		relative_position_id = PER_our_place_in_empire
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
+			has_completed_focus = PER_swear_fealty
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_azadi
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = PER_rebuilding_iran }
+		x = 2
+		y = 1
+		relative_position_id = PER_rebuilding_iran
+		mutually_exclusive = { focus = PER_declare_loyalty_to_britain }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 95
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_reinforce_iranian_identity
+		icon = GFX_focus_PER_reinforce_iranian_identity
+		prerequisite = { focus = PER_azadi }
+		x = -1
+		y = 1
+		relative_position_id = PER_azadi
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_rally_bakhtiari_and_qashqai
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = PER_azadi }
+		x = 1
+		y = 1
+		relative_position_id = PER_azadi
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_iran_for_iranians
+		icon = GFX_focus_PER_iran_for_iranians
+		prerequisite = { focus = PER_rally_bakhtiari_and_qashqai focus = PER_reinforce_iranian_identity }
+		x = 1
+		y = 1
+		relative_position_id = PER_reinforce_iranian_identity
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_consolidate_british_territory
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = PER_iran_for_iranians }
+		x = -1
+		y = 1
+		relative_position_id = PER_iran_for_iranians
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
+			has_completed_focus = PER_swear_fealty
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_legacy_of_greatness
+		icon = GFX_focus_PER_legacy_of_greatness
+		prerequisite = { focus = PER_the_pahlavi_imperium }
+		x = 6
+		y = 1
+		relative_position_id = PER_the_pahlavi_imperium
+		mutually_exclusive = { focus = PER_stand_with_giants }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = PER_stand_with_giants }
+				NOT = { has_completed_focus = PER_rally_the_reformers }
+			}
+		}
+
+		offset = {
+		    x = -6
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_legacy_of_greatness
+		    }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_assassinate_reza_shah
+		icon = GFX_focus_PER_assassinate_reza_shah
+		prerequisite = { focus = PER_legacy_of_greatness }
+		x = -1
+		y = 1
+		relative_position_id = PER_legacy_of_greatness
+		mutually_exclusive = { focus = PER_root_out_conspiracies }
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_root_out_conspiracies
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = PER_legacy_of_greatness }
+		x = 1
+		y = 1
+		relative_position_id = PER_legacy_of_greatness
+		mutually_exclusive = { focus = PER_assassinate_reza_shah }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_his_fathers_footsteps
+		icon = GFX_focus_PER_his_fathers_footsteps
+		prerequisite = { focus = PER_assassinate_reza_shah }
+		x = 0
+		y = 1
+		relative_position_id = PER_assassinate_reza_shah
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_third_persian_empire
+		icon = GFX_focus_PER_third_persian_empire
+		prerequisite = { focus = PER_his_fathers_footsteps }
+		x = 0
+		y = 1
+		relative_position_id = PER_his_fathers_footsteps
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_choose_a_shahbanu
+		icon = GFX_focus_PER_choose_a_shahbanu
+		prerequisite = { focus = PER_third_persian_empire }
+		x = -2
+		y = 1
+		relative_position_id = PER_third_persian_empire
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_embrace_opulence
+		icon = GFX_focus_PER_embrace_opulence
+		prerequisite = { focus = PER_choose_a_shahbanu }
+		x = -1
+		y = 1
+		relative_position_id = PER_choose_a_shahbanu
+		mutually_exclusive = { focus = PER_emperor_for_people }
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_emperor_for_people
+		icon = GFX_focus_PER_emperor_for_people
+		prerequisite = { focus = PER_choose_a_shahbanu }
+		x = 1
+		y = 1
+		relative_position_id = PER_choose_a_shahbanu
+		mutually_exclusive = { focus = PER_embrace_opulence }
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fund_imperial_excellency
+		icon = GFX_focus_PER_fund_imperial_excellency
+		prerequisite = { focus = PER_embrace_opulence }
+		x = 0
+		y = 1
+		relative_position_id = PER_embrace_opulence
+		cost = 5
+
+		available = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_uphold_civil_rights
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = PER_emperor_for_people }
+		x = 0
+		y = 1
+		relative_position_id = PER_emperor_for_people
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_absolute_monarchy
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = PER_root_out_conspiracies }
+		x = 0
+		y = 1
+		relative_position_id = PER_root_out_conspiracies
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_first_iranian_empire
+		icon = GFX_focus_PER_first_iranian_empire
+		prerequisite = { focus = PER_absolute_monarchy }
+		x = 0
+		y = 1
+		relative_position_id = PER_absolute_monarchy
+		cost = 5
+		
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_take_regional_tour
+		icon = GFX_focus_PER_take_regional_tour
+		prerequisite = { focus = PER_first_iranian_empire }
+		x = 2
+		y = 1
+		relative_position_id = PER_first_iranian_empire
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_limit_foreign_influence
+		icon = GFX_focus_PER_limit_foreign_influence
+		prerequisite = { focus = PER_take_regional_tour }
+		x = -1
+		y = 1
+		relative_position_id = PER_take_regional_tour
+		mutually_exclusive = { focus = PER_embrace_industrial_powers }
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_embrace_industrial_powers
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		prerequisite = { focus = PER_take_regional_tour }
+		x = 1
+		y = 1
+		relative_position_id = PER_take_regional_tour
+		mutually_exclusive = { focus = PER_limit_foreign_influence }
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_subserviant_to_noone
+		icon = GFX_focus_PER_subserviant_to_noone
+		prerequisite = { focus = PER_limit_foreign_influence }
+		x = 0
+		y = 1
+		relative_position_id = PER_limit_foreign_influence
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_modernize_iran_economy
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = PER_embrace_industrial_powers }
+		x = 0
+		y = 1
+		relative_position_id = PER_embrace_industrial_powers
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_last_thousand_years
+		icon = GFX_focus_PER_last_thousand_years
+		prerequisite = { focus = PER_subserviant_to_noone focus = PER_fund_imperial_excellency focus = PER_uphold_civil_rights focus = PER_modernize_iran_economy }
+		x = -2
+		y = 2
+		relative_position_id = PER_subserviant_to_noone
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_shahanshah
+		icon = GFX_focus_PER_shahanshah
+		prerequisite = { focus = PER_third_persian_empire focus = PER_first_iranian_empire }
+		x = 1
+		y = 1
+		relative_position_id = PER_third_persian_empire
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_rally_ancient_history
+		icon = GFX_focus_PER_rally_ancient_history
+		prerequisite = { focus = PER_shahanshah }
+		x = 0
+		y = 1
+		relative_position_id = PER_shahanshah
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_rebuild_persepolis
+		icon = GFX_focus_PER_rebuild_persepolis
+		prerequisite = { focus = PER_rally_ancient_history }
+		x = 0
+		y = 1
+		relative_position_id = PER_rally_ancient_history
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_imperial_funded_universities
+		icon = GFX_focus_PER_imperial_funded_universities
+		prerequisite = { focus = PER_legacy_of_greatness }
+		x = 5
+		y = 1
+		relative_position_id = PER_legacy_of_greatness
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_assessing_the_opposition
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = PER_legacy_of_greatness }
+		x = 10
+		y = 1
+		relative_position_id = PER_legacy_of_greatness
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_the_unification_initiative
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = PER_assessing_the_opposition }
+		x = -2
+		y = 1
+		relative_position_id = PER_assessing_the_opposition
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_clamp_kurdish_dissidence
+		icon = GFX_focus_PER_clamp_kurdish_dissidence
+		prerequisite = { focus = PER_the_unification_initiative }
+		x = -1
+		y = 1
+		relative_position_id = PER_the_unification_initiative
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_clamp_azerbaijani_dissidence
+		icon = GFX_focus_PER_clamp_azerbaijani_dissidence
+		prerequisite = { focus = PER_the_unification_initiative }
+		x = 1
+		y = 1
+		relative_position_id = PER_the_unification_initiative
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_state_atheism
+		icon = GFX_focus_PER_state_atheism
+		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
+		x = 1
+		y = 1
+		relative_position_id = PER_clamp_kurdish_dissidence
+		mutually_exclusive = { focus = PER_venerate_islam focus = PER_revive_old_ways }
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {}
+
+		search_filters = { 
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_venerate_islam
+		icon = GFX_focus_TUR_turanist_ambition
+		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
+		x = -1
+		y = 1
+		relative_position_id = PER_clamp_kurdish_dissidence
+		mutually_exclusive = { focus = PER_state_atheism focus = PER_revive_old_ways }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {}
+
+		search_filters = {
+			FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_revive_old_ways
+		icon = GFX_focus_PER_revive_old_ways
+		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
+		x = 3
+		y = 1
+		relative_position_id = PER_clamp_kurdish_dissidence
+		mutually_exclusive = { focus = PER_state_atheism focus = PER_venerate_islam }
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_imperial_expansionism
+		icon = GFX_focus_PER_imperial_expansionism
+		prerequisite = { focus = PER_assessing_the_opposition }
+		x = 4
+		y = 1
+		relative_position_id = PER_assessing_the_opposition
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_tehran_moscow_pact
+		icon = GFX_focus_PER_tehran_moscow_pact
+		prerequisite = { focus = PER_imperial_expansionism }
+		x = 0
+		y = 1
+		relative_position_id = PER_imperial_expansionism
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_establish_special_unit
+		icon = GFX_focus_PER_establish_special_unit
+		prerequisite = { focus = PER_imperial_expansionism }
+		x = 2
+		y = 1
+		relative_position_id = PER_imperial_expansionism
+		cost = 5
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_demand_iraqi_territory
+		icon = GFX_focus_PER_demand_iraqi_territory
+		prerequisite = { focus = PER_tehran_moscow_pact }
+		x = -1
+		y = 2
+		relative_position_id = PER_tehran_moscow_pact
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_demand_afghan_territory
+		icon = GFX_focus_PER_demand_afghan_territory
+		prerequisite = { focus = PER_tehran_moscow_pact }
+		x = 1
+		y = 2
+		relative_position_id = PER_tehran_moscow_pact
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_war_plan_darius
+		icon = GFX_focus_PER_war_plan_darius
+		prerequisite = { focus = PER_demand_iraqi_territory }
+		prerequisite = { focus = PER_demand_afghan_territory }
+		x = 1
+		y = 1
+		relative_position_id = PER_demand_iraqi_territory
+		cost = 5
+		
+		available = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_foothold_in_indus
+		icon = GFX_focus_PER_foothold_in_indus
+		prerequisite = { focus = PER_war_plan_darius }
+		x = -1
+		y = 1
+		relative_position_id = PER_war_plan_darius
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_usurp_afghanistan
+		icon = GFX_focus_PER_usurp_afghanistan
+		prerequisite = { focus = PER_war_plan_darius }
+		x = 1
+		y = 1
+		relative_position_id = PER_war_plan_darius
+		cost = 5
+		will_lead_to_war_with = AFG
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_invasion_of_india
+		icon = GFX_focus_attack_india
+		prerequisite = { focus = PER_foothold_in_indus }
+		prerequisite = { focus = PER_usurp_afghanistan }
+		x = 1
+		y = 1
+		relative_position_id = PER_foothold_in_indus
+		cost = 5
+		will_lead_to_war_with = RAJ
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_glory_of_cyrus
+		icon = GFX_focus_PER_glory_of_cyrus
+		prerequisite = { focus = PER_invasion_of_india }
+		prerequisite = { focus = PER_reintegrate_anatolia }
+		prerequisite = { focus = PER_march_to_nile }
+		x = 0
+		y = 2
+		relative_position_id = PER_invasion_of_india
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_war_plan_xerxes
+		icon = GFX_focus_PER_war_plan_xerxes
+		prerequisite = { focus = PER_demand_iraqi_territory }
+		prerequisite = { focus = PER_demand_afghan_territory }
+		x = -2
+		y = 1
+		relative_position_id = PER_demand_iraqi_territory
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_reclaim_turkish_peninsula
+		icon = GFX_focus_generic_attack_turkey
+		prerequisite = { focus = PER_war_plan_xerxes }
+		x = 0
+		y = 1
+		relative_position_id = PER_war_plan_xerxes
+		cost = 5
+		will_lead_to_war_with = TUR
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_reintegrate_anatolia
+		icon = GFX_focus_PER_reintegrate_anatolia
+		prerequisite = { focus = PER_reclaim_turkish_peninsula }
+		x = 0
+		y = 1
+		relative_position_id = PER_reclaim_turkish_peninsula
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_clash_of_titans
+		icon = GFX_focus_PER_clash_of_titans
+		prerequisite = { focus = PER_reclaim_turkish_peninsula }
+		x = -2
+		y = 1
+		relative_position_id = PER_reclaim_turkish_peninsula
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		will_lead_to_war_with = GRE 
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_absorb_byzantines
+		icon = GFX_focus_PER_absorb_byzantines
+		prerequisite = { focus = PER_clash_of_titans }
+		x = 0
+		y = 1
+		relative_position_id = PER_clash_of_titans
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_war_plan_cambyses
+		icon = GFX_focus_PER_war_plan_cambyses
+		prerequisite = { focus = PER_demand_iraqi_territory }
+		prerequisite = { focus = PER_demand_afghan_territory }
+		x = 2
+		y = 1
+		relative_position_id = PER_demand_afghan_territory
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_path_through_iraq
+		icon = GFX_focus_PER_path_through_iraq
+		prerequisite = { focus = PER_war_plan_cambyses }
+		x = 0
+		y = 1
+		relative_position_id = PER_war_plan_cambyses
+		cost = 5
+		will_lead_to_war_with = IRQ
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_demand_west_asia
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = PER_war_plan_cambyses }
+		x = 2
+		y = 1
+		relative_position_id = PER_war_plan_cambyses
+		cost = 10
+		will_lead_to_war_with = SYR
+		will_lead_to_war_with = LEB
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_march_to_nile
+		icon = GFX_focus_PER_march_to_nile
+		prerequisite = { focus = PER_path_through_iraq }
+		x = 0
+		y = 1
+		relative_position_id = PER_path_through_iraq
+		cost = 5
+		will_lead_to_war_with = JOR
+		will_lead_to_war_with = PAL
+		will_lead_to_war_with = EGY
+
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_the_memphis_initiative
+		icon = GFX_focus_PER_the_memphis_initiative
+		prerequisite = { focus = PER_march_to_nile }
+		x = 2
+		y = 1
+		relative_position_id = PER_march_to_nile
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = { 
+		id = PER_stand_with_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = PER_embrace_industrial_powers }
+		x = 2
+		y = 1
+		relative_position_id = PER_embrace_industrial_powers
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_align_with_axis
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = PER_stand_with_germany }
+		x = 0
+		y = 1
+		relative_position_id = PER_stand_with_germany
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_spoils_of_war
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = PER_align_with_axis }
+		x = 0
+		y = 1
+		relative_position_id = PER_align_with_axis
+		cost = 10
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}	
+	}
+
+	focus = { 
+		id = PER_donate_oil_fields
+		icon = GFX_focus_PER_donate_oil_fields
+		prerequisite = { focus = PER_align_with_axis }
+		x = -2
+		y = 1
+		relative_position_id = PER_align_with_axis
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		cancel_if_invalid = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_middle_east_protectorate
+		icon = GFX_focus_PER_middle_east_protectorate
+		prerequisite = { focus = PER_spoils_of_war }
+		x = 0
+		y = 1
+		relative_position_id = PER_spoils_of_war
+		cost = 5
+
+		allow_branch = {
+
+		}
+
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	
+
+	focus = { 
+		id = PER_rally_the_reformers
+		icon = GFX_goal_generic_national_unity
+		
+		x = -70
+		y = 0
+		relative_position_id = PER_modernizing_iran
+		mutually_exclusive = { focus = PER_the_pahlavi_imperium }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = PER_the_pahlavi_imperium
+			}
+		}
+
+        offset = {
+            x = 45
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = PER_rally_the_reformers
+            }
+        }
+
+        offset = {
+            x = 7
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                OR = {
+                	has_completed_focus = PER_rally_behind_mosaddegh
+                	has_completed_focus = PER_united_progressive_parties
+                	has_completed_focus = PER_iranian_culture
+                }
+            }
+        }
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	focus = { 
+		id = PER_stage_mass_protests
+		icon = GFX_focus_PER_stage_mass_protests
+		prerequisite = { focus = PER_rally_the_reformers }
+		x = -1
+		y = 1
+		relative_position_id = PER_rally_the_reformers
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_the_pahlavi_imperium
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_propagate_political_literature
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = PER_rally_the_reformers }
+		x = 1
+		y = 1
+		relative_position_id = PER_rally_the_reformers
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_the_pahlavi_imperium
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	focus = { 
+		id = PER_rally_behind_mosaddegh
+		icon = GFX_focus_PER_rally_behind_mosaddegh
+		prerequisite = { focus = PER_stage_mass_protests focus = PER_propagate_political_literature }
+		x = 1
+		y = 1
+		relative_position_id = PER_stage_mass_protests
+		mutually_exclusive = { focus = PER_united_progressive_parties focus = PER_iranian_culture }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_united_progressive_parties
+					has_completed_focus = PER_iranian_culture
+					has_completed_focus = PER_the_pahlavi_imperium
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_embrace_national_front
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = PER_rally_behind_mosaddegh }
+		mutually_exclusive = { focus = PER_constitutional_monarchy }
+		x = 1
+		y = 1
+		relative_position_id = PER_rally_behind_mosaddegh
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_constitutional_monarchy
+		icon = GFX_focus_PER_constitutional_monarchy
+		prerequisite = { focus = PER_rally_behind_mosaddegh }
+		
+		x = -1
+		y = 1
+		relative_position_id = PER_rally_behind_mosaddegh
+		mutually_exclusive = { focus = PER_embrace_national_front}
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_strengthen_iranian_parliament
+		icon = GFX_focus_POL_complete_april_constitution
+		prerequisite = { focus = PER_constitutional_monarchy }
+		x = 0
+		y = 1
+		relative_position_id = PER_constitutional_monarchy
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_force_abdication
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = PER_embrace_national_front }
+		x = 0
+		y = 1
+		relative_position_id = PER_embrace_national_front
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_promise_clergy_power
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+		prerequisite = { focus = PER_constitutional_monarchy }
+		x = -2
+		y = 1
+		relative_position_id = PER_constitutional_monarchy
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_free_elections
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = PER_force_abdication focus = PER_strengthen_iranian_parliament}
+		x = -1
+		y = 1
+		relative_position_id = PER_force_abdication
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_continue_westernization
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PER_free_elections }
+		x = 2
+		y = 1
+		relative_position_id = PER_free_elections
+		mutually_exclusive = { focus = PER_islamic_restoration }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_islamic_restoration
+		icon = GFX_focus_AUS_disregard_the_treaties
+		prerequisite = { focus = PER_free_elections }
+		prerequisite = { focus = PER_promise_clergy_power }
+
+		mutually_exclusive = { focus = PER_continue_westernization }
+		x = -2
+		y = 1
+		relative_position_id = PER_free_elections
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_ally_bazaari
+		icon = GFX_focus_PER_ally_bazaari
+		prerequisite = { focus = PER_islamic_restoration }
+		x = 0
+		y = 1
+		relative_position_id = PER_islamic_restoration
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+
+	focus = { 
+		id = PER_royal_college_funding
+		icon = GFX_focus_research
+		prerequisite = { focus = PER_islamic_restoration focus = PER_continue_westernization }
+		x = 1
+		y = 2
+		relative_position_id = PER_free_elections
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_entice_foreign_investment
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = PER_continue_westernization }
+		x = 1
+		y = 1
+		relative_position_id = PER_continue_westernization
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_secularize_the_state
+		icon = GFX_focus_AFG_parliamentary_democracy 
+		prerequisite = { focus = PER_continue_westernization }
+		x = 3
+		y = 1
+		relative_position_id = PER_continue_westernization
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_increase_faculty_staffing_budget
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = PER_royal_college_funding }
+		prerequisite = { focus = PER_entice_foreign_investment }
+		x = 1
+		y = 1
+		relative_position_id = PER_royal_college_funding
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_invest_in_univerity_facilities
+		icon = GFX_focus_research2
+		prerequisite = { focus = PER_royal_college_funding }
+		prerequisite = { focus = PER_entice_foreign_investment }
+		x = 3
+		y = 1
+		relative_position_id = PER_royal_college_funding
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_expand_oil_production
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = PER_ally_bazaari focus = PER_entice_foreign_investment }
+		x = 0
+		y = 3
+		relative_position_id = PER_free_elections
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_islamic_revolution
+		icon = GFX_focus_TUR_turanist_ambition
+		prerequisite = { focus = PER_ally_bazaari }
+		x = -3
+		y = 3
+		relative_position_id = PER_free_elections
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_nationalize_oil_fields
+		icon = GFX_focus_PER_nationalize_oil_fields
+		prerequisite = { focus = PER_expand_oil_production }
+		x = -2
+		y = 1
+		relative_position_id = PER_expand_oil_production
+		mutually_exclusive = { focus = PER_increase_oil_sales }
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_islamic_solidarity
+		icon = GFX_focus_PER_islamic_solidarity
+		prerequisite = { focus = PER_nationalize_oil_fields }
+		x = 0
+		y = 1
+		relative_position_id = PER_nationalize_oil_fields
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+	
+
+	focus = { 
+		id = PER_increase_oil_sales
+		icon = GFX_focus_PER_increase_oil_sales
+		prerequisite = { focus = PER_expand_oil_production }
+		x = 2
+		y = 1
+		relative_position_id = PER_expand_oil_production
+		mutually_exclusive = { focus = PER_nationalize_oil_fields }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_request_membership_allies
+		icon = GFX_focus_ARG_join_the_allies
+		prerequisite = { focus = PER_increase_oil_sales }
+		x = 0
+		y = 1
+		relative_position_id = PER_increase_oil_sales
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_secure_iraq
+		icon = GFX_focus_PER_secure_iraq
+		prerequisite = { focus = PER_request_membership_allies }
+		x = -1
+		y = 1
+		relative_position_id = PER_request_membership_allies
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_secure_afghanistan
+		icon = GFX_focus_PER_secure_afghanistan
+		prerequisite = { focus = PER_request_membership_allies }
+		x = 1
+		y = 1
+		relative_position_id = PER_request_membership_allies
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_post_war_spoils
+		icon = GFX_focus_generic_welfare
+		prerequisite = { focus = PER_secure_iraq focus = PER_secure_afghanistan }
+		x = 1
+		y = 1
+		relative_position_id = PER_secure_iraq
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	focus = { 
+		id = PER_united_progressive_parties
+		icon = GFX_focus_SWE_socialist_reforms
+		
+		prerequisite = { focus = PER_stage_mass_protests focus = PER_propagate_political_literature }
+		mutually_exclusive = { focus = PER_rally_behind_mosaddegh focus = PER_iranian_culture }
+		x = -8
+		y = 1
+		relative_position_id = PER_stage_mass_protests
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_rally_behind_mosaddegh
+					has_completed_focus = PER_iranian_culture
+					has_completed_focus = PER_the_pahlavi_imperium
+				}
+			}
+		}
+
+        offset = {
+            x = 9
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = PER_united_progressive_parties
+            }
+        }
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_reach_to_seperatists
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		prerequisite = { focus = PER_united_progressive_parties }
+		x = 0
+		y = 1
+		relative_position_id = PER_united_progressive_parties
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_strengthen_the_tudeh
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		prerequisite = { focus = PER_reach_to_seperatists }
+		x = -1
+		y = 1
+		relative_position_id = PER_reach_to_seperatists
+		mutually_exclusive = { focus = PER_elevate_the_iran_party }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_iranian_socialist_revolution
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		prerequisite = { focus = PER_strengthen_the_tudeh focus = PER_elevate_the_iran_party }
+		x = 1
+		y = 1
+		relative_position_id = PER_strengthen_the_tudeh
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_soviet_alignment
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = PER_iranian_socialist_revolution }
+		prerequisite = { focus = PER_strengthen_the_tudeh }
+		x = -1
+		y = 2
+		relative_position_id = PER_strengthen_the_tudeh
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_industrial_aid
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = PER_soviet_alignment }
+		x = -2
+		y = 1
+		relative_position_id = PER_soviet_alignment
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_elevate_the_iran_party
+		icon = GFX_focus_PER_elevate_the_iran_party
+		prerequisite = { focus = PER_reach_to_seperatists }
+		x = 1
+		y = 1
+		relative_position_id = PER_reach_to_seperatists
+		mutually_exclusive = { focus = PER_strengthen_the_tudeh }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_appease_the_seperatists
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		prerequisite = { focus = PER_iranian_socialist_revolution }
+		x = -1
+		y = 2
+		relative_position_id = PER_elevate_the_iran_party
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+		
+	}
+
+	focus = { 
+		id = PER_communist_education_reform
+		icon = GFX_focus_NOR_moscows_education_centers
+		prerequisite = { focus = PER_iranian_socialism focus = PER_soviet_alignment }
+		x = 0
+		y = 1
+		relative_position_id = PER_appease_the_seperatists
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_the_new_economy
+		icon = GFX_goal_generic_soviet_construction
+		
+		prerequisite = { focus = PER_communist_education_reform focus = PER_communist_propaganda focus = PER_communist_industrialization }
+		x = 0
+		y = 1
+		relative_position_id = PER_communist_education_reform
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_oil_and_rubber_industry
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = PER_the_new_economy }
+		x = 1
+		y = 1
+		relative_position_id = PER_the_new_economy
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}	
+	}
+
+	focus = { 
+		id = PER_workers_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		prerequisite = { focus = PER_the_new_economy }
+		x = -1
+		y = 1
+		relative_position_id = PER_the_new_economy
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_MILITARY_CHARACTER
+			FOCUS_FILTER_ARMY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_the_peoples_airforce
+		icon = GFX_focus_PER_the_peoples_airforce
+		prerequisite = { focus = PER_workers_army }
+		x = -1
+		y = 1
+		relative_position_id = PER_workers_army
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_AIR_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_air_defense
+		icon = GFX_focus_FIN_foreign_anti_air
+		prerequisite = { focus = PER_the_peoples_airforce }
+		x = -2
+		y = 1
+		relative_position_id = PER_the_peoples_airforce
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_basic_plane_design
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = PER_the_peoples_airforce }
+		x = 0
+		y = 1
+		relative_position_id = PER_the_peoples_airforce
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_AIR_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_naval_bomber_design
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = PER_communist_basic_plane_design }
+		x = -1
+		y = 1
+		relative_position_id = PER_communist_basic_plane_design
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_challenge_the_royal_navy
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = PER_communist_basic_plane_design focus = PER_communist_naval_designs }
+		x = 1
+		y = 1
+		relative_position_id = PER_communist_basic_plane_design
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+
+	focus = { 
+		id = PER_the_peoples_navy
+		icon = GFX_focus_PER_the_peoples_navy
+		prerequisite = { focus = PER_workers_army }
+		x = 1
+		y = 1
+		relative_position_id = PER_workers_army
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_NAVY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_shore_defense
+		icon = GFX_focus_FIN_coastal_defense
+		prerequisite = { focus = PER_the_peoples_navy }
+		x = 2
+		y = 1
+		relative_position_id = PER_the_peoples_navy
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_naval_designs
+		icon = GFX_focus_SWE_coastal_support
+		prerequisite = { focus = PER_the_peoples_navy }
+		x = 0
+		y = 1
+		relative_position_id = PER_the_peoples_navy
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_submarine_design
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = PER_communist_naval_designs }
+		x = 1
+		y = 1
+		relative_position_id = PER_communist_naval_designs
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_iranian_socialism
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		prerequisite = { focus = PER_iranian_socialist_revolution }
+		prerequisite = { focus = PER_elevate_the_iran_party }
+		x = 1
+		y = 2
+		relative_position_id = PER_elevate_the_iran_party
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_iranian_industrialization
+		icon = GFX_focus_ARG_women_in_industry
+		prerequisite = { focus = PER_iranian_socialism }
+		x = 2
+		y = 1
+		relative_position_id = PER_iranian_socialism
+		cost = 5
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_international_solidarity
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = PER_the_new_economy focus = PER_nationalize_oil_fields }
+		x = 5
+		y = 2
+		relative_position_id = PER_the_new_economy
+		cost = 10
+		
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_afghanistan_intervention
+		icon = GFX_focus_PER_communist_afghanistan_intervention
+		prerequisite = { focus = PER_international_solidarity }
+		x = -1
+		y = 1
+		relative_position_id = PER_international_solidarity
+		cost = 5
+		will_lead_to_war_with = AFG
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_liberate_pashtuns
+		icon = GFX_focus_AFG_curtail_pashtunwali_primacy
+		prerequisite = { focus = PER_communist_afghanistan_intervention }
+		x = -1
+		y = 1
+		relative_position_id = PER_communist_afghanistan_intervention
+		cost = 10
+		
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+
+	focus = { 
+		id = PER_communist_destabilize_iraq
+		icon = GFX_focus_generic_befriend_kurdistan
+		prerequisite = { focus = PER_international_solidarity }
+		x = 1
+		y = 1
+		relative_position_id = PER_international_solidarity
+		cost = 5
+		
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	focus = { 
+		id = PER_revolution_in_the_gulf
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = { focus = PER_communist_destabilize_iraq focus = PER_communist_afghanistan_intervention }
+		x = -1
+		y = 1
+		relative_position_id = PER_communist_destabilize_iraq
+		cost = 5
+		
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_hormuz_crisis
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = PER_revolution_in_the_gulf }
+		x = 0
+		y = 1
+		relative_position_id = PER_revolution_in_the_gulf
+		cost = 10
+		will_lead_to_war_with = ENG
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_gulf_hegemony
+		icon = GFX_focus_ETH_an_arabic_base
+		prerequisite = { focus = PER_hormuz_crisis }
+		x = 0
+		y = 1
+		relative_position_id = PER_hormuz_crisis
+		cost = 10
+		
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_propaganda
+		icon = GFX_focus_SWE_radiotjanst
+		prerequisite = { focus = PER_iranian_socialism focus = PER_soviet_alignment }
+		x = -2
+		y = 1
+		relative_position_id = PER_appease_the_seperatists
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_communist_industrialization
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = PER_iranian_socialism focus = PER_soviet_alignment }
+		x = 2
+		y = 1
+		relative_position_id = PER_appease_the_seperatists
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_reject_foreign_dominance
+		icon = GFX_focus_ETH_callout_to_the_world
+		prerequisite = { focus = PER_communist_industrialization }
+		prerequisite = { focus = PER_iranian_industrialization }
+		y = 1
+		x = -1
+		relative_position_id = PER_iranian_industrialization
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_iranian_revolutionary_vanguard
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = PER_elevate_the_iran_party }
+		x = 3
+		y = 1
+		relative_position_id = PER_elevate_the_iran_party
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_one_for_all_all_for_one
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = PER_iranian_revolutionary_vanguard }
+		x = 0
+		y = 1
+		relative_position_id = PER_iranian_revolutionary_vanguard
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_land_reform
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = PER_industrial_aid }
+		x = -2
+		y = 1
+		relative_position_id = PER_industrial_aid
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_soviet_iranian_oil_collaboration
+		icon = GFX_focus_PER_increase_oil_sales
+		prerequisite = { focus = PER_industrial_aid }
+		x = 0
+		y = 1
+		relative_position_id = PER_industrial_aid
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_comintern_research_collaboration
+		icon = GFX_focus_research2
+		prerequisite = { focus = PER_soviet_iranian_oil_collaboration }
+		prerequisite = { focus = PER_land_reform }
+		x = -1
+		y = 1
+		relative_position_id = PER_soviet_iranian_oil_collaboration
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PER_iranian_nuclear_program
+		icon = GFX_focus_generic_nuclear_development
+		prerequisite = { focus = PER_comintern_research_collaboration }
+		x = 0
+		y = 1
+		relative_position_id = PER_comintern_research_collaboration
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+	
+	
+	
+
+	focus = { 
+		id = PER_iranian_culture
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 11
+		y = 1
+		relative_position_id = PER_stage_mass_protests
+		prerequisite = { focus = PER_stage_mass_protests focus = PER_propagate_political_literature }
+		mutually_exclusive = { focus = PER_rally_behind_mosaddegh focus = PER_united_progressive_parties }
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_rally_behind_mosaddegh
+					has_completed_focus = PER_united_progressive_parties
+					has_completed_focus = PER_the_pahlavi_imperium
+				}
+			}
+		}
+		
+        offset = {
+            x = -9
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = PER_iranian_culture
+            }
+        }
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_form_sumka
+		icon = GFX_focus_PER_form_sumka
+		prerequisite = { focus = PER_iranian_culture }
+		x = 0
+		y = 1
+		relative_position_id = PER_iranian_culture
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_ally_the_bazaari
+		icon = GFX_focus_generic_industrialists
+		prerequisite = { focus = PER_form_sumka }
+		x = 1
+		y = 2
+		relative_position_id = PER_iranian_culture
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_brown_shirts
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = PER_form_sumka }
+		x = -1
+		y = 2
+		relative_position_id = PER_iranian_culture
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	
+
+	focus = { 
+		id = PER_march_on_saadabad
+		icon = GFX_focus_PER_march_on_saadabad
+		prerequisite = { focus = PER_brown_shirts focus = PER_ally_the_bazaari }
+		x = 1
+		y = 1
+		relative_position_id = PER_brown_shirts
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_roll_back_reforms
+		icon = GFX_focus_ICE_state_corporatism
+		prerequisite = { focus = PER_march_on_saadabad }
+		x = -1
+		y = 1
+		relative_position_id = PER_march_on_saadabad
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_finding_a_shah
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = PER_march_on_saadabad }
+		prerequisite = { focus = PER_ally_the_bazaari }
+		x = 1
+		y = 1
+		relative_position_id = PER_march_on_saadabad
+		cost = 10
+		
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fascist_secularism
+		icon = GFX_focus_ARG_fascist_researchers
+		prerequisite = { focus = PER_roll_back_reforms focus = PER_finding_a_shah  }
+		x = 3
+		y = 1
+		relative_position_id = PER_roll_back_reforms
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_form_savama
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = PER_roll_back_reforms focus = PER_finding_a_shah }
+		x = -1
+		y = 1
+		relative_position_id = PER_roll_back_reforms
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fascist_reach_out_to_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = PER_form_savama }
+		prerequisite = { focus = PER_pan_iranianism }
+		mutually_exclusive = { focus = PER_fascist_reach_out_to_japan focus = PER_iran_first }
+		x = 0
+		y = 1
+		relative_position_id = PER_form_savama
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_iran_first
+		icon = GFX_focus_PER_iran_first
+		prerequisite = { focus = PER_form_savama }
+		prerequisite = { focus = PER_pan_iranianism }
+		mutually_exclusive = { focus = PER_fascist_reach_out_to_germany focus = PER_fascist_reach_out_to_japan }
+		x = 2
+		y = 1
+		relative_position_id = PER_form_savama
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fascist_reach_out_to_japan
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		prerequisite = { focus = PER_fascist_secularism }
+		prerequisite = { focus = PER_pan_iranianism }
+		mutually_exclusive = { focus = PER_fascist_reach_out_to_germany focus = PER_iran_first }
+		x = 0
+		y = 1
+		relative_position_id = PER_fascist_secularism
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}	
+
+	focus = { 
+		id = PER_pan_iranianism
+		icon = GFX_focus_PER_pan_iranianism
+		prerequisite = { focus = PER_roll_back_reforms focus = PER_finding_a_shah  }
+		x = 1
+		y = 1
+		relative_position_id = PER_roll_back_reforms
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_intervene_in_central_asia
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = PER_iran_first focus = PER_fascist_reach_out_to_japan focus = PER_fascist_reach_out_to_germany }
+		x = 0
+		y = 2
+		relative_position_id = PER_iran_first
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_proclaim_greater_iran
+		icon = GFX_focus_PER_proclaim_greater_iran
+		prerequisite = { focus = PER_intervene_in_central_asia }
+		prerequisite = { focus = PER_crush_saudi_arabia }
+		prerequisite = { focus = PER_fascist_attack_afghanistan }
+		x = 0
+		y = 1
+		relative_position_id = PER_intervene_in_central_asia
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_eastern_expansion
+		icon = GFX_focus_generic_attack_india
+		prerequisite = { focus = PER_proclaim_greater_iran }
+		x = 1
+		y = 1
+		relative_position_id = PER_proclaim_greater_iran
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_curtail_pan_arabism
+		icon = GFX_focus_ETH_an_arabic_base
+		prerequisite = { focus = PER_proclaim_greater_iran }
+		x = -1
+		y = 1
+		relative_position_id = PER_proclaim_greater_iran
+		cost = 5
+		available = {}
+		bypass = {}
+		allow_branch = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_there_can_be_only_one
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = PER_proclaim_greater_iran }
+		x = 0
+		y = 2
+		relative_position_id = PER_proclaim_greater_iran
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fascist_attack_turkey
+		icon = GFX_focus_generic_attack_turkey
+		prerequisite = { focus = PER_fascist_reach_out_to_germany focus = PER_fascist_reach_out_to_japan focus = PER_iran_first }
+		x = -1
+		y = 1
+		relative_position_id = PER_fascist_reach_out_to_germany
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_intervention_in_iraq
+		icon = GFX_focus_generic_attack_iraq
+		prerequisite = { focus = PER_fascist_reach_out_to_germany focus = PER_fascist_reach_out_to_japan focus = PER_iran_first }
+		x = 1
+		y = 1
+		relative_position_id = PER_fascist_reach_out_to_japan
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_crush_saudi_arabia
+		icon = GFX_focus_AUS_raid_military_storages
+		prerequisite = { focus = PER_fascist_attack_turkey }
+		x = 0
+		y = 1
+		relative_position_id = PER_fascist_attack_turkey
+		cost = 10
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = PER_fascist_attack_afghanistan
+		icon = GFX_focus_generic_attack_afghanistan
+		prerequisite = { focus = PER_intervention_in_iraq }
+		x = 0
+		y = 1
+		relative_position_id = PER_intervention_in_iraq
+		cost = 5
+		
+		available = {}
+
+		bypass = {}
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {}
+	}
+}

@@ -1,0 +1,30 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Victoria Fleet"			
+		naval_base = 7623
+		task_force = {
+			name = "Victoria Fleet"
+			location = 7623
+			
+						ship = { name = "Grean" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VIC version_name = "Fairsealasam Class" } }	}
+			ship = { name = "Fairsealasam" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VIC version_name = "Fairsealasam Class" } }	}
+			ship = { name = "Faighe" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = VIC version_name = "Atharcradh Class" } }	}
+			ship = { name = "Luan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VIC version_name = "Fairsealasam Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

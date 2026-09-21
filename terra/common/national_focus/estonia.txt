@@ -1,0 +1,1790 @@
+﻿
+
+
+
+
+
+
+
+focus_tree = {
+	id = estonia_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EST
+			has_dlc = "No Step Back"
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	shared_focus = BALTIC_rejoin_the_railways
+	shared_focus = BALTIC_restore_workers_republic
+	
+	
+	
+	
+	focus = {
+		id = EST_era_of_silence
+		icon = GFX_focus_EST_era_of_silence
+		mutually_exclusive = { focus = BALTIC_restore_workers_republic focus = EST_rally_the_nation }
+		x = 34
+		y = 0
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = BALTIC_restore_workers_republic
+						has_completed_focus = EST_rally_the_nation
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_era_of_silence
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_ismaaliit
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EST_era_of_silence }
+		x = 1
+		y = 1
+		relative_position_id = EST_era_of_silence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = EST_establish_the_rahvuskogu
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EST_era_of_silence }
+		x = -2
+		y = 1
+		relative_position_id = EST_era_of_silence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_chamber_of_deputies
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = EST_establish_the_rahvuskogu }
+		prerequisite = { focus = EST_ismaaliit }
+		x = 0
+		y = 1
+		relative_position_id = EST_establish_the_rahvuskogu
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_exploit_the_banks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = EST_chamber_of_deputies }
+		x = 1
+		y = 1
+		relative_position_id = EST_chamber_of_deputies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_modernize_capital
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = EST_chamber_of_deputies }
+		x = -1
+		y = 1
+		relative_position_id = EST_chamber_of_deputies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_break_the_silence
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EST_modernize_capital }
+		prerequisite = { focus = EST_exploit_the_banks }
+		mutually_exclusive = { focus = EST_squash_the_opposition }
+		x = 0
+		y = 1
+		relative_position_id = EST_modernize_capital
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_squash_the_opposition
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = EST_modernize_capital }
+		prerequisite = { focus = EST_exploit_the_banks }
+		mutually_exclusive = { focus = EST_break_the_silence }
+		x = 0
+		y = 1
+		relative_position_id = EST_exploit_the_banks
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_formalize_baltic_entente
+		icon = GFX_focus_generic_baltic_entente
+		prerequisite = { focus = EST_break_the_silence focus = EST_squash_the_opposition }
+		mutually_exclusive = { focus = EST_beyond_the_baltic }
+		x = 0
+		y = 1
+		relative_position_id = EST_squash_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					LIT = { is_ai = no }
+					LAT = { is_ai = no } 
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 10
+				is_in_faction = no
+				any_other_country = {
+					is_major = yes
+					OR = {
+						has_war_with = ROOT
+						has_wargoal_against = ROOT
+					}
+				} 
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_look_north
+		icon = GFX_focus_generic_scandinavian_alliance
+		prerequisite = { focus = EST_formalize_baltic_entente }
+		x = 0
+		y = 1
+		relative_position_id = EST_formalize_baltic_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_beyond_the_baltic
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = EST_break_the_silence focus = EST_squash_the_opposition }
+		mutually_exclusive = { focus = EST_formalize_baltic_entente }
+		x = 2
+		y = 1
+		relative_position_id = EST_squash_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				factor = 0
+				date < 1942.1.1
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_join_the_allies
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = EST_beyond_the_baltic }
+		x = 0
+		y = 1
+		relative_position_id = EST_beyond_the_baltic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = EST_national_council
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = EST_ismaaliit }
+		prerequisite = { focus = EST_establish_the_rahvuskogu }
+		x = 0
+		y = 1
+		relative_position_id = EST_ismaaliit
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_support_independent_militaries
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = EST_national_council }
+		x = 0
+		y = 1
+		relative_position_id = EST_national_council
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_new_economic_policy
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = EST_support_independent_militaries }
+		prerequisite = { focus = EST_exploit_the_banks }
+		prerequisite = { focus = EST_modernize_capital }
+		x = 0
+		y = 1
+		relative_position_id = EST_support_independent_militaries
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_corporate_chambers
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = EST_new_economic_policy }
+		x = 2
+		y = 1
+		relative_position_id = EST_new_economic_policy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_fight_the_vaps
+		icon = GFX_focus_EST_fight_the_vaps
+		prerequisite = { focus = EST_era_of_silence }
+		x = 2
+		y = 1
+		relative_position_id = EST_ismaaliit
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_republican_defence_league
+		icon = GFX_focus_EST_republican_defence_league
+		prerequisite = { focus = EST_fight_the_vaps }
+		x = 0
+		y = 1
+		relative_position_id = EST_fight_the_vaps
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_womens_defence_league
+		icon = GFX_focus_generic_women_in_military
+		prerequisite = { focus = EST_republican_defence_league }
+		x = 0
+		y = 1
+		relative_position_id = EST_republican_defence_league
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_cave_to_enemy_pressure
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = EST_republican_defence_league }
+		mutually_exclusive = { focus = EST_fortify_the_border focus = EST_fortify_tallinn }
+		x = 2
+		y = 1
+		relative_position_id = EST_republican_defence_league
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	
+	
+	focus = {
+		id = EST_rally_the_nation
+		icon = GFX_focus_EST_rally_the_nation
+		mutually_exclusive = { focus = BALTIC_restore_workers_republic focus = EST_era_of_silence }
+		x = 45
+		y = 0
+
+		cost = 10
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = BALTIC_restore_workers_republic
+						has_completed_focus = EST_era_of_silence
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -20
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_rally_the_nation
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_march_on_talinn
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = EST_rally_the_nation }
+		x = 0
+		y = 1
+		relative_position_id = EST_rally_the_nation
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		select_effect = {
+			add_days_mission_timeout = {
+				mission = EST_stomp_the_vaps
+				days = 35
+			}
+		}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_glory_of_war
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = EST_march_on_talinn }
+		x = -2
+		y = 1
+		relative_position_id = EST_march_on_talinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_mobilize_the_vets
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = EST_glory_of_war }
+		x = -1
+		y = 1
+		relative_position_id = EST_glory_of_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_vapsid_youth
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = EST_glory_of_war }
+		x = 1
+		y = 1
+		relative_position_id = EST_glory_of_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_veterans_government
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = EST_march_on_talinn }
+		x = 2
+		y = 1
+		relative_position_id = EST_march_on_talinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_anti_communist_militia
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = EST_veterans_government }
+		mutually_exclusive = { focus = EST_reach_out_to_germany }
+		x = -1
+		y = 1
+		relative_position_id = EST_veterans_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_reach_out_to_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = EST_veterans_government }
+		mutually_exclusive = { focus = EST_anti_communist_militia }
+		x = 1
+		y = 1
+		relative_position_id = EST_veterans_government
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_baltic_shield
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = EST_anti_communist_militia focus = EST_reach_out_to_germany }
+		x = 0
+		y = 1
+		relative_position_id = EST_anti_communist_militia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_join_the_axis
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = EST_reach_out_to_germany }
+		x = 0
+		y = 1
+		relative_position_id = EST_reach_out_to_germany
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_the_brotherhood
+		icon = GFX_focus_generic_forest_brothers
+		prerequisite = { focus = EST_anti_communist_militia focus = EST_join_the_axis }
+		prerequisite = { focus = EST_baltic_shield }
+		x = 1
+		y = 1
+		relative_position_id = EST_baltic_shield
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = EST_empower_finnish_militants
+		icon = GFX_focus_invite_finland
+		prerequisite = { focus = EST_march_on_talinn }
+		x = 0
+		y = 1
+		relative_position_id = EST_march_on_talinn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_national_pride_in_finland
+		icon = GFX_focus_EST_national_pride_in_finland
+		prerequisite = { focus = EST_empower_finnish_militants }
+		x = 0
+		y = 3
+		relative_position_id = EST_empower_finnish_militants
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_finno_estonian_supremacy_league
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = EST_national_pride_in_finland }
+		mutually_exclusive = { focus = EST_unite_our_nations }
+		x = 0
+		y = 1
+		relative_position_id = EST_national_pride_in_finland
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_unite_our_nations
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = EST_national_pride_in_finland }
+		mutually_exclusive = { focus = EST_finno_estonian_supremacy_league }
+		x = 2
+		y = 1
+		relative_position_id = EST_national_pride_in_finland
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = EST_sieze_swedish_assets
+		icon = GFX_focus_generic_attack_sweden
+		prerequisite = { focus = EST_finno_estonian_supremacy_league }
+		x = -1
+		y = 1
+		relative_position_id = EST_finno_estonian_supremacy_league
+		will_lead_to_war_with = SWE
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_secure_the_straits
+		icon = GFX_focus_generic_attack_denmark
+		prerequisite = { focus = EST_sieze_swedish_assets }
+		x = -1
+		y = 1
+		relative_position_id = EST_sieze_swedish_assets
+		will_lead_to_war_with = DEN
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_occupy_norway
+		icon = GFX_focus_generic_attack_norway
+		prerequisite = { focus = EST_sieze_swedish_assets }
+		x = 1
+		y = 1
+		relative_position_id = EST_sieze_swedish_assets
+		will_lead_to_war_with = NOR
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_form_scandinavia
+		icon = GFX_focus_EST_estonia_is_scandinavia
+		prerequisite = { focus = EST_secure_the_straits }
+		prerequisite = { focus = EST_occupy_norway }
+		x = 1
+		y = 1
+		relative_position_id = EST_secure_the_straits
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = EST_proclaim_finno_ugra
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = EST_unite_our_nations }
+		x = 1
+		y = 1
+		relative_position_id = EST_unite_our_nations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_unite_the_sami
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = EST_proclaim_finno_ugra }
+		x = -1
+		y = 1
+		relative_position_id = EST_proclaim_finno_ugra
+		will_lead_to_war_with = NOR
+		will_lead_to_war_with = SWE
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_unite_karelia
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = EST_proclaim_finno_ugra }
+		x = 1
+		y = 1
+		relative_position_id = EST_proclaim_finno_ugra
+		will_lead_to_war_with = SOV
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_unite_the_finnic_identity
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EST_unite_karelia }
+		prerequisite = { focus = EST_unite_the_sami }
+		x = 0
+		y = 2
+		relative_position_id = EST_proclaim_finno_ugra
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = EST_threat_on_our_border
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = EST_march_on_talinn focus = EST_fight_the_vaps }
+		x = -5
+		y = 2
+		relative_position_id = EST_march_on_talinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_era_of_silence
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_fortify_tallinn
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = EST_threat_on_our_border }
+		mutually_exclusive = { focus = EST_fortify_the_border focus = EST_cave_to_enemy_pressure }
+		x = 1
+		y = 1
+		relative_position_id = EST_threat_on_our_border
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_hold_saaremaa
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = EST_fortify_tallinn }
+		x = 0
+		y = 1
+		relative_position_id = EST_fortify_tallinn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_fortify_the_border
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = EST_threat_on_our_border }
+		mutually_exclusive = { focus = EST_fortify_tallinn focus = EST_cave_to_enemy_pressure }
+		x = 3
+		y = 1
+		relative_position_id = EST_threat_on_our_border
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_fight_against_communism
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = EST_fortify_the_border focus = EST_fortify_tallinn }
+		x = 0
+		y = 1
+		relative_position_id = EST_fortify_the_border
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_long_push_east
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = EST_fight_against_communism }
+		x = 0
+		y = 1
+		relative_position_id = EST_fight_against_communism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = EST_prepare_for_the_inevitable
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = EST_corporate_chambers focus = EST_unite_our_nations focus = EST_finno_estonian_supremacy_league }
+		x = 1
+		y = 2
+		relative_position_id = EST_corporate_chambers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_era_of_silence
+			}
+		}
+
+		offset = {
+			x = -19
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_rally_the_nation
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_forest_brothers
+		icon = GFX_focus_generic_forest_brothers
+		prerequisite = { focus = EST_prepare_for_the_inevitable }
+		x = -2
+		y = 1
+		relative_position_id = EST_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_prepare_underground_resistance
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = EST_prepare_for_the_inevitable }
+		x = 0
+		y = 1
+		relative_position_id = EST_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = EST_prepare_covert_resistance
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = EST_prepare_for_the_inevitable }
+		x = 2
+		y = 1
+		relative_position_id = EST_prepare_for_the_inevitable
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+	
+	
+	
+	
+	focus = {
+		id = EST_baltic_economic_union
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = EST_formalize_baltic_entente }
+		prerequisite = { focus = EST_break_the_silence }
+		x = -2
+		y = 1
+		relative_position_id = EST_formalize_baltic_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = EST_baltic_defence_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = EST_baltic_economic_union }
+		x = 1
+		y = 1
+		relative_position_id = EST_baltic_economic_union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = EST_pan_baltic_bank
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = EST_baltic_economic_union }
+		x = -1
+		y = 1
+		relative_position_id = EST_baltic_economic_union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = EST_propose_baltic_union
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = EST_pan_baltic_bank }
+		prerequisite = { focus = EST_baltic_defence_army }
+		x = -1
+		y = 1
+		relative_position_id = EST_baltic_defence_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = EST_baltic_stronger_together
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = EST_propose_baltic_union }
+		x = 1
+		y = 1
+		relative_position_id = EST_propose_baltic_union
+		mutually_exclusive = { focus = EST_baltic_unification }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = EST_baltic_unification
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = EST_propose_baltic_union }
+		x = -1
+		y = 1
+		relative_position_id = EST_propose_baltic_union
+		mutually_exclusive = { focus = EST_baltic_stronger_together }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+	
+	
+}

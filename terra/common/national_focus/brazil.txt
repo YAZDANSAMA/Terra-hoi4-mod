@@ -1,0 +1,3617 @@
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = brazil_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+			has_dlc = "Trial of Allegiance"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 0 y = 2500 }
+
+	initial_show_position = {
+		x = 27
+		y = 0
+	}
+
+	
+
+	shared_focus = SMB_army
+	shared_focus = SMB_air_force
+	shared_focus = SMB_navy
+
+	
+
+	
+	
+	focus = {
+		id = BRA_tribunal_de_seguranca_nacional
+		icon = GFX_focus_BRA_tribunal
+		
+		x = 0
+		y = 0
+		
+		mutually_exclusive = { focus = BRA_end_the_state_of_emergency focus = BRA_prepare_for_second_intentona }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = BRA_end_the_state_of_emergency }
+				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
+			}
+		}
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = BRA_ensure_continued_military_support
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = BRA_tribunal_de_seguranca_nacional }
+		x = -2
+		y = 1
+		relative_position_id = BRA_tribunal_de_seguranca_nacional
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_work_with_the_integralists
+		icon = GFX_focus_BRA_work_with_the_integralists
+		prerequisite = { focus = BRA_tribunal_de_seguranca_nacional }
+		x = 2
+		y = 1
+		relative_position_id = BRA_tribunal_de_seguranca_nacional
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_estado_moderno
+		icon = GFX_focus_BRA_estado_moderno
+		prerequisite = { focus = BRA_work_with_the_integralists }
+		prerequisite = { focus = BRA_cohen_plan }
+		mutually_exclusive = { focus = BRA_estado_novo }
+		x = 0
+		y = 2
+		relative_position_id = BRA_work_with_the_integralists
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_estado_novo
+		icon = GFX_focus_BRA_estado_novo
+		prerequisite = { focus = BRA_ensure_continued_military_support }
+		prerequisite = { focus = BRA_cohen_plan }
+		mutually_exclusive = { focus = BRA_estado_moderno }
+		x = 0
+		y = 2
+		relative_position_id = BRA_ensure_continued_military_support
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_cohen_plan
+		icon = GFX_focus_BRA_cohen_plan 
+		prerequisite = { focus = BRA_ensure_continued_military_support focus = BRA_work_with_the_integralists }
+		x = 0
+		y = 2
+		relative_position_id = BRA_tribunal_de_seguranca_nacional
+		cost = 10
+		available = {}
+
+		cancel_if_invalid = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_the_polaca
+		icon = GFX_focus_BRA_the_polaca
+		prerequisite = { focus = BRA_estado_novo }
+		x = 0
+		y = 1
+		relative_position_id = BRA_estado_novo
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_anaue
+		icon = GFX_focus_BRA_anaue
+		prerequisite = { focus = BRA_estado_moderno }
+		x = 0
+		y = 1
+		relative_position_id = BRA_estado_moderno
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_autarky
+		icon = GFX_focus_BRA_autarky
+		prerequisite = { focus = BRA_the_polaca focus = BRA_anaue }
+		x = 0
+		y = 2
+		relative_position_id = BRA_the_polaca
+		mutually_exclusive = { focus = BRA_corporatism }
+		cost = 5
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_corporatism
+		icon = GFX_focus_ICE_state_corporatism
+		prerequisite = { focus = BRA_anaue focus = BRA_the_polaca}
+		mutually_exclusive = { focus = BRA_autarky }
+		x = 0
+		y = 2
+		relative_position_id = BRA_anaue
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_departamendo_de_propaganda
+		icon = GFX_focus_BRA_department_of_propaganda
+		prerequisite = { focus = BRA_autarky focus = BRA_corporatism }
+		x = 0
+		y = 1
+		relative_position_id = BRA_autarky
+		cost = 5
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_departamento_de_ordem_politica_e_social
+		icon = GFX_focus_SWI_embrace_rote_drei
+		prerequisite = { focus = BRA_corporatism focus = BRA_autarky  }
+		x = 0
+		y = 1
+		relative_position_id = BRA_corporatism
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_tech_slot_1
+		icon = GFX_focus_research
+		prerequisite = { focus = BRA_departamento_de_ordem_politica_e_social  focus = BRA_departamendo_de_propaganda }
+		x = 0
+		y = 6
+		relative_position_id = BRA_cohen_plan
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_ban_political_parties
+		icon = GFX_focus_BRA_ban_communist_party
+		prerequisite = { focus = BRA_the_polaca }
+		x = -4
+		y = 1
+		relative_position_id = BRA_the_polaca
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = BRA_establish_psad
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = BRA_the_polaca }
+		x = -2
+		y = 1
+		relative_position_id = BRA_the_polaca
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_decree_no_37
+		icon = GFX_focus_BRA_decree_number_37
+		prerequisite = { focus = BRA_establish_psad focus = BRA_ban_political_parties }
+		x = 0
+		y = 1
+		relative_position_id = BRA_ban_political_parties
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_federal_employment_plan
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = BRA_establish_psad focus = BRA_ban_political_parties }
+		x = 0
+		y = 1
+		relative_position_id = BRA_establish_psad
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_reward_army_loyalty
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = BRA_decree_no_37 focus = BRA_federal_employment_plan }
+		x = 1
+		y = 2
+		relative_position_id = BRA_decree_no_37
+		cost = 10
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_depose_vargas
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = BRA_reward_army_loyalty }
+		x = 2
+		y = 1
+		relative_position_id = BRA_reward_army_loyalty
+		cost = 5
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_secure_our_borders
+		icon = GFX_focus_BRA_secure_our_borders
+		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_restoration_of_honor }
+		
+		x = 0
+		y = 3
+		relative_position_id = BRA_reward_army_loyalty
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_reject_cosmopolitanism
+		icon = GFX_focus_BRA_reject_cosmopolitanism
+		prerequisite = { focus = BRA_anaue }
+		x = 2
+		y = 1
+		relative_position_id = BRA_anaue
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_departamento_feminino
+		icon = GFX_focus_SOV_womens_fascist_movement
+		prerequisite = { focus = BRA_anaue }
+		x = 4
+		y = 1
+		relative_position_id = BRA_anaue
+		cost = 10
+		ai_will_do = {
+			factor = 11
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_in_vargas_we_trust
+		icon = GFX_focus_BRA_estado_novo
+		prerequisite = { focus = BRA_reject_cosmopolitanism focus = BRA_departamento_feminino }
+		mutually_exclusive = { focus = BRA_integrity_of_the_fatherland }
+		x = 0
+		y = 1
+		relative_position_id = BRA_reject_cosmopolitanism
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_integrity_of_the_fatherland
+		icon = GFX_focus_BRA_defense_of_the_fatherland 
+		prerequisite = { focus = BRA_reject_cosmopolitanism focus = BRA_departamento_feminino }
+		mutually_exclusive = { focus = BRA_in_vargas_we_trust }
+		x = 0
+		y = 1
+		relative_position_id = BRA_departamento_feminino
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_brazil_integral
+		icon = GFX_focus_BRA_brazil_integral
+		prerequisite = { focus = BRA_in_vargas_we_trust focus = BRA_integrity_of_the_fatherland }
+		x = 1
+		y = 1
+		relative_position_id = BRA_in_vargas_we_trust
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_reinvigorate_the_navy
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = BRA_brazil_integral }
+		x = -1
+		y = 1
+		relative_position_id = BRA_brazil_integral
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	focus = {
+		id = BRA_ethical_internationalism
+		icon = GFX_focus_BRA_ethical_internationalism
+		prerequisite = { focus = BRA_brazil_integral }
+		x = 0
+		y = 4
+		relative_position_id = BRA_brazil_integral
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	
+
+	
+
+	focus = {
+		id = BRA_coffee_crisis_aftermath
+		icon = GFX_focus_BRA_coffee_crisis
+		
+		x = 12
+		y = 0
+		relative_position_id = BRA_tribunal_de_seguranca_nacional
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+
+		offset = {
+			x = -33
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = BRA_prepare_for_second_intentona 
+			}
+		}
+
+		offset = {
+			x = -15
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = BRA_end_the_state_of_emergency 
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_radio_nacional
+		icon = GFX_focus_SWE_radiotjanst
+		prerequisite = { focus = BRA_coffee_crisis_aftermath  }
+		x = -1
+		y = 1
+		relative_position_id = BRA_coffee_crisis_aftermath
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_desenvolvimentismo
+		icon = GFX_focus_ETH_adopt_the_lira
+		prerequisite = { focus = BRA_coffee_crisis_aftermath  }
+		x = 1
+		y = 1
+		relative_position_id = BRA_coffee_crisis_aftermath
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_promote_resource_extraction
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = BRA_radio_nacional focus = BRA_desenvolvimentismo }
+		x = 0
+		y = 1
+		relative_position_id = BRA_radio_nacional
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_companhia_siderurgica_nacional
+		icon = GFX_focus_BRA_national_steel_company
+		prerequisite = { focus = BRA_desenvolvimentismo focus = BRA_radio_nacional  }
+		x = 0
+		y = 1
+		relative_position_id = BRA_desenvolvimentismo
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_stimulate_the_civilian_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BRA_desenvolvimentismo  }
+		x = 4
+		y = 1
+		relative_position_id = BRA_desenvolvimentismo
+		cost = 10
+		ai_will_do = {
+			factor = 18
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_domestic_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_stimulate_the_civilian_economy  }
+		x = 0
+		y = 1
+		relative_position_id = BRA_stimulate_the_civilian_economy
+		cost = 10
+		ai_will_do = {
+			factor = 16
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_war_production
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = BRA_domestic_arms_industry  }
+		x = 0
+		y = 1
+		relative_position_id = BRA_domestic_arms_industry
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = { 
+		id = BRA_reach_out_to_the_great_powers
+		icon = GFX_focus_ARG_reach_out_to_the_great_powers
+		prerequisite = { focus = BRA_promote_resource_extraction focus = BRA_companhia_siderurgica_nacional }
+		x = 0
+		y = 1
+		relative_position_id = BRA_promote_resource_extraction
+		cost = 5
+		available = {}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_deal_with_the_cangaceiro
+		icon = GFX_focus_BRA_deal_with_the_cangaco
+		prerequisite = { focus = BRA_radio_nacional  }
+		x = -2
+		y = 1
+		relative_position_id = BRA_radio_nacional
+		cost = 5
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_promote_immigration_to_brazil
+		icon = GFX_focus_generic_promote_SA_immigration
+		prerequisite = { focus = BRA_desenvolvimentismo  }
+		x = 2
+		y = 1
+		relative_position_id = BRA_desenvolvimentismo
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_invest_in_railways
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = BRA_promote_resource_extraction focus = BRA_companhia_siderurgica_nacional }
+		x = -2
+		y = 1
+		relative_position_id = BRA_promote_resource_extraction
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_national_petroleum_council
+		icon = GFX_focus_generic_stockpile_fuel
+		prerequisite = { focus = BRA_invest_in_railways }
+		x = 0
+		y = 1
+		relative_position_id = BRA_invest_in_railways
+		cost = 10
+		ai_will_do = {
+			factor = 19
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_batalha_do_borracha
+		icon = GFX_focus_BRA_rubber_war
+		prerequisite = { focus = BRA_companhia_siderurgica_nacional focus = BRA_promote_resource_extraction }
+		x = 2
+		y = 1
+		relative_position_id = BRA_companhia_siderurgica_nacional
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_establish_companhia_vale_do_rio_doce
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = BRA_batalha_do_borracha }
+		x = -2
+		y = 1
+		relative_position_id = BRA_batalha_do_borracha
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_invest_in_road_infrastructure
+		icon = GFX_focus_generic_road_investment
+		prerequisite = { 
+			focus = BRA_batalha_do_borracha 
+			focus = BRA_invest_in_railways }
+		x = 2
+		y = 1
+		relative_position_id = BRA_invest_in_railways
+		cost = 5
+		ai_will_do = {
+			factor = 8
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_invest_in_ports
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = BRA_national_petroleum_council  }
+		x = 0
+		y = 1
+		relative_position_id = BRA_national_petroleum_council
+		cost = 5
+		ai_will_do = {
+			factor = 9
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_fabrica_nacional_de_motores
+		icon = GFX_focus_BRA_fabrica_national_de_motores
+		prerequisite = { focus = BRA_invest_in_road_infrastructure  }
+		x = -1
+		y = 2
+		relative_position_id = BRA_invest_in_road_infrastructure
+		mutually_exclusive = { focus = BRA_expand_fordlandia }
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_expand_fordlandia
+		icon = GFX_focus_SWE_lynx_armored_car
+		prerequisite = { focus = BRA_invest_in_road_infrastructure  }
+		x = 1
+		y = 2
+		relative_position_id = BRA_invest_in_road_infrastructure
+		mutually_exclusive = { focus = BRA_fabrica_nacional_de_motores }
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_bonus_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = BRA_invest_in_road_infrastructure  }
+		x = 0
+		y = 1
+		relative_position_id = BRA_invest_in_road_infrastructure
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_banco_do_brasil
+		icon = GFX_focus_BRA_banco_do_brasil
+		prerequisite = { focus = BRA_batalha_do_borracha 
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_batalha_do_borracha
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_federal_development
+		icon = GFX_focus_generic_agricultural_subsidies
+		prerequisite = { focus = BRA_banco_do_brasil  }
+		x = -1
+		y = 1
+		relative_position_id = BRA_banco_do_brasil
+		
+		cost = 5
+		available = {}
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_centralize_development
+		icon = GFX_focus_BRA_new_capital
+		prerequisite = { focus = BRA_banco_do_brasil  }
+		x = 1
+		y = 1
+		relative_position_id = BRA_banco_do_brasil
+		
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_financial_stimulation
+		icon = GFX_focus_BRA_growth
+		prerequisite = { focus = BRA_centralize_development focus = BRA_federal_development  }
+		x = 0
+		y = 2
+		relative_position_id = BRA_banco_do_brasil
+		cost = 5
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	
+
+	
+
+	focus = {
+		id = BRA_cooperation_in_the_americas
+		icon = GFX_focus_BRA_good_neighbor_policy
+		mutually_exclusive = { focus = BRA_domination_of_the_americas }
+		prerequisite = { 
+			focus = BRA_secure_our_borders 
+			focus = BRA_the_international_crisis
+		}
+		x = -10
+		y = 1
+		relative_position_id = BRA_secure_our_borders
+		cost = 5
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 5
+				has_completed_focus = BRA_reward_army_loyalty
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_defense_spending
+		icon = GFX_focus_BRA_for_the_fatherland
+		prerequisite = { 
+			focus = BRA_cooperation_in_the_americas 
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_cooperation_in_the_americas
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	focus = {
+		id = BRA_reach_out_to_our_neighbors
+		icon = GFX_focus_BRA_north_and_south_america
+		prerequisite = { 
+			focus = BRA_cooperation_in_the_americas 
+			
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRA_cooperation_in_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_in_faction = yes
+			}
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_south_american_defense_cooperation
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { 
+			focus = BRA_reach_out_to_our_neighbors 
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_reach_out_to_our_neighbors
+		cost = 5
+		bypass = {}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_foreign_legion
+		icon = GFX_focus_generic_manpower
+		prerequisite = { 
+			focus = BRA_reach_out_to_our_neighbors 
+			
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRA_reach_out_to_our_neighbors
+		cost = 5
+		bypass = {}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_south_american_research_cooperation
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { 
+			focus = BRA_south_american_defense_cooperation 
+			
+		}
+		mutually_exclusive = { focus = BRA_us_brazil_technology_exchange }
+		x = 0
+		y = 1
+		relative_position_id = BRA_south_american_defense_cooperation
+		cost = 5
+		bypass = {}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_washington_accords
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { 
+			focus = BRA_cooperation_in_the_americas 
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRA_cooperation_in_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		bypass = {}
+		cancel_if_invalid = yes
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_disrupt_operation_bolivar
+		icon = GFX_focus_BRA_disrupt_bolivar
+		prerequisite = { 
+			focus = BRA_defense_spending
+		}
+		relative_position_id = BRA_defense_spending
+		x = 0
+		y = 1
+		
+		cost = 10
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_potenji_river_conference
+		icon = GFX_focus_BRA_rio_protocol
+		prerequisite = { 
+			focus = BRA_washington_accords 
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_washington_accords
+		cost = 10
+		bypass = {}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_natal_naval_base
+
+		icon = GFX_focus_generic_air_bases
+
+		prerequisite = { 
+			focus = BRA_washington_accords 
+			
+		}
+
+		x = -2
+		y = 1
+
+		relative_position_id = BRA_washington_accords
+
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = BRA_smoking_cobras
+		icon = GFX_focus_BRA_cobras_fumantes
+		prerequisite = { 
+			focus = BRA_washington_accords 
+			
+		}
+		x = -4
+		y = 1
+		relative_position_id = BRA_washington_accords
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = BRA_no_fascism_in_south_america
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { 
+			focus = BRA_cooperation_in_the_americas 
+			
+		}
+		x = -4
+		y = 1
+		relative_position_id = BRA_cooperation_in_the_americas
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {} 
+	}
+
+	focus = {
+		id = BRA_senta_a_pua
+		icon = GFX_focus_BRA_senta_a_pua
+		prerequisite = { 
+			focus = BRA_natal_naval_base 
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_natal_naval_base
+		cost = 5
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_no_communism_in_south_america
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { 
+			focus = BRA_cooperation_in_the_americas 
+			
+		}
+		x = 4
+		y = 1
+		relative_position_id = BRA_cooperation_in_the_americas
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_us_brazil_technology_exchange
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { 
+			focus = BRA_potenji_river_conference 
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_potenji_river_conference
+		mutually_exclusive = { focus = BRA_south_american_research_cooperation }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {} 
+	}
+
+
+
+
+	
+
+	
+
+	focus = {
+		id = BRA_domination_of_the_americas
+		icon = GFX_focus_por_recover_latin_america
+		mutually_exclusive = { focus = BRA_cooperation_in_the_americas }
+		prerequisite = { 
+			focus = BRA_secure_our_borders 
+			focus = BRA_ethical_internationalism
+		}
+		x = 5
+		y = 1
+		relative_position_id = BRA_secure_our_borders
+		cost = 10
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 10
+				OR = {
+					has_government = fascism
+					has_completed_focus = BRA_empire_of_brazil
+				}
+			}
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_berlin_accords
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { 
+			focus = BRA_domination_of_the_americas 
+		}
+		bypass = {}
+		
+		x = -4
+		y = 1
+		relative_position_id = BRA_domination_of_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_completed_focus = BRA_rome_accords
+				GER = {
+					has_war_with = ITA
+				}
+			}
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_expand_operation_bolivar
+		icon = GFX_focus_BRA_expand_bolivar
+		prerequisite = { 
+			focus = BRA_berlin_accords 
+			focus = BRA_rome_accords
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_berlin_accords
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_german_tanks
+		icon = GFX_focus_BRA_acquire_german_tanks
+		prerequisite = { 
+			focus = BRA_expand_operation_bolivar 
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRA_expand_operation_bolivar
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_german_subs
+		icon = GFX_focus_BRA_german_submarine_development
+		prerequisite = { 
+			focus = BRA_expand_operation_bolivar 
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRA_expand_operation_bolivar
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = BRA_german_cooperation
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { 
+			focus = BRA_german_tanks 
+			focus = BRA_german_subs
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRA_german_subs
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_guyana_crisis
+		icon = GFX_focus_generic_attack_the_guyanas
+		prerequisite = { 
+			focus = BRA_domination_of_the_americas 
+		}
+		x = 4
+		y = 1
+		relative_position_id = BRA_domination_of_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 5
+				OR = {
+					ENG = { has_war_with_major = yes }
+					FRA = { has_war_with_major = yes }
+					HOL = { has_war_with_major = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = HOL
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_defense_of_the_fatherland
+		icon = GFX_focus_BRA_for_the_fatherland
+		prerequisite = { 
+			focus = BRA_domination_of_the_americas 
+		}
+		x =-2
+		y = 1
+		relative_position_id = BRA_domination_of_the_americas
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_uruguay_ultimatum
+		icon = GFX_focus_generic_attack_uruguay
+		prerequisite = { 
+			focus = BRA_anaue
+			focus = BRA_the_polaca 
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRA_anaue
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+		will_lead_to_war_with = URG
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_rome_accords
+		icon = GFX_focus_befriend_italy
+		prerequisite = { 
+			focus = BRA_domination_of_the_americas 
+		}
+		bypass = {}
+		
+		x = 0
+		y = 1
+		relative_position_id = BRA_domination_of_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_completed_focus = BRA_berlin_accords
+				ITA = {
+					has_war_with = GER
+				}
+			}
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_italian_car_industry
+		icon = GFX_focus_ITA_redirect_alfa_romeo_production
+		prerequisite = { 
+			focus = BRA_rome_accords 
+			focus = BRA_berlin_accords
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRA_rome_accords
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_italian_aircraft
+		icon = GFX_focus_BRA_italian_aircraft_development
+		prerequisite = { 
+			focus = BRA_italian_car_industry 
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRA_italian_car_industry
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_italian_trucks
+		icon = GFX_focus_BRA_joint_italian_motor_development
+		prerequisite = { 
+			focus = BRA_italian_car_industry 
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRA_italian_car_industry
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_italian_cooperation
+		icon = GFX_focus_ITA_ministry_of_italian_africa
+		prerequisite = { 
+			focus = BRA_italian_trucks 
+			focus = BRA_italian_aircraft
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRA_italian_trucks
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_attack_bolivia
+		icon = GFX_focus_generic_attack_bolivia
+		prerequisite = { 
+			focus = BRA_guyana_crisis 
+			
+		}
+		bypass = {}
+		x = -1
+		y = 1
+		relative_position_id = BRA_guyana_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		will_lead_to_war_with = BOL
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_paraguay_intervention
+		icon = GFX_focus_generic_attack_paraguay
+		prerequisite = { 
+			
+			focus = BRA_guyana_crisis
+		}
+		bypass = {}
+		x = 1
+		y = 1
+		relative_position_id = BRA_guyana_crisis
+		will_lead_to_war_with = PAR
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_provoke_argentina
+		icon = GFX_focus_generic_attack_argentina
+		prerequisite = { 
+			focus = BRA_attack_bolivia 
+			focus = BRA_paraguay_intervention
+		}
+		bypass = {}
+		x = 0
+		y = 1
+		relative_position_id = BRA_paraguay_intervention
+		cost = 5
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		will_lead_to_war_with = ARG
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_attack_chile
+		icon = GFX_focus_generic_attack_chile
+		prerequisite = { 
+			focus = BRA_paraguay_intervention 
+			focus = BRA_attack_bolivia
+		}
+		bypass = {}
+		x = 0
+		y = 1
+		relative_position_id = BRA_attack_bolivia
+		cost = 5
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		will_lead_to_war_with = CHL
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_panama_push
+		icon = GFX_goal_generic_attack_allies	
+		prerequisite = { 
+			focus = BRA_provoke_argentina
+			focus = BRA_attack_chile
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRA_attack_chile
+		will_lead_to_war_with = ECU
+		will_lead_to_war_with = VEN
+		will_lead_to_war_with = PRU
+		will_lead_to_war_with = PAN
+		will_lead_to_war_with = COL
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_form_mercosul
+		icon = GFX_focus_BRA_form_mercosul
+		prerequisite = { 
+			focus = BRA_domination_of_the_americas
+			
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRA_domination_of_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0 
+				is_in_faction = yes
+			}
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	
+
+	
+
+	focus = {
+		id = BRA_end_the_state_of_emergency
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		x = -15
+		y = 0
+		relative_position_id = BRA_tribunal_de_seguranca_nacional
+		mutually_exclusive = { focus = BRA_tribunal_de_seguranca_nacional focus = BRA_prepare_for_second_intentona }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
+				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_repeal_the_national_security_law
+		icon = GFX_focus_BRA_repeale_national_security_law
+		x = -4
+		y = 1
+		relative_position_id = BRA_end_the_state_of_emergency
+		prerequisite = { focus = BRA_end_the_state_of_emergency }
+		mutually_exclusive = { focus = BRA_romanticize_the_old_empire }
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_greater_federalism
+		icon = GFX_focus_BRA_greater_federalism
+		x = -1
+		y = 1
+		relative_position_id = BRA_repeal_the_national_security_law
+		prerequisite = { focus = BRA_repeal_the_national_security_law }
+		mutually_exclusive = { focus = BRA_continue_centralization } 
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	focus = {
+		id = BRA_continue_centralization
+		icon = GFX_focus_BRA_centralization
+		x = 1
+		y = 1
+		relative_position_id = BRA_repeal_the_national_security_law
+		prerequisite = { focus = BRA_repeal_the_national_security_law }
+		mutually_exclusive = { focus = BRA_greater_federalism }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_court_the_military
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 0
+		y = 2
+		relative_position_id = BRA_continue_centralization
+		prerequisite = { focus = BRA_continue_centralization }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = BRA_implement_a_national_guard
+		icon = GFX_focus_BRA_national_guard
+		x = 0
+		y = 2
+		relative_position_id = BRA_greater_federalism
+		prerequisite = { focus = BRA_greater_federalism }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_nationalize_the_banks
+		icon = GFX_focus_BRA_nationalize_banks
+		x = 0
+		y = 1
+		relative_position_id = BRA_implement_a_national_guard
+		prerequisite = { focus = BRA_implement_a_national_guard }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_establish_the_brazilian_investment_bank
+		icon = GFX_focus_BRA_pro_business_taxes
+		x = 0
+		y = 1
+		relative_position_id = BRA_court_the_military
+		prerequisite = { 
+			focus = BRA_court_the_military 
+		
+		}
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_church
+		icon = GFX_focus_por_concordat
+		x = 0
+		y = 1
+		relative_position_id = BRA_establish_the_brazilian_investment_bank
+		prerequisite = { focus = BRA_establish_the_brazilian_investment_bank }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_implement_article_138
+		icon = GFX_focus_generic_population_growth
+		x = 0
+		y = 1
+		relative_position_id = BRA_nationalize_the_banks
+		prerequisite = { focus = BRA_nationalize_the_banks }
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_tech_slot_2
+		icon = GFX_focus_BRA_university_of_sao_paulo
+		x = 1
+		y = 1
+		relative_position_id = BRA_implement_article_138
+		prerequisite = { focus = BRA_implement_article_138 focus = BRA_church }
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_ban_the_communist_party
+		icon = GFX_focus_BRA_ban_communist_party
+		x = 2
+		y = 1
+		relative_position_id = BRA_court_the_military
+		prerequisite = { 
+			focus = BRA_court_the_military 
+			
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_posts_for_generals
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 2
+		relative_position_id = BRA_ban_the_communist_party
+		prerequisite = { focus = BRA_ban_the_communist_party }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_third_republic
+		icon = GFX_focus_BRA_third_republic
+		x = 0
+		y = 1
+		relative_position_id = BRA_posts_for_generals
+		prerequisite = { focus = BRA_posts_for_generals }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_end_military_interference
+		icon = GFX_focus_NOR_broken_gun_policies
+		x = -2
+		y = 1
+		relative_position_id = BRA_implement_a_national_guard
+		prerequisite = { focus = BRA_implement_a_national_guard }
+		cost = 10
+		available = {}
+		cancel_if_invalid = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_free_speech
+		icon = GFX_focus_BRA_democratic_socialism
+		x = 0
+		y = 2
+		relative_position_id = BRA_end_military_interference
+		prerequisite = { focus = BRA_end_military_interference }
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_united_states_of_brazil
+		icon = GFX_focus_BRA_us_of_south_america
+		x = 0
+		y = 1
+		relative_position_id = BRA_free_speech
+		prerequisite = { focus = BRA_free_speech }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_united_states_of_south_america
+		icon = GFX_focus_BRA_us_of_brazil
+		x = 2
+		y = 1
+		relative_position_id = BRA_us_brazil_technology_exchange
+		prerequisite = { focus = BRA_us_brazil_technology_exchange focus = BRA_south_american_research_cooperation }
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}	
+	}
+
+	focus = {
+		id = BRA_address_labor_disputes
+		icon = GFX_focus_generic_workers
+		x = 0
+		y = 1
+		relative_position_id = BRA_tech_slot_2
+		prerequisite = { focus = BRA_free_speech focus = BRA_posts_for_generals }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_combat_separatism
+		icon = GFX_goal_generic_national_unity
+		x = -2
+		y = 2
+		relative_position_id = BRA_address_labor_disputes
+		prerequisite = { focus = BRA_address_labor_disputes }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_war_bonds
+		icon = GFX_focus_SWI_issue_war_bonds
+		x = 2
+		y = 2
+		relative_position_id = BRA_address_labor_disputes
+		prerequisite = { focus = BRA_address_labor_disputes }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		
+		
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_invite_foreign_companies
+		icon = GFX_focus_generic_american_investments
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
+				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRA_address_labor_disputes
+		prerequisite = { focus = BRA_address_labor_disputes }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_the_international_crisis
+		icon = GFX_focus_BRA_international_crisis
+		x = 0
+		y = 4
+		relative_position_id = BRA_tech_slot_2
+		prerequisite = { focus = BRA_address_labor_disputes }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	
+
+	
+
+	focus = {
+		id = BRA_prepare_for_second_intentona
+		icon = GFX_focus_por_workers_of_iberia
+		x = -15
+		y = 0
+		relative_position_id = BRA_end_the_state_of_emergency
+		mutually_exclusive = { focus = BRA_tribunal_de_seguranca_nacional focus = BRA_end_the_state_of_emergency }
+		cost = 5
+		available = {}
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = { }
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = BRA_end_the_state_of_emergency }
+				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
+			}
+		}
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	focus = {
+		id = BRA_infilitrate_the_military
+		icon = GFX_focus_SOV_military_purge
+		x = -1
+		y = 1
+		relative_position_id = BRA_prepare_for_second_intentona
+		prerequisite = { focus = BRA_prepare_for_second_intentona }
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_radicalize_the_proletariat
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 1
+		y = 1
+		relative_position_id = BRA_prepare_for_second_intentona
+		prerequisite = { focus = BRA_prepare_for_second_intentona }
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_free_prestes
+		icon = GFX_focus_BRA_free_prestes
+		x = 0
+		y = 1
+		relative_position_id = BRA_infilitrate_the_military
+		prerequisite = { focus = BRA_infilitrate_the_military focus = BRA_radicalize_the_proletariat }
+		mutually_exclusive = { focus = BRA_revive_the_anl }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_revive_the_anl
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 0
+		y = 1
+		relative_position_id = BRA_radicalize_the_proletariat
+		prerequisite = { focus = BRA_radicalize_the_proletariat focus = BRA_infilitrate_the_military }
+		mutually_exclusive = { focus = BRA_free_prestes }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_sway_the_cangaco
+		icon = GFX_focus_BRA_deal_with_the_cangaco
+		x = 1
+		y = 1
+		relative_position_id = BRA_revive_the_anl
+		prerequisite = { focus = BRA_revive_the_anl }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_POLITICAL}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_seek_soviet_support
+		icon = GFX_focus_BRA_seek_soviet_support
+		x = 0
+		y = 1
+		relative_position_id = BRA_free_prestes
+		prerequisite = { focus = BRA_free_prestes }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_POLITICAL}
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_launch_the_revolution
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 4
+		relative_position_id = BRA_prepare_for_second_intentona
+		prerequisite = { focus = BRA_free_prestes focus = BRA_revive_the_anl }
+		cost = 10
+		available = {}
+
+		bypass = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_align_with_moscow
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = -2
+		y = 1
+		relative_position_id = BRA_launch_the_revolution
+		prerequisite = { focus = BRA_launch_the_revolution }
+		prerequisite = { focus = BRA_free_prestes }
+		mutually_exclusive = { focus = BRA_oust_prestes focus = BRA_cangaco_coup }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_oust_prestes
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 1
+		relative_position_id = BRA_launch_the_revolution
+		prerequisite = { focus = BRA_launch_the_revolution }
+		prerequisite = { focus = BRA_revive_the_anl }
+		mutually_exclusive = { focus = BRA_align_with_moscow focus = BRA_cangaco_coup }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_cangaco_coup
+		icon = GFX_focus_BRA_deal_with_the_cangaco
+		x = 2
+		y = 1
+		relative_position_id = BRA_launch_the_revolution
+		prerequisite = { focus = BRA_launch_the_revolution }
+		prerequisite = { focus = BRA_sway_the_cangaco }
+		mutually_exclusive = { focus = BRA_align_with_moscow focus = BRA_oust_prestes }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_nationalization_of_industry
+		icon = GFX_goal_generic_soviet_construction
+		x = 6
+		y = 1
+		relative_position_id = BRA_align_with_moscow
+		prerequisite = { focus = BRA_align_with_moscow focus = BRA_oust_prestes focus = BRA_cangaco_coup }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_collectivization_of_agriculture
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 1
+		y = 1
+		relative_position_id = BRA_nationalization_of_industry
+		prerequisite = { focus = BRA_nationalization_of_industry }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_collectivization_of_transport
+		icon = GFX_focus_generic_railroad
+		x = 0
+		y = 1
+		relative_position_id = BRA_collectivization_of_agriculture
+		prerequisite = { focus = BRA_collectivization_of_agriculture }
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_rapid_industrialization
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -2
+		y = 1
+		relative_position_id = BRA_nationalization_of_industry
+		prerequisite = { focus = BRA_nationalization_of_industry }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_state_atheism
+		icon = GFX_focus_BRA_state_atheism
+		x = -1
+		y = 1
+		relative_position_id = BRA_rapid_industrialization
+		prerequisite = { focus = BRA_rapid_industrialization }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {}
+		mutually_exclusive = { focus = BRA_allow_the_church_to_operate }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_allow_the_church_to_operate
+		icon = GFX_focus_BRA_socialist_theologians
+		x = 1
+		y = 1
+		relative_position_id = BRA_rapid_industrialization
+		prerequisite = { focus = BRA_rapid_industrialization }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		mutually_exclusive = { focus = BRA_state_atheism }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_equality_for_women
+		icon = GFX_focus_ARG_women_in_industry
+		x = 0
+		y = 2
+		relative_position_id = BRA_rapid_industrialization
+		prerequisite = { focus = BRA_state_atheism focus = BRA_allow_the_church_to_operate }
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_soviet_economic_aid
+		icon = GFX_focus_BRA_purchase_soviet_equipment
+		x = -2
+		y = 1
+		relative_position_id = BRA_align_with_moscow
+		prerequisite = { focus = BRA_align_with_moscow }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_international_brigades
+		icon = GFX_focus_ETH_peacekeeping_forces
+		x = 0
+		y = 1
+		relative_position_id = BRA_align_with_moscow
+		prerequisite = { focus = BRA_align_with_moscow focus = BRA_oust_prestes focus = BRA_cangaco_coup }
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_tech_slot_3
+		icon = GFX_focus_generic_socialist_science
+		x = 4
+		y = 1
+		relative_position_id = BRA_align_with_moscow
+		prerequisite = { focus = BRA_align_with_moscow focus = BRA_oust_prestes focus = BRA_cangaco_coup }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_purchase_soviet_equipment
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = 0
+		y = 2
+		relative_position_id = BRA_soviet_economic_aid
+		prerequisite = { focus = BRA_soviet_economic_aid }
+		mutually_exclusive = { focus = BRA_license_soviet_designs }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_license_soviet_designs
+		icon = GFX_focus_generic_license_production
+		x = 2
+		y = 2
+		relative_position_id = BRA_soviet_economic_aid
+		prerequisite = { focus = BRA_soviet_economic_aid }
+		mutually_exclusive = { focus = BRA_purchase_soviet_equipment }
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_soviet_arms_industry
+		icon = GFX_focus_generic_combined_arms
+		x = -1
+		y = 1
+		relative_position_id = BRA_license_soviet_designs
+		prerequisite = { focus = BRA_license_soviet_designs focus = BRA_purchase_soviet_equipment }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_kgbrazil
+		icon = GFX_focus_BRA_kgbrazil
+		x = 2
+		y = 1
+		relative_position_id = BRA_align_with_moscow
+		prerequisite = { focus = BRA_align_with_moscow focus = BRA_oust_prestes focus = BRA_cangaco_coup }
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_spread_the_revolution
+
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 6
+		relative_position_id = BRA_launch_the_revolution
+		prerequisite = { focus = BRA_soviet_arms_industry focus = BRA_equality_for_women }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_join_the_comintern
+		icon = GFX_focus_generic_join_comintern
+		x = -2
+		y = 1
+		relative_position_id = BRA_spread_the_revolution
+		prerequisite = { focus = BRA_spread_the_revolution }
+		mutually_exclusive = { focus = BRA_create_faction }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_smash_fascism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = BRA_join_the_comintern focus = BRA_create_faction }
+		x = -1
+		y = 1
+		relative_position_id = BRA_join_the_comintern
+		cost = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {} 
+	}
+
+	focus = {
+		id = BRA_create_faction
+		icon = GFX_focus_BRA_create_faction
+		x = 2
+		y = 1
+		relative_position_id = BRA_spread_the_revolution
+		prerequisite = { focus = BRA_spread_the_revolution }
+		mutually_exclusive = { focus = BRA_join_the_comintern }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		bypass = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_anti_imperialism
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 1
+		y = 1
+		relative_position_id = BRA_join_the_comintern
+		prerequisite = { focus = BRA_join_the_comintern focus = BRA_create_faction }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_jaguar_diplomacy
+		icon = GFX_focus_BRA_jaguar_diplomacy
+		x = -1
+		y = 1
+		relative_position_id = BRA_create_faction
+		prerequisite = { focus = BRA_create_faction focus = BRA_join_the_comintern }
+		cost = 5
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_sway_the_neighbors
+		icon = GFX_focus_BRA_sway_the_neighbors
+		x = 0
+		y = 1
+		relative_position_id = BRA_kgbrazil
+		prerequisite = { focus = BRA_kgbrazil }
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}	
+
+	focus = {
+		id = BRA_union_of_latin_american_socialist_republics
+		icon = GFX_focus_BRA_ulasr
+		x = -2
+		y = 2
+		relative_position_id = BRA_create_faction
+		prerequisite = { focus = BRA_create_faction focus = BRA_join_the_comintern }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_smash_democracy
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BRA_join_the_comintern focus = BRA_create_faction }
+		x = 1
+		y = 1
+		relative_position_id = BRA_create_faction
+		cost = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {} 
+	}
+
+	
+	
+
+	focus = {
+		id = BRA_romanticize_the_old_empire
+		icon = GFX_focus_por_reclaim_crown_jewel
+		x = 4
+		y = 1
+		relative_position_id = BRA_end_the_state_of_emergency
+		prerequisite = { focus = BRA_end_the_state_of_emergency }
+		mutually_exclusive = { focus = BRA_repeal_the_national_security_law }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_vassouras_line
+		icon = GFX_focus_BRA_pedro_henrique
+		x = 2
+		y = 1
+		relative_position_id = BRA_romanticize_the_old_empire
+		prerequisite = { focus = BRA_romanticize_the_old_empire }
+		mutually_exclusive = { focus = BRA_petropolis_line }
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_petropolis_line
+		icon = GFX_focus_BRA_pedro_de_alcantara
+		x = -2
+		y = 1
+		relative_position_id = BRA_romanticize_the_old_empire
+		prerequisite = { focus = BRA_romanticize_the_old_empire }
+		mutually_exclusive = { focus = BRA_vassouras_line }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_restore_the_coffee_barons
+		icon = GFX_focus_BRA_cafe_com_leite_politics
+		x = 2
+		y = 1
+		relative_position_id = BRA_petropolis_line
+		prerequisite = { focus = BRA_vassouras_line focus = BRA_petropolis_line }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_constitutional_monarchy
+		icon = GFX_focus_BRA_constitutional_monarchy
+		x = 0
+		y = 1
+		relative_position_id = BRA_restore_the_coffee_barons
+		prerequisite = { focus = BRA_restore_the_coffee_barons }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_undermine_democracy
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 0
+		y = 1
+		relative_position_id = BRA_constitutional_monarchy
+		prerequisite = { focus = BRA_constitutional_monarchy }
+		
+		
+		cost = 10
+		cancel_if_invalid = no
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_invest_in_the_armed_forces
+		icon = GFX_goal_generic_military_deal
+		x = -2
+		y = 1
+		relative_position_id = BRA_constitutional_monarchy
+		prerequisite = { focus = BRA_constitutional_monarchy }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_royal_colleges
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = BRA_invest_in_the_armed_forces
+		prerequisite = { focus = BRA_invest_in_the_armed_forces }
+		
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_issue_lordships
+		icon = GFX_focus_generic_monarchy_2
+		x = 2
+		y = 1
+		relative_position_id = BRA_constitutional_monarchy
+		prerequisite = { focus = BRA_constitutional_monarchy }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_promote_agriculture
+		icon = GFX_focus_generic_coffee
+		x = 0
+		y = 1
+		relative_position_id = BRA_issue_lordships
+		prerequisite = { focus = BRA_issue_lordships }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_use_the_national_security_law
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 0
+		y = 1
+		relative_position_id = BRA_undermine_democracy
+		prerequisite = { focus = BRA_undermine_democracy }
+		
+		cost = 5
+		cancel_if_invalid = no
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_united_kingdom_of_brazil_and_portugal
+		icon = GFX_focus_por_the_kingdom_reunited
+		x = -2
+		y = 1
+		relative_position_id = BRA_use_the_national_security_law
+		prerequisite = { focus = BRA_use_the_national_security_law }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with_major = yes
+					is_in_faction_with = POR
+				}
+			}
+		}
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_claim_the_french_throne
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					has_completed_focus = BRA_prepare_for_second_intentona 
+					has_completed_focus = BRA_tribunal_de_seguranca_nacional
+				}
+			}
+			has_country_flag = BRA_pedro_de_alcantara_dead_flag
+		}
+
+		available = {}
+
+		bypass = {}
+
+		prerequisite = { focus = BRA_united_kingdom_of_brazil_and_portugal }
+		
+		icon = GFX_focus_focus_fra_orleans_restoration
+		x = 0
+		y = 1
+		relative_position_id = BRA_united_kingdom_of_brazil_and_portugal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_penal_battalions
+		icon = GFX_focus_SOV_penal_battalions
+		x = 2
+		y = 1
+		relative_position_id = BRA_use_the_national_security_law
+		prerequisite = { focus = BRA_use_the_national_security_law }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_amazonian_settlement
+		icon = GFX_focus_BRA_amazon_colonization 
+		x = 0
+		y = 1
+		relative_position_id = BRA_penal_battalions
+		prerequisite = { focus = BRA_penal_battalions }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_empire_of_brazil
+		icon = GFX_focus_BRA_empire_of_brazil
+		x = 0
+		y = 2
+		relative_position_id = BRA_use_the_national_security_law
+		prerequisite = { focus = BRA_use_the_national_security_law }
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_reclaim_territory_in_south_america
+		icon = GFX_focus_generic_attack_uruguay
+		x = -2
+		y = 1
+		relative_position_id = BRA_empire_of_brazil
+		prerequisite = { focus = BRA_empire_of_brazil }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_spirit_of_acre_war
+		icon = GFX_focus_generic_attack_bolivia
+		x = 0
+		y = 1
+		relative_position_id = BRA_reclaim_territory_in_south_america
+		prerequisite = { focus = BRA_demand_portugese_territory focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with_major = yes
+					is_in_faction_with = BOL
+				}
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_demand_portugese_territory
+		icon = GFX_focus_por_luso_tropicalism
+		x = 0
+		y = 1
+		relative_position_id = BRA_empire_of_brazil
+		prerequisite = { focus = BRA_empire_of_brazil }
+		mutually_exclusive = { focus = BRA_demand_portugese_submission }
+		cost = 5
+		ai_will_do = {
+			factor = 13
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with_major = yes
+					is_in_faction_with = POR
+				}
+			}
+		}
+		bypass = {}
+		will_lead_to_war_with = POR
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_demand_portugese_submission
+		icon = GFX_focus_generic_attack_portugal
+		x = 2
+		y = 1
+		relative_position_id = BRA_empire_of_brazil
+		prerequisite = { focus = BRA_empire_of_brazil }
+		mutually_exclusive = { focus = BRA_demand_portugese_territory }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with_major = yes
+					is_in_faction_with = POR
+				}
+			}
+		}
+		bypass = {}
+		will_lead_to_war_with = POR
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_restoration_of_honor
+		icon = GFX_focus_BRA_restore_brazilian_honor
+		x = 0
+		y = 1
+		relative_position_id = BRA_demand_portugese_territory
+		prerequisite = { focus = BRA_demand_portugese_territory focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_expand_colonial_empire
+		icon = GFX_focus_generic_africa_factory
+		x = 2
+		y = 1
+		relative_position_id = BRA_demand_portugese_territory
+		prerequisite = { focus = BRA_demand_portugese_territory focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with_major = yes
+				}
+			}
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_support_the_landowners
+		icon = GFX_focus_BRA_support_sugar_barons
+		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_reinvigorate_the_navy }
+		x = 4
+		y = 1
+		relative_position_id = BRA_reward_army_loyalty
+		mutually_exclusive = { focus = BRA_support_rural_folk }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_support_rural_folk
+		icon = GFX_focus_BRA_father_of_the_poor
+		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_reinvigorate_the_navy }
+		mutually_exclusive = { focus = BRA_support_the_landowners }
+		x = -3
+		y = 1
+		relative_position_id = BRA_reinvigorate_the_navy
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_support_industrialists
+		icon = GFX_focus_generic_industrialists
+		prerequisite = { focus = BRA_support_the_landowners focus = BRA_support_rural_folk }
+		x = 2
+		y = 1
+		relative_position_id = BRA_support_the_landowners
+		mutually_exclusive = { focus = BRA_consolidation_of_labor_laws }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_consolidation_of_labor_laws
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = BRA_support_the_landowners focus = BRA_support_rural_folk }
+		x = 0
+		y = 1
+		relative_position_id = BRA_support_the_landowners
+		mutually_exclusive = { focus = BRA_support_industrialists }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = BRA_establish_caloi
+		icon = GFX_focus_SWE_bicycle
+		x = 2
+		y = 1
+		prerequisite = { focus = BRA_promote_resource_extraction focus = BRA_companhia_siderurgica_nacional }
+		relative_position_id = BRA_promote_resource_extraction
+		cost = 5
+		available = {}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BRA_unify_south_america
+		icon = GFX_focus_generic_south_america
+		prerequisite = { 
+			focus = BRA_german_cooperation
+			focus = BRA_italian_cooperation
+			focus = BRA_panama_push
+		}
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		relative_position_id = BRA_italian_cooperation
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+}

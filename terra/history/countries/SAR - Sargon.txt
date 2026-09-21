@@ -1,0 +1,423 @@
+capital = 388
+
+oob = "SAR_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "SAR_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "SAR_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_support= 1
+	gw_artillery= 1
+	infantry_weapons1= 1
+	marines= 1
+	tech_engineers= 1
+	interwar_antiair= 1
+	interwar_artillery= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	construction1= 1
+	electronic_mechanical_engineering= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+		create_equipment_variant = {
+		name = "Servasken Mk 2"
+		type = heavy_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = wet_ammo_storage
+			special_type_slot_2 = extra_ammo_storage
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_heavy_two_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Yenin Mk 2"
+		type = heavy_tank_chassis_1
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_petrol_electric_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = wet_ammo_storage
+			special_type_slot_3 = extra_ammo_storage
+			suspension_type_slot = tank_interleaved_suspension
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Kayla Mk 0"
+		type = light_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_small_cannon_2
+			special_type_slot_1 = expanded_fuel_tank
+			special_type_slot_2 = wet_ammo_storage
+			special_type_slot_3 = smoke_launchers
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_light_three_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Atesim Mk 0"
+		type = light_tank_chassis_1
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_petrol_electric_engine
+			main_armament_slot = tank_small_cannon_2
+			special_type_slot_1 = wet_ammo_storage
+			special_type_slot_2 = expanded_fuel_tank
+			special_type_slot_3 = extra_ammo_storage
+			suspension_type_slot = tank_bogie_suspension
+			turret_type_slot = tank_light_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Akinak Mk 2"
+		type = medium_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_medium_cannon
+			special_type_slot_1 = secondary_turret_hmg
+			special_type_slot_2 = extra_ammo_storage
+			special_type_slot_3 = wet_ammo_storage
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_medium_one_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "SAR_1936_air_bba"
+		set_technology = {
+			
+		}
+
+	else = {
+		set_air_oob = "SAR_1936_air_legacy"
+		set_technology = {
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_carrier = 1
+	early_destroyer = 1
+	
+	}
+	set_naval_oob = "SAR_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Ulkerin Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Kultur Class"
+			type = carrier_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_engine_upgrade = 1
+				ship_deckspace_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_naval_mines = 1
+	early_ship_hull_carrier = 1
+	early_ship_hull_light = 1
+	sonar = 1
+	
+	}
+	set_naval_oob = "SAR_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Ulkerin Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = ship_mine_layer_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Kultur Class"
+			type = ship_hull_carrier_conversion_ca
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = empty
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_engine_slot = carrier_ship_engine_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_secondaries_slot = ship_secondaries_1
+			}
+		}
+
+	}
+
+
+recruit_character = SAR_Talha_Pazar
+recruit_character = SAR_Ertugrulende_Yaylakin
+recruit_character = SAR_Bulendem_Temiz
+recruit_character = SAR_Ener_Kisla
+recruit_character = SAR_Selilmazan_Sicak
+recruit_character = SAR_Talim_Golge
+recruit_character = SAR_Utku_Yaye
+recruit_character = SAR_Arif_Yaynat
+recruit_character = SAR_Yilmazan_Bululut
+recruit_character = SAR_Arif_Kultur
+recruit_character = SAR_Mustaferem_Kapi
+recruit_character = SAR_Talhatuhan_Akgu
+recruit_character = SAR_Ertugrulende_Buzgaris
+recruit_character = SAR_Emir_Buzgarin
+recruit_character = SAR_Bora_Baske
+recruit_character = SAR_Tunc_Gululuk
+recruit_character = SAR_Serha_Yaylakin
+recruit_character = SAR_Musuf_Golce
+recruit_character = SAR_Talhatuhan_Umutlut
+recruit_character = SAR_Suat_Aksam
+recruit_character = SAR_Eminan_Isildiz
+recruit_character = SAR_Halilmaz_Kapi
+recruit_character = SAR_Emir_Birin
+recruit_character = SAR_Ademazan_Yurt
+recruit_character = SAR_Batuhan_Kulukaynat
+recruit_character = SAR_Bekir_Birin
+recruit_character = SAR_Orhan_Isildiz
+recruit_character = SAR_Borat_Beder
+recruit_character = SAR_Kaan_Duyum
+recruit_character = SAR_Ademazan_Efsam
+recruit_character = SAR_Ramaz_Akgu
+recruit_character = SAR_Ertugrul_Yayat
+recruit_character = SAR_Suat_Sicak
+recruit_character = SAR_Bekir_Seri
+recruit_character = SAR_Orhan_Koyla
+recruit_character = SAR_Ener_Umut
+recruit_character = SAR_Borat_Dagmur
+recruit_character = SAR_Musulenderem_Seri
+recruit_character = SAR_Isker_Dagmutlulut
+recruit_character = SAR_Ertugrul_Ulkerin
+recruit_character = SAR_Halilmaz_Beder
+recruit_character = SAR_Sinan_Yaye
+recruit_character = SAR_Yilmazan_Buzgarin
+recruit_character = SAR_Halilmaz_Isildiz
+recruit_character = SAR_Musulender_Yakinda
+recruit_character = SAR_Ademazan_Isil
+recruit_character = SAR_Selilmazan_Saba
+recruit_character = SAR_Ertugrul_Nehirli
+recruit_character = SAR_Mustaferem_Atesim
+recruit_character = SAR_Emir_Tasam
+recruit_character = SAR_Ener_Nehirli
+recruit_character = SAR_Tunc_Yesildirlik
+recruit_character = SAR_Ener_Bululut
+recruit_character = SAR_Talha_Yenin
+recruit_character = SAR_Tunc_Beder
+recruit_character = SAR_Ertugrulende_Aske
+recruit_character = SAR_Ilkenderha_Baske
+recruit_character = SAR_Cemazanerkan_Sakina
+recruit_character = SAR_Utku_Kapi
+recruit_character = SAR_Orhat_Sakina
+recruit_character = SAR_Savas_Duyum
+recruit_character = SAR_Zaferhan_Geldir
+recruit_character = SAR_Ilkenderha_Kisar
+recruit_character = SAR_Farat_Dagmutlulut
+recruit_character = SAR_Enesul_Asimsek
+recruit_character = SAR_Kadir_Serim
+recruit_character = SAR_Mehmet_Golge
+recruit_character = SAR_Ertugruk_Ordu
+recruit_character = SAR_Yalih_Dagmutlulut
+recruit_character = SAR_Hakan_Seref
+recruit_character = SAR_Orhanesuf_Golce
+recruit_character = SAR_Yilmaz_Sakina
+recruit_character = SAR_Emir_Aske
+recruit_character = SAR_Yilmaz_Yaylakin
+recruit_character = SAR_Yustafa_Buluk
+recruit_character = SAR_Tunc_Nehirli
+recruit_character = SAR_Serhat_Kultur
+recruit_character = SAR_Yilmaz_Yaye
+recruit_character = SAR_Farat_Golce
+recruit_character = SAR_Musuf_Temiz
+recruit_character = SAR_Yustafa_Sicak
+recruit_character = SAR_Ilkenderha_Golce
+recruit_character = SAR_Ertugrul_Yent
+recruit_character = SAR_Batuhan_Isildiz
+recruit_character = SAR_Ramaz_Geldi
+recruit_character = SAR_Baran_Duvas
+recruit_character = SAR_Batuhan_Dagmutlulut
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 3
+set_convoys = 19
+set_stability = 0.31
+set_war_support = 0.79
+
+add_ideas = {
+disarmed_nation
+civilian_economy
+autarkic_economy
+}
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1919.6.2"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 11
+	fascism = 31
+	communism = 40
+	neutrality = 18
+}
+
+
+
+
+

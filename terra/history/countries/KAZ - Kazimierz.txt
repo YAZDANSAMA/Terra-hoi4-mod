@@ -1,0 +1,424 @@
+capital = 375
+
+oob = "KAZ_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "KAZ_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "KAZ_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_trucks= 1
+	gw_artillery= 1
+	paratroopers= 1
+	marines= 1
+	tech_mountaineers= 1
+	motorised_infantry= 1
+	armored_car1= 1
+	interwar_antiair= 1
+	interwar_antitank= 1
+	interwar_artillery= 1
+	basic_machine_tools= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+		improved_light_tank_chassis = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+		create_equipment_variant = {
+		name = "Oihotza Mk 2"
+		type = heavy_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_heavy_cannon
+			special_type_slot_1 = expanded_fuel_tank
+			special_type_slot_2 = wet_ammo_storage
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Etxe Mk 1"
+		type = light_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_small_cannon
+			special_type_slot_1 = extra_ammo_storage
+			special_type_slot_3 = expanded_fuel_tank
+			suspension_type_slot = tank_christie_suspension
+			turret_type_slot = tank_light_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Bakatasuntza Mk 0"
+		type = light_tank_chassis_1
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			main_armament_slot = tank_small_cannon_2
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = wet_ammo_storage
+			suspension_type_slot = tank_bogie_suspension
+			turret_type_slot = tank_light_three_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Oihotza Mk 2"
+		type = light_tank_chassis_2
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			main_armament_slot = tank_small_cannon
+			special_type_slot_1 = secondary_turret_hmg
+			special_type_slot_3 = expanded_fuel_tank
+			suspension_type_slot = tank_interleaved_suspension
+			turret_type_slot = tank_light_fixed_superstructure_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "Zuhar Mk 1"
+		type = medium_tank_chassis_0
+		parent_version = 1
+		show_position = no
+		modules = {
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_petrol_electric_engine
+			main_armament_slot = tank_medium_cannon
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = wet_ammo_storage
+			special_type_slot_3 = expanded_fuel_tank
+			suspension_type_slot = tank_torsion_bar_suspension
+			turret_type_slot = tank_medium_one_man_tank_turret
+
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "KAZ_1936_air_bba"
+		set_technology = {
+			photo_reconnaisance = 1
+			aa_lmg = 1
+			engines_1 = 1
+			
+		}
+
+	else = {
+		set_air_oob = "KAZ_1936_air_legacy"
+		set_technology = {
+			scout_plane1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_destroyer = 1
+	early_submarine = 1
+	
+	}
+	set_naval_oob = "KAZ_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Etxe Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Begia Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_torpedo_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_torpedo = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	smoke_generator = 1
+	sonar = 1
+	
+	}
+	set_naval_oob = "KAZ_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Etxe Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Begia Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = sub_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				rear_1_custom_slot = empty
+			}
+		}
+
+	}
+
+
+recruit_character = KAZ_Gorka_Argia
+recruit_character = KAZ_Aitor_Amena
+recruit_character = KAZ_Aitz_Gaurra
+recruit_character = KAZ_Iban_Aintzur
+recruit_character = KAZ_Ekai_Badia
+recruit_character = KAZ_Iban_Helarrakerri
+recruit_character = KAZ_Gaitz_Gautza
+recruit_character = KAZ_Gaizkaitz_Zuhar
+recruit_character = KAZ_Ekai_Pozarra
+recruit_character = KAZ_Gaizkaitz_Biharrakapen
+recruit_character = KAZ_Aitz_Zuhar
+recruit_character = KAZ_Aitor_Zalmenaua
+recruit_character = KAZ_Harka_Arnaskua
+recruit_character = KAZ_Ibaitz_Begi
+recruit_character = KAZ_Iban_Zora
+recruit_character = KAZ_Harkaitz_Semea
+recruit_character = KAZ_Amaiur_Badia
+recruit_character = KAZ_Ekai_Zarteantza
+recruit_character = KAZ_Eneko_Ahaintzalmug
+recruit_character = KAZ_Iker_Zuharrata
+recruit_character = KAZ_Ibaizkaizkai_Eskua
+recruit_character = KAZ_Ibaiur_Nazki
+recruit_character = KAZ_Ikel_Indarreka
+recruit_character = KAZ_Aitorkai_Nazki
+recruit_character = KAZ_Asier_Abesti
+recruit_character = KAZ_Xabier_Zelmuga
+recruit_character = KAZ_Ibaizkaizkai_Eusmoa
+recruit_character = KAZ_Ibaiur_Aina
+recruit_character = KAZ_Koldo_Eusmoa
+recruit_character = KAZ_Gaitz_Abeta
+recruit_character = KAZ_Ikel_Pozarra
+recruit_character = KAZ_Ander_Argia
+recruit_character = KAZ_Iker_Zelmuga
+recruit_character = KAZ_Benat_Ahaintzalmug
+recruit_character = KAZ_Unat_Bakatasuntza
+recruit_character = KAZ_Amaizkaitor_Kokaso
+recruit_character = KAZ_Ibanti_Elur
+recruit_character = KAZ_Koldo_Indartza
+recruit_character = KAZ_Amaizkaitor_Indartza
+recruit_character = KAZ_Asier_Berrebaintza
+recruit_character = KAZ_Benaitz_Eusmoa
+recruit_character = KAZ_Xabier_Argi
+recruit_character = KAZ_Ekaitz_Zarteantza
+recruit_character = KAZ_Ikel_Etxeko
+recruit_character = KAZ_Amaizka_Heria
+recruit_character = KAZ_Aitor_Zelmuga
+recruit_character = KAZ_Eneko_Jakerebazkun
+recruit_character = KAZ_Ekai_Begi
+recruit_character = KAZ_Harkaiur_Ikarrebai
+recruit_character = KAZ_Gorkaitz_Zubi
+recruit_character = KAZ_Gaitz_Koba
+recruit_character = KAZ_Harkai_Eguntzira
+recruit_character = KAZ_Gorkaitz_Oihotza
+recruit_character = KAZ_Xanti_Herotzagunas
+recruit_character = KAZ_Ibaitz_Biharrakapen
+recruit_character = KAZ_Aitor_Hita
+recruit_character = KAZ_Harka_Griona
+recruit_character = KAZ_Ibaiur_Uratasuna
+recruit_character = KAZ_Ibanti_Bela
+recruit_character = KAZ_Ekaitz_Zalets
+recruit_character = KAZ_Harkaitz_Bela
+recruit_character = KAZ_Xanti_Zalmenaua
+recruit_character = KAZ_Ekaitz_Ikartza
+recruit_character = KAZ_Aitorkai_Zuhar
+recruit_character = KAZ_Gorkaitorka_Bakarroizea
+recruit_character = KAZ_Aitor_Helarrakerri
+recruit_character = KAZ_Ander_Itxe
+recruit_character = KAZ_Harkaiur_Uratasuna
+recruit_character = KAZ_Benaitz_Gaurra
+recruit_character = KAZ_Ibanti_Inguzkimena
+recruit_character = KAZ_Gaiur_Bela
+recruit_character = KAZ_Harka_Kantzuloa
+recruit_character = KAZ_Harkaitz_Kokaso
+recruit_character = KAZ_Amaiur_Nazki
+recruit_character = KAZ_Unaitz_Grin
+recruit_character = KAZ_Koldo_Aina
+recruit_character = KAZ_Amaiur_Hodea
+recruit_character = KAZ_Benaitz_Zalmenaua
+recruit_character = KAZ_Koldo_Zuloa
+recruit_character = KAZ_Unat_Gargia
+recruit_character = KAZ_Gorkaitorka_Elur
+recruit_character = KAZ_Ander_Zartzuloa
+recruit_character = KAZ_Koldo_Zarteantza
+recruit_character = KAZ_Amai_Bereko
+recruit_character = KAZ_Aitz_Zarteantza
+recruit_character = KAZ_Amai_Bizirak
+recruit_character = KAZ_Benat_Zoreko
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 3
+set_convoys = 0
+set_stability = 0.95
+set_war_support = 0.27
+
+add_ideas = {
+limited_conscription
+civilian_economy
+export_focus
+}
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1934.5.19"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 33
+	fascism = 30
+	communism = 32
+	neutrality = 5
+}
+
+
+
+
+

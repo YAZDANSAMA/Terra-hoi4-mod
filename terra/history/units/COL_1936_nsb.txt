@@ -1,0 +1,148 @@
+division_template = {
+	name = "Militia Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Cavalry Division"
+
+	regiments = {
+			cavalry = {  x = 0 y = 0 }
+			cavalry = {  x = 0 y = 1 }
+			cavalry = {  x = 1 y = 0 }
+			cavalry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "1st 'Nubernis' Militia Division"
+		location = 7305
+		division_template = "Militia Division"
+		start_experience_factor = 0.651328
+		start_equipment_factor = 0.820332
+	}
+	division= {
+		name = "2nd 'Forina' Militia Division"
+		location = 4387
+		division_template = "Militia Division"
+		start_experience_factor = 0.013870
+		start_equipment_factor = 0.831900
+	}
+	division= {
+		name = "3rd 'Bonsare' Militia Division"
+		location = 4043
+		division_template = "Militia Division"
+		start_experience_factor = 0.551139
+		start_equipment_factor = 0.757272
+	}
+	division= {
+		name = "4th 'Libum' Militia Division"
+		location = 6239
+		division_template = "Militia Division"
+		start_experience_factor = 0.476251
+		start_equipment_factor = 0.838411
+	}
+	division= {
+		name = "5th 'Kamna' Militia Division"
+		location = 3484
+		division_template = "Militia Division"
+		start_experience_factor = 0.314090
+		start_equipment_factor = 0.823006
+	}
+	division= {
+		name = "1st 'Greas' Infantry Division"
+		location = 590
+		division_template = "Infantry Division"
+		start_experience_factor = 0.449581
+		start_equipment_factor = 0.811078
+	}
+	division= {
+		name = "2nd 'Vilis' Infantry Division"
+		location = 4850
+		division_template = "Infantry Division"
+		start_experience_factor = 0.362730
+		start_equipment_factor = 0.753649
+	}
+	division= {
+		name = "1st 'Fersultus' Cavalry Division"
+		location = 4856
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.289576
+		start_equipment_factor = 0.874929
+	}
+	division= {
+		name = "2nd 'Cellamplus' Cavalry Division"
+		location = 6667
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.381345
+		start_equipment_factor = 0.842978
+	}
+	division= {
+		name = "3rd 'Avana' Cavalry Division"
+		location = 342
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.747786
+		start_equipment_factor = 0.821577
+	}
+	division= {
+		name = "4th 'Sterra' Cavalry Division"
+		location = 4853
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.991474
+		start_equipment_factor = 0.801511
+	}
+	division= {
+		name = "5th 'Prithare' Cavalry Division"
+		location = 7868
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.956164
+		start_equipment_factor = 0.794745
+	}
+	division= {
+		name = "6th 'Auctorma' Cavalry Division"
+		location = 907
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.893121
+		start_equipment_factor = 0.777333
+	}
+
+}

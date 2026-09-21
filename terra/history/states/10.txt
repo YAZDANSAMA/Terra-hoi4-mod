@@ -1,0 +1,41 @@
+
+state={
+	id=10
+	name="STATE_10"
+	manpower = 986177
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		owner = AEG
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			8092 = {
+				naval_base = 1
+			}
+			
+		}
+		add_core_of = AEG
+	}
+
+	provinces={
+		8090 8091 8092 8179 8180 8181 8182 8183 8184 8191 8192 8193 8217 8228 8230 8241 8100 8103 8095 8106 8098 8097 8099 8105 8094 8096 8102 8093 8101 8104
+
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,133 @@
+division_template = {
+	name = "Militia Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 1 y = 3 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Artillery Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 1 y = 3 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+			artillery_brigade = {  x = 3 y = 0 }
+			artillery_brigade = {  x = 3 y = 1 }
+			artillery_brigade = {  x = 3 y = 2 }
+
+	}
+	
+	support = {
+			artillery = {  x = 0 y = 0 }
+
+	}
+}
+division_template = {
+	name = "Cavalry Division"
+
+	regiments = {
+			cavalry = {  x = 0 y = 0 }
+			cavalry = {  x = 0 y = 1 }
+			cavalry = {  x = 1 y = 0 }
+			cavalry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "1st 'Ragbati' Militia Division"
+		location = 3395
+		division_template = "Militia Division"
+		start_experience_factor = 0.143313
+		start_equipment_factor = 0.809425
+	}
+	division= {
+		name = "2nd 'Naniq' Militia Division"
+		location = 2532
+		division_template = "Militia Division"
+		start_experience_factor = 0.778465
+		start_equipment_factor = 0.838190
+	}
+	division= {
+		name = "1st 'Sazm' Infantry Division"
+		location = 7266
+		division_template = "Infantry Division"
+		start_experience_factor = 0.306942
+		start_equipment_factor = 0.791740
+	}
+	division= {
+		name = "1st 'Baske' Artillery Division"
+		location = 4454
+		division_template = "Artillery Division"
+		start_experience_factor = 0.611026
+		start_equipment_factor = 0.843508
+	}
+	division= {
+		name = "1st 'Karlikayla' Cavalry Division"
+		location = 2155
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.928651
+		start_equipment_factor = 0.850398
+	}
+	division= {
+		name = "2nd 'Talabzamidar' Cavalry Division"
+		location = 7335
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.859088
+		start_equipment_factor = 0.866657
+	}
+	division= {
+		name = "3rd 'Nehirlik' Cavalry Division"
+		location = 4473
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.132754
+		start_equipment_factor = 0.824421
+	}
+
+}

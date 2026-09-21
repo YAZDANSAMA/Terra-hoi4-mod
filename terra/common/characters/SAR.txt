@@ -1,0 +1,1083 @@
+characters = {
+	SAR_Talha_Pazar={
+		name="Talha Pazar"
+
+		
+		country_leader={
+			ideology=centrism
+			traits = { first_lady  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAR_Ertugrulende_Yaylakin={
+		name="Ertugrulende Yaylakin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Ertugrulende_Yaylakin
+			traits = {	agricultural_nationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Bulendem_Temiz={
+		name="Bulendem Temiz"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Bulendem_Temiz
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Ener_Kisla={
+		name="Ener Kisla"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Ener_Kisla
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Selilmazan_Sicak={
+		name="Selilmazan Sicak"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Selilmazan_Sicak
+			traits = {	humble 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Talim_Golge={
+		name="Talim Golge"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Talim_Golge
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Utku_Yaye={
+		name="Utku Yaye"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Utku_Yaye
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Arif_Yaynat={
+		name="Arif Yaynat"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Arif_Yaynat
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	SAR_Yilmazan_Bululut={
+		name="Yilmazan Bululut"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Yilmazan_Bululut
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	SAR_Arif_Kultur={
+		name="Arif Kultur"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Arif_Kultur
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	SAR_Mustaferem_Kapi={
+		name="Mustaferem Kapi"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Mustaferem_Kapi
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	SAR_Talhatuhan_Akgu={
+		name="Talhatuhan Akgu"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Talhatuhan_Akgu
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	SAR_Ertugrulende_Buzgaris={
+		name="Ertugrulende Buzgaris"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Ertugrulende_Buzgaris
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	SAR_Emir_Buzgarin={
+		name="Emir Buzgarin"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Emir_Buzgarin
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	SAR_Bora_Baske={
+		name="Bora Baske"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Bora_Baske
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	SAR_Tunc_Gululuk={
+		name="Tunc Gululuk"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Tunc_Gululuk
+			traits = {	air_close_air_support_1 	}
+		}
+
+
+	}
+	SAR_Serha_Yaylakin={
+		name="Serha Yaylakin"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Serha_Yaylakin
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	SAR_Musuf_Golce={
+		name="Musuf Golce"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Musuf_Golce
+			traits = {	navy_fleet_logistics_1 	}
+		}
+
+
+	}
+	SAR_Talhatuhan_Umutlut={
+		name="Talhatuhan Umutlut"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Talhatuhan_Umutlut
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	SAR_Suat_Aksam={
+		name="Suat Aksam"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Suat_Aksam
+			traits = {	army_CombinedArms_2 	}
+		}
+
+
+	}
+	SAR_Eminan_Isildiz={
+		name="Eminan Isildiz"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Eminan_Isildiz
+			traits = {	air_strategic_bombing_2 	}
+		}
+
+
+	}
+	SAR_Halilmaz_Kapi={
+		name="Halilmaz Kapi"
+
+		
+		country_leader={
+			ideology=falangism
+			traits = { archon_basileus  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAR_Emir_Birin={
+		name="Emir Birin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Emir_Birin
+			traits = {	autokrator 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	SAR_Ademazan_Yurt={
+		name="Ademazan Yurt"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Ademazan_Yurt
+			traits = {	subservient_ultranationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	SAR_Batuhan_Kulukaynat={
+		name="Batuhan Kulukaynat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Batuhan_Kulukaynat
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	SAR_Bekir_Birin={
+		name="Bekir Birin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Bekir_Birin
+			traits = {	subservient_ultranationalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Orhan_Isildiz={
+		name="Orhan Isildiz"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Orhan_Isildiz
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Borat_Beder={
+		name="Borat Beder"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Borat_Beder
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	SAR_Kaan_Duyum={
+		name="Kaan Duyum"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Kaan_Duyum
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	SAR_Ademazan_Efsam={
+		name="Ademazan Efsam"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Ademazan_Efsam
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	SAR_Ramaz_Akgu={
+		name="Ramaz Akgu"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Ramaz_Akgu
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	SAR_Ertugrul_Yayat={
+		name="Ertugrul Yayat"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Ertugrul_Yayat
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	SAR_Suat_Sicak={
+		name="Suat Sicak"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Suat_Sicak
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	SAR_Bekir_Seri={
+		name="Bekir Seri"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Bekir_Seri
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	SAR_Orhan_Koyla={
+		name="Orhan Koyla"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Orhan_Koyla
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	SAR_Ener_Umut={
+		name="Ener Umut"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Ener_Umut
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	SAR_Borat_Dagmur={
+		name="Borat Dagmur"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Borat_Dagmur
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	SAR_Musulenderem_Seri={
+		name="Musulenderem Seri"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Musulenderem_Seri
+			traits = {	army_concealment_1 	}
+		}
+
+
+	}
+	SAR_Isker_Dagmutlulut={
+		name="Isker Dagmutlulut"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Isker_Dagmutlulut
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	SAR_Ertugrul_Ulkerin={
+		name="Ertugrul Ulkerin"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Ertugrul_Ulkerin
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	SAR_Halilmaz_Beder={
+		name="Halilmaz Beder"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Halilmaz_Beder
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	SAR_Sinan_Yaye={
+		name="Sinan Yaye"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Sinan_Yaye
+			traits = {	army_regrouping_2 	}
+		}
+
+
+	}
+	SAR_Yilmazan_Buzgarin={
+		name="Yilmazan Buzgarin"
+
+		
+		country_leader={
+			ideology=anti_revisionism
+			traits = { marxist_fundamentalist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAR_Halilmaz_Isildiz={
+		name="Halilmaz Isildiz"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Halilmaz_Isildiz
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Musulender_Yakinda={
+		name="Musulender Yakinda"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Musulender_Yakinda
+			traits = {	revolutionary_poet 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Ademazan_Isil={
+		name="Ademazan Isil"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Ademazan_Isil
+			traits = {	leftist_independent 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Selilmazan_Saba={
+		name="Selilmazan Saba"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Selilmazan_Saba
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Ertugrul_Nehirli={
+		name="Ertugrul Nehirli"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Ertugrul_Nehirli
+			traits = {	mastermind_code_cracker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Mustaferem_Atesim={
+		name="Mustaferem Atesim"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Mustaferem_Atesim
+			traits = {	revolutionary_poet 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Emir_Tasam={
+		name="Emir Tasam"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Emir_Tasam
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	SAR_Ener_Nehirli={
+		name="Ener Nehirli"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Ener_Nehirli
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	SAR_Tunc_Yesildirlik={
+		name="Tunc Yesildirlik"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Tunc_Yesildirlik
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	SAR_Ener_Bululut={
+		name="Ener Bululut"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Ener_Bululut
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	SAR_Talha_Yenin={
+		name="Talha Yenin"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Talha_Yenin
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	SAR_Tunc_Beder={
+		name="Tunc Beder"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Tunc_Beder
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	SAR_Ertugrulende_Aske={
+		name="Ertugrulende Aske"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Ertugrulende_Aske
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	SAR_Ilkenderha_Baske={
+		name="Ilkenderha Baske"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Ilkenderha_Baske
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	SAR_Cemazanerkan_Sakina={
+		name="Cemazanerkan Sakina"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Cemazanerkan_Sakina
+			traits = {	navy_anti_submarine_1 	}
+		}
+
+
+	}
+	SAR_Utku_Kapi={
+		name="Utku Kapi"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Utku_Kapi
+			traits = {	army_regrouping_2 	}
+		}
+
+
+	}
+	SAR_Orhat_Sakina={
+		name="Orhat Sakina"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Orhat_Sakina
+			traits = {	navy_naval_air_defense_1 	}
+		}
+
+
+	}
+	SAR_Savas_Duyum={
+		name="Savas Duyum"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Savas_Duyum
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	SAR_Zaferhan_Geldir={
+		name="Zaferhan Geldir"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Zaferhan_Geldir
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	SAR_Ilkenderha_Kisar={
+		name="Ilkenderha Kisar"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Ilkenderha_Kisar
+			traits = {	navy_anti_submarine_1 	}
+		}
+
+
+	}
+	SAR_Farat_Dagmutlulut={
+		name="Farat Dagmutlulut"
+
+		
+		country_leader={
+			ideology=socialism
+			traits = { the_young_magnate  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SAR_Enesul_Asimsek={
+		name="Enesul Asimsek"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Enesul_Asimsek
+			traits = {	the_young_magnate 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	SAR_Kadir_Serim={
+		name="Kadir Serim"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Kadir_Serim
+			traits = {	democratic_crusader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_2_small
+			}
+		}
+
+
+	}
+	SAR_Mehmet_Golge={
+		name="Mehmet Golge"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Mehmet_Golge
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Ertugruk_Ordu={
+		name="Ertugruk Ordu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Ertugruk_Ordu
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Yalih_Dagmutlulut={
+		name="Yalih Dagmutlulut"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Yalih_Dagmutlulut
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_South_Africa_Political_Leader_Generic_small
+			}
+		}
+
+
+	}
+	SAR_Hakan_Seref={
+		name="Hakan Seref"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SAR_Hakan_Seref
+			traits = {	the_banker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Africa_Generic_1_small
+			}
+		}
+
+
+	}
+	SAR_Orhanesuf_Golce={
+		name="Orhanesuf Golce"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Orhanesuf_Golce
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	SAR_Yilmaz_Sakina={
+		name="Yilmaz Sakina"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Yilmaz_Sakina
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	SAR_Emir_Aske={
+		name="Emir Aske"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Emir_Aske
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	SAR_Yilmaz_Yaylakin={
+		name="Yilmaz Yaylakin"
+
+		advisor={
+			slot = army_chief
+			idea_token = SAR_Yilmaz_Yaylakin
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	SAR_Yustafa_Buluk={
+		name="Yustafa Buluk"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Yustafa_Buluk
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	SAR_Tunc_Nehirli={
+		name="Tunc Nehirli"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SAR_Tunc_Nehirli
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	SAR_Serhat_Kultur={
+		name="Serhat Kultur"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Serhat_Kultur
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	SAR_Yilmaz_Yaye={
+		name="Yilmaz Yaye"
+
+		advisor={
+			slot = air_chief
+			idea_token = SAR_Yilmaz_Yaye
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	SAR_Farat_Golce={
+		name="Farat Golce"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Farat_Golce
+			traits = {	navy_submarine_2 	}
+		}
+
+
+	}
+	SAR_Musuf_Temiz={
+		name="Musuf Temiz"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Musuf_Temiz
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	SAR_Yustafa_Sicak={
+		name="Yustafa Sicak"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Yustafa_Sicak
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	SAR_Ilkenderha_Golce={
+		name="Ilkenderha Golce"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Ilkenderha_Golce
+			traits = {	navy_anti_submarine_1 	}
+		}
+
+
+	}
+	SAR_Ertugrul_Yent={
+		name="Ertugrul Yent"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Ertugrul_Yent
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	SAR_Batuhan_Isildiz={
+		name="Batuhan Isildiz"
+
+		advisor={
+			slot = high_command
+			idea_token = SAR_Batuhan_Isildiz
+			traits = {	army_regrouping_2 	}
+		}
+
+
+	}
+	SAR_Ramaz_Geldi={
+		name="Ramaz Geldi"
+
+		advisor={
+			slot = theorist
+			idea_token = SAR_Ramaz_Geldi
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	SAR_Baran_Duvas={
+		name="Baran Duvas"
+
+		advisor={
+			slot = theorist
+			idea_token = SAR_Baran_Duvas
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	SAR_Batuhan_Dagmutlulut={
+		name="Batuhan Dagmutlulut"
+
+		advisor={
+			slot = theorist
+			idea_token = SAR_Batuhan_Dagmutlulut
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

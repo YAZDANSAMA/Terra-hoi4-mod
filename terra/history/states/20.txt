@@ -1,0 +1,39 @@
+
+state={
+	id=20
+
+	name="Lingones"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = LGE
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LGE
+	}
+
+	provinces={
+		506 508 518 521 522 523 524 2041 2042 2043 2044 2045 2046 2047 2048 2233 2490 2491 2697 2698 2917 2918 3133 3137 4082 4086 4090 4218 4219 4220 4221 4222 4223 4224 4225 4226 4227 4593 4594 4595 4596 4597 4598 4599 4600 4601 4602 4603 4604 5025 5027 5029 5035 5263 5593 5594 5595 5596 5597 6322 6323 6595 6596 7981 7982
+	}
+	local_supplies=0.0 
+}

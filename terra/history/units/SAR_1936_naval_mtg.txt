@@ -1,0 +1,30 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Sargon Fleet"			
+		naval_base = 8158
+		task_force = {
+			name = "Sargon Fleet"
+			location = 8158
+			
+						ship = { name = "Dagmutlulut" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SAR version_name = "Ulkerin Class" } }	}
+			ship = { name = "Dagmur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SAR version_name = "Ulkerin Class" } }	}
+			ship = { name = "Servasken" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SAR version_name = "Ulkerin Class" } }	}
+			ship = { name = "Servasken 2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SAR version_name = "Ulkerin Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

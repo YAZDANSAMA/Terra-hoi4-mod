@@ -1,0 +1,1083 @@
+characters = {
+	KZL_Adem_Sonbaharlil={
+		name="Adem Sonbaharlil"
+
+		
+		country_leader={
+			ideology=moderatism
+			traits = { humble  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KZL_Savas_Yayla={
+		name="Savas Yayla"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Savas_Yayla
+			traits = {	humble 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Cemalilmalim_Sogun={
+		name="Cemalilmalim Sogun"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Cemalilmalim_Sogun
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Talih_Gecmi={
+		name="Talih Gecmi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Talih_Gecmi
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Aderkan_Anak={
+		name="Aderkan Anak"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Aderkan_Anak
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Talcin_Belece={
+		name="Talcin Belece"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Talcin_Belece
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Mustaferhat_Sicakin={
+		name="Mustaferhat Sicakin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Mustaferhat_Sicakin
+			traits = {	agricultural_capitalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Talim_Duyum={
+		name="Talim Duyum"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Talim_Duyum
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	KZL_Yilmalilmali_Kaye={
+		name="Yilmalilmali Kaye"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Yilmalilmali_Kaye
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	KZL_Haran_Servane={
+		name="Haran Servane"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Haran_Servane
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	KZL_Taylan_Buzgac={
+		name="Taylan Buzgac"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Taylan_Buzgac
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	KZL_Ertuhan_Sehirlik={
+		name="Ertuhan Sehirlik"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Ertuhan_Sehirlik
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	KZL_Ilkerkan_Seref={
+		name="Ilkerkan Seref"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Ilkerkan_Seref
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	KZL_Mehmet_Sogru={
+		name="Mehmet Sogru"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Mehmet_Sogru
+			traits = {	air_chief_reform_1 	}
+		}
+
+
+	}
+	KZL_Cemalilmalim_Sehil={
+		name="Cemalilmalim Sehil"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Cemalilmalim_Sehil
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	KZL_Haran_Yakin={
+		name="Haran Yakin"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Haran_Yakin
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	KZL_Zafa_Birla={
+		name="Zafa Birla"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Zafa_Birla
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	KZL_Resulendemal_Karlikayla={
+		name="Resulendemal Karlikayla"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Resulendemal_Karlikayla
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	KZL_Ilker_Kayluk={
+		name="Ilker Kayluk"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Ilker_Kayluk
+			traits = {	army_artillery_2 	}
+		}
+
+
+	}
+	KZL_Ilkenderemal_Gemis={
+		name="Ilkenderemal Gemis"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Ilkenderemal_Gemis
+			traits = {	air_tactical_bombing_2 	}
+		}
+
+
+	}
+	KZL_Cemalilmalim_Sogru={
+		name="Cemalilmalim Sogru"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Cemalilmalim_Sogru
+			traits = {	army_armored_2 	}
+		}
+
+
+	}
+	KZL_Talih_Koylu={
+		name="Talih Koylu"
+
+		
+		country_leader={
+			ideology=rexism
+			traits = { celebrity_junta_leader  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KZL_Talim_Barim={
+		name="Talim Barim"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Talim_Barim
+			traits = {	collaborator_king 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Suat_Duvar={
+		name="Suat Duvar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Suat_Duvar
+			traits = {	warmonger 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Halilmalcin_Kalece={
+		name="Halilmalcin Kalece"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Halilmalcin_Kalece
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Ramal_Temiz={
+		name="Ramal Temiz"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Ramal_Temiz
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Eferhan_Ormanlik={
+		name="Eferhan Ormanlik"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Eferhan_Ormanlik
+			traits = {	autokrator 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Talim_Isik={
+		name="Talim Isik"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Talim_Isik
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Efer_Soguk={
+		name="Efer Soguk"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Efer_Soguk
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	KZL_Ertuha_Saat={
+		name="Ertuha Saat"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Ertuha_Saat
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	KZL_Kaan_Aksar={
+		name="Kaan Aksar"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Kaan_Aksar
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	KZL_Ramal_Belece={
+		name="Ramal Belece"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Ramal_Belece
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	KZL_Cemalilmalim_Bahtar={
+		name="Cemalilmalim Bahtar"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Cemalilmalim_Bahtar
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	KZL_Ramal_Hisamanakind={
+		name="Ramal Hisamanakind"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Ramal_Hisamanakind
+			traits = {	navy_chief_commerce_raiding_1 	}
+		}
+
+
+	}
+	KZL_Tunc_Doguk={
+		name="Tunc Doguk"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Tunc_Doguk
+			traits = {	air_chief_night_operations_2 	}
+		}
+
+
+	}
+	KZL_Eferhan_Hisla={
+		name="Eferhan Hisla"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Eferhan_Hisla
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	KZL_Harul_Kultur={
+		name="Harul Kultur"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Harul_Kultur
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	KZL_Keremazan_Sehirlis={
+		name="Keremazan Sehirlis"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Keremazan_Sehirlis
+			traits = {	navy_fleet_logistics_1 	}
+		}
+
+
+	}
+	KZL_Selih_Ulket={
+		name="Selih Ulket"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Selih_Ulket
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	KZL_Batugrunc_Karlikayla={
+		name="Batugrunc Karlikayla"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Batugrunc_Karlikayla
+			traits = {	air_bomber_interception_1 	}
+		}
+
+
+	}
+	KZL_Emir_Bolge={
+		name="Emir Bolge"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Emir_Bolge
+			traits = {	army_radio_intelligence_1 	}
+		}
+
+
+	}
+	KZL_Utku_Gemis={
+		name="Utku Gemis"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Utku_Gemis
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	KZL_Salcinan_Haylutlutlul={
+		name="Salcinan Haylutlutlul"
+
+		
+		country_leader={
+			ideology=anti_revisionism
+			traits = { anti_bolshevik_leftist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KZL_Selih_Kader={
+		name="Selih Kader"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Selih_Kader
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Bora_Sogun={
+		name="Bora Sogun"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Bora_Sogun
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Zafa_Oyku={
+		name="Zafa Oyku"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Zafa_Oyku
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Selih_Sogun={
+		name="Selih Sogun"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Selih_Sogun
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Resul_Hisamanakind={
+		name="Resul Hisamanakind"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Resul_Hisamanakind
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	KZL_Enes_Serin={
+		name="Enes Serin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Enes_Serin
+			traits = {	leftist_independent 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Yustafe_Gecmis={
+		name="Yustafe Gecmis"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Yustafe_Gecmis
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	KZL_Isker_Sehirlik={
+		name="Isker Sehirlik"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Isker_Sehirlik
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	KZL_Kadir_Soga={
+		name="Kadir Soga"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Kadir_Soga
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	KZL_Sinan_Bolge={
+		name="Sinan Bolge"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Sinan_Bolge
+			traits = {	army_chief_maneuver_2 	}
+		}
+
+
+	}
+	KZL_Tunc_Belece={
+		name="Tunc Belece"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Tunc_Belece
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	KZL_Ertuhan_Kayla={
+		name="Ertuhan Kayla"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Ertuhan_Kayla
+			traits = {	navy_chief_naval_aviation_2 	}
+		}
+
+
+	}
+	KZL_Bekir_Temiz={
+		name="Bekir Temiz"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Bekir_Temiz
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	KZL_Kadir_Sane={
+		name="Kadir Sane"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Kadir_Sane
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	KZL_Kaan_Sonbaharlil={
+		name="Kaan Sonbaharlil"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Kaan_Sonbaharlil
+			traits = {	army_infantry_1 	}
+		}
+
+
+	}
+	KZL_Resul_Kultur={
+		name="Resul Kultur"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Resul_Kultur
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	KZL_Halhan_Simsek={
+		name="Halhan Simsek"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Halhan_Simsek
+			traits = {	army_regrouping_2 	}
+		}
+
+
+	}
+	KZL_Farunc_Oyku={
+		name="Farunc Oyku"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Farunc_Oyku
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	KZL_Bekir_Gece={
+		name="Bekir Gece"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Bekir_Gece
+			traits = {	army_infantry_1 	}
+		}
+
+
+	}
+	KZL_Bora_Koylu={
+		name="Bora Koylu"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Bora_Koylu
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	KZL_Eferhan_Sehil={
+		name="Eferhan Sehil"
+
+		
+		country_leader={
+			ideology=socialism
+			traits = { leftist_legionary  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	KZL_Yilmalilmali_Tasamane={
+		name="Yilmalilmali Tasamane"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Yilmalilmali_Tasamane
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Farunc_Saat={
+		name="Farunc Saat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Farunc_Saat
+			traits = {	democratic_crusader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Sinan_Kader={
+		name="Sinan Kader"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Sinan_Kader
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Mustaferhat_Gunce={
+		name="Mustaferhat Gunce"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Mustaferhat_Gunce
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	KZL_Boran_Koyla={
+		name="Boran Koyla"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Boran_Koyla
+			traits = {	the_banker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Taylan_Umurt={
+		name="Taylan Umurt"
+
+		advisor={
+			slot = political_advisor
+			idea_token = KZL_Taylan_Umurt
+			traits = {	conservative_grandee 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	KZL_Ilkerkan_Gunce={
+		name="Ilkerkan Gunce"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Ilkerkan_Gunce
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	KZL_Zafa_Barin={
+		name="Zafa Barin"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Zafa_Barin
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	KZL_Kaaner_Birlis={
+		name="Kaaner Birlis"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Kaaner_Birlis
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	KZL_Resulendemal_Soguk={
+		name="Resulendemal Soguk"
+
+		advisor={
+			slot = army_chief
+			idea_token = KZL_Resulendemal_Soguk
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	KZL_Utku_Gecmis={
+		name="Utku Gecmis"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Utku_Gecmis
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	KZL_Talim_Basari={
+		name="Talim Basari"
+
+		advisor={
+			slot = navy_chief
+			idea_token = KZL_Talim_Basari
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	KZL_Ener_Serin={
+		name="Ener Serin"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Ener_Serin
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	KZL_Keremazan_Gemis={
+		name="Keremazan Gemis"
+
+		advisor={
+			slot = air_chief
+			idea_token = KZL_Keremazan_Gemis
+			traits = {	air_chief_ground_support_2 	}
+		}
+
+
+	}
+	KZL_Yalcin_Bolge={
+		name="Yalcin Bolge"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Yalcin_Bolge
+			traits = {	army_radio_intelligence_1 	}
+		}
+
+
+	}
+	KZL_Resul_Baharak={
+		name="Resul Baharak"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Resul_Baharak
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	KZL_Talcin_Gunce={
+		name="Talcin Gunce"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Talcin_Gunce
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	KZL_Kaan_Basari={
+		name="Kaan Basari"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Kaan_Basari
+			traits = {	navy_naval_air_defense_1 	}
+		}
+
+
+	}
+	KZL_Yalim_Kalece={
+		name="Yalim Kalece"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Yalim_Kalece
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	KZL_Mehmet_Sehildir={
+		name="Mehmet Sehildir"
+
+		advisor={
+			slot = high_command
+			idea_token = KZL_Mehmet_Sehildir
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	KZL_Bekir_Barin={
+		name="Bekir Barin"
+
+		advisor={
+			slot = theorist
+			idea_token = KZL_Bekir_Barin
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	KZL_Resuf_Yaylutlukaye={
+		name="Resuf Yaylutlukaye"
+
+		advisor={
+			slot = theorist
+			idea_token = KZL_Resuf_Yaylutlukaye
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	KZL_Mehmet_Yesimsek={
+		name="Mehmet Yesimsek"
+
+		advisor={
+			slot = theorist
+			idea_token = KZL_Mehmet_Yesimsek
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

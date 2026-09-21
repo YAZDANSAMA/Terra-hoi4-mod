@@ -1,0 +1,37 @@
+
+state={
+	id=16
+	name="STATE_16"
+	manpower = 12082
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		owner = SAM
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAM
+	}
+
+	provinces={
+		573 574 6067 6068 6069 6070 6071 6337 6338 6339 6340 6341 6342 6343 6344 6345 6377 6378 6480 6481 6482 6483 6651 6652 6653 7227 1735 1736 1737 1738 1739 1740 1741 1742 1743 1744 1745 2600 3441 3584 3585 3586 3587 3588 3589 3590 3591 3592 4643 4644 4645 553 554 
+	}
+	local_supplies=0.0 
+}

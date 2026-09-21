@@ -1,0 +1,2038 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+shared_focus = {
+	id = CHI_sea_invite_foreign_investors 
+	icon = GFX_focus_generic_concessions
+	x = 40
+	y = 0
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			tag = PRC
+		}
+	}
+	offset = {
+		x = -8
+		y = 0
+		trigger = {
+			tag = MAN 
+		}
+	}
+	offset = {
+		x = 12
+		y = 0
+		trigger = {
+			has_focus_tree = china_nationalist_warlord_focus
+		}
+	}
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+shared_focus = {
+	id = CHI_sea_mission_to_germany
+	icon = GFX_focus_chi_mission_to_germany
+	prerequisite = { focus = CHI_sea_invite_foreign_investors }
+	x = -10
+	y = 1
+	relative_position_id = CHI_sea_invite_foreign_investors
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+		modifier = {
+			factor = 10
+			has_country_flag = GER_befriended_by_germany_flag
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_give_falkenhausen_citizenship
+	icon = GFX_focus_generic_diplomatic_treaty
+	prerequisite = { focus = CHI_sea_mission_to_germany }
+	x = -1
+	y = 1
+	relative_position_id = CHI_sea_mission_to_germany
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_chinese_general_staff
+	icon = GFX_goal_generic_axis_build_infantry
+	prerequisite = { focus = CHI_sea_give_falkenhausen_citizenship }
+	prerequisite = { focus = CHI_sea_closer_ties_with_germany }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_give_falkenhausen_citizenship
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_wargaming_division
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = CHI_sea_chinese_general_staff }
+	x = -1
+	y = 1
+	relative_position_id = CHI_sea_chinese_general_staff
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_closer_ties_with_germany
+	icon = GFX_goal_generic_improve_relations
+	prerequisite = { focus = CHI_sea_mission_to_germany }
+	mutually_exclusive = { focus = CHI_sea_rapprochement_with_soviet_union }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_mission_to_germany
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_purchase_tanks
+	icon = GFX_goal_generic_army_tanks
+	prerequisite = { focus = CHI_sea_closer_ties_with_germany focus = CHI_sea_rapprochement_with_soviet_union }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_closer_ties_with_germany
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_chinese_panzers
+	icon = GFX_goal_generic_production2
+	prerequisite = { focus = CHI_sea_purchase_tanks }
+	prerequisite = { focus = CHI_sea_closer_ties_with_germany }
+	x = -2
+	y = 1
+	relative_position_id = CHI_sea_purchase_tanks
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_tank_plant
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = CHI_sea_chinese_panzers }
+	x = -2
+	y = 3
+	relative_position_id = CHI_sea_purchase_tanks
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	complete_tooltip = {
+		random_state = {
+			limit = {
+				has_state_flag = CHI_tank_plant_AF
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_experimental_mechanised_unit
+	icon = GFX_goal_generic_cavalry
+	prerequisite = { focus = CHI_sea_purchase_tanks }
+	x = 0
+	y = 2
+	relative_position_id = CHI_sea_purchase_tanks
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+
+
+
+shared_focus = {
+	id = CHI_sea_combined_arms_warfare
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { focus = CHI_sea_experimental_mechanised_unit }
+	x = 0
+	y = 4
+	relative_position_id = CHI_sea_purchase_tanks
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_hire_soviet_designer
+	icon = GFX_goal_generic_soviet_construction
+	prerequisite = { focus = CHI_sea_purchase_tanks }
+	prerequisite = { focus = CHI_sea_rapprochement_with_soviet_union }
+	x = 2
+	y = 1
+	relative_position_id = CHI_sea_purchase_tanks
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_joint_tank_development
+	icon = GFX_goal_generic_scientific_exchange
+	prerequisite = { focus = CHI_sea_hire_soviet_designer }
+	x = 2
+	y = 3
+	relative_position_id = CHI_sea_purchase_tanks
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_mission_to_the_soviet_union
+	icon = GFX_focus_chi_mission_to_the_soviet_union
+	prerequisite = { focus = CHI_sea_invite_foreign_investors }
+	x = 4
+	y = 0
+	relative_position_id = CHI_sea_mission_to_germany
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_rapprochement_with_soviet_union
+	icon = GFX_goal_support_communism
+	prerequisite = { focus = CHI_sea_mission_to_the_soviet_union }
+	mutually_exclusive = { focus = CHI_sea_closer_ties_with_germany }
+	x = -1
+	y = 1
+	relative_position_id = CHI_sea_mission_to_the_soviet_union
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_invite_soviet_advisers
+	icon = GFX_focus_generic_soviet_politics
+	prerequisite = { focus = CHI_sea_mission_to_the_soviet_union }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_mission_to_the_soviet_union
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_the_soviet_volunteer_group
+	icon = GFX_goal_demand_sudetenland
+	prerequisite = { focus = CHI_sea_invite_soviet_advisers }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_invite_soviet_advisers
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_reach_out_to_france
+	icon = GFX_focus_chi_reach_out_to_france
+	mutually_exclusive = { focus = CHI_sea_british_cooperation }
+	prerequisite = { focus = CHI_sea_invite_foreign_investors }
+	x = 5
+	y = 0
+	relative_position_id = CHI_sea_mission_to_the_soviet_union
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_small_arms_expertise
+	icon = GFX_focus_secret_rearmament
+	prerequisite = { focus = CHI_sea_reach_out_to_france }
+	x = -2
+	y = 1
+	relative_position_id = CHI_sea_reach_out_to_france
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_elite_mountaineers
+	icon = GFX_goal_generic_allies_build_infantry
+	prerequisite = { focus = CHI_sea_invite_soviet_advisers focus = CHI_sea_small_arms_expertise }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_small_arms_expertise
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = {
+				has_tech = tech_mountaineers 
+			}
+		}
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_heavy_weapons
+	icon = GFX_goal_generic_army_artillery2
+	prerequisite = { focus = CHI_sea_elite_mountaineers }
+	x = 0
+	y = 2
+	relative_position_id = CHI_sea_small_arms_expertise
+	
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+
+shared_focus = {
+	id = CHI_sea_guarantee_the_hanoi_route
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = CHI_sea_reach_out_to_france }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_reach_out_to_france
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			FRA = {
+				has_war = yes
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_construction_battalions
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = CHI_sea_guarantee_the_hanoi_route focus = CHI_sea_burma_road }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_guarantee_the_hanoi_route
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_french_military_mission
+	icon = GFX_goal_generic_defence
+	prerequisite = { focus = CHI_sea_guarantee_the_hanoi_route }
+	x = 0
+	y = 3
+	relative_position_id = CHI_sea_reach_out_to_france
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_french_drill
+	icon = GFX_goal_generic_build_tank
+	prerequisite = { focus = CHI_sea_heavy_weapons }
+	prerequisite = { focus = CHI_sea_french_military_mission }
+	x = 0
+	y = 5
+	relative_position_id = CHI_sea_reach_out_to_france
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_modern_logistics
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = CHI_sea_french_drill focus = CHI_sea_ledo_road }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_french_drill
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_renegotiate_the_unequal_treaties
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	prerequisite = { focus = CHI_sea_modern_logistics focus = CHI_sea_combined_arms_warfare focus = CHI_sea_naval_aviation } 
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_modern_logistics
+
+	cost = 10
+
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 4
+			tag = PRC			
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+
+}
+
+shared_focus = {
+	id = CHI_sea_one_china_policy
+	icon = GFX_focus_chi_one_china_policy
+	prerequisite = { focus = CHI_sea_renegotiate_the_unequal_treaties }
+	x = -3
+	y = 1
+	relative_position_id = CHI_sea_renegotiate_the_unequal_treaties
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			num_of_factories < 50
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+
+}
+
+shared_focus = {
+	id = CHI_ncns_request_handover_of_coastal_cities
+
+	icon = GFX_focus_PRC_dare_to_struggle
+
+	prerequisite = { focus = CHI_sea_one_china_policy }
+
+	x = -2
+	y = 2
+	relative_position_id = CHI_sea_one_china_policy
+
+	cost = 10
+
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+	
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+
+}
+
+shared_focus = {
+	id = CHI_sea_integrate_tibet
+	icon = GFX_focus_PRC_reclaim_tibet
+	prerequisite = { focus = CHI_sea_one_china_policy }
+	mutually_exclusive = { focus = CHI_sea_conquer_tibet }
+	x = -1
+	y = 1
+	relative_position_id = CHI_sea_one_china_policy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_conquer_tibet
+	icon = GFX_focus_CHI_empower_mtac
+	prerequisite = { focus = CHI_sea_one_china_policy }
+	mutually_exclusive = { focus = CHI_sea_integrate_tibet }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_one_china_policy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			any_country = {
+				is_major = yes
+				is_in_faction_with = TIB
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_renounce_the_mcmahon_line
+	icon = GFX_focus_RAJ_clamp_down_on_corruption
+	prerequisite = { focus = CHI_sea_integrate_tibet focus = CHI_sea_conquer_tibet }
+	mutually_exclusive = { focus = CHI_sea_indian_cooperation }
+	x = 0
+	y = 2
+	relative_position_id = CHI_sea_one_china_policy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_demand_mongolia
+	icon = GFX_focus_generic_attack_mongolia
+	prerequisite = { focus = CHI_sea_renounce_the_mcmahon_line }
+	x = 0
+	y = 3
+	relative_position_id = CHI_sea_one_china_policy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			any_country = {
+				is_major = yes
+				is_in_faction_with = MON
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_annex_tuva
+	icon = GFX_focus_generic_annex_country_2
+	prerequisite = { focus = CHI_sea_demand_mongolia }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_demand_mongolia
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			any_country = {
+				is_major = yes
+				is_in_faction_with = TAN
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_anti_imperialism
+	icon = GFX_goal_generic_military_deal
+	prerequisite = { focus = CHI_sea_renegotiate_the_unequal_treaties }
+	mutually_exclusive = { focus = CHI_sea_imperial_legacy }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_renegotiate_the_unequal_treaties
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_guidance_and_support
+	icon = GFX_goal_generic_forceful_treaty
+	prerequisite = { focus = CHI_sea_anti_imperialism }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_anti_imperialism
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_commit_to_korean_independence
+	icon = GFX_focus_JAP_build_up_korean_industries
+	prerequisite = { focus = CHI_sea_guidance_and_support }
+	x = 1
+	y = 2
+	relative_position_id = CHI_sea_anti_imperialism
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_indian_cooperation
+	icon = GFX_focus_RAJ_a_congress_resurgent
+	prerequisite = { focus = CHI_sea_anti_imperialism }
+	mutually_exclusive = { focus = CHI_sea_renounce_the_mcmahon_line }
+	x = -1
+	y = 2
+	relative_position_id = CHI_sea_anti_imperialism
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_influence_mongolia
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { focus = CHI_sea_indian_cooperation }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_indian_cooperation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_imperial_legacy
+	icon = GFX_focus_CHI_the_southern_mandate
+	prerequisite = { focus = CHI_sea_renegotiate_the_unequal_treaties }
+	mutually_exclusive = { focus = CHI_sea_anti_imperialism }
+	x = 3
+	y = 1
+	relative_position_id = CHI_sea_renegotiate_the_unequal_treaties
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_overlordship_over_indochina
+	icon = GFX_focus_JAP_occupy_indochina
+	prerequisite = { focus = CHI_sea_imperial_legacy }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_imperial_legacy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_dominate_japan
+	icon = GFX_focus_AST_war_japan
+	prerequisite = { focus = CHI_sea_imperial_legacy }
+	x = 2
+	y = 1
+	relative_position_id = CHI_sea_imperial_legacy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_secure_the_peninsula
+	icon = GFX_focus_generic_invade_korea
+	prerequisite = { focus = CHI_sea_overlordship_over_indochina }
+	x = 0
+	y = 2
+	relative_position_id = CHI_sea_imperial_legacy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_push_into_manchuria
+	icon = GFX_focus_CHI_the_northern_mandate
+	prerequisite = { focus = CHI_sea_secure_the_peninsula }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_secure_the_peninsula
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_dominate_siam
+	icon = GFX_focus_generic_attack_siam
+	prerequisite = { focus = CHI_sea_overlordship_over_indochina }
+	x = 2
+	y = 1
+	relative_position_id = CHI_sea_overlordship_over_indochina
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_british_cooperation
+	icon = GFX_focus_chi_british_cooperation
+	mutually_exclusive = { focus = CHI_sea_reach_out_to_france }
+	prerequisite = { focus = CHI_sea_invite_foreign_investors }
+	x = 2
+	y = 0
+	relative_position_id = CHI_sea_reach_out_to_france
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+		modifier = {
+			factor = 10
+			has_country_flag = ENG_influenced_by_britain_flag
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_burma_road
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = CHI_sea_british_cooperation }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_british_cooperation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1		
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+		modifier = {
+			RAJ = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ENG
+				}
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_ledo_road
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = CHI_sea_burma_road }
+	prerequisite = { focus = CHI_sea_the_hump }
+	x = 0
+	y = 5
+	relative_position_id = CHI_sea_british_cooperation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+		modifier = {
+			RAJ = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ENG
+				}
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_fighter_purchases
+	icon = GFX_goal_generic_build_airforce
+	prerequisite = { focus = CHI_sea_british_cooperation focus = CHI_sea_mission_to_the_us }
+	x = 3
+	y = 1
+	relative_position_id = CHI_sea_british_cooperation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_camco
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = CHI_sea_fighter_purchases }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_fighter_purchases
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_local_fighter_production
+	icon = GFX_goal_generic_air_fighter2
+	prerequisite = { focus = CHI_sea_burma_road }
+	prerequisite = { focus = CHI_sea_camco }
+	x = -2
+	y = 2
+	relative_position_id = CHI_sea_fighter_purchases
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_local_bomber_production
+	icon = GFX_goal_generic_air_bomber
+	prerequisite = { focus = CHI_sea_local_fighter_production }
+	x = 0
+	y = 1
+	relative_position_id =  CHI_sea_local_fighter_production
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_the_hump
+	icon = GFX_goal_generic_air_production
+	prerequisite = { focus = CHI_sea_camco }
+	prerequisite = { focus = CHI_sea_hire_chennault }
+	x = 1
+	y = 3
+	relative_position_id = CHI_sea_fighter_purchases
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+		modifier = {
+			RAJ = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ENG
+				}
+			}
+			factor = 0
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_chinese_expeditionary_force
+	icon = GFX_goal_generic_alliance
+	prerequisite = { focus = CHI_sea_the_hump }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_the_hump
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_the_chu_x_po
+	icon = GFX_goal_generic_air_fighter
+	prerequisite = { focus = CHI_sea_camco }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_camco
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_mission_to_the_us
+	icon = GFX_focus_chi_mission_to_the_us
+	prerequisite = { focus = CHI_sea_invite_foreign_investors }
+	x = 8
+	y = 0
+	mutually_exclusive = { focus = CHI_sea_collaboration_with_the_japanese }
+	relative_position_id = CHI_sea_british_cooperation
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_hire_chennault
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = CHI_sea_mission_to_the_us }
+	x = -3
+	y = 3
+	relative_position_id = CHI_sea_mission_to_the_us
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_invite_the_flying_tigers
+	icon = GFX_focus_chi_flying_tigers
+	prerequisite = { focus = CHI_sea_hire_chennault }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_hire_chennault
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_sino_american_cooperative_organization
+	icon = GFX_focus_generic_paratrooper
+	prerequisite = { focus = CHI_sea_invite_the_flying_tigers }
+	x = 1
+	y = 2
+	relative_position_id = CHI_sea_hire_chennault
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_light_cruiser_project
+	icon = GFX_goal_generic_navy_cruiser
+	prerequisite = { focus = CHI_sea_mission_to_the_us }
+	prerequisite = { focus = CHI_sea_order_destroyers }
+	x = 0
+	y = 3
+	relative_position_id = CHI_sea_mission_to_the_us
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_heavy_cruiser_project
+	icon = GFX_goal_generic_navy_battleship
+	prerequisite = { focus = CHI_sea_light_cruiser_project }
+	x = 0
+	y = 2
+	relative_position_id = CHI_sea_light_cruiser_project
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_naval_aviation
+	icon = GFX_goal_generic_navy_carrier
+	prerequisite = { focus = CHI_sea_heavy_cruiser_project focus = CHI_sea_coastal_patrol_planes }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_heavy_cruiser_project
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_carrier_air_wing
+	icon = GFX_goal_generic_occupy_start_war
+	prerequisite = { focus = CHI_sea_naval_aviation }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_naval_aviation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_investment_into_shipbuilding
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = CHI_sea_mission_to_the_us focus = CHI_sea_collaboration_with_the_japanese }
+	x = 1
+	y = 1
+	relative_position_id = CHI_sea_mission_to_the_us
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	complete_tooltip = {
+		navy_experience = 25
+		random_state = {
+			limit = {
+				has_state_flag = CHI_investment_into_shipbuilding_DY
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_order_destroyers
+	icon = GFX_goal_generic_navy_anti_submarine
+	prerequisite = { focus = CHI_sea_investment_into_shipbuilding }
+	x = 0
+	y = 1
+	relative_position_id = CHI_sea_investment_into_shipbuilding
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_train_marines
+	icon = GFX_goal_generic_amphibious_assault
+	prerequisite = { focus = CHI_sea_order_destroyers }
+	x = 0
+	y = 3
+	relative_position_id = CHI_sea_investment_into_shipbuilding
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_collaboration_with_the_japanese
+	icon = GFX_focus_chi_collaboration_with_the_japanese
+	prerequisite = { focus = CHI_sea_invite_foreign_investors }
+	mutually_exclusive = { focus = CHI_sea_mission_to_the_us }
+	x = 2
+	y = 0
+	relative_position_id = CHI_sea_mission_to_the_us
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_modern_submarines
+	icon = GFX_goal_generic_navy_submarine
+	prerequisite = { focus = CHI_sea_collaboration_with_the_japanese }
+	prerequisite = { focus = CHI_sea_order_destroyers }
+	x = 0
+	y = 3
+	relative_position_id = CHI_sea_collaboration_with_the_japanese
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}
+
+shared_focus = {
+	id = CHI_sea_coastal_patrol_planes
+	icon = GFX_goal_generic_air_naval_bomber
+	prerequisite = { focus = CHI_sea_modern_submarines }
+	x = 0
+	y = 2
+	relative_position_id = CHI_sea_modern_submarines
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {}
+
+	bypass = {}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	completion_reward = {}
+}

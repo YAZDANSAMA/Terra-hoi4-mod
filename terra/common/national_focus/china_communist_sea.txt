@@ -1,0 +1,6331 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = china_communist_focus_sea
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = PRC
+			has_dlc = "No Compromise, No Surrender"
+		}
+	}
+
+
+
+
+ 	
+	shortcut = {
+		name = PRC_military_shortcut
+		target = PRC_long_march_to_recovery
+		scroll_wheel_factor = 0.65
+	}
+
+	shortcut = {
+		name = PRC_economy_shortcut
+		target = PRC_rally_the_industry
+		scroll_wheel_factor = 0.8
+	}
+
+	shortcut = {
+		name = PRC_unwilling_diarchy_shortcut
+		target = PRC_the_unwilling_diarchy_focus
+		scroll_wheel_factor = 0.7
+	}
+	shortcut = {
+		name = PRC_bolshevik_shortcut
+		target = PRC_reclaim_the_grasp_of_power
+		scroll_wheel_factor = 0.65
+	}
+	shortcut = {
+		name = PRC_mao_shortcut
+		target = PRC_leadership_of_mao
+		scroll_wheel_factor = 0.85
+	}
+	
+
+
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 3250 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = PRC_put_an_end_to_the_sufan
+		icon = GFX_focus_PRC_the_central_committee
+		x = 39
+		y = 0 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		offset = {
+			x = -15
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = -20
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_know_the_enemy
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = PRC_put_an_end_to_the_sufan }
+		x = -24
+		y = 1
+		relative_position_id = PRC_put_an_end_to_the_sufan
+
+		offset = {
+			x = 8
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = 6
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+		offset = {
+			x = 4
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_reclaim_the_grasp_of_power
+			}
+
+		}
+
+		offset = {
+			x = 4
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_leadership_of_mao
+			}
+
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION}
+
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_westward_expedition
+		icon = GFX_focus_PRC_westward_expansion
+		prerequisite = { focus = PRC_know_the_enemy }
+		x = -2
+		y = 1
+		relative_position_id = PRC_know_the_enemy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		will_lead_to_war_with = NXM
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_the_eastward_expedition
+		icon = GFX_focus_PRC_eastward_expansion
+		prerequisite = { focus = PRC_know_the_enemy }
+		x = 2
+		y = 1
+		relative_position_id = PRC_know_the_enemy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		will_lead_to_war_with = SHX
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_develop_yanan_soviet
+		icon = GFX_focus_PRC_develop_yanan_soviet
+		prerequisite = { focus = PRC_the_westward_expedition focus = PRC_the_eastward_expedition }
+		x = 1
+		y = 1
+		
+		relative_position_id = PRC_the_westward_expedition
+		
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_internal_enemy
+		icon = GFX_focus_CHI_protracted_warfare
+		prerequisite = { focus = PRC_the_westward_expedition focus = PRC_the_eastward_expedition }
+		x = 3
+		y = 1
+		
+		relative_position_id = PRC_the_westward_expedition
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_burn_the_paper_tigers
+		icon = GFX_focus_PRC_burn_the_paper_tigers
+		prerequisite = { focus = PRC_know_the_enemy }
+		mutually_exclusive = { focus = PRC_the_unwilling_diarchy_focus }
+		x = -11
+		y = 3
+		relative_position_id = PRC_know_the_enemy
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PRC_the_unwilling_diarchy_focus
+				}
+			}
+		}
+
+		offset = {
+			x = 7
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		enable_automatic_bypass = no 
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_rally_the_peasants
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		prerequisite = { focus = PRC_burn_the_paper_tigers }
+		x = -1
+		y = 1
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_rally_the_28_bolsheviks
+		icon = GFX_focus_PRC_rally_the_28_bolsheviks
+		prerequisite = { focus = PRC_burn_the_paper_tigers }
+		x = 1
+		y = 1
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_guide_central_committee
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		prerequisite = { focus = PRC_rally_the_peasants focus = PRC_rally_the_28_bolsheviks }
+		x = 0
+		y = 2
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+	focus = {
+		id = PRC_leadership_of_mao
+		icon = GFX_focus_PRC_embrace_change_in_leadership
+		prerequisite = { focus = PRC_guide_central_committee }
+		mutually_exclusive = { focus = PRC_reclaim_the_grasp_of_power }
+		x = -7
+		y = 1
+		relative_position_id = PRC_guide_central_committee
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PRC_reclaim_the_grasp_of_power
+					has_completed_focus = PRC_the_unwilling_diarchy_focus
+				}
+			}
+		}
+
+		offset = {
+			x = 7
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_leadership_of_mao
+			}
+
+		}
+
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_on_guerilla_warfare
+		icon = GFX_focus_CHI_guerrilla_warfare
+		prerequisite = { focus = PRC_leadership_of_mao }
+		x = -1
+		y = 1
+		relative_position_id = PRC_leadership_of_mao
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_secure_the_peoples_support
+		icon = GFX_focus_prc_infiltration
+
+		prerequisite = { focus = PRC_leadership_of_mao }
+		x = 1
+		y = 1
+		relative_position_id = PRC_leadership_of_mao
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_propaganda_efforts
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = PRC_on_guerilla_warfare focus = PRC_secure_the_peoples_support }
+		x = 1
+		y = 1
+		relative_position_id = PRC_on_guerilla_warfare
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_dissent_in_the_united_front
+		icon = GFX_focus_PRC_dissent_in_the_united_front
+		prerequisite = { focus = PRC_secure_the_peoples_support }
+		x = 1
+		y = 1
+		relative_position_id = PRC_secure_the_peoples_support
+
+		dynamic = yes
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_question_the_faction_leadership
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = PRC_dissent_in_the_united_front }
+		x = 1
+		y = 1
+		relative_position_id = PRC_dissent_in_the_united_front
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_to_unify_a_country
+		icon = GFX_focus_PRC_revolutionary_war_of_the_masses
+		prerequisite = { focus = PRC_question_the_faction_leadership }
+		x = 0
+		y = 1
+		relative_position_id = PRC_question_the_faction_leadership
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_establish_friendly_bases
+		icon = GFX_focus_generic_sabotage
+		prerequisite = { focus = PRC_on_guerilla_warfare }
+		x = -1
+		y = 1
+		relative_position_id = PRC_on_guerilla_warfare
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_empower_the_guerillas
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		prerequisite = { focus = PRC_establish_friendly_bases }
+		x = -1
+		y = 1
+		relative_position_id = PRC_establish_friendly_bases
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_holding_half_the_sky
+		icon = GFX_focus_PRC_rally_the_women
+		
+		prerequisite = { focus = PRC_empower_the_guerillas }
+		x = 0
+		y = 1
+		relative_position_id = PRC_empower_the_guerillas
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_raid_weapon_depots
+		icon = GFX_focus_PRC_raid_weapon_depots
+		prerequisite = { focus = PRC_propaganda_efforts }
+		prerequisite = { focus = PRC_establish_friendly_bases }
+		x = -1
+		y = 1
+		relative_position_id = PRC_propaganda_efforts
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_rural_recruitment
+		icon = GFX_focus_GER_proletarian_solidarity
+		prerequisite = { focus = PRC_propaganda_efforts }
+		prerequisite = { focus = PRC_dissent_in_the_united_front }
+		x = 1
+		y = 1
+		relative_position_id = PRC_propaganda_efforts
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_MANPOWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = PRC_strengthen_the_central_party_school
+		icon = GFX_focus_CHI_tongzi_jun
+		prerequisite = { focus = PRC_raid_weapon_depots focus = PRC_rural_recruitment }
+		x = 1
+		y = 1
+		relative_position_id = PRC_raid_weapon_depots
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_STABILITY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_yanan_rectification_movement
+		icon = GFX_focus_PRC_yanan_rectification_movement
+		prerequisite = { focus = PRC_holding_half_the_sky focus = PRC_to_unify_a_country focus = PRC_strengthen_the_central_party_school }
+		x = 0
+		y = 1
+		relative_position_id = PRC_strengthen_the_central_party_school
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_form_central_social_affairs_department
+		icon = GFX_focus_PRC_form_central_social_affairs_department
+		prerequisite = { focus = PRC_yanan_rectification_movement }
+		x = -1
+		y = 1
+		relative_position_id = PRC_yanan_rectification_movement
+		
+		
+		
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_enforce_maoism
+		icon = GFX_focus_prc_maoism
+		prerequisite = { focus = PRC_form_central_social_affairs_department }
+		prerequisite = { focus = PRC_establish_yanan_university }
+		x = 0
+		y = 2
+		relative_position_id = PRC_yanan_rectification_movement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_invite_the_dixie_mission
+		icon = GFX_focus_generic_befriend_usa
+		prerequisite = { focus = PRC_enforce_maoism }
+		x = -1
+		y = 1
+		relative_position_id = PRC_enforce_maoism
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = PRC_deepen_the_dixie_mission
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = PRC_invite_the_dixie_mission }
+		x = 0
+		y = 1
+		relative_position_id = PRC_invite_the_dixie_mission
+		mutually_exclusive = { focus = PRC_tech_agreement_with_ussr }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_overthrow_the_ussr
+		icon = GFX_focus_GER_end_european_communism
+		prerequisite = { focus = PRC_deepen_the_dixie_mission }
+		x = 0
+		y = 1
+		relative_position_id = PRC_deepen_the_dixie_mission
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				date < 1945.01.01
+				factor = 0
+			}
+		}
+
+		available = {}	
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_two_soviets_together
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = PRC_enforce_maoism }
+		x = 1
+		y = 1
+		relative_position_id = PRC_enforce_maoism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_tech_agreement_with_ussr
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = PRC_two_soviets_together }
+		x = 0
+		y = 1
+		relative_position_id = PRC_two_soviets_together
+		mutually_exclusive = { focus = PRC_deepen_the_dixie_mission }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_end_of_capitalism
+		icon = GFX_focus_generic_crush_capitalism
+		prerequisite = { focus = PRC_tech_agreement_with_ussr }
+		x = 0
+		y = 1
+		relative_position_id = PRC_tech_agreement_with_ussr
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				date < 1945.01.01
+				factor = 0
+			}
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_purge_the_world_of_fascism
+		icon = GFX_focus_generic_communism_anti_fascism
+		prerequisite = { focus = PRC_the_end_of_capitalism focus = PRC_overthrow_the_ussr }
+		x = 1
+		y = 1
+		relative_position_id = PRC_overthrow_the_ussr
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_establish_yanan_university
+		icon = GFX_focus_research
+		prerequisite = { focus = PRC_yanan_rectification_movement }
+		x = 1
+		y = 1
+		relative_position_id = PRC_yanan_rectification_movement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	 
+	
+	       
+	 
+	
+	
+	
+
+	focus = {
+		id = PRC_reclaim_the_grasp_of_power
+		icon = GFX_focus_PRC_recaim_the_grasp_of_power
+		prerequisite = { focus = PRC_guide_central_committee }
+		mutually_exclusive = { focus = PRC_leadership_of_mao }
+		x = 7
+		y = 1
+		relative_position_id = PRC_guide_central_committee
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PRC_leadership_of_mao
+					has_completed_focus = PRC_the_unwilling_diarchy_focus
+				}
+			}
+		}
+
+		offset = {
+			x = -7
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_reclaim_the_grasp_of_power
+			}
+
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_seek_support_from_ussr
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = PRC_reclaim_the_grasp_of_power focus = PRC_leadership_of_mao }
+		x = 0
+		y = 3
+		relative_position_id = PRC_guide_central_committee
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		offset = {
+			x = -7
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_reclaim_the_grasp_of_power
+			}
+
+		}
+		offset = {
+			x = 4
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_leadership_of_mao
+			}
+
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_ask_for_soviet_lend_lease
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = PRC_invite_otto_braun }
+		prerequisite = { focus = PRC_seek_support_from_ussr }
+		x = 0
+		y = 1
+		relative_position_id = PRC_seek_support_from_ussr
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+	
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_request_guarantees
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = PRC_ask_for_soviet_lend_lease }
+		x = 0
+		y = 1
+		relative_position_id = PRC_ask_for_soviet_lend_lease
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_bolshevik_aid
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = PRC_reclaim_the_grasp_of_power }
+		x = 0
+		y = 1
+		relative_position_id = PRC_reclaim_the_grasp_of_power
+
+		dynamic = yes
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_a_stronger_united_front
+		icon = GFX_focus_CHI_registry_of_property
+		prerequisite = { focus = PRC_bolshevik_aid }
+		x = 3
+		y = 1
+		relative_position_id = PRC_bolshevik_aid
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_playing_both_sides
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = PRC_a_stronger_united_front }
+		x = 0
+		y = 1
+		relative_position_id = PRC_a_stronger_united_front
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_the_fight_of_a_people
+		icon = GFX_focus_generic_spur_communist_revolutions
+		prerequisite = { focus = PRC_playing_both_sides }
+		x = 0
+		y = 1
+		relative_position_id = PRC_playing_both_sides
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_supreme_infiltration
+		icon = GFX_focus_CHI_guerrilla_warfare
+		prerequisite = { focus = PRC_the_fight_of_a_people }
+		x = 0
+		y = 1
+		relative_position_id = PRC_the_fight_of_a_people
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_bolshevik_urbanization 
+		icon = GFX_focus_PRC_bolshevik_urbanization
+		prerequisite = { focus = PRC_bolshevik_aid }
+		x = 0
+		y = 1
+		relative_position_id = PRC_bolshevik_aid
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_bolshevik_urbanization_2
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = PRC_bolshevik_urbanization }
+		x = -1
+		y = 1
+		relative_position_id = PRC_bolshevik_urbanization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_bolshevik_urban_industrialization
+		icon = GFX_focus_PRC_bolshevik_urbanization_1
+		prerequisite = { focus = PRC_bolshevik_urbanization }
+		x = 1
+		y = 1
+		relative_position_id = PRC_bolshevik_urbanization
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_bolshevik_urbanization_completed
+		icon = GFX_focus_PRC_bolshevik_urbanization_completed
+		prerequisite = { focus = PRC_bolshevik_urbanization_2 focus = PRC_bolshevik_urban_industrialization }
+		x = 1
+		y = 1
+		relative_position_id = PRC_bolshevik_urbanization_2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_invite_otto_braun
+		icon = GFX_focus_PRC_invite_otto_braun
+		prerequisite = { focus = PRC_bolshevik_aid }
+		x = -3
+		y = 1
+		relative_position_id = PRC_bolshevik_aid
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_MILITARY_CHARACTER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_invite_pavel_mif
+		icon = GFX_focus_PRC_pavel_mif
+		prerequisite = { focus = PRC_invite_otto_braun }
+		x = 0
+		y = 1
+		relative_position_id = PRC_invite_otto_braun
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_rebuild_28_bolshevik
+		icon = GFX_focus_PRC_rebuild_28_bolshevik
+		prerequisite = { focus = PRC_invite_pavel_mif }
+		x = 0
+		y = 1
+		relative_position_id = PRC_invite_pavel_mif
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_aggressive_pursuit_of_diplomacy
+		icon = GFX_focus_SWE_let_fly_all_guns
+		prerequisite = { focus = PRC_rebuild_28_bolshevik }
+		x = 0
+		y = 1
+		relative_position_id = PRC_rebuild_28_bolshevik
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_with_inspiration_from_nkvd
+		icon = GFX_focus_JAP_learn_from_the_nkvd 
+		prerequisite = { focus = PRC_invite_otto_braun }
+		prerequisite = { focus = PRC_seek_support_from_ussr }
+		x = -2
+		y = 1
+		relative_position_id = PRC_invite_otto_braun
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_invite_soviet_general
+		icon = GFX_focus_PRC_invite_soviet_general
+		prerequisite = { focus = PRC_with_inspiration_from_nkvd }
+		x = 0
+		y = 1
+		relative_position_id = PRC_with_inspiration_from_nkvd
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_embrace_stalinism
+		icon = GFX_focus_PRC_embrace_stalinism
+		prerequisite = { focus = PRC_bolshevik_urbanization_completed focus = PRC_the_fight_of_a_people focus = PRC_rebuild_28_bolshevik }
+		x = 0
+		y = 1
+		relative_position_id = PRC_bolshevik_urbanization_completed
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_STABILITY}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_soviet_technological_cooperation
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = PRC_embrace_stalinism }
+		x = 0
+		y = 1
+		relative_position_id = PRC_embrace_stalinism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reestablish_moscow_sun_yat_sen_university
+		icon = GFX_focus_PRC_reestablish_moscow_sun_yat_sen_university
+		prerequisite = { focus = PRC_soviet_technological_cooperation }
+		x = 0
+		y = 2
+		relative_position_id = PRC_soviet_technological_cooperation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sino_allied_pact_of_non_aggression
+		icon = GFX_focus_ARG_join_the_allies
+		prerequisite = { focus = PRC_soviet_technological_cooperation }
+		x = -1
+		y = 1
+		relative_position_id = PRC_soviet_technological_cooperation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_bolshevik_world_revolution
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = PRC_soviet_technological_cooperation }
+		x = -3
+		y = 1
+		relative_position_id = PRC_soviet_technological_cooperation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_party_control
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		prerequisite = { focus = PRC_bolshevik_world_revolution focus = PRC_sino_allied_pact_of_non_aggression }
+		x = 1
+		y = 1
+		relative_position_id = PRC_bolshevik_world_revolution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_a_truly_united_front
+		icon = GFX_focus_chi_united_front
+		prerequisite = { focus = PRC_soviet_technological_cooperation }
+		mutually_exclusive = { focus = PRC_part_of_the_comintern }
+		x = 3
+		y = 1
+		relative_position_id = PRC_soviet_technological_cooperation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_part_of_the_comintern
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = PRC_soviet_technological_cooperation }
+		mutually_exclusive = { focus = PRC_a_truly_united_front }
+		x = 1
+		y = 1
+		relative_position_id = PRC_soviet_technological_cooperation
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_petition_for_freedom
+		icon = GFX_focus_PRC_petition_for_freedom
+		prerequisite = { focus = PRC_a_truly_united_front focus = PRC_part_of_the_comintern }
+		x = -1
+		y = 1
+		relative_position_id = PRC_a_truly_united_front
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_scholarly_revolution
+		icon = GFX_focus_NOR_moscows_education_centers 
+		prerequisite = { focus = PRC_reestablish_moscow_sun_yat_sen_university focus = PRC_party_control focus = PRC_petition_for_freedom }
+		x = 0
+		y = 1
+		relative_position_id = PRC_reestablish_moscow_sun_yat_sen_university
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_hundred_regiments_offensive
+		icon = GFX_focus_PRC_hundred_regiments_offensive
+		prerequisite = { focus = PRC_yanan_rectification_movement focus = PRC_embrace_stalinism }
+		x = 7
+		y = 2
+		relative_position_id = PRC_yanan_rectification_movement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		offset = {
+			x = -7
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_reclaim_the_grasp_of_power
+			}
+
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_prepare_for_the_inevitable
+		icon = GFX_focus_attack_china
+		prerequisite = { focus = PRC_hundred_regiments_offensive }
+		x = 0
+		y = 2
+		relative_position_id = PRC_hundred_regiments_offensive
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				any_neighbor_country = {
+					is_literally_china_not_prc = no
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		historical_ai = {
+			
+			has_war_with_major = no
+			date < 1945.9.1 
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	
+
+
+	focus = {
+		id = PRC_the_unwilling_diarchy_focus
+		icon = GFX_focus_SOV_the_last_purge
+		prerequisite = { focus = PRC_know_the_enemy }
+		mutually_exclusive = { focus = PRC_burn_the_paper_tigers }
+		x = 11
+		y = 3
+		relative_position_id = PRC_know_the_enemy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PRC_burn_the_paper_tigers
+				}
+			}
+		}
+
+		offset = {
+			x = -6
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER}
+
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	
+
+	focus = {
+		id = PRC_bring_war_to_neighboring_warlords
+		icon = GFX_focus_PRC_intimidate_warlords
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus }
+		x = 0
+		y = 1
+		relative_position_id = PRC_the_unwilling_diarchy_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = NXM
+		will_lead_to_war_with = XIC
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_gain_the_peoples_trust
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus }
+		x = -2
+		y = 0
+		relative_position_id = PRC_bring_war_to_neighboring_warlords
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_mobilization_of_the_people
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus }
+		x = 2
+		y = 0
+		relative_position_id = PRC_bring_war_to_neighboring_warlords
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_promote_guerilla_warfare
+		icon = GFX_focus_CHI_guerrilla_warfare
+		prerequisite = { focus = PRC_gain_the_peoples_trust focus = PRC_mobilization_of_the_people focus = PRC_bring_war_to_neighboring_warlords }
+		
+		x = 0
+		y = 1
+		relative_position_id = PRC_gain_the_peoples_trust
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_promote_regular_army
+		icon = GFX_focus_PRC_reorganize_divisions
+		prerequisite = { focus = PRC_gain_the_peoples_trust focus = PRC_mobilization_of_the_people focus = PRC_bring_war_to_neighboring_warlords }
+		
+		x = 0
+		y = 1
+		relative_position_id = PRC_mobilization_of_the_people
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_soviet_battle_tactics
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		prerequisite = { focus = PRC_promote_guerilla_warfare focus = PRC_promote_regular_army }
+		x = 3
+		y = 1
+		relative_position_id = PRC_promote_regular_army
+		mutually_exclusive	= { focus = PRC_the_battle_behind_the_front_lines }
+		
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_army_reforms
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = PRC_soviet_battle_tactics }
+		x = -1
+		y = 1
+		relative_position_id = PRC_soviet_battle_tactics
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_strict_training_regiments
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = PRC_soviet_battle_tactics }
+		x = 1
+		y = 1
+		relative_position_id = PRC_soviet_battle_tactics
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_centralized_army_command
+		icon = GFX_focus_PRC_army_command
+		prerequisite = { focus = PRC_army_reforms }
+		prerequisite = { focus = PRC_strict_training_regiments }
+		x = 1
+		y = 1
+		relative_position_id = PRC_army_reforms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_battle_behind_the_front_lines
+		icon = GFX_focus_PRC_raid_weapon_depots
+		prerequisite = { focus = PRC_promote_guerilla_warfare focus = PRC_promote_regular_army }
+		x = -3
+		y = 1
+		relative_position_id = PRC_promote_guerilla_warfare
+		mutually_exclusive	= { focus = PRC_soviet_battle_tactics }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_secure_the_lands
+		icon = GFX_focus_RAJ_a_private_military
+		prerequisite = { focus = PRC_the_battle_behind_the_front_lines }
+		x = -1
+		y = 1
+		relative_position_id = PRC_the_battle_behind_the_front_lines
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_launch_sabotage_campaigns
+		icon = GFX_focus_generic_sabotage
+		prerequisite = { focus = PRC_the_battle_behind_the_front_lines }
+		x = 1
+		y = 1
+		relative_position_id = PRC_the_battle_behind_the_front_lines
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_raiding_parties
+		icon = GFX_focus_AUS_raid_military_storages
+		prerequisite = { focus = PRC_secure_the_lands focus = PRC_launch_sabotage_campaigns }
+		x = 1
+		y = 1
+		relative_position_id = PRC_secure_the_lands
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_mao_zedong_ascends
+		icon = GFX_focus_prc_maoism
+		prerequisite = { focus = PRC_soviet_battle_tactics focus = PRC_the_battle_behind_the_front_lines }
+		mutually_exclusive = { focus = PRC_zhang_guotao_ascends }
+		x = 1
+		y = 2
+		relative_position_id = PRC_promote_guerilla_warfare
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_promote_womens_suffrage
+		icon = GFX_focus_PRC_rally_the_women
+		prerequisite = { focus = PRC_mao_zedong_ascends }
+		x = -1
+		y = 1
+		relative_position_id = PRC_mao_zedong_ascends
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_zhang_guotao_ascends
+		icon = GFX_focus_PRC_guotao_ascends
+		prerequisite = { focus = PRC_soviet_battle_tactics focus = PRC_the_battle_behind_the_front_lines }
+		mutually_exclusive = { focus = PRC_mao_zedong_ascends }
+		x = 3
+		y = 2
+		relative_position_id = PRC_promote_guerilla_warfare
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+			
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_a_new_central_committee
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = PRC_zhang_guotao_ascends }
+		x = 1
+		y = 1
+		relative_position_id = PRC_zhang_guotao_ascends
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+			
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_consolidate_politcal_power
+		icon = GFX_focus_PRC_consolidate_politcal_power
+		prerequisite = { focus = PRC_mao_zedong_ascends focus = PRC_zhang_guotao_ascends }
+		x = 1
+		y = 1
+		relative_position_id = PRC_mao_zedong_ascends
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_secure_lend_lease_from_soviet
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = PRC_consolidate_politcal_power focus = PRC_promote_womens_suffrage focus = PRC_a_new_central_committee }
+		x = 0
+		y = 1
+		relative_position_id = PRC_consolidate_politcal_power
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+focus = {
+		id = PRC_demand_warlord_loyalty
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = PRC_consolidate_politcal_power focus = PRC_promote_womens_suffrage focus = PRC_a_new_central_committee }
+		x = -2
+		y = 1
+		relative_position_id = PRC_consolidate_politcal_power
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		will_lead_to_war_with = PRC
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = GDC
+		will_lead_to_war_with = SND
+		will_lead_to_war_with = SIC
+		will_lead_to_war_with = NXM
+		will_lead_to_war_with = GSM
+		will_lead_to_war_with = XIC
+		will_lead_to_war_with = KHM
+		will_lead_to_war_with = KUM
+		will_lead_to_war_with = RNG
+		will_lead_to_war_with = HBC
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_preemptive_strike
+		icon = GFX_focus_attack_china
+		prerequisite = { focus = PRC_consolidate_politcal_power focus = PRC_promote_womens_suffrage focus = PRC_a_new_central_committee }
+		x = 2
+		y = 1
+		relative_position_id = PRC_consolidate_politcal_power
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_assume_leadership
+		icon = GFX_focus_PRC_assume_leadership
+		prerequisite = { focus = PRC_demand_warlord_loyalty focus = PRC_secure_lend_lease_from_soviet focus = PRC_preemptive_strike }
+		x = 0
+		y = 1
+		relative_position_id = PRC_secure_lend_lease_from_soviet
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reach_out_to_the_west
+		icon = GFX_focus_generic_approach_the_west
+		prerequisite = { focus = PRC_assume_leadership }
+		mutually_exclusive = { focus = PRC_closer_ties_to_sov }
+		x = -3
+		y = 1
+		relative_position_id = PRC_assume_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_closer_ties_to_sov
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = PRC_assume_leadership }
+		mutually_exclusive = { focus = PRC_reach_out_to_the_west }
+		x = -1
+		y = 1
+		relative_position_id = PRC_assume_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_emergency_supply_protocols
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PRC_assume_leadership }
+		mutually_exclusive = { focus = PRC_emergency_prodction_protocols }
+		x = 1
+		y = 1
+		relative_position_id = PRC_assume_leadership
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_emergency_prodction_protocols
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = PRC_assume_leadership }
+		mutually_exclusive = { focus = PRC_emergency_supply_protocols }
+		x = 3
+		y = 1
+		relative_position_id = PRC_assume_leadership
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_extend_emergency_measures
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		prerequisite = { focus = PRC_emergency_supply_protocols focus = PRC_emergency_prodction_protocols }
+		x = 1
+		y = 1
+		relative_position_id = PRC_emergency_supply_protocols
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_to_support_the_army
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = PRC_extend_emergency_measures }
+		x = 0
+		y = 1
+		relative_position_id = PRC_extend_emergency_measures
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_lessons_of_the_west
+		icon = GFX_focus_generic_university_3
+		prerequisite = { focus = PRC_closer_ties_to_sov focus = PRC_reach_out_to_the_west }
+		x = 1
+		y = 1
+		relative_position_id = PRC_reach_out_to_the_west
+		
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_long_march_towards_progress
+		icon = GFX_focus_research
+		prerequisite = { focus = PRC_lessons_of_the_west }
+		x = 0
+		y = 1
+		relative_position_id = PRC_lessons_of_the_west
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_every_peasant_a_soldier
+		icon = GFX_focus_JAP_the_modern_ashigaru
+		prerequisite = { focus = PRC_lessons_of_the_west focus = PRC_extend_emergency_measures }
+		x = 2
+		y = 2
+		relative_position_id = PRC_lessons_of_the_west
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_march_to_victory
+		icon = GFX_focus_PRC_hundred_regiments_offensive
+		prerequisite = { focus = PRC_every_peasant_a_soldier }
+		x = 0
+		y = 1
+		relative_position_id = PRC_every_peasant_a_soldier
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_towards_one_china
+		icon = GFX_focus_PRC_towards_one_china
+		prerequisite = { focus = PRC_prepare_for_the_inevitable focus = PRC_the_march_to_victory }
+		x = 9
+		y = 1
+		relative_position_id = PRC_prepare_for_the_inevitable
+		
+		mutually_exclusive = { focus = PRC_allow_autonomous_regions focus = PRC_peaceful_reunification }
+
+
+
+		offset = {
+			x = -11
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = 5
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			
+			
+			
+			
+		}
+
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = PRC
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = GDC
+		will_lead_to_war_with = SND
+		will_lead_to_war_with = SIC
+		will_lead_to_war_with = NXM
+		will_lead_to_war_with = GSM
+		will_lead_to_war_with = XIC
+		will_lead_to_war_with = KHM
+		will_lead_to_war_with = KUM
+		will_lead_to_war_with = RNG
+		will_lead_to_war_with = HBC
+
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_allow_autonomous_regions
+		icon = GFX_focus_PRC_autonomous_regions
+		prerequisite = { focus = PRC_prepare_for_the_inevitable focus = PRC_the_march_to_victory }
+		x = 2
+		y = 0
+		relative_position_id = PRC_towards_one_china
+
+		mutually_exclusive = { focus = PRC_towards_one_china focus = PRC_peaceful_reunification }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_peaceful_reunification
+		icon = GFX_focus_PRC_peaceful_reunification
+		prerequisite = { focus = PRC_prepare_for_the_inevitable focus = PRC_the_march_to_victory }
+		x = 4
+		y = 0
+		relative_position_id = PRC_towards_one_china
+
+		mutually_exclusive = { focus = PRC_towards_one_china focus = PRC_allow_autonomous_regions }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_the_peoples_republic
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		prerequisite = { focus = PRC_towards_one_china focus = PRC_allow_autonomous_regions focus = PRC_peaceful_reunification }
+		x = 2
+		y = 1
+		relative_position_id = PRC_towards_one_china
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_taiwan
+		icon = GFX_focus_generic_invade_taiwan
+		prerequisite = { focus = PRC_the_peoples_republic }
+		x = -6
+		y = 1
+		relative_position_id = PRC_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reclaim_tibet
+		icon = GFX_focus_PRC_reclaim_tibet
+		prerequisite = { focus = PRC_the_peoples_republic }
+		x = -4
+		y = 1
+		relative_position_id = PRC_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_subjugate_korea
+		icon = GFX_focus_generic_invade_korea
+		prerequisite = { focus = PRC_the_peoples_republic }
+		x = -2
+		y = 1
+		relative_position_id = PRC_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_dare_to_struggle
+		icon = GFX_focus_PRC_dare_to_struggle
+		prerequisite = { focus = PRC_taiwan focus = PRC_subjugate_korea focus = PRC_reclaim_tibet }
+		x = 1
+		y = 1
+		relative_position_id = PRC_taiwan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_dare_to_win
+		icon = GFX_focus_PRC_dare_to_win
+		prerequisite = { focus = PRC_taiwan focus = PRC_subjugate_korea focus = PRC_reclaim_tibet }
+		x = 3
+		y = 1
+		relative_position_id = PRC_taiwan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		will_lead_to_war_with = MON
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = SOV
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_adopt_sun_yat_sens_principles
+		icon = GFX_focus_PRC_adopt_sun_yat_sens_principles
+		prerequisite = { focus = PRC_the_peoples_republic }
+		x = 2
+		y = 1
+		relative_position_id = PRC_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		 search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_move_capital
+		icon = GFX_focus_PRC_move_capital
+		prerequisite = { focus = PRC_the_peoples_republic }
+		x = 4
+		y = 1
+		relative_position_id = PRC_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_first_premier
+		icon = GFX_focus_PRC_the_first_premier
+		prerequisite = { focus = PRC_the_peoples_republic }
+		x = 6
+		y = 1
+		relative_position_id = PRC_the_peoples_republic
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+	
+
+
+	focus = {
+		id = PRC_the_party_builds_the_nation
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = PRC_adopt_sun_yat_sens_principles focus = PRC_move_capital focus = PRC_the_first_premier }
+		x = 1
+		y = 1
+		relative_position_id = PRC_adopt_sun_yat_sens_principles
+
+		mutually_exclusive = { focus = PRC_reform_the_republic }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reform_the_republic
+		icon = GFX_focus_PRC_restore_the_old_republic
+		prerequisite = { focus = PRC_adopt_sun_yat_sens_principles focus = PRC_move_capital focus = PRC_the_first_premier }
+		x = 3
+		y = 1
+		relative_position_id = PRC_adopt_sun_yat_sens_principles
+
+		mutually_exclusive = { focus = PRC_the_party_builds_the_nation }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_avenge_the_century_of_humiliation
+		icon = GFX_focus_generic_communist_asia
+		prerequisite = { focus = PRC_dare_to_struggle focus = PRC_dare_to_win focus = PRC_the_party_builds_the_nation focus = PRC_reform_the_republic }
+		x = 3
+		y = 1
+		relative_position_id = PRC_dare_to_struggle
+		
+		mutually_exclusive = { focus = PRC_the_chinese_century focus = PRC_asian_democratic_union }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_chinese_century
+		icon = GFX_focus_PRC_the_chinese_century
+		prerequisite = { focus = PRC_dare_to_struggle focus = PRC_dare_to_win focus = PRC_the_party_builds_the_nation focus = PRC_reform_the_republic }
+		x = 5
+		y = 1
+		relative_position_id = PRC_dare_to_struggle
+
+		mutually_exclusive = { focus = PRC_avenge_the_century_of_humiliation focus = PRC_asian_democratic_union }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_asian_democratic_union
+		icon = GFX_focus_generic_democratic_asia
+		prerequisite = { focus = PRC_dare_to_struggle focus = PRC_dare_to_win focus = PRC_the_party_builds_the_nation focus = PRC_reform_the_republic }
+		x = 7
+		y = 1
+		relative_position_id = PRC_dare_to_struggle
+
+		mutually_exclusive = { focus = PRC_avenge_the_century_of_humiliation focus = PRC_the_chinese_century }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = PRC_usurp_control_over_yanan
+		icon = GFX_focus_PRC_usurp_control_over_yanan
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus focus = PRC_burn_the_paper_tigers }
+		x = 10
+		y = 1
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		cost = 5
+
+		offset = {
+			x = -5
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = -2
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		will_lead_to_war_with = XIC
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+	focus = {
+		id = PRC_eight_points_for_attention
+		icon = GFX_focus_PRC_eight_points_for_attention
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus focus = PRC_burn_the_paper_tigers }
+		x = 8
+		y = 1
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		offset = {
+			x = -5
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = -2
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_expel_the_occupiers
+		icon = GFX_focus_AST_war_japan
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus focus = PRC_burn_the_paper_tigers }
+		x = 12
+		y = 1
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		offset = {
+			x = -5
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = -2
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+		available = {}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_restore_territorial_integrity
+		icon = GFX_focus_PRC_restore_territorial_integrity
+		prerequisite = { focus = PRC_the_unwilling_diarchy_focus focus = PRC_burn_the_paper_tigers }
+		x = 14
+		y = 1
+		relative_position_id = PRC_burn_the_paper_tigers
+
+		offset = {
+			x = -5
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_burn_the_paper_tigers
+			}
+
+		}
+
+		offset = {
+			x = -2
+			y = 0
+
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = PRC_the_unwilling_diarchy_focus
+			}
+
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				date < 1943.01.01 
+				factor = 0
+			}
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+	
+	 
+	 
+	 
+	 
+	 
+	
+
+
+	focus = {
+		id = PRC_rally_the_industry
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = PRC_put_an_end_to_the_sufan }
+		x = 0
+		y = 1
+		relative_position_id = PRC_put_an_end_to_the_sufan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_expedite_land_revolution
+		icon = GFX_focus_PRC_land_revolution_expedited
+		prerequisite = { focus = PRC_rally_the_industry }
+		mutually_exclusive = { focus = PRC_halt_land_revolution }
+		x = -1
+		y = 1
+		relative_position_id = PRC_rally_the_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_halt_land_revolution
+		icon = GFX_focus_PRC_land_revolution_halted
+		prerequisite = { focus = PRC_rally_the_industry }
+		mutually_exclusive = { focus = PRC_expedite_land_revolution }
+		x = 1
+		y = 1
+		relative_position_id = PRC_rally_the_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_INDUSTRY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reestablish_the_state_bank
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = PRC_halt_land_revolution focus = PRC_expedite_land_revolution }
+		x = 1
+		y = 1
+		relative_position_id = PRC_expedite_land_revolution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+
+
+
+
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_CSCEC_mils
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PRC_reestablish_the_state_bank }
+		mutually_exclusive = { focus = PRC_CSCEC_civs }
+		x = -1
+		y = 1
+		relative_position_id = PRC_reestablish_the_state_bank
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_CSCEC_civs
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = PRC_reestablish_the_state_bank }
+		mutually_exclusive = { focus = PRC_CSCEC_mils }
+		x = 1
+		y = 1
+		relative_position_id = PRC_reestablish_the_state_bank
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_promote_the_silver_dollar
+		icon = GFX_focus_PRC_promote_the_silver_dollar
+		prerequisite = { focus = PRC_CSCEC_mils focus = PRC_CSCEC_civs }
+		mutually_exclusive = { focus = PRC_promote_paper_bills }
+		x = -2
+		y = 1
+		relative_position_id = PRC_CSCEC_mils
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_promote_paper_bills
+		icon = GFX_focus_PRC_promote_paper_bills
+		prerequisite = { focus = PRC_CSCEC_mils focus = PRC_CSCEC_civs }
+		mutually_exclusive = { focus = PRC_promote_the_silver_dollar }
+		x = 0
+		y = 1
+		relative_position_id = PRC_CSCEC_mils
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_allow_special_goods_trade
+		icon = GFX_focus_PRC_allow_special_goods_trade
+
+
+		prerequisite = { focus = PRC_CSCEC_mils focus = PRC_CSCEC_civs }
+		
+		x = 2
+		y = 1
+		relative_position_id = PRC_CSCEC_mils
+
+
+		mutually_exclusive = { focus = PRC_ban_special_goods_trade }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_ban_special_goods_trade
+		icon = GFX_focus_PRC_ban_special_goods_trade
+
+		mutually_exclusive = { focus = PRC_allow_special_goods_trade }
+
+		prerequisite = { focus = PRC_CSCEC_mils focus = PRC_CSCEC_civs }
+		x = 4
+		y = 1
+		relative_position_id = PRC_CSCEC_mils
+
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_rural_survey
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = PRC_ban_special_goods_trade focus = PRC_allow_special_goods_trade }
+		prerequisite = { focus = PRC_promote_paper_bills focus = PRC_promote_the_silver_dollar }
+		x = -3
+		y = 1
+		relative_position_id = PRC_ban_special_goods_trade
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_great_production_movement
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = PRC_rural_survey }
+		x = 1
+		y = 1
+		relative_position_id = PRC_rural_survey
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_resource_extraction_focus
+		icon = GFX_focus_generic_resource_extraction 
+		prerequisite = { focus = PRC_great_production_movement }
+		x = 1
+		y = 1
+		relative_position_id = PRC_great_production_movement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_agricultural_reform
+		icon = GFX_focus_CHI_students_to_the_countryside
+		prerequisite = { focus = PRC_rural_survey }
+		x = -1
+		y = 1
+		relative_position_id = PRC_rural_survey
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_agricultural_reform_boom
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PRC_agricultural_reform }
+		x = -1
+		y = 1
+		relative_position_id = PRC_agricultural_reform
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_industrialization_efforts
+		icon = GFX_focus_CHI_planned_economy
+		prerequisite = { focus = PRC_agricultural_reform }
+		prerequisite = { focus = PRC_great_production_movement }
+		x = 1
+		y = 2
+		relative_position_id = PRC_agricultural_reform
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+
+	
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_establish_shorter_market_plans
+		icon = GFX_focus_PRC_establish_shorter_market_plans
+		prerequisite = { focus = PRC_industrialization_efforts }
+		mutually_exclusive = { focus = PRC_initialize_five_year_plan }
+		x = 2
+		y = 1
+		relative_position_id = PRC_industrialization_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		select_effect = {
+			set_variable = { PRC_initialize_shorter_market_plans_current_civ_factories = num_of_civilian_factories }
+			set_variable = { PRC_initialize_shorter_market_plans_goal_civ_factories = PRC_initialize_shorter_market_plans_current_civ_factories }
+			multiply_variable = {
+				var = PRC_initialize_shorter_market_plans_goal_civ_factories
+				value = PRC_initialize_shorter_market_plans_civ_factories_multiplier
+			}
+			round_variable = PRC_initialize_shorter_market_plans_goal_civ_factories
+
+			set_variable = {
+				PRC_initialize_shorter_market_plans_current_mil_factories = num_of_military_factories
+			}
+			set_variable = { PRC_initialize_shorter_market_plans_goal_mil_factories = PRC_initialize_shorter_market_plans_current_mil_factories }
+			multiply_variable = {
+				var = PRC_initialize_shorter_market_plans_goal_mil_factories
+				value = PRC_initialize_shorter_market_plans_mil_factories_multiplier
+			}
+			round_variable = PRC_initialize_shorter_market_plans_goal_mil_factories
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_initialize_five_year_plan
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = PRC_industrialization_efforts }
+		mutually_exclusive = { focus = PRC_establish_shorter_market_plans }
+		x = -2
+		y = 1
+		relative_position_id = PRC_industrialization_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+
+		select_effect = {
+			set_variable = {
+				PRC_initialize_five_year_plan_current_civ_factories = num_of_civilian_factories
+			}
+			set_variable = { PRC_initialize_five_year_plan_goal_civ_factories = PRC_initialize_five_year_plan_current_civ_factories }
+			multiply_variable = {
+				var = PRC_initialize_five_year_plan_goal_civ_factories
+				value = PRC_initialize_five_year_plan_civ_factories_multiplier
+			}
+			round_variable = PRC_initialize_five_year_plan_goal_civ_factories
+			set_variable = {
+				PRC_initialize_five_year_plan_current_mil_factories = num_of_military_factories
+			}
+			set_variable = { PRC_initialize_five_year_plan_goal_mil_factories = PRC_initialize_five_year_plan_current_mil_factories }
+			multiply_variable = {
+				var = PRC_initialize_five_year_plan_goal_mil_factories
+				value = PRC_initialize_five_year_plan_mil_factories_multiplier
+			}
+			round_variable = PRC_initialize_five_year_plan_goal_mil_factories
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_construct_the_banqiao_dam
+		icon = GFX_focus_PRC_construct_the_banqiao_dam
+		prerequisite = { focus = PRC_establish_shorter_market_plans focus = PRC_initialize_five_year_plan }
+		x = 1 
+		y = 1
+		relative_position_id = PRC_initialize_five_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_connecting_the_country
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = PRC_establish_shorter_market_plans focus = PRC_initialize_five_year_plan }
+		x = 3
+		y = 1
+		relative_position_id = PRC_initialize_five_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_urbanization
+		icon = GFX_focus_PRC_urbanization
+		prerequisite = { focus = PRC_initialize_five_year_plan focus = PRC_establish_shorter_market_plans  }
+		x = 0
+		y = 2
+		relative_position_id = PRC_establish_shorter_market_plans
+		mutually_exclusive = { focus = PRC_rural_region_development }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		enable_automatic_bypass = no
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {}
+
+		completion_reward = {}
+
+
+
+
+
+
+
+	}
+
+	focus = {
+		id = PRC_rural_region_development
+		prerequisite = { focus = PRC_initialize_five_year_plan focus = PRC_establish_shorter_market_plans  }
+		mutually_exclusive = { focus = PRC_urbanization }
+
+		x = 0
+		y = 2
+		relative_position_id = PRC_initialize_five_year_plan
+
+		icon = GFX_focus_PRC_rural_region_development
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_urbanization_two
+		icon = GFX_focus_PRC_urbanization_two
+		prerequisite = { focus = PRC_urbanization }
+		x = 1
+		y = 1
+		relative_position_id = PRC_urbanization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_found_the_academy_of_science
+		text = PRC_form_the_academy_of_sciences
+		icon = GFX_focus_PRC_form_the_yanan_university
+		prerequisite = { focus = PRC_urbanization  focus = PRC_rural_region_development }
+		x = 2
+		y = 1
+		relative_position_id = PRC_rural_region_development
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_rural_region_development_two
+		icon = GFX_focus_PRC_rural_region_development_two
+		prerequisite = { focus = PRC_rural_region_development }
+		x = -1
+		y = 1
+		relative_position_id = PRC_rural_region_development
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_finalize_industrial_plan
+		icon = GFX_focus_generic_currency_reforms
+		prerequisite = { focus = PRC_urbanization_two focus = PRC_rural_region_development_two }
+		prerequisite = { focus = PRC_found_the_academy_of_science } 
+		x = 0
+		y = 1
+		relative_position_id = PRC_found_the_academy_of_science
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+	focus = {
+		id = PRC_long_march_to_recovery
+		icon = GFX_focus_PRC_long_march_to_recovery
+		prerequisite = { focus = PRC_put_an_end_to_the_sufan }
+		x = 16
+		y = 1
+		relative_position_id = PRC_put_an_end_to_the_sufan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_three_rules_of_discipline
+		icon = GFX_focus_PRC_three_rules_of_discipline
+		prerequisite = { focus = PRC_long_march_to_recovery }
+		x = 0
+		y = 1
+		relative_position_id = PRC_long_march_to_recovery
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+
+
+	focus = {
+		id = PRC_red_army_reborn
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		prerequisite = { focus = PRC_three_rules_of_discipline focus = PRC_master_the_terrain focus = PRC_reinforce_base_area }
+		x = 0
+		y = 1
+		relative_position_id = PRC_three_rules_of_discipline
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL}
+
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_equipment_from_copper_coins
+		icon = GFX_focus_PRC_equipment_from_copper_coins
+	
+		prerequisite = { focus = PRC_red_army_reborn }
+		x = -3
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_request_for_aid
+		icon = GFX_focus_PRC_request_for_aid
+		prerequisite = { focus = PRC_red_army_reborn }
+		x = -5
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_asymmetric_warfare
+		icon = GFX_focus_PRC_controlled_growth
+		prerequisite = { focus = PRC_red_army_reborn }
+		mutually_exclusive = { focus = PRC_conventional_warfare focus = PRC_indirect_fire }
+		x = 3
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {}	
+	}
+
+	focus = {
+		id = PRC_conventional_warfare
+		icon = GFX_focus_PRC_arms_recovery_efforts
+		prerequisite = { focus = PRC_red_army_reborn }
+		mutually_exclusive = { focus = PRC_asymmetric_warfare focus = PRC_indirect_fire }
+		x = 5
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_indirect_fire
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = PRC_red_army_reborn }
+		mutually_exclusive = { focus = PRC_asymmetric_warfare focus = PRC_conventional_warfare }
+		x = 7
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_he_long_second_army
+		icon = GFX_focus_PRC_he_long_second_army
+		prerequisite = { focus = PRC_red_army_reborn }
+		x = -7
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_master_the_terrain
+		icon = GFX_focus_generic_mountain_training
+
+		prerequisite = { focus = PRC_long_march_to_recovery }
+		x = 2
+		y = 1
+		relative_position_id = PRC_long_march_to_recovery
+
+		
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reinforce_base_area
+		icon = GFX_focus_generic_mountain_fortification
+
+		prerequisite = { focus = PRC_long_march_to_recovery }
+		x = -2
+		y = 1
+		relative_position_id = PRC_long_march_to_recovery
+
+	
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_to_steal_an_army
+		icon = GFX_focus_CONGO_copper_cartridges
+		prerequisite = { focus = PRC_request_for_aid focus = PRC_he_long_second_army focus = PRC_equipment_from_copper_coins }
+		prerequisite = { focus = PRC_asymmetric_warfare focus = PRC_conventional_warfare focus = PRC_indirect_fire }
+		x = -1
+		y = 2
+		relative_position_id = PRC_red_army_reborn
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_revolutionary_war_of_the_masses
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = PRC_request_for_aid focus = PRC_he_long_second_army focus = PRC_equipment_from_copper_coins }
+		prerequisite = { focus = PRC_asymmetric_warfare focus = PRC_conventional_warfare focus = PRC_indirect_fire }
+		x = 1
+		y = 2
+		relative_position_id = PRC_red_army_reborn
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_cooperate_ulanhu
+		icon = GFX_focus_PRC_cooperate_with_ulanhu
+		
+		prerequisite = { focus = PRC_red_army_reborn }
+		x = 0
+		y = 1
+		relative_position_id = PRC_red_army_reborn
+
+		
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_lessons_learnt
+		icon = GFX_focus_PRC_immediate_response_to_lack_of_army
+		prerequisite = { focus = PRC_to_steal_an_army } 
+		prerequisite = { focus = PRC_revolutionary_war_of_the_masses } 
+	
+		x = 0
+		y = 2
+		relative_position_id = PRC_cooperate_ulanhu
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_prepare_for_third_phase
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = PRC_lessons_learnt }
+		x = 0
+		y = 1
+		relative_position_id = PRC_lessons_learnt
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_peoples_liberation_army_sea
+		icon = GFX_focus_PRC_peoples_liberation_army
+		prerequisite = { focus = PRC_prepare_for_third_phase }
+		x = -7
+		y = 1
+		relative_position_id = PRC_prepare_for_third_phase
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_best_of_the_best
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PRC_peoples_liberation_army_sea }
+		mutually_exclusive = { focus = PRC_one_with_the_people }
+		x = 1
+		y = 1
+		relative_position_id = PRC_peoples_liberation_army_sea
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_one_with_the_people
+		icon = GFX_focus_GER_proletarian_dictatorship
+		prerequisite = { focus = PRC_peoples_liberation_army_sea }
+		mutually_exclusive = { focus = PRC_best_of_the_best }
+		x = -1
+		y = 1
+		relative_position_id = PRC_peoples_liberation_army_sea
+
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_night_attack
+		icon = GFX_focus_generic_army_attack
+		prerequisite = { focus = PRC_one_with_the_people }
+		x = -1
+		y = 1
+		relative_position_id = PRC_one_with_the_people
+
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+	focus = {
+		id = PRC_reorganize_divisions
+		icon = GFX_focus_PRC_reorganize_divisions
+		prerequisite = { focus = PRC_best_of_the_best }
+		x = 1
+		y = 1
+		relative_position_id = PRC_best_of_the_best
+
+		cost = 10
+
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_role_of_kangda
+		icon = GFX_focus_PRC_role_of_kangda
+		prerequisite = { focus = PRC_best_of_the_best focus = PRC_one_with_the_people }
+		x = -1
+		y = 1
+		relative_position_id = PRC_best_of_the_best
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_develop_the_army
+		icon = GFX_focus_PRC_develop_the_army
+		prerequisite = { focus = PRC_role_of_kangda }
+		prerequisite = { focus = PRC_reorganize_divisions focus = PRC_night_attack }
+		x = 0
+		y = 1
+		relative_position_id = PRC_role_of_kangda
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_to_serve_the_people
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = PRC_develop_the_army }
+		x = -1
+		y = 1
+		relative_position_id = PRC_develop_the_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_prepare_for_596
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = PRC_to_serve_the_people }
+		x = 0
+		y = 1
+		relative_position_id = PRC_to_serve_the_people
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_increase_domestic_production_capacity
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PRC_develop_the_army }
+		x = 1
+		y = 1
+		relative_position_id = PRC_develop_the_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_army_tank_research
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = PRC_increase_domestic_production_capacity }
+		x = 0
+		y = 1
+		relative_position_id = PRC_increase_domestic_production_capacity
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = PRC_army_doctrines
+		icon = GFX_focus_PRC_army_doctrines
+		prerequisite = { focus = PRC_army_tank_research focus = PRC_prepare_for_596 }
+		x = -2
+		y = 1
+		relative_position_id = PRC_army_tank_research
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_appeal_for_foreign_aid 
+		icon = GFX_focus_generic_tankette
+		prerequisite = { focus = PRC_army_tank_research focus = PRC_prepare_for_596 }
+		x = 0
+		y = 1
+		relative_position_id = PRC_army_tank_research
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		enable_automatic_bypass = no
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_a_modern_army 
+		icon = GFX_focus_PRC_a_modern_army
+		prerequisite = { focus = PRC_army_doctrines }
+		prerequisite = { focus = PRC_appeal_for_foreign_aid }
+		x = -1
+		y = 1
+		relative_position_id = PRC_appeal_for_foreign_aid 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {}
+	}
+
+
+	   
+	  
+	 
+	
+	
+	
+	
+
+
+	focus = {
+		id = PRC_establish_pla_air_force
+		icon = GFX_focus_PRC_establish_pla_air_force
+		prerequisite = { focus = PRC_prepare_for_third_phase }
+		x = 0
+		y = 1
+		relative_position_id = PRC_prepare_for_third_phase
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_pilot_training
+		icon = GFX_focus_PRC_pilot_training
+		prerequisite = { focus = PRC_establish_pla_air_force }
+		x = 0
+		y = 1
+		relative_position_id = PRC_establish_pla_air_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_appoint_chang_qiankun
+		icon = GFX_focus_PRC_appoint_chang_qiankun
+		prerequisite = { focus = PRC_pilot_training }
+		x = -1
+		y = 1
+		relative_position_id = PRC_pilot_training
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_northeast_aviation_university_sea
+		icon = GFX_focus_PRC_the_northeast_aviation_university_sea
+		prerequisite = { focus = PRC_appoint_chang_qiankun }
+		x = 0
+		y = 1
+		relative_position_id = PRC_appoint_chang_qiankun
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_form_the_5th_research_institute
+		icon = GFX_focus_generic_air_research_boost
+		prerequisite = { focus = PRC_the_northeast_aviation_university_sea }
+		
+		x = 0
+		y = 2
+		relative_position_id = PRC_the_northeast_aviation_university_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PRC_aviation_infrastructure
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = PRC_pilot_training}
+		x = 1
+		y = 1
+		relative_position_id = PRC_pilot_training
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_anti_air_effort
+		icon = GFX_focus_PRC_anti_air_effort
+		prerequisite = { focus = PRC_aviation_infrastructure }
+		x = 0
+		y = 1
+		relative_position_id = PRC_aviation_infrastructure
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_strengthen_the_air_arsenal
+		icon = GFX_focus_SMB_purchase_aircraft
+		prerequisite = { focus = PRC_anti_air_effort }
+		
+		x = 0
+		y = 2
+		relative_position_id = PRC_anti_air_effort
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_establish_domestic_aircraft_production
+		icon = GFX_focus_PRC_establish_domestic_aircraft_production
+		prerequisite = { focus = PRC_aviation_infrastructure }
+		prerequisite = { focus = PRC_appoint_chang_qiankun }
+		x = -1
+		y = 2
+		relative_position_id = PRC_aviation_infrastructure
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_light_plane_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = PRC_form_the_5th_research_institute focus = PRC_strengthen_the_air_arsenal }
+
+		mutually_exclusive = { focus = PRC_medium_plane_focus focus = PRC_large_plane_focus }
+		x = -2
+		y = 2
+		relative_position_id = PRC_establish_domestic_aircraft_production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_medium_plane_focus
+		icon = GFX_focus_generic_multi_role_aircraft
+		prerequisite = { focus = PRC_form_the_5th_research_institute focus = PRC_strengthen_the_air_arsenal }
+		mutually_exclusive = { focus = PRC_light_plane_focus focus = PRC_large_plane_focus }
+		x = 0
+		y = 2
+		relative_position_id = PRC_establish_domestic_aircraft_production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_large_plane_focus
+		icon = GFX_focus_generic_long_range_aircraft
+		prerequisite = { focus = PRC_form_the_5th_research_institute focus = PRC_strengthen_the_air_arsenal }
+		mutually_exclusive = { focus = PRC_light_plane_focus focus = PRC_medium_plane_focus }
+		x = 2
+		y = 2
+		relative_position_id = PRC_establish_domestic_aircraft_production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_air_force_capstone
+		icon = GFX_focus_PRC_air_force_capstone
+		prerequisite = { focus = PRC_large_plane_focus focus = PRC_light_plane_focus focus = PRC_medium_plane_focus }
+		x = 0
+		y = 1
+		relative_position_id = PRC_medium_plane_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+
+	focus = {
+		id = PRC_establish_pla_navy
+		icon = GFX_focus_PRC_establish_pla_navy
+		prerequisite = { focus = PRC_prepare_for_third_phase }
+		x = 7
+		y = 1
+		relative_position_id = PRC_prepare_for_third_phase
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_dockyard_construction_efforts
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = PRC_establish_pla_navy }
+		x = -2
+		y = 1
+		relative_position_id = PRC_establish_pla_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_naval_mio
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = PRC_establish_pla_navy }
+		x = 2
+		y = 1
+		relative_position_id = PRC_establish_pla_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_destroyers
+		icon = GFX_focus_generic_destroyer 
+		prerequisite = { focus = PRC_naval_mio focus = PRC_dockyard_construction_efforts }
+		x = 2
+		y = 1
+		relative_position_id = PRC_dockyard_construction_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		enable_automatic_bypass = no
+
+		available = {}
+
+		
+		bypass = {}
+		
+	
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_submarines
+		icon = GFX_focus_PRC_submarines
+		prerequisite = { focus = PRC_destroyers }
+		x = 0
+		y = 1
+		relative_position_id = PRC_destroyers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_the_pla_naval_school
+		icon = GFX_focus_PRC_the_pla_naval_school
+		prerequisite = { focus = PRC_dockyard_construction_efforts }
+		x = 0
+		y = 2
+		relative_position_id = PRC_dockyard_construction_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_reappoint_jinguang_as_admiral
+		icon = GFX_focus_PRC_appoint_xiao_jianguang
+		prerequisite = { focus = PRC_the_pla_naval_school }
+		x = 0
+		y = 2
+		relative_position_id = PRC_the_pla_naval_school
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_naval_infrastructure_effort
+		icon = GFX_focus_generic_navy_research_bonus
+		prerequisite = { focus = PRC_naval_mio }
+		x = 0
+		y = 2
+		relative_position_id = PRC_naval_mio
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_cruisers
+		icon = GFX_focus_generic_cruiser2 
+		prerequisite = { focus = PRC_naval_infrastructure_effort focus = PRC_the_pla_naval_school }
+		x = 1
+		y = 1
+		relative_position_id = PRC_the_pla_naval_school
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		enable_automatic_bypass = no
+
+		available = {}
+
+		
+		bypass = {}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_capital_ships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = PRC_naval_infrastructure_effort focus = PRC_the_pla_naval_school }
+		x = 3
+		y = 1
+		relative_position_id = PRC_the_pla_naval_school
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		enable_automatic_bypass = no
+
+		available = {}
+
+		
+		bypass = {}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_carriers
+		icon = GFX_focus_generic_air_carrier 
+		prerequisite = { focus = PRC_capital_ships }
+		prerequisite = { focus = PRC_cruisers }
+		x = 1
+		y = 1
+		relative_position_id = PRC_cruisers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_naval_guns
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+		prerequisite = { focus = PRC_naval_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = PRC_naval_infrastructure_effort
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_naval_ocean_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = PRC_reappoint_jinguang_as_admiral }
+		prerequisite = { focus = PRC_naval_guns }
+		x = 2
+		y = 1
+		relative_position_id = PRC_reappoint_jinguang_as_admiral
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_naval_capstone
+		icon = GFX_focus_PRC_naval_capstone
+		prerequisite = { focus = PRC_naval_ocean_navy }
+
+		x = 0
+		y = 1
+		relative_position_id = PRC_naval_ocean_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PRC_central_military_commision
+		icon = GFX_focus_PRC_central_military_commision
+		prerequisite = { focus = PRC_naval_capstone }
+		prerequisite = { focus = PRC_air_force_capstone }
+		prerequisite = { focus = PRC_a_modern_army }
+		x = 0
+		y = 1
+		relative_position_id = PRC_air_force_capstone
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL}
+
+
+		completion_reward = {}
+	}
+}

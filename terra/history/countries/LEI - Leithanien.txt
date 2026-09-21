@@ -1,0 +1,425 @@
+capital = 571
+
+oob = "LEI_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "LEI_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "LEI_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_trucks= 1
+	tech_support= 1
+	gw_artillery= 1
+	infantry_weapons1= 1
+	tech_mountaineers= 1
+	armored_car1= 1
+	tech_recon= 1
+	interwar_antiair= 1
+	interwar_antitank= 1
+	interwar_artillery= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	construction1= 1
+	fuel_refining= 1
+	synth_oil_experiments= 1
+	electronic_mechanical_engineering= 1
+	basic_fortification_tech= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "LEI_1936_air_bba"
+		set_technology = {
+			bba_early_transport_plane = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			air_torpedoe_1 = 1
+			aa_lmg = 1
+			engines_1 = 1
+			range_improvements = 1
+			
+		}
+		create_equipment_variant = {
+			name = "Zuhar Mk 1"
+			type = small_plane_cas_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Aina Mk 1"
+			type = small_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Gartea Mk 2"
+			type = small_plane_naval_bomber_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = torpedo_mounting
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Harra Mk 0"
+			type = medium_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+
+	else = {
+		set_air_oob = "LEI_1936_air_legacy"
+		set_technology = {
+			early_transport_plane = 1
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_battlecruiser = 1
+	early_battleship = 1
+	early_destroyer = 1
+	early_submarine = 1
+	
+	}
+	set_naval_oob = "LEI_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Azapenaso Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Oihotza Class"
+			type = battle_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Indarreka Class"
+			type = battleship_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Zubi Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_torpedo_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_depth_charges = 1
+	basic_torpedo = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	sonar = 1
+	
+	}
+	set_naval_oob = "LEI_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Azapenaso Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_torpedo_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Oihotza Class"
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = empty
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				front_1_custom_slot = ship_heavy_battery_1
+				mid_1_custom_slot = ship_anti_air_1
+				mid_2_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_anti_air_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Indarreka Class"
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = empty
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_anti_air_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_heavy_battery_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Zubi Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = sub_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				rear_1_custom_slot = ship_torpedo_sub_1
+			}
+		}
+
+	}
+
+
+recruit_character = LEI_Harkai_Izapore
+recruit_character = LEI_Harka_Hodea
+recruit_character = LEI_Xabier_Zoreko
+recruit_character = LEI_Xanti_Harra
+recruit_character = LEI_Ander_Indarria
+recruit_character = LEI_Xabier_Arna
+recruit_character = LEI_Amai_Elkaso
+recruit_character = LEI_Gaiur_Bakarroizea
+recruit_character = LEI_Ibaitz_Berrebaintza
+recruit_character = LEI_Unaitz_Bizirak
+recruit_character = LEI_Amaizkaitor_Arra
+recruit_character = LEI_Amaizka_Oihalets
+recruit_character = LEI_Harkaitz_Bakatasuntza
+recruit_character = LEI_Ekai_Oihotza
+recruit_character = LEI_Ibaizkaitz_Zalmenaua
+recruit_character = LEI_Aitz_Ikusmoa
+recruit_character = LEI_Iker_Bakarroizea
+recruit_character = LEI_Ekaitz_Uratasuna
+recruit_character = LEI_Iban_Zalmenaua
+recruit_character = LEI_Ibaitz_Gaurra
+recruit_character = LEI_Xanti_Zoreko
+recruit_character = LEI_Gorkaitz_Hodea
+recruit_character = LEI_Gaiur_Eskua
+recruit_character = LEI_Ekaitz_Itxe
+recruit_character = LEI_Iban_Indarreka
+recruit_character = LEI_Unaitz_Itxe
+recruit_character = LEI_Amai_Oihalets
+recruit_character = LEI_Ibaiur_Koba
+recruit_character = LEI_Asier_Argia
+recruit_character = LEI_Ibai_Arna
+recruit_character = LEI_Benaitz_Zalets
+recruit_character = LEI_Gaizkaitz_Abesti
+recruit_character = LEI_Miker_Oihalets
+recruit_character = LEI_Ibaizkaitz_Eguntzira
+recruit_character = LEI_Eneko_Mugi
+recruit_character = LEI_Gorka_Poza
+recruit_character = LEI_Amai_Berrebaintza
+recruit_character = LEI_Mikel_Alakets
+recruit_character = LEI_Ibaitz_Egurataskapo
+recruit_character = LEI_Asier_Ikusmoa
+recruit_character = LEI_Ibaiur_Bizirak
+recruit_character = LEI_Eder_Nazki
+recruit_character = LEI_Ibaitz_Bizirak
+recruit_character = LEI_Ibaizkaizkai_Mugi
+recruit_character = LEI_Unat_Begia
+recruit_character = LEI_Gorkaitorka_Belabai
+recruit_character = LEI_Ibaizkaizkai_Biharrakapen
+recruit_character = LEI_Ibanti_Zubi
+recruit_character = LEI_Ibaizkaitz_Pozarra
+recruit_character = LEI_Miker_Eguntzira
+recruit_character = LEI_Ibaiur_Helarrakerri
+recruit_character = LEI_Amaizka_Abeta
+recruit_character = LEI_Aitor_Eguntzira
+recruit_character = LEI_Amai_Gogoa
+recruit_character = LEI_Gorka_Grin
+recruit_character = LEI_Asier_Bela
+recruit_character = LEI_Ekaitz_Hodea
+recruit_character = LEI_Amai_Argia
+recruit_character = LEI_Ibai_Zartzuloa
+recruit_character = LEI_Aitorkai_Alakets
+recruit_character = LEI_Harkai_Semea
+recruit_character = LEI_Harka_Elur
+recruit_character = LEI_Asier_Abeta
+recruit_character = LEI_Eder_Zuharrata
+recruit_character = LEI_Amai_Zubi
+recruit_character = LEI_Gaizkaitz_Elur
+recruit_character = LEI_Gaiur_Alakets
+recruit_character = LEI_Harkaitz_Harra
+recruit_character = LEI_Ibaiur_Alakets
+recruit_character = LEI_Ander_Gizkimea
+recruit_character = LEI_Ibaizkaitz_Kokapena
+recruit_character = LEI_Koldo_Indarria
+recruit_character = LEI_Miker_Arra
+recruit_character = LEI_Miker_Hodea
+recruit_character = LEI_Benaitz_Eguntza
+recruit_character = LEI_Harkaitz_Bakarroizea
+recruit_character = LEI_Asier_Zora
+recruit_character = LEI_Ibaizkaitz_Elur
+recruit_character = LEI_Gorkaitz_Bakatasuntza
+recruit_character = LEI_Iker_Mugi
+recruit_character = LEI_Harkaiur_Eusmoa
+recruit_character = LEI_Aitorkai_Uratasuna
+recruit_character = LEI_Iban_Inguzkimena
+recruit_character = LEI_Gaitz_Amena
+recruit_character = LEI_Ander_Hita
+recruit_character = LEI_Gorka_Zoreko
+recruit_character = LEI_Harkaiur_Abesti
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 4
+set_convoys = 13
+set_stability = 0.64
+set_war_support = 0.36
+
+add_ideas = {
+limited_conscription
+civilian_economy
+export_focus
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1929.4.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 18
+	fascism = 17
+	communism = 21
+	neutrality = 44
+}
+
+
+
+
+

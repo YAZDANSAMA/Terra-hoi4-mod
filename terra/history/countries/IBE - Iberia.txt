@@ -1,0 +1,582 @@
+capital = 1131
+
+oob = "IBE_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "IBE_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "IBE_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	support_weapons= 1
+	tech_trucks= 1
+	tech_support= 1
+	gw_artillery= 1
+	paratroopers= 1
+	marines= 1
+	motorised_infantry= 1
+	interwar_antiair= 1
+	interwar_artillery= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	construction1= 1
+	fuel_refining= 1
+	synth_oil_experiments= 1
+	electronic_mechanical_engineering= 1
+	basic_fire_control_system= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "IBE_1936_air_bba"
+		set_technology = {
+			bba_early_transport_plane = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			air_torpedoe_1 = 1
+			engines_1 = 1
+			armor_piercing_bombs = 1
+			aa_lmg = 1
+			range_improvements = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+			basic_large_airframe = 1
+			
+		}
+		create_equipment_variant = {
+			name = "Taghislit Mk 0"
+			type = small_plane_cas_airframe_1
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Tidrawin Mk 2"
+			type = small_plane_airframe_1
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Adakilen Mk 1"
+			type = small_plane_naval_bomber_airframe_1
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = torpedo_mounting
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Tighilt Mk 2"
+			type = large_plane_airframe_1
+			modules = {
+							engine_type_slot = engine_1_4x
+			fixed_main_weapon_slot = large_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Thazem Mk 0"
+			type = medium_plane_airframe_1
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Tazdakwin Mk 2"
+			type = small_plane_cas_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Tajmi Mk 1"
+			type = small_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Tanirt Mk 1"
+			type = small_plane_naval_bomber_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = torpedo_mounting
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Tislit Mk 0"
+			type = large_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_4x
+			fixed_main_weapon_slot = large_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Nfou Mk 1"
+			type = medium_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+
+	else = {
+		set_air_oob = "IBE_1936_air_legacy"
+		set_technology = {
+			early_transport_plane = 1
+			early_fighter = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	basic_carrier = 1
+	basic_heavy_cruiser = 1
+	basic_light_cruiser = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_heavy_cruiser = 1
+	early_light_cruiser = 1
+	
+	}
+	set_naval_oob = "IBE_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Ametz Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tamezir Class"
+			type = light_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_anti_air_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Amett Class"
+			type = light_cruiser_2
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_anti_air_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tiwin Class"
+			type = heavy_cruiser_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tamezir Class"
+			type = heavy_cruiser_2
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_armor_upgrade = 1
+				ship_gun_upgrade = 1
+				ship_engine_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tazawenza Class"
+			type = carrier_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_engine_upgrade = 1
+				ship_deckspace_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tazaghrart Class"
+			type = carrier_2
+			upgrades = {
+				ship_reliability_upgrade = 1
+				ship_engine_upgrade = 1
+				ship_deckspace_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_depth_charges = 1
+	basic_heavy_armor_scheme = 1
+	basic_heavy_battery = 1
+	basic_naval_mines = 1
+	basic_ship_hull_carrier = 1
+	basic_ship_hull_cruiser = 1
+	basic_ship_hull_light = 1
+	basic_torpedo = 1
+	damage_control_1 = 1
+	early_ship_hull_carrier = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_light = 1
+	fire_control_methods_1 = 1
+	improved_ship_torpedo_launcher = 1
+	improved_sonar = 1
+	magnetic_detonator = 1
+	mtg_transport = 1
+	smoke_generator = 1
+	sonar = 1
+	submarine_mine_laying = 1
+	
+	}
+	set_naval_oob = "IBE_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Ametz Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_torpedo_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tamezir Class"
+			type = ship_hull_cruiser_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_fire_control_system_slot = ship_sonar_1
+				fixed_ship_radar_slot = empty
+				mid_1_custom_slot = ship_torpedo_1
+				mid_2_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Amett Class"
+			type = ship_hull_cruiser_2
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				mid_1_custom_slot = ship_torpedo_2
+				mid_2_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_mine_layer_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tiwin Class"
+			type = ship_hull_cruiser_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_fire_control_system_slot = ship_sonar_1
+				fixed_ship_radar_slot = empty
+				mid_1_custom_slot = ship_medium_battery_1
+				mid_2_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_mine_layer_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tamezir Class"
+			type = ship_hull_cruiser_2
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				mid_1_custom_slot = ship_mine_layer_1
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_anti_air_2
+			}
+		}
+		create_equipment_variant = {
+			name = "Tazawenza Class"
+			type = ship_hull_carrier_conversion_ca
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_engine_slot = carrier_ship_engine_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_secondaries_slot = ship_secondaries_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Tazaghrart Class"
+			type = ship_hull_carrier_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				fixed_ship_radar_slot = empty
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				front_1_custom_slot = ship_deck_space
+				mid_1_custom_slot = ship_armor_carrier_deck
+			}
+		}
+
+	}
+
+
+recruit_character = IBE_Karim_Azemt
+recruit_character = IBE_Tari_Thazaghal
+recruit_character = IBE_Mokran_Tamunt
+recruit_character = IBE_Amoun_Takfawin
+recruit_character = IBE_Saidi_Taghissit
+recruit_character = IBE_Taharen_Tifart
+recruit_character = IBE_Massa_Takfawin
+recruit_character = IBE_Tafsut_Takfawin
+recruit_character = IBE_Mokrannis_Asifawt
+recruit_character = IBE_Amoun_Taghissit
+recruit_character = IBE_Saidi_Azem
+recruit_character = IBE_Yannissa_Tafrar
+recruit_character = IBE_Aselmad_Tajmi
+recruit_character = IBE_Mokrannissa_Imzirirt
+recruit_character = IBE_Kariq_Azeggadirt
+recruit_character = IBE_Massinissini_Izult
+recruit_character = IBE_Tahariq_Tawla
+recruit_character = IBE_Iskariq_Tagmmi
+recruit_character = IBE_Lyes_Thakilt
+recruit_character = IBE_Mokran_Tiwizirt
+recruit_character = IBE_Tafsut_Tazrawt
+recruit_character = IBE_Yuba_Tiwinir
+recruit_character = IBE_Kariq_Tizir
+recruit_character = IBE_Sifane_Tazdan
+recruit_character = IBE_Yuba_Amdart
+recruit_character = IBE_Meziz_Amert
+recruit_character = IBE_Mokrannissa_Amett
+recruit_character = IBE_Amoun_Tiwina
+recruit_character = IBE_Karen_Tazallas
+recruit_character = IBE_Tariq_Tart
+recruit_character = IBE_Tafsut_Tiwin
+recruit_character = IBE_Sifane_Imim
+recruit_character = IBE_Mokrannissa_Izurt
+recruit_character = IBE_Tari_Tazmert
+recruit_character = IBE_Lyes_Azemt
+recruit_character = IBE_Karimokrane_Azem
+recruit_character = IBE_Ziriq_Nfou
+recruit_character = IBE_Yane_Tifart
+recruit_character = IBE_Kariq_Asifawt
+recruit_character = IBE_Saidi_Talla
+recruit_character = IBE_Karim_Azem
+recruit_character = IBE_Iskaren_Tamurawt
+recruit_character = IBE_Amokrane_Tamurt
+recruit_character = IBE_Meziane_Tislit
+recruit_character = IBE_Taharen_Tamda
+recruit_character = IBE_Yane_Tighalut
+recruit_character = IBE_Amokrane_Thaniremt
+recruit_character = IBE_Iderfax_Tazmert
+recruit_character = IBE_Sifane_Tafrar
+recruit_character = IBE_Ziri_Tazrart
+recruit_character = IBE_Amoun_Tamunt
+recruit_character = IBE_Iskaren_Azem
+recruit_character = IBE_Yane_Tissiraw
+recruit_character = IBE_Lyes_Izurt
+recruit_character = IBE_Iskaren_Amett
+recruit_character = IBE_Saidi_Imzirirt
+recruit_character = IBE_Tahari_Tazmert
+recruit_character = IBE_Tari_Azeggadirt
+recruit_character = IBE_Iderfax_Tamur
+recruit_character = IBE_Meziane_Tifassirem
+recruit_character = IBE_Tarim_Tifart
+recruit_character = IBE_Mokrannissa_Takhmim
+recruit_character = IBE_Karimokrane_Azrou
+recruit_character = IBE_Tahariq_Takfaw
+recruit_character = IBE_Mimokran_Afsou
+recruit_character = IBE_Tafsut_Tazrart
+recruit_character = IBE_Aselmad_Tamatrit
+recruit_character = IBE_Ziriq_Agaghislit
+recruit_character = IBE_Iderfax_Ametz
+recruit_character = IBE_Karen_Tizir
+recruit_character = IBE_Azian_Tamatrit
+recruit_character = IBE_Massinissa_Tifart
+recruit_character = IBE_Massinissini_Agaddayt
+recruit_character = IBE_Massinissa_Thazem
+recruit_character = IBE_Tariq_Tazem
+recruit_character = IBE_Azian_Asirt
+recruit_character = IBE_Ziri_Thakilt
+recruit_character = IBE_Ziriq_Tazawenza
+recruit_character = IBE_Tarim_Azem
+recruit_character = IBE_Yannissa_Amezwal
+recruit_character = IBE_Tafsut_Azemmirem
+recruit_character = IBE_Mimokran_Tazawenza
+recruit_character = IBE_Kariq_Tifassirem
+recruit_character = IBE_Iskaren_Azart
+recruit_character = IBE_Karen_Tazem
+recruit_character = IBE_Yane_Azraren
+recruit_character = IBE_Yuba_Azerwin
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 5
+set_convoys = 492
+set_stability = 0.83
+set_war_support = 0.68
+
+add_ideas = {
+disarmed_nation
+low_economic_mobilisation
+closed_economy
+}
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1913.4.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 1
+	fascism = 23
+	communism = 49
+	neutrality = 27
+}
+
+
+
+
+

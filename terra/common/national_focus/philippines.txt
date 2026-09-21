@@ -1,0 +1,4478 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = philippines_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PHI
+			has_dlc = "No Compromise, No Surrender"
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2200 }
+
+initial_show_position = { 
+	focus = PHI_commonwealth_of_the_philippines
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_commonwealth_of_the_philippines
+		icon = GFX_focus_PHI_commonwealth_of_the_philippines
+				
+			
+		x = 21
+		y = 0
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_align_with_the_usa
+		icon = GFX_focus_generic_befriend_usa
+
+		prerequisite = { focus = PHI_commonwealth_of_the_philippines }								
+
+		relative_position_id = PHI_commonwealth_of_the_philippines		
+		mutually_exclusive = { focus = PHI_align_with_japan }					
+			
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_align_with_japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+
+		prerequisite = { focus = PHI_commonwealth_of_the_philippines }								
+
+		relative_position_id = PHI_commonwealth_of_the_philippines	
+		mutually_exclusive = { focus = PHI_align_with_the_usa }										
+			
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
+	}
+	
+
+	focus = {
+		id = PHI_peg_the_peso_to_the_dollar
+		icon = GFX_focus_PHI_uncouple_the_peso_and_dollar
+		overlay = GFX_focus_fast_overlay_america 
+
+		prerequisite = { focus = PHI_align_with_the_usa focus = PHI_align_with_japan }								
+
+		relative_position_id = PHI_align_with_the_usa		
+		mutually_exclusive = { focus = PHI_leverage_the_peso }								
+			
+		x = -4
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_leverage_the_peso
+		icon = GFX_focus_PHI_leverage_the_peso
+		overlay = GFX_focus_fast_overlay_japan  
+
+		prerequisite = { focus = PHI_align_with_japan focus = PHI_align_with_the_usa }								
+
+		relative_position_id = PHI_align_with_japan		
+		mutually_exclusive = { focus = PHI_peg_the_peso_to_the_dollar }									
+			
+		x = 4
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_quezon_city
+		icon = GFX_focus_SWE_hygienic_housing
+
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar		
+		
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_unicameral_legislature
+		icon = GFX_focus_generic_improve_the_administration
+
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar		
+		
+		x = 4
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_national_fiscal_policy
+		icon = GFX_focus_generic_currency_reforms
+		overlay = GFX_focus_fast_overlay_japan_clock
+
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar		
+		
+		x = 6
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_agricultural_migrants_to_hawaii
+		icon = GFX_focus_PHI_agricultural_migrants_to_hawaii
+
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar		
+		
+		x = 8
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_encourage_foreign_investment
+		icon = GFX_focus_RAJ_issue_bonds_on_the_stock_market
+
+		prerequisite = { focus = PHI_leverage_the_peso }
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar		
+		
+		x = 10
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+	focus = {
+		id = PHI_encourage_japanese_investment
+		icon = GFX_focus_PHI_encourage_japanese_investment
+
+		prerequisite = { focus = PHI_leverage_the_peso }
+
+		relative_position_id = PHI_leverage_the_peso		
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+
+
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_develop_japanese_trade_connections
+		icon = GFX_focus_PHI_develop_japanese_trade_connections
+
+		prerequisite = { focus = PHI_encourage_japanese_investment }
+
+		relative_position_id = PHI_encourage_japanese_investment		
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		
+		
+		
+		
+		
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}
+
+	focus = {
+		id = PHI_quezon_city_campus
+		icon = GFX_focus_research
+
+		prerequisite = { focus = PHI_quezon_city }						
+
+		relative_position_id = PHI_quezon_city		
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_reduce_unneccessary_expenditure
+		icon = GFX_focus_generic_reduce_unneccessary_expenditure
+		overlay = GFX_focus_fast_overlay_japan_clock
+
+		prerequisite = { focus = PHI_national_fiscal_policy }
+
+		relative_position_id = PHI_national_fiscal_policy		
+		
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_subsidies
+		icon = GFX_focus_mex_privatisation
+		overlay = GFX_focus_fast_overlay_japan_clock	
+
+		prerequisite = { focus = PHI_national_fiscal_policy }
+
+		relative_position_id = PHI_national_fiscal_policy		
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_basic_welfare
+		icon = GFX_focus_generic_welfare
+		overlay = GFX_focus_fast_overlay_japan_clock	
+
+		prerequisite = { focus = PHI_national_fiscal_policy }
+
+		relative_position_id = PHI_national_fiscal_policy		
+		
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+		
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_encourage_asian_trade
+		icon = GFX_goal_generic_positive_trade_relations
+
+		prerequisite = { focus = PHI_encourage_foreign_investment }
+
+		relative_position_id = PHI_encourage_foreign_investment		
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}
+
+	focus = {
+		id = PHI_pro_hacendados
+		icon = GFX_focus_PHI_pro_hacendados
+
+		overlay = GFX_focus_fast_overlay_america 
+
+		prerequisite = { focus = PHI_quezon_city_campus focus = PHI_reduce_unneccessary_expenditure focus = PHI_subsidies focus = PHI_basic_welfare focus = PHI_encourage_asian_trade }
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar	
+		mutually_exclusive = { focus = PHI_anti_hacendados }		
+		
+		x = 0
+		y = 3
+	
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 0.1
+				has_government  = fascism
+			}
+
+			modifier = {
+				factor = 3
+				has_government  = democratic
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_anti_hacendados
+		icon = GFX_focus_PHI_anti_hacendados
+		overlay = GFX_focus_fast_overlay_japan 
+
+		prerequisite = { focus = PHI_quezon_city_campus focus = PHI_reduce_unneccessary_expenditure focus = PHI_subsidies focus = PHI_basic_welfare focus = PHI_encourage_asian_trade }
+
+		relative_position_id = PHI_leverage_the_peso
+		mutually_exclusive = { focus = PHI_pro_hacendados }
+
+		x = 0
+		y = 3
+	
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 3
+				has_government  = fascism
+			}
+
+			modifier = {
+				factor = 0.1
+				has_government  = democratic
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_sugar_barons
+		icon = GFX_focus_BRA_support_sugar_barons
+
+		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+
+		relative_position_id = PHI_pro_hacendados	
+		
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_luzon_transport
+		icon = GFX_focus_PHI_luzon_transport
+		overlay = GFX_focus_fast_overlay_japan_clock
+
+		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+
+		relative_position_id = PHI_pro_hacendados	
+		
+		x = 4
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_expand_gold_mining
+		icon = GFX_focus_generic_expand_gold_mining
+
+		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+
+		relative_position_id = PHI_pro_hacendados	
+		
+		x = 6
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_mindanao_transport
+		icon = GFX_focus_PHI_mindanao_transport
+		overlay = GFX_focus_fast_overlay_japan_clock
+
+		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+
+		relative_position_id = PHI_pro_hacendados	
+		
+		x = 8
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_land_reform
+		icon = GFX_focus_generic_farmland
+		overlay = GFX_focus_fast_overlay_japan_clock	
+
+		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+
+		relative_position_id = PHI_pro_hacendados	
+		
+		x = 10
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_japanese_advisors
+		icon = GFX_focus_PHI_japanese_advisors
+
+		prerequisite = { focus = PHI_anti_hacendados }
+
+		relative_position_id = PHI_anti_hacendados
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_san_miguel
+		icon = GFX_focus_PHI_san_miguel
+
+		prerequisite = { focus = PHI_sugar_barons }
+
+		relative_position_id = PHI_sugar_barons	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_textile_mills
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+
+		prerequisite = { focus = PHI_luzon_transport }
+
+		relative_position_id = PHI_luzon_transport	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_encourage_gold_exports
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+
+		prerequisite = { focus = PHI_expand_gold_mining }
+
+		relative_position_id = PHI_expand_gold_mining	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_mineral_prospecting
+		icon = GFX_focus_generic_mineral_prospecting
+
+		prerequisite = { focus = PHI_mindanao_transport }
+
+		relative_position_id = PHI_mindanao_transport	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_bill_of_rights
+		icon = GFX_focus_generic_treaty
+		overlay = GFX_focus_fast_overlay_japan_clock		
+
+		prerequisite = { focus = PHI_land_reform }
+
+		relative_position_id = PHI_land_reform	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 10
+				has_government = democratic
+			}
+
+			modifier = {
+				factor = 0.1
+				has_government = fascism
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_nationality_act
+		icon = GFX_focus_usa_recruit_the_free_corps
+		overlay = GFX_focus_fast_overlay_america 		
+
+		prerequisite = { focus = PHI_san_miguel focus = PHI_textile_mills focus = PHI_encourage_gold_exports focus = PHI_mineral_prospecting focus = PHI_bill_of_rights }
+
+		relative_position_id = PHI_pro_hacendados	
+		mutually_exclusive = { focus = PHI_open_borders }
+		
+		x = 0
+		y = 3
+	
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 0.1
+				has_government  = fascism
+			}
+
+			modifier = {
+				factor = 2
+				has_government  = democratic
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_open_borders
+		icon = GFX_focus_PHI_open_borders
+		overlay = GFX_focus_fast_overlay_japan	
+
+		prerequisite = { focus = PHI_san_miguel focus = PHI_textile_mills focus = PHI_encourage_gold_exports focus = PHI_mineral_prospecting focus = PHI_bill_of_rights }
+
+		relative_position_id = PHI_anti_hacendados	
+		mutually_exclusive = { focus = PHI_nationality_act }
+		
+		x = 0
+		y = 3
+	
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 2
+				has_government  = fascism
+			}
+
+			modifier = {
+				factor = 0.1
+				has_government  = democratic
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_philippine_american_educational_foundation
+		icon = GFX_focus_research
+
+		prerequisite = { focus = PHI_nationality_act }
+
+		relative_position_id = PHI_nationality_act	
+		
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_government_filipinization
+		icon = GFX_focus_PER_limit_foreign_influence
+
+		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+
+		relative_position_id = PHI_nationality_act	
+		
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}
+
+	focus = {
+		id = PHI_bicameral_legislature
+		icon = GFX_focus_generic_improve_the_administration_2
+
+		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+
+		relative_position_id = PHI_nationality_act	
+		
+		x = 3
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_uncouple_the_peso_and_dollar
+		icon = GFX_focus_PHI_uncouple_the_peso_and_dollar
+
+		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+
+		relative_position_id = PHI_nationality_act	
+		
+		x = 5
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_increase_sugar_exports
+		icon = GFX_focus_AFG_sugar_factory
+		overlay = GFX_focus_fast_overlay_japan_clock		
+
+		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+
+		relative_position_id = PHI_nationality_act	
+		
+		x = 7
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_break_chinese_monopoly
+		icon = GFX_focus_BEL_government_resigns
+
+		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+
+		relative_position_id = PHI_nationality_act	
+		mutually_exclusive = { focus = PHI_encourage_chinese_immigration }
+		
+		x = 9
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_encourage_chinese_immigration
+		icon = GFX_focus_PHI_encourage_chinese_immigration
+		overlay = GFX_focus_fast_overlay_japan_clock		
+
+		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+
+		relative_position_id = PHI_nationality_act	
+		mutually_exclusive = { focus = PHI_break_chinese_monopoly }
+		
+		x = 11
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_japanese_observers
+		icon = GFX_focus_PHI_japanese_observers
+
+		prerequisite = { focus = PHI_open_borders }
+
+		relative_position_id = PHI_open_borders	
+		
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_treaty_of_manila
+		icon = GFX_focus_PHI_treaty_of_manila
+
+		prerequisite = { focus = PHI_government_filipinization focus = PHI_bicameral_legislature focus = PHI_uncouple_the_peso_and_dollar focus = PHI_increase_sugar_exports focus = PHI_break_chinese_monopoly focus = PHI_encourage_chinese_immigration }
+
+		relative_position_id = PHI_uncouple_the_peso_and_dollar	
+		
+		x = 1
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_universal_sufferage
+		icon = GFX_focus_generic_universal_suffrage
+
+		prerequisite = { focus = PHI_treaty_of_manila }
+
+		relative_position_id = PHI_treaty_of_manila	
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_modernization
+		icon = GFX_focus_generic_modernize_industry
+
+		prerequisite = { focus = PHI_treaty_of_manila }
+
+		relative_position_id = PHI_treaty_of_manila	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_bill_of_rights_for_veterans
+		icon = GFX_focus_PHI_bill_of_rights_for_veterans
+
+		prerequisite = { focus = PHI_universal_sufferage }
+
+		relative_position_id = PHI_universal_sufferage	
+		
+		x = -3
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_revision_of_taxation_laws
+		icon = GFX_focus_generic_economic_recovery
+
+		prerequisite = { focus = PHI_universal_sufferage }
+
+		relative_position_id = PHI_universal_sufferage	
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_rehabilitation_finance_corporation
+		icon = GFX_focus_RAJ_special_economic_zones
+
+		prerequisite = { focus = PHI_modernization }
+
+		relative_position_id = PHI_modernization	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_department_of_foreign_affairs
+		icon = GFX_focus_generic_diplomatic_treaty
+
+		prerequisite = { focus = PHI_modernization }
+
+		relative_position_id = PHI_modernization	
+		
+		x = 3
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_economic_nationalism
+		icon = GFX_focus_PHI_economic_nationalism
+
+		prerequisite = { focus = PHI_revision_of_taxation_laws }
+		prerequisite = { focus = PHI_bill_of_rights_for_veterans }
+		prerequisite = { focus = PHI_rehabilitation_finance_corporation }
+		prerequisite = { focus = PHI_department_of_foreign_affairs }
+		relative_position_id = PHI_revision_of_taxation_laws	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}
+
+	focus = {
+		id = PHI_bell_trade_act
+		icon = GFX_focus_PHI_bell_trade_act
+
+		prerequisite = { focus = PHI_revision_of_taxation_laws }
+		prerequisite = { focus = PHI_bill_of_rights_for_veterans }
+		prerequisite = { focus = PHI_rehabilitation_finance_corporation }
+		prerequisite = { focus = PHI_department_of_foreign_affairs }
+		relative_position_id = PHI_revision_of_taxation_laws	
+		
+		x = 3
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}
+
+	focus = {
+		id = PHI_pearl_of_the_orient_seas
+		icon = GFX_focus_PHI_pearl_of_the_orient_seas
+
+		prerequisite = { focus = PHI_economic_nationalism }
+		prerequisite = { focus = PHI_bell_trade_act }
+
+		relative_position_id = PHI_economic_nationalism	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_united_states_army_forces_in_the_far_east
+		icon = GFX_focus_PHI_united_states_army_forces_in_the_far_east
+		
+		x = 8
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_appoint_macarthur
+		icon = GFX_focus_PHI_appoint_macarthur
+
+		prerequisite = { focus = PHI_united_states_army_forces_in_the_far_east }
+
+		relative_position_id = PHI_united_states_army_forces_in_the_far_east	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_bring_in_eisenhower
+		icon = GFX_focus_PHI_bring_in_eisenhower
+
+		prerequisite = { focus = PHI_appoint_macarthur }
+
+		relative_position_id = PHI_appoint_macarthur	
+		
+		x = -5
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 10
+				has_government  = democratic
+				date > 1937.1.1
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_subordinate_philippine_department
+		icon = GFX_focus_PHI_subordinate_philippine_department
+
+		prerequisite = { focus = PHI_bring_in_eisenhower }
+
+		relative_position_id = PHI_bring_in_eisenhower	
+		
+		x = -1
+		y = 1
+
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_usaffe_headquarters
+		icon = GFX_focus_PHI_usaffe_headquarters
+
+		prerequisite = { focus = PHI_subordinate_philippine_department }
+
+		relative_position_id = PHI_subordinate_philippine_department	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 10
+				has_government  = democratic
+				date > 1937.1.1
+			}
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_utang_na_loob
+		icon = GFX_focus_PHI_utang_na_loob
+
+		prerequisite = { focus = PHI_usaffe_headquarters }
+
+		relative_position_id = PHI_usaffe_headquarters	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_police_chief_eisenhower
+		icon = GFX_focus_PHI_police_chief_eisenhower
+
+		prerequisite = { focus = PHI_bring_in_eisenhower }
+		prerequisite = { focus = PHI_utang_na_loob }
+
+		relative_position_id = PHI_utang_na_loob	
+		
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_military_requisitions
+		icon = GFX_focus_PHI_military_requisitions
+
+		prerequisite = { focus = PHI_appoint_macarthur }
+
+		relative_position_id = PHI_appoint_macarthur	
+		
+		x = 0
+		y = 1
+	
+		cost = 3
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_small_arms_and_artillery_requisition
+		icon = GFX_focus_PHI_small_arms_and_artillery_requisition
+
+		prerequisite = { focus = PHI_military_requisitions }
+
+		relative_position_id = PHI_military_requisitions	
+		
+		x = -2
+		y = 1
+	
+		cost = 3
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_trucks_and_transport_requisition
+		icon = GFX_focus_PHI_trucks_and_transport_requisition
+
+		prerequisite = { focus = PHI_small_arms_and_artillery_requisition }
+
+		relative_position_id = PHI_small_arms_and_artillery_requisition	
+		
+		x = 0
+		y = 2
+	
+		cost = 3
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_far_east_air_force
+		icon = GFX_focus_PHI_far_east_air_force
+
+		prerequisite = { focus = PHI_military_requisitions }
+
+		relative_position_id = PHI_military_requisitions	
+		
+		x = 2
+		y = 1
+	
+		cost = 3
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_aircraft_requisition
+		icon = GFX_focus_PHI_aircraft_requisition
+
+		prerequisite = { focus = PHI_far_east_air_force }
+
+		relative_position_id = PHI_far_east_air_force	
+		
+		x = 0
+		y = 2
+			
+		cost = 3
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_mariveles_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+
+		prerequisite = { focus = PHI_military_requisitions }
+
+		relative_position_id = PHI_military_requisitions	
+		
+		x = 0
+		y = 3
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_expand_us_bases
+		icon = GFX_focus_generic_air_bases
+
+		prerequisite = { focus = PHI_trucks_and_transport_requisition focus = PHI_aircraft_requisition }
+		prerequisite = { focus = PHI_mariveles_naval_base }
+
+		relative_position_id = PHI_mariveles_naval_base	
+		
+		x = 0
+		y = 1
+			
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_united_states_asiatic_fleet
+		icon = GFX_focus_PHI_united_states_asiatic_fleet
+
+		prerequisite = { focus = PHI_expand_us_bases }
+
+		relative_position_id = PHI_expand_us_bases	
+		
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_gunboat_diplomacy
+		icon = GFX_focus_PHI_gunboat_diplomacy
+
+		prerequisite = { focus = PHI_united_states_asiatic_fleet }
+		mutually_exclusive = { focus = PHI_war_plan_rainbow_five }
+
+		relative_position_id = PHI_united_states_asiatic_fleet	
+		
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_war_plan_rainbow_five
+		icon = GFX_focus_ARG_join_the_allies
+
+		prerequisite = { focus = PHI_united_states_asiatic_fleet }
+		mutually_exclusive = { focus = PHI_gunboat_diplomacy }
+
+		relative_position_id = PHI_united_states_asiatic_fleet	
+		
+		x = 1
+		y = 1
+			
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = PHI_american_capital_injection
+		icon = GFX_focus_generic_american_investments
+
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar }
+
+		relative_position_id = PHI_peg_the_peso_to_the_dollar	
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_filipino_repatriation_act
+		icon = GFX_focus_generic_full_employment
+
+		prerequisite = { focus = PHI_american_capital_injection }
+
+		relative_position_id = PHI_american_capital_injection	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_investment_fund
+		icon = GFX_focus_PHI_investment_fund
+
+		prerequisite = { focus = PHI_pro_hacendados }
+
+		relative_position_id = PHI_pro_hacendados	
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_luce_celler_act
+		icon = GFX_goal_generic_national_unity
+
+		prerequisite = { focus = PHI_nationality_act }
+
+		relative_position_id = PHI_nationality_act	
+		
+		x = -2
+		y = 1
+			
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+
+
+	focus = {
+		id = PHI_declare_military_emergency
+		icon = GFX_focus_PHI_declare_military_emergency
+
+		x = 3
+		y = 9
+	
+		cost = 10
+
+		available = {}
+
+		allow_branch = {
+			has_country_flag = PHI_military_emergency_flag
+		}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_weapons_of_war
+		icon = GFX_goal_generic_secret_weapon
+
+		prerequisite = { focus = PHI_declare_military_emergency }
+
+		relative_position_id = PHI_declare_military_emergency	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_preemptive_strikes
+		icon = GFX_focus_PHI_preemptive_strikes
+
+		prerequisite = { focus = PHI_weapons_of_war }
+
+		relative_position_id = PHI_weapons_of_war	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 2
+				date > 1937.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
+			}
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_sunset_empires
+		icon = GFX_goal_generic_attack_allies
+
+		prerequisite = { focus = PHI_preemptive_strikes }
+
+		relative_position_id = PHI_preemptive_strikes	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 0.5
+
+			modifier = {
+				add = 0.5
+				has_completed_focus = PHI_national_defense_act
+			}
+
+			modifier = {
+				factor = 2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
+			}
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+	focus = {
+		id = PHI_land_of_the_setting_sun
+		icon = GFX_focus_attack_japan
+
+		prerequisite = { focus = PHI_sunset_empires }
+
+		relative_position_id = PHI_sunset_empires	
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 0.5
+
+			modifier = {
+				add = 0.5
+				has_completed_focus = PHI_national_defense_act
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1942.1.1
+			}
+
+			modifier = {
+				factor = 3
+				date > 1943.1.1
+			}
+		}
+
+		enable_automatic_bypass = no
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = PHI_sea_of_cobalt
+		icon = GFX_focus_wonderweapons
+
+		prerequisite = { focus = PHI_sunset_empires }
+
+		relative_position_id = PHI_sunset_empires	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 2
+				date > 1940.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1941.1.1
+			}
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PHI_the_sun_has_set
+		icon = GFX_focus_attack_britain
+
+		prerequisite = { focus = PHI_sunset_empires }
+
+		relative_position_id = PHI_sunset_empires	
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 0.5
+
+			modifier = {
+				add = 0.5
+				has_completed_focus = PHI_national_defense_act
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1942.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1943.1.1
+			}
+		}
+
+		enable_automatic_bypass = no
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
+	}
+
+
+	focus = {
+		id = PHI_traitors_back_home
+		icon = GFX_focus_generic_attack_usa
+
+		prerequisite = { focus = PHI_land_of_the_setting_sun }
+
+		relative_position_id = PHI_land_of_the_setting_sun	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = PHI_end_colonialism
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+
+		prerequisite = { focus = PHI_the_sun_has_set }
+
+		relative_position_id = PHI_the_sun_has_set	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_cobalt_supremacy
+		icon = GFX_focus_PHI_cobalt_supremacy
+
+		prerequisite = { focus = PHI_land_of_the_setting_sun focus = PHI_the_sun_has_set }
+		prerequisite = { focus = PHI_sea_of_cobalt }
+
+		relative_position_id = PHI_sea_of_cobalt	
+		
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 1.5
+				date > 1942.1.1
+			}
+
+			modifier = {
+				factor = 5
+				date > 1944.1.1
+			}
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_subject_surrender
+		icon = GFX_focus_generic_surrender
+
+		
+		x = 11
+		y = 11
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+
+	focus = {
+		id = PHI_i_shall_return
+		icon = GFX_focus_PHI_i_shall_return
+
+		prerequisite = { focus = PHI_subject_surrender }
+
+		relative_position_id = PHI_subject_surrender	
+
+		x = -3
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_soldiers_in_hiding
+		icon = GFX_focus_generic_manpower
+
+		prerequisite = { focus = PHI_subject_surrender }
+
+		relative_position_id = PHI_subject_surrender	
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_hukbalahap
+		icon = GFX_focus_GER_the_peoples_victory
+
+		prerequisite = { focus = PHI_subject_surrender }
+
+		relative_position_id = PHI_subject_surrender	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_local_resistance
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+
+		prerequisite = { focus = PHI_subject_surrender }
+
+		relative_position_id = PHI_subject_surrender	
+
+		x = 3
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+	}
+
+	focus = {
+		id = PHI_submarine_supplies
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+
+		prerequisite = { focus = PHI_i_shall_return }
+
+		relative_position_id = PHI_i_shall_return	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = PHI_the_hunters
+		icon = GFX_focus_FIN_the_cold_front
+
+		prerequisite = { focus = PHI_soldiers_in_hiding }
+
+		relative_position_id = PHI_soldiers_in_hiding	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_the_cry
+		icon = GFX_focus_generic_spur_communist_revolutions
+
+		prerequisite = { focus = PHI_hukbalahap }
+
+		relative_position_id = PHI_hukbalahap	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_juramentado
+		icon = GFX_focus_PHI_juramentado
+
+		prerequisite = { focus = PHI_local_resistance }
+
+		relative_position_id = PHI_local_resistance	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_exile_support
+		icon = GFX_focus_generic_government_in_exile
+
+		prerequisite = { focus = PHI_submarine_supplies focus = PHI_the_hunters }
+
+		relative_position_id = PHI_submarine_supplies	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_grassroot_guerillas
+		icon = GFX_focus_SWE_lottakoren
+
+		prerequisite = { focus = PHI_the_cry focus = PHI_juramentado focus = PHI_the_hunters }
+
+		relative_position_id = PHI_the_cry	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_reconquista
+		icon = GFX_focus_PHI_reconquista
+
+		prerequisite = { focus = PHI_exile_support focus = PHI_grassroot_guerillas }
+
+		relative_position_id = PHI_exile_support	
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_rebuild_sakdalistas
+		icon = GFX_focus_PHI_rebuild_sakdalistas
+
+		prerequisite = { focus = PHI_leverage_the_peso }
+
+		relative_position_id = PHI_leverage_the_peso	
+
+		x = 9
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+	focus = {
+		id = PHI_slippery_slope
+		icon = GFX_goal_support_fascism
+
+		prerequisite = { focus = PHI_rebuild_sakdalistas }
+		mutually_exclusive = { focus = PHI_the_red_sun_over_manila focus = PHI_election_overturned }
+		relative_position_id = PHI_rebuild_sakdalistas	
+
+		x = -3
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+
+	focus = {
+		id = PHI_assassination_of_quezon
+		icon = GFX_focus_PHI_assassination_of_quezon
+
+		prerequisite = { focus = PHI_slippery_slope }
+
+		relative_position_id = PHI_slippery_slope	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_aguinaldos_coup
+		icon = GFX_focus_generic_conspiracy
+
+		prerequisite = { focus = PHI_makapili }
+		prerequisite = { focus = PHI_form_the_executive_commision }
+
+		relative_position_id = PHI_assassination_of_quezon	
+
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = PHI_makapili
+		icon = GFX_focus_PHI_makapili
+
+		prerequisite = { focus = PHI_assassination_of_quezon }
+
+		relative_position_id = PHI_assassination_of_quezon	
+
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+		focus = {
+		id = PHI_form_the_executive_commision
+		icon = GFX_focus_generic_commission
+
+		prerequisite = { focus = PHI_assassination_of_quezon }
+
+		relative_position_id = PHI_assassination_of_quezon	
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+
+	focus = {
+		id = PHI_secure_japanese_guarantees
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+
+		prerequisite = { focus = PHI_aguinaldos_coup }
+
+		relative_position_id = PHI_aguinaldos_coup	
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = PHI_war_of_independence
+		icon = GFX_goal_generic_major_war
+
+		prerequisite = { focus = PHI_secure_japanese_guarantees focus = PHI_hispanic_overtures }
+
+		relative_position_id = PHI_secure_japanese_guarantees	
+
+		x = 3
+		y = 1
+	
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_completed_focus = PHI_hispanic_overtures
+				NOT = {
+					any_other_country = {
+						has_country_flag = PHI_agreed_to_ally
+					}
+				}
+			}
+			modifier = {	
+				factor = 5
+				has_completed_focus = PHI_hispanic_overtures
+				any_other_country = {
+					has_country_flag = PHI_agreed_to_ally
+				}
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_election_overturned
+		icon = GFX_focus_AUS_lawmaking_leniency
+
+		prerequisite = { focus = PHI_rebuild_sakdalistas }
+		mutually_exclusive = { focus = PHI_the_red_sun_over_manila focus = PHI_slippery_slope }
+
+		relative_position_id = PHI_rebuild_sakdalistas	
+
+		x = 3
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_hispanidad_filipina
+		icon = GFX_focus_PHI_hispanidad_filipina
+
+		prerequisite = { focus = PHI_election_overturned }
+
+		relative_position_id = PHI_election_overturned	
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		ai_will_do = {
+			base = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_spanish_refugees
+
+		prerequisite = { focus = PHI_hispanidad_filipina }
+
+		relative_position_id = PHI_hispanidad_filipina	
+
+		icon = GFX_focus_generic_immigration
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+	}
+
+	focus = {
+		id = PHI_reconciliation_with_spain
+
+		prerequisite = { focus = PHI_spanish_refugees }
+
+		relative_position_id = PHI_spanish_refugees	
+
+		
+		icon = {
+			GFX_focus_generic_befriend_nationalist_spain_focus = {
+				OR = {
+					country_exists = SPA
+					country_exists = SPC
+				}
+			}
+			GFX_focus_generic_befriend_communist_spain_focus = {
+				country_exists = SPD
+				SPD = {
+					has_government = communism
+				}
+			}
+			GFX_focus_generic_befriend_republican_spain_focus = yes
+		}
+		dynamic = yes
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		ai_will_do = {
+			base = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_hispanic_overtures
+		icon = GFX_focus_CHL_promote_pan_hispanic_rhetoric
+
+		prerequisite = { focus = PHI_reconciliation_with_spain focus = PHI_royal_exiles }
+
+		relative_position_id = PHI_reconciliation_with_spain	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_revolutionary_regrets
+		icon = GFX_focus_spr_crush_the_revolution
+
+		prerequisite = { focus = PHI_hispanidad_filipina }
+
+		relative_position_id = PHI_hispanidad_filipina	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_royal_exiles
+		icon = GFX_focus_generic_monarchy_2
+
+		prerequisite = { focus = PHI_revolutionary_regrets }
+
+		relative_position_id = PHI_revolutionary_regrets	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = PHI_reino_de_filipinas
+		icon = GFX_focus_PHI_reino_de_filipinas
+
+		prerequisite = { focus = PHI_royal_exiles }
+		prerequisite = { focus = PHI_war_of_independence }
+
+		mutually_exclusive = { focus = PHI_second_philippine_republic }
+
+		relative_position_id = PHI_hispanic_overtures	
+
+		x = 1
+		y = 3
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_second_philippine_republic
+		icon = GFX_focus_PHI_second_philippine_republic
+
+
+		prerequisite = { focus = PHI_war_of_independence }
+		mutually_exclusive = { focus = PHI_reino_de_filipinas }
+
+		relative_position_id = PHI_aguinaldos_coup	
+
+		x = -1
+		y = 4
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = PHI_war_for_the_oceans
+		icon = GFX_focus_PHI_war_for_the_oceans
+
+		prerequisite = { focus = PHI_second_philippine_republic focus = PHI_treaty_of_manila focus = PHI_pan_pacific_trade_union_secretariat focus = PHI_comitern focus = PHI_reino_de_filipinas }
+
+		relative_position_id = PHI_second_philippine_republic	
+
+		x = 4
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_assume_the_naval_burden
+		icon = GFX_goal_generic_occupy_states_coastal
+
+		prerequisite = { focus = PHI_war_for_the_oceans }
+		mutually_exclusive = { focus = PHI_develop_naval_infrastructure }	
+		relative_position_id = PHI_war_for_the_oceans	
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_develop_naval_infrastructure
+		icon = GFX_goal_generic_construct_naval_dockyard
+
+		prerequisite = { focus = PHI_war_for_the_oceans }
+		mutually_exclusive = { focus = PHI_assume_the_naval_burden }	
+		relative_position_id = PHI_war_for_the_oceans	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}	
+
+	focus = {
+		id = PHI_reunite_madagascar
+		icon = GFX_focus_PHI_reunite_madagascar
+
+		prerequisite = { focus = PHI_assume_the_naval_burden focus = PHI_develop_naval_infrastructure }
+		relative_position_id = PHI_assume_the_naval_burden	
+
+		x = -3
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_take_pacific_islands
+		icon = GFX_focus_PHI_take_pacific_islands
+
+		prerequisite = { focus = PHI_assume_the_naval_burden focus = PHI_develop_naval_infrastructure }
+		relative_position_id = PHI_assume_the_naval_burden	
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_ally_with = USA
+					country_exists = PLU	
+				}
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = PHI_malayo_polynesia
+		icon = GFX_focus_PHI_malayo_polynesia
+
+		prerequisite = { focus = PHI_assume_the_naval_burden focus = PHI_develop_naval_infrastructure }
+		relative_position_id = PHI_assume_the_naval_burden	
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER }
+	}	
+
+
+	focus = {
+		id = PHI_war_for_oceania
+		icon = GFX_focus_PHI_war_for_oceania
+
+		prerequisite = { focus = PHI_assume_the_naval_burden focus = PHI_develop_naval_infrastructure }
+		relative_position_id = PHI_assume_the_naval_burden	
+
+		x = 3
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = PHI_conquest_of_japan
+		icon = GFX_focus_PHI_conquest_of_japan
+
+		prerequisite = { focus = PHI_develop_naval_infrastructure }
+		relative_position_id = PHI_assume_the_naval_burden	
+
+		x = 5
+		y = 1
+	
+		cost = 10
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = PHI_filipino_polynesian_reunification
+		icon = GFX_focus_PHI_filipino_polynesian_reunification
+
+		prerequisite = { focus = PHI_reunite_madagascar focus = PHI_take_pacific_islands focus = PHI_war_for_oceania focus = PHI_malayo_polynesia focus = PHI_conquest_of_japan}
+
+		relative_position_id = PHI_malayo_polynesia	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_petition_the_supreme_court
+		icon = GFX_focus_generic_court
+		
+		x = 46
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_legalize_the_communist_party
+		icon = GFX_focus_generic_communist
+
+		prerequisite = { focus = PHI_petition_the_supreme_court }
+
+		relative_position_id = PHI_petition_the_supreme_court	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+	}
+
+
+	focus = {
+		id = PHI_return_of_the_exiles
+		icon = GFX_focus_PHI_return_of_the_exiles
+
+		prerequisite = { focus = PHI_legalize_the_communist_party }
+
+		relative_position_id = PHI_legalize_the_communist_party	
+		
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MANPOWER }
+	}
+
+
+	focus = {
+		id = PHI_support_for_chinese_communists
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+
+		prerequisite = { focus = PHI_legalize_the_communist_party }
+
+		relative_position_id = PHI_legalize_the_communist_party	
+		
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		cancel = {
+			has_manpower < 5000
+			has_equipment = {
+				infantry_equipment < 2500
+			}
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_the_red_sun_over_manila
+		icon = GFX_focus_PHI_the_red_sun_over_manila
+
+		prerequisite = { focus = PHI_legalize_the_communist_party }
+		mutually_exclusive = { focus = PHI_slippery_slope focus = PHI_election_overturned }
+
+		relative_position_id = PHI_legalize_the_communist_party	
+		
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_partido_komunista_ng_pilipinas_coup
+		icon = GFX_focus_PHI_partido_komunista_ng_pilipinas_coup
+
+		prerequisite = { focus = PHI_the_red_sun_over_manila }
+
+		relative_position_id = PHI_the_red_sun_over_manila	
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = PHI_national_confederation
+		icon = GFX_focus_generic_workers_and_farmers_rise
+
+		prerequisite = { focus = PHI_partido_komunista_ng_pilipinas_coup }
+
+		relative_position_id = PHI_partido_komunista_ng_pilipinas_coup	
+
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}	
+
+
+	focus = {
+		id = PHI_anti_intervention_strategies
+		icon = GFX_focus_PHI_anti_intervention_strategies
+
+		prerequisite = { focus = PHI_partido_komunista_ng_pilipinas_coup }
+
+		relative_position_id = PHI_partido_komunista_ng_pilipinas_coup	
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = PHI_rally_the_fisherfolk
+		icon = GFX_focus_PHI_rally_the_fisherfolk
+
+		prerequisite = { focus = PHI_partido_komunista_ng_pilipinas_coup }
+
+		relative_position_id = PHI_partido_komunista_ng_pilipinas_coup	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+	focus = {
+		id = PHI_smugglers
+		icon = GFX_focus_generic_smugglers
+
+		prerequisite = { focus = PHI_rally_the_fisherfolk }
+
+		relative_position_id = PHI_rally_the_fisherfolk	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_struggle_conference
+		icon = GFX_focus_generic_conference
+
+		prerequisite = { focus = PHI_smugglers }
+
+		relative_position_id = PHI_smugglers	
+		
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}	
+
+	focus = {
+		id = PHI_sanction_piracy
+		icon = GFX_focus_generic_piracy
+
+		prerequisite = { focus = PHI_smugglers }
+
+		relative_position_id = PHI_smugglers	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_infiltrate_chinese_ports
+		icon = GFX_focus_PHI_infiltrate_chinese_ports
+
+		prerequisite = { focus = PHI_smugglers }
+
+		relative_position_id = PHI_smugglers	
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PHI_maritime_communism
+		icon = GFX_focus_PHI_maritime_communism
+
+		prerequisite = { focus = PHI_struggle_conference }
+		prerequisite = { focus = PHI_sanction_piracy }
+		prerequisite = { focus = PHI_infiltrate_chinese_ports }
+
+		relative_position_id = PHI_sanction_piracy	
+		
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_pan_pacific_trade_union_secretariat
+		icon = GFX_focus_generic_spur_communist_revolutions
+
+		prerequisite = { focus = PHI_maritime_communism }
+		mutually_exclusive = { focus = PHI_comitern }		
+
+		relative_position_id = PHI_maritime_communism	
+
+		
+		x = -1
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+	focus = {
+		id = PHI_comitern
+		icon = GFX_focus_generic_join_comintern
+
+		prerequisite = { focus = PHI_maritime_communism }
+		mutually_exclusive = { focus = PHI_pan_pacific_trade_union_secretariat }
+
+		relative_position_id = PHI_maritime_communism	
+		
+		x = 1
+		y = 2
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+
+
+
+
+
+
+	focus = {
+		id = PHI_national_defense_act
+		icon = GFX_focus_PHI_national_defense_act
+		overlay = GFX_focus_fast_overlay_generic_clock
+		
+		x = 65
+		y = 1
+	
+		cost = 35
+
+		ai_will_do = {
+			base = 0.5
+
+			modifier = {
+				factor = 100
+				has_completed_focus = PHI_open_borders
+			}
+
+			modifier = {
+				factor = 100
+				has_completed_focus = PHI_nationality_act
+			}
+
+			modifier = {
+				factor = 6
+				has_completed_focus = PHI_anti_hacendados
+			}
+
+			modifier = {
+				factor = 6
+				has_completed_focus = PHI_pro_hacendados
+			}
+
+			modifier = {
+				factor = 10
+				has_government = fascism
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP }
+	}
+
+
+
+
+
+	focus = {
+		id = PHI_war_plan_orange
+		icon = GFX_focus_PHI_war_plan_orange
+
+
+		prerequisite = { focus = PHI_national_defense_act }	
+		mutually_exclusive = { focus = PHI_beach_defense_strategy }	
+		relative_position_id = PHI_national_defense_act
+
+
+		x = -7
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = PHI_beach_defense_strategy
+		icon = GFX_focus_PHI_beach_defense_strategy
+		
+		prerequisite = { focus = PHI_national_defense_act }	
+		mutually_exclusive = { focus = PHI_war_plan_orange }
+		relative_position_id = PHI_war_plan_orange	
+
+		x = 2
+		y = 0
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_fortify_corregidor
+		icon = GFX_focus_PHI_fortify_corregidor
+		
+		prerequisite = { focus = PHI_war_plan_orange focus = PHI_beach_defense_strategy }	
+		relative_position_id = PHI_war_plan_orange	
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+		enable_automatic_bypass = no
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_coastal_artillery
+		icon = GFX_focus_FIN_coastal_defense
+		
+		prerequisite = { focus = PHI_fortify_corregidor }	
+		relative_position_id = PHI_fortify_corregidor
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PHI_bastion_bataan
+		icon = GFX_goal_fortify_the_westwall
+		
+		prerequisite = { focus = PHI_coastal_artillery }	
+		relative_position_id = PHI_coastal_artillery
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+		enable_automatic_bypass = no
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PHI_the_concrete_battleship
+		icon = GFX_focus_PHI_the_concrete_battleship
+		
+		prerequisite = { focus = PHI_bastion_bataan }	
+		relative_position_id = PHI_bastion_bataan	
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+
+
+
+focus = {
+		id = PHI_philippine_scouts
+		icon = GFX_focus_PHI_philippine_scouts
+
+
+		prerequisite = { focus = PHI_national_defense_act }	
+		relative_position_id = PHI_national_defense_act
+
+
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+focus = {
+		id = PHI_militarize_the_constabulary
+		icon = GFX_focus_PHI_militarize_the_constabulary
+
+
+		prerequisite = { focus = PHI_national_defense_act }	
+		relative_position_id = PHI_philippine_scouts
+
+
+		x = 4
+		y = 0
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+	}
+
+
+focus = {
+		id = PHI_philippine_army_orchestra
+		icon = GFX_focus_PHI_philippine_army_orchestra
+
+
+		prerequisite = { focus = PHI_philippine_scouts }	
+		relative_position_id = PHI_philippine_scouts
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+focus = {
+		id = PHI_philippine_military_academy
+		icon = GFX_focus_generic_military_academy
+
+
+		prerequisite = { focus = PHI_philippine_scouts }	
+		prerequisite = { focus = PHI_militarize_the_constabulary }	
+		relative_position_id = PHI_philippine_scouts
+
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+	}
+
+
+
+
+
+focus = {
+		id = PHI_philippine_division
+		icon = GFX_focus_PHI_philippine_division
+
+
+		prerequisite = { focus = PHI_militarize_the_constabulary }	
+		relative_position_id = PHI_militarize_the_constabulary
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+focus = {
+		id = PHI_10_year_training_plan
+		icon = GFX_focus_PHI_10_year_training_plan
+
+
+		prerequisite = { focus = PHI_philippine_army_orchestra }	
+		prerequisite = { focus = PHI_philippine_military_academy }	
+		prerequisite = { focus = PHI_philippine_division }	
+		relative_position_id = PHI_philippine_military_academy
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+	}
+
+
+
+focus = {
+		id = PHI_battalion_combat_teams
+		icon = GFX_focus_PHI_battalion_combat_teams
+
+
+		prerequisite = { focus = PHI_10_year_training_plan }	
+
+		relative_position_id = PHI_10_year_training_plan
+
+
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+focus = {
+		id = PHI_mandatory_conscription
+		icon = GFX_focus_generic_manpower
+
+
+		prerequisite = { focus = PHI_10_year_training_plan }	
+
+		relative_position_id = PHI_10_year_training_plan
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+focus = {
+		id = PHI_self_reliance_defense
+		icon = GFX_focus_generic_combined_arms
+
+		prerequisite = { focus = PHI_10_year_training_plan }	
+		relative_position_id = PHI_10_year_training_plan
+
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
+	}
+
+
+focus = {
+		id = PHI_army_of_the_philippines
+		icon = GFX_focus_PHI_army_of_the_philippines
+
+		prerequisite = { focus = PHI_battalion_combat_teams }	
+		prerequisite = { focus = PHI_mandatory_conscription }	
+		prerequisite = { focus = PHI_self_reliance_defense }	
+
+		relative_position_id = PHI_mandatory_conscription
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+
+
+
+
+
+
+focus = {
+		id = PHI_army_air_corps
+		icon = GFX_focus_PHI_army_air_corps
+
+		prerequisite = { focus = PHI_national_defense_act }	
+
+		relative_position_id = PHI_national_defense_act
+
+
+		x = 6
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
+	}
+
+
+focus = {
+		id = PHI_pilot_training_programme
+		icon = GFX_goal_generic_air_doctrine
+
+		prerequisite = { focus = PHI_army_air_corps }	
+
+		relative_position_id = PHI_army_air_corps
+
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	}
+
+
+focus = {
+		id = PHI_off_shore_patrol
+		icon = GFX_goal_generic_air_naval_bomber
+
+		prerequisite = { focus = PHI_pilot_training_programme }	
+
+		relative_position_id = PHI_pilot_training_programme
+
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+focus = {
+		id = PHI_expand_airbases
+		icon = GFX_focus_generic_air_bases
+
+		prerequisite = { focus = PHI_army_air_corps }	
+
+		relative_position_id = PHI_army_air_corps
+
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+focus = {
+		id = PHI_develop_domestic_aircraft_industry
+		icon = GFX_focus_generic_aircraft_production
+
+		prerequisite = { focus = PHI_expand_airbases }	
+
+		relative_position_id = PHI_expand_airbases
+
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+focus = {
+		id = PHI_philippine_air_force
+		icon = GFX_focus_PHI_philippine_air_force
+
+		prerequisite = { focus = PHI_off_shore_patrol }	
+		prerequisite = { focus = PHI_develop_domestic_aircraft_industry }	
+
+		relative_position_id = PHI_off_shore_patrol
+
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+
+focus = {
+		id = PHI_thats_not_an_island
+		icon = GFX_focus_PHI_thats_not_an_island
+
+		prerequisite = { focus = PHI_philippine_air_force }	
+
+		relative_position_id = PHI_philippine_air_force
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		allow_branch = {
+			has_country_flag = PHI_did_carrier_tech
+		}
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+
+
+
+
+
+focus = {
+		id = PHI_offshore_patrol
+		icon = GFX_goal_generic_navy_cruiser
+
+		x = 53
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 2
+				date > 1937.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
+			}
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+focus = {
+		id = PHI_marine_corps
+		icon = GFX_focus_PHI_marine_corps
+
+		prerequisite = { focus = PHI_offshore_patrol }	
+
+		relative_position_id = PHI_offshore_patrol
+
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+focus = {
+		id = PHI_cavite_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+
+		prerequisite = { focus = PHI_offshore_patrol }	
+
+		relative_position_id = PHI_offshore_patrol
+
+
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+focus = {
+		id = PHI_pt_boat_development
+		icon = GFX_focus_generic_navy_research_bonus
+
+		prerequisite = { focus = PHI_offshore_patrol }	
+
+		relative_position_id = PHI_offshore_patrol
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+focus = {
+		id = PHI_mosquito_fleet
+		icon = GFX_focus_PHI_mosquito_fleet
+
+		prerequisite = { focus = PHI_pt_boat_development }	
+		mutually_exclusive = { focus = PHI_devil_boats }	
+		relative_position_id = PHI_pt_boat_development
+
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+focus = {
+		id = PHI_devil_boats
+		icon = GFX_focus_PHI_devil_boats
+
+		prerequisite = { focus = PHI_pt_boat_development }	
+		mutually_exclusive = { focus = PHI_mosquito_fleet }	
+		relative_position_id = PHI_pt_boat_development
+
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+focus = {
+		id = PHI_fast_attack_craft
+		icon = GFX_focus_generic_destroyer
+
+		prerequisite = { focus = PHI_mosquito_fleet }	
+
+		relative_position_id = PHI_mosquito_fleet
+
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+focus = {
+		id = PHI_coastal_defense_ships
+		icon = GFX_focus_generic_coastal_fort
+
+		prerequisite = { focus = PHI_devil_boats }	
+
+		relative_position_id = PHI_devil_boats
+
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+focus = {
+		id = PHI_philippine_naval_patrol
+		icon = GFX_focus_PHI_philippine_naval_patrol
+
+		prerequisite = { focus = PHI_fast_attack_craft focus = PHI_coastal_defense_ships }	
+
+		relative_position_id = PHI_fast_attack_craft
+
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+	}
+
+
+focus = {
+		id = PHI_thalassocracy
+		icon = GFX_focus_PHI_thalassocracy
+
+		prerequisite = { focus = PHI_philippine_naval_patrol }	
+
+		relative_position_id = PHI_philippine_naval_patrol
+
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		available_if_capitulated = no
+	
+		completion_reward = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+
+
+}	
+
+
+

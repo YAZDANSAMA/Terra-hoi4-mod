@@ -1,0 +1,1083 @@
+characters = {
+	SIR_Dinod_Thumayam={
+		name="Dinod Thumayam"
+
+		
+		country_leader={
+			ideology=oligarchism
+			traits = { agricultural_nationalist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SIR_Vinoj_Theerku={
+		name="Vinoj Theerku"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Vinoj_Theerku
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Mohav_Suvaiar={
+		name="Mohav Suvaiar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Mohav_Suvaiar
+			traits = {	noble_beurocrat 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SIR_Kiranesh_Unai={
+		name="Kiranesh Unai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Kiranesh_Unai
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SIR_Mohavi_Unai={
+		name="Mohavi Unai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Mohavi_Unai
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Siddhav_Pesu={
+		name="Siddhav Pesu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Siddhav_Pesu
+			traits = {	headstrong 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Ravi_Kuranai={
+		name="Ravi Kuranai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Ravi_Kuranai
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SIR_Ravi_Kudi={
+		name="Ravi Kudi"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Ravi_Kudi
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	SIR_Karthik_Aaram={
+		name="Karthik Aaram"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Karthik_Aaram
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	SIR_Siddhan_Pasi={
+		name="Siddhan Pasi"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Siddhan_Pasi
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	SIR_Satish_Kolal={
+		name="Satish Kolal"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Satish_Kolal
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	SIR_Mohavi_Veerku={
+		name="Mohavi Veerku"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Mohavi_Veerku
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	SIR_Siddhav_Theerku={
+		name="Siddhav Theerku"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Siddhav_Theerku
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	SIR_Deepakashna_Velan={
+		name="Deepakashna Velan"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Deepakashna_Velan
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	SIR_Deenth_Nool={
+		name="Deenth Nool"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Deenth_Nool
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	SIR_Suresh_Kuditham={
+		name="Suresh Kuditham"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Suresh_Kuditham
+			traits = {	navy_fleet_logistics_2 	}
+		}
+
+
+	}
+	SIR_Siddharun_Kuriyan={
+		name="Siddharun Kuriyan"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Siddharun_Kuriyan
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	SIR_Karun_Uyiram={
+		name="Karun Uyiram"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Karun_Uyiram
+			traits = {	air_close_air_support_2 	}
+		}
+
+
+	}
+	SIR_Karthik_Pesu={
+		name="Karthik Pesu"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Karthik_Pesu
+			traits = {	air_bomber_interception_2 	}
+		}
+
+
+	}
+	SIR_Kumar_Kolal={
+		name="Kumar Kolal"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Kumar_Kolal
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	SIR_Manesh_Sugam={
+		name="Manesh Sugam"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Manesh_Sugam
+			traits = {	air_strategic_bombing_2 	}
+		}
+
+
+	}
+	SIR_Manoj_Puyanneer={
+		name="Manoj Puyanneer"
+
+		
+		country_leader={
+			ideology=nazism
+			traits = { vapsid_economist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SIR_Mohav_Manbu={
+		name="Mohav Manbu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Mohav_Manbu
+			traits = {	militant_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Karish_Kulai={
+		name="Karish Kulai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Karish_Kulai
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SIR_Suresh_Nakkirai={
+		name="Suresh Nakkirai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Suresh_Nakkirai
+			traits = {	militant_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Mohavi_Moolai={
+		name="Mohavi Moolai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Mohavi_Moolai
+			traits = {	collaborator_king 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SIR_Kumarun_Pagizh={
+		name="Kumarun Pagizh"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Kumarun_Pagizh
+			traits = {	warmonger 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Rajiv_Kaadal={
+		name="Rajiv Kaadal"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Rajiv_Kaadal
+			traits = {	generallissimo 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Siddhav_Kaadal={
+		name="Siddhav Kaadal"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Siddhav_Kaadal
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	SIR_Senth_Uyirai={
+		name="Senth Uyirai"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Senth_Uyirai
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	SIR_Harthil_Thanbu={
+		name="Harthil Thanbu"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Harthil_Thanbu
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	SIR_Mohanoj_Unam={
+		name="Mohanoj Unam"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Mohanoj_Unam
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	SIR_Mohavi_Muravar={
+		name="Mohavi Muravar"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Mohavi_Muravar
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	SIR_Prak_Kavithippu={
+		name="Prak Kavithippu"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Prak_Kavithippu
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	SIR_Mohavi_Thanbu={
+		name="Mohavi Thanbu"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Mohavi_Thanbu
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	SIR_Bala_Kudi={
+		name="Bala Kudi"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Bala_Kudi
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	SIR_Mohav_Nakku={
+		name="Mohav Nakku"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Mohav_Nakku
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	SIR_Kiran_Muravar={
+		name="Kiran Muravar"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Kiran_Muravar
+			traits = {	air_strategic_bombing_2 	}
+		}
+
+
+	}
+	SIR_Jaghav_Kuditham={
+		name="Jaghav Kuditham"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Jaghav_Kuditham
+			traits = {	navy_capital_ship_2 	}
+		}
+
+
+	}
+	SIR_Pran_Muravar={
+		name="Pran Muravar"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Pran_Muravar
+			traits = {	air_air_combat_training_2 	}
+		}
+
+
+	}
+	SIR_Rajesh_Thunam={
+		name="Rajesh Thunam"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Rajesh_Thunam
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	SIR_Rajiv_Elimaignavu={
+		name="Rajiv Elimaignavu"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Rajiv_Elimaignavu
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	SIR_Mohar_Thumayam={
+		name="Mohar Thumayam"
+
+		
+		country_leader={
+			ideology=stalinism
+			traits = { polemarch  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SIR_Karish_Vadal={
+		name="Karish Vadal"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Karish_Vadal
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Harthil_Manbu={
+		name="Harthil Manbu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Harthil_Manbu
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Prak_Mozhi={
+		name="Prak Mozhi"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Prak_Mozhi
+			traits = {	mastermind_code_cracker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SIR_Charth_Nilai={
+		name="Charth Nilai"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Charth_Nilai
+			traits = {	patriotic_socialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SIR_Mohan_Thanbu={
+		name="Mohan Thanbu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Mohan_Thanbu
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SIR_Harthil_Vidu={
+		name="Harthil Vidu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Harthil_Vidu
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_2_small
+			}
+		}
+
+
+	}
+	SIR_Manesh_Iramai={
+		name="Manesh Iramai"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Manesh_Iramai
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	SIR_Mandranesh_Nakkirai={
+		name="Mandranesh Nakkirai"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Mandranesh_Nakkirai
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	SIR_Ragadeepak_Pagizh={
+		name="Ragadeepak Pagizh"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Ragadeepak_Pagizh
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	SIR_Chari_Inbu={
+		name="Chari Inbu"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Chari_Inbu
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	SIR_Suresh_Sanippu={
+		name="Suresh Sanippu"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Suresh_Sanippu
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	SIR_Jaghav_Poru={
+		name="Jaghav Poru"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Jaghav_Poru
+			traits = {	navy_chief_reform_1 	}
+		}
+
+
+	}
+	SIR_Jaghaveesh_Kalai={
+		name="Jaghaveesh Kalai"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Jaghaveesh_Kalai
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	SIR_Jaghav_Udam={
+		name="Jaghav Udam"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Jaghav_Udam
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	SIR_Senth_Vanam={
+		name="Senth Vanam"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Senth_Vanam
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	SIR_Dinod_Uyirai={
+		name="Dinod Uyirai"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Dinod_Uyirai
+			traits = {	air_air_superiority_1 	}
+		}
+
+
+	}
+	SIR_Ragadeepak_Panai={
+		name="Ragadeepak Panai"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Ragadeepak_Panai
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	SIR_Chan_Inbu={
+		name="Chan Inbu"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Chan_Inbu
+			traits = {	navy_naval_air_defense_1 	}
+		}
+
+
+	}
+	SIR_Char_Kavithippu={
+		name="Char Kavithippu"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Char_Kavithippu
+			traits = {	air_bomber_interception_1 	}
+		}
+
+
+	}
+	SIR_Senth_Aaram={
+		name="Senth Aaram"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Senth_Aaram
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	SIR_Karish_Pasi={
+		name="Karish Pasi"
+
+		
+		country_leader={
+			ideology=conservatism
+			traits = { the_young_magnate  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	SIR_Varthil_Aaram={
+		name="Varthil Aaram"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Varthil_Aaram
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_3_small
+			}
+		}
+
+
+	}
+	SIR_Manesh_Urchippu={
+		name="Manesh Urchippu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Manesh_Urchippu
+			traits = {	the_banker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Jaghav_Veerku={
+		name="Jaghav Veerku"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Jaghav_Veerku
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Kumar_Nattu={
+		name="Kumar Nattu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Kumar_Nattu
+			traits = {	leftist_legionary 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Deepakashna_Kaadal={
+		name="Deepakashna Kaadal"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Deepakashna_Kaadal
+			traits = {	first_lady 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Mandranesh_Vadal={
+		name="Mandranesh Vadal"
+
+		advisor={
+			slot = political_advisor
+			idea_token = SIR_Mandranesh_Vadal
+			traits = {	rearmer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Asia_Generic_1_small
+			}
+		}
+
+
+	}
+	SIR_Karish_Puyanneer={
+		name="Karish Puyanneer"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Karish_Puyanneer
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	SIR_Kiranesh_Katturavam={
+		name="Kiranesh Katturavam"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Kiranesh_Katturavam
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	SIR_Chan_Elimaignavu={
+		name="Chan Elimaignavu"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Chan_Elimaignavu
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	SIR_Siddhan_Mozhi={
+		name="Siddhan Mozhi"
+
+		advisor={
+			slot = army_chief
+			idea_token = SIR_Siddhan_Mozhi
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	SIR_Pran_Thudi={
+		name="Pran Thudi"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Pran_Thudi
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	SIR_Siddharun_Vidu={
+		name="Siddharun Vidu"
+
+		advisor={
+			slot = navy_chief
+			idea_token = SIR_Siddharun_Vidu
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	SIR_Varun_Kanalimai={
+		name="Varun Kanalimai"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Varun_Kanalimai
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	SIR_Bala_Thonmai={
+		name="Bala Thonmai"
+
+		advisor={
+			slot = air_chief
+			idea_token = SIR_Bala_Thonmai
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	SIR_Chanoj_Kulai={
+		name="Chanoj Kulai"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Chanoj_Kulai
+			traits = {	army_CombinedArms_1 	}
+		}
+
+
+	}
+	SIR_Arun_Putham={
+		name="Arun Putham"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Arun_Putham
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	SIR_Manesh_Mozhiraikkal={
+		name="Manesh Mozhiraikkal"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Manesh_Mozhiraikkal
+			traits = {	navy_carrier_1 	}
+		}
+
+
+	}
+	SIR_Gandrak_Sugam={
+		name="Gandrak Sugam"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Gandrak_Sugam
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	SIR_Charth_Siraivizhai={
+		name="Charth Siraivizhai"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Charth_Siraivizhai
+			traits = {	army_cavalry_2 	}
+		}
+
+
+	}
+	SIR_Mohan_Kavithippu={
+		name="Mohan Kavithippu"
+
+		advisor={
+			slot = high_command
+			idea_token = SIR_Mohan_Kavithippu
+			traits = {	navy_amphibious_assault_2 	}
+		}
+
+
+	}
+	SIR_Chavi_Uyiriyalan={
+		name="Chavi Uyiriyalan"
+
+		advisor={
+			slot = theorist
+			idea_token = SIR_Chavi_Uyiriyalan
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	SIR_Chan_Kuranai={
+		name="Chan Kuranai"
+
+		advisor={
+			slot = theorist
+			idea_token = SIR_Chan_Kuranai
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	SIR_Navi_Udam={
+		name="Navi Udam"
+
+		advisor={
+			slot = theorist
+			idea_token = SIR_Navi_Udam
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

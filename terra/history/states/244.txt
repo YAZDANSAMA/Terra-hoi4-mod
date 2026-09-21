@@ -1,0 +1,39 @@
+
+state={
+	id=244
+
+	name="Hillock"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = TAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = TAR
+	}
+
+	provinces={
+		1299 1303 2675 2676 2678 2679 6573 7314 7318 7319
+	}
+	local_supplies=0.0 
+}

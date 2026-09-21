@@ -1,0 +1,39 @@
+
+state={
+	id=400
+	name="Amurskaya"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		victory_points = { 1 1}
+		
+		owner = URS
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = URS
+	}
+
+	provinces={
+		1 139 384 386 387 388 389 390 391 1734 2429 2430 2431 2432 2970 2971 2972 3500 3501 3502 4134 5494 5499 5503 5508 5960 6003 6004 6006 6007 6008 6247 6251 7532 8027
+	}
+	local_supplies=0.0 
+}

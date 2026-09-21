@@ -1,0 +1,1456 @@
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = iceland_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = ICE
+			has_dlc = "Arms Against Tyranny"
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }  
+	shared_focus = NORDIC_form_joint_alliance
+	
+	initial_show_position = {
+		x = 20
+		y = 0
+	}
+
+	
+	
+	
+	
+	
+
+	focus = {
+		id = ICE_expand_the_fishing_industry
+		icon = GFX_focus_generic_industry_1
+		
+		mutually_exclusive = { focus = ICE_mineral_prospecting }
+		x = 5
+		y = 0
+		
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ICE_mineral_prospecting
+		icon = GFX_focus_generic_steel
+		
+		mutually_exclusive = { focus = ICE_expand_the_fishing_industry }
+
+		x = 2
+		y = 0
+
+		relative_position_id = ICE_expand_the_fishing_industry
+
+		cost = 10
+
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ICE_agricultural_expansion
+		icon = GFX_focus_generic_develop_iceland_silhouette
+		prerequisite = { focus = ICE_expand_the_fishing_industry }
+
+		x = -1
+		y = 1
+		relative_position_id = ICE_expand_the_fishing_industry
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_off_shore_oil_drilling
+		icon = GFX_focus_generic_offshore_oil_rig
+		prerequisite = { focus = ICE_mineral_prospecting }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_mineral_prospecting
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+
+
+
+	focus = {
+		id = ICE_international_trade
+		icon = GFX_goal_generic_trade
+		
+
+		x = 11
+		y = 0
+		
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		bypass = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_hydroelectric_power
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = ICE_expand_the_fishing_industry focus = ICE_mineral_prospecting}
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_expand_the_fishing_industry
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_banking_on_the_future
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ICE_international_trade }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_international_trade
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_infiltration
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = ICE_banking_on_the_future }
+		allow_branch = { has_dlc = "La Resistance"}
+		x = 0
+		y = 1
+		relative_position_id = ICE_banking_on_the_future
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_develop_icelandic_shipping
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = ICE_hydroelectric_power }
+		mutually_exclusive = { focus = ICE_heavy_industry focus = ICE_advanced_technology }
+		x = -3
+		y = 1
+		relative_position_id = ICE_hydroelectric_power
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	} 
+	focus = {
+		id = ICE_heavy_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ICE_hydroelectric_power }
+		mutually_exclusive = { focus = ICE_develop_icelandic_shipping focus = ICE_advanced_technology }
+		x = 0
+		y = 1
+		relative_position_id = ICE_hydroelectric_power
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_advanced_technology
+		icon = GFX_focus_research2
+		prerequisite = { focus = ICE_hydroelectric_power }
+		mutually_exclusive = { focus = ICE_develop_icelandic_shipping focus = ICE_heavy_industry }
+		x = 3
+		y = 1
+		relative_position_id = ICE_hydroelectric_power
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_reykjavik_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ICE_develop_icelandic_shipping }
+
+		x = -1
+		y = 1
+
+		relative_position_id = ICE_develop_icelandic_shipping
+
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_expand_the_harbour
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ICE_develop_icelandic_shipping focus = ICE_heavy_industry }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_develop_icelandic_shipping
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_local_arms_industry
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = ICE_heavy_industry }
+
+		x = 0
+		y = 1
+
+		relative_position_id = ICE_heavy_industry
+
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_infrastructure_development
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ICE_heavy_industry focus = ICE_advanced_technology }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_heavy_industry
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_iceland_air
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = ICE_advanced_technology }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_advanced_technology
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_expand_the_civilian_fleet
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = ICE_reykjavik_dockyards }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_reykjavik_dockyards
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_industrial_research_school
+		icon = GFX_focus_research
+		prerequisite = { focus = ICE_local_arms_industry focus = ICE_reykjavik_dockyards focus = ICE_iceland_air }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_local_arms_industry
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_hrafninn_flygur
+		icon = GFX_focus_ICE_hrafninn_flygur
+		prerequisite = { focus = ICE_iceland_air  }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_iceland_air
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+
+	focus = {
+		id = ICE_the_kingdom_of_iceland
+		icon = GFX_focus_ICE_the_kingdom_of_iceland
+		
+		mutually_exclusive = { focus = ICE_not_our_king}
+		x = 17
+		y = 0
+		
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_united_we_stand
+		icon = GFX_focus_generic_befriend_denmark
+		prerequisite = { focus = ICE_the_kingdom_of_iceland }
+		mutually_exclusive = { focus = ICE_declare_absolute_neutrality }
+		x = -2
+		y = 1
+		relative_position_id = ICE_the_kingdom_of_iceland
+		cost = 10
+		available = {}
+		cancel_if_invalid = no 
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_declare_absolute_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ICE_the_kingdom_of_iceland }
+		mutually_exclusive = { focus = ICE_united_we_stand }
+		x = 2
+		y = 1 
+		relative_position_id = ICE_the_kingdom_of_iceland
+		cost = 10
+		available = {}
+		cancel_if_invalid = no 
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_joint_shipbuilding_programme
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ICE_united_we_stand }
+
+		x = -2
+		y = 1
+		relative_position_id = ICE_united_we_stand
+		cost = 10
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+
+		
+	}
+	focus = {
+		id = ICE_royal_marines
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = ICE_united_we_stand }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_united_we_stand
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ICE_the_icelandic_police_force 
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ICE_united_we_stand focus = ICE_declare_absolute_neutrality }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_united_we_stand
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_infrastructure_projects
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ICE_declare_absolute_neutrality }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_declare_absolute_neutrality
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_engineering_projects
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = ICE_declare_absolute_neutrality }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_declare_absolute_neutrality
+		cost = 10
+		available = {}
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_patrolling_the_atlantic
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = ICE_joint_shipbuilding_programme }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_joint_shipbuilding_programme
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_industrial_cooperation
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = ICE_patrolling_the_atlantic }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_patrolling_the_atlantic
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_joint_military_training 
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = ICE_royal_marines }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_royal_marines
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_gardhur_airfield
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = ICE_infrastructure_projects }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_infrastructure_projects
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_the_merchant_fleet
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = ICE_engineering_projects }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_engineering_projects
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_not_standing_idly_by
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ICE_joint_military_training focus = ICE_patrolling_the_atlantic }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_joint_military_training
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_expand_industrial_complexes 
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ICE_gardhur_airfield focus = ICE_the_merchant_fleet  focus = ICE_joint_military_training focus = ICE_patrolling_the_atlantic}
+
+		x = -2
+		y = 1
+		relative_position_id = ICE_gardhur_airfield
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_political_unity
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ICE_gardhur_airfield focus = ICE_the_merchant_fleet }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_gardhur_airfield
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = ICE_anglo_icelandic_relations
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = ICE_the_merchant_fleet }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_the_merchant_fleet
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = ICE_american_protection
+		icon = GFX_focus_generic_befriend_usa
+		prerequisite = { focus = ICE_political_unity }
+		dynamic = yes 
+		x = 1
+		y = 1
+		relative_position_id = ICE_political_unity
+		cost = 10
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0 
+				date < 1941.1.1
+			}
+			modifier = {
+				factor = 10 
+				date > 1941.4.1
+				threat > 0.8
+			}				
+		}
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_fighting_as_equals
+		icon = GFX_focus_ICE_fighting_as_equals
+		prerequisite = { focus = ICE_not_standing_idly_by }
+
+		x = -1
+		y = 1
+		relative_position_id = ICE_not_standing_idly_by
+		bypass = {}
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_expanding_the_university_of_reykjavik
+		icon = GFX_focus_ICE_expanding_the_university_of_reykjavik
+		prerequisite = { focus = ICE_not_standing_idly_by focus = ICE_political_unity }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_not_standing_idly_by
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_trade_relations
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ICE_political_unity }
+
+		x = 3
+		y = 1
+		relative_position_id = ICE_political_unity
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_keflavik_airbase
+		icon = GFX_focus_generic_multi_role_aircraft
+		prerequisite = { focus = ICE_american_protection }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_american_protection
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_modernizing_the_island
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = ICE_expanding_the_university_of_reykjavik }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_expanding_the_university_of_reykjavik
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_state_owned_enterprises
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = ICE_modernizing_the_island }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_modernizing_the_island
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_compensation
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ICE_fighting_as_equals }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_fighting_as_equals
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_republicanism
+		icon = GFX_focus_ICE_republicanism
+		prerequisite = { focus = ICE_trade_relations } 
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_trade_relations
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_american_investments
+		icon = GFX_focus_generic_american_investments
+		prerequisite = { focus = ICE_keflavik_airbase }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_keflavik_airbase
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_american_soldiers
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = ICE_american_investments }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_american_investments
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_iceland_defense_force
+		icon = GFX_focus_ICE_iceland_defense_force
+		prerequisite = { focus = ICE_american_soldiers }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_american_soldiers
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+
+
+	 
+	
+	
+	
+	
+
+	focus = { 
+		id = ICE_not_our_king  
+		icon = GFX_focus_ICE_not_our_king  
+		
+		mutually_exclusive = { focus = ICE_the_kingdom_of_iceland }
+		x = 28
+		y = 0
+		
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_expand_the_industrial_base
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = ICE_not_our_king }
+
+		x = -1
+		y = 1
+		relative_position_id = ICE_not_our_king
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_anti_capitalist_propaganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ICE_not_our_king }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_not_our_king
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_international_relations
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = ICE_expand_the_industrial_base }
+
+		x = -2
+		y = 1
+		relative_position_id = ICE_expand_the_industrial_base
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_rally_the_workers_of_reykjavik
+		icon = GFX_focus_SOV_organize_wreckers
+		prerequisite = { focus = ICE_expand_the_industrial_base }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_expand_the_industrial_base
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_prepare_for_the_revolution
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = ICE_anti_capitalist_propaganda }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_anti_capitalist_propaganda
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_state_visits
+		icon = GFX_focus_SWI_embrace_panoramaheim
+		prerequisite = { focus = ICE_anti_capitalist_propaganda }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_anti_capitalist_propaganda
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+
+	}
+	focus = {
+		id = ICE_general_strike
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = ICE_rally_the_workers_of_reykjavik }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_rally_the_workers_of_reykjavik
+		cost = 5
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_organize_a_march
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = ICE_prepare_for_the_revolution }
+		x = 0
+		y = 1
+		relative_position_id = ICE_prepare_for_the_revolution
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_break_with_the_crown 
+		icon = GFX_focus_ICE_break_with_the_crown
+		prerequisite = { focus = ICE_general_strike focus = ICE_organize_a_march }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_general_strike
+		cost = 10
+		available = {}
+		bypass = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_embrace_the_workers_revolution
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		prerequisite = { focus = ICE_break_with_the_crown }
+		mutually_exclusive = { focus = ICE_state_corporatism }
+		x = -1
+		y = 1
+		relative_position_id = ICE_break_with_the_crown
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_state_corporatism
+		icon = GFX_focus_ICE_state_corporatism
+		prerequisite = { focus = ICE_break_with_the_crown }
+		mutually_exclusive = { focus = ICE_embrace_the_workers_revolution }
+		x = 1
+		y = 1
+		relative_position_id = ICE_break_with_the_crown
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_international_brigades
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		prerequisite = { focus = ICE_embrace_the_workers_revolution }
+		prerequisite = { focus = ICE_international_relations }
+
+		x = -2
+		y = 1
+		relative_position_id = ICE_embrace_the_workers_revolution
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_state_owned_industry
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = ICE_embrace_the_workers_revolution }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_embrace_the_workers_revolution 
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_organize_the_greyshirts
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = ICE_state_corporatism }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_state_corporatism
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_research_cooperation
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = ICE_state_corporatism }
+		prerequisite = { focus = ICE_state_visits }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_state_corporatism
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+ 
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_infiltrating_the_british_isles
+		icon = GFX_focus_ICE_infiltrating_the_british_isles
+		prerequisite = { focus = ICE_international_brigades }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_international_brigades
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_transformation_of_nature
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = ICE_state_owned_industry }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_state_owned_industry
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_the_viking_spirit
+		icon = GFX_focus_ICE_the_viking_spirit
+		prerequisite = { focus = ICE_organize_the_greyshirts }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_organize_the_greyshirts
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_recruiting_international_workers
+		icon = GFX_focus_ETH_callout_to_the_world
+		prerequisite = { focus = ICE_transformation_of_nature focus = ICE_infiltrating_the_british_isles }
+
+		x = -2
+		y = 1
+		relative_position_id = ICE_transformation_of_nature
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_international_research_community
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = ICE_transformation_of_nature }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_transformation_of_nature
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_reclaiming_the_empire
+		icon = GFX_focus_ICE_reclaiming_the_empire
+		prerequisite = { focus = ICE_the_viking_spirit }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_the_viking_spirit
+		cost = 10
+		available = {}
+
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_securing_the_north_sea_passage
+		icon = GFX_focus_ICE_securing_the_north_sea_passage
+		prerequisite = { focus = ICE_the_viking_spirit }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_the_viking_spirit
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_vinland
+		icon = GFX_focus_ICE_vinland
+		prerequisite = { focus = ICE_reclaiming_the_empire }
+		prerequisite = { focus = ICE_securing_the_north_sea_passage }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_reclaiming_the_empire
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+
+	focus = {
+		id = ICE_the_armed_forces_of_iceland
+		icon = GFX_focus_ICE_the_armed_forces_of_iceland
+		
+
+		x = 35
+		y = 0
+		
+		cost = 10
+		available = {}
+		cancel_if_invalid = no 
+		bypass = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_an_airbase_in_the_sea
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = ICE_the_armed_forces_of_iceland }
+		mutually_exclusive = { focus = ICE_a_naval_hub_in_the_atlantic }
+		x = -2
+		y = 1
+		relative_position_id = ICE_the_armed_forces_of_iceland
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_a_naval_hub_in_the_atlantic
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ICE_the_armed_forces_of_iceland }
+		mutually_exclusive = { focus = ICE_an_airbase_in_the_sea }
+		x = 2
+		y = 1
+		relative_position_id = ICE_the_armed_forces_of_iceland
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_mine_iceland
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = ICE_a_naval_hub_in_the_atlantic }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_a_naval_hub_in_the_atlantic
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_flying_boats
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = ICE_an_airbase_in_the_sea }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_an_airbase_in_the_sea
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_modernizing_the_coast_guard
+		icon = GFX_focus_ICE_modernizing_the_coast_guard
+		prerequisite = { focus = ICE_an_airbase_in_the_sea focus = ICE_a_naval_hub_in_the_atlantic }
+
+		x = 2
+		y = 1
+		relative_position_id = ICE_an_airbase_in_the_sea
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_low_cost_aircrafts
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = ICE_flying_boats }
+		prerequisite = { focus = ICE_modernizing_the_coast_guard }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_flying_boats
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_support_equipment
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = ICE_modernizing_the_coast_guard }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_modernizing_the_coast_guard
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_emergency_conversions
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = ICE_mine_iceland }
+		prerequisite = { focus = ICE_modernizing_the_coast_guard }
+
+		x = 0
+		y = 1
+		relative_position_id = ICE_mine_iceland
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_a_profesional_army
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = ICE_support_equipment }
+
+		x = -1
+		y = 1
+		relative_position_id = ICE_support_equipment
+		cost = 10
+		available = {}
+
+		mutually_exclusive = { focus = ICE_enact_conscription }
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_enact_conscription
+		icon = GFX_focus_SWE_varnplikt
+		prerequisite = { focus = ICE_support_equipment }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_support_equipment
+		cost = 10
+		available = {}
+
+		mutually_exclusive = { focus = ICE_a_profesional_army }
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_civilian_war_duty
+		icon = GFX_focus_SWE_lottakoren
+		prerequisite = { focus = ICE_enact_conscription }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_enact_conscription
+		cost = 10
+		available = {}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_doctrinal_studies
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = ICE_a_profesional_army }
+
+		x = -1
+		y = 1
+		relative_position_id = ICE_a_profesional_army
+		cost = 10
+		available = {}
+
+		search_filters = {} 
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_thungur_hnifur
+		icon = GFX_focus_ICE_thungur_hnifur
+		prerequisite = { focus = ICE_a_profesional_army focus = ICE_enact_conscription }
+
+		x = 1
+		y = 1
+		relative_position_id = ICE_a_profesional_army
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_death_from_above
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = ICE_thungur_hnifur }
+		mutually_exclusive = { focus = ICE_we_shall_defend_our_island focus = ICE_taking_the_fight_to_our_enemies }
+		x = -2
+		y = 1
+		relative_position_id = ICE_thungur_hnifur
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_we_shall_defend_our_island
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = ICE_thungur_hnifur }
+		mutually_exclusive = { focus = ICE_death_from_above focus = ICE_taking_the_fight_to_our_enemies } 
+		x = 0
+		y = 1
+		relative_position_id = ICE_thungur_hnifur
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+	focus = {
+		id = ICE_taking_the_fight_to_our_enemies
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = ICE_thungur_hnifur }
+		mutually_exclusive = { focus = ICE_we_shall_defend_our_island focus = ICE_death_from_above }
+		x = 2
+		y = 1
+		relative_position_id = ICE_thungur_hnifur
+		cost = 10
+		available = {}
+
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+
+
+
+}

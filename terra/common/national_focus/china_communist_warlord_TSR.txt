@@ -1,0 +1,1175 @@
+﻿
+
+
+
+
+
+
+
+focus_tree = {
+	id = china_communist_warlord_focus
+	
+	country = {
+		factor = 0
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	shared_focus = CHI_sea_invite_foreign_investors
+
+	focus = {
+		id = PRC_sea_strengthen_the_central_secretariat
+		icon = GFX_focus_PRC_the_central_committee
+		x = 3
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_inward_focus
+		icon = GFX_focus_prc_maoism
+		prerequisite = { focus = PRC_sea_strengthen_the_central_secretariat }
+		mutually_exclusive = { focus = PRC_sea_toe_the_soviet_line }
+		x = 2
+		y = 1
+		relative_position_id = PRC_sea_strengthen_the_central_secretariat
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_rally_the_industry
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		prerequisite = { focus = PRC_sea_inward_focus }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_inward_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_reforming_our_ranks
+		icon = GFX_focus_PRC_peoples_liberation_army
+		prerequisite = { focus = PRC_sea_inward_focus }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_inward_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_agrarian_socialism
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = PRC_sea_reforming_our_ranks focus = PRC_sea_rally_the_industry }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_reforming_our_ranks
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_forging_our_own_path
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = PRC_sea_agrarian_socialism }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_agrarian_socialism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				is_faction_leader = yes
+				factor = 0
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_toe_the_soviet_line
+		icon = GFX_focus_PRC_embrace_stalinism
+		prerequisite = { focus = PRC_sea_strengthen_the_central_secretariat }
+		mutually_exclusive = { focus = PRC_sea_inward_focus }
+		x = -2
+		y = 1
+		relative_position_id = PRC_sea_strengthen_the_central_secretariat
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_aid_from_soviet_bolsheviks
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = PRC_sea_toe_the_soviet_line }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_toe_the_soviet_line
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_soviet_advisors
+		icon = GFX_focus_PRC_invite_soviet_general
+		prerequisite = { focus = PRC_sea_toe_the_soviet_line }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_toe_the_soviet_line
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_industrialisation_of_nature
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = PRC_sea_soviet_advisors focus = PRC_sea_aid_from_soviet_bolsheviks }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_soviet_advisors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_comintern_integration
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = PRC_sea_industrialisation_of_nature }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_industrialisation_of_nature
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_proclaim_the_peoples_republic
+		icon = GFX_focus_prc_proclaim_the_peoples_republic 
+		prerequisite = { focus = PRC_sea_comintern_integration focus = PRC_sea_forging_our_own_path }
+		x = 2
+		y = 1
+		relative_position_id = PRC_sea_comintern_integration
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = PRC_sea_new_economic_direction
+		icon = GFX_focus_generic_currency_reforms
+		prerequisite = { focus = PRC_sea_proclaim_the_peoples_republic }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_proclaim_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_move_capital
+		icon = GFX_focus_CHI_registry_of_property
+		prerequisite = { focus = PRC_sea_proclaim_the_peoples_republic }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_proclaim_the_peoples_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+		
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_land_redistribution
+		icon = GFX_goal_generic_construction
+		x = 10
+		y = 0
+		relative_position_id = PRC_sea_strengthen_the_central_secretariat
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_the_yanan_base_area
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PRC_sea_land_redistribution }
+		x = 6
+		y = 1
+		relative_position_id = PRC_sea_land_redistribution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			capital_scope = {
+				IF = {
+					limit = {
+					capital_scope = { infrastructure < 4 }
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+				}
+				ELSE_IF = {
+					limit = {
+					capital_scope = { infrastructure < 5 }
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_prepare_for_war_with_japan
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PRC_sea_the_yanan_base_area }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_the_yanan_base_area
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				JAP = {
+					has_government = communism
+				}
+				factor = 0
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_government_of_national_defense
+		icon = GFX_focus_chi_united_front
+		prerequisite = { focus = PRC_sea_prepare_for_war_with_japan }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_prepare_for_war_with_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_confrontation_with_the_warlords
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = PRC_sea_government_of_national_defense }
+		x = 0
+		y = 2
+		relative_position_id = PRC_sea_prepare_for_war_with_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_anti_japanese_expedition
+		icon = GFX_focus_AST_war_japan
+		prerequisite = { focus = PRC_sea_prepare_for_war_with_japan}
+		x = -3
+		y = 1
+		relative_position_id = PRC_sea_prepare_for_war_with_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				JAP = {
+					has_government = communism
+				}
+				factor = 0
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_revolutionary_military_commission
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = PRC_sea_confrontation_with_the_warlords focus = PRC_sea_infiltration }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_confrontation_with_the_warlords
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_provoke_japan
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = PRC_sea_revolutionary_military_commission }
+		prerequisite = { focus = PRC_sea_anti_japanese_expedition }
+		x = -3
+		y = 1
+		relative_position_id = PRC_sea_revolutionary_military_commission
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				JAP = {
+					has_government = communism
+				}
+				factor = 0
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_protracted_warfare
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PRC_sea_provoke_japan }
+		mutually_exclusive = { focus = PRC_sea_mobile_warfare }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_provoke_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_mobile_warfare
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = PRC_sea_provoke_japan }
+		mutually_exclusive = { focus = PRC_sea_protracted_warfare }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_provoke_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_peoples_war
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = PRC_sea_protracted_warfare }
+		x = -1
+		y = 2
+		relative_position_id = PRC_sea_provoke_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_100_regiments_campaign
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = PRC_sea_mobile_warfare }
+		x = 1
+		y = 2
+		relative_position_id = PRC_sea_provoke_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_central_military_commission
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PRC_sea_revolutionary_military_commission }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_revolutionary_military_commission
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_peoples_liberation_army
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = PRC_sea_central_military_commission }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_central_military_commission
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_peoples_volunteer_army
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = PRC_sea_central_military_commission }
+		x = 2
+		y = 1
+		relative_position_id = PRC_sea_central_military_commission
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_military_intelligence_department
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = PRC_sea_revolutionary_military_commission }
+		x = 4
+		y = 1
+		relative_position_id = PRC_sea_revolutionary_military_commission
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_central_security_bureau
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = PRC_sea_military_intelligence_department }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_military_intelligence_department
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_focus_on_china
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PRC_sea_the_yanan_base_area }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_the_yanan_base_area
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_exploit_the_weak_neighbours
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = PRC_sea_focus_on_china }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_focus_on_china
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_infiltration
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = PRC_sea_focus_on_china }
+		x = 0
+		y = 2
+		relative_position_id = PRC_sea_focus_on_china
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_enforce_the_three_rules
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = PRC_sea_land_redistribution }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_land_redistribution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_permit_opium_trade
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = PRC_sea_enforce_the_three_rules}
+		mutually_exclusive = { focus = PRC_sea_ban_the_opium_trade }
+		x = -1
+		y = 1
+		relative_position_id = PRC_sea_enforce_the_three_rules
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_ban_the_opium_trade
+		icon = GFX_goal_generic_political_pressure
+		mutually_exclusive = { focus = PRC_sea_permit_opium_trade }
+		prerequisite = { focus = PRC_sea_enforce_the_three_rules }
+		x = 1
+		y = 1
+		relative_position_id = PRC_sea_enforce_the_three_rules
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_abolish_the_land_rent
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = PRC_sea_permit_opium_trade focus = PRC_sea_ban_the_opium_trade }
+		x = 0
+		y = 2
+		relative_position_id = PRC_sea_enforce_the_three_rules
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_literacy_programs
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = PRC_sea_land_redistribution }
+		x = -4
+		y = 1
+		relative_position_id = PRC_sea_land_redistribution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_china_medical_university
+		icon = GFX_focus_research
+		prerequisite = { focus = PRC_sea_literacy_programs }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sea_literacy_programs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = PRC_sea_form_the_academy_of_sciences
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = PRC_sea_china_medical_university }
+		x = 0
+		y = 2
+		relative_position_id = PRC_sea_literacy_programs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {}
+	}
+}

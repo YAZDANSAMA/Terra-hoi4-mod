@@ -1,0 +1,7250 @@
+
+
+
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = chilean_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHL
+			has_dlc = "Trial of Allegiance"
+		}
+	}
+	
+
+	default = no
+
+
+	shared_focus = SMB_army
+	shared_focus = SMB_air_force
+	shared_focus = SMB_navy
+
+	continuous_focus_position = { x = 50 y = 2500 }
+
+	initial_show_position = {
+		x = 35
+		y = 0
+	}
+
+
+	
+	focus = {
+		id = CHL_look_to_tradition
+
+		icon = GFX_focus_CHL_look_to_tradition
+
+		
+		x = 10
+		y = 0
+		cost = 5
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_address_the_mapuche_conflict
+			}
+		}
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_endorse_the_constitution }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+			}
+		}
+
+		mutually_exclusive = {
+			focus = CHL_endorse_the_constitution
+			focus = CHL_denounce_the_anarchy
+		} 
+		
+		ai_will_do = {
+			base = 0.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_endorse_the_constitution
+
+		icon = GFX_focus_CHL_endorse_the_constitution
+
+		relative_position_id = CHL_look_to_tradition
+		x = 25
+		y = 0
+		cost = 5
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_look_to_tradition }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+			}
+		}
+
+		offset = {
+			x = -26
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_endorse_the_constitution
+			}
+		}
+
+		mutually_exclusive = {
+			focus = CHL_look_to_tradition
+			focus = CHL_denounce_the_anarchy
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_denounce_the_anarchy
+
+		icon = GFX_focus_CHL_denounce_the_anarchy
+
+		relative_position_id = CHL_look_to_tradition
+		x = 38
+		y = 0
+		cost = 5
+
+		mutually_exclusive = {
+			focus = CHL_look_to_tradition
+			focus = CHL_endorse_the_constitution
+		} 
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_look_to_tradition }
+				NOT = { has_completed_focus = CHL_endorse_the_constitution }
+			}
+		}
+
+		offset = {
+			x = -40
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_denounce_the_anarchy
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_cooperation_with_the_falange
+
+		icon = GFX_focus_CHL_cooperation_with_the_falange
+
+		relative_position_id = CHL_endorse_the_constitution
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_endorse_the_constitution  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_policies_of_arturo_alessandri
+
+		icon = GFX_focus_CHL_policies_of_arturo_alessandri
+
+		relative_position_id = CHL_endorse_the_constitution
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_endorse_the_constitution  
+		}
+
+		bypass = {}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+			modifier = {
+				factor = 0
+				date > 1938.8.2
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {   
+		id = CHL_inflation_control_by_the_central_bank 
+
+		icon = GFX_focus_hol_abandon_the_gold_standard
+
+		relative_position_id = CHL_policies_of_arturo_alessandri
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_policies_of_arturo_alessandri  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				date > 1938.8.2
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+
+	
+	focus = {
+		id = CHL_1938_chilean_presidential_election
+
+		icon = GFX_focus_CHL_1938_chilean_presidential_election
+
+		relative_position_id = CHL_inflation_control_by_the_central_bank
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_inflation_control_by_the_central_bank 
+		} 
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_COMPLETED_BY_EVENT }
+
+		available = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_empower_the_preparation_department
+
+		icon = GFX_focus_generic_fascist_troops
+
+		relative_position_id = CHL_denounce_the_anarchy
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			base = 2
+		}
+
+		prerequisite = {
+			focus = CHL_denounce_the_anarchy 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		available = {}
+
+		bypass = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_sway_ariosto_hererra
+
+		icon = GFX_focus_CHL_sway_ariosto_hererra
+
+		relative_position_id = CHL_empower_the_preparation_department
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_empower_the_preparation_department 
+		} 
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
+
+		available = {}
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_inflitrate_the_carabinieros
+
+		icon = GFX_focus_generic_infiltration
+
+		relative_position_id = CHL_empower_the_preparation_department
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_empower_the_preparation_department 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_unify_the_fascist_movements
+
+		icon = GFX_focus_CHL_unify_the_fascist_movements
+
+		relative_position_id = CHL_empower_the_preparation_department
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_empower_the_preparation_department 
+		}
+
+		mutually_exclusive = {
+		} 
+
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		bypass = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_proliferate_national_populism
+
+		icon = GFX_goal_generic_propaganda
+
+		relative_position_id = CHL_unify_the_fascist_movements
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_unify_the_fascist_movements 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_more_funds_or_the_propaganda_department
+
+		icon = GFX_focus_generic_fascist_propaganda
+
+		relative_position_id = CHL_unify_the_fascist_movements
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_unify_the_fascist_movements 
+		}
+
+		mutually_exclusive = {
+		} 
+
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		bypass = {}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_request_foreign_support
+
+		icon = GFX_focus_ger_reichskommisariats
+
+		relative_position_id = CHL_proliferate_national_populism
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_proliferate_national_populism 
+			focus = CHL_more_funds_or_the_propaganda_department 
+		}
+
+		mutually_exclusive = {
+		} 
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1.5
+		}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_the_popular_freedom_alliance
+
+		icon = GFX_focus_CHL_the_popular_freedom_alliance
+
+		relative_position_id = CHL_proliferate_national_populism
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_proliferate_national_populism 
+			focus = CHL_more_funds_or_the_propaganda_department 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		bypass = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_rally_the_people
+
+		icon = GFX_focus_generic_support_the_left_right
+
+		relative_position_id = CHL_the_popular_freedom_alliance
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_the_popular_freedom_alliance 
+			focus = CHL_request_foreign_support 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 3
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {}
+
+		bypass = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_commence_the_counter_revolution
+
+		icon = GFX_focus_mex_restore_the_army_of_christ
+ 
+		relative_position_id = CHL_rally_the_people
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_rally_the_people 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		available = {}
+
+		ai_will_do = {
+			base = 2.5
+		}
+
+		cancel_if_invalid = no
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_ibanezs_coup
+
+		icon = GFX_focus_CHL_ibanezs_coup
+
+		relative_position_id = CHL_look_to_tradition
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_look_to_tradition 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		available = {}
+
+		ai_will_do = {
+			base = 2.5
+		}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_address_the_mapuche_conflict
+
+		icon = GFX_focus_CHL_address_the_mapuche_conflict
+
+		relative_position_id = CHL_ibanezs_coup
+		x = 9
+		y = 1
+		cost = 5
+
+		offset = {
+			x = -9
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_address_the_mapuche_conflict
+			}
+		}
+
+		prerequisite = {
+			focus = CHL_ibanezs_coup 
+		}
+
+		mutually_exclusive = {
+			focus = CHL_rule_by_decree 
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_rule_by_decree }
+				NOT = { has_completed_focus = CHL_endorse_the_constitution }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_rule_by_decree
+
+		icon = GFX_focus_generic_military_dictatorship
+
+		relative_position_id = CHL_ibanezs_coup
+		x = -5
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_ibanezs_coup 
+		}
+
+		mutually_exclusive = {
+			focus = CHL_address_the_mapuche_conflict 
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_rule_by_decree
+			}
+		}
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_address_the_mapuche_conflict }
+				NOT = { has_completed_focus = CHL_endorse_the_constitution }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_strengthen_the_carabinieros
+
+		icon = GFX_focus_CHL_strengthen_the_carabinieros
+
+		relative_position_id = CHL_rule_by_decree
+		x = 4
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_rule_by_decree 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_seek_foreign_investments
+
+		icon = GFX_goal_generic_forceful_treaty
+
+		relative_position_id = CHL_rule_by_decree
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_rule_by_decree 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_increase_spending_on_public_works
+
+		icon = GFX_goal_generic_construct_infrastructure
+
+		relative_position_id = CHL_rule_by_decree
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_rule_by_decree 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_alianza_popular_libertadora_as_a_vanguard
+
+		icon = GFX_focus_CHL_the_popular_freedom_alliance
+
+		relative_position_id = CHL_rule_by_decree
+		x = -4
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_rule_by_decree 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 0.5
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_utilize_national_populism
+
+		icon = GFX_focus_ITA_generic_fascist_workers
+
+		relative_position_id = CHL_increase_spending_on_public_works
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_increase_spending_on_public_works 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 0.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_outlaw_socialism
+
+		icon = GFX_goal_anti_comintern_pact
+
+		relative_position_id = CHL_seek_foreign_investments
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_seek_foreign_investments 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_sell_arica_to_peru
+
+		icon = GFX_focus_CHL_sell_arica_to_peru
+
+		relative_position_id = CHL_seek_foreign_investments
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_rule_by_decree
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_crown_antoine_as_sovereign_king
+
+		icon = GFX_focus_CHL_crown_antoine_as_sovereign_king
+
+		relative_position_id = CHL_sell_arica_to_peru
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_sell_arica_to_peru 
+		}
+
+		prerequisite = {
+			focus = CHL_utilize_national_populism
+			focus = CHL_outlaw_socialism
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+
+	
+	focus = {
+		id = CHL_undermine_the_carabineros_de_chile
+
+		icon = GFX_goal_generic_political_pressure
+
+		relative_position_id = CHL_address_the_mapuche_conflict
+		x = -4
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_address_the_mapuche_conflict 
+		}
+
+		mutually_exclusive = {
+		} 
+		 
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_strike_a_deal_with_the_mapuche
+
+		icon = GFX_focus_generic_befriend_mapuche
+
+		relative_position_id = CHL_crown_antoine_as_sovereign_king
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_crown_antoine_as_sovereign_king 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_request_assistance_in_the_war
+
+		icon = GFX_focus_generic_monarchy_2
+
+		relative_position_id = CHL_crown_antoine_as_sovereign_king
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_crown_antoine_as_sovereign_king 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_mobilize_the_veteran_legionaries
+
+		icon = GFX_focus_CHL_mobilize_the_veteran_legionaries
+
+		relative_position_id = CHL_crown_antoine_as_sovereign_king
+		x = -4
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_crown_antoine_as_sovereign_king 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_establish_a_royal_guard
+
+		icon = GFX_focus_rom_royal_dictatorship
+
+		relative_position_id = CHL_crown_antoine_as_sovereign_king
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_crown_antoine_as_sovereign_king 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_attract_additional_french_investments
+
+		icon = GFX_focus_chi_reach_out_to_france
+
+		relative_position_id = CHL_crown_antoine_as_sovereign_king
+		x = 5
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_crown_antoine_as_sovereign_king 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_invite_french_aristocracy
+
+		icon = GFX_focus_CHL_invite_french_aristocracy
+
+		relative_position_id = CHL_attract_additional_french_investments
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_attract_additional_french_investments 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_ibanez_as_prime_minister
+
+		icon = GFX_focus_rom_handle_king 
+
+		relative_position_id = CHL_strike_a_deal_with_the_mapuche
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_strike_a_deal_with_the_mapuche 
+		}
+
+		mutually_exclusive = {
+			focus = CHL_an_absolute_monarchy
+		} 
+		
+		ai_will_do = {
+			base = 0.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_an_absolute_monarchy
+
+		icon = GFX_focus_generic_monarchy_1
+
+		relative_position_id = CHL_strike_a_deal_with_the_mapuche
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_strike_a_deal_with_the_mapuche 
+		}
+
+		mutually_exclusive = {
+			focus = CHL_ibanez_as_prime_minister
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_approach_the_moderates
+
+		icon = GFX_goal_generic_neutrality_focus
+
+		relative_position_id = CHL_ibanez_as_prime_minister
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_ibanez_as_prime_minister 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_introduce_the_franc
+
+		icon = GFX_focus_fra_devalue_the_franc
+
+		relative_position_id = CHL_ibanez_as_prime_minister
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_ibanez_as_prime_minister 
+			focus = CHL_an_absolute_monarchy
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_strengthen_control
+
+		icon = GFX_goal_generic_demand_territory
+
+		relative_position_id = CHL_ibanez_as_prime_minister
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_ibanez_as_prime_minister 
+			focus = CHL_an_absolute_monarchy
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_invite_carlist_refugees
+
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+
+		relative_position_id = CHL_invite_french_aristocracy
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_ibanez_as_prime_minister 
+			focus = CHL_an_absolute_monarchy
+		}
+
+		prerequisite = {
+			focus = CHL_invite_french_aristocracy 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		allow_branch = {
+			has_dlc = "La Resistance"
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_endorse_the_constitution }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+				NOT = { has_completed_focus = CHL_address_the_mapuche_conflict }
+			}
+		}
+
+		available = {}
+		
+		ai_will_do = {
+			base = 0.5
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_expand_the_officer_corps
+
+		icon = GFX_focus_generic_military_academy
+
+		relative_position_id = CHL_ibanez_as_prime_minister
+		x = 3
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_ibanez_as_prime_minister 
+			focus = CHL_an_absolute_monarchy
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_scouts_monarchist_youth_organization
+
+		icon = GFX_focus_CHL_the_scouts_monarchist_youth_organization
+
+		relative_position_id = CHL_strengthen_control
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_strengthen_control 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_state_catholicism
+
+		icon = GFX_focus_por_concordat
+
+		relative_position_id = CHL_strengthen_control
+		x = 1
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_strengthen_control 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_invite_french_academia
+
+		icon = GFX_focus_research 
+
+		relative_position_id = CHL_ibanez_as_prime_minister
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_ibanez_as_prime_minister 
+			focus = CHL_an_absolute_monarchy
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_a_new_araucanian_noble_class
+
+		icon = GFX_focus_CHL_a_new_araucanian_noble_class
+
+		relative_position_id = CHL_invite_french_aristocracy
+		x = 0
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_invite_french_aristocracy 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_establish_the_royal_mountaineers
+
+		icon = GFX_focus_ITA_bersaglieri
+
+		relative_position_id = CHL_expand_the_officer_corps
+		x = 0
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_expand_the_officer_corps
+		}
+
+		prerequisite = {
+			
+			focus = CHL_a_new_araucanian_noble_class
+			focus = CHL_state_catholicism
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_an_imperial_capital
+
+		icon = GFX_focus_CHL_an_imperial_capital
+
+		relative_position_id = CHL_establish_the_royal_mountaineers
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_establish_the_royal_mountaineers
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_la_corporacion_araucania
+
+		icon = GFX_focus_CHL_la_corporacion_araucania
+
+		relative_position_id = CHL_address_the_mapuche_conflict
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_address_the_mapuche_conflict
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_la_federacion_araucania
+
+		icon = GFX_focus_CHL_la_federacion_araucania 
+
+		relative_position_id = CHL_address_the_mapuche_conflict
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_address_the_mapuche_conflict
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_sociedad_caupolican_defensora_de_la_araucania
+
+		icon = GFX_focus_CHL_sociedad_caupolican_defensora_de_la_araucania
+ 
+		relative_position_id = CHL_address_the_mapuche_conflict 
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_address_the_mapuche_conflict
+		}  
+
+		mutually_exclusive = {
+		} 
+		 
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+		 
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_union_araucana
+
+		icon = GFX_focus_CHL_union_araucana
+
+		relative_position_id = CHL_sociedad_caupolican_defensora_de_la_araucania
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_sociedad_caupolican_defensora_de_la_araucania
+			focus = CHL_la_corporacion_araucania
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {} 
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_la_moderna_araucania
+
+		icon = GFX_focus_CHL_la_moderna_araucania_fin
+
+		relative_position_id = CHL_sociedad_caupolican_defensora_de_la_araucania
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_sociedad_caupolican_defensora_de_la_araucania
+			focus = CHL_la_federacion_araucania
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_electing_a_toqui
+
+		icon = GFX_focus_CHL_electing_a_toqui
+
+		relative_position_id = CHL_union_araucana
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_la_moderna_araucania
+			focus = CHL_union_araucana
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_convene_the_araucanian_congress
+
+		icon = GFX_focus_ETH_re-convene_the_parliament
+
+		relative_position_id = CHL_la_moderna_araucania
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_la_moderna_araucania
+			focus = CHL_union_araucana
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_avenge_the_pacification_of_araucania
+
+		icon = GFX_focus_CHL_avenge_the_pacification_of_araucania
+
+		relative_position_id = CHL_electing_a_toqui
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_electing_a_toqui
+		}
+
+		prerequisite = {
+			focus = CHL_convene_the_araucanian_congress
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_revise_the_social_classes
+
+		icon = GFX_focus_CHL_revise_the_social_classes
+
+		relative_position_id = CHL_avenge_the_pacification_of_araucania
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_avenge_the_pacification_of_araucania
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_adopt_mapundungun
+
+		icon = GFX_focus_generic_treaty
+
+		relative_position_id = CHL_avenge_the_pacification_of_araucania
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_avenge_the_pacification_of_araucania
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_embrace_indigenous_corporatism
+
+		icon = GFX_focus_generic_industry_3
+
+		relative_position_id = CHL_revise_the_social_classes
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_revise_the_social_classes
+		}
+
+		prerequisite = {
+			focus = CHL_adopt_mapundungun
+		}
+
+		mutually_exclusive = {
+			focus = CHL_expand_the_agricultural_field
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_expand_the_agricultural_field
+
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+
+		relative_position_id = CHL_adopt_mapundungun
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_revise_the_social_classes
+		}
+
+		prerequisite = {
+			focus = CHL_adopt_mapundungun
+		}
+
+		mutually_exclusive = {
+			focus = CHL_embrace_indigenous_corporatism
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_focus_on_cattle_and_wool
+
+		icon = GFX_focus_CHL_focus_on_cattle_and_wool
+
+		relative_position_id = CHL_expand_the_agricultural_field
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_expand_the_agricultural_field
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_enlarge_the_textile_industries
+
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+
+		relative_position_id = CHL_invite_french_aristocracy
+		x = 3
+		y = 2
+		cost = 10
+
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_address_the_mapuche_conflict
+			}
+		}
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_rule_by_decree
+			}
+		}
+
+		prerequisite = {
+			focus = CHL_embrace_indigenous_corporatism
+			focus = CHL_invite_french_aristocracy
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_silverworking
+
+		icon = GFX_focus_CHL_silverworking
+
+		relative_position_id = CHL_embrace_indigenous_corporatism
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_embrace_indigenous_corporatism
+			focus = CHL_expand_the_agricultural_field
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_incorporate_machi_into_the_army
+
+		icon = GFX_focus_CHL_incorporate_machi_into_the_army
+
+		relative_position_id = CHL_silverworking
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_silverworking
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_patagonian_giants
+
+		icon = GFX_focus_CHL_the_patagonian_giants
+
+		relative_position_id = CHL_incorporate_machi_into_the_army
+		x = -5
+		y = 1
+		cost = 10
+
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_address_the_mapuche_conflict
+			}
+		}
+
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_rule_by_decree
+			}
+		}
+
+		prerequisite = {
+			focus = CHL_incorporate_machi_into_the_army
+			focus = CHL_a_new_araucanian_noble_class
+			
+			
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_taking_back_patagonia
+
+		dynamic = yes
+
+		icon = {
+			GFX_focus_CHL_taking_back_patagonia_monarchist = {
+				NOT = {
+					has_completed_focus = CHL_address_the_mapuche_conflict
+				}
+			}
+			GFX_focus_CHL_taking_back_patagonia_mapuche = yes
+		}
+
+		relative_position_id = CHL_the_patagonian_giants
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_patagonian_giants
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		will_lead_to_war_with = ARG
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_satellite_kingdoms
+
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+
+		relative_position_id = CHL_an_imperial_capital
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_an_imperial_capital
+		}
+
+		prerequisite = {
+			focus = CHL_taking_back_patagonia
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_secure_the_brazilian_border
+
+		icon = GFX_goal_generic_territory_or_war
+
+		relative_position_id = CHL_an_imperial_capital
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_an_imperial_capital
+		}
+
+		prerequisite = {
+			focus = CHL_taking_back_patagonia
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		will_lead_to_war_with = PAR
+		will_lead_to_war_with = BOL
+		will_lead_to_war_with = URG
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_a_new_empire_of_brazil
+
+		icon = GFX_focus_CHL_a_new_empire_of_brazil
+
+		relative_position_id = CHL_satellite_kingdoms
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_satellite_kingdoms
+		}
+
+		prerequisite = {
+			focus = CHL_secure_the_brazilian_border
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		will_lead_to_war_with = BRA
+		will_lead_to_war_with = POR
+
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_ruler_of_the_inca
+
+		icon = GFX_focus_CHL_ruler_of_the_inca
+
+		relative_position_id = CHL_a_new_empire_of_brazil
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_a_new_empire_of_brazil
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		will_lead_to_war_with = PRU
+		will_lead_to_war_with = ECU
+
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_a_french_alliance
+
+		icon = GFX_focus_CHL_a_french_alliance
+
+		relative_position_id = CHL_secure_the_brazilian_border
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_secure_the_brazilian_border
+		}
+
+		mutually_exclusive = {
+			focus = CHL_return_to_the_continent
+		} 
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_return_to_the_continent
+
+		icon = GFX_focus_attack_france
+
+		relative_position_id = CHL_secure_the_brazilian_border
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_secure_the_brazilian_border
+		}
+
+		mutually_exclusive = {
+			focus = CHL_a_french_alliance
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		will_lead_to_war_with = FRA
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_joint_invasion_of_mexico
+
+		icon = GFX_focus_attack_mexico
+
+		relative_position_id = CHL_a_french_alliance
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_a_french_alliance
+		}
+
+		mutually_exclusive = {
+		} 
+
+		ai_will_do = {
+			base = 2.5
+		}
+		
+		will_lead_to_war_with = MEX
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+
+		bypass = {}
+		
+		completion_reward = {}
+
+	}
+
+	
+	focus = {
+		id = CHL_claim_the_mexican_throne
+
+		icon = GFX_focus_CHL_claim_the_mexican_throne
+
+		relative_position_id = CHL_return_to_the_continent
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_return_to_the_continent
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		will_lead_to_war_with = MEX
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 0.5
+		}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_straight_line
+
+		icon = GFX_focus_CHL_the_straight_line 
+
+		relative_position_id = CHL_joint_invasion_of_mexico
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_joint_invasion_of_mexico
+			focus = CHL_claim_the_mexican_throne
+		}
+
+		mutually_exclusive = {
+			focus = CHL_je_suis_le_deluge
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_je_suis_le_deluge
+
+		icon = GFX_focus_fra_le_deluge
+
+		relative_position_id = CHL_joint_invasion_of_mexico
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_joint_invasion_of_mexico
+			focus = CHL_claim_the_mexican_throne
+		}
+
+		mutually_exclusive = {
+			focus = CHL_the_straight_line
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_a_grand_armada
+
+		icon = GFX_focus_generic_navy_battleship2
+
+		relative_position_id = CHL_the_straight_line
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_straight_line
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_reclaiming_quebec
+
+		icon = GFX_goal_generic_major_war
+
+		relative_position_id = CHL_je_suis_le_deluge
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_je_suis_le_deluge
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+ 
+	
+	focus = { 
+		id = CHL_honor_the_legacy_of_caupolican
+
+		icon = GFX_focus_CHL_honor_the_legacy_of_caupolican
+
+		relative_position_id = CHL_silverworking
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_silverworking
+		}
+
+		mutually_exclusive = {
+		}   
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {} 
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_union_of_american_indigenous_peoples
+
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+
+		relative_position_id = CHL_honor_the_legacy_of_caupolican
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_honor_the_legacy_of_caupolican
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+		available_if_capitulated = no
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_crusade_against_imperialism
+
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+
+		relative_position_id = CHL_union_of_american_indigenous_peoples
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_union_of_american_indigenous_peoples
+		}
+
+		prerequisite = {
+			focus = CHL_taking_back_patagonia
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_unified_by_will
+
+		icon = GFX_goal_generic_improve_relations
+
+		relative_position_id = CHL_crusade_against_imperialism
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_crusade_against_imperialism
+		}
+
+		mutually_exclusive = {
+			focus = CHL_unified_in_spirit
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_unified_in_spirit
+
+		icon = GFX_goal_generic_military_sphere
+
+		relative_position_id = CHL_crusade_against_imperialism
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_crusade_against_imperialism
+		}
+
+		mutually_exclusive = {
+			focus = CHL_unified_by_will
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_suppress_the_nacistas
+
+		icon = GFX_focus_CHL_suppress_the_nacistas
+
+		relative_position_id = CHL_endorse_the_constitution
+		x = -2
+		y = 1
+		cost = 5
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		prerequisite = {
+			focus = CHL_endorse_the_constitution  
+			
+		}
+
+		mutually_exclusive = {
+			
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_completed_focus = CHL_endorse_the_constitution
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	focus = {
+		id = CHL_reestablish_the_republican_guard
+
+		icon = GFX_focus_SWE_varnplikt
+
+		relative_position_id = CHL_policies_of_arturo_alessandri
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_policies_of_arturo_alessandri
+		}
+		prerequisite = {
+			
+			
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_volunteers_to_the_republicans
+
+		icon = GFX_focus_intervention_spain_republic
+
+		relative_position_id = CHL_policies_of_arturo_alessandri
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_policies_of_arturo_alessandri  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_prop_up_gustavo_ross
+
+		icon = GFX_goal_generic_propaganda
+
+		relative_position_id = CHL_policies_of_arturo_alessandri
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_policies_of_arturo_alessandri  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_construct_the_estadio_nacional
+
+		icon = GFX_goal_generic_construct_civilian
+
+		relative_position_id = CHL_policies_of_arturo_alessandri
+		x = -3
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_policies_of_arturo_alessandri  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+			modifier = {
+				factor = 0
+				date > 1938.8.2
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_establish_corfo
+
+		icon = GFX_focus_spa_the_spanish_miracle
+
+		relative_position_id = CHL_1938_chilean_presidential_election
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_1938_chilean_presidential_election  
+		}
+
+		mutually_exclusive = {
+			focus = CHL_work_towards_laissex_faire
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 2
+				has_country_leader = { 
+				    character =  CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}	
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_work_towards_laissex_faire
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		relative_position_id = CHL_1938_chilean_presidential_election
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_1938_chilean_presidential_election  
+		}
+
+		mutually_exclusive = {
+			focus = CHL_establish_corfo
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0
+				has_country_leader = { 
+				    character = CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}	
+			}
+		}
+
+		available = {} 
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+
+
+	
+	focus = {
+		id = CHL_low_cost_housing
+
+		icon = GFX_focus_generic_low_cost_housing
+
+		relative_position_id = CHL_establish_corfo
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_establish_corfo  
+			focus = CHL_work_towards_laissex_faire
+		}
+
+		mutually_exclusive = {
+			focus = CHL_privatize_national_industries
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0.8
+				has_country_leader = { 
+				    character = CHL_carlos_ibanez
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes	
+			}
+			modifier = {
+				factor = 2
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}	
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = CHL_align_the_police
+
+		icon = GFX_goal_generic_dangerous_deal
+
+		relative_position_id = CHL_commence_the_counter_revolution
+		x = 6
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_commence_the_counter_revolution
+		}
+
+		mutually_exclusive = {
+		} 
+
+		ai_will_do = {
+			base = 1
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					OR = {
+						has_completed_focus = CHL_look_to_tradition
+						has_completed_focus = CHL_endorse_the_constitution
+					} 
+				}
+			}
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_privatize_national_industries
+
+		icon = GFX_focus_generic_industry_2
+
+		relative_position_id = CHL_establish_corfo
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_establish_corfo  
+			focus = CHL_work_towards_laissex_faire
+		}
+
+		mutually_exclusive = {
+			focus = CHL_low_cost_housing
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes	
+			}
+			modifier = {
+				factor = 0
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}	
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_strengthen_instituto_nacional
+
+		icon = GFX_focus_CHL_strengthen_instituto_nacional
+
+		relative_position_id = CHL_low_cost_housing
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_low_cost_housing  
+			focus = CHL_privatize_national_industries
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_enact_universal_suffrage
+
+		icon = GFX_focus_generic_universal_suffrage
+
+		relative_position_id = CHL_low_cost_housing
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_low_cost_housing  
+			focus = CHL_privatize_national_industries
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_carlos_ibanez
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes	
+			}
+			modifier = {
+				factor = 2
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}	
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_host_spanish_refugees
+
+		dynamic = yes
+
+		icon = {
+			GFX_focus_intervention_spain_nationalists = {
+				CHL_has_right_wing_government = yes
+			}
+			GFX_focus_generic_befriend_communist_spain_focus = {
+				CHL_has_left_wing_government = yes
+			}
+			GFX_focus_generic_befriend_republican_spain_focus = yes
+		}
+
+		relative_position_id = CHL_low_cost_housing
+		x = 5
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_low_cost_housing  
+			focus = CHL_privatize_national_industries
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_expand_the_investigations_police
+
+		icon = GFX_focus_generic_secret_service_agency
+
+		relative_position_id = CHL_privatize_national_industries
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_privatize_national_industries
+			focus = CHL_low_cost_housing
+		}
+
+		mutually_exclusive = {
+		} 
+
+		ai_will_do = {
+			base = 1
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					OR = {
+						has_completed_focus = CHL_denounce_the_anarchy
+						has_completed_focus = CHL_look_to_tradition 
+					}
+				}
+			}
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_increase_presidential_powers
+
+		icon = GFX_focus_usa_voter_registration_act
+
+		relative_position_id = CHL_strengthen_instituto_nacional
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_strengthen_instituto_nacional  
+		}
+
+		mutually_exclusive = {
+			focus = CHL_reapproach_america
+			focus = CHL_return_to_the_parliamentary_era
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 2.5
+				has_country_leader = { 
+				    character = CHL_carlos_ibanez
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes	
+			}
+			modifier = {
+				factor = 2.5
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}	
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+	
+	
+	focus = {
+		id = CHL_reapproach_america
+
+		icon = GFX_focus_chi_mission_to_the_us
+
+		relative_position_id = CHL_strengthen_instituto_nacional
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_strengthen_instituto_nacional  
+		}
+
+		mutually_exclusive = {
+			focus = CHL_increase_presidential_powers
+			focus = CHL_return_to_the_parliamentary_era
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				is_historical_focus_on = yes	
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_return_to_the_parliamentary_era
+
+		icon = GFX_focus_ETH_re-convene_the_parliament
+
+		relative_position_id = CHL_strengthen_instituto_nacional
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_strengthen_instituto_nacional  
+		}
+
+		mutually_exclusive = {
+			focus = CHL_increase_presidential_powers
+			focus = CHL_reapproach_america
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes	
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_development_inwards
+
+		icon = GFX_focus_CHL_development_inwards
+
+		relative_position_id = CHL_increase_presidential_powers
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_increase_presidential_powers
+			focus = CHL_reapproach_america 
+			focus = CHL_return_to_the_parliamentary_era 
+		}
+
+		mutually_exclusive = {
+			focus = CHL_kickstart_the_arsenal_of_democracy
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_carlos_ibanez
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes	
+			}
+			modifier = {
+				factor = 2.5
+				OR = {
+					has_government = neutrality
+					has_government = communism 
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_kickstart_the_arsenal_of_democracy
+
+		icon = GFX_focus_generic_the_giant_wakes
+
+		relative_position_id = CHL_increase_presidential_powers
+		x = 5
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			
+			focus = CHL_reapproach_america 
+			focus = CHL_return_to_the_parliamentary_era 
+		}
+
+		mutually_exclusive = {
+			focus = CHL_development_inwards
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 1.5
+				has_country_leader = { 
+				    character = CHL_gustavo_ross_santa_maria
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 0.5
+				has_country_leader = { 
+				    character = CHL_pedro_aguirre_cerda
+				    ruling_only = yes
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = neutrality
+					has_government = communism 
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_align_the_marxists
+
+		icon = GFX_focus_chi_cooperation_with_the_communists
+
+		relative_position_id = CHL_development_inwards
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			
+			
+			focus = CHL_development_inwards
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_chilean_anti_communist_action
+
+		icon = GFX_focus_CHL_chilean_anti_communist_action
+
+		relative_position_id = CHL_commence_the_counter_revolution
+		x = -4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			
+			
+			
+			focus = CHL_commence_the_counter_revolution 
+		}
+
+		mutually_exclusive = {
+		} 
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3.5
+				has_government = fascism
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_law_of_permanent_defense
+
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+
+		relative_position_id = CHL_chilean_anti_communist_action
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_chilean_anti_communist_action
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				any_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_organize_patriotic_leagues
+
+		icon = GFX_goal_generic_military_sphere
+
+		relative_position_id = CHL_law_of_permanent_defense
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_law_of_permanent_defense
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0.5
+				has_government = democratic
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_preemtively_strike_foreign_revolutionaries
+
+		icon = GFX_goal_anti_comintern_pact
+
+		relative_position_id = CHL_organize_patriotic_leagues
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_organize_patriotic_leagues
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 0.5
+			modifier = {
+				factor = 2
+				has_war_support > 0.8
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_enforce_stricter_secularism
+
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+
+		relative_position_id = CHL_kickstart_the_arsenal_of_democracy
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_kickstart_the_arsenal_of_democracy
+			focus = CHL_development_inwards
+		}
+
+		mutually_exclusive = {
+			focus = CHL_repeal_the_separation_of_church_an_state
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 1.5
+				CHL_has_left_wing_government = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_repeal_the_separation_of_church_an_state
+
+		icon = GFX_focus_por_concordat
+
+		relative_position_id = CHL_kickstart_the_arsenal_of_democracy
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_kickstart_the_arsenal_of_democracy
+			focus = CHL_development_inwards
+		}
+
+		mutually_exclusive = {
+			focus = CHL_enforce_stricter_secularism
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_chilean_anti_communist_action_dem_version
+
+		icon = GFX_focus_CHL_chilean_anti_communist_action
+
+		relative_position_id = CHL_repeal_the_separation_of_church_an_state
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_repeal_the_separation_of_church_an_state
+			focus = CHL_enforce_stricter_secularism
+		}
+
+		mutually_exclusive = {
+			
+		} 
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_denounce_the_anarchy
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3.5
+				has_government = fascism
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_law_of_permanent_defense_of_democracy
+
+		icon = GFX_focus_usa_voter_registration_act
+
+		relative_position_id = CHL_chilean_anti_communist_action_dem_version
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_chilean_anti_communist_action_dem_version
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				any_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_ban_liberalism
+
+		icon = GFX_goal_generic_political_pressure
+
+		relative_position_id = CHL_commence_the_counter_revolution
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_commence_the_counter_revolution
+		}
+
+		mutually_exclusive = {
+		} 
+
+		ai_will_do = {
+			base = 1
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_recruit_young_officers
+
+		icon = GFX_focus_generic_military_academy
+
+		relative_position_id = CHL_commence_the_counter_revolution
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_commence_the_counter_revolution
+		}
+
+		mutually_exclusive = {
+		} 
+		 
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_enforce_the_chilean_identity
+
+		icon = GFX_focus_CHL_enforce_the_chilean_identity
+
+		relative_position_id = CHL_recruit_young_officers
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_recruit_young_officers
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {} 
+	}
+
+	
+	focus = {
+		id = CHL_promote_broad_anti_americansim
+
+		icon = GFX_focus_ARG_anti_american_propaganda
+
+		relative_position_id = CHL_enforce_the_chilean_identity
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			
+			focus = CHL_enforce_the_chilean_identity 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_cooperate_with_operation_bolivar
+
+		icon = GFX_focus_chi_mission_to_germany
+
+		relative_position_id = CHL_enforce_the_chilean_identity
+		x = -2
+		y = 2
+		cost = 5
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_look_to_tradition }
+				NOT = { has_completed_focus = CHL_endorse_the_constitution }
+			}
+		}
+
+		prerequisite = {
+			focus = CHL_enforce_the_chilean_identity
+		}
+
+		mutually_exclusive = {
+			focus = CHL_abide_by_the_francoist_model
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_abide_by_the_francoist_model
+
+		icon = GFX_focus_spa_caudillo_of_spain
+
+		relative_position_id = CHL_enforce_the_chilean_identity
+		x = 2
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_enforce_the_chilean_identity
+		}
+
+		
+		
+		
+
+		mutually_exclusive = {
+			focus = CHL_cooperate_with_operation_bolivar
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_host_german_intelligence
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		relative_position_id = CHL_cooperate_with_operation_bolivar
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_cooperate_with_operation_bolivar
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_militarize_the_state
+
+		icon = GFX_goal_generic_construct_mil_factory
+
+		relative_position_id = CHL_host_german_intelligence
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_host_german_intelligence
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_spirit_of_the_war_of_the_pacific
+
+		icon = GFX_focus_CHL_the_spirit_of_the_war_of_the_pacific
+
+		relative_position_id = CHL_militarize_the_state
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_militarize_the_state
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_syndicalize_the_production_sector
+
+		icon = GFX_focus_spa_the_phalanx_ascendant
+
+		relative_position_id = CHL_commence_the_counter_revolution
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_commence_the_counter_revolution
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_expand_the_mountain_regiments
+
+		icon = GFX_focus_mex_caudillo_private_armies
+
+		relative_position_id = CHL_commence_the_counter_revolution
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_commence_the_counter_revolution
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_departemento_de_las_tropas_nacistas_de_asalto
+
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+
+		relative_position_id = CHL_syndicalize_the_production_sector
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_syndicalize_the_production_sector
+		}
+
+		mutually_exclusive = {
+			focus = CHL_departamento_de_la_juventad_nacista
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_departamento_de_la_juventad_nacista
+
+		icon = GFX_focus_generic_manpower
+
+		relative_position_id = CHL_syndicalize_the_production_sector
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_syndicalize_the_production_sector
+		}
+
+		mutually_exclusive = {
+			focus = CHL_departemento_de_las_tropas_nacistas_de_asalto
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_expand_the_department_of_provinces
+
+		icon = GFX_goal_generic_position_armies
+
+		relative_position_id = CHL_departamento_de_la_juventad_nacista
+		x = 1
+		y = 1
+		cost = 5
+
+		
+		
+		
+
+		prerequisite = {
+			focus = CHL_departamento_de_la_juventad_nacista
+			focus = CHL_departemento_de_las_tropas_nacistas_de_asalto
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_revoke_the_treaty_of_lima
+
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+
+		relative_position_id = CHL_cooperate_with_operation_bolivar
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_cooperate_with_operation_bolivar
+			focus = CHL_abide_by_the_francoist_model
+		}
+
+		mutually_exclusive = {
+		}  
+		
+		will_lead_to_war_with = PRU
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 2.5
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_demand_the_fireland
+
+		icon = GFX_focus_CHL_dispute_over_tierra_del_fuego
+
+		relative_position_id = CHL_revoke_the_treaty_of_lima
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_revoke_the_treaty_of_lima
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		will_lead_to_war_with = ARG
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 3
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_escalate_the_laguna_del_desierto_issue
+
+		icon = GFX_focus_prc_infiltration
+
+		relative_position_id = CHL_revoke_the_treaty_of_lima
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_revoke_the_treaty_of_lima
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		will_lead_to_war_with = ARG
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_demand_demilitarization_of_patagonia
+
+		icon = GFX_focus_CHL_demand_demilitarization_of_patagonia
+
+		relative_position_id = CHL_demand_the_fireland
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_demand_the_fireland
+			focus = CHL_escalate_the_laguna_del_desierto_issue
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_enter_patagonia
+
+		icon = GFX_focus_generic_attack_argentina
+
+		relative_position_id = CHL_demand_demilitarization_of_patagonia
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_demand_demilitarization_of_patagonia
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		will_lead_to_war_with = ARG
+
+		available = {}
+
+		bypass = {}
+
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_controlled_education
+
+		icon = GFX_focus_generic_university_2
+
+		relative_position_id = CHL_enter_patagonia
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_enter_patagonia
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_promote_pan_hispanic_rhetoric
+
+		icon = GFX_focus_CHL_promote_pan_hispanic_rhetoric
+
+		relative_position_id = CHL_abide_by_the_francoist_model
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_abide_by_the_francoist_model
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_military_excercises
+
+		icon = GFX_focus_generic_little_entente
+
+		relative_position_id = CHL_promote_pan_hispanic_rhetoric
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_promote_pan_hispanic_rhetoric
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_WAR_SUPPORT }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_cultivate_fanaticism
+
+		icon = GFX_goal_generic_attack_allies
+
+		relative_position_id = CHL_military_excercises
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_military_excercises
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_path_to_conquest
+
+		icon = GFX_goal_generic_major_war
+
+		relative_position_id = CHL_military_excercises
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_military_excercises
+		}
+
+		mutually_exclusive = {
+			focus = CHL_the_hispanic_alliance
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_hispanic_alliance
+
+		icon = GFX_goal_tripartite_pact
+
+		relative_position_id = CHL_military_excercises
+		x = 6
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_military_excercises
+		}
+
+		mutually_exclusive = {
+			focus = CHL_the_path_to_conquest
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_latin_american_alliance
+
+		icon = GFX_goal_generic_national_unity
+
+		relative_position_id = CHL_the_hispanic_alliance
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_hispanic_alliance
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_sponsor_anti_colonialist_rebellions
+
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+
+		relative_position_id = CHL_the_hispanic_alliance
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_hispanic_alliance
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_joint_development_and_research
+
+		icon = GFX_goal_generic_construction2
+
+		relative_position_id = CHL_the_hispanic_alliance
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_hispanic_alliance
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_push_past_the_darien_gap
+
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+
+		relative_position_id = CHL_the_path_to_conquest
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_the_path_to_conquest
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_might_to_defend_our_homes
+
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+
+		relative_position_id = CHL_cultivate_fanaticism
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_cultivate_fanaticism
+		}
+
+		prerequisite = {
+			
+			
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_undo_colonialist_occupations
+
+		icon = GFX_focus_attack_britain
+
+		relative_position_id = CHL_push_past_the_darien_gap
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_push_past_the_darien_gap
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_unite_hispanic_america
+
+		icon = GFX_focus_CHL_unite_hispanic_america
+
+		relative_position_id = CHL_the_might_to_defend_our_homes
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_might_to_defend_our_homes
+			focus = CHL_undo_colonialist_occupations
+		}
+
+		mutually_exclusive = {
+			focus = CHL_restore_the_old_kingdom
+		} 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {}
+
+		ai_will_do = {
+			base = 8
+		}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_true_enemy
+
+		icon = GFX_focus_generic_attack_usa
+
+		relative_position_id = CHL_unite_hispanic_america
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_unite_hispanic_america
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_demand_the_guayanas
+
+		icon = GFX_goal_demand_sudetenland
+
+		relative_position_id = CHL_the_path_to_conquest
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_path_to_conquest
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+
+		bypass = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_liberate_the_caribbean
+
+		icon = GFX_focus_CHL_liberate_the_caribbean
+
+		relative_position_id = CHL_demand_the_guayanas
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_demand_the_guayanas
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available = {}
+
+		will_lead_to_war_with = CUB
+		will_lead_to_war_with = DOM
+		will_lead_to_war_with = HAI
+	    will_lead_to_war_with = BAH
+	    will_lead_to_war_with = BAS
+	    will_lead_to_war_with = JAM
+	    will_lead_to_war_with = PUE
+	    will_lead_to_war_with = CRC
+	    will_lead_to_war_with = TRI
+	    will_lead_to_war_with = GDL	
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_press_our_demands
+
+		icon = GFX_focus_generic_attack_the_guyanas
+
+		relative_position_id = CHL_demand_the_guayanas
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_demand_the_guayanas
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_defense_of_the_hemisphere
+
+		icon = GFX_goal_generic_defence 
+
+		relative_position_id = CHL_the_spirit_of_the_war_of_the_pacific
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_the_spirit_of_the_war_of_the_pacific
+		}
+
+		mutually_exclusive = {
+		} 
+		
+
+		available = {}
+
+		ai_will_do = {
+			base = 2
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_support_the_colonial_plan
+
+		icon = GFX_focus_CHL_support_the_colonial_plan
+
+		relative_position_id = CHL_the_spirit_of_the_war_of_the_pacific
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_the_spirit_of_the_war_of_the_pacific
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {}
+
+		bypass = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_unite_with_our_brothers_in_hispania
+
+		icon = GFX_focus_por_iberian_summit
+
+		relative_position_id = CHL_support_the_colonial_plan
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_support_the_colonial_plan
+			focus = CHL_defense_of_the_hemisphere
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				GER = {
+					has_war_with = FRA
+				}
+				date < 1940.06.1
+				FRA = { has_capitulated = no }
+			}
+
+			modifier = {
+				factor = 50
+				FRA = { has_capitulated = yes }
+				date > 1940.07.1
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_restore_the_old_kingdom
+
+		icon = GFX_focus_CHL_restore_the_old_kingdom
+
+		relative_position_id = CHL_the_spirit_of_the_war_of_the_pacific
+		x = 1
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_the_spirit_of_the_war_of_the_pacific
+			focus = CHL_enter_patagonia
+		}
+
+		
+		
+		
+
+		mutually_exclusive = {
+			focus = CHL_unite_hispanic_america
+		} 
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_an_empire_on_the_pacific
+
+		icon = GFX_goal_generic_occupy_states_coastal
+
+		relative_position_id = CHL_restore_the_old_kingdom
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_restore_the_old_kingdom
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_modern_conquistadors
+
+		icon = GFX_focus_generic_pope
+
+		relative_position_id = CHL_restore_the_old_kingdom
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_restore_the_old_kingdom
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 15
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		available = {}
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_future_of_Chile
+
+		icon = GFX_focus_CHL_the_future_of_Chile
+
+		relative_position_id = CHL_increase_presidential_powers
+		x = -4
+		y = 1
+		cost = 10
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_reapproach_america }
+				NOT = { has_completed_focus = CHL_return_to_the_parliamentary_era }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+				NOT = { has_completed_focus = CHL_look_to_tradition }
+			}
+		}
+
+		prerequisite = {
+			focus = CHL_increase_presidential_powers 
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_socialist_youth
+
+		icon = GFX_focus_SOV_builder_of_the_red_army
+
+		relative_position_id = CHL_enforce_stricter_secularism
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_repeal_the_separation_of_church_an_state
+			focus = CHL_enforce_stricter_secularism
+		}
+
+		mutually_exclusive = {
+			
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_counter_operation_bolivar
+
+		icon = GFX_focus_CHL_counter_operation_bolivar
+
+		relative_position_id = CHL_development_inwards
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_development_inwards
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2.5
+				any_country = {
+					is_major = yes
+					has_government = fascism
+					has_war = yes
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+
+
+	
+	focus = {
+		id = CHL_support_for_the_international_revolution
+
+		icon = GFX_focus_ger_great_red_menace
+
+		relative_position_id = CHL_the_future_of_Chile
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_the_future_of_Chile
+		}
+
+		mutually_exclusive = {
+			focus = CHL_align_with_the_russian_soviet
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_sponsor_american_revolutions
+
+		icon = GFX_focus_por_latin_american_communism
+
+		relative_position_id = CHL_support_for_the_international_revolution
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_support_for_the_international_revolution
+		}
+
+		
+		
+		
+		
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_union_of_hispanic_republics
+
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+
+		relative_position_id = CHL_sponsor_american_revolutions
+		x = 2
+		y = 1
+		cost = 10
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = CHL_reapproach_america }
+				NOT = { has_completed_focus = CHL_return_to_the_parliamentary_era }
+				NOT = { has_completed_focus = CHL_denounce_the_anarchy }
+				NOT = { has_completed_focus = CHL_look_to_tradition }
+			}
+		}
+
+		prerequisite = {
+			focus = CHL_sponsor_american_revolutions
+			focus = CHL_strike_down_south_american_fascism
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		available = {} 
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_propose_closer_cooperation
+	
+		icon = GFX_goal_generic_national_unity
+	
+		relative_position_id = CHL_sponsor_american_revolutions
+		x = 0
+		y = 1
+		cost = 10
+	
+		prerequisite = {
+			focus = CHL_sponsor_american_revolutions
+		}
+	
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				any_country = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+	
+		available = {}
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_nationalize_foreign_industries
+
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+
+		relative_position_id = CHL_the_future_of_Chile
+		x = -1
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_support_for_the_international_revolution
+			focus = CHL_align_with_the_russian_soviet
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_align_with_the_russian_soviet
+
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+
+		relative_position_id = CHL_support_for_the_international_revolution
+		x = 4
+		y = 0
+		cost = 5
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		prerequisite = {
+			focus = CHL_the_future_of_Chile
+		
+		}
+
+		mutually_exclusive = {
+			focus = CHL_support_for_the_international_revolution
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_strike_down_south_american_fascism
+
+		icon = GFX_focus_ITA_liberation_or_death
+
+		relative_position_id = CHL_align_with_the_russian_soviet
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_align_with_the_russian_soviet
+		}
+
+		
+		
+		
+		
+		
+		ai_will_do = {
+			base = 0.5
+			modifier = {
+				factor = 2
+				has_government = communism
+				has_war_support > 0.8
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_hub_of_the_world_revolution
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		relative_position_id = CHL_the_future_of_Chile 
+		x = 1
+		y = 1
+		cost = 10
+		allow_branch = {
+			has_country_flag = CHL_enable_hub_of_the_world
+		}
+		
+		
+		
+		
+		
+		
+		
+		ai_will_do = {
+			base = 1.5
+		}
+		available = {}
+		
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_joint_development_programs
+
+		icon = GFX_goal_generic_soviet_construction
+
+		relative_position_id = CHL_align_with_the_russian_soviet
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_align_with_the_russian_soviet
+			focus = CHL_support_for_the_international_revolution
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_joint_research_initiatives
+
+		icon = GFX_focus_generic_socialist_science
+
+		relative_position_id = CHL_align_with_the_russian_soviet
+		x = -2
+		y = 2
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_joint_development_programs
+			focus = CHL_nationalize_foreign_industries
+			
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_an_attempt_to_maintain_our_neutrality
+
+		icon = GFX_goal_generic_neutrality_focus
+
+		relative_position_id = CHL_development_inwards
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			
+			
+			focus = CHL_development_inwards
+			focus = CHL_kickstart_the_arsenal_of_democracy
+		}
+
+		mutually_exclusive = {
+			focus = CHL_support_the_democracies
+			
+			
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2.5
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+
+	
+	focus = {
+		id = CHL_land_reforms
+
+		icon = GFX_focus_generic_land_reclamation
+
+		relative_position_id = CHL_an_attempt_to_maintain_our_neutrality 
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_an_attempt_to_maintain_our_neutrality 
+			focus = CHL_support_the_democracies
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+		} 
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		 
+		completion_reward = {}
+	}
+
+	
+	focus = { 
+		id = CHL_support_the_democracies
+
+		icon = GFX_focus_generic_league_of_nations
+
+		relative_position_id = CHL_kickstart_the_arsenal_of_democracy
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_kickstart_the_arsenal_of_democracy
+		}
+
+		mutually_exclusive = {
+			focus = CHL_an_attempt_to_maintain_our_neutrality
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_mapuche_reconcilliation_campaigns
+
+		icon = GFX_focus_CHL_mapuche_reconcilliation_campaigns_export
+
+		relative_position_id = CHL_land_reforms
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_land_reforms
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_found_the_contraloria_general_de_la_republica
+
+		icon = GFX_focus_CHL_found_the_contraloria_general_de_la_republica
+
+		relative_position_id = CHL_an_attempt_to_maintain_our_neutrality
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_an_attempt_to_maintain_our_neutrality
+			
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_embargo_strategies
+
+		icon = GFX_goal_generic_trade
+
+		relative_position_id = CHL_support_the_democracies
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_support_the_democracies
+			
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_enact_stricter_labor_laws
+
+		icon = GFX_focus_generic_population_growth
+
+		relative_position_id = CHL_an_attempt_to_maintain_our_neutrality
+		x = -1
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			
+			
+			focus = CHL_land_reforms
+		}
+
+		mutually_exclusive = {
+			focus = CHL_found_national_steelworks
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_found_national_steelworks
+
+		icon = GFX_focus_generic_steel
+
+		relative_position_id = CHL_an_attempt_to_maintain_our_neutrality
+		x = 3
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			
+			
+			focus = CHL_land_reforms
+		}
+
+		mutually_exclusive = {
+			focus = CHL_enact_stricter_labor_laws
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+			modifier = {
+				factor = 0
+				has_country_leader = { 
+				    character = CHL_elias_lafertte_gavino
+				    ruling_only = yes
+				}
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_a_joint_application_to_the_allies
+
+		icon = GFX_focus_CHL_a_joint_application_to_the_allies
+
+		relative_position_id = CHL_enact_stricter_labor_laws
+		x = 1
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_enact_stricter_labor_laws
+			focus = CHL_found_national_steelworks
+		}
+		mutually_exclusive = {
+			focus = CHL_dispute_over_tierra_del_fuego
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_dispute_over_tierra_del_fuego
+
+		icon = GFX_focus_CHL_dispute_over_tierra_del_fuego
+
+		relative_position_id = CHL_a_joint_application_to_the_allies
+		x = 2
+		y = 0
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_enact_stricter_labor_laws
+			focus = CHL_found_national_steelworks
+		}
+
+		mutually_exclusive = {
+			focus = CHL_a_joint_application_to_the_allies
+		} 
+
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		will_lead_to_war_with = ARG
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_protect_the_easter_island
+
+		icon = GFX_focus_CHL_protect_the_easter_island
+
+		relative_position_id = CHL_an_attempt_to_maintain_our_neutrality
+		x = 1
+		y = 4
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_enact_stricter_labor_laws
+			focus = CHL_found_national_steelworks
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date > 1944.1.1
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}   
+
+	
+	focus = {
+		id = CHL_offer_to_protect_pitcairn
+
+		icon = GFX_focus_chi_british_cooperation
+
+		relative_position_id = CHL_protect_the_easter_island
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_protect_the_easter_island
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		
+		completion_reward = {}
+	} 
+ 
+
+
+
+
+
+
+
+	
+	focus = {
+		id = CHL_public_works
+
+		icon = GFX_focus_generic_public_works
+
+		relative_position_id = CHL_look_to_tradition
+		x = 56
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {
+			focus = CHL_dissolve_covensa
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+
+		offset = {
+			x = -29
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_look_to_tradition
+			}
+		}
+
+		offset = {
+			x = -38
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_endorse_the_constitution
+			}
+		}
+
+		offset = {
+			x = -41
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_denounce_the_anarchy
+			}
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_address_the_mapuche_conflict
+			}
+		}
+
+
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_rule_by_decree
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_dissolve_covensa
+
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+
+		relative_position_id = CHL_look_to_tradition
+		x = 45
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {
+			focus = CHL_public_works
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {}
+
+		offset = {
+			x = -29
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_look_to_tradition
+			}
+		}
+
+		offset = {
+			x = -38
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_endorse_the_constitution
+			}
+		}
+
+		offset = {
+			x = -41
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_denounce_the_anarchy
+			}
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_address_the_mapuche_conflict
+			}
+		}
+
+
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_rule_by_decree
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}  
+	} 
+
+	
+	focus = {
+		id = CHL_construct_new_hydroelectric_stations
+
+		icon = GFX_focus_generic_hydroelectric_energy
+
+		relative_position_id = CHL_dissolve_covensa
+		x = 4
+		y = 1
+		cost = 10
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		prerequisite = {
+			
+			
+			focus = CHL_dissolve_covensa
+			focus = CHL_public_works
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_completed_focus = CHL_look_to_tradition
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_impose_new_taxes
+
+		icon = GFX_focus_mex_privatisation
+
+		relative_position_id = CHL_public_works
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			
+			
+			focus = CHL_dissolve_covensa
+			focus = CHL_public_works
+		}
+
+		offset = {
+			x = 0
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = CHL_denounce_the_anarchy
+			}
+		}
+	
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_government = fascism
+			}
+		}
+	 
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_issue_bonds
+
+		icon = GFX_focus_SWI_issue_war_bonds
+
+		relative_position_id = CHL_public_works
+		x = -5
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_public_works  
+			focus = CHL_dissolve_covensa  
+		}
+
+		mutually_exclusive = { 
+		}  
+		 
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_contract_efe
+ 
+		icon = GFX_focus_CHL_contract_efe
+
+		relative_position_id = CHL_public_works
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_public_works  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_work_on_the_pan_american_highway
+
+		icon = GFX_focus_CHL_work_on_the_panamerican_highway
+
+		relative_position_id = CHL_dissolve_covensa
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			
+			
+			focus = CHL_dissolve_covensa
+			focus = CHL_public_works
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_expand_the_forestry
+
+		icon = GFX_focus_CHL_expand_the_forestry
+
+		relative_position_id = CHL_public_works
+		x = 1 
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_public_works   
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_government_mandated_contracts
+
+		icon = GFX_focus_generic_treaty
+
+		relative_position_id = CHL_expand_the_forestry
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_expand_the_forestry  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_we_must_dig_deeper
+
+		icon = GFX_focus_generic_mining_industry
+
+		relative_position_id = CHL_dissolve_covensa 
+		x = 0
+		y = 1
+		cost = 5
+ 
+		prerequisite = {
+			focus = CHL_dissolve_covensa  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_establish_trade_relationships
+
+		icon = GFX_goal_generic_positive_trade_relations
+
+		relative_position_id = CHL_dissolve_covensa
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_dissolve_covensa  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_international_loans
+
+		icon = GFX_focus_generic_concessions
+
+		relative_position_id = CHL_establish_trade_relationships
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_establish_trade_relationships  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		 
+		completion_reward = {}
+	} 
+ 
+	
+	focus = {
+		id = CHL_connect_the_northern_railways
+
+		icon = GFX_focus_CHL_connect_the_northern_railways
+
+		relative_position_id = CHL_contract_efe
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_contract_efe  
+			focus = CHL_we_must_dig_deeper  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_expand_southern_infrastructure
+
+		icon = GFX_focus_CHL_expand_southern_infrastructure
+
+		relative_position_id = CHL_we_must_dig_deeper
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_contract_efe  
+			focus = CHL_we_must_dig_deeper  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+ 
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_devalue_the_peso
+
+		dynamic = yes
+
+		icon = GFX_focus_CHL_devalue_the_peso_export
+
+		relative_position_id = CHL_contract_efe
+		x = -5
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_contract_efe  
+			focus = CHL_we_must_dig_deeper  
+		}
+
+		mutually_exclusive = { 
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	focus = {
+		id = CHL_promote_immigration_to_chile
+		icon = GFX_focus_generic_promote_SA_immigration
+		prerequisite = { focus = CHL_devalue_the_peso  }
+		x = 2
+		y = 1
+		relative_position_id = CHL_devalue_the_peso
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+
+		search_filters = { }
+
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_establish_the_ministry_of_mining
+
+		icon = GFX_focus_generic_improve_the_administration
+
+		relative_position_id = CHL_devalue_the_peso
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_devalue_the_peso
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_the_nationalization_of_copper
+
+		icon = GFX_focus_generic_self_management
+
+		relative_position_id = CHL_establish_the_ministry_of_mining
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_establish_the_ministry_of_mining
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {} 
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = CHL_utlilize_famae
+
+		icon = GFX_focus_CHL_utilize_famae
+
+		relative_position_id = CHL_devalue_the_peso
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_devalue_the_peso  
+		}
+
+		mutually_exclusive = { 
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+ 
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_domestic_production_of_the_willys_mb
+
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+
+		relative_position_id = CHL_utlilize_famae
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_utlilize_famae  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_high_quality_nitrate
+
+		icon = GFX_focus_CHL_high_quality_nitrate
+
+		relative_position_id = CHL_devalue_the_peso
+		x = -4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_devalue_the_peso  
+		}
+
+		mutually_exclusive = { 
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_they_shall_not_pass
+
+		icon = GFX_goal_fortify_the_westwall
+
+		relative_position_id = CHL_high_quality_nitrate
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_high_quality_nitrate  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_strengthen_the_central_bank
+
+		icon = GFX_focus_CHL_strengthen_the_central_bank
+
+		relative_position_id = CHL_devalue_the_peso
+		x = -6
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_devalue_the_peso  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+		}
+
+		available = {} 
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_expand_the_naval_arsenal
+
+		icon = GFX_goal_generic_build_navy
+
+		relative_position_id = CHL_devalue_the_peso
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_devalue_the_peso  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_fortify_the_coastlines
+
+		icon = GFX_focus_generic_coastal_fort
+
+		relative_position_id = CHL_expand_the_naval_arsenal
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = CHL_expand_the_naval_arsenal  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {}
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_invest_in_shipping
+
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+
+		relative_position_id = CHL_expand_the_naval_arsenal
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_expand_the_naval_arsenal  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {}
+	} 
+
+	
+	focus = {
+		id = CHL_advancements_in_telecommunications
+
+		icon = GFX_focus_research
+
+		relative_position_id = CHL_domestic_production_of_the_willys_mb
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = CHL_domestic_production_of_the_willys_mb  
+			focus = CHL_strengthen_the_central_bank
+			focus = CHL_they_shall_not_pass
+			focus = CHL_fortify_the_coastlines
+			focus = CHL_invest_in_shipping
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {}
+	} 
+	 
+
+}

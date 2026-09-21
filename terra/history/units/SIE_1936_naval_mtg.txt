@@ -1,0 +1,31 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Siesta Fleet"			
+		naval_base = 8248
+		task_force = {
+			name = "Siesta Fleet"
+			location = 8248
+			
+						ship = { name = "Doru" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SIE version_name = "Yilderis Class" } }	}
+			ship = { name = "Sonbahar" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SIE version_name = "Yilderis Class" } }	}
+			ship = { name = "Sogun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIE version_name = "Yilderis Class" } }	}
+			ship = { name = "Topru" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIE version_name = "Yilderis Class" } }	}
+			ship = { name = "Sonbahar 2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIE version_name = "Yilderis Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

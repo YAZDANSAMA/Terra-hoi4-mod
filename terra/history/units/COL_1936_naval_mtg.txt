@@ -1,0 +1,35 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Columbia Fleet"			
+		naval_base = 7867
+		task_force = {
+			name = "Columbia Fleet"
+			location = 7867
+			
+						ship = { name = "Beart" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Tair" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Cuidir" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Gluailt" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Fail" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Tuach" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Fairsealasam" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Luch" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+			ship = { name = "Gluailt 2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COL version_name = "Cnuarnamh Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

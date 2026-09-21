@@ -1,0 +1,247 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "YAN Fleet"			
+		naval_base = 8245
+		task_force = {
+			name = "YAN Fleet"
+			location = 8245
+			
+						ship = { name = "Cein" definition = carrier equipment = { carrier_2 = { amount = 1 owner = YAN version_name = "Tigne Class" } }	}
+			ship = { name = "Tuach" definition = carrier equipment = { carrier_2 = { amount = 1 owner = YAN version_name = "Tigne Class" } }	}
+			ship = { name = "Rath" definition = carrier equipment = { carrier_2 = { amount = 1 owner = YAN version_name = "Tigne Class" } }	}
+			ship = { name = "Ardanri" definition = carrier equipment = { carrier_2 = { amount = 1 owner = YAN version_name = "Tigne Class" } }	}
+			ship = { name = "Eirean" definition = battle_cruiser equipment = { battle_cruiser_2 = { amount = 1 owner = YAN version_name = "Uamhtirianwa Class" } }	}
+			ship = { name = "Amhne" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = YAN version_name = "Amhne Class" } }	}
+			ship = { name = "Dubha" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = YAN version_name = "Amhne Class" } }	}
+			ship = { name = "Tuas" definition = battle_cruiser equipment = { battle_cruiser_2 = { amount = 1 owner = YAN version_name = "Uamhtirianwa Class" } }	}
+			ship = { name = "Ronas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Fionn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Fionn 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Amhne 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Luath" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhreolas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ceolamhradai" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Rath 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Rath 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scath" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Aigne" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Eirean 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sonadhe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buachail" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Leart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dolamhannta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trathas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Rath 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dolamhannta 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Breac" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Gearradanamh" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dubha 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trom" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Aigne 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Laile" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tigne" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scath 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scatarrathea" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cein 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scath 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Aigne 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhtirianwa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dubha 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Leart 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Aigne 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Feing" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Aigne 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruas 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cein 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhtirianwa 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuach 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Luath 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ceolamhradai 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cein 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trom 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scatarrathea 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhtirianwa 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scath 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dolamhannta 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Gluas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Feing 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruas 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuach 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Gluas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Laile 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Gluas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slamh" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scathais" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Fionn 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Gearradanamh 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Luath 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuach 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Leart 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glean" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ardanri 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhreolas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhtirianwa 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Feing 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dolamhannta 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Lailis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronas 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruairios" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ardanri 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruas 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Amhne 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Eirean 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Luath 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Feing 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cein 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronas 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuas 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Luath 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruairios 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Amhne 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ardanri 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Gluas 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tigne 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Lailis 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Breac 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scatarrathea 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronas 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Aigne 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sonadhe 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Breac 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Rath 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buachail 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buachail 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trom 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slinn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Lort" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhreolas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scath 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trathas 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuach 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Eirean 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Breac 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruairios 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dubha 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Rath 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scatarrathea 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slamh 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slinn 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Feing 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scathais 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slinn 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glean 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Amhne 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Fionn 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slamh 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Leart 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Sceacht 9" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Buas 9" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Amhne 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trom 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuach 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Rath 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronas 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Leart 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Trathas 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Amhne 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Luath 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ardanri 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 9" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tigne 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dubha 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Scathais 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Slamh 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Uamhtirianwa 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuas 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Searg" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuas 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cean 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Feing 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuas 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dubha 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ruairios 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Ronn 8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Dorcrad 10" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Cnuair 9" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Glan 9" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Leart 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+			ship = { name = "Tuach 7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = YAN version_name = "Buas Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

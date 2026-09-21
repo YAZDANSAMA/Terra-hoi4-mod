@@ -1,0 +1,1083 @@
+characters = {
+	MIN_Hari_Gunci={
+		name="Hari Gunci"
+
+		
+		country_leader={
+			ideology=moderatism
+			traits = { he_who_bears_the_throne  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	MIN_Lutfi_Apintang={
+		name="Lutfi Apintang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Lutfi_Apintang
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Wayan_Bulau={
+		name="Wayan Bulau"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Wayan_Bulau
+			traits = {	national_determinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	MIN_Bamban_Pohonkepulap={
+		name="Bamban Pohonkepulap"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Bamban_Pohonkepulap
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Bambang_Sena={
+		name="Bambang Sena"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Bambang_Sena
+			traits = {	humble 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Ketutra_Laingitang={
+		name="Ketutra Laingitang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Ketutra_Laingitang
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	MIN_Lutfi_Perjaharan={
+		name="Lutfi Perjaharan"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Lutfi_Perjaharan
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Putfi_Cintuahang={
+		name="Putfi Cintuahang"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Putfi_Cintuahang
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	MIN_Sakti_Kerang={
+		name="Sakti Kerang"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Sakti_Kerang
+			traits = {	army_chief_planning_1 	}
+		}
+
+
+	}
+	MIN_Andi_Suci={
+		name="Andi Suci"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Andi_Suci
+			traits = {	army_chief_entrenchment_2 	}
+		}
+
+
+	}
+	MIN_Fajario_Padan={
+		name="Fajario Padan"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Fajario_Padan
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	MIN_Suryan_Gurnanak={
+		name="Suryan Gurnanak"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Suryan_Gurnanak
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	MIN_Ramban_Bayapal={
+		name="Ramban Bayapal"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Ramban_Bayapal
+			traits = {	navy_chief_old_guard 	}
+		}
+
+
+	}
+	MIN_Mari_Tariasjid={
+		name="Mari Tariasjid"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Mari_Tariasjid
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	MIN_Mari_Bumbah={
+		name="Mari Bumbah"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Mari_Bumbah
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	MIN_Rizal_Pelang={
+		name="Rizal Pelang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Rizal_Pelang
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	MIN_Bama_Kerap={
+		name="Bama Kerap"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Bama_Kerap
+			traits = {	air_airborne_2 	}
+		}
+
+
+	}
+	MIN_Hari_Tebing={
+		name="Hari Tebing"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Hari_Tebing
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	MIN_Fajari_Upacakmati={
+		name="Fajari Upacakmati"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Fajari_Upacakmati
+			traits = {	air_pilot_training_1 	}
+		}
+
+
+	}
+	MIN_Ketut_Pelang={
+		name="Ketut Pelang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Ketut_Pelang
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	MIN_Ketutfi_Badang={
+		name="Ketutfi Badang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Ketutfi_Badang
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	MIN_Rizal_Buari={
+		name="Rizal Buari"
+
+		
+		country_leader={
+			ideology=rexism
+			traits = { dictator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	MIN_Ramban_Peruhat={
+		name="Ramban Peruhat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Ramban_Peruhat
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Lutfi_Jembata={
+		name="Lutfi Jembata"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Lutfi_Jembata
+			traits = {	vapsid_economist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Hari_Gurnanak={
+		name="Hari Gurnanak"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Hari_Gurnanak
+			traits = {	generallissimo 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	MIN_Rambang_Sena={
+		name="Rambang Sena"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Rambang_Sena
+			traits = {	celebrity_junta_leader 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Bamban_Sahrohabahar={
+		name="Bamban Sahrohabahar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Bamban_Sahrohabahar
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Joko_Mulit={
+		name="Joko Mulit"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Joko_Mulit
+			traits = {	militant_minister 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Ketut_Senjatu={
+		name="Ketut Senjatu"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Ketut_Senjatu
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	MIN_Sakti_Periata={
+		name="Sakti Periata"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Sakti_Periata
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	MIN_Arjuna_Gunci={
+		name="Arjuna Gunci"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Arjuna_Gunci
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	MIN_Hari_Pindelak={
+		name="Hari Pindelak"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Hari_Pindelak
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	MIN_Rambang_Padani={
+		name="Rambang Padani"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Rambang_Padani
+			traits = {	navy_chief_decisive_battle_2 	}
+		}
+
+
+	}
+	MIN_Bamban_Perjatangang={
+		name="Bamban Perjatangang"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Bamban_Perjatangang
+			traits = {	navy_chief_naval_aviation_2 	}
+		}
+
+
+	}
+	MIN_Rizal_Lang={
+		name="Rizal Lang"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Rizal_Lang
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	MIN_Ketut_Rohon={
+		name="Ketut Rohon"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Ketut_Rohon
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	MIN_Lutfi_Keriat={
+		name="Lutfi Keriat"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Lutfi_Keriat
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	MIN_Waya_Nafasaris={
+		name="Waya Nafasaris"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Waya_Nafasaris
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	MIN_Bambang_Bindatu={
+		name="Bambang Bindatu"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Bambang_Bindatu
+			traits = {	air_naval_strike_2 	}
+		}
+
+
+	}
+	MIN_Putfi_Petir={
+		name="Putfi Petir"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Putfi_Petir
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	MIN_Lutfi_Rimenang={
+		name="Lutfi Rimenang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Lutfi_Rimenang
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	MIN_Ramban_Trama={
+		name="Ramban Trama"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Ramban_Trama
+			traits = {	army_cavalry_1 	}
+		}
+
+
+	}
+	MIN_Fajario_Rohon={
+		name="Fajario Rohon"
+
+		
+		country_leader={
+			ideology=anarchist_communism
+			traits = { polemarch  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	MIN_Hari_Cinta={
+		name="Hari Cinta"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Hari_Cinta
+			traits = {	leftist_intellectual 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Ramban_Cintu={
+		name="Ramban Cintu"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Ramban_Cintu
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Bambang_Legenja={
+		name="Bambang Legenja"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Bambang_Legenja
+			traits = {	marxist_fundamentalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	MIN_Arjuna_Perjatangang={
+		name="Arjuna Perjatangang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Arjuna_Perjatangang
+			traits = {	polemarch 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Fajari_Ibuku={
+		name="Fajari Ibuku"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Fajari_Ibuku
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	MIN_Rambang_Anah={
+		name="Rambang Anah"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Rambang_Anah
+			traits = {	indomitable_perseverance 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Bama_Upacakmati={
+		name="Bama Upacakmati"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Bama_Upacakmati
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	MIN_Rizal_Badang={
+		name="Rizal Badang"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Rizal_Badang
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	MIN_Putra_Legenjelajag={
+		name="Putra Legenjelajag"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Putra_Legenjelajag
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	MIN_Suryang_Perisaan={
+		name="Suryang Perisaan"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Suryang_Perisaan
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	MIN_Sakti_Ibuku={
+		name="Sakti Ibuku"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Sakti_Ibuku
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	MIN_Rama_Perjatangang={
+		name="Rama Perjatangang"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Rama_Perjatangang
+			traits = {	navy_chief_naval_aviation_2 	}
+		}
+
+
+	}
+	MIN_Dewa_Nafasaris={
+		name="Dewa Nafasaris"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Dewa_Nafasaris
+			traits = {	air_chief_ground_support_1 	}
+		}
+
+
+	}
+	MIN_Ramban_Temi={
+		name="Ramban Temi"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Ramban_Temi
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	MIN_Mario_Trang={
+		name="Mario Trang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Mario_Trang
+			traits = {	navy_amphibious_assault_1 	}
+		}
+
+
+	}
+	MIN_Bama_Rohon={
+		name="Bama Rohon"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Bama_Rohon
+			traits = {	army_logistics_2 	}
+		}
+
+
+	}
+	MIN_Putra_Bumbah={
+		name="Putra Bumbah"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Putra_Bumbah
+			traits = {	army_entrenchment_2 	}
+		}
+
+
+	}
+	MIN_Bama_Targan={
+		name="Bama Targan"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Bama_Targan
+			traits = {	navy_screen_2 	}
+		}
+
+
+	}
+	MIN_Arjuna_Kelajahariat={
+		name="Arjuna Kelajahariat"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Arjuna_Kelajahariat
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	MIN_Bambang_Gurnanak={
+		name="Bambang Gurnanak"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Bambang_Gurnanak
+			traits = {	air_air_superiority_2 	}
+		}
+
+
+	}
+	MIN_Ketutra_Tertanan={
+		name="Ketutra Tertanan"
+
+		
+		country_leader={
+			ideology=liberalism
+			traits = { conservative_grandee  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	MIN_Lutra_Sahrohabahar={
+		name="Lutra Sahrohabahar"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Lutra_Sahrohabahar
+			traits = {	first_lady 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Andi_Lang={
+		name="Andi Lang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Andi_Lang
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Fajari_Gunci={
+		name="Fajari Gunci"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Fajari_Gunci
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	MIN_Bama_Perjatangang={
+		name="Bama Perjatangang"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Bama_Perjatangang
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Putra_Perta={
+		name="Putra Perta"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Putra_Perta
+			traits = {	first_lady 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	MIN_Wayan_Penjat={
+		name="Wayan Penjat"
+
+		advisor={
+			slot = political_advisor
+			idea_token = MIN_Wayan_Penjat
+			traits = {	the_banker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	MIN_Surya_Padan={
+		name="Surya Padan"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Surya_Padan
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	MIN_Arjuna_Takuman={
+		name="Arjuna Takuman"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Arjuna_Takuman
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	MIN_Dewa_Mulit={
+		name="Dewa Mulit"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Dewa_Mulit
+			traits = {	army_chief_reform_2 	}
+		}
+
+
+	}
+	MIN_Ketut_Upacakmati={
+		name="Ketut Upacakmati"
+
+		advisor={
+			slot = army_chief
+			idea_token = MIN_Ketut_Upacakmati
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	MIN_Agus_Damhalusaan={
+		name="Agus Damhalusaan"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Agus_Damhalusaan
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	MIN_Fajar_Suci={
+		name="Fajar Suci"
+
+		advisor={
+			slot = navy_chief
+			idea_token = MIN_Fajar_Suci
+			traits = {	navy_chief_maneuver_1 	}
+		}
+
+
+	}
+	MIN_Waya_Perta={
+		name="Waya Perta"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Waya_Perta
+			traits = {	air_chief_safety_1 	}
+		}
+
+
+	}
+	MIN_Rama_Tebing={
+		name="Rama Tebing"
+
+		advisor={
+			slot = air_chief
+			idea_token = MIN_Rama_Tebing
+			traits = {	air_chief_all_weather_1 	}
+		}
+
+
+	}
+	MIN_Budi_Petirmalutah={
+		name="Budi Petirmalutah"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Budi_Petirmalutah
+			traits = {	navy_anti_submarine_2 	}
+		}
+
+
+	}
+	MIN_Hari_Perisaan={
+		name="Hari Perisaan"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Hari_Perisaan
+			traits = {	army_artillery_1 	}
+		}
+
+
+	}
+	MIN_Bambang_Gerjang={
+		name="Bambang Gerjang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Bambang_Gerjang
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	MIN_Dewa_Gung={
+		name="Dewa Gung"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Dewa_Gung
+			traits = {	army_concealment_2 	}
+		}
+
+
+	}
+	MIN_Budi_Gurnanak={
+		name="Budi Gurnanak"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Budi_Gurnanak
+			traits = {	army_armored_1 	}
+		}
+
+
+	}
+	MIN_Rizal_Gerjang={
+		name="Rizal Gerjang"
+
+		advisor={
+			slot = high_command
+			idea_token = MIN_Rizal_Gerjang
+			traits = {	army_regrouping_1 	}
+		}
+
+
+	}
+	MIN_Mario_Purgai={
+		name="Mario Purgai"
+
+		advisor={
+			slot = theorist
+			idea_token = MIN_Mario_Purgai
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	MIN_Andi_Nafasaris={
+		name="Andi Nafasaris"
+
+		advisor={
+			slot = theorist
+			idea_token = MIN_Andi_Nafasaris
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	MIN_Hario_Cinta={
+		name="Hario Cinta"
+
+		advisor={
+			slot = theorist
+			idea_token = MIN_Hario_Cinta
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

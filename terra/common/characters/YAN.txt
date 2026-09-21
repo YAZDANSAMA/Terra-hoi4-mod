@@ -1,0 +1,1083 @@
+characters = {
+	YAN_Niall_Fionn={
+		name="Niall Fionn"
+
+		
+		country_leader={
+			ideology=despotism
+			traits = { inexperienced_monarch  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	YAN_Ciall_Cnuair={
+		name="Ciall Cnuair"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Ciall_Cnuair
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Malcolm_Uamhtirianwa={
+		name="Malcolm Uamhtirianwa"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Malcolm_Uamhtirianwa
+			traits = {	the_academic 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Rhys_Buas={
+		name="Rhys Buas"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Rhys_Buas
+			traits = {	socialite_connections 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Iwan_Laile={
+		name="Iwan Laile"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Iwan_Laile
+			traits = {	agricultural_capitalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Keiran_Sonadhe={
+		name="Keiran Sonadhe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Keiran_Sonadhe
+			traits = {	right_industrialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Ciaraig_Cnuair={
+		name="Ciaraig Cnuair"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Ciaraig_Cnuair
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Ciall_Aona={
+		name="Ciall Aona"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Ciall_Aona
+			traits = {	army_chief_morale_1 	}
+		}
+
+
+	}
+	YAN_Ulrich_Lailis={
+		name="Ulrich Lailis"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Ulrich_Lailis
+			traits = {	army_chief_drill_1 	}
+		}
+
+
+	}
+	YAN_Padran_Uamhtirianwa={
+		name="Padran Uamhtirianwa"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Padran_Uamhtirianwa
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	YAN_Ciaran_Tuas={
+		name="Ciaran Tuas"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Ciaran_Tuas
+			traits = {	army_chief_drill_2 	}
+		}
+
+
+	}
+	YAN_Niareth_Scatarrathea={
+		name="Niareth Scatarrathea"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Niareth_Scatarrathea
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	YAN_Ulrich_Leart={
+		name="Ulrich Leart"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Ulrich_Leart
+			traits = {	navy_chief_maneuver_2 	}
+		}
+
+
+	}
+	YAN_Hugh_Buas={
+		name="Hugh Buas"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Hugh_Buas
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	YAN_Rhys_Sceacht={
+		name="Rhys Sceacht"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Rhys_Sceacht
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	YAN_Niall_Rath={
+		name="Niall Rath"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Niall_Rath
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	YAN_Owen_Scathais={
+		name="Owen Scathais"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Owen_Scathais
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	YAN_Owen_Sceacht={
+		name="Owen Sceacht"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Owen_Sceacht
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	YAN_Padran_Buas={
+		name="Padran Buas"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Padran_Buas
+			traits = {	army_entrenchment_1 	}
+		}
+
+
+	}
+	YAN_Niareth_Lort={
+		name="Niareth Lort"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Niareth_Lort
+			traits = {	air_tactical_bombing_1 	}
+		}
+
+
+	}
+	YAN_Aidan_Leart={
+		name="Aidan Leart"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Aidan_Leart
+			traits = {	air_pilot_training_2 	}
+		}
+
+
+	}
+	YAN_Niam_Fionn={
+		name="Niam Fionn"
+
+		
+		country_leader={
+			ideology=fascism_ideology
+			traits = { dictator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	YAN_Liall_Tuanrian={
+		name="Liall Tuanrian"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Liall_Tuanrian
+			traits = {	autocratic_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Eoinn_Muin={
+		name="Eoinn Muin"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Eoinn_Muin
+			traits = {	basileus 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Aidan_Maghe={
+		name="Aidan Maghe"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Aidan_Maghe
+			traits = {	vapsid_economist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Ciamus_Breas={
+		name="Ciamus Breas"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Ciamus_Breas
+			traits = {	autocratic_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Seamus_Sceacht={
+		name="Seamus Sceacht"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Seamus_Sceacht
+			traits = {	inexperienced_imperialist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Fergus_Aona={
+		name="Fergus Aona"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Fergus_Aona
+			traits = {	spirit_of_genghis 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Niall_Buac={
+		name="Niall Buac"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Niall_Buac
+			traits = {	army_chief_maneuver_1 	}
+		}
+
+
+	}
+	YAN_Taran_Sonn={
+		name="Taran Sonn"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Taran_Sonn
+			traits = {	army_chief_offensive_2 	}
+		}
+
+
+	}
+	YAN_Tareth_Buac={
+		name="Tareth Buac"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Tareth_Buac
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	YAN_Padran_Faignamhne={
+		name="Padran Faignamhne"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Padran_Faignamhne
+			traits = {	army_chief_entrenchment_1 	}
+		}
+
+
+	}
+	YAN_Owen_Buireamhtigh={
+		name="Owen Buireamhtigh"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Owen_Buireamhtigh
+			traits = {	navy_chief_naval_aviation_1 	}
+		}
+
+
+	}
+	YAN_Niam_Muin={
+		name="Niam Muin"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Niam_Muin
+			traits = {	navy_chief_reform_2 	}
+		}
+
+
+	}
+	YAN_Braig_Sonnta={
+		name="Braig Sonnta"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Braig_Sonnta
+			traits = {	air_chief_safety_2 	}
+		}
+
+
+	}
+	YAN_Keiran_Ronn={
+		name="Keiran Ronn"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Keiran_Ronn
+			traits = {	air_chief_reform_2 	}
+		}
+
+
+	}
+	YAN_Quinn_Breas={
+		name="Quinn Breas"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Quinn_Breas
+			traits = {	air_naval_strike_1 	}
+		}
+
+
+	}
+	YAN_Taraig_Aonachart={
+		name="Taraig Aonachart"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Taraig_Aonachart
+			traits = {	air_naval_strike_1 	}
+		}
+
+
+	}
+	YAN_Ulrich_Each={
+		name="Ulrich Each"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Ulrich_Each
+			traits = {	air_close_air_support_1 	}
+		}
+
+
+	}
+	YAN_Owen_Slamh={
+		name="Owen Slamh"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Owen_Slamh
+			traits = {	navy_capital_ship_2 	}
+		}
+
+
+	}
+	YAN_Keiran_Rath={
+		name="Keiran Rath"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Keiran_Rath
+			traits = {	army_radio_intelligence_2 	}
+		}
+
+
+	}
+	YAN_Iwan_Tuach={
+		name="Iwan Tuach"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Iwan_Tuach
+			traits = {	army_infantry_2 	}
+		}
+
+
+	}
+	YAN_Owen_Spioch={
+		name="Owen Spioch"
+
+		
+		country_leader={
+			ideology=leninism
+			traits = { patriotic_socialist  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	YAN_Keiraig_Dolamhannta={
+		name="Keiraig Dolamhannta"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Keiraig_Dolamhannta
+			traits = {	leftist_independent 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Quinn_Grim={
+		name="Quinn Grim"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Quinn_Grim
+			traits = {	mastermind_code_cracker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Ciamus_Scatarrathea={
+		name="Ciamus Scatarrathea"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Ciamus_Scatarrathea
+			traits = {	mastermind_code_cracker 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Ciaran_Cuir={
+		name="Ciaran Cuir"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Ciaran_Cuir
+			traits = {	reluctant_stalinist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Tareth_Boite={
+		name="Tareth Boite"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Tareth_Boite
+			traits = {	political_dancer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Ciaraig_Bainn={
+		name="Ciaraig Bainn"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Ciaraig_Bainn
+			traits = {	socialist_justice 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Keiran_Each={
+		name="Keiran Each"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Keiran_Each
+			traits = {	army_chief_organizational_2 	}
+		}
+
+
+	}
+	YAN_Braig_Aigne={
+		name="Braig Aigne"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Braig_Aigne
+			traits = {	army_chief_morale_2 	}
+		}
+
+
+	}
+	YAN_Ciamus_Suir={
+		name="Ciamus Suir"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Ciamus_Suir
+			traits = {	army_chief_defensive_1 	}
+		}
+
+
+	}
+	YAN_Taraig_Uamhreolas={
+		name="Taraig Uamhreolas"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Taraig_Uamhreolas
+			traits = {	army_chief_planning_2 	}
+		}
+
+
+	}
+	YAN_Hugh_Feilin={
+		name="Hugh Feilin"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Hugh_Feilin
+			traits = {	navy_chief_decisive_battle_1 	}
+		}
+
+
+	}
+	YAN_Bran_Trathas={
+		name="Bran Trathas"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Bran_Trathas
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	YAN_Fergus_Tigne={
+		name="Fergus Tigne"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Fergus_Tigne
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	YAN_Keiran_Trathas={
+		name="Keiran Trathas"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Keiran_Trathas
+			traits = {	air_chief_all_weather_2 	}
+		}
+
+
+	}
+	YAN_Ulrich_Cnuair={
+		name="Ulrich Cnuair"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Ulrich_Cnuair
+			traits = {	navy_carrier_2 	}
+		}
+
+
+	}
+	YAN_Niall_Talamhne={
+		name="Niall Talamhne"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Niall_Talamhne
+			traits = {	navy_screen_2 	}
+		}
+
+
+	}
+	YAN_Owen_Cluas={
+		name="Owen Cluas"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Owen_Cluas
+			traits = {	navy_screen_1 	}
+		}
+
+
+	}
+	YAN_Mall_Boite={
+		name="Mall Boite"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Mall_Boite
+			traits = {	air_bomber_interception_2 	}
+		}
+
+
+	}
+	YAN_Niareth_Feing={
+		name="Niareth Feing"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Niareth_Feing
+			traits = {	army_commando_2 	}
+		}
+
+
+	}
+	YAN_Owen_Aona={
+		name="Owen Aona"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Owen_Aona
+			traits = {	army_logistics_1 	}
+		}
+
+
+	}
+	YAN_Keiran_Laile={
+		name="Keiran Laile"
+
+		
+		country_leader={
+			ideology=conservatism
+			traits = { famous_aviator  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+	YAN_Niall_Scath={
+		name="Niall Scath"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Niall_Scath
+			traits = {	liberal_democratic_paragon 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Lialcolm_Amhne={
+		name="Lialcolm Amhne"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Lialcolm_Amhne
+			traits = {	staunch_constitutionalist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+
+
+	}
+	YAN_Mall_Bainn={
+		name="Mall Bainn"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Mall_Bainn
+			traits = {	the_statist 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Niareth_Talamhne={
+		name="Niareth Talamhne"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Niareth_Talamhne
+			traits = {	rearmer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Fergus_Ceil={
+		name="Fergus Ceil"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Fergus_Ceil
+			traits = {	gentle_scholar 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_2_small
+			}
+		}
+
+
+	}
+	YAN_Liam_Ratheart={
+		name="Liam Ratheart"
+
+		advisor={
+			slot = political_advisor
+			idea_token = YAN_Liam_Ratheart
+			traits = {	rearmer 	}
+		}
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_Europe_Generic_1_small
+			}
+		}
+
+
+	}
+	YAN_Eoinn_Troith={
+		name="Eoinn Troith"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Eoinn_Troith
+			traits = {	army_chief_offensive_1 	}
+		}
+
+
+	}
+	YAN_Liam_Fionn={
+		name="Liam Fionn"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Liam_Fionn
+			traits = {	army_chief_organizational_1 	}
+		}
+
+
+	}
+	YAN_Quinn_Suir={
+		name="Quinn Suir"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Quinn_Suir
+			traits = {	army_chief_defensive_2 	}
+		}
+
+
+	}
+	YAN_Malcolm_Slinn={
+		name="Malcolm Slinn"
+
+		advisor={
+			slot = army_chief
+			idea_token = YAN_Malcolm_Slinn
+			traits = {	army_chief_reform_1 	}
+		}
+
+
+	}
+	YAN_Rhys_Cean={
+		name="Rhys Cean"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Rhys_Cean
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	YAN_Quinn_Bann={
+		name="Quinn Bann"
+
+		advisor={
+			slot = navy_chief
+			idea_token = YAN_Quinn_Bann
+			traits = {	navy_chief_commerce_raiding_2 	}
+		}
+
+
+	}
+	YAN_Taran_Ardanri={
+		name="Taran Ardanri"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Taran_Ardanri
+			traits = {	air_chief_night_operations_1 	}
+		}
+
+
+	}
+	YAN_Liall_Troith={
+		name="Liall Troith"
+
+		advisor={
+			slot = air_chief
+			idea_token = YAN_Liall_Troith
+			traits = {	air_chief_old_guard 	}
+		}
+
+
+	}
+	YAN_Hugh_Fionn={
+		name="Hugh Fionn"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Hugh_Fionn
+			traits = {	navy_capital_ship_1 	}
+		}
+
+
+	}
+	YAN_Rhys_Gearradanamh={
+		name="Rhys Gearradanamh"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Rhys_Gearradanamh
+			traits = {	army_infantry_2 	}
+		}
+
+
+	}
+	YAN_Padran_Trom={
+		name="Padran Trom"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Padran_Trom
+			traits = {	air_air_combat_training_1 	}
+		}
+
+
+	}
+	YAN_Aidan_Trad={
+		name="Aidan Trad"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Aidan_Trad
+			traits = {	navy_naval_air_defense_2 	}
+		}
+
+
+	}
+	YAN_Ciaraig_Ratheart={
+		name="Ciaraig Ratheart"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Ciaraig_Ratheart
+			traits = {	army_concealment_1 	}
+		}
+
+
+	}
+	YAN_Malcolm_Muin={
+		name="Malcolm Muin"
+
+		advisor={
+			slot = high_command
+			idea_token = YAN_Malcolm_Muin
+			traits = {	navy_naval_air_defense_2 	}
+		}
+
+
+	}
+	YAN_Malcolm_Rath={
+		name="Malcolm Rath"
+
+		advisor={
+			slot = theorist
+			idea_token = YAN_Malcolm_Rath
+			traits = {	military_theorist 	}
+		}
+
+
+	}
+	YAN_Malcolm_Gluart={
+		name="Malcolm Gluart"
+
+		advisor={
+			slot = theorist
+			idea_token = YAN_Malcolm_Gluart
+			traits = {	naval_theorist 	}
+		}
+
+
+	}
+	YAN_Ciall_Fioras={
+		name="Ciall Fioras"
+
+		advisor={
+			slot = theorist
+			idea_token = YAN_Ciall_Fioras
+			traits = {	air_warfare_theorist 	}
+		}
+
+
+	}
+}

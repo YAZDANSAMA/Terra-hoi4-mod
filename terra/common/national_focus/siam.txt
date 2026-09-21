@@ -1,0 +1,4340 @@
+﻿focus_tree = {
+	id = siam_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SIA
+			has_dlc = "Thunder at Our Gates"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2500 }
+
+	inlay_window = {
+		id = sia_khana_ratsadon_inlay_window
+		position = { x = 2200 y = 300 }
+	}
+
+	initial_show_position = {
+		x = 37
+		y = 0
+	}
+
+
+
+	focus = {
+		id = SIA_the_khana_ratsadon
+		icon = GFX_focus_SIA_khana_ratsadon
+		
+		x = 20
+		y = 0
+
+		
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+		focus = {
+		id = SIA_shuffle_pridi_to_the_minister_of_interior
+		icon = GFX_focus_SIA_shuffle_pridi_to_the_minister_of_interior
+		prerequisite = { focus = SIA_the_khana_ratsadon }
+		x = -11
+		y = 1
+		relative_position_id = SIA_the_khana_ratsadon
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+		offset = {
+            x = 3
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_to_lay_the_bait
+            }
+        }
+
+        offset = {
+            x = 3
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_the_midnight_meeting
+            }
+        }
+
+        offset = {
+            x = 3
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_phibuns_premiership
+            }
+        }
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_civil_nationalism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SIA_shuffle_pridi_to_the_minister_of_interior }
+		x = -3
+		y = 1
+		relative_position_id = SIA_shuffle_pridi_to_the_minister_of_interior
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_true_heirs_of_1932
+		icon = GFX_focus_generic_democratic_europe
+		prerequisite = { focus = SIA_shuffle_pridi_to_the_minister_of_interior }
+		x = 2
+		y = 0
+		relative_position_id = SIA_civil_nationalism
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_thammasat_university
+		icon = GFX_focus_research
+		prerequisite = { focus = SIA_shuffle_pridi_to_the_minister_of_interior }
+		x = 2
+		y = 0
+		relative_position_id = SIA_the_true_heirs_of_1932
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_dominate_public_symbols
+		icon = GFX_focus_PER_national_bank
+		prerequisite = { focus = SIA_civil_nationalism focus = SIA_the_true_heirs_of_1932 }
+		x = 0
+		y = 1
+		relative_position_id = SIA_civil_nationalism
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+	focus = {
+		id = SIA_civil_service_heroism
+		icon = GFX_focus_PER_shiraz_university
+		prerequisite = { focus = SIA_the_true_heirs_of_1932 }
+		x = 2
+		y = 0
+		relative_position_id = SIA_dominate_public_symbols
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_spread_democratic_sentiment_in_universities
+		icon = GFX_focus_research2
+		
+		prerequisite = { focus = SIA_thammasat_university }
+		prerequisite = { focus = SIA_civil_service_heroism }
+		x = 0
+		y = 2
+		relative_position_id = SIA_thammasat_university
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_defenders_of_constitutional_liberty
+		icon = GFX_focus_SIA_defenders_of_constitutional_liberty
+		prerequisite = { focus = SIA_spread_democratic_sentiment_in_universities  }
+		x = 0
+		y = 1
+		relative_position_id = SIA_spread_democratic_sentiment_in_universities
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_sideline_disloyal_officers
+		icon = GFX_focus_SIA_sideline_disloyal_officers
+		prerequisite = { focus = SIA_shuffle_pridi_to_the_minister_of_interior }
+		x = 4
+		y = 1
+		relative_position_id = SIA_shuffle_pridi_to_the_minister_of_interior
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_direct_funds_from_the_military_towards_development
+		icon = GFX_focus_generic_reduce_unneccessary_expenditure
+		prerequisite = { focus = SIA_shuffle_pridi_to_the_minister_of_interior }
+		x = 2
+		y = 0
+		relative_position_id = SIA_sideline_disloyal_officers
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_support_songsuradets_military_clique
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SIA_sideline_disloyal_officers focus = SIA_direct_funds_from_the_military_towards_development }
+		x = 2
+		y = 1
+		relative_position_id = SIA_sideline_disloyal_officers
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = { 
+				has_completed_focus = SIA_and_spring_the_trap 
+				NOT = { has_completed_focus = SIA_secure_the_state }
+
+				factor = 100
+			}
+		}
+		available = {}
+
+		bypass = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_royal_police_counterweight
+		icon = GFX_focus_SIA_the_royal_police_counterweight
+		prerequisite = { focus = SIA_sideline_disloyal_officers focus = SIA_direct_funds_from_the_military_towards_development }
+		x = -2
+		y = 0
+		relative_position_id = SIA_support_songsuradets_military_clique
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = { 
+				has_completed_focus = SIA_and_spring_the_trap 
+				NOT = { has_completed_focus = SIA_secure_the_state }
+
+				factor = 100
+			}
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+
+	
+	
+	
+
+	focus = { 
+		id = SIA_for_the_preservation_of_siamese_independence 
+		icon = GFX_focus_SIA_for_the_preservation_of_siamese_independence
+		prerequisite = { focus = SIA_the_khana_ratsadon }
+		x = 22
+		y = 0
+		relative_position_id = SIA_shuffle_pridi_to_the_minister_of_interior
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+
+	}
+
+	focus = {
+		id = SIA_the_peoples_day
+		icon = GFX_focus_RAJ_enrollment_of_dali_children
+		prerequisite = {  }
+		x = -4
+		y = 1
+		relative_position_id = SIA_for_the_preservation_of_siamese_independence
+		prerequisite = { focus = SIA_for_the_preservation_of_siamese_independence }
+		mutually_exclusive = { focus = SIA_hold_military_parades }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_hold_military_parades
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = {  }
+		x = 2
+		y = 0
+		relative_position_id = SIA_the_peoples_day
+		prerequisite = { focus = SIA_for_the_preservation_of_siamese_independence }
+		mutually_exclusive = { focus = SIA_the_peoples_day }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_embed_technocrats_in_civilian_institutions
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		prerequisite = {  }
+		x = 2
+		y = 0
+		relative_position_id = SIA_hold_military_parades
+		prerequisite = { focus = SIA_for_the_preservation_of_siamese_independence }
+		mutually_exclusive = { focus = SIA_military_academies_indoctrination }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_military_academies_indoctrination
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = {  }
+		x = 2
+		y = 0
+		relative_position_id = SIA_embed_technocrats_in_civilian_institutions
+		prerequisite = { focus = SIA_for_the_preservation_of_siamese_independence }
+		mutually_exclusive = { focus = SIA_embed_technocrats_in_civilian_institutions }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_king_of_the_white_elephant
+		icon = GFX_focus_SIA_the_king_of_the_white_elephant
+
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_peoples_day
+		prerequisite = { focus = SIA_the_peoples_day focus = SIA_hold_military_parades }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_drum_up_irredentism
+		icon = GFX_focus_POL_riot_of_37
+		x = 4
+		y = 0
+		relative_position_id = SIA_the_king_of_the_white_elephant
+		prerequisite = { focus = SIA_embed_technocrats_in_civilian_institutions focus = SIA_military_academies_indoctrination }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				OR = {
+					has_country_flag = SIA_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = SIA_ai_behavior
+						option = DEMOCRATIC
+					}
+				}
+
+				factor = 0
+			}
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_sell_privy_purse_lands
+		icon = GFX_focus_generic_turning_a_blind_eye
+		x = -2
+		y = 0
+		relative_position_id = SIA_drum_up_irredentism
+		prerequisite = { focus =  SIA_military_academies_indoctrination focus = SIA_embed_technocrats_in_civilian_institutions }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = SIA_war_fervor
+		icon = GFX_focus_SIA_war_fervor
+		x = 4
+		y = 1
+		relative_position_id = SIA_the_king_of_the_white_elephant
+		prerequisite = { focus = SIA_drum_up_irredentism }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+
+	
+	
+	
+
+		focus = {
+		id = SIA_the_midnight_meeting 
+		icon = GFX_focus_SIA_the_midnight_meeting
+		x = 0
+		y = 3
+		relative_position_id = SIA_support_songsuradets_military_clique
+		prerequisite = { focus = SIA_support_songsuradets_military_clique }
+		mutually_exclusive = { focus = SIA_to_lay_the_bait focus = SIA_phibuns_premiership }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_to_lay_the_bait }
+				NOT = { has_completed_focus = SIA_phibuns_premiership }
+			}
+		}
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_meet_with_king_prajadhipok
+		icon = GFX_focus_SIA_meet_with_prajadhipok
+		x = 0
+		y = 1
+		relative_position_id = SIA_the_midnight_meeting
+		prerequisite = { focus = SIA_the_midnight_meeting }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_prajadhipok_audience_with_churchill
+		icon = GFX_focus_chi_british_cooperation
+		x = -1
+		y = 1
+		relative_position_id = SIA_meet_with_king_prajadhipok
+		prerequisite = { focus = SIA_meet_with_king_prajadhipok }
+		mutually_exclusive = { focus = SIA_facilitate_prajadhipoks_move_to_japan }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_facilitate_prajadhipoks_move_to_japan
+		icon = GFX_focus_jap_showa_restoration
+		x = 2
+		y = 0
+		relative_position_id = SIA_prajadhipok_audience_with_churchill
+		prerequisite = { focus = SIA_meet_with_king_prajadhipok }
+		mutually_exclusive = { focus = SIA_prajadhipok_audience_with_churchill }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_kings_gambit
+		icon = GFX_focus_SIA_the_kings_gambit
+		x = 1
+		y = 1
+		relative_position_id = SIA_prajadhipok_audience_with_churchill
+		prerequisite = { focus = SIA_prajadhipok_audience_with_churchill focus = SIA_facilitate_prajadhipoks_move_to_japan }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_restore_order
+		icon = GFX_goal_generic_construction2
+		x = -3
+		y = 1
+		relative_position_id = SIA_the_kings_gambit
+		prerequisite = { focus = SIA_the_kings_gambit }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_to_forge_a_king
+		icon = GFX_focus_SIA_to_forge_a_king
+		x = 0
+		y = 1
+		relative_position_id = SIA_restore_order
+		prerequisite = { focus = SIA_restore_order }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_ascend_the_throne
+		icon = GFX_focus_SIA_ascend_the_throne
+		x = 0
+		y = 1
+		relative_position_id = SIA_to_forge_a_king
+		prerequisite = { focus = SIA_to_forge_a_king }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_provincial_council_of_state
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_kings_gambit
+		prerequisite = { focus = SIA_the_kings_gambit }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_regency_of_boworadet
+		icon = GFX_focus_SIA_the_regency_of_boworadet
+		x = -2
+		y = 1
+		relative_position_id = SIA_the_provincial_council_of_state
+		prerequisite = { focus = SIA_the_provincial_council_of_state }
+		mutually_exclusive = { focus = SIA_the_regency_of_rangsit focus = SIA_the_regency_of_songsuradet }
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+
+		bypass = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_sacred_hierarchy
+		icon = GFX_focus_SIA_sacred_hierarchy
+		x = 0
+		y = 1
+		relative_position_id = SIA_the_regency_of_boworadet
+		prerequisite = { focus = SIA_the_regency_of_boworadet }
+
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_regency_of_songsuradet
+		icon = GFX_focus_SIA_the_regency_of_songsuradet
+		x = 2
+		y = 0
+		relative_position_id = SIA_the_regency_of_boworadet
+		prerequisite = { focus = SIA_the_provincial_council_of_state }
+		mutually_exclusive = { focus = SIA_the_regency_of_boworadet focus = SIA_the_regency_of_rangsit }
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_order_discipline_and_unity
+		icon = GFX_focus_SIA_order_discipline_and_unity
+		x = 0
+		y = 1
+		relative_position_id = SIA_the_regency_of_songsuradet
+		prerequisite = { focus = SIA_the_regency_of_songsuradet }
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_regency_of_rangsit
+		icon = GFX_focus_SIA_the_regency_of_rangsit
+		x = 2
+		y = 0
+		relative_position_id = SIA_the_regency_of_songsuradet
+		prerequisite = { focus = SIA_the_provincial_council_of_state }
+		mutually_exclusive = { focus = SIA_the_regency_of_boworadet focus = SIA_the_regency_of_songsuradet }
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_constitutional_virtue
+		icon = GFX_focus_SIA_constitutional_virtue
+		x = 0
+		y = 1
+		relative_position_id = SIA_the_regency_of_rangsit
+		prerequisite = { focus = SIA_the_regency_of_rangsit }
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_an_absolute_monarchy
+		icon = GFX_focus_generic_monarchy_1
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_sacred_hierarchy
+		prerequisite = { focus = SIA_the_sacred_hierarchy focus = SIA_order_discipline_and_unity }
+		mutually_exclusive = {  focus = SIA_a_constitutional_monarchy }
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_a_constitutional_monarchy
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 2
+		y = 0
+		relative_position_id = SIA_an_absolute_monarchy
+		prerequisite = { focus = SIA_order_discipline_and_unity focus = SIA_constitutional_virtue }
+		mutually_exclusive = { focus = SIA_an_absolute_monarchy }
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = SIA_to_lay_the_bait
+		icon = GFX_focus_SIA_to_lay_the_bait 
+		x = -7
+		y = 1
+		relative_position_id = SIA_defenders_of_constitutional_liberty
+		prerequisite = { focus = SIA_defenders_of_constitutional_liberty }
+		mutually_exclusive = { focus = SIA_the_midnight_meeting focus = SIA_phibuns_premiership }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_the_midnight_meeting }
+				NOT = { has_completed_focus = SIA_phibuns_premiership }
+			}
+		}
+
+
+		offset = {
+            x = 7
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_to_lay_the_bait
+            }
+        }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_and_spring_the_trap
+		icon = GFX_focus_SIA_and_spring_the_trap
+		x = 0
+		y = 1
+		relative_position_id = SIA_to_lay_the_bait
+		prerequisite = { focus = SIA_to_lay_the_bait }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_purge
+		icon = GFX_focus_SIA_the_purge
+		x = -1
+		y = 1
+		relative_position_id = SIA_and_spring_the_trap
+		prerequisite = { focus = SIA_and_spring_the_trap }
+		mutually_exclusive = { focus = SIA_military_oversight_bureau }
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_military_oversight_bureau
+		icon = GFX_focus_generic_crush_the_military
+		x = 2
+		y = 0
+		relative_position_id = SIA_the_purge
+		prerequisite = { focus = SIA_and_spring_the_trap }
+		mutually_exclusive = { focus = SIA_the_purge }
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {}
+	}
+	focus = {
+		id = SIA_secure_the_state
+		icon = GFX_focus_generic_improve_the_administration
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_purge
+		prerequisite = { focus = SIA_the_purge focus = SIA_military_oversight_bureau }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 60
+		}
+		available = {}
+
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_achieve_domestic_legitimacy
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		relative_position_id = SIA_secure_the_state
+		prerequisite = { focus = SIA_secure_the_state }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 60
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+	focus = {
+		id = SIA_end_military_grift
+		icon = GFX_focus_ARG_anti_corruption_policies
+		x = -1
+		y = 1
+		relative_position_id = SIA_achieve_domestic_legitimacy
+		prerequisite = { focus = SIA_achieve_domestic_legitimacy }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_rebuild_the_war_torn_economy
+		icon = GFX_goal_generic_construction2
+		x = 2
+		y = 0
+		relative_position_id = SIA_end_military_grift
+		prerequisite = { focus = SIA_achieve_domestic_legitimacy }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_achieve_foreign_legitimacy
+		icon = GFX_focus_AFG_telegraph
+		x = 1
+		y = 2
+		relative_position_id = SIA_end_military_grift
+		prerequisite = { focus = SIA_end_military_grift focus = SIA_rebuild_the_war_torn_economy }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		complete_tooltip = {
+			add_stability = var:SIA_countries_that_like_me_stab
+
+			if = {
+				limit = { has_variable = SIA_achieve_foreign_legitimacy_state }
+				var:SIA_achieve_foreign_legitimacy_state = {
+					random_core_state = {
+						limit = {
+							is_controlled_by = ROOT
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = SIA_countries_that_like_me_doctrine_tt
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_yellow_dossier
+		icon = GFX_focus_SIA_the_yellow_dossier
+		x = 3
+		y = 1
+		relative_position_id = SIA_rebuild_the_war_torn_economy
+		prerequisite = { focus = SIA_rebuild_the_war_torn_economy  }
+		mutually_exclusive = { focus = SIA_a_more_moderate_option }
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_expand_upon_the_dossier
+		icon = GFX_focus_generic_land_redistribution
+		x = 0
+		y = 1
+		relative_position_id = SIA_the_yellow_dossier
+		prerequisite = { focus = SIA_the_yellow_dossier  }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_a_more_moderate_option
+		icon = GFX_focus_SWE_defense_act
+		x = 3
+		y = 0
+		relative_position_id = SIA_the_yellow_dossier
+		prerequisite = { focus = SIA_rebuild_the_war_torn_economy  }
+		mutually_exclusive = { focus = SIA_the_yellow_dossier }
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {  
+		id = SIA_mobilize_the_defenders_of_siam
+		icon = GFX_focus_generic_home_defense
+		x = 0
+		y = 1
+		relative_position_id =  SIA_a_more_moderate_option
+		prerequisite = { focus = SIA_a_more_moderate_option }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_join_the_allies
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
+		mutually_exclusive = { focus = SIA_join_the_united_front focus = SIA_asian_democratic_compact }
+		x = -3
+		y = 1
+		relative_position_id = SIA_achieve_foreign_legitimacy
+		cost = 5
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				OR = {
+					ENG = { is_ai = no }
+					FRA = { is_ai = no }
+					USA = { is_ai = no }
+				}
+
+				factor = 2.5
+			}
+		}
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_allies_integration
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 0
+		y = 1
+		relative_position_id = SIA_join_the_allies
+		prerequisite = { focus = SIA_join_the_allies }
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_malay_peninsular_defense_plan
+		icon = GFX_focus_generic_coastal_fort
+		x = 2
+		y = 1
+		relative_position_id = SIA_allies_integration
+		prerequisite = { focus = SIA_allies_integration }
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_end_of_gunboat_diplomacy
+		icon = GFX_focus_PHI_gunboat_diplomacy
+		x = -2
+		y = 1
+		relative_position_id = SIA_allies_integration
+		prerequisite = { focus = SIA_allies_integration }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	
+	focus = {
+		id = SIA_prepare_for_a_pacific_war
+		icon = GFX_focus_jap_pacific_guardian
+		x = 2
+		y = 0
+		relative_position_id = SIA_the_end_of_gunboat_diplomacy
+		prerequisite = { focus = SIA_allies_integration }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_a_race_against_time
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 1
+		relative_position_id = SIA_prepare_for_a_pacific_war
+		prerequisite = { focus = SIA_prepare_for_a_pacific_war }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_preemtive_strike
+		icon = GFX_focus_attack_japan
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_malay_peninsular_defense_plan
+		prerequisite = { focus = SIA_the_malay_peninsular_defense_plan }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_siamese_armada
+		icon = GFX_focus_SWE_coastal_support
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_end_of_gunboat_diplomacy
+		prerequisite = { focus = SIA_the_end_of_gunboat_diplomacy }
+		prerequisite = { focus = SIA_prepare_for_a_pacific_war }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_as_the_eyes_turn_towards_southeast_asia
+		icon = GFX_focus_usa_focus_on_asia
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_siamese_armada
+		prerequisite = { focus = SIA_the_siamese_armada focus = SIA_a_race_against_time }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_join_the_united_front
+		icon = GFX_focus_chi_united_front
+		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
+		mutually_exclusive = { focus = SIA_join_the_allies focus = SIA_asian_democratic_compact }
+		x = 7
+		y = 0
+		relative_position_id = SIA_join_the_allies
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				OR = {
+					PRC = { is_ai = no }
+					CHI = { is_ai = no }
+					GXC = { is_ai = no }
+					GDC = { is_ai = no  }
+					YUN = { is_ai = no  }
+					SIC = { is_ai = no  }
+					XIC = { is_ai = no  }
+					SND = { is_ai = no  }
+					HBC = { is_ai = no  }
+					SHX = { is_ai = no  }
+					NXM = { is_ai = no  }
+					GSM = { is_ai = no  }
+					XSM = { is_ai = no  }
+					KHM = { is_ai = no  }
+					SIK = { is_ai = no  }
+				}
+
+				factor = 2.5
+			}
+		}
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_a_land_war_in_asia
+		icon = GFX_focus_generic_asia_liberation
+		prerequisite = { focus = SIA_join_the_united_front }
+		
+		x = 0
+		y = 1
+		relative_position_id = SIA_join_the_united_front
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_death_to_the_communists
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		prerequisite = { focus = SIA_a_land_war_in_asia }
+		mutually_exclusive = { focus = SIA_death_to_the_nationalists }
+		x = -1
+		y = 1
+		relative_position_id = SIA_a_land_war_in_asia
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = SIA_asian_democratic_compact
+		icon = GFX_focus_SIA_asian_democratic_compact
+		x = 7
+		y = 0
+		relative_position_id = SIA_join_the_united_front
+		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+		mutually_exclusive = { focus = SIA_join_the_allies focus = SIA_join_the_united_front }
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		will_lead_to_war_with = FRA
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_death_to_the_nationalists
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		prerequisite = { focus = SIA_a_land_war_in_asia }
+		mutually_exclusive = { focus = SIA_death_to_the_communists }
+		x = 2
+		y = 0
+		relative_position_id = SIA_death_to_the_communists
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+
+
+	focus = {
+		id = SIA_the_peoples_war_in_asia
+		icon = GFX_focus_PRC_raid_weapon_depots
+		prerequisite = { focus = SIA_death_to_the_nationalists }
+		
+		x = 1
+		y = 1
+		relative_position_id = SIA_death_to_the_nationalists
+		cost = 10
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_national_defense_in_asia
+		icon = GFX_focus_PRC_arms_recovery_efforts
+		prerequisite = { focus = SIA_death_to_the_communists }
+		
+		x = -1
+		y = 1
+		relative_position_id = SIA_death_to_the_communists
+		cost = 5
+
+		bypass = {}
+
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+
+
+
+	focus = {
+		id = SIA_a_new_dawn_over_asia
+		icon = GFX_focus_RAJ_the_sun_sets
+		prerequisite = { focus = SIA_national_defense_in_asia focus = SIA_the_peoples_war_in_asia  }
+		
+		x = -1
+		y = 2
+		relative_position_id = SIA_death_to_the_nationalists
+		cost = 5
+
+		bypass = {}
+		ai_will_do = {
+			factor = 50
+		}
+		available = {}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = SIA_phibuns_premiership
+		icon = GFX_focus_SIA_phibuns_premiership
+		x = -1
+		y = 3 
+		relative_position_id = SIA_drum_up_irredentism	 
+		prerequisite = { focus =  SIA_drum_up_irredentism focus = SIA_sell_privy_purse_lands }
+		mutually_exclusive = { focus = SIA_to_lay_the_bait focus = SIA_the_midnight_meeting }
+		cost = 10 
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_the_midnight_meeting }
+				NOT = { has_completed_focus = SIA_to_lay_the_bait }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_southeast_asia_joint_command
+		icon = GFX_focus_PRC_army_command
+		x = -3
+		y = 1
+		relative_position_id = SIA_asian_democratic_compact
+		prerequisite = { focus = SIA_asian_democratic_compact }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_pan_asian_weapon_standardization 
+		icon = GFX_focus_JAP_army_weapons_administration_hq
+		x = 2
+		y = 0
+		relative_position_id = SIA_southeast_asia_joint_command
+		prerequisite = { focus = SIA_asian_democratic_compact }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_united_against_aggression
+		icon = GFX_focus_SIA_united_against_aggresion
+		x = 2
+		y = 0
+		relative_position_id = SIA_pan_asian_weapon_standardization
+		prerequisite = { focus = SIA_asian_democratic_compact }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_hammers_that_strike
+		icon = GFX_focus_SIA_the_hammers_that_strike
+		x = 2
+		y = 0
+		relative_position_id = SIA_united_against_aggression
+		prerequisite = { focus = SIA_asian_democratic_compact }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_stronger_together 
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 1
+		relative_position_id = SIA_southeast_asia_joint_command
+		prerequisite = { focus = SIA_southeast_asia_joint_command focus = SIA_pan_asian_weapon_standardization focus = SIA_united_against_aggression focus = SIA_the_hammers_that_strike }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_siamese_youth_movement
+		icon = GFX_focus_RAJ_military_into_the_workforce 
+		x = 6
+		y = 1
+		relative_position_id = SIA_phibuns_premiership	
+		prerequisite = { focus =  SIA_phibuns_premiership }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_territorial_defense_student
+		icon = GFX_focus_SIA_territorial_defense_student
+		x = 0
+		y = 1
+		relative_position_id = SIA_siamese_youth_movement	
+		prerequisite = { focus =  SIA_siamese_youth_movement }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_expand_domestic_arms_workshops
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -2
+		y = 1
+		relative_position_id = SIA_phibuns_premiership	
+		prerequisite = { focus = SIA_phibuns_premiership }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_look_to_european_fascism
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 1
+		relative_position_id = SIA_phibuns_premiership	
+		prerequisite = { focus = SIA_phibuns_premiership }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_songsuradet_rebellion
+		icon = GFX_focus_SIA_the_songsuradet_rebellion
+		x = -1
+		y = 1
+		relative_position_id = SIA_look_to_european_fascism	
+		prerequisite = { focus = SIA_look_to_european_fascism }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_sue_the_king_in_exile
+		icon = GFX_focus_generic_court
+		x = -2
+		y = 1
+		relative_position_id = SIA_the_songsuradet_rebellion	
+		prerequisite = { focus = SIA_the_songsuradet_rebellion }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_suspend_ordinary_legal_procedures
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 2
+		y = 0
+		relative_position_id = SIA_sue_the_king_in_exile	
+		prerequisite = { focus = SIA_the_songsuradet_rebellion }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_duty_of_the_thai_people_during_the_war_act
+		icon = GFX_focus_SIA_the_duty_of_the_thai_people_during_the_war_act
+		x = -1
+		y = 1
+		relative_position_id = SIA_suspend_ordinary_legal_procedures	
+		prerequisite = { focus = SIA_suspend_ordinary_legal_procedures }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = SIA_press_censorship
+		icon = GFX_focus_generic_radio_communication
+		x = 1
+		y = 1
+		relative_position_id = SIA_suspend_ordinary_legal_procedures
+		prerequisite = { focus = SIA_suspend_ordinary_legal_procedures }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_department_of_publicity
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		x = 3
+		y = 1
+		relative_position_id = SIA_look_to_european_fascism	
+		prerequisite = { focus = SIA_look_to_european_fascism }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_thai_cultural_mandates
+		icon = GFX_focus_SIA_thai_cultural_mandates
+		x = -1
+		y = 1
+		relative_position_id = SIA_department_of_publicity	
+		prerequisite = { focus = SIA_department_of_publicity }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_relocate_the_capital_to_phetchabun
+		icon = GFX_focus_prc_infiltration
+		x = 0
+		y = 1
+		relative_position_id = SIA_thai_cultural_mandates	
+		prerequisite = { focus = SIA_thai_cultural_mandates }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_radio_propaganda
+		icon = GFX_focus_SWE_radiotjanst 
+		x = 1
+		y = 1
+		relative_position_id = SIA_department_of_publicity	
+		prerequisite = { focus = SIA_department_of_publicity }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_sala_chaloem_thai_movie_theater
+		icon = GFX_focus_SIA_sala_chaloem_thai_movie_theater
+		x = 0
+		y = 1
+		relative_position_id = SIA_radio_propaganda	
+		prerequisite = { focus = SIA_radio_propaganda }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id =  SIA_pan_thaiism
+		icon = GFX_focus_SIA_pan_thaiism
+		x = 7
+		y = 1
+		relative_position_id = SIA_the_midnight_meeting	
+		prerequisite = { focus = SIA_the_midnight_meeting focus = SIA_phibuns_premiership }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 25
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_retake_lost_british_states
+		icon = GFX_focus_SIA_retake_lost_british_states
+		x = -3
+		y = 1
+		relative_position_id = SIA_pan_thaiism	
+		prerequisite = { focus = SIA_pan_thaiism }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+
+		bypass = {}
+
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = BRM
+		will_lead_to_war_with = MAL
+		
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_recover_indochina
+		icon = GFX_focus_SIA_recover_indochina
+		x = 2
+		y = 0
+		relative_position_id = SIA_retake_lost_british_states	
+		prerequisite = { focus = SIA_pan_thaiism }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		
+		
+
+		bypass = {}
+
+		will_lead_to_war_with = FRA
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		will_lead_to_war_with = VIC
+
+		completion_reward = {}
+	}
+
+		focus = {
+		id = SIA_demand_the_return_of_lost_territory
+		icon = GFX_goal_demand_sudetenland
+		x = 2
+		y = 0
+		relative_position_id = SIA_recover_indochina	
+		prerequisite = { focus = SIA_pan_thaiism }
+
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		
+		
+
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		will_lead_to_war_with = FRA
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_greater_thai_empire
+		icon = GFX_focus_SIA_the_greater_thai_empire
+		x = 1
+		y = 1
+		relative_position_id = SIA_recover_indochina
+		prerequisite = { focus = SIA_recover_indochina focus = SIA_demand_the_return_of_lost_territory }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_crack_down_of_foreign_merchants
+		icon = GFX_focus_SIA_crack_down_of_foreign_merchants
+		x = 2
+		y = 0
+		relative_position_id = SIA_demand_the_return_of_lost_territory	
+		prerequisite = { focus = SIA_pan_thaiism }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_royal_palace_bureau_directive_no_1523
+		icon = GFX_focus_generic_money_for_equipment
+		x = 0
+		y = 1
+		relative_position_id = SIA_crack_down_of_foreign_merchants	
+		prerequisite = { focus = SIA_crack_down_of_foreign_merchants }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_end_factionalism
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		relative_position_id = SIA_royal_palace_bureau_directive_no_1523
+		prerequisite = { focus = SIA_royal_palace_bureau_directive_no_1523 }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+
+	focus = {
+		id = SIA_new_territories_administration
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 1
+		relative_position_id = SIA_retake_lost_british_states	
+		prerequisite = { focus = SIA_retake_lost_british_states focus = SIA_recover_indochina focus = SIA_demand_the_return_of_lost_territory }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+		focus = {
+		id = SIA_industrialization_drive
+		icon = GFX_focus_generic_industry_1
+		x = 29
+		y = 0
+		relative_position_id = SIA_the_khana_ratsadon	
+		
+		
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		
+		
+
+        offset = {
+            x = 4
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_phibuns_premiership
+            }
+        }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_asian_financial_compact
+		icon = GFX_focus_generic_monetary_union
+		x = -4
+		y = 1
+		relative_position_id = SIA_industrialization_drive
+		prerequisite = { focus = SIA_industrialization_drive }
+		mutually_exclusive = { focus = SIA_revision_of_unequal_treaties }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_revision_of_unequal_treaties }
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_revision_of_unequal_treaties
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 8
+		y = 0
+		relative_position_id = SIA_asian_financial_compact
+		prerequisite = { focus = SIA_industrialization_drive }
+		mutually_exclusive = { focus = SIA_asian_financial_compact }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_asian_financial_compact }
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_renegotiate_teak_control
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 1
+		relative_position_id = SIA_asian_financial_compact	
+		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_a_fledgling_tobacco_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 0
+		relative_position_id = SIA_renegotiate_teak_control	
+		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_all_weather_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 0
+		relative_position_id = SIA_a_fledgling_tobacco_industry	
+		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_the_bank_of_siam
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = -1
+		y = 2
+		relative_position_id = SIA_asian_financial_compact
+		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
+		mutually_exclusive = { focus = SIA_thai_rice_company }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_thai_rice_company }
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_thai_rice_company
+		icon = GFX_focus_SIA_thai_rice_company
+		x = 2
+		y = 2
+		relative_position_id = SIA_revision_of_unequal_treaties
+		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
+		mutually_exclusive = { focus = SIA_the_bank_of_siam }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_the_bank_of_siam }
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_send_bureaucrats_abroad
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -2
+		y = 1
+		relative_position_id = SIA_the_bank_of_siam	
+		prerequisite = { focus = SIA_the_bank_of_siam }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_baht_stabilization_act 
+		icon = GFX_focus_generic_currency_reforms
+		x = 2
+		y = 0
+		relative_position_id = SIA_send_bureaucrats_abroad	
+		prerequisite = { focus = SIA_the_bank_of_siam }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_siamese_development_cooperative 
+		icon = GFX_focus_generic_low_cost_housing
+		x = 2
+		y = 0
+		relative_position_id = SIA_baht_stabilization_act	
+		prerequisite = { focus = SIA_the_bank_of_siam }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_boon_rawd_brewery
+		icon = GFX_focus_SIA_boon_rawd_brewery
+		x = 2
+		y = 1
+		relative_position_id = SIA_siamese_development_cooperative	
+		prerequisite = { focus = SIA_siamese_development_cooperative focus = SIA_reduction_of_agricultural_yield_taxes}
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_siam_cement_group
+		icon = GFX_goal_generic_construct_civilian
+		x = 2
+		y = 0
+		relative_position_id = SIA_boon_rawd_brewery	
+		prerequisite = { focus = SIA_siamese_development_cooperative focus = SIA_reduction_of_agricultural_yield_taxes }
+
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_national_savings_bond
+		icon = GFX_focus_SWI_issue_war_bonds
+		x = 0
+		y = 1
+		relative_position_id = SIA_baht_stabilization_act	
+		prerequisite = { focus = SIA_baht_stabilization_act focus = SIA_siamese_development_cooperative focus = SIA_send_bureaucrats_abroad }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_deficit_spending
+		icon = GFX_focus_generic_economic_recovery
+		x = 0
+		y = 1
+		relative_position_id = SIA_national_savings_bond	
+		prerequisite = { focus = SIA_national_savings_bond }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_acquire_light_tools
+		icon = GFX_goal_generic_production2
+		x = -2
+		y = 1
+		relative_position_id = SIA_deficit_spending	
+		prerequisite = { focus = SIA_deficit_spending }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_railway_and_port_extensions
+		icon = GFX_focus_SWE_italian_destroyers
+		x = 4
+		y = 0
+		relative_position_id = SIA_acquire_light_tools	
+		prerequisite = { focus = SIA_deficit_spending }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_mechanization_of_agriculture 
+		icon = GFX_focus_generic_modernizing_agriculture
+		x = -1
+		y = 1
+		relative_position_id = SIA_acquire_light_tools	
+		prerequisite = { focus = SIA_acquire_light_tools }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_irrigation 
+		icon = GFX_focus_SIA_irrigation
+		x = 2
+		y = 0
+		relative_position_id = SIA_mechanization_of_agriculture	
+		prerequisite = { focus = SIA_acquire_light_tools }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_chemical_imports
+		icon = GFX_focus_SIA_chemical_imports
+		x = 3
+		y = 0
+		relative_position_id = SIA_irrigation	
+		prerequisite = { focus = SIA_railway_and_port_extensions }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_foreign_currency_exchange
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = SIA_mechanization_of_agriculture	
+		prerequisite = { focus = SIA_mechanization_of_agriculture }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_farmers_into_the_city
+		icon = GFX_focus_SWE_landsverk
+		x = 2
+		y = 0
+		relative_position_id = SIA_foreign_currency_exchange
+		prerequisite = { focus = SIA_irrigation  }
+		prerequisite = {focus = SIA_mechanization_of_agriculture }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_textile_mills
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 3
+		y = 1
+		relative_position_id = SIA_farmers_into_the_city	
+		prerequisite = { focus = SIA_farmers_into_the_city }
+		prerequisite = { focus = SIA_chemical_imports }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_public_credit
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 0
+		y = 1
+		relative_position_id = SIA_foreign_currency_exchange	
+		prerequisite = { focus = SIA_foreign_currency_exchange }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_a_modern_economy
+		icon = GFX_focus_SIA_a_modern_economy
+		x = 3
+		y = 1
+		relative_position_id = SIA_public_credit	
+		prerequisite = { focus = SIA_public_credit }
+		prerequisite = { focus = SIA_textile_mills }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 40
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_reduction_of_agricultural_yield_taxes
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = -2
+		y = 1
+		relative_position_id = SIA_thai_rice_company	
+		prerequisite = { focus = SIA_thai_rice_company }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_diversity_foreign_reserves
+		icon = GFX_focus_ARG_anti_corruption_policies
+		x = 2
+		y = 1
+		relative_position_id = SIA_thai_rice_company	
+		prerequisite = { focus = SIA_thai_rice_company }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_contingency_funds
+		icon = GFX_focus_mex_privatisation
+		x = 0
+		y = 2
+		relative_position_id = SIA_diversity_foreign_reserves	
+		prerequisite = { focus = SIA_diversity_foreign_reserves }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+
+		bypass = {}
+
+		enable_automatic_bypass = no
+		search_filters = {}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_fuel_oil_act
+		icon = GFX_focus_generic_resource_extraction
+		x = 2
+		y = 1
+		relative_position_id = SIA_contingency_funds	
+		prerequisite = { focus = SIA_contingency_funds }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_siam_electricity_company
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 2
+		y = 0
+		relative_position_id = SIA_fuel_oil_act	
+		prerequisite = { focus = SIA_contingency_funds }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_revise_the_taxation_system
+		icon = GFX_focus_generic_price_controls
+		x = 0
+		y = 1
+		relative_position_id = SIA_reduction_of_agricultural_yield_taxes	
+		prerequisite = { focus = SIA_reduction_of_agricultural_yield_taxes }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+ 	focus = {
+		id = SIA_census_the_hill_tribes
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 0
+		y = 1
+		relative_position_id = SIA_revise_the_taxation_system	
+		prerequisite = { focus = SIA_revise_the_taxation_system }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_increase_rice_exports
+		icon = GFX_focus_generic_farmland
+		x = 2
+		y = 0
+		relative_position_id = SIA_revise_the_taxation_system	
+		prerequisite = { focus = SIA_reduction_of_agricultural_yield_taxes }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_pad_thai
+		icon = GFX_focus_SIA_pad_thai
+		x = 0
+		y = 1
+		relative_position_id = SIA_thai_rice_company	
+		prerequisite = { focus = SIA_thai_rice_company }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_rice_husk_steam_turbines
+		icon = GFX_focus_SIA_rice_husk_steam_turbines
+		x = 0
+		y = 1
+		relative_position_id = SIA_fuel_oil_act	
+		prerequisite = { focus = SIA_fuel_oil_act }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_domestic_tin_smelters
+		icon = GFX_focus_GER_factories_for_resources
+		x = 0
+		y = 1
+		relative_position_id = SIA_siam_electricity_company
+		prerequisite = { focus = SIA_siam_electricity_company }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_use_ships_as_generators
+		icon = GFX_focus_SIA_use_ships_as_generators
+		x = 1
+		y = 1
+		relative_position_id = SIA_rice_husk_steam_turbines	
+		prerequisite = { focus = SIA_domestic_tin_smelters focus = SIA_rice_husk_steam_turbines }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_kasetsart_university
+		icon = GFX_focus_research
+		x = 4
+		y = 1
+		relative_position_id = SIA_railway_and_port_extensions	
+		prerequisite = { focus = SIA_railway_and_port_extensions focus = SIA_prepare_for_the_next_blockade }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 40
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_mahidol_university
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = SIA_kasetsart_university	
+		prerequisite = { focus = SIA_kasetsart_university }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 40
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_prepare_for_the_next_blockade
+		icon = GFX_focus_generic_cruiser_submarines
+		x = -2
+		y = 1
+		relative_position_id = SIA_contingency_funds
+		prerequisite = { focus = SIA_contingency_funds }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_domestic_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 0
+		relative_position_id = SIA_prepare_for_the_next_blockade	
+		prerequisite = { focus = SIA_contingency_funds }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_war_material_substitutions 
+		icon = GFX_focus_GER_factories_for_resources
+		x = 0
+		y = 1
+		relative_position_id = SIA_prepare_for_the_next_blockade	
+		prerequisite = { focus = SIA_prepare_for_the_next_blockade focus = SIA_domestic_arms_industry }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_royal_thai_ordnance_factory
+		icon = GFX_focus_CONGO_copper_cartridges
+		x = 2
+		y = 0
+		relative_position_id = SIA_war_material_substitutions	
+		prerequisite = { focus = SIA_domestic_arms_industry focus = SIA_prepare_for_the_next_blockade }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_built_to_withstand_every_flame
+		icon = GFX_focus_SIA_built_to_withstand_every_flame
+		x = 1
+		y = 1
+		relative_position_id = SIA_war_material_substitutions	
+		prerequisite = { focus = SIA_war_material_substitutions }
+		prerequisite = { focus = SIA_royal_thai_ordnance_factory  }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = SIA_the_army_of_siam
+		icon = GFX_focus_SIA_army_of_siam
+		x = 18
+		y = 0
+		relative_position_id = SIA_industrialization_drive	
+		
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_plan_for_a_short_war
+		icon = GFX_focus_SIA_prepare_for_a_short_war
+		x = -2
+		y = 1
+		relative_position_id = SIA_the_army_of_siam	
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_intermediate_war_preparation focus = SIA_prepare_for_a_long_war }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_intermediate_war_preparation
+		icon = GFX_focus_SIA_intermediate_war_preparation
+		x = 2
+		y = 0
+		relative_position_id = SIA_plan_for_a_short_war	
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_plan_for_a_short_war focus = SIA_prepare_for_a_long_war }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_prepare_for_a_long_war
+		icon = GFX_focus_SIA_prepare_for_a_long_war
+		x = 2
+		y = 0
+		relative_position_id = SIA_intermediate_war_preparation	
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_plan_for_a_short_war focus = SIA_intermediate_war_preparation }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_specialized_warfare
+		icon = GFX_focus_GER_afrikakorps
+		x = -2
+		y = 0
+		relative_position_id = SIA_plan_for_a_short_war
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_artillery_reigns_supreme }
+		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_artillery_reigns_supreme
+		icon = GFX_focus_SWE_let_fly_all_guns
+		x = -2
+		y = 0
+		relative_position_id = SIA_specialized_warfare	
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_specialized_warfare }
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+	focus = {
+		id = SIA_prepare_northern_infrastructure_for_war
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = SIA_intermediate_war_preparation	
+		prerequisite = { focus = SIA_plan_for_a_short_war focus = SIA_intermediate_war_preparation focus = SIA_prepare_for_a_long_war }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_yield_the_air_war
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 1
+		relative_position_id = SIA_prepare_northern_infrastructure_for_war	
+		prerequisite = { focus = SIA_prepare_northern_infrastructure_for_war }
+		mutually_exclusive = { focus = SIA_directorate_of_aeronautical_engineering }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_directorate_of_aeronautical_engineering
+		icon = GFX_goal_generic_air_fighter
+		x = -2
+		y = 0
+		relative_position_id = SIA_yield_the_air_war	
+		prerequisite = { focus = SIA_prepare_northern_infrastructure_for_war }
+		mutually_exclusive = { focus = SIA_yield_the_air_war }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_thunder_at_the_gates
+		icon = GFX_focus_SIA_the_thunder_at_the_gates
+		x = 0
+		y = 1
+		relative_position_id = SIA_artillery_reigns_supreme	
+		prerequisite = { focus = SIA_artillery_reigns_supreme }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_night_time_training
+		icon = GFX_focus_SIA_night_time_training
+		x = 0
+		y = 1
+		relative_position_id = SIA_specialized_warfare	
+		prerequisite = { focus = SIA_specialized_warfare }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_steel_arteries
+		icon = GFX_focus_SIA_steel_arteries
+		x = 1
+		y = 1
+		relative_position_id = SIA_the_thunder_at_the_gates	
+		prerequisite = { focus = SIA_the_thunder_at_the_gates focus = SIA_night_time_training }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+	focus = {
+		id = SIA_unconventional_tank_construction
+		icon = GFX_focus_generic_tank_assembly
+		x = 3
+		y = 0
+		relative_position_id = SIA_prepare_for_a_long_war
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_conventional_tank_construction }
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_conventional_tank_construction
+		icon = GFX_focus_generic_tank_production
+		x = 4
+		y = 0
+		relative_position_id = SIA_unconventional_tank_construction
+		prerequisite = { focus = SIA_the_army_of_siam }
+		mutually_exclusive = { focus = SIA_unconventional_tank_construction }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_reverse_engineer_allied_tanks
+		icon = GFX_focus_SIA_reverse_engineer_allied_tanks
+		x = 0
+		y = 1
+		relative_position_id = SIA_conventional_tank_construction
+		prerequisite = { focus = SIA_conventional_tank_construction }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_tankettes
+		icon = GFX_focus_generic_tankette
+		x = 2
+		y = 1
+		relative_position_id = SIA_unconventional_tank_construction
+		prerequisite = { focus = SIA_unconventional_tank_construction focus = SIA_conventional_tank_construction }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_jungle_armor
+		icon = GFX_focus_SIA_jungle_tanks
+		x = 0
+		y = 1
+		relative_position_id = SIA_unconventional_tank_construction
+		prerequisite = { focus = SIA_unconventional_tank_construction }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_mountain_tanks
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = -2
+		y = 0
+		relative_position_id = SIA_jungle_armor
+		prerequisite = { focus = SIA_unconventional_tank_construction }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = SIA_reluctant_submission
+		icon = GFX_focus_generic_surrender
+		x = 15
+		y = 0
+		relative_position_id = SIA_the_army_of_siam
+		
+		mutually_exclusive = { focus = SIA_standing_our_ground }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		bypass = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_standing_our_ground }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_seri_thai
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = -3
+		y = 1
+		relative_position_id = SIA_reluctant_submission	
+		prerequisite = { focus = SIA_reluctant_submission }
+		mutually_exclusive = { focus = SIA_the_phayap_army }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_contact_the_south_east_asia_command
+		icon = GFX_focus_RAJ_circuvment_demobilization_restrictions
+		x = -1
+		y = 1
+		relative_position_id = SIA_seri_thai	
+		prerequisite = { focus = SIA_seri_thai }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_broadcast_weather_reports_to_the_allies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		relative_position_id = SIA_contact_the_south_east_asia_command	
+		prerequisite = { focus = SIA_contact_the_south_east_asia_command }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_american_investment_aid
+		icon = GFX_focus_generic_american_investments
+		x = 1
+		y = 1
+		relative_position_id = SIA_seri_thai
+		prerequisite = { focus = SIA_seri_thai }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_thai_students_in_the_oss
+		icon = GFX_focus_generic_secret_service_agency
+		x = 0
+		y = 1
+		relative_position_id = SIA_american_investment_aid
+		prerequisite = { focus = SIA_american_investment_aid }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_prepare_to_drop
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 1
+		relative_position_id = SIA_thai_students_in_the_oss
+		prerequisite = { focus = SIA_thai_students_in_the_oss }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {} 
+	}
+
+	focus = {
+		id = SIA_unseat_the_government
+		icon = GFX_focus_BEL_government_resigns
+		x = -1
+		y = 1
+		relative_position_id = SIA_prepare_to_drop
+		prerequisite = { focus = SIA_prepare_to_drop }
+		prerequisite = { focus = SIA_broadcast_weather_reports_to_the_allies }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_phayap_army
+		icon = GFX_focus_generic_army_attack
+		x = 5
+		y = 0
+		relative_position_id = SIA_seri_thai
+		prerequisite = { focus = SIA_reluctant_submission }
+		mutually_exclusive = { focus = SIA_seri_thai }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_securing_the_rubber_islands
+		icon = GFX_focus_generic_rubber
+		x = -1
+		y = 1
+		relative_position_id = SIA_the_phayap_army
+		prerequisite = { focus = SIA_the_phayap_army }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_breaking_the_burmese_line
+		icon = GFX_focus_generic_jungle_training
+		x = -1
+		y = 1
+		relative_position_id = SIA_securing_the_rubber_islands
+		prerequisite = { focus = SIA_securing_the_rubber_islands }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_pacific_war
+		icon = GFX_focus_GER_sentinels_of_the_pacific
+		x = 2
+		y = 0
+		relative_position_id = SIA_breaking_the_burmese_line
+		prerequisite = { focus = SIA_securing_the_rubber_islands }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_joint_asian_military_command
+		icon = GFX_goal_generic_military_sphere
+		x = 2
+		y = 1
+		relative_position_id = SIA_the_phayap_army
+		prerequisite = { focus = SIA_the_phayap_army }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_demand_repatriation
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		relative_position_id = SIA_joint_asian_military_command
+		prerequisite = { focus = SIA_joint_asian_military_command }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_standing_our_ground
+		icon = GFX_goal_generic_defence
+		x = 8
+		y = 0
+		relative_position_id = SIA_reluctant_submission
+		
+		mutually_exclusive = { focus = SIA_reluctant_submission }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SIA_reluctant_submission }
+			}
+		}
+
+        offset = {
+            x = -9
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_standing_our_ground
+            }
+        }
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_ask_for_the_release_of_american_commodities
+		icon = GFX_goal_generic_trade
+		x = -1
+		y = 1
+		relative_position_id = SIA_standing_our_ground	
+		prerequisite = { focus = SIA_standing_our_ground }
+		mutually_exclusive = { focus = SIA_japanese_fighters }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_japanese_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 2
+		y = 0
+		relative_position_id = SIA_ask_for_the_release_of_american_commodities	
+		prerequisite = { focus = SIA_standing_our_ground }
+		mutually_exclusive = { focus = SIA_ask_for_the_release_of_american_commodities }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_get_off_our_shores
+		icon = GFX_focus_ARG_establish_the_free_association
+		x = 2
+		y = 0
+		relative_position_id = SIA_japanese_fighters	
+		prerequisite = { focus = SIA_standing_our_ground }
+		
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_singaporean_reinforcements
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		relative_position_id = SIA_ask_for_the_release_of_american_commodities	
+		prerequisite = { focus = SIA_ask_for_the_release_of_american_commodities }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_aid_for_resources
+		icon = GFX_focus_GER_factories_for_resources
+		x = 2
+		y = 0
+		relative_position_id = SIA_singaporean_reinforcements	
+		prerequisite = { focus = SIA_japanese_fighters }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_how_quickly_the_tables_turn
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = SIA_singaporean_reinforcements	
+		prerequisite = { focus = SIA_singaporean_reinforcements focus = SIA_aid_for_resources }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+
+	
+	
+	
+
+	focus = {
+		id = SIA_royal_thai_navy
+		icon = GFX_focus_SIA_royal_thai_navy
+		x = 20
+		y = 0
+		relative_position_id = SIA_reluctant_submission
+		
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {}
+        offset = {
+            x = -6
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_reluctant_submission
+            }
+        }
+
+        offset = {
+            x = -8
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+                has_completed_focus = SIA_standing_our_ground
+            }
+        }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_direct_army_fundings_towards_the_navy
+		icon = GFX_focus_generic_sway_navy
+		x = 0
+		y = 1
+		relative_position_id = SIA_royal_thai_navy
+		prerequisite = { focus = SIA_royal_thai_navy }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_thonburi_class_coastal_defense_ship
+		icon = GFX_focus_FIN_coastal_defense
+		x = -5
+		y = 0
+		relative_position_id = SIA_direct_army_fundings_towards_the_navy
+		prerequisite = { focus = SIA_royal_thai_navy }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		} 
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_acquire_submarines
+		icon = GFX_focus_PRC_submarines
+		x = -2
+		y = 0
+		relative_position_id = SIA_thonburi_class_coastal_defense_ship
+		prerequisite = { focus = SIA_royal_thai_navy }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_submarine_day
+		icon = GFX_goal_generic_navy_submarine
+		x = 0
+		y = 1
+		relative_position_id = SIA_acquire_submarines
+		prerequisite = { focus = SIA_acquire_submarines }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_thonburi_dockyard_project
+		icon = GFX_focus_generic_navy_research_bonus  
+		x = -3
+		y = 2
+		relative_position_id = SIA_royal_thai_navy
+		prerequisite = { focus = SIA_royal_thai_navy }
+		mutually_exclusive = { focus = SIA_focus_on_commercial_civilian_ships }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_expand_the_slipways
+		icon = GFX_goal_generic_build_navy
+		x = -3
+		y = 1
+		relative_position_id = SIA_the_thonburi_dockyard_project
+		prerequisite = { focus = SIA_the_thonburi_dockyard_project }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_a_new_drydock
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 0
+		relative_position_id = SIA_expand_the_slipways
+		prerequisite = { focus = SIA_the_thonburi_dockyard_project }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_install_heavy_cranes_and_power_plant
+		icon = GFX_focus_generic_energy
+		x = 2
+		y = 0
+		relative_position_id = SIA_a_new_drydock
+		prerequisite = { focus = SIA_the_thonburi_dockyard_project }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_establish_the_foundry_and_machine_shop
+		icon = GFX_focus_AFG_a_modern_economy
+		x = 2
+		y = 0
+		relative_position_id = SIA_install_heavy_cranes_and_power_plant
+		prerequisite = { focus = SIA_the_thonburi_dockyard_project }
+
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_the_thonburi_arsenal
+		icon = GFX_focus_generic_battleship_guns
+		x = -1
+		y = 1
+		relative_position_id = SIA_install_heavy_cranes_and_power_plant
+		prerequisite = { focus = SIA_install_heavy_cranes_and_power_plant }
+		prerequisite = { focus = SIA_expand_the_slipways }
+		prerequisite = { focus = SIA_a_new_drydock }
+		prerequisite = { focus = SIA_establish_the_foundry_and_machine_shop }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_focus_on_commercial_civilian_ships
+		icon = GFX_focus_generic_refit_civilian_ships
+		x = 6
+		y = 0
+		relative_position_id = SIA_the_thonburi_dockyard_project
+		prerequisite = { focus = SIA_royal_thai_navy }
+		mutually_exclusive = { focus = SIA_the_thonburi_dockyard_project }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_sell_bangkok_dock_co
+		icon = GFX_focus_generic_industry_investment
+		x = -1
+		y = 1
+		relative_position_id = SIA_focus_on_commercial_civilian_ships
+		prerequisite = { focus = SIA_focus_on_commercial_civilian_ships }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {}
+	}
+
+
+	focus = {
+		id = SIA_empower_the_coastguard
+		icon = GFX_focus_generic_coastal_fort
+		x = 1
+		y = 1
+		relative_position_id = SIA_focus_on_commercial_civilian_ships
+		prerequisite = { focus = SIA_focus_on_commercial_civilian_ships }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SIA_river_patrols
+		icon = GFX_focus_SIA_river_patrols
+		x = 0
+		y = 1
+		relative_position_id = SIA_empower_the_coastguard
+		prerequisite = { focus = SIA_empower_the_coastguard }
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {}
+		
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {}
+	}
+}
+
+	
+	
+
+

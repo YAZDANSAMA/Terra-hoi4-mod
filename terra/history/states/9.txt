@@ -1,0 +1,39 @@
+
+state={
+	id=9
+	name="Laterano"
+	manpower = 2095649
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 199 3}
+		victory_points = { 202 1}
+		
+		owner = LAT
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LAT
+	}
+
+	provinces={
+		199 202 1019 1021 1022 1502 1503 1504 1505 1880 1881 1882 1883 2188 2189 2190 2191 3000 3001 3002 3238 3239 3240 3241 3866 3867 4071 4072 4073 4074 4075 4076 4519 4525 5322 5367 5368 6517
+	}
+	local_supplies=0.0 
+}

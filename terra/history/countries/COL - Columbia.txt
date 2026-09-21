@@ -1,0 +1,337 @@
+capital = 1072
+
+oob = "COL_1936"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "COL_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "COL_1936_nsb"
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	infantry_weapons= 1
+	tech_trucks= 1
+	basic_machine_tools= 1
+	fuel_silos= 1
+	
+}
+
+### ARMOR ###
+### Vanilla Techs ###
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+### NSB Techs ###
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		engine_tech_1 = 1
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+
+}
+
+
+### AIRFORCE ###
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "COL_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+			
+		}
+		create_equipment_variant = {
+			name = "Ceilt Mk 2"
+			type = small_plane_cas_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = bomb_locks
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Greas Mk 1"
+			type = small_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_1x
+			fixed_main_weapon_slot = light_mg_2x
+			special_type_slot_1 = empty
+
+			}
+		}
+		create_equipment_variant = {
+			name = "Scathan Mk 0"
+			type = medium_plane_airframe_0
+			modules = {
+							engine_type_slot = engine_1_2x
+			fixed_main_weapon_slot = medium_bomb_bay
+			special_type_slot_1 = lmg_defense_turret
+
+			}
+		}
+
+	else = {
+		set_air_oob = "COL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+			
+		}
+	}
+}
+
+
+### NAVY ###
+######### Vanilla #########
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	early_destroyer = 1
+	early_submarine = 1
+	
+	}
+	set_naval_oob = "COL_1936_naval"
+}
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Variants ###
+			create_equipment_variant = {
+			name = "Cnuarnamh Class"
+			type = destroyer_1
+			upgrades = {
+				ship_anti_air_upgrade = 1
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Cnuarnamh Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_torpedo_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+			}
+		}
+
+}
+
+
+######### MTG #########
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+	basic_battery = 1
+	basic_naval_mines = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	smoke_generator = 1
+	sonar = 1
+	submarine_mine_laying = 1
+	
+	}
+	set_naval_oob = "COL_1936_naval_mtg"
+}
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Cnuarnamh Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_mine_layer_1
+			}
+		}
+		create_equipment_variant = {
+			name = "Cnuarnamh Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = sub_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				rear_1_custom_slot = empty
+			}
+		}
+
+	}
+
+
+recruit_character = COL_Eoinn_Eirian
+recruit_character = COL_Liam_Ruarradann
+recruit_character = COL_Iwan_Slisline
+recruit_character = COL_Taraig_Slisline
+recruit_character = COL_Iwan_Baine
+recruit_character = COL_Bran_Eirian
+recruit_character = COL_Quin_Corath
+recruit_character = COL_Quin_Torc
+recruit_character = COL_Padraig_Greas
+recruit_character = COL_Taraig_Suim
+recruit_character = COL_Declan_Buathe
+recruit_character = COL_Iwan_Dorcrad
+recruit_character = COL_Ciam_Luaill
+recruit_character = COL_Bran_Bunam
+recruit_character = COL_Keiran_Ceach
+recruit_character = COL_Bran_Grioc
+recruit_character = COL_Ciamus_Neas
+recruit_character = COL_Hugh_Talas
+recruit_character = COL_Niamus_Buach
+recruit_character = COL_Rhys_Suim
+recruit_character = COL_Malcolm_Talamhtigh
+recruit_character = COL_Mall_Fuair
+recruit_character = COL_Gareth_Beart
+recruit_character = COL_Cialcolm_Dorchaill
+recruit_character = COL_Mall_Fean
+recruit_character = COL_Liam_Crodanchean
+recruit_character = COL_Quinn_Tras
+recruit_character = COL_Fergus_Domh
+recruit_character = COL_Hugh_Neas
+recruit_character = COL_Taraig_Aigh
+recruit_character = COL_Mall_Sceanwa
+recruit_character = COL_Aidan_Fuair
+recruit_character = COL_Hugh_Maigheanrimh
+recruit_character = COL_Seamus_Bain
+recruit_character = COL_Taraig_Boglam
+recruit_character = COL_Keiran_Crodanchean
+recruit_character = COL_Aidan_Coinn
+recruit_character = COL_Liam_Corath
+recruit_character = COL_Rhys_Cuidir
+recruit_character = COL_Niam_Grioc
+recruit_character = COL_Quinn_Teil
+recruit_character = COL_Eoinn_Maine
+recruit_character = COL_Liamus_Taislisce
+recruit_character = COL_Niaraig_Fairsealasam
+recruit_character = COL_Aidan_Maine
+recruit_character = COL_Ciamus_Ruarradann
+recruit_character = COL_Liamus_Ceann
+recruit_character = COL_Rhys_Porg
+recruit_character = COL_Niamus_Buidir
+recruit_character = COL_Eoin_Slisline
+recruit_character = COL_Quin_Talte
+recruit_character = COL_Aidan_Slisline
+recruit_character = COL_Eoin_Buachas
+recruit_character = COL_Aidan_Buidir
+recruit_character = COL_Ulrich_Dorcrad
+recruit_character = COL_Padraig_Sceanwa
+recruit_character = COL_Rhys_Slisline
+recruit_character = COL_Niamus_Eolamh
+recruit_character = COL_Niam_Tras
+recruit_character = COL_Liamus_Aisce
+recruit_character = COL_Liamus_Talamhtigh
+recruit_character = COL_Eoinn_Radh
+recruit_character = COL_Malcolm_Anamh
+recruit_character = COL_Ciam_Cealte
+recruit_character = COL_Ulrich_Taislisce
+recruit_character = COL_Ciam_Buai
+recruit_character = COL_Declan_Cealte
+recruit_character = COL_Keiran_Tuach
+recruit_character = COL_Taran_Eolamh
+recruit_character = COL_Ciall_Teil
+recruit_character = COL_Hugh_Beart
+recruit_character = COL_Cialcolm_Grean
+recruit_character = COL_Seamus_Luch
+recruit_character = COL_Seam_Clam
+recruit_character = COL_Padraig_Bain
+recruit_character = COL_Liam_Cnuaidh
+recruit_character = COL_Taran_Clam
+recruit_character = COL_Ciam_Maigheanrimh
+recruit_character = COL_Niamus_Tirseart
+recruit_character = COL_Aidan_Buachas
+recruit_character = COL_Owen_Glamhain
+recruit_character = COL_Malcolm_Baine
+recruit_character = COL_Taraig_Dorchaill
+recruit_character = COL_Declan_Maigheanrimh
+recruit_character = COL_Malcolm_Fona
+recruit_character = COL_Ciamus_Buach
+recruit_character = COL_Fergus_Tras
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_research_slots = 4
+set_convoys = 37
+set_stability = 0.18
+set_war_support = 0.74
+
+add_ideas = {
+limited_conscription
+low_economic_mobilisation
+autarkic_economy
+}
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1914.1.24"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 43
+	communism = 15
+	neutrality = 27
+}
+
+
+
+
+

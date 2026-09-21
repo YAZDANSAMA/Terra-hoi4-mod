@@ -1,0 +1,83 @@
+units= {
+	##### NAVAL UNITS #####
+	
+		fleet = {
+		name = "Iberia Fleet"			
+		naval_base = 8247
+		task_force = {
+			name = "Iberia Fleet"
+			location = 8247
+			
+						ship = { name = "Islit" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = IBE version_name = "Tiwin Class" } }	}
+			ship = { name = "Imim" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tamazrart" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Ametz" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tagmmi" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tawla" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Azrou" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tawla 2" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Taghissit" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Tamurt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Taghrem" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Thazaghal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Imim 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Taklit" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tighilt" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Takhmirem" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Azem" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Thakilt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tazmert" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Azem 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Takfawin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tiwizirawt" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Tamurt 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tifart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tighalut" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Takfawin 2" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Imim 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tamsif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Azrou 2" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Tiwin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Azerwin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Takhmirem 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Taghissit 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tawlay" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tazdan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Thakilt 2" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Azemmirem" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tifart 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tawla 3" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Tazaghrart" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tawlay 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tighilt 2" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Asifawt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tawla 4" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Azeggadirt" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Amett" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tighilt 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Azrou 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Azeggadirt 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Taghissit 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tawla 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Asifawt 2" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = IBE version_name = "Amett Class" } }	}
+			ship = { name = "Azem 3" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IBE version_name = "Tamezir Class" } }	}
+			ship = { name = "Tazem" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tazrawt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Tiwizirawt 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+			ship = { name = "Ametz 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IBE version_name = "Ametz Class" } }	}
+
+		}
+	}
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+}
+
+#####################

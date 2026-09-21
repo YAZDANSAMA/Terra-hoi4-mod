@@ -1,0 +1,23 @@
+name="terra/"
+picture="thumbnail.png"
+version="v1"
+user_dir="terra/"
+replace_path="events"
+replace_path="history/states"
+replace_path="history/units"
+replace_path="map/strategicregions"
+replace_path="common/ai_strategy"
+replace_path="common/on_actions"
+replace_path="common/factions"
+replace_path="common/factions/goals"
+replace_path="common/factions/rules"
+replace_path="common/factions/rules/groups"
+replace_path="common/factions/templates"
+
+tags={
+	"Gameplay"
+	"Historical"
+}
+supported_version="1.19.*"
+path="C:/Users/BIG TUF/Documents/Paradox Interactive/Hearts of Iron IV/mod/terra/"
+remote_file_id="<ID>"

@@ -1,0 +1,403 @@
+division_template = {
+	name = "Militia Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+
+	}
+	
+	support = {
+
+	}
+}
+division_template = {
+	name = "Supported Infantry Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+
+	}
+	
+	support = {
+			artillery = {  x = 0 y = 0 }
+
+	}
+}
+division_template = {
+	name = "Artillery Division"
+
+	regiments = {
+			infantry = {  x = 0 y = 0 }
+			infantry = {  x = 0 y = 1 }
+			infantry = {  x = 0 y = 2 }
+			infantry = {  x = 0 y = 3 }
+			infantry = {  x = 1 y = 0 }
+			infantry = {  x = 1 y = 1 }
+			infantry = {  x = 1 y = 2 }
+			infantry = {  x = 1 y = 3 }
+			infantry = {  x = 2 y = 0 }
+			infantry = {  x = 2 y = 1 }
+			infantry = {  x = 2 y = 2 }
+			artillery_brigade = {  x = 3 y = 0 }
+			artillery_brigade = {  x = 3 y = 1 }
+
+	}
+	
+	support = {
+			maintenance_company = {  x = 0 y = 0 }
+			anti_air = {  x = 0 y = 1 }
+
+	}
+}
+division_template = {
+	name = "Cavalry Division"
+
+	regiments = {
+			cavalry = {  x = 0 y = 0 }
+			cavalry = {  x = 0 y = 1 }
+			cavalry = {  x = 0 y = 2 }
+			cavalry = {  x = 0 y = 3 }
+			cavalry = {  x = 1 y = 0 }
+			cavalry = {  x = 1 y = 1 }
+			cavalry = {  x = 1 y = 2 }
+			cavalry = {  x = 1 y = 3 }
+			cavalry = {  x = 2 y = 0 }
+			cavalry = {  x = 2 y = 1 }
+			cavalry = {  x = 2 y = 2 }
+
+	}
+	
+	support = {
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "1st 'Penjat' Supported Infantry Division"
+		location = 475
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.101680
+		start_equipment_factor = 0.899111
+	}
+	division= {
+		name = "2nd 'Buari' Supported Infantry Division"
+		location = 3400
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.214281
+		start_equipment_factor = 0.972945
+	}
+	division= {
+		name = "3rd 'Bayapal' Supported Infantry Division"
+		location = 2260
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.136927
+		start_equipment_factor = 0.894040
+	}
+	division= {
+		name = "4th 'Penci' Supported Infantry Division"
+		location = 1709
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.862677
+		start_equipment_factor = 0.904629
+	}
+	division= {
+		name = "5th 'Trama' Supported Infantry Division"
+		location = 5703
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.976773
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "6th 'Zarteantza' Supported Infantry Division"
+		location = 2120
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.863670
+		start_equipment_factor = 0.886749
+	}
+	division= {
+		name = "7th 'Padani' Supported Infantry Division"
+		location = 2408
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.360510
+		start_equipment_factor = 0.956115
+	}
+	division= {
+		name = "8th 'Lelat' Supported Infantry Division"
+		location = 606
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.395294
+		start_equipment_factor = 0.895765
+	}
+	division= {
+		name = "9th 'Senaka' Supported Infantry Division"
+		location = 7938
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.104889
+		start_equipment_factor = 0.899186
+	}
+	division= {
+		name = "10th 'Pelang' Supported Infantry Division"
+		location = 7159
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.960888
+		start_equipment_factor = 0.996621
+	}
+	division= {
+		name = "11th 'Purumata' Supported Infantry Division"
+		location = 6616
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.800285
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "12th 'Pohonkepulap' Supported Infantry Division"
+		location = 6613
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.894616
+		start_equipment_factor = 0.868305
+	}
+	division= {
+		name = "13th 'Bumbah' Supported Infantry Division"
+		location = 5325
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.660853
+		start_equipment_factor = 0.890816
+	}
+	division= {
+		name = "14th 'Penjat' Supported Infantry Division"
+		location = 475
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.852617
+		start_equipment_factor = 0.895272
+	}
+	division= {
+		name = "15th 'Awan' Supported Infantry Division"
+		location = 7344
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.894891
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "16th 'Toma' Supported Infantry Division"
+		location = 2193
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.332382
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "17th 'Awan' Supported Infantry Division"
+		location = 5195
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.447553
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "18th 'Laingitang' Supported Infantry Division"
+		location = 971
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.609146
+		start_equipment_factor = 0.893082
+	}
+	division= {
+		name = "19th 'Azapenaso' Supported Infantry Division"
+		location = 3527
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.128698
+		start_equipment_factor = 0.926754
+	}
+	division= {
+		name = "20th 'Ibukualamai' Supported Infantry Division"
+		location = 6814
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.929033
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "21st 'Padani' Supported Infantry Division"
+		location = 6649
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.665738
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "22nd 'Senjatu' Supported Infantry Division"
+		location = 4773
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.982629
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "23rd 'Legenja' Supported Infantry Division"
+		location = 5733
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.947583
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "24th 'Poza' Supported Infantry Division"
+		location = 3530
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.769162
+		start_equipment_factor = 0.980544
+	}
+	division= {
+		name = "25th 'Takuman' Supported Infantry Division"
+		location = 7417
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.076381
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "26th 'Trama' Supported Infantry Division"
+		location = 478
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.263279
+		start_equipment_factor = 0.900912
+	}
+	division= {
+		name = "27th 'Tang' Supported Infantry Division"
+		location = 6644
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.954742
+		start_equipment_factor = 0.895634
+	}
+	division= {
+		name = "28th 'Padan' Supported Infantry Division"
+		location = 7308
+		division_template = "Supported Infantry Division"
+		start_experience_factor = 0.057647
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "1st 'Kantolaba' Artillery Division"
+		location = 7362
+		division_template = "Artillery Division"
+		start_experience_factor = 0.430312
+		start_equipment_factor = 0.979289
+	}
+	division= {
+		name = "2nd 'Senjatu' Artillery Division"
+		location = 6515
+		division_template = "Artillery Division"
+		start_experience_factor = 0.634214
+		start_equipment_factor = 0.927023
+	}
+	division= {
+		name = "3rd 'Gung' Artillery Division"
+		location = 3534
+		division_template = "Artillery Division"
+		start_experience_factor = 0.364252
+		start_equipment_factor = 0.967278
+	}
+	division= {
+		name = "4th 'Ibuku' Artillery Division"
+		location = 3214
+		division_template = "Artillery Division"
+		start_experience_factor = 0.546156
+		start_equipment_factor = 0.939391
+	}
+	division= {
+		name = "5th 'Perjaharan' Artillery Division"
+		location = 3195
+		division_template = "Artillery Division"
+		start_experience_factor = 0.847902
+		start_equipment_factor = 0.871227
+	}
+	division= {
+		name = "6th 'Padan' Artillery Division"
+		location = 6467
+		division_template = "Artillery Division"
+		start_experience_factor = 0.779253
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "7th 'Pozarra' Artillery Division"
+		location = 3531
+		division_template = "Artillery Division"
+		start_experience_factor = 0.232626
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "8th 'Damhalusaan' Artillery Division"
+		location = 2364
+		division_template = "Artillery Division"
+		start_experience_factor = 0.061886
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "9th 'Pindelak' Artillery Division"
+		location = 4674
+		division_template = "Artillery Division"
+		start_experience_factor = 0.907480
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "10th 'Pelang' Artillery Division"
+		location = 7005
+		division_template = "Artillery Division"
+		start_experience_factor = 0.070731
+		start_equipment_factor = 1.000000
+	}
+	division= {
+		name = "11th 'Padalanga' Artillery Division"
+		location = 392
+		division_template = "Artillery Division"
+		start_experience_factor = 0.805447
+		start_equipment_factor = 0.964476
+	}
+	division= {
+		name = "12th 'Bindatu' Artillery Division"
+		location = 7416
+		division_template = "Artillery Division"
+		start_experience_factor = 0.968879
+		start_equipment_factor = 0.872518
+	}
+	division= {
+		name = "13th 'Gaurra' Artillery Division"
+		location = 3800
+		division_template = "Artillery Division"
+		start_experience_factor = 0.505967
+		start_equipment_factor = 0.888496
+	}
+	division= {
+		name = "14th 'Periata' Artillery Division"
+		location = 4635
+		division_template = "Artillery Division"
+		start_experience_factor = 0.484317
+		start_equipment_factor = 0.927840
+	}
+
+}
