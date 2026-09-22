@@ -1,0 +1,31 @@
+state = {
+    id = 7004
+    name="STATE_7004"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = COL
+        add_core_of = COL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        1308 1309 1312 1314 1316 1317 1318 1322 1945 1948 1950 1951 2187 2997 5798 5799 5800 6364 6706 6707 7035 7036 7037 7038 7618 7704 7709 7711
+    }
+
+    local_supplies = 0
+}
