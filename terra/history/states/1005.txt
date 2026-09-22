@@ -1,0 +1,39 @@
+
+state={
+	id=1005
+	name="1005"
+	manpower = 2152065
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 74 1}
+		victory_points = { 75 1}
+		
+		owner = BOL
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = BOL
+	}
+
+	provinces={
+		2982 2983 2984 3053 3054 4691 4692 4693 4694 4866 4867 4868 4869 5100 5893 5894 6107 6110 6672 6673 6674 6675 7178 7179 7181 7184 7193 7199 7203 7204
+	}
+	local_supplies=0.0 
+}

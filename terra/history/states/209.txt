@@ -1,0 +1,39 @@
+
+state={
+	id=209
+
+	name="Ile-de-gaul"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = LGE
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LGE
+	}
+
+	provinces={
+		6322 6323 6595 6596
+	}
+	local_supplies=0.0 
+}
