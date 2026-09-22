@@ -1,0 +1,31 @@
+state = {
+    id = 3002
+    name="STATE_3002"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = KAZ
+        add_core_of = KAZ
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        2578 2580
+    }
+
+    local_supplies = 0
+}
