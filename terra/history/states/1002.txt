@@ -1,41 +1,31 @@
+state = {
+    id = 1002
+    name="STATE_1002"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=1002
-	name="1002"
-	manpower = 2152065
-	
-	state_category = pastoral
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		
-		
-		victory_points = { 75 1}
-		victory_points = { 74 1}
-		
-		owner = BOL
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = BOL
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		582 583 584 586 587 589 590 591 592 593 594 595 1214 1218 6111 6123 6127 6130 6777 6778 6783
-	}
-	local_supplies=0.0 
+    provinces = {
+        582 583 584 586 587 589 590 591 592 593 594 595 1214 1218 6111 6123 6127 6130 6777 6778 6783
+    }
+
+    local_supplies = 0
 }
