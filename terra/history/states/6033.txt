@@ -1,0 +1,31 @@
+state = {
+    id = 6033
+    name="STATE_6033"
+    manpower = 0
+    state_category = megalopolis
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = YAN
+        add_core_of = YAN
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        132 133 134 135 136 138 1814 1815 2784 2785 2786 2787 2788 2789 3154 3155 3156 3157 3158 3159 5214 5215 5216 5218 5221 5222 5223 5224 5225 5226 5228 5230 5232 5234 5235 5236 5761 5762 5763 5802 5803 5804 6932 6933 6937 6939 7665 7666 7667 7668 7669 7670 7950
+    }
+
+    local_supplies = 0
+}
