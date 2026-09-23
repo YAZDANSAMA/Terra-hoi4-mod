@@ -1,0 +1,31 @@
+state = {
+    id = 7625
+    name="STATE_7625"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = SIR
+        add_core_of = SIR
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        937 1997 2004 2006 2143 2144 2148 2150 3277 3278 3279 3280 3281 3282 3283 3284 3597 3598 3599 3600 3602 4478
+    }
+
+    local_supplies = 0
+}
