@@ -7,37 +7,26 @@ state={
 	state_category = megalopolis
 	#impassable = yes
 	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=14
-		steel=0
-		tungsten=0
-		coal=0
+		aluminium=1
+		chromium=1
+		oil=1
+		rubber=1
+		steel=1
+		tungsten=1
+		coal=1
 	}
 
 	history={
-		
-		
-		
-		
-		owner = YAN
+		owner = AEG
 		buildings = {
-			infrastructure = 5
-			air_base = 7
-			arms_factory = 4
-			industrial_complex = 4
-			
-			6 = {
-				naval_base = 1
-			}
-			
+			infrastructure = 1
+			air_base = 1
 		}
-		add_core_of = YAN
+		add_core_of = AEG
 	}
 
 	provinces={
-		
+		8179 8180 8181 8182 8183 8184 8217
 	}
 	local_supplies=0.0 
 }
