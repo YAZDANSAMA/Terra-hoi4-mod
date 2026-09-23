@@ -1,0 +1,31 @@
+state = {
+    id = 7634
+    name="STATE_7634"
+    manpower = 0
+    state_category = small_island
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = IBE
+        add_core_of = IBE
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        8199
+    }
+
+    local_supplies = 0
+}
