@@ -1,0 +1,39 @@
+
+state={
+	id=120
+	name="Hoff Angrsaal"
+	manpower = 3426717
+	
+	state_category = rural
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 632 2}
+		victory_points = { 636 4}
+		
+		owner = KJE
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = KJE
+	}
+
+	provinces={
+		4311 4312 7929 7930
+	}
+	local_supplies=0.0 
+}

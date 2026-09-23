@@ -1,0 +1,39 @@
+
+state={
+	id=7611
+	name="STATE_7611"
+	manpower = 1929167
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 78 1}
+		victory_points = { 79 1}
+		
+		owner = IBE
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = IBE
+	}
+
+	provinces={
+		8243
+	}
+	local_supplies=0.0 
+}

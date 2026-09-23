@@ -1,0 +1,39 @@
+
+state={
+	id=7529
+	name="STATE_7529"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
+
+	provinces = {
+		655 656 657 658 659 1575 1577 1578 1579 1580 1582 1584 1651 2309 2310 2311 2312 2313 2314 2316 3717 3719 3720 3721 3722 3724 3725 3729 6202 6203 6205 6207 6208 6209
+	}
+	local_supplies=0.0 
+}
