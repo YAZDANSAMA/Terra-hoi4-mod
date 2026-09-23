@@ -1,0 +1,33 @@
+state = {
+    id = 7628
+    name="STATE_7628"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        victory_points = { 92 6}
+        victory_points = { 94 4}
+        owner = SIR
+        add_core_of = SIR
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        91 92 94 2141 2142 2145 2146 2149 3596 3603 5993 5994 5995 5996 5998 6741 6745
+    }
+
+    local_supplies = 0
+}
