@@ -1,37 +1,31 @@
+state = {
+    id = 161
+    name="STATE_161"
+    manpower = 0
+    state_category = megalopolis
 
-state={
-	id=161
-	name="161"
-	manpower = 12082
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		
-		owner = SAM
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = SAM
-	}
+    history = {
+        owner = YAN
+        add_core_of = YAN
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		553 554 2115 3584 3585 3587 3588 3589 3591
-	}
-	local_supplies=0.0 
+    provinces = {
+        7091 7105 7108
+    }
+
+    local_supplies = 0
 }

@@ -1,0 +1,39 @@
+
+state={
+	id=215
+	name="Elephantine"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
+
+	provinces = {
+		84 85 1726 2923 2924 2925 2926 2927 2928 2929 2930 2931 3427 3428 3431 3432 3433 3434 3435 3855 3856 6064 6065 6066 8033 8035 8038 8041
+	}
+	local_supplies=0.0 
+}

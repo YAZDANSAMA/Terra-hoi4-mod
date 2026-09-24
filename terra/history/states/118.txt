@@ -1,0 +1,31 @@
+state = {
+    id = 118
+    name="STATE_118"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = KAZ
+        add_core_of = KAZ
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        1821 1822 1824 1828 1829 2172 2173 2174 2175 2176 2177 2178 2179 2180 2266 2267 2268 2269 2271 2272 2273 2274 2275 2276 2277 2278 2279 2280 3762 3763 3764 3765 3766 3767 3768 3769 3770 3771 3772 3773 3774 3775 3776 4709 4710
+    }
+
+    local_supplies = 0
+}

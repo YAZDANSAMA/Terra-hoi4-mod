@@ -1,0 +1,44 @@
+
+state={
+	id=50
+	name="Northern Territory"
+	manpower = 3311516
+	
+	state_category = large_city
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 37 3}
+		victory_points = { 38 3}
+		victory_points = { 41 3}
+		victory_points = { 43 2}
+		
+		owner = RIM
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			arms_factory = 1
+			industrial_complex = 0
+			dockyard = 1
+			41 = {
+				naval_base = 1
+			}
+			
+		}
+		add_core_of = RIM
+	}
+
+	provinces={
+		426 427 428 429 430 431 432 433 815 816 817 818 819 820 821 822 823 824 938 939 940 941 1955 1956 1957 1958 1959 1960 1961 1962 2147 2403 2404 2831 2832 2833 2834 2835 2837 3442 3443 3509 3510 3511 3512 3513 3514 3515 3516 3807 3808 3809 3810 3811 3812 3813 3814 3815 3831 3833 4479 4481 5729 5747 5748 5749 5750 5751 5752 5753 5754 5755 5756 5757 6096 6097 6098 6214 6215 6507 6508 6509 6510 6511 6512 7830 7831 7832
+	}
+	local_supplies=0.0 
+}

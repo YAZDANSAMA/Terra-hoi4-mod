@@ -1,10 +1,10 @@
 
 state={
 	id=51
-	name="STATE_5"
-	manpower = 3141667
+	name="New Wellington"
+	manpower = 3311516
 	
-	state_category = rural
+	state_category = large_city
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,28 +17,28 @@ state={
 	}
 
 	history={
-		victory_points = { 30 2}
-		victory_points = { 32 1}
-		victory_points = { 1380 1}
-		victory_points = { 1382 2}
+		victory_points = { 37 3}
+		victory_points = { 38 3}
+		victory_points = { 41 3}
+		victory_points = { 43 2}
 		
-		owner = COL
+		owner = RIM
 		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
+			infrastructure = 3
+			air_base = 1
+			arms_factory = 1
 			industrial_complex = 0
-			
-			24 = {
+			dockyard = 1
+			41 = {
 				naval_base = 1
 			}
 			
 		}
-		add_core_of = COL
+		add_core_of = RIM
 	}
 
 	provinces={
-
+		412 413 414 415 416 1084 1085 1086 1239 1242 1585 1586 1587 1588 1589 2401 2402 2405 2406 2463 2464 2465 2466 2467 2498 2499 2500 2748 2749 2750 2751 3260 3261 3262 3263 3264 3265 3657 3658 3659 3660 3661 3662 3663 3827 3828 3830 3832 3835 3974 3975 3977 3979 3980 3981 5552 6984 6985 6986 6987 7327 7328 7329 7330 7331 7375 7376 7377 7379 7380 8020 8021 8022 8023 8024 8025 8026
 	}
 	local_supplies=0.0 
 }

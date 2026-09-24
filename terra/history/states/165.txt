@@ -1,37 +1,31 @@
+state = {
+    id = 165
+    name="Lungmen"
+    manpower = 0
+    state_category = megalopolis
 
-state={
-	id=165
-	name="165"
-	manpower = 12082
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		
-		owner = SAM
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = SAM
-	}
+    history = {
+        owner = YAN
+        add_core_of = YAN
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		579 580 6377 6378 6480 6481 6483
-	}
-	local_supplies=0.0 
+    provinces = {
+        4455 4459 4464 4466
+    }
+
+    local_supplies = 0
 }

@@ -1,0 +1,38 @@
+
+state={
+	id=62
+	name="Furtgang"
+	manpower = 7270
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 263 1 }
+		
+		owner = LEI
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		263 264 265 266 267 1425 1426 1427 1428 1429 1430 1431 1432 1433 1434 2593 3571 3574 4518 4520 4521 4523 4524 4526 4528 4529 6490 6491 7462 7463 7464 7465 7466
+	}
+	local_supplies=0.0 
+}

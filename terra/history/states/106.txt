@@ -1,0 +1,31 @@
+state = {
+    id = 106
+    name="STATE_106"
+    manpower = 2152065
+    state_category = pastoral
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        227 229 230 231 233 234 235 236 6101 6102 6104 6105 6106 6108 6109 6112 6114 6115 6116 6118 6119 6121 6122 6128 6129 6131 6132 6133 6134 6135 6773 6776 6780 6781 6784 7186 7187 7189 7195 7196 7198 7200 7201 7435
+    }
+
+    local_supplies = 0
+}

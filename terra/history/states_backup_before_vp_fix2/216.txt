@@ -1,0 +1,39 @@
+
+state={
+	id=216
+	name="Long Spring"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
+
+	provinces = {
+		1087 1091 1644 1645 1646 1647 1648 1649 1650 2536 2537 6204 6206 6210 6404 6405 6406 6407 6624 6628 6629 6631 7224 7225 7226 7627 7632
+	}
+	local_supplies=0.0 
+}

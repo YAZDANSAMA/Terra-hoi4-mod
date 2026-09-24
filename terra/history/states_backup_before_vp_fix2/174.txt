@@ -1,0 +1,31 @@
+state = {
+    id = 174
+    name="STATE_174"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = COL
+        add_core_of = COL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        210 212 215 216 218 318 319 321 322 845 1110 1111 1114 1115 1117 1119 1120 1121 1122 1123 1124 1760 1763 1764 2538 2539 2540 2541 2542 2543 2544 2740 2741 2742 2743 2744 2745 2746 3543 3546 3992 3993 5710 5712 5714 5715 5716 5718 5719 5720 5721 5725 5726 5727 8061 8062 8067 8068 8069
+    }
+
+    local_supplies = 0
+}

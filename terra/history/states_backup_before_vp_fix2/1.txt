@@ -1,0 +1,39 @@
+
+state={
+	id=1
+	name="Leedshire"
+	manpower = 3389057
+	
+	state_category = rural
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		
+		
+		owner = VIC
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		add_core_of = VIC
+	}
+
+	provinces={
+		566 567 568 569 570 571 572 729 2492 2493 2949 2950 2951 2952 2953 2954 2955 2956 2957 2958 2959 2960 2961 2962 2963 5255 5256 5257 5259 6409 6410 6418 6419 6444 6917 7973 7975
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=60
+	name="Einwald"
+	manpower = 7270
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 2067 1 }
+		
+		owner = LEI
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		2067 2069 2070 2073 2074 2075 2077 2240 2241 2242 2243 2245 4842 4845 5105 5106 5107 5108 5109 5110 5111 5112 5113 5114 5115 5452 5454 5463 7594 7596
+	}
+	local_supplies=0.0 
+}

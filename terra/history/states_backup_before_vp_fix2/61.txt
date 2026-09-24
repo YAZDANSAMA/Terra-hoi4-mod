@@ -1,0 +1,38 @@
+
+state={
+	id=61
+	name="Erdenherre"
+	manpower = 7270
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 20 1 }
+		
+		owner = LEI
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		20 2239 3194 5267 7913 7914 7915
+	}
+	local_supplies=0.0 
+}

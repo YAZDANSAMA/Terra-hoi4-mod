@@ -1,0 +1,32 @@
+state = {
+    id = 116
+    name="STATE_116"
+    manpower = 0
+    state_category = rural
+
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        victory_points = { 160 1}
+        owner = KAZ
+        add_core_of = KAZ
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
+
+    provinces = {
+        160 161 162 5528 5529 5530 5531 5532 5533 5534 5535 5536 5537 5539
+    }
+
+    local_supplies = 0
+}

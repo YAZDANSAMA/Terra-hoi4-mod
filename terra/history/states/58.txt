@@ -1,10 +1,10 @@
 
 state={
 	id=58
-	name="STATE_5"
-	manpower = 3141667
+	name="Wolumonde"
+	manpower = 7270
 	
-	state_category = rural
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,27 +17,22 @@ state={
 	}
 
 	history={
-		victory_points = { 30 2}
-		victory_points = { 32 1}
-		victory_points = { 1380 1}
-		victory_points = { 1382 2}
+		victory_points = { 259 1 }
 		
-		owner = COL
+		owner = LEI
 		buildings = {
 			infrastructure = 1
-			
+			air_base = 1
 			arms_factory = 0
 			industrial_complex = 0
 			
-			24 = {
-				naval_base = 1
-			}
 			
 		}
-		add_core_of = COL
+		add_core_of = LEI
 	}
 
 	provinces={
+		259 683 684 685 688 1333 1336 1344 1755 1756 1757 1758 1759 2066 2068 2071 2072 2076 2244 2343 2344 2345 2346 2940 2941 2942 2943 2944
 	}
 	local_supplies=0.0 
 }

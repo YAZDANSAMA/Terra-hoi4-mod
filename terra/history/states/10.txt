@@ -1,10 +1,10 @@
 
 state={
 	id=10
-	name="STATE_10"
-	manpower = 986177
+	name="Browntail"
+	manpower = 3426717
 	
-	state_category = small_island
+	state_category = rural
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -18,23 +18,22 @@ state={
 
 	history={
 		
-		owner = AEG
+		
+		
+		owner = KJE
 		buildings = {
 			infrastructure = 1
 			
-			arms_factory = 0
+			arms_factory = 1
 			industrial_complex = 0
 			
-			8092 = {
-				naval_base = 1
-			}
 			
 		}
-		add_core_of = AEG
+		add_core_of = KJE
 	}
 
 	provinces={
-		8191 8192 8193 8228
+		1437 1438 3673 4310 4313 4723 4870 4871 4872 4873 5187 5188 5427 5428 5429 5683 5684 5685 6236 6237 6928 6929 7932
 	}
 	local_supplies=0.0 
 }

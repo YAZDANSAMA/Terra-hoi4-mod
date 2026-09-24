@@ -1,0 +1,39 @@
+
+state={
+	id=220
+	name="Chaldia"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
+
+	provinces = {
+		180 181 182 183 184 185 186 187 188 189 190 191 192 881 882 883 884 885 886 887 888 1036 1037 1038 1290 1291 1292 1293 1294 1295 1746 1747 1748 1749 1750 1751 1752 1753 1754 4169 4181 4182 4183 4184 4185 4186 4187 4188 4189 4190 4191 4192 4193 4194 4291 4292 4293 4294 4698 4983 5828 5829 5830 5832 7171 7554 7835 7836 7837
+	}
+	local_supplies=0.0 
+}

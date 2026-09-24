@@ -1,0 +1,32 @@
+
+state={
+	id=4
+	name="STATE_4"
+	manpower = 3141667
+	
+	state_category = rural
+	#impassable = yes
+	resources={
+		aluminium=1
+		chromium=1
+		oil=1
+		rubber=1
+		steel=1
+		tungsten=1
+		coal=1
+	}
+
+	history={
+		owner = AEG
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+		add_core_of = AEG
+	}
+
+	provinces={
+		8230
+	}
+	local_supplies=0.0 
+}

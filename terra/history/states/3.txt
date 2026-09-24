@@ -1,32 +1,38 @@
 
 state={
 	id=3
-	name="STATE_3"
-	manpower = 3785881
+	name="Gregorskaya Guberniya"
+	manpower = 7909
 	
-	state_category = megalopolis
+	state_category = small_island
 	#impassable = yes
 	resources={
-		aluminium=1
-		chromium=1
-		oil=1
-		rubber=1
-		steel=1
-		tungsten=1
-		coal=1
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
 	}
 
 	history={
-		owner = AEG
+		
+		
+		owner = URS
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
 		}
-		add_core_of = AEG
+		add_core_of = URS
 	}
 
 	provinces={
-		8179 8180 8181 8182 8183 8184 8217
+		555 556 649 650 651 652 942 943 944 1000 1001 1003 1004 1006 1008 1009 1010 1011 1013 1016 1017 1018 1033 1034 1035 1147 1148 1419 1420 1421 1466 1467 1468 1469 1470 1471 1472 1473 1474 1847 1848 1849 1850 1851 1852 1853 1854 1855 1856 2506 2525 2526 2527 2528 2529 3097 3103 3555 3861 3862 3863 3864 3924 3925 4503 4506 4511 4516 4738 5022 5023 5024 5026 5028 5030 5031 5032 5033 5034 5659 5660 5661 5662 5663 5739 5740 5741 5742 5876 5877 7578 7579 7671 7674 7675 7677 7876 7877 7878 7979 7980 7983
 	}
 	local_supplies=0.0 
 }

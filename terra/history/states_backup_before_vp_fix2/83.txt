@@ -1,0 +1,39 @@
+
+state={
+	id=83
+
+	name="Blason"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = LGE
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LGE
+	}
+
+	provinces={
+		509 510 511 512 514 516 517 5686 5687 5689 5690 5694 5695 5697
+	}
+	local_supplies=0.0 
+}

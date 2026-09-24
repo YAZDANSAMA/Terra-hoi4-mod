@@ -1,39 +1,31 @@
+state = {
+    id = 244
+    name="STATE_244"
+    manpower = 0
+    state_category = rural
 
-state={
-	id=244
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Hillock"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = SIR
+        add_core_of = SIR
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = TAR
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = TAR
-	}
+    provinces = {
+        89 90 93 1348 1349 1356 6737 6740 6744
+    }
 
-	provinces={
-		1299 1303 2675 2676 2678 2679 6573 7314 7318 7319
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

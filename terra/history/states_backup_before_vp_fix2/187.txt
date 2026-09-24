@@ -1,0 +1,39 @@
+
+state={
+	id=187
+	name="Philae"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
+
+	provinces = {
+		19 996 998 1405 1406 1407 1408 1409 1410 1411 1412 1413 2305 2307 2308 2620 2621 2622 2623 2624 2625 2626 3335 3336 3340 4117 4118 4119 4120 4391 4395 4397 4398 4607 4703 4937 5046 5049 5050 5052 5482 5824 5825 6288 6289 6748 6749 6750 6751 6752 6859 6860 6863 6864 6865 6867 6869 6871
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=29
+	name="Chernobog"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = URS
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = URS
+	}
+
+	provinces={
+		1599 1600 1601 1602 1603 1604 1605 1606 1607 1608 1609 1610 2154 2156 2157 2160 2161 2522 5054 5056 5057 5492 5493 5495 5496 5497 5498 5500 5505 5506 5507 5510 5807 5809 5917 5918 5919 5920 5922 5925 6655 6656 6658 6659 6660 6661 6662
+	}
+	local_supplies=0.0 
+}

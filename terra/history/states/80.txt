@@ -1,0 +1,37 @@
+
+state={
+	id=80
+	name="Kurogane"
+	manpower = 28400
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		owner = HIG
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = HIG
+	}
+
+	provinces={
+		67 1684 1685 1689 1690 1693 4879 4882 4883 7071 7072 7073 7074 7075 7076
+	}
+	local_supplies=0.0 
+}

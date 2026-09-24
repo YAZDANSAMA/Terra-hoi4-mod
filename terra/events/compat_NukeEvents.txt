@@ -58,11 +58,11 @@ news_event = {
 						state = 531
 						state = 282
 						state = 361
-						state = 2
-						state = 16 
+						state = 1
+						state = 14 
 						state = 219
 						state = 37
-						state = 141
+						state = 58
 					}
 				}
 			}
@@ -309,20 +309,20 @@ news_event = {
 	fire_only_once = yes
 
 	trigger = {
-		FROM.FROM = { state = 2 }
+		FROM.FROM = { state = 1 }
 	}
 
 	option = {
 		name = nuke_dropped.9.a
 		trigger = {
-			NOT = { owns_state = 2 }
+			NOT = { owns_state = 1 }
 		}
 	}
 	
 	option = {
 		name = nuke_dropped.9.b
 		trigger = {
-			owns_state = 2
+			owns_state = 1
 		}
 	}
 }
@@ -339,20 +339,20 @@ news_event = {
 	fire_only_once = yes
 
 	trigger = {
-		FROM.FROM = { state = 16 }
+		FROM.FROM = { state = 14 }
 	}
 
 	option = {
 		name = nuke_dropped.10.a
 		trigger = {
-			NOT = { owns_state = 16 }
+			NOT = { owns_state = 14 }
 		}
 	}
 	
 	option = {
 		name = nuke_dropped.10.b
 		trigger = {
-			owns_state = 16
+			owns_state = 14
 		}
 	}
 }
@@ -448,20 +448,20 @@ news_event = {
 	fire_only_once = yes
 
 	trigger = {
-		FROM.FROM = { state = 141 }
+		FROM.FROM = { state = 58 }
 	}
 
 	option = {
 		name = nuke_dropped.13.a
 		trigger = {
-			NOT = { owns_state = 141 }
+			NOT = { owns_state = 58 }
 		}
 	}
 	
 	option = {
 		name = nuke_dropped.13.b
 		trigger = {
-			owns_state = 141
+			owns_state = 58
 		}
 	}
 }

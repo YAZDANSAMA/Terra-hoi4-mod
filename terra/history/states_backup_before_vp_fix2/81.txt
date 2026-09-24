@@ -1,0 +1,39 @@
+
+state={
+	id=81
+
+	name="Bourgogne"
+	manpower = 7909
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=6
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 1 1}
+		
+		owner = LGE
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LGE
+	}
+
+	provinces={
+		2041 2042 2043 2044 2045 2046 2047 2048 4219 4221 4222 4223 4225 4597 4600
+	}
+	local_supplies=0.0 
+}

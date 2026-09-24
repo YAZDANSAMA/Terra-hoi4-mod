@@ -1,0 +1,37 @@
+
+state={
+	id=68
+	name="Lachedamon"
+	manpower = 283159
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		
+		owner = MIN
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = MIN
+	}
+
+	provinces={
+		467 468 469 470 471 472 6729 6730 6731 6732 7017 7018 7021 7022 7024 7025 7026 7027
+	}
+	local_supplies=0.0 
+}

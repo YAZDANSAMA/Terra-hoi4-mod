@@ -1,0 +1,39 @@
+
+state={
+	id=226
+	name="Sagunto"
+	manpower = 1929167
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 78 1}
+		victory_points = { 79 1}
+		
+		owner = IBE
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = IBE
+	}
+
+	provinces={
+		808 809 810 811 812 813 961 962 964 2411 2412 2413 2414 2415 2416 2417 2418 3191 3192 3193 3470 3471 3472 4592 4900 4901 4902 4903 4904 6021 6022 6023 6024 6927 7124 7336 7337 7338 7339 7340
+	}
+	local_supplies=0.0 
+}

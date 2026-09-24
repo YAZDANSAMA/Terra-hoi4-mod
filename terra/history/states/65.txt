@@ -1,0 +1,38 @@
+
+state={
+	id=65
+	name="Austenheim"
+	manpower = 7270
+	
+	state_category = small_island
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 262 1 }
+		
+		owner = LEI
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		262 268 721 2592 2594 3872 6442 6443 6446 7506 7507 7508
+	}
+	local_supplies=0.0 
+}

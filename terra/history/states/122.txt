@@ -1,40 +1,31 @@
+state = {
+    id = 122
+    name="STATE_122"
+    manpower = 0
+    state_category = rural
 
-state={
-	id=122
-	name="Paleroche"
-	manpower = 3426717
-	
-	state_category = rural
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		victory_points = { 632 2}
-		victory_points = { 636 4}
-		victory_points = { 636 4}
-		
-		owner = KJE
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 1
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = KJE
-	}
+    history = {
+        owner = KAZ
+        add_core_of = KAZ
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		630 636 638 1065 1066 1067 1068 1069 2407 6788 6789 6790 6791 6792 6793 6794 6795 6796 6797 6798
-	}
-	local_supplies=0.0 
+    provinces = {
+        1518 1519 4728 4729 4730 4732 4734
+    }
+
+    local_supplies = 0
 }

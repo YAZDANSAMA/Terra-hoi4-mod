@@ -1,0 +1,48 @@
+
+state={
+	id=47
+	name="Southern Billiton"
+	manpower = 3311516
+	
+	state_category = large_city
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
+
+	history={
+		victory_points = { 37 3}
+		victory_points = { 38 3}
+		victory_points = { 41 3}
+		victory_points = { 43 2}
+		victory_points = { 41 3}
+		victory_points = { 38 3}
+		victory_points = { 37 3}
+		victory_points = { 43 2}
+		
+		owner = RIM
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			arms_factory = 1
+			industrial_complex = 0
+			dockyard = 1
+			41 = {
+				naval_base = 1
+			}
+			
+		}
+		add_core_of = RIM
+	}
+
+	provinces={
+		37 38 39 40 41 42 43 44 865 1776 1777 1778 1779 1780 1783 3065 3066 3067 3068 3142 3144 3146 3147 3148 3150 3318 3319 3320 3322 3323 3324 3325 3326 3327 3328 4112 4113 4114 4115 4116 4781 4782 4783 4918 4919 5370 5371 5372 5373 5375 5377 5378 5379 5380 5381 5383 5598 5599 5600 5601 5602 5603 5610 5611 5612 5613 5614 5615 5616 5617 5618 5619 5620 5621 6761 6762 6763 6764 6765 6766 6767 6768 6769 6770 8043 8044 8045 8046 8047 8048 8049 8050 8051 8052 8053 8054 8055
+	}
+	local_supplies=0.0 
+}

@@ -1,44 +1,39 @@
 
 state={
 	id=83
-	name="Western Billiton"
-	manpower = 3311516
+
+	name="Blason"
+	manpower = 7909
 	
-	state_category = large_city
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
-		victory_points = { 37 3}
-		victory_points = { 38 3}
-		victory_points = { 41 3}
-		victory_points = { 43 2}
+		victory_points = { 1 1}
 		
-		owner = RIM
+		owner = LGE
 		buildings = {
-			infrastructure = 3
-			air_base = 1
-			arms_factory = 1
+			infrastructure = 1
+			
+			arms_factory = 0
 			industrial_complex = 0
-			dockyard = 1
-			41 = {
-				naval_base = 1
-			}
+			
 			
 		}
-		add_core_of = RIM
+		add_core_of = LGE
 	}
 
 	provinces={
-		378 379 380 381 382 383 611 612 613 863 864 866 867 868 1269 1270 1271 1774 1775 1781 1782 1784 2584 2585 2586 3123 3124 3125 3126 3127 3128 3129 3140 3141 3143 3145 3149 3151 3152 3153 4259 4260 4261 5157 5159 5369 5374 5376 5382 6384 6385 6386 6387 6388 6389 6390 6391 6392 6393 6394 6395 6396 6397 6398 6399 6400 6401 6402 6403 7061
+		509 510 511 512 514 516 517 5686 5687 5689 5690 5694 5695 5697
 	}
 	local_supplies=0.0 
 }

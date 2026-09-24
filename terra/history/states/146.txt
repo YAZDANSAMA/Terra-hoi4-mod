@@ -1,38 +1,31 @@
+state = {
+    id = 146
+    name="STATE_146"
+    manpower = 0
+    state_category = megalopolis
 
-state={
-	id=146
-	name="Heldenschwert"
-	manpower = 7270
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		victory_points = {  1}
-		
-		owner = LEI
-		buildings = {
-			infrastructure = 1
-			air_base = 1
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = LEI
-	}
+    history = {
+        owner = YAN
+        add_core_of = YAN
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		3020 3021 3022 3023 3024 3025 3026 3027 3028 3029 3030 4843 4844 5400 5406 5841 6012 7595 7597
-	}
-	local_supplies=0.0 
+    provinces = {
+        2 3 4 5 6 7 8 1027 1029 1030 1031 1032 1834 1836 2823 2824 2825 2826 2827 2828 2829 3166 3167 3168 3169 3407 3408 3409 3410 3940 3941 5956 5957 5958 5959 6153 6154 6155 6354 6966 6967 8042 8057 8059 8060
+    }
+
+    local_supplies = 0
 }
