@@ -1,39 +1,31 @@
+state = {
+    id = 82
+    name="STATE_82"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=82
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Occuitaine"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = LGE
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = LGE
-	}
+    provinces = {
+        361 366 367 598 599 601 1023 1024 1025 1026 1488 1489 1491 1492 1494 1495 4415 4416 4418 4419 4421 4422 4423 7132 7133 7134 7136 7137 7138 7235 7236
+    }
 
-	provinces={
-		775 778 2916 4088 5260 5266
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

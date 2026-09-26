@@ -1,8 +1,8 @@
 state = {
     id = 107
     name="STATE_107"
-    manpower = 2152065
-    state_category = pastoral
+    manpower = 0
+    state_category = megalopolis
 
     resources = {
         aluminium = 1
@@ -15,8 +15,8 @@ state = {
     }
 
     history = {
-        owner = BOL
-        add_core_of = BOL
+        owner = YAN
+        add_core_of = YAN
         buildings = {
             infrastructure = 1
             air_base = 1
@@ -24,7 +24,7 @@ state = {
     }
 
     provinces = {
-        712 713 714 791 792 793 794 795 796 797 798 799 800 945 946 947 948 949 950 951 952 953 954 2040 2699 2700 2701 2702 2703 2704 2705 2706 2707 2708 4131 4132 4133 7180 7182 7183 7185 7188 7190 7191 7192 7194 7197 7202 7367 7368 7369 7370 7371 7372 7373 7429 7430 7431 7432 7433 7434 7436 7437
+        3816 3817 3818 3819 3820 5910 5911 5912 5913 5914 6049 6050
     }
 
     local_supplies = 0

@@ -1,8 +1,9 @@
 
 state={
 	id=72
-	name="STATE_72"
-	manpower = 12082
+
+	name="Oka Grove"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = SAM
+		owner = TAR
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = SAM
+		add_core_of = TAR
 	}
 
 	provinces={
-		573 574 1744 6337 6338 6339 6340 6341 6342 6343 6344 6345 6482 6651
+		2293 2295 4804 4806 6569 6574 6576 7312 7313 7315
 	}
 	local_supplies=0.0 
 }

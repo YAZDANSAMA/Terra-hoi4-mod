@@ -1,7 +1,7 @@
 
 state={
 	id=185
-	name="Iconium"
+	name="Adrianople"
 	manpower = 2906430
 	
 	state_category = pastoral
@@ -17,8 +17,8 @@ state={
 	}
 
 	history={
-						victory_points = { 13 1}
 		victory_points = { 11 3}
+		victory_points = { 13 1}
 		
 		owner = SAR
 		buildings = {
@@ -33,7 +33,7 @@ state={
 	}
 
 	provinces = {
-		2372 2373 2374 2375 5389 5699 5700 5701 5703 5705
+		417 1229 1230 1231 1232 1920 1921 1922 1923 1924 1925 1926 1927 4178 4179 4180 5587 6918 7550 7551 7552
 	}
 	local_supplies=0.0 
 }

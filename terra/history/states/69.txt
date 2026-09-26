@@ -1,8 +1,9 @@
 
 state={
 	id=69
-	name="STATE_69"
-	manpower = 12082
+
+	name="Haute Nord"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = SAM
+		owner = LGE
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = SAM
+		add_core_of = LGE
 	}
 
 	provinces={
-		553 554 2115 3584 3585 3587 3588 3589 3591
+		3133 3137 4218 4220 4224 4226 4227 4593 4596 4598 4601 4602 4604 5025 5027 5029 5035 5593 5594 5595 5596 5597 7981 7982
 	}
 	local_supplies=0.0 
 }

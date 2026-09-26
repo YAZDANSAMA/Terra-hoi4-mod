@@ -1,8 +1,8 @@
 state = {
     id = 101
     name="STATE_101"
-    manpower = 2152065
-    state_category = pastoral
+    manpower = 0
+    state_category = rural
 
     resources = {
         aluminium = 1
@@ -15,8 +15,8 @@ state = {
     }
 
     history = {
-        owner = BOL
-        add_core_of = BOL
+        owner = KAZ
+        add_core_of = KAZ
         buildings = {
             infrastructure = 1
             air_base = 1
@@ -24,7 +24,7 @@ state = {
     }
 
     provinces = {
-        582 583 584 586 587 589 590 591 592 593 594 595 1214 1218 6111 6123 6127 6130 6777 6778 6783
+        772 4079 4080 4081 4083 4085 4087 4091 4092 4094
     }
 
     local_supplies = 0

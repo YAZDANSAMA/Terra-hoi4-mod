@@ -2,7 +2,7 @@ state = {
     id = 116
     name="STATE_116"
     manpower = 0
-    state_category = rural
+    state_category = megalopolis
 
     resources = {
         aluminium = 1
@@ -15,9 +15,8 @@ state = {
     }
 
     history = {
-        victory_points = { 160 1}
-        owner = KAZ
-        add_core_of = KAZ
+        owner = YAN
+        add_core_of = YAN
         buildings = {
             infrastructure = 1
             air_base = 1
@@ -25,7 +24,7 @@ state = {
     }
 
     provinces = {
-        160 161 162 5528 5529 5530 5531 5532 5533 5534 5535 5536 5537 5539
+        56 57 58 59 60 61 62 63 826 837 838 2812 2813 2814 2815 2816 2817 4265 4266 4267 4268 4269 4270 4889 4894 5171 5172 5173 5175 5176 5179 5180 5181 5182
     }
 
     local_supplies = 0

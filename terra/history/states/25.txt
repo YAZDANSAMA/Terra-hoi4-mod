@@ -2,7 +2,7 @@
 state={
 	id=25
 
-	name="Yorwich"
+	name="Krasoskaya"
 	manpower = 7909
 	
 	state_category = small_island
@@ -20,7 +20,7 @@ state={
 	history={
 		victory_points = { 1 1}
 		
-		owner = VIC
+		owner = URS
 		buildings = {
 			infrastructure = 1
 			
@@ -29,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = VIC
+		add_core_of = URS
 	}
 
 	provinces={
-		
+		244 246 1704 2199 2200 2201 2203 2212 2213 2214 2217 2218 2219 2223 2228 2230 3094 3095 3096 3098 3099 3100 3101 3102 3104 3105 3554 5636 5637 5638 5639 5640 5641 5642 5643 5644 5645 5646
 	}
 	local_supplies=0.0 
 }

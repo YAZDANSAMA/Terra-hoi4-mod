@@ -1,7 +1,7 @@
 
 state={
 	id=190
-	name="Menat-Ha'mait"
+	name="Nicaea"
 	manpower = 2906430
 	
 	state_category = pastoral
@@ -19,8 +19,6 @@ state={
 	history={
 		victory_points = { 11 3}
 		victory_points = { 13 1}
-		victory_points = { 13 1}
-		victory_points = { 11 3}
 		
 		owner = SAR
 		buildings = {
@@ -35,7 +33,7 @@ state={
 	}
 
 	provinces = {
-		2120 2122 2123 2359 2365 3799 3800 5588 7349
+		1088 1089 1090 1092 1093 1172 1816 2551 2922 3668 3669 3670 3671 3672 4802 6626 6632 7779 8031 8032 8036 8039
 	}
 	local_supplies=0.0 
 }

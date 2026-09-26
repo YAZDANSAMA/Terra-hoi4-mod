@@ -1,31 +1,41 @@
-state = {
-    id = 178
-    name="STATE_178"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=178
+	name="Shushan"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = COL
-        add_core_of = COL
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        298 299 300 301 1306 1307 1310 1311 1313 1315 1319 1320 1321 3964 3965 3966 6072 6073 6075 6076 6077 6078 6079 6266 6267 6268
-    }
-
-    local_supplies = 0
+	provinces = {
+		1171 1173 2932 2933 2934 3429 3430 3565 3567 4765 4767 4771 5142 5143 5144 5199 5200 5202 5205 5206 5207 5270 5271 6408 7255 7256
+	}
+	local_supplies=0.0 
 }

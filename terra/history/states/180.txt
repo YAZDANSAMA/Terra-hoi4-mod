@@ -1,31 +1,41 @@
-state = {
-    id = 180
-    name="STATE_180"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=180
+	name="Aleppo"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = COL
-        add_core_of = COL
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        842 843 847 848 849 1731 1732 1733 2805 2806 2810 3540 3541 3542 3544 3545 5316 7580 7609 7610 7611 7612 7613
-    }
-
-    local_supplies = 0
+	provinces = {
+		1211 1212 2104 2108 2118 2119 2121 3798 3801 4532 4533 4534 4535 4536 4537 4538 4539 4540 4542 4543 4544 4545 4546 4547 4548 4549 7019 7020 7023
+	}
+	local_supplies=0.0 
 }

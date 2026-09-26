@@ -1,39 +1,31 @@
+state = {
+    id = 89
+    name="STATE_89"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=89
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Wallonia"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = LGE
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = LGE
-	}
+    provinces = {
+        362 363 364 365 1490 1493 3036 3037 3038 3039 3041 3042 3043 3044 3045 3046 3047 3048 3049 3050 3051 3052 4417 4420 4816 4817 4818 4819 4820 4821 4822 4823 4824 4846 4847 4848 4849 4850 4852 4853 4854 4855 4856 7135 7757 7758 7759 7760 7761 7762 7763
+    }
 
-	provinces={
-		2490 2491 2697 2698 2917 2918 5263
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

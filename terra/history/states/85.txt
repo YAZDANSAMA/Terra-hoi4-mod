@@ -1,39 +1,31 @@
+state = {
+    id = 85
+    name="STATE_85"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=85
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Lyon"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = LGE
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = LGE
-	}
+    provinces = {
+        4123 4124 4125 4126 4127 4128 4129 4130 4688 5099 5101 5102 5892 6099 6100 6103 6113 6117 6120 6124 6125 6126 6370 6371 6372 6373 6374 6375
+    }
 
-	provinces={
-		507 513 515 519 520 525 4084 4093 5261 5262 5264 5265
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

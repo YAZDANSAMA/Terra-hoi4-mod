@@ -1,8 +1,8 @@
 
 state={
 	id=57
-	name="Lupukarn"
-	manpower = 7270
+	name="Tessakabe"
+	manpower = 28400
 	
 	state_category = small_island
 	#impassable = yes
@@ -17,9 +17,8 @@ state={
 	}
 
 	history={
-		victory_points = { 151 1 }
 		
-		owner = LEI
+		owner = HIG
 		buildings = {
 			infrastructure = 1
 			air_base = 1
@@ -28,11 +27,11 @@ state={
 			
 			
 		}
-		add_core_of = LEI
+		add_core_of = HIG
 	}
 
 	provinces={
-		151 152 153 154 2494 2495 2496 2497 3568 3569 3570 3572 3573 3575 4343 4344 4345 4522 4527 4646 4647 4648 4649 4650 4651 4652 5184 5185 5186 5401 5402 5403 5404 5405 6009 6010 6011 6013 6014 6015 6016 6017 6018 6042 6043 6044 6261 6262 6263 6264 6265 7231 7232 7233 7884 7886 7887 7947
+		64 66 679 1233 1234 1235 1236 2532 2534 2535 3285 3286 3287 3288 4808
 	}
 	local_supplies=0.0 
 }

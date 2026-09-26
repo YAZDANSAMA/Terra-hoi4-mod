@@ -1,10 +1,10 @@
 
 state={
 	id=212
-	name="Memphis"
-	manpower = 2906430
+	name="Beja"
+	manpower = 1929167
 	
-	state_category = pastoral
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,23 +17,23 @@ state={
 	}
 
 	history={
-		victory_points = { 11 3}
-		victory_points = { 13 1}
+		victory_points = { 78 1}
+		victory_points = { 79 1}
 		
-		owner = SAR
+		owner = IBE
 		buildings = {
 			infrastructure = 1
-			
-			arms_factory = 1
+			air_base = 1
+			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = SAR
+		add_core_of = IBE
 	}
 
-	provinces = {
-		655 656 657 658 659 1575 1577 1578 1579 1580 1582 1584 1651 2309 2310 2311 2312 2313 2314 2316 3717 3719 3720 3721 3722 3724 3725 3729 6202 6203 6205 6207 6208 6209
+	provinces={
+		3640 3642 3643 3648 4984 4985 4986 4987 4988 4989 4990 4991 4992 4993 7767
 	}
 	local_supplies=0.0 
 }

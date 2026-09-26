@@ -1,7 +1,7 @@
 
 state={
 	id=198
-	name="Shushan"
+	name="Bursa"
 	manpower = 2906430
 	
 	state_category = pastoral
@@ -19,8 +19,6 @@ state={
 	history={
 		victory_points = { 11 3}
 		victory_points = { 13 1}
-		victory_points = { 13 1}
-		victory_points = { 11 3}
 		
 		owner = SAR
 		buildings = {
@@ -35,7 +33,7 @@ state={
 	}
 
 	provinces = {
-		1171 1173 2932 2933 2934 3429 3430 3565 3567 4765 4767 4771 5142 5143 5144 5199 5200 5202 5205 5206 5207 5270 5271 6408 7255 7256
+		4110 4167 4168 4170 4171 4172 4173 4174 4175 4176 4177 4296 4297 4299 4300 4302 4305 4307 4308 4309 4702
 	}
 	local_supplies=0.0 
 }

@@ -1,31 +1,39 @@
-state = {
-    id = 165
-    name="STATE_165"
-    manpower = 0
-    state_category = megalopolis
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=165
+	name="Iconium"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = YAN
-        add_core_of = YAN
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+						victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        4455 4459 4464 4466
-    }
-
-    local_supplies = 0
+	provinces = {
+		2372 2373 2374 2375 5389 5699 5700 5701 5703 5705
+	}
+	local_supplies=0.0 
 }

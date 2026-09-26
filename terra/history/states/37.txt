@@ -1,8 +1,8 @@
 
 state={
 	id=37
-	name="STATE_37"
-	manpower = 3141667
+	name="Silverash"
+	manpower = 3426717
 	
 	state_category = rural
 	#impassable = yes
@@ -17,28 +17,24 @@ state={
 	}
 
 	history={
-		victory_points = { 30 2}
-		victory_points = { 32 1}
-		victory_points = { 1380 1}
-		victory_points = { 1382 2}
+		victory_points = { 632 2}
+		victory_points = { 636 4}
+		victory_points = { 632 2}
 		
-		owner = COL
+		owner = KJE
 		buildings = {
 			infrastructure = 1
 			
-			arms_factory = 0
+			arms_factory = 1
 			industrial_complex = 0
 			
-			24 = {
-				naval_base = 1
-			}
 			
 		}
-		add_core_of = COL
+		add_core_of = KJE
 	}
 
 	provinces={
-
+		631 632 633 634 635 637 639 1817 1818 5417 5418 5419 5420 5421 5422 5423 5424 5425 6269 6270 6271 6272 6273 6274 6275 6785 6786 6787 7253 7254 7931
 	}
 	local_supplies=0.0 
 }

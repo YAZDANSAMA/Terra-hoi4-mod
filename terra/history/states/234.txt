@@ -1,39 +1,31 @@
+state = {
+    id = 234
+    name="STATE_234"
+    manpower = 0
+    state_category = small_island
 
-state={
-	id=234
-	name="Cuenca"
-	manpower = 1929167
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		victory_points = { 78 1}
-		victory_points = { 79 1}
-		
-		owner = IBE
-		buildings = {
-			infrastructure = 1
-			air_base = 1
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = IBE
-	}
+    history = {
+        owner = IBE
+        add_core_of = IBE
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		2767 2768 2769 2770 2771 2772 2773 2774 2775 2776 2778 2779 2780 2782 2783 3639 3641 3644 3645 3646 3647 3649 3650 3651 3652 3653 3654 3655 3656 6519 7525 7526 7527 7528 7529 7530
-	}
-	local_supplies=0.0 
+    provinces = {
+        8199
+    }
+
+    local_supplies = 0
 }

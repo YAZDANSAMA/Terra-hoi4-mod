@@ -1,41 +1,31 @@
+state = {
+    id = 223
+    name="STATE_223"
+    manpower = 0
+    state_category = rural
 
-state={
-	id=223
-	name="Leon"
-	manpower = 1929167
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		victory_points = { 78 1}
-		victory_points = { 79 1}
-		victory_points = { 79 1}
-		victory_points = { 78 1}
-		
-		owner = IBE
-		buildings = {
-			infrastructure = 1
-			air_base = 1
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = IBE
-	}
+    history = {
+        owner = SIR
+        add_core_of = SIR
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		78 79 80 81 82 83 2913 2914 2915 5606 5607 6136 6137 6138 6253 6254 6255 6256 7558 7562 7687 7690 7691
-	}
-	local_supplies=0.0 
+    provinces = {
+        89 90 93 1348 1349 1356 6737 6740 6744
+    }
+
+    local_supplies = 0
 }

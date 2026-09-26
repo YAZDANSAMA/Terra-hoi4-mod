@@ -1,39 +1,31 @@
+state = {
+    id = 94
+    name="STATE_94"
+    manpower = 0
+    state_category = rural
 
-state={
-	id=94
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="King Gaeil's Castle"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = KAZ
+        add_core_of = KAZ
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = TAR
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = TAR
-	}
+    provinces = {
+        770 771 1517 2579 4731
+    }
 
-	provinces={
-		6565 6566 6567 6570 6575 7316
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

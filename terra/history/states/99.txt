@@ -1,27 +1,31 @@
 state = {
     id = 99
-    name="Shmyrsky"
+    name="STATE_99"
     manpower = 0
-    state_category = wasteland
+    state_category = rural
 
-   history={
-		victory_points = { 1 1}
-		
-		owner = URS
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = URS
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
+
+    history = {
+        owner = KAZ
+        add_core_of = KAZ
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
     provinces = {
-		955 956 957 958 959 3187 3188 3189 3190 6144 6145 6146 6244 6245 6246 6248 6249 6250 6252
-	}
+        1516 1521 2206 2210 2211 2215 2220 2222 2225
+    }
 
     local_supplies = 0
 }

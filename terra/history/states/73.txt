@@ -1,8 +1,9 @@
 
 state={
 	id=73
-	name="STATE_73"
-	manpower = 12082
+
+	name="Na Saoirsí"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = SAM
+		owner = TAR
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = SAM
+		add_core_of = TAR
 	}
 
 	provinces={
-		579 580 6377 6378 6480 6481 6483
+		878 879 880
 	}
 	local_supplies=0.0 
 }

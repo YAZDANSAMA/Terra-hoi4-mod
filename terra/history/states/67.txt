@@ -1,8 +1,9 @@
 
 state={
 	id=67
-	name="Athenius"
-	manpower = 283159
+
+	name="Cherdeaux"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = MIN
+		owner = LGE
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = MIN
+		add_core_of = LGE
 	}
 
 	provinces={
-		349 350 4920 4921 7406
+		2202 2204 2205 2207 2208 2209 2216 2221 2224 2229 2231 2232 2233 4594 4595 4599 4603
 	}
 	local_supplies=0.0 
 }

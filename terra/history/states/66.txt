@@ -1,8 +1,9 @@
 
 state={
 	id=66
-	name="Caprania"
-	manpower = 7270
+
+	name="Lyon"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,28 +12,28 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
-		victory_points = { 1670 1 }
+		victory_points = { 1 1}
 		
-		owner = LEI
+		owner = LGE
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
 			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = LEI
+		add_core_of = LGE
 	}
 
 	provinces={
-		1670 1671 1672 1673 1674 2049 2050 2051 2052 2053 2054 2055 2056 2057 2058 2059 5456 5459 5460 5462 5464 5467 6591
+		507 513 515 519 520 525 4084 4093 5261 5262 5264 5265
 	}
 	local_supplies=0.0 
 }

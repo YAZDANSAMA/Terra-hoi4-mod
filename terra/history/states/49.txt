@@ -1,10 +1,10 @@
 
 state={
 	id=49
-	name="Arthuria"
-	manpower = 3311516
+	name="Athenius"
+	manpower = 283159
 	
-	state_category = large_city
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,28 +17,21 @@ state={
 	}
 
 	history={
-		victory_points = { 37 3}
-		victory_points = { 38 3}
-		victory_points = { 41 3}
-		victory_points = { 43 2}
 		
-		owner = RIM
+		owner = MIN
 		buildings = {
-			infrastructure = 3
-			air_base = 1
-			arms_factory = 1
+			infrastructure = 1
+			
+			arms_factory = 0
 			industrial_complex = 0
-			dockyard = 1
-			41 = {
-				naval_base = 1
-			}
+			
 			
 		}
-		add_core_of = RIM
+		add_core_of = MIN
 	}
 
 	provinces={
-		485 486 487 488 489 490 491 492 493 494 1240 1241 1243 1244 1245 1246 1247 1248 1249 1250 2945 2946 2947 2948 3122 3131 3829 3834 4257 4258 5818 5819 5820 5821 6492 6493 6494 6495 6496 6502 6504 6505 6708 6709 6710 6711 6712 6713 6714 6715 7049 7060 7619 7620 7621 7622 7729 7730 7731 7732 7733 7734 7735 7736 7737 7738 7739 7740 7741
+		349 350 4920 4921 7406
 	}
 	local_supplies=0.0 
 }

@@ -1,39 +1,33 @@
+state = {
+    id = 228
+    name="STATE_228"
+    manpower = 0
+    state_category = rural
 
-state={
-	id=228
-	name="Coimbra"
-	manpower = 1929167
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		victory_points = { 78 1}
-		victory_points = { 79 1}
-		
-		owner = IBE
-		buildings = {
-			infrastructure = 1
-			air_base = 1
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = IBE
-	}
+    history = {
+        victory_points = { 92 6}
+        victory_points = { 94 4}
+        owner = SIR
+        add_core_of = SIR
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		1020 2836 3055 3056 3057 3058 3059 3060 3061 4159 4160 4161 4162 4163 4164 4165 4166 7381 7382 7383 7384 7385 7556 7557 7559 7560 7561 7843 7844
-	}
-	local_supplies=0.0 
+    provinces = {
+        91 92 94 2141 2142 2145 2146 2149 3596 3603 5993 5994 5995 5996 5998 6741 6745
+    }
+
+    local_supplies = 0
 }

@@ -2,7 +2,7 @@ state = {
     id = 122
     name="STATE_122"
     manpower = 0
-    state_category = rural
+    state_category = megalopolis
 
     resources = {
         aluminium = 1
@@ -15,8 +15,8 @@ state = {
     }
 
     history = {
-        owner = KAZ
-        add_core_of = KAZ
+        owner = YAN
+        add_core_of = YAN
         buildings = {
             infrastructure = 1
             air_base = 1
@@ -24,7 +24,7 @@ state = {
     }
 
     provinces = {
-        1518 1519 4728 4729 4730 4732 4734
+        6874
     }
 
     local_supplies = 0

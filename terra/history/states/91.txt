@@ -1,39 +1,31 @@
+state = {
+    id = 91
+    name="STATE_91"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=91
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Oka Grove"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = TAR
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = TAR
-	}
+    provinces = {
+        3040
+    }
 
-	provinces={
-		2293 2295 4804 4806 6569 6574 6576 7312 7313 7315
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

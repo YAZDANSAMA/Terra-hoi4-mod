@@ -1,37 +1,27 @@
+state = {
+    id = 79
+    name="Shmyrsky"
+    manpower = 0
+    state_category = wasteland
 
-state={
-	id=79
-	name="Amakusa"
-	manpower = 28400
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
-
-	history={
+   history={
+		victory_points = { 1 1}
 		
-		owner = HIG
+		owner = URS
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
 			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = HIG
+		add_core_of = URS
 	}
 
-	provinces={
-		376 377 2140 2341 2342 3618 4044 4045 4553 4554
+    provinces = {
+		955 956 957 958 959 3187 3188 3189 3190 6144 6145 6146 6244 6245 6246 6248 6249 6250 6252
 	}
-	local_supplies=0.0 
+
+    local_supplies = 0
 }

@@ -1,8 +1,9 @@
 
 state={
 	id=70
-	name="STATE_70"
-	manpower = 12082
+
+	name="Wallonia"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = SAM
+		owner = LGE
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = SAM
+		add_core_of = LGE
 	}
 
 	provinces={
-		3586 3590 3592 4643 4644 4645 6069
+		2490 2491 2697 2698 2917 2918 5263
 	}
 	local_supplies=0.0 
 }

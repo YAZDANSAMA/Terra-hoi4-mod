@@ -1,31 +1,41 @@
-state = {
-    id = 177
-    name="STATE_177"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=177
+	name="Kayseri"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = COL
-        add_core_of = COL
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        307 308 309 310 311 312 313 314 841 846 2669 2804 2807 2808 2809 2811 4858 5561 6903 6904 6905 7444 7445 7617
-    }
-
-    local_supplies = 0
+	provinces = {
+		5201 5203 5204 7140 7141 7142 7143 7144 7145 7146 7147 7148 7149 7150
+	}
+	local_supplies=0.0 
 }

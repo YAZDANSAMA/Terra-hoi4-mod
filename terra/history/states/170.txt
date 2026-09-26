@@ -1,31 +1,41 @@
-state = {
-    id = 170
-    name="STATE_170"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=170
+	name="Menat-Ha'mait"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = COL
-        add_core_of = COL
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        410 411 1072 1073 1074 1075 1076 1077 1078 1802 1803 1804 1805 1946 1947 1949 1952 1953 3119 3120 3121 3790 3791 3793 3794 3795 3796 4885 5020 5021 5388 6036 6162 6238 6431 6432 6654 7234 7569 7705 7706 7707 7708 7710
-    }
-
-    local_supplies = 0
+	provinces = {
+		2120 2122 2123 2359 2365 3799 3800 5588 7349
+	}
+	local_supplies=0.0 
 }

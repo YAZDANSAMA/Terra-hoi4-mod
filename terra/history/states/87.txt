@@ -1,39 +1,31 @@
+state = {
+    id = 87
+    name="STATE_87"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=87
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Calais"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = LGE
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = LGE
-	}
+    provinces = {
+        712 713 714 791 792 793 794 795 796 797 798 799 800 945 946 947 948 949 950 951 952 953 954 2040 2699 2700 2701 2702 2703 2704 2705 2706 2707 2708 4131 4132 4133 7180 7182 7183 7185 7188 7190 7191 7192 7194 7197 7202 7367 7368 7369 7370 7371 7372 7373 7429 7430 7431 7432 7433 7434 7436 7437
+    }
 
-	provinces={
-		506 508 518 521 522 523 524 4082 4086 4090
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

@@ -1,10 +1,10 @@
 
 state={
 	id=213
-	name="Trebizond"
-	manpower = 2906430
+	name="Cuenca"
+	manpower = 1929167
 	
-	state_category = pastoral
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,23 +17,23 @@ state={
 	}
 
 	history={
-		victory_points = { 11 3}
-		victory_points = { 13 1}
+		victory_points = { 78 1}
+		victory_points = { 79 1}
 		
-		owner = SAR
+		owner = IBE
 		buildings = {
 			infrastructure = 1
-			
-			arms_factory = 1
+			air_base = 1
+			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = SAR
+		add_core_of = IBE
 	}
 
-	provinces = {
-		997 999 2060 2063 2065 3337 3339 4295 4306 4696 4697 4699 4700 4701 4704 4705 4706 4707 4708 5826 5833 6727
+	provinces={
+		2767 2768 2769 2770 2771 2772 2773 2774 2775 2776 2778 2779 2780 2782 2783 3639 3641 3644 3645 3646 3647 3649 3650 3651 3652 3653 3654 3655 3656 6519 7525 7526 7527 7528 7529 7530
 	}
 	local_supplies=0.0 
 }

@@ -1,8 +1,8 @@
 
 state={
 	id=61
-	name="Erdenherre"
-	manpower = 7270
+	name="Amakusa"
+	manpower = 28400
 	
 	state_category = small_island
 	#impassable = yes
@@ -17,9 +17,8 @@ state={
 	}
 
 	history={
-		victory_points = { 20 1 }
 		
-		owner = LEI
+		owner = HIG
 		buildings = {
 			infrastructure = 1
 			air_base = 1
@@ -28,11 +27,11 @@ state={
 			
 			
 		}
-		add_core_of = LEI
+		add_core_of = HIG
 	}
 
 	provinces={
-		20 2239 3194 5267 7913 7914 7915
+		376 377 2140 2341 2342 3618 4044 4045 4553 4554
 	}
 	local_supplies=0.0 
 }

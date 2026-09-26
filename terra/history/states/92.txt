@@ -1,39 +1,31 @@
+state = {
+    id = 92
+    name="STATE_92"
+    manpower = 2152065
+    state_category = pastoral
 
-state={
-	id=92
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	name="Na Saoirsí"
-	manpower = 7909
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=6
-		tungsten=0
-		coal=0
-	}
+    history = {
+        owner = BOL
+        add_core_of = BOL
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	history={
-		victory_points = { 1 1}
-		
-		owner = TAR
-		buildings = {
-			infrastructure = 1
-			
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = TAR
-	}
+    provinces = {
+        2737
+    }
 
-	provinces={
-		878 879 880
-	}
-	local_supplies=0.0 
+    local_supplies = 0
 }

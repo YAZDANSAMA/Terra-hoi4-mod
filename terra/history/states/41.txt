@@ -1,10 +1,10 @@
 
 state={
 	id=41
-	name="STATE_41"
-	manpower = 3141667
+	name="Lupukarn"
+	manpower = 7270
 	
-	state_category = rural
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,27 +17,22 @@ state={
 	}
 
 	history={
-		victory_points = { 30 2}
-		victory_points = { 32 1}
-		victory_points = { 1380 1}
-		victory_points = { 1382 2}
+		victory_points = { 151 1 }
 		
-		owner = COL
+		owner = LEI
 		buildings = {
 			infrastructure = 1
-			
+			air_base = 1
 			arms_factory = 0
 			industrial_complex = 0
 			
-			24 = {
-				naval_base = 1
-			}
 			
 		}
-		add_core_of = COL
+		add_core_of = LEI
 	}
 
 	provinces={
+		151 152 153 154 2494 2495 2496 2497 3568 3569 3570 3572 3573 3575 4343 4344 4345 4522 4527 4646 4647 4648 4649 4650 4651 4652 5184 5185 5186 5401 5402 5403 5404 5405 6009 6010 6011 6013 6014 6015 6016 6017 6018 6042 6043 6044 6261 6262 6263 6264 6265 7231 7232 7233 7884 7886 7887 7947
 	}
 	local_supplies=0.0 
 }

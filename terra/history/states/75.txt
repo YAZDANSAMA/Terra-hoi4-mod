@@ -1,8 +1,9 @@
 
 state={
 	id=75
-	name="Tessakabe"
-	manpower = 28400
+
+	name="King Gaeil's Castle"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,27 +12,28 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = HIG
+		owner = TAR
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
 			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = HIG
+		add_core_of = TAR
 	}
 
 	provinces={
-		64 66 679 1233 1234 1235 1236 2532 2534 2535 3285 3286 3287 3288 4808
+		6565 6566 6567 6570 6575 7316
 	}
 	local_supplies=0.0 
 }

@@ -1,8 +1,9 @@
 
 state={
 	id=76
-	name="Yajio"
-	manpower = 28400
+
+	name="Hillock"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,27 +12,28 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = HIG
+		owner = TAR
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
 			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = HIG
+		add_core_of = TAR
 	}
 
 	provinces={
-		65 439 680 3606 3607 3608 4809 4880 4881 6151 6152 7077
+		1299 1303 2675 2676 2678 2679 6573 7314 7318 7319
 	}
 	local_supplies=0.0 
 }

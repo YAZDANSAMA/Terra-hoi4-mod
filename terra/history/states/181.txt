@@ -1,31 +1,39 @@
-state = {
-    id = 181
-    name="STATE_181"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=181
+	name="Abydos"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = COL
-        add_core_of = COL
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        6902
-    }
-
-    local_supplies = 0
+	provinces = {
+		2477 2482 2483 2484 2487 2488 2489 3566 5148 5149 5150 5151 5152 5154 5208 5287 5288 5289 7742 7743 7744 7745 7746 7747 7748 7749 7750 7751 7752
+	}
+	local_supplies=0.0 
 }

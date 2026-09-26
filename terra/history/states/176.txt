@@ -1,31 +1,41 @@
-state = {
-    id = 176
-    name="STATE_176"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=176
+	name="Bishapur"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = COL
-        add_core_of = COL
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        320 1112 1113 1116 1118 2747 3462 3463 3464 3465 3466 3467 3469 3792 6035 6037
-    }
-
-    local_supplies = 0
+	provinces = {
+		969 970 971 1508 1509 1512 1513 1514 2261 3213 3215 3217 3220 3222 3223 3227 3532 3533 3534 3535 3536 3849 3853 4031 4032 4564 4565 4568 4668 4669 4670 4671 4672 4673 4674 4762 5732 5733 5734 5735 5736 5738 7344 7345 7408 7409 7410 7411 7412 7413 7414 7415 7416 7417 7418 7936 7937 7938 7939 7940 7941 7942
+	}
+	local_supplies=0.0 
 }

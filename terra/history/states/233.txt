@@ -1,39 +1,31 @@
+state = {
+    id = 233
+    name="STATE_233"
+    manpower = 0
+    state_category = rural
 
-state={
-	id=233
-	name="Beja"
-	manpower = 1929167
-	
-	state_category = small_island
-	#impassable = yes
-	resources={
-		aluminium=0
-		chromium=0
-		oil=0
-		rubber=0
-		steel=0
-		tungsten=0
-		coal=0
-	}
+    resources = {
+        aluminium = 1
+        chromium = 1
+        oil = 1
+        rubber = 1
+        steel = 1
+        tungsten = 1
+        coal = 1
+    }
 
-	history={
-		victory_points = { 78 1}
-		victory_points = { 79 1}
-		
-		owner = IBE
-		buildings = {
-			infrastructure = 1
-			air_base = 1
-			arms_factory = 0
-			industrial_complex = 0
-			
-			
-		}
-		add_core_of = IBE
-	}
+    history = {
+        owner = SIR
+        add_core_of = SIR
+        buildings = {
+            infrastructure = 1
+            air_base = 1
+        }
+    }
 
-	provinces={
-		3640 3642 3643 3648 4984 4985 4986 4987 4988 4989 4990 4991 4992 4993 7767
-	}
-	local_supplies=0.0 
+    provinces = {
+        3601
+    }
+
+    local_supplies = 0
 }

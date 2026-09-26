@@ -1,8 +1,9 @@
 
 state={
 	id=14
-	name="STATE_14"
-	manpower = 12082
+
+	name="Lingones"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = SAM
+		owner = LGE
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = SAM
+		add_core_of = LGE
 	}
 
 	provinces={
-		6067 6068 6070 6071 7227
+		2226 2565 2566 2567
 	}
 	local_supplies=0.0 
 }

@@ -1,10 +1,10 @@
 
 state={
 	id=53
-	name="Silverash"
-	manpower = 3426717
+	name="STATE_53"
+	manpower = 12082
 	
-	state_category = rural
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,24 +17,21 @@ state={
 	}
 
 	history={
-		victory_points = { 632 2}
-		victory_points = { 636 4}
-		victory_points = { 632 2}
 		
-		owner = KJE
+		owner = SAM
 		buildings = {
 			infrastructure = 1
 			
-			arms_factory = 1
+			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = KJE
+		add_core_of = SAM
 	}
 
 	provinces={
-		631 632 633 634 635 637 639 1817 1818 5417 5418 5419 5420 5421 5422 5423 5424 5425 6269 6270 6271 6272 6273 6274 6275 6785 6786 6787 7253 7254 7931
+		1735 1736 1737 1738 1739 1740 1741 1742 1743 1745 2600 3441 6652 6653 
 	}
 	local_supplies=0.0 
 }

@@ -1,10 +1,10 @@
 
 state={
 	id=216
-	name="Long Spring"
-	manpower = 2906430
+	name="Evora"
+	manpower = 1929167
 	
-	state_category = pastoral
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,23 +17,23 @@ state={
 	}
 
 	history={
-		victory_points = { 11 3}
-		victory_points = { 13 1}
+		victory_points = { 78 1}
+		victory_points = { 79 1}
 		
-		owner = SAR
+		owner = IBE
 		buildings = {
 			infrastructure = 1
-			
-			arms_factory = 1
+			air_base = 1
+			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = SAR
+		add_core_of = IBE
 	}
 
-	provinces = {
-		1087 1091 1644 1645 1646 1647 1648 1649 1650 2536 2537 6204 6206 6210 6404 6405 6406 6407 6624 6628 6629 6631 7224 7225 7226 7627 7632
+	provinces={
+		2422 2423 2428 5161 5162 5163 5164 5165 5166 5167 5168 5169 5170 5567 5568 5569 5570 5571 5572 5573 5574 5575 7123 7125 7126 7127
 	}
 	local_supplies=0.0 
 }

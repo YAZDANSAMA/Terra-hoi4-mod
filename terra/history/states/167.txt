@@ -1,31 +1,39 @@
-state = {
-    id = 167
-    name="STATE_167"
-    manpower = 0
-    state_category = megalopolis
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=167
+	name="Philae"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        owner = YAN
-        add_core_of = YAN
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        174 1552 1553 1554 1557 1559 1562 1932 1933 1936 1940 4683 4684 4685 5671 5674 6552 6555 6556 6557 6559 6560 6875 6877 6880 6881 7092 7093 7094 7095 7096 7097 7099 7100 7101 7103 7107 7109 7110 7111 7113 7815 7816 7817 7818 7819 7820 7821
-    }
-
-    local_supplies = 0
+	provinces = {
+		19 996 998 1405 1406 1407 1408 1409 1410 1411 1412 1413 2305 2307 2308 2620 2621 2622 2623 2624 2625 2626 3335 3336 3340 4117 4118 4119 4120 4391 4395 4397 4398 4607 4703 4937 5046 5049 5050 5052 5482 5824 5825 6288 6289 6748 6749 6750 6751 6752 6859 6860 6863 6864 6865 6867 6869 6871
+	}
+	local_supplies=0.0 
 }

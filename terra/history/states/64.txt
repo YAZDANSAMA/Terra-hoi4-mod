@@ -1,8 +1,9 @@
 
 state={
 	id=64
-	name="Wasserland"
-	manpower = 7270
+
+	name="Occuitaine"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,27 +12,28 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = LEI
+		owner = LGE
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
 			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = LEI
+		add_core_of = LGE
 	}
 
 	provinces={
-		
+		775 778 2916 4088 5260 5266
 	}
 	local_supplies=0.0 
 }

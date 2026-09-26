@@ -1,40 +1,39 @@
 
 state={
 	id=16
-	name="STATE_16"
-	manpower = 1060865
+
+	name="Conor"
+	manpower = 7909
 	
-	state_category = pastoral
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		
-		
-		
-		owner = SIR
+		owner = VIC
 		buildings = {
 			infrastructure = 1
 			
 			arms_factory = 0
-			industrial_complex = 1
+			industrial_complex = 0
 			
 			
 		}
-		add_core_of = SIR
+		add_core_of = VIC
 	}
 
 	provinces={
-		
+		722 726 727 728 730 731 2376 2380 2381 2382 2384 2385 2386 3341 3342 3343 3345 3349 3354 3357 3359 3360 3361 3362 3363 3364 3365 3368 3369 3370 3375 3376 5945 5946 5948 8072 8074 8075
 	}
 	local_supplies=0.0 
 }

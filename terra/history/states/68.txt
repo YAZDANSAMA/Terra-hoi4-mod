@@ -1,8 +1,9 @@
 
 state={
 	id=68
-	name="Lachedamon"
-	manpower = 283159
+
+	name="Calais"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,14 +12,15 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
 		
-		owner = MIN
+		owner = LGE
 		buildings = {
 			infrastructure = 1
 			
@@ -27,11 +29,11 @@ state={
 			
 			
 		}
-		add_core_of = MIN
+		add_core_of = LGE
 	}
 
 	provinces={
-		467 468 469 470 471 472 6729 6730 6731 6732 7017 7018 7021 7022 7024 7025 7026 7027
+		506 508 518 521 522 523 524 4082 4086 4090
 	}
 	local_supplies=0.0 
 }

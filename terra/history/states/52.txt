@@ -1,10 +1,10 @@
 
 state={
 	id=52
-	name="Hoff Angrsaal"
-	manpower = 3426717
+	name="STATE_52"
+	manpower = 12082
 	
-	state_category = rural
+	state_category = small_island
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,23 +17,21 @@ state={
 	}
 
 	history={
-		victory_points = { 632 2}
-		victory_points = { 636 4}
 		
-		owner = KJE
+		owner = SAM
 		buildings = {
 			infrastructure = 1
 			
-			arms_factory = 1
+			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = KJE
+		add_core_of = SAM
 	}
 
 	provinces={
-		4311 4312 7929 7930
+		3586 3590 3592 4643 4644 4645 6069
 	}
 	local_supplies=0.0 
 }

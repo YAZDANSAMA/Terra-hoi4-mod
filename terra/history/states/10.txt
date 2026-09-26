@@ -1,10 +1,10 @@
 
 state={
 	id=10
-	name="Browntail"
-	manpower = 3426717
+	name="Kazdel"
+	manpower = 2792936
 	
-	state_category = rural
+	state_category = large_city
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -20,20 +20,20 @@ state={
 		
 		
 		
-		owner = KJE
+		owner = KZL
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 			
 			arms_factory = 1
-			industrial_complex = 0
+			industrial_complex = 1
 			
 			
 		}
-		add_core_of = KJE
+		add_core_of = KZL
 	}
 
 	provinces={
-		1437 1438 3673 4310 4313 4723 4870 4871 4872 4873 5187 5188 5427 5428 5429 5683 5684 5685 6236 6237 6928 6929 7932
+		454 455 457 459 466 3304 3306 3308 3310
 	}
 	local_supplies=0.0 
 }

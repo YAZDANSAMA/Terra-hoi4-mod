@@ -1,8 +1,8 @@
 
 state={
 	id=77
-	name="Isazaki"
-	manpower = 28400
+	name="Amurskaya"
+	manpower = 7909
 	
 	state_category = small_island
 	#impassable = yes
@@ -11,27 +11,29 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=6
 		tungsten=0
 		coal=0
 	}
 
 	history={
+		victory_points = { 1 1}
+		victory_points = { 1 1}
 		
-		owner = HIG
+		owner = URS
 		buildings = {
 			infrastructure = 1
-			air_base = 1
+			
 			arms_factory = 0
 			industrial_complex = 0
 			
 			
 		}
-		add_core_of = HIG
+		add_core_of = URS
 	}
 
 	provinces={
-		434 435 436 437 438 4886 4887 5484 5485 7457 7458
+		1 139 384 386 387 388 389 390 391 1734 2429 2430 2431 2432 2970 2971 2972 3500 3501 3502 4134 5494 5499 5503 5508 5960 6003 6004 6006 6007 6008 6247 6251 7532 8027
 	}
 	local_supplies=0.0 
 }

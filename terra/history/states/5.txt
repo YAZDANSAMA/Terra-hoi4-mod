@@ -1,10 +1,10 @@
 
 state={
 	id=5
-	name="STATE_5"
-	manpower = 1929167
+	name="New South Hornwell"
+	manpower = 3311516
 	
-	state_category = small_island
+	state_category = large_city
 	#impassable = yes
 	resources={
 		aluminium=0
@@ -17,23 +17,28 @@ state={
 	}
 
 	history={
+		victory_points = { 37 3}
+		victory_points = { 38 3}
+		victory_points = { 41 3}
+		victory_points = { 43 2}
 		
-		
-		
-		owner = IBE
+		owner = RIM
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 			air_base = 1
-			arms_factory = 0
+			arms_factory = 1
 			industrial_complex = 0
-			
+			dockyard = 1
+			41 = {
+				naval_base = 1
+			}
 			
 		}
-		add_core_of = IBE
+		add_core_of = RIM
 	}
 
 	provinces={
-		
+		104 105 106 107 440 441 442 443 610 892 893 894 895 896 897 1190 1192 1193 1194 1195 1268 1272 1361 1362 1363 1364 1365 1842 1843 1844 1845 1846 2558 2559 2560 3130 3247 3248 4947 4948 4949 4950 4951 4952 5155 5156 5158 5160 5317 5318 5319 5320 5321 5624 5625 5626 5627 5628 5629 5630 6163 6164 6165 6433 6434 6435 6436 6437 6438 6503 6506 6924 6925 6926 7880 7881 7882 7883 7954 7957 7958 7959
 	}
 	local_supplies=0.0 
 }

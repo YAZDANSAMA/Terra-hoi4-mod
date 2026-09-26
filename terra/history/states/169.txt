@@ -1,34 +1,43 @@
-state = {
-    id = 169
-    name="STATE_169"
-    manpower = 0
-    state_category = rural
 
-    resources = {
-        aluminium = 1
-        chromium = 1
-        oil = 1
-        rubber = 1
-        steel = 1
-        tungsten = 1
-        coal = 1
-    }
+state={
+	id=169
+	name="Tarsus"
+	manpower = 2906430
+	
+	state_category = pastoral
+	#impassable = yes
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+		coal=0
+	}
 
-    history = {
-        
-        
-        owner = SIE
-        add_core_of = COL
-        add_core_of = SIE
-        buildings = {
-            infrastructure = 1
-            air_base = 1
-        }
-    }
+	history={
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		victory_points = { 13 1}
+		victory_points = { 11 3}
+		
+		owner = SAR
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		add_core_of = SAR
+	}
 
-    provinces = {
-        1378 1383 2369 2370 2371 3388 3389 3390 3841 3842 3843 6526 6527 6528 6529 7648 7649 7650 7651
-    }
-
-    local_supplies = 0
+	provinces = {
+		9 10 11 12 13 14 15 16 17 916 918 920 921 923 925 1414 1417 2478 2479 2480 2481 2485 2486 2611 2612 2613 2618 6830
+	}
+	local_supplies=0.0 
 }
