@@ -1,0 +1,19 @@
+state = {
+	id = 170
+	name = "Menat-Ha'mait"
+	manpower = 2906430
+	state_category = rural
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		2120 2122 2123 2359 2365 3799 3800 5588 7349
+	}
+	local_supplies = 0.0
+}

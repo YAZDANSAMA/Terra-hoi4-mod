@@ -1,0 +1,20 @@
+state = {
+	id = 185
+	name = "Adrianople"
+	manpower = 2906430
+	state_category = rural
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		417 1229 1230 1231 1232 1920 1921 1922 1923 1924 1925 1926 1927 4178 4179 4180 5587 6918 7550 7551
+		7552
+	}
+	local_supplies = 0.0
+}

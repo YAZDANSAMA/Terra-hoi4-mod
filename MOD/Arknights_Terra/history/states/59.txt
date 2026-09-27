@@ -1,0 +1,19 @@
+state = {
+	id = 59
+	name = "Isazaki"
+	manpower = 28400
+	state_category = rural
+
+	history = {
+		owner = HGS
+		add_core_of = HGS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		434 435 436 437 438 4886 4887 5484 5485 7457 7458
+	}
+	local_supplies = 0.0
+}

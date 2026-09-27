@@ -1,0 +1,19 @@
+state = {
+	id = 124
+	name = "STATE_124"
+	manpower = 1
+	state_category = small_island
+
+	history = {
+		owner = YAN
+		add_core_of = YAN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		8201 8202 8203 8204 8205
+	}
+	local_supplies = 0.0
+}

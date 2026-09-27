@@ -1,0 +1,16 @@
+# Boot-safe minimal history for Kazdel
+capital = 10
+
+
+recruit_character = KZD_interim_leader
+set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+}
+
+set_popularities = {
+    democratic = 2
+    fascism = 43
+    communism = 11
+    neutrality = 44
+}

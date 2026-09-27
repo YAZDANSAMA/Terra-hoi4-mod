@@ -1,0 +1,19 @@
+state = {
+	id = 36
+	name = "Hoff Angrsaal"
+	manpower = 3426717
+	state_category = rural
+
+	history = {
+		owner = KJG
+		add_core_of = KJG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		4311 4312 7929 7930
+	}
+	local_supplies = 0.0
+}

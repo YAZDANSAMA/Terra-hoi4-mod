@@ -1,0 +1,67 @@
+focus_tree = {
+    id = TERRA_GENERIC_FOCUS
+    country = {
+        factor = 1
+    }
+    default = yes
+    reset_on_civilwar = no
+
+    focus = {
+        id = TERRA_rebuild_the_realm
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 0
+        y = 0
+        cost = 10
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.02
+        }
+    }
+
+    focus = {
+        id = TERRA_reorganize_the_army
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = TERRA_rebuild_the_realm }
+        relative_position_id = TERRA_rebuild_the_realm
+        x = -1
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            army_experience = 10
+        }
+    }
+
+    focus = {
+        id = TERRA_develop_industry
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = TERRA_rebuild_the_realm }
+        relative_position_id = TERRA_rebuild_the_realm
+        x = 1
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            add_political_power = 25
+        }
+    }
+}

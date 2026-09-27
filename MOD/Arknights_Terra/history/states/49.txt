@@ -1,0 +1,19 @@
+state = {
+	id = 49
+	name = "Athenius"
+	manpower = 283159
+	state_category = rural
+
+	history = {
+		owner = MNS
+		add_core_of = MNS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		349 350 4920 4921 7406
+	}
+	local_supplies = 0.0
+}

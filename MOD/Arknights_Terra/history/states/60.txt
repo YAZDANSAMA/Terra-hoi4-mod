@@ -1,0 +1,19 @@
+state = {
+	id = 60
+	name = "Gokawa"
+	manpower = 28400
+	state_category = rural
+
+	history = {
+		owner = HGS
+		add_core_of = HGS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		221 225 1375 1376 3266 3496 6747 7044 7949
+	}
+	local_supplies = 0.0
+}

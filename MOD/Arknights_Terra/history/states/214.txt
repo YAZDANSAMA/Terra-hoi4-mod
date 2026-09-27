@@ -1,0 +1,19 @@
+state = {
+	id = 214
+	name = "Elvas"
+	manpower = 1929167
+	state_category = rural
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		963 2419 2420 2421 2424 2425 2426 2427 7207 8195 8213 8215 8221 8238 8246
+	}
+	local_supplies = 0.0
+}

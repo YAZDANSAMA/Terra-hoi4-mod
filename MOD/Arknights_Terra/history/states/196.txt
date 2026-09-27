@@ -1,0 +1,19 @@
+state = {
+	id = 196
+	name = "Susa"
+	manpower = 2906430
+	state_category = rural
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		405 406 407 408 409 418 4763 4766 4768 4769 4770 5559 7570 7571 7572 7573 7574 7575 7576
+	}
+	local_supplies = 0.0
+}

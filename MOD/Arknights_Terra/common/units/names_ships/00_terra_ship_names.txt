@@ -1,0 +1,24 @@
+TERRA_SHIP_NAMES = {
+    name = "Terra Fleet"
+    for_countries = { AGI BLV CLM HGS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SST SRC URS VCT YAN TRR LGL }
+    type = ship
+    ship_types = {
+        ship_hull_light destroyer
+        ship_hull_cruiser light_cruiser heavy_cruiser
+        ship_hull_heavy battleship battle_cruiser
+        ship_hull_carrier carrier
+        ship_hull_submarine submarine
+    }
+    prefix = ""
+    fallback_name = "Terra Warship %d"
+    unique = {
+        "Radiant"
+        "Tempest"
+        "Vanguard"
+        "Nomad"
+        "Catastrophe"
+        "Silver Lance"
+        "Iron Crown"
+        "Dawn"
+    }
+}

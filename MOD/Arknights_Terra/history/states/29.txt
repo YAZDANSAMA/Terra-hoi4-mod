@@ -1,0 +1,19 @@
+state = {
+	id = 29
+	name = "Northern Kolossal"
+	manpower = 7909
+	state_category = rural
+
+	history = {
+		owner = URS
+		add_core_of = URS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		7449 2181 4501 4502
+	}
+	local_supplies = 0.0
+}

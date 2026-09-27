@@ -1,0 +1,19 @@
+state = {
+	id = 92
+	name = "STATE_92"
+	manpower = 2152065
+	state_category = rural
+
+	history = {
+		owner = BLV
+		add_core_of = BLV
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		2737
+	}
+	local_supplies = 0.0
+}

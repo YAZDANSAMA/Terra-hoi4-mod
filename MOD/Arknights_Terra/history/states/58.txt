@@ -1,0 +1,19 @@
+state = {
+	id = 58
+	name = "Yajio"
+	manpower = 28400
+	state_category = rural
+
+	history = {
+		owner = HGS
+		add_core_of = HGS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		65 439 680 3606 3607 3608 4809 4880 4881 6151 6152 7077
+	}
+	local_supplies = 0.0
+}

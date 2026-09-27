@@ -1,0 +1,19 @@
+state = {
+	id = 220
+	name = "STATE_220"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = SRC
+		add_core_of = SRC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		5453 5455 5457 5458 5461 5465 6635 6642
+	}
+	local_supplies = 0.0
+}

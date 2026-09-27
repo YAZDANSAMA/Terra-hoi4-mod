@@ -1,0 +1,19 @@
+state = {
+	id = 11
+	name = "Corinia"
+	manpower = 283159
+	state_category = city
+
+	history = {
+		owner = MNS
+		add_core_of = MNS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		3664 3797 3802 4884
+	}
+	local_supplies = 0.0
+}

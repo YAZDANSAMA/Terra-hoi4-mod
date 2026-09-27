@@ -1,0 +1,19 @@
+state = {
+	id = 155
+	name = "STATE_155"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = CLM
+		add_core_of = CLM
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		209 211 213 214 217 220 789 790 844 3468 4859 4860
+	}
+	local_supplies = 0.0
+}
