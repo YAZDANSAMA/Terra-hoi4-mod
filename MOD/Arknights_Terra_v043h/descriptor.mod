@@ -1,4 +1,4 @@
-name="Arknights: Terra - v043h MAP FIX"
+name="Arknights: Terra"
 picture="thumbnail.png"
 version="0.0.43h-map-fix"
 supported_version="1.19.*"
