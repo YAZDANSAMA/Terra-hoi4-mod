@@ -1,0 +1,47 @@
+spriteTypes = {
+    corneredTileSpriteType = {
+        name = "GFX_terra_v043_frontend"
+        textureFile = "gfx/interface/terra_v043/background.dds"
+        size = { x = 1672 y = 941 }
+        borderSize = { x = 0 y = 0 }
+        tilingCenter = no
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+    spriteType = {
+        name = "GFX_terra_v043_single"
+        texturefile = "gfx/interface/terra_v043/single.dds"
+        noOfFrames = 3
+        transparencecheck = no
+    }
+    spriteType = {
+        name = "GFX_terra_v043_multi"
+        texturefile = "gfx/interface/terra_v043/multi.dds"
+        noOfFrames = 3
+        transparencecheck = no
+    }
+    spriteType = {
+        name = "GFX_terra_v043_settings"
+        texturefile = "gfx/interface/terra_v043/settings.dds"
+        noOfFrames = 3
+        transparencecheck = no
+    }
+    spriteType = {
+        name = "GFX_terra_v043_credits"
+        texturefile = "gfx/interface/terra_v043/credits.dds"
+        noOfFrames = 3
+        transparencecheck = no
+    }
+    spriteType = {
+        name = "GFX_terra_v043_exit"
+        texturefile = "gfx/interface/terra_v043/exit.dds"
+        noOfFrames = 3
+        transparencecheck = no
+    }
+    spriteType = {
+        name = "GFX_terra_v043_plain"
+        texturefile = "gfx/interface/terra_v043/plain.dds"
+        noOfFrames = 3
+        transparencecheck = no
+    }
+}

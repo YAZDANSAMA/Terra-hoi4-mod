@@ -1,33 +1,33 @@
 bookmarks = {
     bookmark = {
-        name = "TERRA_1936_BOOKMARK"
-        desc = "TERRA_1936_BOOKMARK_DESC"
-        date = 1936.1.1.12
+        name = "TERRA_1028_BOOKMARK"
+        desc = "TERRA_1028_BOOKMARK_DESC"
+        date = 1028.1.1.12
         picture = "GFX_select_date_1936"
         default = yes
 
         VCT = {
-            history = "TERRA_1936_VCT_DESC"
+            history = "TERRA_1028_VCT_DESC"
             ideology = neutrality
         }
 
         URS = {
-            history = "TERRA_1936_URS_DESC"
+            history = "TERRA_1028_URS_DESC"
             ideology = communism
         }
 
         LTH = {
-            history = "TERRA_1936_LTH_DESC"
+            history = "TERRA_1028_LTH_DESC"
             ideology = neutrality
         }
 
         LGL = {
-            history = "TERRA_1936_LGL_DESC"
+            history = "TERRA_1028_LGL_DESC"
             ideology = neutrality
         }
 
         "---" = {
-            history = "TERRA_1936_OTHER_DESC"
+            history = "TERRA_1028_OTHER_DESC"
         }
     }
 }

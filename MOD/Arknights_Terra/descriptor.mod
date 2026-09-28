@@ -1,6 +1,6 @@
 name="Arknights: Terra"
 picture="thumbnail.png"
-version="0.0.37-full-reference-terrain"
+version="0.0.44-merged"
 supported_version="1.19.*"
 tags={
     "Alternative History"
@@ -40,3 +40,4 @@ replace_path="common/units/names"
 replace_path="common/factions/templates"
 replace_path="common/peace_conference/ai_peace"
 replace_path="common/peace_conference/cost_modifiers"
+replace_path="gfx/loadingscreens"
