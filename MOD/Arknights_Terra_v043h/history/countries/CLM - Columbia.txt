@@ -1,0 +1,16 @@
+# Boot-safe minimal history for Columbia
+capital = 151
+
+
+recruit_character = CLM_interim_leader
+set_politics = {
+    ruling_party = fascism
+    elections_allowed = no
+}
+
+set_popularities = {
+    democratic = 15
+    fascism = 43
+    communism = 15
+    neutrality = 27
+}

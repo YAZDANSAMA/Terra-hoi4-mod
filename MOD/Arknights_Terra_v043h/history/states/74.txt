@@ -1,0 +1,19 @@
+state = {
+	id = 74
+	name = "Trent"
+	manpower = 7909
+	state_category = rural
+
+	history = {
+		owner = TRR
+		add_core_of = TRR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		6564 6568 6571 6572 6577 6578 6689 6718 6720 6723 6724
+	}
+	local_supplies = 0.0
+}

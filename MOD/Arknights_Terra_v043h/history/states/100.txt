@@ -1,0 +1,19 @@
+state = {
+	id = 100
+	name = "STATE_100"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = KZM
+		add_core_of = KZM
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		557 558 559 560 561 562 563 564 565 5538 5540 5541
+	}
+	local_supplies = 0.0
+}

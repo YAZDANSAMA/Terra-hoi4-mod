@@ -1,0 +1,19 @@
+state = {
+	id = 145
+	name = "Lungmen"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = YAN
+		add_core_of = YAN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		4455 4459 4464 4466
+	}
+	local_supplies = 0.0
+}

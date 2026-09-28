@@ -1,0 +1,10 @@
+add_namespace = terra_core
+
+country_event = {
+    id = terra_core.1
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+    }
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 119
+	name = "STATE_119"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = YAN
+		add_core_of = YAN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		2037
+	}
+	local_supplies = 0.0
+}

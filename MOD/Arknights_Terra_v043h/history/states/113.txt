@@ -1,0 +1,20 @@
+state = {
+	id = 113
+	name = "STATE_113"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = YAN
+		add_core_of = YAN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		170 171 172 173 2998 2999 4238 5853 5854 5855 5856 5857 5858 5859 5860 6257 6259 6276 6277 6597
+		6716 6878 6879 7010 7011 7012 7013 7014 7015 7016 7320
+	}
+	local_supplies = 0.0
+}

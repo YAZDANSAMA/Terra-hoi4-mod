@@ -1,0 +1,16 @@
+# Boot-safe minimal history for Higashi
+capital = 13
+
+
+recruit_character = HGS_interim_leader
+set_politics = {
+    ruling_party = communism
+    elections_allowed = no
+}
+
+set_popularities = {
+    democratic = 1
+    fascism = 35
+    communism = 40
+    neutrality = 24
+}

@@ -1,0 +1,20 @@
+state = {
+	id = 181
+	name = "Abydos"
+	manpower = 2906430
+	state_category = rural
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		2477 2482 2483 2484 2487 2488 2489 3566 5148 5149 5150 5151 5152 5154 5208 5287 5288 5289 7742 7743
+		7744 7745 7746 7747 7748 7749 7750 7751 7752
+	}
+	local_supplies = 0.0
+}

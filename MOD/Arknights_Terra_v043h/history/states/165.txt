@@ -1,0 +1,19 @@
+state = {
+	id = 165
+	name = "Iconium"
+	manpower = 2906430
+	state_category = rural
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		2372 2373 2374 2375 5389 5699 5700 5701 5703 5705
+	}
+	local_supplies = 0.0
+}

@@ -1,0 +1,19 @@
+state = {
+	id = 15
+	name = "Kantia"
+	manpower = 7909
+	state_category = rural
+
+	history = {
+		owner = VCT
+		add_core_of = VCT
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		720 723 725 3871 6439 6440 6441 6445 6447
+	}
+	local_supplies = 0.0
+}

@@ -1,0 +1,16 @@
+# Boot-safe minimal history for Kazimierz
+capital = 96
+
+
+recruit_character = KZM_interim_leader
+set_politics = {
+    ruling_party = democratic
+    elections_allowed = no
+}
+
+set_popularities = {
+    democratic = 33
+    fascism = 30
+    communism = 32
+    neutrality = 5
+}

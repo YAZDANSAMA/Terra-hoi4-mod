@@ -1,0 +1,20 @@
+state = {
+	id = 37
+	name = "Silverash"
+	manpower = 3426717
+	state_category = rural
+
+	history = {
+		owner = KJG
+		add_core_of = KJG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		631 632 633 634 635 637 639 1817 1818 5417 5418 5419 5420 5421 5422 5423 5424 5425 6269 6270
+		6271 6272 6273 6274 6275 6785 6786 6787 7253 7254 7931
+	}
+	local_supplies = 0.0
+}

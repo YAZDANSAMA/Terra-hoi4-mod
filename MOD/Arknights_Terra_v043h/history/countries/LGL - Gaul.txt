@@ -1,0 +1,16 @@
+# Boot-safe minimal history for Gaul
+capital = 14
+
+
+recruit_character = LGL_corsica_i_bourbon
+set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+}
+
+set_popularities = {
+    democratic = 9
+    fascism = 30
+    communism = 10
+    neutrality = 51
+}

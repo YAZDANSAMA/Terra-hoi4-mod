@@ -1,0 +1,20 @@
+state = {
+	id = 48
+	name = "Caprania"
+	manpower = 7270
+	state_category = rural
+
+	history = {
+		owner = LTH
+		add_core_of = LTH
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		1670 1671 1672 1673 1674 2049 2050 2051 2052 2053 2054 2055 2056 2057 2058 2059 5456 5459 5460 5462
+		5464 5467 6591
+	}
+	local_supplies = 0.0
+}

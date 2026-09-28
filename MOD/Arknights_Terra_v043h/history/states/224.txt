@@ -1,0 +1,19 @@
+state = {
+	id = 224
+	name = "STATE_224"
+	manpower = 1
+	state_category = rural
+
+	history = {
+		owner = SRC
+		add_core_of = SRC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		315 316 317 3378 3380 3381 6733 6734 6735 6736 6738 6739 6743 6746
+	}
+	local_supplies = 0.0
+}

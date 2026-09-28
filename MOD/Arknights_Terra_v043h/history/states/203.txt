@@ -1,0 +1,20 @@
+state = {
+	id = 203
+	name = "Sevilla"
+	manpower = 1929167
+	state_category = rural
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		8107 8108 8109 8110 8111 8112 8113 8114 8125 8126 8127 8128 8129 8130 8131 8132 8133 8134 8135 8136
+		8137 8170 8171 8172 8173 8190 8224 8225 8227 8229 8233
+	}
+	local_supplies = 0.0
+}
