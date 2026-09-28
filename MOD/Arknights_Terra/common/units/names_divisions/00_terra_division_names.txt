@@ -1,7 +1,0 @@
-TERRA_INFANTRY_DIVISIONS = {
-    name = "Terra Infantry Divisions"
-    for_countries = { AGI BLV CLM HGS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SST SRC URS VCT YAN TRR LGL }
-    can_use = { always = yes }
-    division_types = { "infantry" }
-    fallback_name = "%d Terra Division"
-}
