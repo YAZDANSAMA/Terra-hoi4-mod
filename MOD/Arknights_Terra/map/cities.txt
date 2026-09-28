@@ -230,3 +230,112 @@ city_group = {
 		}
 	}
 }
+
+# Asian cities, high density core (used instead of color_index 0, which vanilla leaves almost empty)
+city_group = {
+	color_index = 6 # color index in bmp palette
+	density = 1.0
+
+	building = {
+		distance = 1
+		mesh = {
+			"asia_city_01_entity"
+		}
+	}
+	building = {
+		distance = 2
+		mesh = {
+			"asia_city_02_entity"
+		}
+	}
+	building = {
+		distance = 3
+		mesh = {
+			"asia_city_03_entity"
+		}
+	}
+	building = {
+		distance = 4
+		mesh = {
+			"asia_city_04_entity"
+		}
+	}
+}
+
+# Unciv city blob inner/middle/outer rings (same buildings as group 2, lower density)
+city_group = {
+	color_index = 20 # unciv blob inner ring
+	density = 0.1
+	building = { distance = 1 mesh = { "unciv_city_01_entity" } }
+	building = { distance = 2 mesh = { "unciv_city_02_entity" } }
+	building = { distance = 3 mesh = { "unciv_city_03_entity" } }
+	building = { distance = 4 mesh = { "unciv_city_04_entity" } }
+}
+city_group = {
+	color_index = 21 # unciv blob middle ring
+	density = 0.05
+	building = { distance = 1 mesh = { "unciv_city_01_entity" } }
+	building = { distance = 2 mesh = { "unciv_city_02_entity" } }
+	building = { distance = 3 mesh = { "unciv_city_03_entity" } }
+	building = { distance = 4 mesh = { "unciv_city_04_entity" } }
+}
+city_group = {
+	color_index = 22 # unciv blob outer ring
+	density = 0.02
+	building = { distance = 1 mesh = { "unciv_city_01_entity" } }
+	building = { distance = 2 mesh = { "unciv_city_02_entity" } }
+	building = { distance = 3 mesh = { "unciv_city_03_entity" } }
+	building = { distance = 4 mesh = { "unciv_city_04_entity" } }
+}
+
+# Western city blob inner/middle/outer rings (same buildings as group 15, lower density)
+city_group = {
+	color_index = 23 # western blob inner ring
+	density = 0.45
+	building = { distance = 1 mesh = { "westerngfx_house_1_1" } }
+	building = { distance = 2 mesh = { "westerngfx_house_1_2" } }
+	building = { distance = 3 mesh = { "westerngfx_house_1_3" } }
+	building = { distance = 4 mesh = { "westerngfx_house_1_4" } }
+}
+city_group = {
+	color_index = 24 # western blob middle ring
+	density = 0.225
+	building = { distance = 1 mesh = { "westerngfx_house_1_1" } }
+	building = { distance = 2 mesh = { "westerngfx_house_1_2" } }
+	building = { distance = 3 mesh = { "westerngfx_house_1_3" } }
+	building = { distance = 4 mesh = { "westerngfx_house_1_4" } }
+}
+city_group = {
+	color_index = 25 # western blob outer ring
+	density = 0.09
+	building = { distance = 1 mesh = { "westerngfx_house_1_1" } }
+	building = { distance = 2 mesh = { "westerngfx_house_1_2" } }
+	building = { distance = 3 mesh = { "westerngfx_house_1_3" } }
+	building = { distance = 4 mesh = { "westerngfx_house_1_4" } }
+}
+
+# Asian city blob inner/middle/outer rings (same buildings as group 6, lower density)
+city_group = {
+	color_index = 26 # asian blob inner ring
+	density = 0.5
+	building = { distance = 1 mesh = { "asia_city_01_entity" } }
+	building = { distance = 2 mesh = { "asia_city_02_entity" } }
+	building = { distance = 3 mesh = { "asia_city_03_entity" } }
+	building = { distance = 4 mesh = { "asia_city_04_entity" } }
+}
+city_group = {
+	color_index = 27 # asian blob middle ring
+	density = 0.25
+	building = { distance = 1 mesh = { "asia_city_01_entity" } }
+	building = { distance = 2 mesh = { "asia_city_02_entity" } }
+	building = { distance = 3 mesh = { "asia_city_03_entity" } }
+	building = { distance = 4 mesh = { "asia_city_04_entity" } }
+}
+city_group = {
+	color_index = 28 # asian blob outer ring
+	density = 0.1
+	building = { distance = 1 mesh = { "asia_city_01_entity" } }
+	building = { distance = 2 mesh = { "asia_city_02_entity" } }
+	building = { distance = 3 mesh = { "asia_city_03_entity" } }
+	building = { distance = 4 mesh = { "asia_city_04_entity" } }
+}
