@@ -2,6 +2,11 @@
 capital = 202
 
 
+
+oob = "IBR_1028"
+set_technology = {
+    infantry_weapons = 1
+}
 recruit_character = IBR_interim_leader
 set_politics = {
     ruling_party = communism

@@ -2,6 +2,11 @@
 capital = 12
 
 
+
+oob = "SMN_1028"
+set_technology = {
+    infantry_weapons = 1
+}
 recruit_character = SMN_interim_leader
 set_politics = {
     ruling_party = democratic
