@@ -4,13 +4,10 @@ capital = 93
 
 recruit_character = BLV_interim_leader
 set_politics = {
-    ruling_party = fascism
+    ruling_party = junta
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 26
-    fascism = 34
-    communism = 21
-    neutrality = 19
+    junta = 100
 }

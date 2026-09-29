@@ -4,13 +4,10 @@ capital = 38
 
 recruit_character = KJG_interim_leader
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = theocracy
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 30
-    fascism = 11
-    communism = 28
-    neutrality = 31
+    theocracy = 100
 }

@@ -4,13 +4,10 @@ capital = 5
 
 recruit_character = RMB_interim_leader
 set_politics = {
-    ruling_party = democratic
+    ruling_party = corporatism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 33
-    fascism = 3
-    communism = 32
-    neutrality = 32
+    corporatism = 100
 }

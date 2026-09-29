@@ -4,13 +4,10 @@ capital = 129
 
 recruit_character = YAN_interim_leader
 set_politics = {
-    ruling_party = communism
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 18
-    fascism = 26
-    communism = 15
-    neutrality = 41
+    monarchism = 100
 }

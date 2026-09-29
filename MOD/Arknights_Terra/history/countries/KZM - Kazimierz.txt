@@ -4,13 +4,10 @@ capital = 95
 
 recruit_character = KZM_interim_leader
 set_politics = {
-    ruling_party = democratic
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 33
-    fascism = 30
-    communism = 32
-    neutrality = 5
+    monarchism = 100
 }

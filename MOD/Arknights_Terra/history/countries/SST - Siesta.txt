@@ -4,13 +4,10 @@ capital = 164
 
 recruit_character = SST_interim_leader
 set_politics = {
-    ruling_party = democratic
+    ruling_party = social_democracy
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 31
-    fascism = 27
-    communism = 9
-    neutrality = 33
+    social_democracy = 100
 }

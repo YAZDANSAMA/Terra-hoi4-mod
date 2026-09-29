@@ -4,13 +4,10 @@ capital = 49
 
 recruit_character = MNS_interim_leader
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 4
-    fascism = 11
-    communism = 42
-    neutrality = 43
+    monarchism = 100
 }

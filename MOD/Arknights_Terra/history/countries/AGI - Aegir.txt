@@ -4,13 +4,10 @@ capital = 2
 
 recruit_character = AGI_interim_leader
 set_politics = {
-    ruling_party = communism
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 27
-    fascism = 17
-    communism = 40
-    neutrality = 16
+    monarchism = 100
 }

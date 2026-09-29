@@ -4,13 +4,18 @@ capital = 161
 
 recruit_character = CLM_interim_leader
 set_politics = {
-    ruling_party = fascism
+    ruling_party = classical_liberalism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 15
-    fascism = 43
-    communism = 15
-    neutrality = 27
+    revolutionary = 11
+    junta = 11
+    ethnonationalism = 11
+    corporatism = 11
+    theocracy = 11
+    social_democracy = 11
+    classical_liberalism = 12
+    technocracy = 11
+    monarchism = 11
 }

@@ -4,13 +4,10 @@ capital = 73
 
 recruit_character = TRR_interim_leader
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 9
-    fascism = 30
-    communism = 10
-    neutrality = 51
+    monarchism = 100
 }

@@ -4,13 +4,10 @@ capital = 22
 
 recruit_character = URS_ivan
 set_politics = {
-    ruling_party = communism
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 24
-    fascism = 8
-    communism = 49
-    neutrality = 19
+    monarchism = 100
 }

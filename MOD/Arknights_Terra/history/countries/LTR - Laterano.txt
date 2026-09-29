@@ -4,13 +4,10 @@ capital = 6
 
 recruit_character = LTR_interim_leader
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = theocracy
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 7
-    fascism = 28
-    communism = 32
-    neutrality = 33
+    theocracy = 100
 }

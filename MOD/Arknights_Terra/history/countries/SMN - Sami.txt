@@ -4,13 +4,10 @@ capital = 12
 
 recruit_character = SMN_interim_leader
 set_politics = {
-    ruling_party = democratic
+    ruling_party = social_democracy
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 33
-    fascism = 22
-    communism = 32
-    neutrality = 13
+    social_democracy = 100
 }

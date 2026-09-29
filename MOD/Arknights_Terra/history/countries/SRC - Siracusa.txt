@@ -4,13 +4,10 @@ capital = 232
 
 recruit_character = SRC_interim_leader
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = junta
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 17
-    fascism = 36
-    communism = 9
-    neutrality = 38
+    junta = 100
 }

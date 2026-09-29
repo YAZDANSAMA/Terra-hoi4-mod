@@ -4,13 +4,10 @@ capital = 202
 
 recruit_character = IBR_interim_leader
 set_politics = {
-    ruling_party = communism
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 1
-    fascism = 23
-    communism = 49
-    neutrality = 27
+    monarchism = 100
 }

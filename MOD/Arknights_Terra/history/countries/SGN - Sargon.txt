@@ -4,13 +4,10 @@ capital = 171
 
 recruit_character = SGN_interim_leader
 set_politics = {
-    ruling_party = communism
+    ruling_party = monarchism
     elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 11
-    fascism = 31
-    communism = 40
-    neutrality = 18
+    monarchism = 100
 }

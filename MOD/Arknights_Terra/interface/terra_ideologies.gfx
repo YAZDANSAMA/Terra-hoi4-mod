@@ -1,0 +1,80 @@
+spriteTypes = {
+
+	## Ideology group icons (top bar / politics view) - placeholder solid-color art, replace with real icons later
+
+	spriteType = {
+		name = "GFX_ideology_revolutionary_group"
+		texturefile = "gfx/interface/ideologies/revolutionary_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_junta_group"
+		texturefile = "gfx/interface/ideologies/junta_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_ethnonationalism_group"
+		texturefile = "gfx/interface/ideologies/ethnonationalism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_corporatism_group"
+		texturefile = "gfx/interface/ideologies/corporatism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy_group"
+		texturefile = "gfx/interface/ideologies/theocracy_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democracy_group"
+		texturefile = "gfx/interface/ideologies/social_democracy_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_classical_liberalism_group"
+		texturefile = "gfx/interface/ideologies/classical_liberalism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_technocracy_group"
+		texturefile = "gfx/interface/ideologies/technocracy_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_monarchism_group"
+		texturefile = "gfx/interface/ideologies/monarchism_group.dds"
+	}
+
+	## Party popularity small icons
+
+	spriteType = {
+		name = "GFX_ideology_revolutionary_small"
+		texturefile = "gfx/interface/ideologies/revolutionary_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_junta_small"
+		texturefile = "gfx/interface/ideologies/junta_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_ethnonationalism_small"
+		texturefile = "gfx/interface/ideologies/ethnonationalism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_corporatism_small"
+		texturefile = "gfx/interface/ideologies/corporatism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy_small"
+		texturefile = "gfx/interface/ideologies/theocracy_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democracy_small"
+		texturefile = "gfx/interface/ideologies/social_democracy_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_classical_liberalism_small"
+		texturefile = "gfx/interface/ideologies/classical_liberalism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_technocracy_small"
+		texturefile = "gfx/interface/ideologies/technocracy_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_monarchism_small"
+		texturefile = "gfx/interface/ideologies/monarchism_small.dds"
+	}
+}
