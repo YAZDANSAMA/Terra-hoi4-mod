@@ -1,0 +1,143 @@
+# Terra 1028 starting army - stable infantry-only OOB
+division_template = {
+    name = "Siracusan Line Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Elite Legion Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    priority = 2
+}
+
+units = {
+    division = {
+        name = "1st Siracusa Line Division"
+        location = 6742
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Siracusa Line Division"
+        location = 5453
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Siracusa Line Division"
+        location = 5455
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "4th Siracusa Line Division"
+        location = 5441
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Siracusa Line Division"
+        location = 5442
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "6th Siracusa Line Division"
+        location = 1347
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "7th Siracusa Line Division"
+        location = 1352
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "8th Siracusa Line Division"
+        location = 89
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "9th Siracusa Line Division"
+        location = 90
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "10th Siracusa Line Division"
+        location = 315
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "11th Siracusa Line Division"
+        location = 316
+        division_template = "Siracusan Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "1st Elite Legion Division"
+        location = 937
+        division_template = "Elite Legion Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Elite Legion Division"
+        location = 2006
+        division_template = "Elite Legion Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Elite Legion Division"
+        location = 3293
+        division_template = "Elite Legion Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

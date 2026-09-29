@@ -1,0 +1,95 @@
+# Terra 1028 starting army - stable infantry-only OOB
+division_template = {
+    name = "Kazdel Line Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Sarkaz Guard Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    priority = 2
+}
+
+units = {
+    division = {
+        name = "1st Kazdel Line Division"
+        location = 454
+        division_template = "Kazdel Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Kazdel Line Division"
+        location = 455
+        division_template = "Kazdel Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Kazdel Line Division"
+        location = 465
+        division_template = "Kazdel Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "4th Kazdel Line Division"
+        location = 1045
+        division_template = "Kazdel Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Kazdel Line Division"
+        location = 456
+        division_template = "Kazdel Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "1st Sarkaz Guard Division"
+        location = 458
+        division_template = "Sarkaz Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Sarkaz Guard Division"
+        location = 454
+        division_template = "Sarkaz Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Sarkaz Guard Division"
+        location = 455
+        division_template = "Sarkaz Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

@@ -1,0 +1,151 @@
+# Terra 1028 starting army - stable infantry-only OOB
+division_template = {
+    name = "Columbian Line Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Federal Guard Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    priority = 2
+}
+
+units = {
+    division = {
+        name = "1st Columbia Line Division"
+        location = 6902
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Columbia Line Division"
+        location = 410
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Columbia Line Division"
+        location = 411
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "4th Columbia Line Division"
+        location = 24
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Columbia Line Division"
+        location = 25
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "6th Columbia Line Division"
+        location = 1308
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "7th Columbia Line Division"
+        location = 1309
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "8th Columbia Line Division"
+        location = 4381
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "9th Columbia Line Division"
+        location = 4382
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "10th Columbia Line Division"
+        location = 210
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "11th Columbia Line Division"
+        location = 212
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "12th Columbia Line Division"
+        location = 209
+        division_template = "Columbian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "1st Federal Guard Division"
+        location = 211
+        division_template = "Federal Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Federal Guard Division"
+        location = 320
+        division_template = "Federal Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Federal Guard Division"
+        location = 1112
+        division_template = "Federal Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

@@ -1,0 +1,167 @@
+# Terra 1028 starting army - stable infantry-only OOB
+division_template = {
+    name = "Iberian Line Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Royal Guard Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    priority = 2
+}
+
+units = {
+    division = {
+        name = "1st Iberia Line Division"
+        location = 78
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Iberia Line Division"
+        location = 79
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Iberia Line Division"
+        location = 960
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "4th Iberia Line Division"
+        location = 965
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Iberia Line Division"
+        location = 8159
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "6th Iberia Line Division"
+        location = 8160
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "7th Iberia Line Division"
+        location = 8107
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "8th Iberia Line Division"
+        location = 8108
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "9th Iberia Line Division"
+        location = 163
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "10th Iberia Line Division"
+        location = 164
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "11th Iberia Line Division"
+        location = 808
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "12th Iberia Line Division"
+        location = 809
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "13th Iberia Line Division"
+        location = 3414
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "14th Iberia Line Division"
+        location = 3417
+        division_template = "Iberian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "1st Royal Guard Division"
+        location = 1020
+        division_template = "Royal Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Royal Guard Division"
+        location = 2836
+        division_template = "Royal Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Royal Guard Division"
+        location = 8153
+        division_template = "Royal Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

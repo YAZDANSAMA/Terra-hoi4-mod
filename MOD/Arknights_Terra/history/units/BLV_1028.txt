@@ -1,0 +1,143 @@
+# Terra 1028 starting army - stable infantry-only OOB
+division_template = {
+    name = "Bolivarian Line Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Presidential Guard Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    priority = 2
+}
+
+units = {
+    division = {
+        name = "1st Bolivar Line Division"
+        location = 6376
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Bolivar Line Division"
+        location = 585
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Bolivar Line Division"
+        location = 588
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "4th Bolivar Line Division"
+        location = 582
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Bolivar Line Division"
+        location = 583
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "6th Bolivar Line Division"
+        location = 361
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "7th Bolivar Line Division"
+        location = 366
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "8th Bolivar Line Division"
+        location = 72
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "9th Bolivar Line Division"
+        location = 73
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "10th Bolivar Line Division"
+        location = 2982
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "11th Bolivar Line Division"
+        location = 2983
+        division_template = "Bolivarian Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "1st Presidential Guard Division"
+        location = 4123
+        division_template = "Presidential Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Presidential Guard Division"
+        location = 4124
+        division_template = "Presidential Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Presidential Guard Division"
+        location = 227
+        division_template = "Presidential Guard Division"
+        start_experience_factor = 0.35
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

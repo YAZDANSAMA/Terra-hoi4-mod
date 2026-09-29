@@ -2,6 +2,11 @@
 capital = 6
 
 
+
+oob = "LTR_1028"
+set_technology = {
+    infantry_weapons = 1
+}
 recruit_character = LTR_interim_leader
 set_politics = {
     ruling_party = theocracy

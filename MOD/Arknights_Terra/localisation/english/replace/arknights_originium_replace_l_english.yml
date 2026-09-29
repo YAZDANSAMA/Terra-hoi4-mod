@@ -1,0 +1,33 @@
+﻿l_english:
+ oil:0 "Originium"
+ oil_desc:0 "Originium is Terra's principal strategic energy-bearing mineral, essential for vehicles, aircraft, ships, industry, and advanced technology."
+
+ fuel:0 "Refined Originium"
+ FUEL:0 "Refined Originium"
+ FUEL_TITLE:0 "Refined Originium"
+ FUEL_CAPACITY:0 "Refined Originium Capacity"
+ FUEL_GAIN:0 "Refined Originium Gain"
+ FUEL_USAGE:0 "Refined Originium Usage"
+ FUEL_CONSUMPTION:0 "Refined Originium Consumption"
+
+ synthetic_refinery:0 "Originium Refinery"
+ synthetic_refinery_desc:0 "Processes Originium into refined energy products for military and industrial use."
+ fuel_silo:0 "Originium Storage"
+ fuel_silo_desc:0 "Stores large reserves of refined Originium for military and industrial use."
+
+ MODIFIER_FUEL_GAIN_FACTOR:0 "Refined Originium Gain per Originium"
+ MODIFIER_FUEL_GAIN_FACTOR_FROM_STATES:0 "Refined Originium Gain from Refineries"
+ MODIFIER_FUEL_GAIN_FROM_STATES:0 "Refined Originium Gain from Refineries"
+ MODIFIER_FUEL_GAIN_ADD:0 "Refined Originium Gain per Originium"
+ MODIFIER_MAX_FUEL_FACTOR:0 "Refined Originium Capacity"
+ MODIFIER_MAX_FUEL_ADD:1 "Refined Originium Capacity (K)"
+ MODIFIER_MAX_FUEL_ADD_FROM_STATES:1 "Refined Originium Capacity (K)"
+ MODIFIER_BASE_FUEL_GAIN_FACTOR:0 "Refined Originium Gain"
+ MODIFIER_BASE_FUEL_GAIN_ADD:0 "Refined Originium Gain"
+ MODIFIER_FUEL_COST:0 "Refined Originium Cost"
+ MODIFIER_PRODUCTION_OIL_FACTOR:0 "Originium Refining"
+
+ modifier_production_speed_synthetic_refinery_factor:0 "§YOriginium Refinery§! construction speed"
+ modifier_production_speed_synthetic_refinery_factor_desc:0 "Modifies the construction speed of Originium Refineries."
+ modifier_production_speed_fuel_silo_factor:0 "§YOriginium Storage§! construction speed"
+ modifier_production_speed_fuel_silo_factor_desc:0 "Modifies the construction speed of Originium Storage facilities."

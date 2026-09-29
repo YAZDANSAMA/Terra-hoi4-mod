@@ -2,6 +2,11 @@
 capital = 38
 
 
+
+oob = "KJG_1028"
+set_technology = {
+    infantry_weapons = 1
+}
 recruit_character = KJG_interim_leader
 set_politics = {
     ruling_party = theocracy
