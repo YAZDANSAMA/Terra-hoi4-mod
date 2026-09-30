@@ -1,0 +1,11 @@
+objectTypes = {
+    pdxmesh = {
+        name = "landmark_kremlin_mesh"
+        file = "gfx/models/buildings/landmarks/landmark_kremlin.mesh"
+
+        meshsettings = {
+            index = 0
+            shader = "PdxMeshAdvancedSnow"
+        }
+    }
+}

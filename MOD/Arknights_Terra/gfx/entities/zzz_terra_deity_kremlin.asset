@@ -1,0 +1,9 @@
+entity = {
+    name = "building_landmark_kremlin"
+    pdxmesh = "landmark_kremlin_mesh"
+
+    default_state = "idle"
+    state = { name = "idle" }
+
+    scale = 0.3
+}

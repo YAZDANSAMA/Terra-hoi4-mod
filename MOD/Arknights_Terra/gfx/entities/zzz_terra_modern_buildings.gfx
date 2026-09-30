@@ -1,0 +1,52 @@
+objectTypes = {
+	pdxmesh = {
+		name = "terra_md_factory_mesh"
+		file = "gfx/models/buildings/factory.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_radar_mesh"
+		file = "gfx/models/buildings/radar.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_airbase_mesh"
+		file = "gfx/models/buildings/hangar_flight.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_navalbase_mesh"
+		file = "gfx/models/buildings/navalbase_01.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_supply_mesh"
+		file = "gfx/models/buildings/supply_station.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_bunker_mesh"
+		file = "gfx/models/buildings/bunker.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_fortress_mesh"
+		file = "gfx/models/buildings/fortress.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_rocket_mesh"
+		file = "gfx/models/buildings/rocket_site.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_aa_mesh"
+		file = "gfx/models/buildings/88aagun.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_md_research_mesh"
+		file = "gfx/models/buildings/researchcenter.mesh"
+		scale = 1.0
+	}
+}
