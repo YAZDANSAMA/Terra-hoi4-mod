@@ -37,6 +37,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
+			
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 2
@@ -47,7 +48,9 @@ focus_tree = {
 				uses = 2
 				category = infantry_tech
 			}
-			add_dynamic_modifier = { modifier = LGL_military_spirit }
+
+			
+			army_experience = 25
         	LGL_recalc_military_spirit = yes
 		}
 	}

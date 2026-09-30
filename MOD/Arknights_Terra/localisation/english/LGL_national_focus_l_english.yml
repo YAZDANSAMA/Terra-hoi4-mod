@@ -2,7 +2,7 @@
  LGL_start:0 "The Belle Époque"
  LGL_start_desc:0 "The past few decades have been kind to Gaul.\n\nLingones was transformed from a backwater town to the Capital of the World in a heartbeat. Art, philosophy, and the sciences dominate Gallic culture, and the Gallic language has become the standard language in all of Terra.\n\nHowever, as corruption begins to run rampant amidst our nobility and bureaucracy, our emperor Corsica I has deemed that the Gallic hegemony is fading. And with our neighbors eyeing the nation like beasts to a prey, he may be right. It truly is time for Gaul to realize its glory days by showcasing its true power to the world.\n\n+stab\n+war sup"
  LGL_mil_start:0 "Assess the Victorian War"
- LGL_mil_start_desc:0 "The Victorian war was a resounding success in nothing but name.\n\nWhile we dominated Victoria in our latest war, it also revealed many devastating shortcomings within the Grande Armée that had led to many unnecessary defeats and losses that could've been easily prevented.\n\nWe need to resolve this quickly before it becomes a major issue in our upcoming wars.\n\n+doctrine boost\n+mil tech boost\n+mil spirit"
+ LGL_mil_start_desc:0 "The Victorian war was a resounding success in nothing but name.\n\nWhile we dominated Victoria in our latest war, it also revealed many devastating shortcomings within $LGL_military_spirit$ that had led to many unnecessary defeats and losses that could've been easily prevented.\n\nWe need to resolve this quickly before it becomes a major issue in our upcoming wars.\n\n+doctrine boost\n+mil tech boost\n+mil spirit"
  LGL_poli_start:0 "Politique Mondiale"
  LGL_poli_start_desc:0 "The world is against us.\n\nLeithanien is ruled by a mad Witch King who spends all of his time studying Arts. Ursus has been eyeing our bordersas they try to emulate us and create its own empire. And Victoria seeks revenge for our justified involvement in the Columbian Revolutionary War.\n\nIn order to assert our global dominance, we need to take care of these upstarts before they can become a major problem.\n\n+pp\n+stab"
  LGL_eco_start:0 "Appoint New Economic Council"
@@ -81,23 +81,27 @@
  LGL_wo4e_skip_desc:0 "focus if leithanien yields (non-historical)"
  LGL_wo4e_start:0 "Silence the Kaiser"
  LGL_wo4e_start_desc:0 "focus if leithanien goes to war (historical)"
+ 
+ LGL_military_spirit: "La Grande Armée"
+ LGL_military_spirit_desc: "The Grande Armée stands as Terra's premier fighting force, forged in centuries of triumph and crowned by our recent victory in the Gallo-Victorian War. Yet behind this martial glory lies a dangerous reality: our command is stagnant, and our tactics are relics of a bygone era. If we want to cement our dominance across Terra for years to come, we must confront the failures of our past and drag our military into the modern age."
 
- LGL_mil_start_tt: "Gain national spirit §YThe Grande Armée§!"
- LGL_asym_1_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §G+3.0%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!"
- LGL_asym_2_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+5.0%§!\n $MODIFIER_ATTRITION_FACTOR$: §G-15.0%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!\n $MODIFIER_NO_SUPPLY_GRACE$: §G+30§! $MOD_HOUR$"
- LGL_asym_3_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+10.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §R-10.0%§!"
+ LGL_mil_start_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §G+3.0%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!"
+
+ LGL_asym_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §G+3.0%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!"
+ LGL_asym_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+5.0%§!\n $MODIFIER_ATTRITION_FACTOR$: §G-15.0%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!\n $MODIFIER_NO_SUPPLY_GRACE$: §G+30§! $MOD_HOUR$"
+ LGL_asym_3_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+10.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §R-10.0%§!"
+
+ LGL_stat_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!\n $MODIFIER_TRAINING_TIME_FACTOR$: §G-5.0%§!\n $MODIFIER_XP_GAIN_ARMY$: §G+10%§!"
+ LGL_stat_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_ARMY_ORG_FACTOR$: §G+5.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+5.0%§!"
+ LGL_stat_3_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §G+7.5%§!\n $MODIFIER_WINTER_ATTRITION_FACTOR$: §G-10.0%§!\n $MODIFIER_PLANNING_SPEED$: §G+10.0%§!"
  
- LGL_stat_1_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!\n $MODIFIER_TRAINING_TIME_FACTOR$: §G-5.0%§!"
- LGL_stat_2_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_ARMY_ORG_FACTOR$: §G+5.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+5.0%§!"
- LGL_stat_3_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §G+7.5%§!\n $MODIFIER_WINTER_ATTRITION_FACTOR$: §G-10.0%§!\n $MODIFIER_PLANNING_SPEED$: §G+10.0%§!"
+ LGL_shared_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_PLANNING_SPEED$: §G+15.0%§!\n $MODIFIER_MAX_PLANNING_FACTOR$: §G+12.5%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-7.5%§!"
+ LGL_shared_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_TRAINING_TIME_FACTOR$: §G-10.0%§!\n $MODIFIER_RECRUITABLE_POPULATION_FACTOR$: §G10%§!"
  
- LGL_shared_1_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_PLANNING_SPEED$: §G+5.0%§!\n $MODIFIER_MAX_PLANNING_FACTOR$: §G+7.5%§!\n $MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-7.5%§!"
- LGL_shared_2_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_TRAINING_TIME_FACTOR$: §G-10.0%§!\n $MODIFIER_RECRUITABLE_POPULATION_FACTOR$: §G10%§!"
+ LGL_arts_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+8.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §R-3.0%§!"
+ LGL_arts_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §R-5.0%§!\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+7.0%§!"
  
- LGL_arts_1_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+8.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §R-3.0%§!"
- LGL_arts_2_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIER_ARMY_SPEED_FACTOR$: §R-5.0%§!\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+7.0%§!"
+ LGL_steam_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+4.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+8.0%§!"
+ LGL_steam_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+9.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §G+2.0%§!"
  
- LGL_steam_1_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+4.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+8.0%§!"
- LGL_steam_2_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+9.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §G-2.0%§!"
- 
- LGL_mil_final_tt: "Modify §YThe Grande Armée§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+8.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §G+7.0%§!\n $MODIFIER_RECRUITABLE_POPULATION_FACTOR$: §G10%§!"
+ LGL_mil_final_tt: "Modify §Y$LGL_military_spirit$§! by:\n $MODIFIERS_ARMY_ATTACK_FACTOR$: §G+8.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$: §G+7.0%§!\n $MODIFIER_RECRUITABLE_POPULATION_FACTOR$: §G10%§!\n $MODIFIER_XP_GAIN_ARMY$: §G+10%§!"

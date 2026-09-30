@@ -16,3 +16,6 @@ set_politics = {
 set_popularities = {
     monarchism = 100
 }
+
+add_dynamic_modifier = { modifier = LGL_military_spirit }
+LGL_recalc_military_spirit = yes

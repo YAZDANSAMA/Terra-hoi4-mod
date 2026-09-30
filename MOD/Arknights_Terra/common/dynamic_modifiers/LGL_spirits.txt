@@ -1,6 +1,8 @@
 LGL_military_spirit = {
     icon = GFX_idea_JAP_pan_asian_union
 
+    command_power_gain_mult = 0.05
+    
     army_attack_factor = LGL_attack_var
     army_defence_factor = LGL_defense_var
     army_speed_factor = LGL_speed_var

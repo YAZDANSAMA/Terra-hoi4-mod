@@ -3,13 +3,14 @@ LGL_recalc_military_spirit = {
     set_variable = { LGL_attack_var = 0 }
     set_variable = { LGL_defense_var = 0 }
     set_variable = { LGL_speed_var = 0 }
-    set_variable = { LGL_training_var = 0 }
+    set_variable = { LGL_training_var = 0.06 }
     set_variable = { LGL_recruitpop_var = 0 }
-    set_variable = { LGL_org_var = 0 }
+    set_variable = { LGL_org_var = -0.05 }
+    set_variable = { LGL_xp_var = -0.1 }
     set_variable = { LGL_winter_var = 0 }
-    set_variable = { LGL_planspd_var = 0}
-    set_variable = { LGL_maxplan_var = 0}
-    set_variable = { LGL_orgloss_var = 0}
+    set_variable = { LGL_planspd_var = -0.15 }
+    set_variable = { LGL_maxplan_var = -0.1 }
+    set_variable = { LGL_orgloss_var = 0 }
     set_variable = { LGL_attrition_var = 0 }
     set_variable = { LGL_supplygrace_var = 0 }
 
@@ -38,6 +39,7 @@ LGL_recalc_military_spirit = {
         limit = { has_country_flag = LGL_stat_1_done }
         add_to_variable = { LGL_org_var = 0.03 }
         add_to_variable = { LGL_training_var = -0.05 }
+        add_to_variable = { LGL_xp_var = 0.10 }
     }
     if = {
         limit = { has_country_flag = LGL_stat_2_done }
@@ -55,8 +57,8 @@ LGL_recalc_military_spirit = {
     # --- Shared branch ---
     if = {
         limit = { has_country_flag = LGL_shared_1_done }
-        add_to_variable = { LGL_planspd_var = 0.05 } 
-        add_to_variable = { LGL_maxplan_var = 0.075 }
+        add_to_variable = { LGL_planspd_var = 0.15 } 
+        add_to_variable = { LGL_maxplan_var = 0.125 }
         add_to_variable = { LGL_orgloss_var = -0.075 }
     }
     if = {
@@ -86,7 +88,7 @@ LGL_recalc_military_spirit = {
     if = {
         limit = { has_country_flag = LGL_steam_2_done }
         add_to_variable = { LGL_defense_var = 0.09 }
-        add_to_variable = { LGL_org_var = -0.02 }
+        add_to_variable = { LGL_org_var = 0.02 }
     }
 
     # --- Final ---
@@ -95,6 +97,7 @@ LGL_recalc_military_spirit = {
         add_to_variable = { LGL_attack_var = 0.08 }
         add_to_variable = { LGL_org_var = 0.07 }
         add_to_variable = { LGL_recruitpop_var = 0.10 }
+        add_to_variable = { LGL_xp_var = 0.10 }
     }
 
     force_update_dynamic_modifier = yes
