@@ -1,10 +1,45 @@
-#### Terra / Millennium Dawn building overrides ####
-## Keep ONLY the air base as Millennium Dawn style.
-## All other gameplay buildings fall back to vanilla HOI4 entities.
+#### Terra / Millennium Dawn selected building overrides ####
+## MD: civilian/military factories, dockyard, air base, supply hub, naval base.
+## Vanilla fallback by design: AA, radar, rocket site, land/coastal forts and other gameplay buildings.
 
 entity = {
-	name = "building_air_base"
-	pdxmesh = "terra_md_airbase_mesh"
-	scale = 1.00
-	cull_radius = 100
+    name = "building_industrial_complex"
+    pdxmesh = "terra_md_factory_mesh"
+    scale = 1.00
+    cull_radius = 100
+}
+
+entity = {
+    name = "building_arms_factory"
+    pdxmesh = "terra_md_factory_mesh"
+    scale = 1.00
+    cull_radius = 100
+}
+
+entity = {
+    name = "building_dockyard"
+    pdxmesh = "terra_md_navalbase_mesh"
+    scale = 1.00
+    cull_radius = 100
+}
+
+entity = {
+    name = "building_air_base"
+    pdxmesh = "terra_md_airbase_mesh"
+    scale = 1.00
+    cull_radius = 100
+}
+
+entity = {
+    name = "building_supply_node"
+    pdxmesh = "terra_md_supply_mesh"
+    scale = 1.00
+    cull_radius = 100
+}
+
+entity = {
+    name = "building_naval_base"
+    pdxmesh = "terra_md_navalbase_mesh"
+    scale = 1.00
+    cull_radius = 100
 }
