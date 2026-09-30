@@ -1,0 +1,208 @@
+objectTypes = {
+	pdxmesh = {
+		name = "terra_city_west_edge_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_1_02.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_west_mid_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_2_03.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_west_inner_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_3_01.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_west_core_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_4_04.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_cont_edge_mesh"
+		file = "gfx/models/buildings/french_city_4_01.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_cont_mid_mesh"
+		file = "gfx/models/buildings/french_city_4_02.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_cont_inner_mesh"
+		file = "gfx/models/buildings/city_4_03.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_cont_core_mesh"
+		file = "gfx/models/buildings/city_4_04.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_asia_edge_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_1_04.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_asia_mid_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_2_04.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_asia_inner_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_3_04.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_asia_core_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_4_02.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_low_edge_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_1_01.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_low_mid_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_1_03.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_low_inner_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_2_01.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_city_low_core_mesh"
+		file = "gfx/models/buildings/Western/western_buildings_2_03.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "terra_skyscraper1_mesh"
+		file = "gfx/models/buildings/skyscraper1.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+		meshsettings = {
+			texture_diffuse = "skyscraper1_diff.dds"
+			texture_normal = "MD_building_normaltex.dds"
+			texture_specular = "MD_building_speculartex.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "terra_skyscraper2_mesh"
+		file = "gfx/models/buildings/skyscraper2.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+		meshsettings = {
+			texture_diffuse = "skyscraper2_diff.dds"
+			texture_normal = "MD_building_normaltex.dds"
+			texture_specular = "MD_building_speculartex.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "terra_skyscraper3_mesh"
+		file = "gfx/models/buildings/skyscraper3.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+		meshsettings = {
+			texture_diffuse = "skyscraper3_diff.dds"
+			texture_normal = "MD_building_normaltex.dds"
+			texture_specular = "MD_building_speculartex.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "terra_cityblock_mesh"
+		file = "gfx/models/buildings/city_4_04.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_cityblock2_mesh"
+		file = "gfx/models/buildings/city_4_03.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_french1_mesh"
+		file = "gfx/models/buildings/french_city_4_01.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_french2_mesh"
+		file = "gfx/models/buildings/french_city_4_02.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_bigben_mesh"
+		file = "gfx/models/buildings/big_ben.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_capitol_mesh"
+		file = "gfx/models/buildings/capitol.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_washington_mesh"
+		file = "gfx/models/buildings/washingtonmonument.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_empirestate_mesh"
+		file = "gfx/models/buildings/empirestate.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_himeji_mesh"
+		file = "gfx/models/buildings/himeji.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_okayama_mesh"
+		file = "gfx/models/buildings/okayama.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_greatwall_mesh"
+		file = "gfx/models/buildings/greatwall.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_brandenburg_mesh"
+		file = "gfx/models/buildings/brandenburger_tor.mesh"
+		scale = 0.005
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_milad_mesh"
+		file = "gfx/models/buildings/landmarks/milad.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_dome_mesh"
+		file = "gfx/models/buildings/landmarks/domeofrock.mesh"
+		scale = 1.0
+		cull_distance = 950.0
+	}
+	pdxmesh = {
+		name = "terra_research_mesh"
+		file = "gfx/models/buildings/researchcenter.mesh"
+		scale = 0.6
+		cull_distance = 950.0
+	}
+}
