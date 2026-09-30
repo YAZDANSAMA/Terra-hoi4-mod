@@ -1,21 +1,4 @@
-# Custom ideology set for Arknights: Terra.
-# This fully replaces the vanilla ideologies (see descriptor.mod replace_path).
-#
-# 9 distinct ideologies for in-game storytelling variety, each backed by one
-# of the 4 hardcoded AI archetypes (ai_democratic / ai_fascist / ai_communist /
-# ai_neutral) for behavior purposes only - the archetype is invisible to the
-# player, the ideology name/color/flavor is what shows up in game.
-#
-#   Archetype        | Ideologies
-#   ------------------+-----------------------------------------------------
-#   ai_communist      | revolutionary
-#   ai_fascist        | junta, ethnonationalism, corporatism, theocracy
-#   ai_democratic     | social_democracy, classical_liberalism, technocracy
-#   ai_neutral        | monarchism
-
 ideologies = {
-
-	### Quasi-Communist ###
 
 	revolutionary = {
 		types = {
@@ -49,8 +32,6 @@ ideologies = {
 		}
 		ai_give_core_state_control_threshold = 10
 	}
-
-	### Quasi-Fascist (authoritarian) ###
 
 	junta = {
 		types = {
@@ -188,8 +169,6 @@ ideologies = {
 		ai_give_core_state_control_threshold = 10000
 	}
 
-	### Democratic ###
-
 	social_democracy = {
 		types = {
 			social_democracy_subtype = {
@@ -324,8 +303,6 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.10
 		ai_give_core_state_control_threshold = 0
 	}
-
-	### Non-Aligned ###
 
 	monarchism = {
 		types = {

@@ -1,7 +1,5 @@
 spriteTypes = {
 
-	## Ideology group icons (top bar / politics view) - placeholder solid-color art, replace with real icons later
-
 	spriteType = {
 		name = "GFX_ideology_revolutionary_group"
 		texturefile = "gfx/interface/ideologies/revolutionary_group.dds"
@@ -38,8 +36,6 @@ spriteTypes = {
 		name = "GFX_ideology_monarchism_group"
 		texturefile = "gfx/interface/ideologies/monarchism_group.dds"
 	}
-
-	## Party popularity small icons
 
 	spriteType = {
 		name = "GFX_ideology_revolutionary_small"
