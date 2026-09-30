@@ -1,0 +1,85 @@
+ideas = {
+
+	welfare_policy = {
+		law = yes
+		use_list_view = yes
+
+		welfare_policy_no_policy = {
+			picture = generic_agrarian_society
+		}
+
+		welfare_policy_private_welfare = {
+			picture = generic_agrarian_society
+		}
+
+		welfare_policy_state_sponsored_welfare = {
+			picture = generic_agrarian_society
+		}
+
+		welfare_policy_state_controlled_welfare = {
+			picture = generic_agrarian_society
+		}
+
+	}
+
+	workers_rights = {
+		law = yes
+		use_list_view = yes
+
+		workers_rights_slave_labor = {
+			picture = generic_agrarian_society
+		}
+
+		workers_rights_serfdom = {
+			picture = generic_agrarian_society
+		}
+
+		workers_rights_nonexistent_rights = {
+			picture = generic_agrarian_society
+		}
+
+		workers_rights_minor_concessions = {
+			picture = generic_agrarian_society
+		}
+
+		workers_rights_some_rights = {
+			picture = generic_agrarian_society
+		}
+
+		workers_rights_general_rights = {
+			picture = generic_agrarian_society
+		}
+
+		workers_rights_widespread_rights = {
+			picture = generic_agrarian_society
+		}
+
+	}
+
+	freedom_of_speech = {
+		law = yes
+		use_list_view = yes
+
+		freedom_of_speech_no_control = {
+			picture = generic_agrarian_society
+		}
+
+		freedom_of_speech_state_supervision = {
+			picture = generic_agrarian_society
+		}
+
+		freedom_of_speech_widespread_censorship = {
+			picture = generic_agrarian_society
+		}
+
+		freedom_of_speech_total_state_control = {
+			picture = generic_agrarian_society
+		}
+
+		freedom_of_speech_no_media = {
+			picture = generic_agrarian_society
+		}
+
+	}
+
+}
