@@ -1,0 +1,17 @@
+LGL_military_spirit = {
+    icon = GFX_idea_JAP_pan_asian_union
+
+    army_attack_factor = LGL_attack_var
+    army_defence_factor = LGL_defense_var
+    army_speed_factor = LGL_speed_var
+    training_time_factor = LGL_training_var
+    experience_gain_army_factor = LGL_xp_var
+    recruitable_population_factor = LGL_recruitpop_var
+    org_loss_when_moving = LGL_orgloss_var
+    army_org_factor = LGL_org_var
+    winter_attrition_factor = LGL_winter_var
+    planning_speed = LGL_planspd_var
+    max_planning_factor = LGL_maxplan_var
+    attrition = LGL_attrition_var
+    no_supply_grace = LGL_supplygrace_var
+}

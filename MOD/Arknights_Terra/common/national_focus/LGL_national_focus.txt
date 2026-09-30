@@ -1,0 +1,720 @@
+focus_tree = {
+	id = LGL_national_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LGL
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = LGL_start
+		x = 1
+		y = 1
+		cost = 1
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = LGL_mil_start
+		x = -9
+		y = 0
+		relative_position_id = LGL_poli_start
+		cost = 1
+
+		prerequisite = { focus = LGL_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_tech
+			}
+			add_dynamic_modifier = { modifier = LGL_military_spirit }
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_poli_start
+		x = 0
+		y = 1
+		relative_position_id = LGL_start
+		cost = 1
+
+		prerequisite = { focus = LGL_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_eco_start
+		x = 8
+		y = 1
+		relative_position_id = LGL_start
+		cost = 1
+
+		prerequisite = { focus = LGL_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_vic_nonagg_friend
+		x = -1
+		y = 1
+		relative_position_id = LGL_vic_2
+		cost = 4
+
+		prerequisite = { focus = LGL_vic_2 }
+		mutually_exclusive = { focus = LGL_vic_nonagg_aggro }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_vic_nonagg_aggro
+		x = 1
+		y = 1
+		relative_position_id = LGL_vic_2
+		cost = 2
+
+		prerequisite = { focus = LGL_vic_2 }
+		mutually_exclusive = { focus = LGL_vic_nonagg_friend }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_urs_nonagg_friend
+		x = -1
+		y = 1
+		relative_position_id = LGL_urs_2
+		cost = 4
+
+		prerequisite = { focus = LGL_urs_2 }
+		mutually_exclusive = { focus = LGL_urs_nonagg_aggro }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_urs_nonagg_aggro
+		x = 2
+		y = 0
+		relative_position_id = LGL_urs_nonagg_friend
+		cost = 2
+
+		prerequisite = { focus = LGL_urs_2 }
+		mutually_exclusive = { focus = LGL_urs_nonagg_friend }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_static_army_1
+		x = -4
+		y = 1
+		relative_position_id = LGL_mil_start
+		cost = 4
+
+		prerequisite = { focus = LGL_mil_start }
+		mutually_exclusive = { focus = LGL_asymmetric_army_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_stat_1_tt
+			set_country_flag = LGL_stat_1_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_asymmetric_army_1
+		x = -2
+		y = 1
+		relative_position_id = LGL_mil_start
+		cost = 4
+
+		prerequisite = { focus = LGL_mil_start }
+		mutually_exclusive = { focus = LGL_static_army_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_asym_1_tt
+			set_country_flag = LGL_asym_1_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_miltech_arts_1
+		x = 1
+		y = 1
+		relative_position_id = LGL_mil_start
+		cost = 4
+
+		prerequisite = { focus = LGL_mil_start }
+		mutually_exclusive = { focus = LGL_miltech_steam_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_arts_1_tt
+			set_country_flag = LGL_arts_1_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_miltech_steam_1
+		x = 3
+		y = 1
+		relative_position_id = LGL_mil_start
+		cost = 4
+
+		prerequisite = { focus = LGL_mil_start }
+		mutually_exclusive = { focus = LGL_miltech_arts_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_steam_1_tt
+			set_country_flag = LGL_steam_1_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_vic_start
+		x = -3
+		y = 1
+		relative_position_id = LGL_poli_start
+		cost = 2
+
+		prerequisite = { focus = LGL_poli_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_lei_start
+		x = 0
+		y = 1
+		relative_position_id = LGL_poli_start
+		cost = 2
+
+		prerequisite = { focus = LGL_poli_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_urs_start
+		x = 3
+		y = 1
+		relative_position_id = LGL_poli_start
+		cost = 2
+
+		prerequisite = { focus = LGL_poli_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_industry_research_1
+		x = -2
+		y = 1
+		relative_position_id = LGL_eco_start
+		cost = 5
+
+		prerequisite = { focus = LGL_eco_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_industry_mil_1
+		x = 0
+		y = 1
+		relative_position_id = LGL_eco_start
+		cost = 4
+
+		prerequisite = { focus = LGL_eco_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_industry_civ_1
+		x = 2
+		y = 1
+		relative_position_id = LGL_eco_start
+		cost = 4
+
+		prerequisite = { focus = LGL_eco_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_static_army_2
+		x = -4
+		y = 0
+		relative_position_id = LGL_asymmetric_army_2
+		cost = 4
+
+		prerequisite = { focus = LGL_static_army_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_stat_2_tt
+			set_country_flag = LGL_stat_2_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_shared_army_1
+		x = 1
+		y = 1
+		relative_position_id = LGL_static_army_1
+		cost = 2
+
+		prerequisite = { focus = LGL_static_army_1 focus = LGL_asymmetric_army_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_shared_1_tt
+			set_country_flag = LGL_shared_1_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_asymmetric_army_2
+		x = 1
+		y = 1
+		relative_position_id = LGL_asymmetric_army_1
+		cost = 4
+
+		prerequisite = { focus = LGL_asymmetric_army_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_asym_2_tt
+			set_country_flag = LGL_asym_2_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_miltech_arts_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_miltech_arts_1
+		cost = 4
+
+		prerequisite = { focus = LGL_miltech_arts_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_arts_2_tt
+			set_country_flag = LGL_arts_2_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_miltech_steam_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_miltech_steam_1
+		cost = 4
+
+		prerequisite = { focus = LGL_miltech_steam_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_steam_2_tt
+			set_country_flag = LGL_steam_2_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_vic_1
+		x = 0
+		y = 1
+		relative_position_id = LGL_vic_start
+		cost = 4
+
+		prerequisite = { focus = LGL_vic_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_lei_1
+		x = 0
+		y = 1
+		relative_position_id = LGL_lei_start
+		cost = 4
+
+		prerequisite = { focus = LGL_lei_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_urs_1
+		x = 0
+		y = 1
+		relative_position_id = LGL_urs_start
+		cost = 4
+
+		prerequisite = { focus = LGL_urs_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_industry_research_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_industry_research_1
+		cost = 4
+
+		prerequisite = { focus = LGL_industry_research_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_industry_mil_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_industry_mil_1
+		cost = 4
+
+		prerequisite = { focus = LGL_industry_mil_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_industry_civ_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_industry_civ_1
+		cost = 4
+
+		prerequisite = { focus = LGL_industry_civ_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_static_army_3
+		x = -2
+		y = 1
+		relative_position_id = LGL_shared_army_1
+		cost = 2
+
+		prerequisite = { focus = LGL_static_army_2 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_stat_3_tt
+			set_country_flag = LGL_stat_3_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_shared_army_2
+		x = 1
+		y = 2
+		relative_position_id = LGL_static_army_1
+		cost = 4
+
+		prerequisite = { focus = LGL_shared_army_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_shared_2_tt
+			set_country_flag = LGL_shared_2_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_asymmetric_army_3
+		x = 2
+		y = 0
+		relative_position_id = LGL_shared_army_2
+		cost = 2
+
+		prerequisite = { focus = LGL_asymmetric_army_2 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_asym_3_tt
+			set_country_flag = LGL_asym_3_done
+        	LGL_recalc_military_spirit = yes
+		}
+	}
+
+	focus = {
+		id = LGL_vic_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_vic_1
+		cost = 5
+
+		prerequisite = { focus = LGL_vic_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_lei_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_lei_1
+		cost = 4
+
+		prerequisite = { focus = LGL_lei_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_urs_2
+		x = 0
+		y = 1
+		relative_position_id = LGL_urs_1
+		cost = 5
+
+		prerequisite = { focus = LGL_urs_1 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_econ_final
+		x = 0
+		y = 1
+		relative_position_id = LGL_industry_mil_2
+		cost = 10
+
+		prerequisite = { focus = LGL_industry_mil_2 }
+		prerequisite = { focus = LGL_industry_civ_2 }
+		prerequisite = { focus = LGL_industry_research_2 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_military_final
+		x = 0
+		y = 2
+		relative_position_id = LGL_miltech_arts_2
+		cost = 10
+
+		prerequisite = { focus = LGL_miltech_arts_2 focus = LGL_miltech_steam_2 }
+		prerequisite = { focus = LGL_static_army_3 focus = LGL_shared_army_2 focus = LGL_asymmetric_army_3 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			custom_effect_tooltip = LGL_mil_final_tt
+			set_country_flag = LGL_mil_final_done
+        	LGL_recalc_military_spirit = yes	
+		}
+	}
+
+	focus = {
+		id = LGL_lei_3
+		x = 0
+		y = 1
+		relative_position_id = LGL_lei_2
+		cost = 2
+
+		prerequisite = { focus = LGL_lei_2 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_wo4e_prelude
+		x = -4
+		y = 1
+		relative_position_id = LGL_urs_nonagg_aggro
+		cost = 2
+
+		prerequisite = { focus = LGL_urs_nonagg_aggro focus = LGL_urs_nonagg_friend }
+		prerequisite = { focus = LGL_vic_nonagg_aggro focus = LGL_vic_nonagg_friend }
+		prerequisite = { focus = LGL_lei_3 }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_wo4e_start
+		x = 1
+		y = 1
+		relative_position_id = LGL_wo4e_prelude
+		cost = 0.428571
+
+		prerequisite = { focus = LGL_wo4e_prelude }
+		mutually_exclusive = { focus = LGL_wo4e_skip }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+
+	focus = {
+		id = LGL_wo4e_skip
+		x = -1
+		y = 1
+		relative_position_id = LGL_wo4e_prelude
+		cost = 0.428571
+
+		prerequisite = { focus = LGL_wo4e_prelude }
+		mutually_exclusive = { focus = LGL_wo4e_start }
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		completion_reward = {
+			add_political_power = 0
+		}
+	}
+}
+
