@@ -4,6 +4,13 @@ state = {
 	manpower = 1256077
 	state_category = small_island
 
+	resources = {
+		originium = 10
+		steel = 10
+		tungsten = 2
+		rubber = 2
+	}
+
 	history = {
 		owner = AGI
 		add_core_of = AGI

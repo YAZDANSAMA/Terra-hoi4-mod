@@ -1,6 +1,6 @@
 name="Arknights: Terra"
 picture="thumbnail.png"
-version="0.0.44-merged"
+version="0.0.60-airbase-resources-vanilla-structures"
 supported_version="1.19.*"
 tags={
     "Alternative History"

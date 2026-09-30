@@ -4,6 +4,12 @@ state = {
 	manpower = 1
 	state_category = city
 
+	resources = {
+		originium = 4
+		coal = 20
+		rubber = 2
+	}
+
 	history = {
 		owner = CLM
 		add_core_of = CLM

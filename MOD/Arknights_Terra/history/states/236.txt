@@ -5,6 +5,13 @@ state = {
 	state_category = wasteland
 	impassable = yes
 
+	resources = {
+		originium = 16
+		steel = 18
+		tungsten = 6
+		rubber = 12
+	}
+
 	history = {
 	}
 

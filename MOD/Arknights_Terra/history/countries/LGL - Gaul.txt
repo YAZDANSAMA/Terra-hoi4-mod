@@ -19,3 +19,7 @@ set_popularities = {
 
 add_dynamic_modifier = { modifier = LGL_military_spirit }
 LGL_recalc_military_spirit = yes
+
+# Terra v0.0.46 hotfix starting national spirits
+add_ideas = LGL_imperial_confidence
+add_ideas = LGL_restless_general_staff

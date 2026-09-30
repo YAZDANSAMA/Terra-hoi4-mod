@@ -4,6 +4,11 @@ state = {
 	manpower = 12082
 	state_category = city
 
+	resources = {
+		tungsten = 10
+		rubber = 6
+	}
+
 	history = {
 		owner = SMN
 		add_core_of = SMN

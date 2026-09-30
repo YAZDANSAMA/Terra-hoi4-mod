@@ -4,6 +4,12 @@ state = {
 	manpower = 1
 	state_category = metropolis
 
+	resources = {
+		originium = 16
+		steel = 8
+		aluminium = 12
+	}
+
 	history = {
 		victory_points = { 5525 80 }
 		owner = SST

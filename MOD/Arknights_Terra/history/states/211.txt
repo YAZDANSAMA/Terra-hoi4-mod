@@ -4,6 +4,12 @@ state = {
 	manpower = 1929167
 	state_category = small_island
 
+	resources = {
+		coal = 24
+		aluminium = 10
+		chromium = 4
+	}
+
 	history = {
 		owner = IBR
 		add_core_of = IBR

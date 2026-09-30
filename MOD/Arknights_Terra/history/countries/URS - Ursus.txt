@@ -16,3 +16,14 @@ set_politics = {
 set_popularities = {
     monarchism = 100
 }
+
+# Terra v0.0.48 starting national spirits
+add_ideas = URS_imperial_army
+add_ideas = URS_vast_empire
+add_ideas = URS_empire_igor_built
+add_ideas = URS_service_earns_nobility
+add_ideas = URS_marshals_armies
+add_ideas = URS_blocked_from_heartland
+
+# URS_southern_ambitions is intentionally NOT a 1028 starting spirit.
+# It is granted by the 1030 Ursus focus branch.

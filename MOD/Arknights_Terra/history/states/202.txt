@@ -4,6 +4,12 @@ state = {
 	manpower = 1929167
 	state_category = city
 
+	resources = {
+		coal = 18
+		aluminium = 10
+		tungsten = 14
+	}
+
 	history = {
 		owner = IBR
 		add_core_of = IBR

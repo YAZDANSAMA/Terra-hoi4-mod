@@ -4,6 +4,13 @@ state = {
 	manpower = 3426717
 	state_category = city
 
+	resources = {
+		originium = 6
+		steel = 12
+		tungsten = 6
+		chromium = 8
+	}
+
 	history = {
 		owner = KJG
 		add_core_of = KJG

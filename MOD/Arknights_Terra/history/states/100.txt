@@ -4,6 +4,13 @@ state = {
 	manpower = 1
 	state_category = rural
 
+	resources = {
+		steel = 16
+		aluminium = 10
+		tungsten = 2
+		chromium = 12
+	}
+
 	history = {
 		owner = KZM
 		add_core_of = KZM

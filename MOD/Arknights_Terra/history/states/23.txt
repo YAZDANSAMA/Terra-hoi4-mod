@@ -4,6 +4,13 @@ state = {
 	manpower = 7909
 	state_category = rural
 
+	resources = {
+		originium = 18
+		steel = 6
+		aluminium = 10
+		chromium = 2
+	}
+
 	history = {
 		owner = URS
 		add_core_of = URS

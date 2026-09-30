@@ -4,6 +4,13 @@ state = {
 	manpower = 1
 	state_category = rural
 
+	resources = {
+		originium = 8
+		aluminium = 16
+		tungsten = 8
+		rubber = 6
+	}
+
 	history = {
 		owner = CLM
 		add_core_of = CLM

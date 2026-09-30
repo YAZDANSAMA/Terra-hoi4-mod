@@ -4,6 +4,11 @@ state = {
 	manpower = 12082
 	state_category = rural
 
+	resources = {
+		steel = 20
+		chromium = 8
+	}
+
 	history = {
 		owner = SMN
 		add_core_of = SMN

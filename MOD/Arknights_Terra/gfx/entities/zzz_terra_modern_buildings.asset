@@ -1,83 +1,10 @@
-entity = {
-	name = "building_industrial_complex"
-	pdxmesh = "terra_md_factory_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_arms_factory"
-	pdxmesh = "terra_md_factory_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
+#### Terra / Millennium Dawn building overrides ####
+## Keep ONLY the air base as Millennium Dawn style.
+## All other gameplay buildings fall back to vanilla HOI4 entities.
 
 entity = {
 	name = "building_air_base"
 	pdxmesh = "terra_md_airbase_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_radar_station"
-	pdxmesh = "terra_md_radar_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_rocket_site"
-	pdxmesh = "terra_md_rocket_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_supply_node"
-	pdxmesh = "terra_md_supply_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_naval_base"
-	pdxmesh = "terra_md_navalbase_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_bunker"
-	pdxmesh = "terra_md_bunker_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_coastal_bunker"
-	pdxmesh = "terra_md_fortress_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_anti_air_building"
-	pdxmesh = "terra_md_aa_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_synthetic_refinery"
-	pdxmesh = "terra_md_research_mesh"
-	scale = 1.00
-	cull_radius = 100
-}
-
-entity = {
-	name = "building_fuel_silo"
-	pdxmesh = "terra_md_supply_mesh"
 	scale = 1.00
 	cull_radius = 100
 }

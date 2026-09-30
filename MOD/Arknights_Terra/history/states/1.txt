@@ -4,6 +4,12 @@ state = {
 	manpower = 3389057
 	state_category = city
 
+	resources = {
+		originium = 18
+		aluminium = 2
+		rubber = 8
+	}
+
 	history = {
 		owner = VCT
 		add_core_of = VCT

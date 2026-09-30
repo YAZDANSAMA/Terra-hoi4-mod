@@ -64,4 +64,97 @@ focus_tree = {
             add_political_power = 25
         }
     }
+
+    # ================================================================
+    # URSUS: Southern Intervention branch
+    # Hidden for all countries except URS. This keeps the existing
+    # generic focus tree intact while Ursus receives its own first branch.
+    # ================================================================
+
+    focus = {
+        id = URS_the_gaulish_crisis
+        icon = GFX_goal_generic_major_war
+        x = 4
+        y = 0
+        cost = 5
+
+        allow_branch = { tag = URS }
+        available = { tag = URS }
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            add_political_power = 25
+        }
+    }
+
+    focus = {
+        id = URS_eyes_to_the_south
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = URS_the_gaulish_crisis }
+        relative_position_id = URS_the_gaulish_crisis
+        x = 0
+        y = 1
+        cost = 5
+
+        allow_branch = { tag = URS }
+        available = { tag = URS }
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            army_experience = 5
+        }
+    }
+
+    focus = {
+        id = URS_prepare_the_southern_commands
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = URS_eyes_to_the_south }
+        relative_position_id = URS_eyes_to_the_south
+        x = 0
+        y = 1
+        cost = 5
+
+        allow_branch = { tag = URS }
+        available = { tag = URS }
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            army_experience = 10
+        }
+    }
+
+    focus = {
+        id = URS_embrace_southern_ambitions
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = URS_prepare_the_southern_commands }
+        relative_position_id = URS_prepare_the_southern_commands
+        x = 0
+        y = 1
+        cost = 5
+
+        allow_branch = { tag = URS }
+        available = {
+            tag = URS
+            date > 1030.1.1
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            add_ideas = URS_southern_ambitions
+            set_country_flag = URS_southern_ambitions_ready
+        }
+    }
+
 }

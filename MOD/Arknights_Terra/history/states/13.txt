@@ -4,6 +4,11 @@ state = {
 	manpower = 28400
 	state_category = metropolis
 
+	resources = {
+		originium = 16
+		aluminium = 4
+	}
+
 	history = {
 		victory_points = { 222 80 }
 		owner = HGS

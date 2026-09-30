@@ -4,6 +4,13 @@ state = {
 	manpower = 7909
 	state_category = rural
 
+	resources = {
+		steel = 20
+		coal = 22
+		aluminium = 10
+		chromium = 10
+	}
+
 	history = {
 		owner = VCT
 		add_core_of = VCT

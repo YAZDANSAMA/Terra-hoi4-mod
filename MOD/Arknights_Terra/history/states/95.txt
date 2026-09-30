@@ -4,6 +4,11 @@ state = {
 	manpower = 1
 	state_category = metropolis
 
+	resources = {
+		originium = 6
+		chromium = 6
+	}
+
 	history = {
 		victory_points = { 2580 80 }
 		victory_points = { 2578 1 }

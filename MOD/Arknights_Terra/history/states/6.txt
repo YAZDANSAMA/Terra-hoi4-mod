@@ -4,6 +4,13 @@ state = {
 	manpower = 2095649
 	state_category = metropolis
 
+	resources = {
+		originium = 14
+		coal = 4
+		chromium = 2
+		rubber = 4
+	}
+
 	history = {
 		victory_points = { 3241 80 }
 		owner = LTR

@@ -4,6 +4,13 @@ state = {
 	manpower = 1
 	state_category = small_island
 
+	resources = {
+		originium = 16
+		steel = 22
+		coal = 6
+		tungsten = 4
+	}
+
 	history = {
 		owner = YAN
 		add_core_of = YAN

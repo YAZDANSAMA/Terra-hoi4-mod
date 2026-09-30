@@ -4,6 +4,11 @@ state = {
 	manpower = 1929167
 	state_category = rural
 
+	resources = {
+		steel = 22
+		aluminium = 8
+	}
+
 	history = {
 		owner = IBR
 		add_core_of = IBR
