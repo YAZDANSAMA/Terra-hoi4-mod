@@ -1,37 +1,6 @@
 ideas = {
     country = {
 
-        # Victoria
-        VCT_victorian_industrial_engine = {
-            picture = generic_production_bonus
-            removal_cost = -1
-            modifier = {
-                industrial_capacity_factory = 0.08
-                production_speed_buildings_factor = 0.05
-                research_speed_factor = 0.03
-            }
-        }
-
-        VCT_imperial_overextension = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                stability_factor = -0.05
-                political_power_factor = -0.05
-                supply_consumption_factor = 0.05
-            }
-        }
-
-        VCT_steam_knight_tradition = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                army_defence_factor = 0.05
-                experience_gain_army_factor = 0.10
-                max_planning_factor = 0.05
-            }
-        }
-
         # Ursus
         URS_imperial_army = {
             picture = generic_infantry_bonus

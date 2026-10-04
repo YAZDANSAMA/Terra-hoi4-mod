@@ -1,6 +1,24 @@
 on_actions = {
-    on_startup = {
-        effect = {
-        }
-    }
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = LGL
+					country_exists = VCT
+				}
+				VCT = {
+					add_opinion_modifier = {
+						target = LGL
+						modifier = VCT_LGL_reps
+					}
+				}
+                LGL = {
+					add_opinion_modifier = {
+						target = VCT
+						modifier = LGL_VCT_reps
+					}
+				}
+			}
+		}
+	}
 }

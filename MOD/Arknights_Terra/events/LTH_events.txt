@@ -1,0 +1,88 @@
+add_namespace = leithanien
+
+# Friendly envoy
+country_event = {
+	id = leithanien.100
+	title = leithanien.100.t
+	desc = leithanien.100.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # Submit
+	option = { 
+		name = leithanien.100.a
+        add_stability = -0.4
+        add_war_support = -0.4
+        add_political_power = 50
+		LGL = {
+			country_event = {
+				id = gaul.101
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+    # Refuse
+	option = {
+		name = leithanien.100.b
+		add_war_support = 0.05
+		add_manpower = 1000
+		LGL = {
+			country_event = {
+				id = gaul.102
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+}
+
+# Aggressive envoy (historical)
+country_event = {
+	id = leithanien.101
+	title = leithanien.101.t
+	desc = leithanien.101.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # Submit
+	option = { 
+		name = leithanien.101.a
+        add_stability = -0.9
+        add_war_support = -0.9
+        add_political_power = -100
+		LGL = {
+			country_event = {
+				id = gaul.101
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+    # Refuse (historical)
+	option = {
+		name = leithanien.101.b
+		add_war_support = 0.25
+		add_manpower = 10000
+		add_political_power = 100
+		LGL = {
+			country_event = {
+				id = gaul.102
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

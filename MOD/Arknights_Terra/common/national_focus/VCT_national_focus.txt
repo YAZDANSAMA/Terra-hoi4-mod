@@ -1,11 +1,11 @@
 focus_tree = {
-	id = VIC_national_focus
+	id = VCT_national_focus
 
 	country = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = VIC
+			tag = VCT
 		}
 	}
 }

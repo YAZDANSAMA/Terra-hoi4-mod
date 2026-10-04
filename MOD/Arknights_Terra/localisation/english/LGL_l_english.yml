@@ -113,11 +113,12 @@
  LGL_notre_langue_desc: "The Gallic language has evolved to become the world's lingua franca, but only in name. With the release of the modern Gallic language textbook, we have finally made our linguistic influence over Terra a reality, becoming a staple in classrooms and libraries all over the continent."
 
  LGL_livre_standard: "The Livre Standard"
+ LGL_livre_mod: "Standardized Livre"
  LGL_livre_standard_desc: "Our currency, the livre, has become the standard across all of Terra, used in transactions and trade internationally and becoming the de facto standard of some nations."
 
  LGL_eco_start_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §G-3.0%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+2.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+2.5%§!"
  LGL_ind_res_1_tt: "Add §Y$LGL_notre_langue$§!, which grants:\n$MODIFIER_POLITICAL_POWER_GAIN$: §G+5.0%§!\n$MODIFIER_GLOBAL_MONTHLY_POPULATION$: §G+20.0%§!\n$MODIFIER_OPINION_GAIN_MONTHLY_FACTOR$: §G+10.0%§!\n$MODIFIER_COMPLIANCE_GROWTH$: §G+7.0%§!\n\nModify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+3.5%§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-5.0%§!"
- LGL_ind_res_2_tt: "Gain §G1§! research slot.\n\nModify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+10.0%§!"
+ LGL_ind_res_2_tt: "Gain §G1§! research slot.\n\nModify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+10.0%§!\n$MODIFIER_TRADE_OPINION_FACTOR$: §G+50§!"
 
  LGL_ind_mil_1_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §G+5.0%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+2.5%§!"
  LGL_ind_mil_2_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.0%§!\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: §G+7.5%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+4.0%§!"
@@ -131,3 +132,26 @@
 
  LGL_victorian_reparations: "Victorian Reparations"
  LGL_victorian_reparations_desc: "Emerging as the victtor in the brutal Gallo-Victorian War, Gaul's victory in the Gallo-Victorian War was costly, but the peace it dictated was harsher still. The reparations imposed upon the young Victorian nation have not broken it, yet they have bred a lasting bitterness toward Gaul and its habit of meddling in Victorian affairs.\n\n§RA humbled enemy is not a harmless one, much less a wounded lion whose dignity we have struck time and again. We must keep watch on those Aslan upstarts to the south, lest either strike back when our guard is down.§!"
+
+ LGL_leithanien_gifts: "Gifts to Leithanien"
+ LGL_leithanien_gifts_desc: "The gifts we sent and promised to Leithanien are expensive for our civilian and military economy. If an enemy were to attack us, our industry will not be able to keep up."
+ LGL_military_administration: "Leithanien Military Administration"
+ LGL_military_administration_desc: "Sending the majority of our general staff and army to oversee the military administration places a massive strain on our domestic forces. We should take care to be vigilant of our neighbors in case of an attack on us."
+
+ LGL_VCT_reps: "Victorian Reparations"
+ gaul.100.t: "Envoy to Leithanien"
+ gaul.100.d: "The preparations for Leithanien's submission are complete. Upon the council table lies a single sealed parchment: Gaul's offer to the Witch King. Submit to the empire, and his family will be bound to the imperial house through marriage.\n\nCorsica I stood at the window as the envoy's caravan was readied in the courtyard below. He listened as the ministers argued behind him. Some urged generosity. Chests of gold, fine silks, and promises of land and title would show the Witch King an empire extending a hand in friendship rather than demanding one. Others scoffed. To walk unarmed into the house of that accursed man was to invite disaster. Let the envoy ride beneath a guard of soldiers and casters, so that none could doubt the strength standing behind the request.\n\nHe knew that that accursed king would refuse them all. After all, it was just an excuse to go to war against them. But he said nothing. Instead, he turned around, and issued his order,"
+ gaul.100.a: "\"Send him some gifts. Let's see if he falls for the carrot.\""
+ gaul.100.b: "\"Send the soldiers. The Witch King must know not to invite the stick.\""
+
+ gaul.101.t: "Leithanien submits"
+ gaul.101.d: "The envoy returned at dawn, riding at the head of a Leithanian escort with a sealed letter held high. The gates of Lingones opened before him, and he walked into the throne room with his head raised. He walked up to the emperor with a solemn yet prideful expression, and handed the letter to him. Corsica I opened it, and a single tear fell from his eye. He stood up, and declared,\n\n§G\"Leithanien has submitted to our nation!\"§!\n\nThe court erupted. Nobles who had spent weeks whispering of war now raised their glasses, and even the emperor allowed himself a thin smile. That night, bells rang across Lingones. Lavish parties were held at the manors of nobles, as the streets of the cities were filled with joy and laughter over such a simple victory. Meanwhile, behind closed doors, ministers and generals squabbled, arguing over who would govern their new vassal. \n\n Corsica looked out the window, watching as the celebrations continued in the streets of Lingones. He heard the door open, and recognized the footsteps of his wife, the Empress-Consort.\n\n\"Why don't you go and partake in the celebrations?\" she asked. He turned to her, and smiled."
+ gaul.101.a: "\"There's still lots of work that needs to be done, my love. We can't afford to be complacent now.\""
+
+ gaul.102.t: "Leithanien refuses"
+ gaul.102.d: "The caravan arrived at dawn, drawn by a single Gallic driver who would not meet our eyes. In its bed stood a statue of our envoy, their faces petrified in fear as they raised their hands to block whatever was coming towards them. The message was clear: \n\n§R\"Leithanien refuses to submit.\"§!\n\nThe court has fallen silent. The nobles looked away in horror, and the emperor's face twisted in disgust.\n\nLater, in the castle's war room, generals gathered around as Corsica I sat at the head of the table. He watched as they bickered and bickered, going on and on about how to respond to Leithanien's insult. As the voices grew louder, his mind became weary, and his thoughts became clearer as his anger and rage solidified into something...quiet.\n\nFinally, he arose, and the generals all fell silent. He looked at them all in the eyes, and declared,"
+ gaul.102.a: "\"Prepare for war. They will pay for their treachary.\""
+ gaul.102.b: "\"We must bide our time. We are not prepared yet.\""
+
+ LTH_envoy_refuse_tt: "Leithanien has killed our envoys!"
+ LTH_envoy_submit_tt: "Leithanien has submitted to our rule."

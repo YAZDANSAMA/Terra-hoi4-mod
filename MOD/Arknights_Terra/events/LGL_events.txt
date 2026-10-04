@@ -1,0 +1,118 @@
+add_namespace = gaul
+
+# Send the envoys
+country_event = {
+	id = gaul.100
+	title = gaul.100.t
+	desc = gaul.100.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # Send friendly
+	option = { 
+        set_country_flag = LTH_envoy_friendly
+		name = gaul.100.a
+        add_political_power = -100
+        add_stability = -0.25
+        add_war_support = -0.15
+        LTH = { 
+            country_event = { 
+                id = leithanien.100
+                days = 2
+            }
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+    # Send aggressive
+	option = {
+        set_country_flag = LTH_envoy_aggressive
+		name = gaul.100.b
+        add_manpower = -50
+        add_war_support = 0.1
+        LTH = { 
+            country_event = { 
+                id = leithanien.101 
+                days = 2 
+            }
+        }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Leithanien submits
+country_event = {
+	id = gaul.101
+	title = gaul.101.t
+	desc = gaul.101.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = LTH_envoy_submit
+    }
+
+    # If sent friendly
+	option = { 
+		name = gaul.101.a
+        trigger = {
+            has_country_flag = LTH_envoy_friendly
+        }
+        add_ideas = LGL_leithanien_gifts
+        add_stability = -0.1
+	}
+
+    # If sent military
+	option = {
+		name = gaul.101.a
+        trigger = {
+            has_country_flag = LTH_envoy_aggressive
+        }
+        add_ideas = LGL_military_administration
+        add_war_support = -0.1
+    }
+}
+
+# Leithanien refuses
+country_event = {
+	id = gaul.102
+	title = gaul.102.t
+	desc = gaul.102.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = LTH_envoy_refuse
+    }
+
+    # Go to war
+	option = { 
+		name = gaul.102.a
+        add_war_support = 0.15
+		ai_chance = {
+			factor = 99
+		}
+	}
+
+    # Back down
+	option = {
+		name = gaul.102.b
+        add_manpower = -5000
+        add_stability = -0.4
+        add_war_support = -0.4
+        set_truce = {
+            target = LTH
+            days = 180
+        }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
