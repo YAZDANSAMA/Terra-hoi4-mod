@@ -102,3 +102,68 @@ LGL_recalc_military_spirit = {
 
     force_update_dynamic_modifier = yes
 }
+
+LGL_recalc_economic_spirit = {
+    set_variable = { LGL_cg_var = 0.15 }
+    set_variable = { LGL_milout_var = 0 }
+    set_variable = { LGL_construct_var = 0.02 }
+    set_variable = { LGL_resspd_var = 0.05 }
+    set_variable = { LGL_resource_var = 0 }
+    set_variable = { LGL_energycons_var = 0.05 }
+    set_variable = { LGL_effigain_var = -0.0725 }
+    set_variable = { LGL_effimax_var = 0.05 }
+    set_variable = { LGL_effistart_var = 0.03 }
+    set_variable = { LGL_effiret_var = 0 }
+
+    # --- Start ---
+    if = {
+        limit = { has_country_flag = LGL_eco_start_done }
+        add_to_variable = { LGL_cg_var = -0.03 }
+        add_to_variable = { LGL_construct_var = 0.02 }
+        add_to_variable = { LGL_milout_var = 0.025 }
+    }
+
+    # --- Research branch ---
+    if = {
+        limit = { has_country_flag = LGL_ind_res_1_done }
+        add_to_variable = { LGL_resspd_var = 0.035 }
+        add_to_variable = { LGL_cg_var = -0.05 }
+    }
+    if = {
+        limit = { has_country_flag = LGL_ind_res_2_done }
+        add_to_variable = { LGL_resspd_var = 0.10 }
+    }
+
+    # --- Mil branch ---
+    if = {
+        limit = { has_country_flag = LGL_ind_mil_1_done }
+        add_to_variable = { LGL_effiret_var = 0.05 }
+        add_to_variable = { LGL_effigain_var = 0.05 }
+        add_to_variable = { LGL_milout_var = 0.025 }
+    }
+    if = {
+        limit = { has_country_flag = LGL_ind_mil_2_done }
+        add_to_variable = { LGL_milout_var = 0.05 }
+        add_to_variable = { LGL_resource_var = 0.075 }
+        add_to_variable = { LGL_construct_var = 0.04 }
+    }
+
+
+    # --- Civ branch ---
+    if = {
+        limit = { has_country_flag = LGL_ind_civ_1_done }
+        add_to_variable = { LGL_cg_var = -0.02 } 
+        add_to_variable = { LGL_construct_var = 0.1 }
+    }
+
+
+    # --- Final ---
+    if = {
+        limit = { has_country_flag = LGL_econ_final_done }
+        add_to_variable = { LGL_cg_var = -0.02 } 
+        add_to_variable = { LGL_construct_var = 0.1 }
+        add_to_variable = { LGL_milout_var = 0.05 }
+    }
+
+    force_update_dynamic_modifier = yes
+}

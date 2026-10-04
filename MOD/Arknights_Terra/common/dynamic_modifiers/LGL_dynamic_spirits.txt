@@ -17,3 +17,19 @@ LGL_military_spirit = {
     attrition = LGL_attrition_var
     no_supply_grace = LGL_supplygrace_var
 }
+
+LGL_economic_spirit = {
+    icon = GFX_idea_JAP_pan_asian_union
+    
+    consumer_goods_factor = LGL_cg_var
+    industrial_capacity_factory = LGL_milout_var
+    production_speed_buildings_factor = LGL_construct_var
+    research_speed_factor = LGL_resspd_var
+    local_resources_factor = LGL_resource_var
+    factory_energy_consumption = LGL_energycons_var
+    production_factory_efficiency_gain_factor = LGL_effigain_var
+    production_factory_max_efficiency_factor = LGL_effimax_var
+    production_factory_start_efficiency_factor = LGL_effistart_var
+    line_change_production_efficiency_factor = LGL_effiret_var
+}
+

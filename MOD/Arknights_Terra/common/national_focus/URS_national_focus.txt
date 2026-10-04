@@ -1,0 +1,94 @@
+focus_tree = {
+	id = URS_national_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = URS
+		}
+	}
+
+    focus = {
+        id = URS_the_gallic_crisis
+        icon = GFX_goal_generic_major_war
+        x = 0
+        y = 0
+        cost = 1
+
+        available = {
+        	LGL = {
+				has_war_with = LTH
+			}
+    	}
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            add_political_power = 25
+        }
+    }
+
+    focus = {
+        id = URS_eyes_to_the_south
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = URS_the_gallic_crisis }
+        relative_position_id = URS_the_gallic_crisis
+        x = 0
+        y = 1
+        cost = 5
+
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            army_experience = 5
+        }
+    }
+
+    focus = {
+        id = URS_prepare_the_southern_commands
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = URS_eyes_to_the_south }
+        relative_position_id = URS_eyes_to_the_south
+        x = 0
+        y = 1
+        cost = 5
+
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            army_experience = 10
+        }
+    }
+
+    focus = {
+        id = URS_embrace_southern_ambitions
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = URS_prepare_the_southern_commands }
+        relative_position_id = URS_prepare_the_southern_commands
+        x = 0
+        y = 1
+        cost = 5
+
+        available = {
+            date > 1030.1.1
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+            add_ideas = URS_southern_ambitions
+            set_country_flag = URS_southern_ambitions_ready
+        }
+    }
+}
