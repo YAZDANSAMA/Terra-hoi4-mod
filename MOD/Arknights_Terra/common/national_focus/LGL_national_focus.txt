@@ -88,6 +88,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = LGL_asym_1_tt
+			hidden_effect = {
+				add_manpower = 4000
+			}
 			set_country_flag = LGL_asym_1_done
         	LGL_recalc_military_spirit = yes
 		}
@@ -141,6 +144,44 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
+			division_template = {
+				name = "Infected Brigade"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					field_hospital = { x = 0 y = 1}
+				}
+			}
+			hidden_effect = {
+				14 = {
+					create_unit = {
+						division = "name = \"1er Brigade-Infecté Gaulois\" division_template = \"Infected Brigade\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						prioritize_location = 2565
+						owner = LGL
+					}
+					create_unit = {
+						division = "name = \"2e Brigade-Infecté Gaulois\" division_template = \"Infected Brigade\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						prioritize_location = 2565
+						owner = LGL
+					}
+					create_unit = {
+						division = "name = \"3e Brigade-Infecté Gaulois\" division_template = \"Infected Brigade\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						prioritize_location = 2565
+						owner = LGL
+					}
+				}
+			}
 			custom_effect_tooltip = LGL_asym_2_tt
 			set_country_flag = LGL_asym_2_done
         	LGL_recalc_military_spirit = yes
@@ -323,7 +364,9 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			add_political_power = 50
+			add_war_support = 0.10
+			
 		}
 	}
 
