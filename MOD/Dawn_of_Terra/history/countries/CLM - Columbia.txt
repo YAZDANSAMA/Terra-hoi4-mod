@@ -8,6 +8,8 @@ set_technology = {
 	basic_train = 1
 }
 recruit_character = CLM_interim_leader
+recruit_character = CLM_mark_max
+activate_advisor = CLM_mark_max
 set_politics = {
     ruling_party = classical_liberalism
     elections_allowed = no

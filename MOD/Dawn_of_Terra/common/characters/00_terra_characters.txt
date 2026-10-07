@@ -313,4 +313,23 @@ characters = {
             expire = "1965.1.1.1"
         }
     }
+
+    CLM_mark_max = {
+        name = CLM_mark_max
+        gender = male
+        portraits = {
+            civilian = {
+                small = "GFX_idea_CLM_mark_max"
+            }
+        }
+        advisor = {
+            slot = cabinet_head_of_government
+            idea_token = CLM_mark_max
+            can_be_fired = no
+            allowed = {
+                original_tag = CLM
+            }
+            traits = { CLM_president_of_columbia }
+        }
+    }
 }
