@@ -1,0 +1,13 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_terra_small_pol_piechart_frame"
+        textureFile = "gfx/interface/terra_small_pol_piechart_frame.dds"
+        alwaystransparent = yes
+    }
+
+    spriteType = {
+        name = "GFX_terra_small_pol_piechart_overlay"
+        textureFile = "gfx/interface/terra_small_pol_piechart_overlay.dds"
+        alwaystransparent = yes
+    }
+}

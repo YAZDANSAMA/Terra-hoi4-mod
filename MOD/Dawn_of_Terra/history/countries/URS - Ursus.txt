@@ -1,0 +1,33 @@
+# Boot-safe minimal history for Ursus
+capital = 22
+
+
+
+oob = "URS_1028"
+set_technology = {
+    infantry_weapons = 1
+	basic_train = 1
+}
+recruit_character = URS_ivan
+set_politics = {
+    ruling_party = monarchism
+    elections_allowed = no
+}
+
+set_popularities = {
+    monarchism = 100
+}
+
+# Terra v0.0.48 starting national spirits
+add_ideas = URS_imperial_army
+add_ideas = URS_vast_empire
+add_ideas = URS_empire_igor_built
+add_ideas = URS_service_earns_nobility
+add_ideas = URS_marshals_armies
+add_ideas = URS_blocked_from_heartland
+
+# URS_southern_ambitions is intentionally NOT a 1028 starting spirit.
+# It is granted by the 1030 Ursus focus branch.
+
+# Starting transport for the connected 1028 supply network.
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 334 producer = URS }

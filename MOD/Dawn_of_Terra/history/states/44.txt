@@ -1,0 +1,27 @@
+state = {
+	id = 44
+	name = "STATE_44"
+	manpower = 7270
+	state_category = rural
+
+	resources = {
+		coal = 12
+		chromium = 12
+		rubber = 6
+	}
+
+	history = {
+		owner = LTH
+		add_core_of = LTH
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+		}
+		add_extra_state_shared_building_slots = 3
+	}
+
+	provinces = {
+		20 2239 3194 5267 7913 7914 7915
+	}
+	local_supplies = 0.0
+}

@@ -1,0 +1,28 @@
+state = {
+	id = 169
+	name = "STATE_169"
+	manpower = 2906430
+	state_category = city
+
+	resources = {
+		coal = 18
+		aluminium = 6
+	}
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 6
+			arms_factory = 3
+		}
+		add_extra_state_shared_building_slots = 5
+	}
+
+	provinces = {
+		9 10 11 12 13 14 15 16 17 916 918 920 921 923 925 1414 1417 2478 2479 2480
+		2481 2485 2486 2611 2612 2613 2618 6830
+	}
+	local_supplies = 0.0
+}

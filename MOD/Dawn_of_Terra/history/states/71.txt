@@ -1,0 +1,27 @@
+state = {
+	id = 71
+	name = "STATE_71"
+	manpower = 7909
+	state_category = rural
+
+	resources = {
+		originium = 6
+		steel = 14
+		coal = 10
+	}
+
+	history = {
+		owner = LGL
+		add_core_of = LGL
+		buildings = {
+			infrastructure = 1
+			arms_factory = 3
+		}
+		add_extra_state_shared_building_slots = 3
+	}
+
+	provinces = {
+		6322 6323 6595 6596
+	}
+	local_supplies = 0.0
+}

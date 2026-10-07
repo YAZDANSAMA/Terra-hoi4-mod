@@ -1,0 +1,29 @@
+state = {
+	id = 15
+	name = "STATE_15"
+	manpower = 7909
+	state_category = rural
+
+	resources = {
+		steel = 20
+		coal = 22
+		aluminium = 10
+		chromium = 10
+	}
+
+	history = {
+		owner = VCT
+		add_core_of = VCT
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+			arms_factory = 3
+		}
+		add_extra_state_shared_building_slots = 6
+	}
+
+	provinces = {
+		720 723 725 3871 6439 6440 6441 6445 6447
+	}
+	local_supplies = 0.0
+}

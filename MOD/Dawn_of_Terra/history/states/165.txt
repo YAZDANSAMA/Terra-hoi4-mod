@@ -1,0 +1,26 @@
+state = {
+	id = 165
+	name = "STATE_165"
+	manpower = 2906430
+	state_category = rural
+
+	resources = {
+		coal = 24
+		chromium = 2
+	}
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+		}
+		add_extra_state_shared_building_slots = 3
+	}
+
+	provinces = {
+		2372 2373 2374 2375 5389 5699 5700 5701 5703 5705
+	}
+	local_supplies = 0.0
+}

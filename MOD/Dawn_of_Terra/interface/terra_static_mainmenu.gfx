@@ -1,0 +1,12 @@
+# Fixed main-menu image, separate from the background sprite changed by the frontend.
+spriteTypes = {
+    corneredTileSpriteType = {
+        name = "GFX_terra_static_mainmenu_background"
+        textureFile = "gfx/interface/terra_v043/background.dds"
+        size = { x = 1672 y = 941 }
+        borderSize = { x = 0 y = 0 }
+        tilingCenter = no
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+}

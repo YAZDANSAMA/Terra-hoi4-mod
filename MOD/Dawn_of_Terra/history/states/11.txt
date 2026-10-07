@@ -1,0 +1,27 @@
+state = {
+	id = 11
+	name = "STATE_11"
+	manpower = 283159
+	state_category = city
+
+	resources = {
+		steel = 18
+		coal = 20
+	}
+
+	history = {
+		owner = MNS
+		add_core_of = MNS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+			arms_factory = 3
+		}
+		add_extra_state_shared_building_slots = 2
+	}
+
+	provinces = {
+		3664 3797 3802 4884
+	}
+	local_supplies = 0.0
+}

@@ -1,0 +1,35 @@
+state = {
+	id = 208
+	name = "STATE_208"
+	manpower = 1929167
+	state_category = small_island
+
+	resources = {
+		aluminium = 12
+		rubber = 4
+	}
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+			8153 = { naval_base = 1 }
+			8177 = { naval_base = 1 }
+			8209 = { naval_base = 1 }
+			8210 = { naval_base = 1 }
+			8220 = { naval_base = 1 }
+			8231 = { naval_base = 1 }
+			8235 = { naval_base = 1 }
+			8239 = { naval_base = 1 }
+			8240 = { naval_base = 1 }
+			8249 = { naval_base = 1 }
+			8250 = { naval_base = 1 }
+		}
+	}
+
+	provinces = {
+		8153 8154 8176 8177 8208 8209 8210 8220 8231 8235 8239 8240 8249 8250
+	}
+	local_supplies = 0.0
+}

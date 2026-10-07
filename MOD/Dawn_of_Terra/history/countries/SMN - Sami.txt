@@ -1,0 +1,22 @@
+# Boot-safe minimal history for Sami
+capital = 12
+
+
+
+oob = "SMN_1028"
+set_technology = {
+    infantry_weapons = 1
+	basic_train = 1
+}
+recruit_character = SMN_interim_leader
+set_politics = {
+    ruling_party = social_democracy
+    elections_allowed = no
+}
+
+set_popularities = {
+    social_democracy = 100
+}
+
+# Starting transport for the connected 1028 supply network.
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 49 producer = SMN }

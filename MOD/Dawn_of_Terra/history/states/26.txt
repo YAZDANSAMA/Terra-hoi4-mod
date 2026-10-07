@@ -1,0 +1,29 @@
+state = {
+	id = 26
+	name = "STATE_26"
+	manpower = 7909
+	state_category = rural
+
+	resources = {
+		steel = 4
+		coal = 10
+		aluminium = 8
+		chromium = 2
+	}
+
+	history = {
+		owner = URS
+		add_core_of = URS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+		}
+		add_extra_state_shared_building_slots = 3
+	}
+
+	provinces = {
+		33 34 35 357 358 359 891 966 967 968 1224 1422 1423 1424 3883 3884 3885 3886 3887 3888
+		3889 3890 3926 3927 6002 6005 6143 7468 7469
+	}
+	local_supplies = 0.0
+}

@@ -1,0 +1,27 @@
+state = {
+	id = 94
+	name = "STATE_94"
+	manpower = 1
+	state_category = rural
+
+	resources = {
+		steel = 14
+		coal = 6
+		aluminium = 6
+	}
+
+	history = {
+		owner = KZM
+		add_core_of = KZM
+		buildings = {
+			infrastructure = 1
+			arms_factory = 3
+		}
+		add_extra_state_shared_building_slots = 3
+	}
+
+	provinces = {
+		770 771 1517 2579 4731
+	}
+	local_supplies = 0.0
+}

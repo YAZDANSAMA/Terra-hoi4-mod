@@ -1,0 +1,28 @@
+state = {
+	id = 235
+	name = "STATE_235"
+	manpower = 986177
+	state_category = small_island
+
+	resources = {
+		originium = 8
+		coal = 6
+		chromium = 10
+	}
+
+	history = {
+		owner = AGI
+		add_core_of = AGI
+		buildings = {
+			infrastructure = 1
+			arms_factory = 3
+			8228 = { naval_base = 1 }
+		}
+		add_extra_state_shared_building_slots = 4
+	}
+
+	provinces = {
+		8228
+	}
+	local_supplies = 0.0
+}

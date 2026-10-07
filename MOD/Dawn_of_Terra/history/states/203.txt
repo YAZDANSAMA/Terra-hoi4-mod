@@ -1,0 +1,40 @@
+state = {
+	id = 203
+	name = "STATE_203"
+	manpower = 1929167
+	state_category = rural
+
+	resources = {
+		originium = 10
+		steel = 8
+		chromium = 6
+		rubber = 4
+	}
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 8
+			arms_factory = 4
+			dockyard = 2
+			8113 = { naval_base = 3 }
+			8137 = { naval_base = 3 }
+			8173 = { naval_base = 1 }
+			8190 = { naval_base = 1 }
+			8224 = { naval_base = 1 }
+			8225 = { naval_base = 1 }
+			8227 = { naval_base = 1 }
+			8229 = { naval_base = 1 }
+			8233 = { naval_base = 1 }
+		}
+		add_extra_state_shared_building_slots = 14
+	}
+
+	provinces = {
+		8107 8108 8109 8110 8111 8112 8113 8114 8125 8126 8127 8128 8129 8130 8131 8132 8133 8134 8135 8136
+		8137 8170 8171 8172 8173 8190 8224 8225 8227 8229 8233
+	}
+	local_supplies = 0.0
+}

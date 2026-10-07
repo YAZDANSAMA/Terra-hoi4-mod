@@ -1,0 +1,24 @@
+# Boot-safe minimal history for Yan
+capital = 129
+
+
+
+oob = "YAN_1028"
+set_technology = {
+    infantry_weapons = 1
+	basic_train = 1
+	transport = 1
+}
+recruit_character = YAN_interim_leader
+set_politics = {
+    ruling_party = monarchism
+    elections_allowed = no
+}
+
+set_popularities = {
+    monarchism = 100
+}
+
+# Starting transport for the connected 1028 supply network.
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 1235 producer = YAN }
+set_convoys = 120

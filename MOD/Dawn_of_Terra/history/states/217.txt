@@ -1,0 +1,31 @@
+state = {
+	id = 217
+	name = "STATE_217"
+	manpower = 1929167
+	state_category = rural
+
+	resources = {
+		steel = 16
+		coal = 14
+		chromium = 6
+		rubber = 12
+	}
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+			8152 = { naval_base = 1 }
+			8188 = { naval_base = 1 }
+			8226 = { naval_base = 1 }
+			8236 = { naval_base = 1 }
+			8242 = { naval_base = 1 }
+		}
+	}
+
+	provinces = {
+		7770 8152 8188 8189 8226 8236 8242
+	}
+	local_supplies = 0.0
+}

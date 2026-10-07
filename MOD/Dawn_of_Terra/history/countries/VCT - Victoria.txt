@@ -1,0 +1,28 @@
+# Boot-safe minimal history for Victoria
+capital = 20
+
+
+
+oob = "VCT_1028"
+set_technology = {
+    infantry_weapons = 1
+	basic_train = 1
+}
+recruit_character = VCT_frederick_iii
+set_politics = {
+    ruling_party = monarchism
+    elections_allowed = no
+}
+
+set_popularities = {
+    monarchism = 100
+}
+
+# Terra v0.0.46 hotfix starting national spirits
+add_ideas = VCT_victorian_industrial_engine
+add_ideas = VCT_imperial_overextension
+add_ideas = VCT_steam_knight_tradition
+add_ideas = VCT_gallic_reparations
+
+# Starting transport for the connected 1028 supply network.
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 124 producer = VCT }

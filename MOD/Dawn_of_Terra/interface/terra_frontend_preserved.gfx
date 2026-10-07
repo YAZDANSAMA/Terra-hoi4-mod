@@ -1,0 +1,124 @@
+# Private assets for the existing Terra front end. No vanilla in-game sprite is overridden.
+spriteTypes = {
+
+textSpriteType = {
+		name = "GFX_terra_frontend_button_148x34"
+		texturefile = "gfx/interface/terra_frontend/controls/button_148x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+textSpriteType = {
+		name = "GFX_terra_frontend_button_221x34"
+		texturefile = "gfx/interface/terra_frontend/controls/button_221x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+textSpriteType = {
+		name = "GFX_terra_frontend_button_238x38"
+		texturefile = "gfx/interface/terra_frontend/controls/button_238x38.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+textSpriteType = {
+		name = "GFX_terra_frontend_button_261x34"
+		texturefile = "gfx/interface/terra_frontend/controls/button_261x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+spriteType = {
+		name = "GFX_terra_frontend_country_selection_bg"
+		texturefile = "gfx/interface/terra_frontend/country_selection_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"				
+	}
+
+spriteType = {
+		name = "GFX_terra_frontend_minor_portrait_overlay"
+		texturefile = "gfx/interface/terra_frontend/minor_portrait_overlay.dds"
+	}
+
+spriteType = { name = "GFX_terra_frontend_scroll_down" texturefile = "gfx/interface/terra_frontend/scrollbars/scroll_down.dds" }
+
+spriteType = { name = "GFX_terra_frontend_scroll_drager" texturefile = "gfx/interface/terra_frontend/scrollbars/scroll_drager.dds" }
+
+spriteType = { name = "GFX_terra_frontend_scroll_track" texturefile = "gfx/interface/terra_frontend/scrollbars/scroll_track.dds" }
+
+spriteType = { name = "GFX_terra_frontend_scroll_track_horisontal" texturefile = "gfx/interface/terra_frontend/scrollbars/scroll_track_horizontal.dds" }
+
+spriteType = { name = "GFX_terra_frontend_scroll_up" texturefile = "gfx/interface/terra_frontend/scrollbars/scroll_up.dds" }
+
+corneredTileSpriteType = {
+        name = "GFX_terra_frontend_scrollbar_vertical_bg"
+        size = { x=18 y=64 }
+        textureFile = "gfx/interface/terra_frontend/scrollbars/scrollbar_vertical_bg.dds"
+        borderSize = { x=6 y=6 }
+        tilingCenter = yes
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+textSpriteType = {
+		name = "GFX_terra_frontend_sort_button_83x29"
+		texturefile = "gfx/interface/terra_frontend/controls/sort_button_83x29.tga"
+		noOfFrames = 2
+	}
+
+corneredTileSpriteType = { name = "GFX_terra_frontend_tiled_bg" size = { x=192 y=192 } textureFile = "gfx/interface/terra_frontend/panels/tiled_bg.dds" borderSize = { x=64 y=64 } tilingCenter = yes effectFile = "gfx/FX/buttonstate_nodowneffect.lua" }
+
+corneredTileSpriteType = {
+		name = "GFX_terra_frontend_tiled_decisions_bg_small"
+		size= { x=48 y=48 }
+		textureFile = "gfx/interface/terra_frontend/tiles/tiled_decisions_bg_small.dds"
+		borderSize = { x=16 y=16 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_terra_frontend_tiled_generic_bg_1"
+		size= { x=77 y=38 }
+		textureFile = "gfx/interface/terra_frontend/tiles/tiled_generic_bg_1.dds"
+		borderSize = { x=14 y=14 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_terra_frontend_tiled_header_1"
+		size= { x=77 y=38 }
+		textureFile = "gfx/interface/terra_frontend/tiles/tiled_header_1.dds"
+		borderSize = { x=8 y=8 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_terra_frontend_tiled_window2_1b_border"
+		size= { x=192 y=192 }
+		textureFile = "gfx/interface/terra_frontend/tiles/tiled_window2_1b_border.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_terra_frontend_tiled_window_1b_border"
+		size= { x=192 y=192 }
+		textureFile = "gfx/interface/terra_frontend/tiles/tiled_window_1b_border.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_terra_frontend_tiled_window_1b_thin_border"
+		size= { x=192 y=192 }
+		textureFile = "gfx/interface/terra_frontend/tiles/tiled_window_1b_thin_border.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = { name = "GFX_terra_frontend_tiled_window_transparent" size = { x=96 y=96 } textureFile = "gfx/interface/terra_frontend/tiles/tiled_window_transparent.dds" borderSize = { x=24 y=24 } tilingCenter = yes effectFile = "gfx/FX/buttonstate_nodowneffect.lua" }
+}

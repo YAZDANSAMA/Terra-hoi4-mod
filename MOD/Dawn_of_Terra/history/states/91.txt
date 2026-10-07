@@ -1,0 +1,26 @@
+state = {
+	id = 91
+	name = "STATE_91"
+	manpower = 2152065
+	state_category = metropolis
+
+	resources = {
+		originium = 14
+		chromium = 2
+	}
+
+	history = {
+		victory_points = { 3040 80 }
+		owner = BLV
+		add_core_of = BLV
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+		}
+	}
+
+	provinces = {
+		3040
+	}
+	local_supplies = 0.0
+}

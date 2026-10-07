@@ -1,0 +1,27 @@
+state = {
+	id = 209
+	name = "STATE_209"
+	manpower = 1929167
+	state_category = rural
+
+	resources = {
+		steel = 18
+		aluminium = 4
+	}
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 6
+			arms_factory = 3
+		}
+		add_extra_state_shared_building_slots = 9
+	}
+
+	provinces = {
+		3289 6753 7764 7765 7766 7768 7769
+	}
+	local_supplies = 0.0
+}

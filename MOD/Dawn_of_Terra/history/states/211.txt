@@ -1,0 +1,31 @@
+state = {
+	id = 211
+	name = "STATE_211"
+	manpower = 1929167
+	state_category = small_island
+
+	resources = {
+		coal = 24
+		aluminium = 10
+		chromium = 4
+	}
+
+	history = {
+		owner = IBR
+		add_core_of = IBR
+		buildings = {
+			infrastructure = 1
+			8194 = { naval_base = 1 }
+			8200 = { naval_base = 1 }
+			8206 = { naval_base = 1 }
+			8214 = { naval_base = 1 }
+			8237 = { naval_base = 1 }
+			8243 = { naval_base = 1 }
+		}
+	}
+
+	provinces = {
+		8194 8200 8206 8214 8237 8243
+	}
+	local_supplies = 0.0
+}

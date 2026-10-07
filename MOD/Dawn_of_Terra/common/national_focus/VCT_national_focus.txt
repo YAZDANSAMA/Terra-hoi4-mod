@@ -1,0 +1,12 @@
+# Unfinished author template: restore add = 10 when this tree contains playable focuses.
+focus_tree = {
+	id = VCT_national_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = VCT
+		}
+	}
+}

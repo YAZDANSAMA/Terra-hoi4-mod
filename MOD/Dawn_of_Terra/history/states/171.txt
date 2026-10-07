@@ -1,0 +1,32 @@
+state = {
+	id = 171
+	name = "STATE_171"
+	manpower = 2906430
+	state_category = metropolis
+
+	resources = {
+		steel = 14
+		coal = 16
+		tungsten = 4
+		chromium = 10
+	}
+
+	history = {
+		victory_points = { 5140 80 }
+		victory_points = { 5139 1 }
+		victory_points = { 5141 1 }
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 9
+			arms_factory = 6
+		}
+		add_extra_state_shared_building_slots = 7
+	}
+
+	provinces = {
+		5139 5140 5141
+	}
+	local_supplies = 0.0
+}

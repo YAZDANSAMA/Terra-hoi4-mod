@@ -1,0 +1,27 @@
+state = {
+	id = 69
+	name = "STATE_69"
+	manpower = 7909
+	state_category = rural
+
+	resources = {
+		steel = 22
+		rubber = 10
+	}
+
+	history = {
+		owner = LGL
+		add_core_of = LGL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+		}
+		add_extra_state_shared_building_slots = 3
+	}
+
+	provinces = {
+		3133 3137 4218 4220 4224 4226 4227 4593 4596 4598 4601 4602 4604 5025 5027 5029 5035 5593 5594 5595
+		5596 5597 7981 7982
+	}
+	local_supplies = 0.0
+}

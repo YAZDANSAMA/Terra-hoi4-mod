@@ -1,0 +1,26 @@
+state = {
+	id = 119
+	name = "STATE_119"
+	manpower = 1
+	state_category = metropolis
+
+	resources = {
+		originium = 8
+		steel = 10
+	}
+
+	history = {
+		victory_points = { 2037 1 }
+		owner = YAN
+		add_core_of = YAN
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 6
+		}
+	}
+
+	provinces = {
+		2037
+	}
+	local_supplies = 0.0
+}

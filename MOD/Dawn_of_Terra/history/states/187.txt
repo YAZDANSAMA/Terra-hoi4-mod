@@ -1,0 +1,25 @@
+state = {
+	id = 187
+	name = "STATE_187"
+	manpower = 2906430
+	state_category = small_island
+
+	resources = {
+		originium = 8
+		steel = 20
+	}
+
+	history = {
+		owner = SGN
+		add_core_of = SGN
+		buildings = {
+			infrastructure = 1
+			8148 = { naval_base = 1 }
+		}
+	}
+
+	provinces = {
+		8147 8148
+	}
+	local_supplies = 0.0
+}

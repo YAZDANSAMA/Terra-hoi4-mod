@@ -1,0 +1,32 @@
+bitmapfonts = {
+    bitmapfont = {
+        name = "terra_country_title"
+        fontfiles = {
+            "gfx/fonts/hoi_24header"
+        }
+        cursor_offset = { 0 4 }
+        color = 0xFF4DEEEA
+    }
+
+    bitmapfont = {
+        name = "terra_country_body"
+        fontfiles = {
+            "gfx/fonts/hoi_16mbs"
+        }
+        color = 0xFFDDEBF2
+    }
+
+    bitmapfont = {
+        name = "terra_country_subtitle"
+        fontfiles = {
+            "gfx/fonts/hoi_24header"
+        }
+        cursor_offset = { 0 4 }
+        color = 0xFFA8C7D8
+    }
+	bitmapfont = {
+    name = "terra_country_name"
+    fontfiles = { "gfx/fonts/hoi_20b" }
+    color = 0xFFA8C7D8
+	}
+}
