@@ -1,0 +1,151 @@
+CLM_harrington_and_haraldson_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_fletcher_repeating_rifle_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_dribbs_seafury_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_columbian_ordnance_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_wheatstone_aircraft_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_vultree_aircraft_organization = {
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_marmot_trouthington_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_columbian_car_and_foundry_organization = {
+	include = generic_armored_car_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_chamberville_locomotive_works_organization = {
+	include = generic_train_organization
+	icon = GFX_idea_generic_build_infrastructure
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_new_tara_shipbuilding_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_federal_shipbuilding_drydock_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_lake_torpedo_boat_organization = {
+	include = generic_submarine_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_new_holland_torpedo_boat_organization = {
+	include = generic_submarine_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_cunningham_son_and_company_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+
+	allowed = {
+		original_tag = CLM
+	}
+
+	initial_trait = {
+		name = ROM_mio_trait_mobile_tank_destroyers
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_tank_destroyers
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_enlarged_breech
+		limit_to_equipment_type = {
+			mio_cat_eq_all_tank_destroyers
+		}
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
+		special_trait_background = yes
+	}
+}
