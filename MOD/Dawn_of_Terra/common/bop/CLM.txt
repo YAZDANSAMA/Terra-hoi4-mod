@@ -10,17 +10,41 @@ CLM_max_balance = {
 		max = 0.15
 		modifier = {
 		}
+		on_activate = {
+			set_power_balance_gfx = {
+				id = CLM_max_balance
+				side = CLM_max_dominance_side
+				gfx = "GFX_terra_bop_strongman_inactive"
+			}
+			set_power_balance_gfx = {
+				id = CLM_max_balance
+				side = CLM_max_neutralised_side
+				gfx = "GFX_terra_bop_neutralised_inactive"
+			}
+		}
 	}
 
 	side = {
 		id = CLM_max_dominance_side
-		icon = GFX_idea_generic_agrarian_society
+		icon = GFX_terra_bop_strongman_inactive
 
 		range = {
 			id = CLM_max_strongman_ascended_range
 			min = -1
 			max = -0.95
 			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_dominance_side
+					gfx = "GFX_terra_bop_strongman_active"
+				}
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_neutralised_side
+					gfx = "GFX_terra_bop_neutralised_inactive"
+				}
 			}
 		}
 
@@ -30,6 +54,18 @@ CLM_max_balance = {
 			max = -0.55
 			modifier = {
 			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_dominance_side
+					gfx = "GFX_terra_bop_strongman_active"
+				}
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_neutralised_side
+					gfx = "GFX_terra_bop_neutralised_inactive"
+				}
+			}
 		}
 
 		range = {
@@ -38,18 +74,42 @@ CLM_max_balance = {
 			max = -0.15
 			modifier = {
 			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_dominance_side
+					gfx = "GFX_terra_bop_strongman_active"
+				}
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_neutralised_side
+					gfx = "GFX_terra_bop_neutralised_inactive"
+				}
+			}
 		}
 	}
 
 	side = {
 		id = CLM_max_neutralised_side
-		icon = GFX_idea_generic_degauss_ship_hulls
+		icon = GFX_terra_bop_neutralised_inactive
 
 		range = {
 			id = CLM_max_by_the_people_range
 			min = 0.15
 			max = 0.55
 			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_dominance_side
+					gfx = "GFX_terra_bop_strongman_inactive"
+				}
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_neutralised_side
+					gfx = "GFX_terra_bop_neutralised_active"
+				}
 			}
 		}
 
@@ -59,6 +119,18 @@ CLM_max_balance = {
 			max = 0.95
 			modifier = {
 			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_dominance_side
+					gfx = "GFX_terra_bop_strongman_inactive"
+				}
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_neutralised_side
+					gfx = "GFX_terra_bop_neutralised_active"
+				}
+			}
 		}
 
 		range = {
@@ -66,6 +138,18 @@ CLM_max_balance = {
 			min = 0.95
 			max = 1
 			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_dominance_side
+					gfx = "GFX_terra_bop_strongman_inactive"
+				}
+				set_power_balance_gfx = {
+					id = CLM_max_balance
+					side = CLM_max_neutralised_side
+					gfx = "GFX_terra_bop_neutralised_active"
+				}
 			}
 		}
 	}

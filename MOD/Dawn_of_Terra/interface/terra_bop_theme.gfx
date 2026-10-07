@@ -9,4 +9,24 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
+	spriteType = {
+		name = "GFX_terra_bop_strongman_active"
+		textureFile = "gfx/interface/terra_bop/strongman_active.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terra_bop_strongman_inactive"
+		textureFile = "gfx/interface/terra_bop/strongman_inactive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terra_bop_neutralised_active"
+		textureFile = "gfx/interface/terra_bop/neutralised_active.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terra_bop_neutralised_inactive"
+		textureFile = "gfx/interface/terra_bop/neutralised_inactive.dds"
+	}
+
 }
