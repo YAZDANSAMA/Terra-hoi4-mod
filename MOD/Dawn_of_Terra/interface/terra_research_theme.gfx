@@ -1,0 +1,41 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_terra_research_top_win_bg"
+		textureFile = "gfx/interface/terra_research/top_win_bg.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_research_slots_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_research/slots_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_research_header_bg"
+		textureFile = "gfx/interface/terra_research/header_bg.tga"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_research_program_list_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_research/program_list_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_research_facilities_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_research/facilities_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+}
