@@ -1,0 +1,72 @@
+CLM_max_balance = {
+	initial_value = 0
+	left_side = CLM_max_dominance_side
+	right_side = CLM_max_neutralised_side
+	decision_category = CLM_max_balance_category
+
+	range = {
+		id = CLM_max_perfect_harmony_range
+		min = -0.15
+		max = 0.15
+		modifier = {
+		}
+	}
+
+	side = {
+		id = CLM_max_dominance_side
+		icon = GFX_idea_generic_agrarian_society
+
+		range = {
+			id = CLM_max_strongman_ascended_range
+			min = -1
+			max = -0.95
+			modifier = {
+			}
+		}
+
+		range = {
+			id = CLM_max_experiment_failing_range
+			min = -0.95
+			max = -0.55
+			modifier = {
+			}
+		}
+
+		range = {
+			id = CLM_max_domineering_range
+			min = -0.55
+			max = -0.15
+			modifier = {
+			}
+		}
+	}
+
+	side = {
+		id = CLM_max_neutralised_side
+		icon = GFX_idea_generic_degauss_ship_hulls
+
+		range = {
+			id = CLM_max_by_the_people_range
+			min = 0.15
+			max = 0.55
+			modifier = {
+			}
+		}
+
+		range = {
+			id = CLM_max_we_the_people_range
+			min = 0.55
+			max = 0.95
+			modifier = {
+			}
+		}
+
+		range = {
+			id = CLM_max_neutralised_range
+			min = 0.95
+			max = 1
+			modifier = {
+			}
+		}
+	}
+}

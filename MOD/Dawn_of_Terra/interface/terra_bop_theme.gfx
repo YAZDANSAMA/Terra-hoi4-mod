@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_bop_decision_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_bop/decision_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+}

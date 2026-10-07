@@ -10,6 +10,12 @@ set_technology = {
 recruit_character = CLM_interim_leader
 recruit_character = CLM_mark_max
 activate_advisor = CLM_mark_max
+set_power_balance = {
+    id = CLM_max_balance
+    left_side = CLM_max_dominance_side
+    right_side = CLM_max_neutralised_side
+    set_value = 0
+}
 set_politics = {
     ruling_party = classical_liberalism
     elections_allowed = no

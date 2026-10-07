@@ -1,0 +1,147 @@
+CLM_max_balance_category = {
+	CLM_discredit_max_in_public = {
+		priority = 100
+
+		icon = GFX_decision_generic_assassination
+
+		allowed = {
+			original_tag = CLM
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLM_bop_operation_ongoing_tt
+				NOT = { has_country_flag = CLM_bop_operation_active }
+			}
+		}
+
+		visible = {
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			set_country_flag = CLM_bop_operation_active
+			custom_effect_tooltip = CLM_bop_effect_1_tt
+			country_event = {
+				id = CLM_bop.1
+				days = 14
+			}
+		}
+	}
+
+	CLM_discredit_vp_on_tv = {
+		priority = 99
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = CLM
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLM_bop_operation_ongoing_tt
+				NOT = { has_country_flag = CLM_bop_operation_active }
+			}
+		}
+
+		visible = {
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			set_country_flag = CLM_bop_operation_active
+			custom_effect_tooltip = CLM_bop_effect_2_tt
+			country_event = {
+				id = CLM_bop.2
+				days = 14
+			}
+		}
+	}
+
+	CLM_plant_coup_evidence = {
+		priority = 98
+
+		icon = GFX_decision_generic_arrest
+
+		allowed = {
+			original_tag = CLM
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLM_bop_operation_ongoing_tt
+				NOT = { has_country_flag = CLM_bop_operation_active }
+			}
+		}
+
+		visible = {
+		}
+
+		cost = 100
+
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+		custom_cost_text = CLM_decision_cost_25_command_power
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			set_country_flag = CLM_bop_operation_active
+			add_command_power = -25
+			custom_effect_tooltip = CLM_bop_effect_3_tt
+			country_event = {
+				id = CLM_bop.3
+				days = 14
+			}
+		}
+	}
+
+	CLM_sow_false_information = {
+		priority = 97
+
+		icon = GFX_decision_generic_brainwash
+
+		allowed = {
+			original_tag = CLM
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLM_bop_operation_ongoing_tt
+				NOT = { has_country_flag = CLM_bop_operation_active }
+			}
+		}
+
+		visible = {
+		}
+
+		cost = 125
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			set_country_flag = CLM_bop_operation_active
+			custom_effect_tooltip = CLM_bop_effect_4_tt
+			country_event = {
+				id = CLM_bop.4
+				days = 14
+			}
+		}
+	}
+}

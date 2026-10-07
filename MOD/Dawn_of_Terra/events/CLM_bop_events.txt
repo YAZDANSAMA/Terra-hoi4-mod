@@ -1,0 +1,57 @@
+add_namespace = CLM_bop
+
+country_event = {
+	id = CLM_bop.1
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_power_balance_value = {
+			id = CLM_max_balance
+			value = 0.05
+		}
+		clr_country_flag = CLM_bop_operation_active
+	}
+}
+
+country_event = {
+	id = CLM_bop.2
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_power_balance_value = {
+			id = CLM_max_balance
+			value = -0.05
+		}
+		clr_country_flag = CLM_bop_operation_active
+	}
+}
+
+country_event = {
+	id = CLM_bop.3
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_power_balance_value = {
+			id = CLM_max_balance
+			value = -0.15
+		}
+		clr_country_flag = CLM_bop_operation_active
+	}
+}
+
+country_event = {
+	id = CLM_bop.4
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_power_balance_value = {
+			id = CLM_max_balance
+			value = 0.15
+		}
+		clr_country_flag = CLM_bop_operation_active
+	}
+}
