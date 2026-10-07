@@ -1,0 +1,36 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_construction_production_lines_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_construction/production_lines_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_construction_production_lines_overlay"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_construction/production_lines_overlay.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_construction_possible_constructions_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_construction/possible_constructions_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_construction_screen_top_bg"
+		textureFile = "gfx/interface/terra_construction/screen_top_bg.tga"
+	}
+
+}

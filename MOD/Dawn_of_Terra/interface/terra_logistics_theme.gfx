@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_logistics_materiel_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_logistics/materiel_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_logistics_materiel_overlay"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_logistics/materiel_overlay.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+}

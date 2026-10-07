@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_deployment_divisions_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_deployment/divisions_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_deployment_divisions_overlay"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_deployment/divisions_overlay.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+}

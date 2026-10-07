@@ -1,0 +1,21 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_focus_tree_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_focus_tree/tree_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_focus_tree_overlay"
+		size = { x=4 y=4 }
+		textureFile = "gfx/interface/terra_focus_tree/tree_overlay.tga"
+		borderSize = { x=1 y=1 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+}

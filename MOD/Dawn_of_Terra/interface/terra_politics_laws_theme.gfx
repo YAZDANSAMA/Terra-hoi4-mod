@@ -1,0 +1,41 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_politics_law_selection_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_politics/law_selection_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_politics_law_selection_overlay"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_politics/law_selection_overlay.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_politics_character_selection_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_politics/character_selection_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_politics_character_selection_overlay"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_politics/character_selection_overlay.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+}

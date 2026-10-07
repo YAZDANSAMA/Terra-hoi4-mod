@@ -1,0 +1,28 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_production_lines_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_production/production_lines_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_production_lines_overlay"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_production/production_lines_overlay.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_terra_production_win_top_bg"
+		textureFile = "gfx/interface/terra_production/win_top_bg.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+}
