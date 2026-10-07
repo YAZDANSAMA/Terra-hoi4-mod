@@ -1,0 +1,47 @@
+scripted_gui = {
+	terra_expeditions_button_gui = {
+		context_type = player_context
+		window_name = "terra_expeditions_button_container"
+		parent_window_token = politics_tab
+
+		visible = {
+			always = yes
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		effects = {
+			national_control_button_1_click = {
+				if = {
+					limit = { has_country_flag = terra_expeditions_window_open }
+					clr_country_flag = terra_expeditions_window_open
+				}
+				else = {
+					set_country_flag = terra_expeditions_window_open
+				}
+			}
+		}
+	}
+
+	terra_expeditions_window_gui = {
+		context_type = player_context
+		window_name = "terra_expeditions_window"
+		parent_window_token = top_bar
+
+		visible = {
+			has_country_flag = terra_expeditions_window_open
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		effects = {
+			expeditions_close_button_click = {
+				clr_country_flag = terra_expeditions_window_open
+			}
+		}
+	}
+}

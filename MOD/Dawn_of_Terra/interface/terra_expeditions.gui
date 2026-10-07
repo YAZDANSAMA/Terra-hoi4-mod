@@ -1,0 +1,163 @@
+guiTypes = {
+	containerWindowType = {
+		name = "terra_expeditions_button_container"
+		position = { x = 220 y = 185 }
+		size = { width = 60 height = 60 }
+		clipping = no
+
+		buttonType = {
+			name = "national_control_button_1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_icon_button_32x32"
+			scale = 1.4
+			pdx_tooltip = "Expeditions"
+		}
+	}
+
+	containerWindowType = {
+		name = "terra_expeditions_window"
+		position = { x = 552 y = 30 }
+		size = { width = 1360 height = 1020 }
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+
+		iconType = {
+			name = "expeditions_header_bg"
+			spriteType = "GFX_header_bg"
+			position = { x = 5 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = {
+			name = "expeditions_title"
+			position = { x = 20 y = 12 }
+			font = "hoi_18mbs"
+			text = "Expeditions"
+			maxWidth = 300
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "expeditions_content"
+			position = { x = 10 y = 50 }
+			size = { width = 1340 height = 960 }
+			horizontalScrollbar = "bottom_horizontal_slider"
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 40
+			drag_scroll = { left middle }
+
+			background = {
+				name = "expeditions_content_background"
+				quadTextureSprite = "GFX_tiled_window_1b_border"
+			}
+
+			containerWindowType = {
+				name = "expeditions_canvas"
+				position = { x = 0 y = 0 }
+				size = { width = 2680 height = 1920 }
+				clipping = no
+
+				buttonType = {
+					name = "expeditions_canvas_button_1"
+					position = { x = 150 y = 150 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_2"
+					position = { x = 550 y = 150 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_3"
+					position = { x = 950 y = 150 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_4"
+					position = { x = 1350 y = 150 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_5"
+					position = { x = 150 y = 550 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_6"
+					position = { x = 550 y = 550 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_7"
+					position = { x = 950 y = 550 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_8"
+					position = { x = 1350 y = 550 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_9"
+					position = { x = 150 y = 950 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_10"
+					position = { x = 550 y = 950 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_11"
+					position = { x = 950 y = 950 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+
+				buttonType = {
+					name = "expeditions_canvas_button_12"
+					position = { x = 1350 y = 950 }
+					quadTextureSprite = "GFX_icon_button_32x32"
+					scale = 5
+				}
+			}
+		}
+
+		buttonType = {
+			name = "expeditions_close_button"
+			position = { x = -42 y = 9 }
+			quadTextureSprite = "GFX_closebutton"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+}

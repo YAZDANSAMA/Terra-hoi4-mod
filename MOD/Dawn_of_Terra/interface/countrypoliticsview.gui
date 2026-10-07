@@ -147,19 +147,12 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "national_control_button_1"
-			position = { x = 220 y = 185 }
-			quadTextureSprite = "GFX_icon_button_32x32"
-			scale = 1.4
-			pdx_tooltip = "Reserved for a future feature"
-		}
-
-		buttonType = {
 			name = "national_control_button_2"
 			position = { x = 290 y = 185 }
 			quadTextureSprite = "GFX_icon_button_32x32"
 			scale = 1.4
 			pdx_tooltip = "Reserved for a future feature"
+			hide = yes
 		}
 
 		buttonType = {
@@ -168,6 +161,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_icon_button_32x32"
 			scale = 1.4
 			pdx_tooltip = "Reserved for a future feature"
+			hide = yes
 		}
 
 		buttonType = {
@@ -176,6 +170,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_icon_button_32x32"
 			scale = 1.4
 			pdx_tooltip = "Reserved for a future feature"
+			hide = yes
 		}
 
 		containerWindowType = {
@@ -649,14 +644,6 @@ guiTypes = {
 				slotsize = { width = 64 height = 106 }
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
-			}
-
-			buttonType = {
-				name = "terra_custom_button_placeholder"
-				position = { x = 425 y = 60 }
-				quadTextureSprite = "GFX_icon_button_32x32"
-				scale = 1.4
-				pdx_tooltip = "Reserved for a future feature"
 			}
 		}
 

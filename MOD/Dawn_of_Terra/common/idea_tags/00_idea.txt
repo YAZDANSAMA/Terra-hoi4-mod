@@ -22,8 +22,13 @@ idea_categories = {
 		ledger = hidden
 	}
 
-	head_of_government = {
-		character_slot = political_advisor
+	cabinet = {
+		character_slot = cabinet_head_of_government
+		character_slot = cabinet_foreign_affairs
+		character_slot = cabinet_internal_affairs
+		character_slot = cabinet_defence
+		character_slot = cabinet_finance
+		character_slot = cabinet_health
 
 		ledger = civilian
 
@@ -31,7 +36,7 @@ idea_categories = {
 		removal_cost = 0
 	}
 
-	cabinet = {
+	advisors = {
 		character_slot = political_advisor
 		character_slot = political_advisor
 		character_slot = political_advisor
