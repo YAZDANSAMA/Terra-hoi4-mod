@@ -1,0 +1,119 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_window_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_trade/window_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_header_bg"
+		textureFile = "gfx/interface/terra_trade/header_bg.tga"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_panel_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_trade/panel_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_overlay_bg"
+		size = { x=290 y=310 }
+		textureFile = "gfx/interface/terra_trade/overlay_bg.tga"
+		borderSize = { x=144 y=144 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_header_binding_bg"
+		textureFile = "gfx/interface/terra_trade/header_binding_bg.tga"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_resources_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_trade/resources_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_icon_bg"
+		textureFile = "gfx/interface/terra_trade/icon_bg.tga"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_list_bg"
+		size = { x=3 y=3 }
+		textureFile = "gfx/interface/terra_trade/list_bg.tga"
+		borderSize = { x=1 y=1 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_popup_bg"
+		textureFile = "gfx/interface/terra_trade/popup_bg.tga"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_flags_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_trade/flags_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_convoys_bg"
+		textureFile = "gfx/interface/terra_trade/convoys_bg.tga"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_resource_entry_bg"
+		size = { x=77 y=38 }
+		textureFile = "gfx/interface/terra_trade/resource_entry_bg.tga"
+		borderSize = { x=14 y=14 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_trade_trade_box_bg"
+		size = { x=77 y=38 }
+		textureFile = "gfx/interface/terra_trade/trade_box_bg.tga"
+		borderSize = { x=14 y=14 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_filter_entry_bg"
+		textureFile = "gfx/interface/terra_trade/filter_entry_bg.tga"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_country_entry_bg"
+		textureFile = "gfx/interface/terra_trade/country_entry_bg.tga"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_terra_trade_divider"
+		textureFile = "gfx/interface/terra_trade/divider.tga"
+	}
+}
