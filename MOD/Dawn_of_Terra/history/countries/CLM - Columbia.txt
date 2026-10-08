@@ -581,5 +581,7 @@ add_ideas = {
     freedom_of_speech_no_control
 }
 
+add_ideas = CLM_bloodied_soil
+
 # Starting transport for the connected 1028 supply network.
 add_equipment_to_stockpile = { type = train_equipment_1 amount = 251 producer = CLM }

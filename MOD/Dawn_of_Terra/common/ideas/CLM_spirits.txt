@@ -1,0 +1,193 @@
+ideas = {
+	country = {
+		CLM_a_country_for_you = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+
+		CLM_bloodied_soil = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.4
+				stability_factor = -0.4
+				war_support_factor = -0.8
+				political_power_gain = -0.5
+			}
+		}
+
+		CLM_bloodied_soil_f = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.4
+				stability_factor = -0.4
+				war_support_factor = -0.7
+				political_power_gain = -0.5
+			}
+		}
+
+		CLM_bloodied_soil_1 = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				stability_factor = -0.4
+				war_support_factor = -0.8
+				political_power_gain = -0.4
+			}
+		}
+
+		CLM_bloodied_soil_1_f = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				stability_factor = -0.4
+				war_support_factor = -0.7
+				political_power_gain = -0.4
+			}
+		}
+
+		CLM_bloodied_soil_2 = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				stability_factor = -0.3
+				war_support_factor = -0.7
+				political_power_gain = -0.3
+			}
+		}
+
+		CLM_bloodied_soil_2_f = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				stability_factor = -0.3
+				war_support_factor = -0.6
+				political_power_gain = -0.3
+			}
+		}
+
+		CLM_bloodied_soil_3 = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_factor = -0.2
+				war_support_factor = -0.7
+				political_power_gain = -0.3
+			}
+		}
+
+		CLM_bloodied_soil_3_f = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_factor = -0.2
+				war_support_factor = -0.6
+				political_power_gain = -0.3
+			}
+		}
+
+		CLM_bloodied_soil_4 = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.6
+				political_power_gain = -0.3
+			}
+		}
+
+		CLM_bloodied_soil_4_f = {
+			picture = RAJ_state_of_famine_country
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.5
+				political_power_gain = -0.3
+			}
+		}
+
+		CLM_columbian_soil = {
+			picture = generic_agrarian_society
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				war_support_factor = -0.5
+				political_power_gain = -0.05
+			}
+		}
+
+		CLM_columbian_soil_f = {
+			picture = generic_agrarian_society
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				war_support_factor = -0.4
+				political_power_gain = -0.05
+			}
+		}
+
+		CLM_setting_aside_funds = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+	}
+}
