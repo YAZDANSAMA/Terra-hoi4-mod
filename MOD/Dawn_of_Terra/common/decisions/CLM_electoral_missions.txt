@@ -1,0 +1,99 @@
+CLM_electoral_missions_category = {
+	CLM_fund_underdeveloped_mission = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			var:CLM_fund_state = {
+				check_variable = { industrial_complex_level > CLM_fund_goal }
+			}
+		}
+
+		visible = {
+		}
+
+		activation = {
+			always = no
+		}
+
+		selectable_mission = no
+		is_good = yes
+		days_mission_timeout = 180
+
+		highlight_states = {
+			highlight_states_trigger = {
+				has_variable = CLM_fund_marker
+			}
+		}
+
+		complete_effect = {
+			var:CLM_fund_state = {
+				clear_variable = CLM_fund_marker
+			}
+			set_variable = { CLM_xfer_state = CLM_fund_sel_state }
+			set_variable = { CLM_xfer_party = CLM_fund_party }
+			set_variable = { CLM_xfer_n = 3 }
+			CLM_electoral_transfer = yes
+			CLM_electoral_recalculate_all = yes
+		}
+
+		timeout_effect = {
+			var:CLM_fund_state = {
+				clear_variable = CLM_fund_marker
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	CLM_infra_grants_mission = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			var:CLM_fund_state = {
+				check_variable = { infrastructure_level > CLM_fund_goal }
+			}
+		}
+
+		visible = {
+		}
+
+		activation = {
+			always = no
+		}
+
+		selectable_mission = no
+		is_good = yes
+		days_mission_timeout = 140
+
+		highlight_states = {
+			highlight_states_trigger = {
+				has_variable = CLM_fund_marker
+			}
+		}
+
+		complete_effect = {
+			var:CLM_fund_state = {
+				clear_variable = CLM_fund_marker
+			}
+			set_variable = { CLM_xfer_state = CLM_fund_sel_state }
+			set_variable = { CLM_xfer_party = CLM_fund_party }
+			set_variable = { CLM_xfer_n = 2 }
+			CLM_electoral_transfer = yes
+			CLM_electoral_swap_senators = yes
+			CLM_electoral_recalculate_all = yes
+			country_event = { id = CLM_electoral.5 }
+		}
+
+		timeout_effect = {
+			var:CLM_fund_state = {
+				clear_variable = CLM_fund_marker
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

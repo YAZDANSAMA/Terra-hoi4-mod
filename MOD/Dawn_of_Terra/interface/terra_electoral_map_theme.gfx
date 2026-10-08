@@ -1,0 +1,193 @@
+spriteTypes = {
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_electoral_window_bg"
+		size = { x=190 y=190 }
+		textureFile = "gfx/interface/terra_electoral/window_bg.tga"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_electoral_hit"
+		size = { x=4 y=4 }
+		textureFile = "gfx/interface/terra_electoral/hit.png"
+		borderSize = { x=1 y=1 }
+		tilingCenter = yes
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_panel_header_bg"
+		textureFile = "gfx/interface/terra_electoral/panel_header_bg.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_none"
+		textureFile = "gfx/interface/terra_electoral/dot_none.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_state_red"
+		textureFile = "gfx/interface/terra_electoral/dot_state_red.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_state_blue"
+		textureFile = "gfx/interface/terra_electoral/dot_state_blue.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_state_yellow"
+		textureFile = "gfx/interface/terra_electoral/dot_state_yellow.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_big_red"
+		textureFile = "gfx/interface/terra_electoral/dot_big_red.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_big_blue"
+		textureFile = "gfx/interface/terra_electoral/dot_big_blue.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_dot_big_yellow"
+		textureFile = "gfx/interface/terra_electoral/dot_big_yellow.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_party_btn_red"
+		textureFile = "gfx/interface/terra_electoral/party_btn_red.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_party_btn_blue"
+		textureFile = "gfx/interface/terra_electoral/party_btn_blue.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_party_btn_yellow"
+		textureFile = "gfx/interface/terra_electoral/party_btn_yellow.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_party_ring"
+		textureFile = "gfx/interface/terra_electoral/party_ring.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_decision_bg"
+		textureFile = "gfx/interface/terra_electoral/decision_bg.png"
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_bar_mission"
+		textureFile = "gfx/interface/terra_electoral/bar_mission.png"
+		noOfFrames = 16
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_natdot_large"
+		textureFile = "gfx/interface/terra_electoral/natdot_large.png"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_natdot_small"
+		textureFile = "gfx/interface/terra_electoral/natdot_small.png"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_natdot_none"
+		textureFile = "gfx/interface/terra_electoral/natdot_none.png"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_150"
+		textureFile = "gfx/interface/terra_electoral/state_150.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_151"
+		textureFile = "gfx/interface/terra_electoral/state_151.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_152"
+		textureFile = "gfx/interface/terra_electoral/state_152.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_153"
+		textureFile = "gfx/interface/terra_electoral/state_153.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_154"
+		textureFile = "gfx/interface/terra_electoral/state_154.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_155"
+		textureFile = "gfx/interface/terra_electoral/state_155.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_156"
+		textureFile = "gfx/interface/terra_electoral/state_156.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_157"
+		textureFile = "gfx/interface/terra_electoral/state_157.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_158"
+		textureFile = "gfx/interface/terra_electoral/state_158.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_159"
+		textureFile = "gfx/interface/terra_electoral/state_159.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_160"
+		textureFile = "gfx/interface/terra_electoral/state_160.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_161"
+		textureFile = "gfx/interface/terra_electoral/state_161.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_162"
+		textureFile = "gfx/interface/terra_electoral/state_162.png"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_terra_electoral_state_163"
+		textureFile = "gfx/interface/terra_electoral/state_163.png"
+		noOfFrames = 11
+	}
+
+}

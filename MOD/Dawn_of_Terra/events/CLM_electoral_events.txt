@@ -1,0 +1,393 @@
+add_namespace = CLM_electoral
+
+country_event = {
+	id = CLM_electoral.1
+	title = CLM_electoral.1.t
+	desc = CLM_electoral.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { CLM_xfer_state = CLM_visit_state }
+		set_variable = { CLM_xfer_party = CLM_visit_party }
+		set_variable = { CLM_xfer_n = 3 }
+		CLM_electoral_transfer = yes
+		CLM_electoral_recalculate_all = yes
+		clr_country_flag = CLM_electoral_busy
+	}
+
+	option = {
+		name = CLM_electoral.1.a
+	}
+}
+
+country_event = {
+	id = CLM_electoral.2
+	title = CLM_electoral.2.t
+	desc = CLM_electoral.2.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { CLM_xfer_state = CLM_visit_state }
+		set_variable = { CLM_xfer_party = CLM_visit_party }
+		set_variable = { CLM_xfer_n = 4 }
+		CLM_electoral_transfer = yes
+		CLM_electoral_recalculate_all = yes
+		clr_country_flag = CLM_electoral_busy
+	}
+
+	option = {
+		name = CLM_electoral.2.a
+	}
+}
+
+country_event = {
+	id = CLM_electoral.3
+	title = CLM_electoral.3.t
+	desc = CLM_electoral.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { CLM_xfer_state = CLM_visit_state }
+		set_variable = { CLM_xfer_party = CLM_visit_party }
+		set_variable = { CLM_xfer_n = 0 }
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 150 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_150 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 150 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_150 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 150 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_150 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 151 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_151 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 151 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_151 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 151 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_151 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 152 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_152 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 152 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_152 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 152 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_152 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 153 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_153 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 153 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_153 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 153 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_153 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 154 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_154 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 154 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_154 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 154 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_154 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 155 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_155 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 155 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_155 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 155 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_155 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 156 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_156 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 156 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_156 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 156 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_156 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 157 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_157 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 157 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_157 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 157 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_157 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 158 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_158 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 158 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_158 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 158 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_158 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 159 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_159 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 159 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_159 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 159 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_159 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 160 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_160 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 160 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_160 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 160 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_160 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 161 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_161 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 161 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_161 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 161 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_161 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 162 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_162 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 162 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_162 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 162 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_162 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 163 }
+				check_variable = { CLM_visit_party = 1 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_red_163 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 163 }
+				check_variable = { CLM_visit_party = 2 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_blue_163 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 163 }
+				check_variable = { CLM_visit_party = 3 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_yellow_163 }
+		}
+		clamp_variable = { var = CLM_xfer_n min = 0 max = 10 }
+		CLM_electoral_transfer = yes
+		CLM_electoral_recalculate_all = yes
+		clr_country_flag = CLM_electoral_busy
+	}
+
+	option = {
+		name = CLM_electoral.3.a
+	}
+}
+
+country_event = {
+	id = CLM_electoral.4
+	title = CLM_electoral.4.t
+	desc = CLM_electoral.4.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { CLM_xfer_state = CLM_visit_state }
+		set_variable = { CLM_xfer_party = CLM_visit_party }
+		set_variable = { CLM_xfer_n = 5 }
+		CLM_electoral_swap_senators = yes
+		CLM_electoral_lose = yes
+		CLM_electoral_recalculate_all = yes
+		clr_country_flag = CLM_electoral_busy
+	}
+
+	option = {
+		name = CLM_electoral.4.a
+	}
+}
+
+country_event = {
+	id = CLM_electoral.5
+	title = CLM_electoral.5.t
+	desc = CLM_electoral.5.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_electoral.5.a
+	}
+}

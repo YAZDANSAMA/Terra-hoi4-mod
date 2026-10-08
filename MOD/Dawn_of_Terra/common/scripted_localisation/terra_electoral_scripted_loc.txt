@@ -1,0 +1,3163 @@
+defined_text = {
+	name = GetElectoralSelectedName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 150 }
+		}
+		localization_key = CLM_electoral_state_150_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 151 }
+		}
+		localization_key = CLM_electoral_state_151_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 152 }
+		}
+		localization_key = CLM_electoral_state_152_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 153 }
+		}
+		localization_key = CLM_electoral_state_153_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 154 }
+		}
+		localization_key = CLM_electoral_state_154_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 155 }
+		}
+		localization_key = CLM_electoral_state_155_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 156 }
+		}
+		localization_key = CLM_electoral_state_156_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 157 }
+		}
+		localization_key = CLM_electoral_state_157_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 158 }
+		}
+		localization_key = CLM_electoral_state_158_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 159 }
+		}
+		localization_key = CLM_electoral_state_159_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 160 }
+		}
+		localization_key = CLM_electoral_state_160_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 161 }
+		}
+		localization_key = CLM_electoral_state_161_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 162 }
+		}
+		localization_key = CLM_electoral_state_162_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 163 }
+		}
+		localization_key = CLM_electoral_state_163_name
+	}
+	text = {
+		localization_key = CLM_electoral_no_state
+	}
+}
+
+defined_text = {
+	name = GetElNatSenSprite
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 0 }
+		}
+		localization_key = GFX_terra_electoral_natdot_large
+	}
+	text = {
+		localization_key = GFX_terra_electoral_natdot_none
+	}
+}
+
+defined_text = {
+	name = GetElNatHouseSprite
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 0 }
+		}
+		localization_key = GFX_terra_electoral_natdot_small
+	}
+	text = {
+		localization_key = GFX_terra_electoral_natdot_none
+	}
+}
+
+defined_text = {
+	name = GetElStSen1
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStSen2
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStSen3
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse1
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 0 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 0 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 0 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse2
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse3
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse4
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse5
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse6
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 5 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 5 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 5 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse7
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 6 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 6 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 6 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse8
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 7 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 7 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 7 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse9
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 8 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 8 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 8 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse10
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 9 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 9 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 9 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse11
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 10 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 10 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 10 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse12
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 11 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 11 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 11 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse13
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 12 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 12 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 12 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse14
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 13 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 13 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 13 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse15
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 14 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 14 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 14 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse16
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 15 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 15 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 15 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse17
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 16 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 16 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 16 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse18
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 17 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 17 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 17 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse19
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 18 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 18 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 18 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse20
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 19 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 19 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 19 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse21
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 20 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 20 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 20 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse22
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 21 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 21 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 21 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse23
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 22 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 22 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 22 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse24
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 23 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 23 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 23 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse25
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 24 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 24 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 24 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse26
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 25 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 25 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 25 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse27
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 26 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 26 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 26 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse28
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 27 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 27 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 27 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse29
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 28 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 28 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 28 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse30
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 29 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 29 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 29 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse31
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 30 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 30 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 30 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse32
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 31 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 31 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 31 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse33
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 32 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 32 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 32 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse34
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 33 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 33 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 33 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse35
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 34 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 34 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 34 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse36
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 35 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 35 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 35 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse37
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 36 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 36 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 36 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse38
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 37 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 37 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 37 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse39
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 38 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 38 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 38 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse40
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 39 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 39 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 39 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse41
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 40 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 40 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 40 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse42
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 41 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 41 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 41 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse43
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 42 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 42 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 42 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse44
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 43 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 43 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 43 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse45
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 44 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 44 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 44 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse46
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 45 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 45 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 45 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse47
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 46 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 46 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 46 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse48
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 47 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 47 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 47 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse49
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 48 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 48 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 48 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse50
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 49 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 49 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 49 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse51
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 50 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 50 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 50 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse52
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 51 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 51 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 51 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse53
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 52 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 52 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 52 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse54
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 53 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 53 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 53 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse55
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 54 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 54 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 54 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse56
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 55 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 55 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 55 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse57
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 56 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 56 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 56 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse58
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 57 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 57 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 57 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse59
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 58 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 58 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 58 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse60
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 59 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 59 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 59 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse61
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 60 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 60 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 60 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse62
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 61 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 61 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 61 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse63
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 62 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 62 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 62 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse64
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 63 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 63 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 63 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse65
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 64 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 64 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 64 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse66
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 65 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 65 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 65 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse67
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 66 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 66 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 66 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse68
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 67 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 67 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 67 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse69
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 68 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 68 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 68 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse70
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 69 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 69 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 69 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse71
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 70 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 70 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 70 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse72
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 71 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 71 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 71 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse73
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 72 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 72 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 72 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse74
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 73 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 73 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 73 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElStHouse75
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_red > 74 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_red
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_rb > 74 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_blue
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_total > 74 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElSenateCounts
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 0 }
+		}
+		localization_key = CLM_ELECTORAL_SENATE_NAT
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 1 }
+		}
+		localization_key = CLM_ELECTORAL_SENATE_ST_RED
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 2 }
+		}
+		localization_key = CLM_ELECTORAL_SENATE_ST_BLUE
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 3 }
+		}
+		localization_key = CLM_ELECTORAL_SENATE_ST_YELLOW
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_SENATE_NAT
+	}
+}
+
+defined_text = {
+	name = GetElHouseCounts
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_selected = 0 }
+		}
+		localization_key = CLM_ELECTORAL_HOUSE_NAT
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+		}
+		localization_key = CLM_ELECTORAL_HOUSE_ST
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_HOUSE_NAT
+	}
+}
+
+defined_text = {
+	name = GetElPartyRing1
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 1 }
+		}
+		localization_key = GFX_terra_electoral_party_ring
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyRing2
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 2 }
+		}
+		localization_key = GFX_terra_electoral_party_ring
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyRing3
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 3 }
+		}
+		localization_key = GFX_terra_electoral_party_ring
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElDecBg1
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+		}
+		localization_key = GFX_terra_electoral_decision_bg
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElDec1Text
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_1 = 1 }
+		}
+		localization_key = CLM_ELECTORAL_DEC1_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_1 = 2 }
+		}
+		localization_key = CLM_ELECTORAL_DEC2_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_1 = 3 }
+		}
+		localization_key = CLM_ELECTORAL_DEC3_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_1 = 4 }
+		}
+		localization_key = CLM_ELECTORAL_DEC4_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_1 = 5 }
+		}
+		localization_key = CLM_ELECTORAL_DEC5_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_1 = 6 }
+		}
+		localization_key = CLM_ELECTORAL_DEC6_ON
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElDecTip1
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_1 = 1 }
+		}
+		localization_key = CLM_ELECTORAL_DEC1_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_1 = 2 }
+		}
+		localization_key = CLM_ELECTORAL_DEC2_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_1 = 3 }
+		}
+		localization_key = CLM_ELECTORAL_DEC3_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_1 = 4 }
+		}
+		localization_key = CLM_ELECTORAL_DEC4_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_1 = 5 }
+		}
+		localization_key = CLM_ELECTORAL_DEC5_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_1 = 6 }
+		}
+		localization_key = CLM_ELECTORAL_DEC6_TIP
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElDecBg2
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+		}
+		localization_key = GFX_terra_electoral_decision_bg
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElDec2Text
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_2 = 1 }
+		}
+		localization_key = CLM_ELECTORAL_DEC1_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_2 = 2 }
+		}
+		localization_key = CLM_ELECTORAL_DEC2_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_2 = 3 }
+		}
+		localization_key = CLM_ELECTORAL_DEC3_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_2 = 4 }
+		}
+		localization_key = CLM_ELECTORAL_DEC4_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_2 = 5 }
+		}
+		localization_key = CLM_ELECTORAL_DEC5_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_2 = 6 }
+		}
+		localization_key = CLM_ELECTORAL_DEC6_ON
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElDecTip2
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_2 = 1 }
+		}
+		localization_key = CLM_ELECTORAL_DEC1_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_2 = 2 }
+		}
+		localization_key = CLM_ELECTORAL_DEC2_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_2 = 3 }
+		}
+		localization_key = CLM_ELECTORAL_DEC3_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_2 = 4 }
+		}
+		localization_key = CLM_ELECTORAL_DEC4_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_2 = 5 }
+		}
+		localization_key = CLM_ELECTORAL_DEC5_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_2 = 6 }
+		}
+		localization_key = CLM_ELECTORAL_DEC6_TIP
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElDecBg3
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+		}
+		localization_key = GFX_terra_electoral_decision_bg
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElDec3Text
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_3 = 1 }
+		}
+		localization_key = CLM_ELECTORAL_DEC1_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_3 = 2 }
+		}
+		localization_key = CLM_ELECTORAL_DEC2_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_3 = 3 }
+		}
+		localization_key = CLM_ELECTORAL_DEC3_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_3 = 4 }
+		}
+		localization_key = CLM_ELECTORAL_DEC4_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_3 = 5 }
+		}
+		localization_key = CLM_ELECTORAL_DEC5_ON
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			NOT = { check_variable = { CLM.CLM_electoral_party_sel = 0 } }
+			check_variable = { CLM.CLM_dec_slot_3 = 6 }
+		}
+		localization_key = CLM_ELECTORAL_DEC6_ON
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElDecTip3
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_3 = 1 }
+		}
+		localization_key = CLM_ELECTORAL_DEC1_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_3 = 2 }
+		}
+		localization_key = CLM_ELECTORAL_DEC2_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_3 = 3 }
+		}
+		localization_key = CLM_ELECTORAL_DEC3_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_3 = 4 }
+		}
+		localization_key = CLM_ELECTORAL_DEC4_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_3 = 5 }
+		}
+		localization_key = CLM_ELECTORAL_DEC5_TIP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_dec_slot_3 = 6 }
+		}
+		localization_key = CLM_ELECTORAL_DEC6_TIP
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElSupportHeader
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 1 }
+		}
+		localization_key = CLM_ELECTORAL_SUPPORT_RED
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 2 }
+		}
+		localization_key = CLM_ELECTORAL_SUPPORT_BLUE
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 3 }
+		}
+		localization_key = CLM_ELECTORAL_SUPPORT_YELLOW
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+		}
+		localization_key = CLM_ELECTORAL_PICK_PARTY
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_PICK_STATE
+	}
+}
+
+defined_text = {
+	name = GetElMissionBg
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+		}
+		localization_key = GFX_terra_electoral_decision_bg
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElMissionBar
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+		}
+		localization_key = GFX_terra_electoral_bar_mission
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElMissionText
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+			check_variable = { CLM.CLM_run_id = 1 }
+		}
+		localization_key = CLM_ELECTORAL_RUN_1
+	}
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+			check_variable = { CLM.CLM_run_id = 2 }
+		}
+		localization_key = CLM_ELECTORAL_RUN_2
+	}
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+			check_variable = { CLM.CLM_run_id = 3 }
+		}
+		localization_key = CLM_ELECTORAL_RUN_3
+	}
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+			check_variable = { CLM.CLM_run_id = 4 }
+		}
+		localization_key = CLM_ELECTORAL_RUN_4
+	}
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+			check_variable = { CLM.CLM_run_id = 5 }
+		}
+		localization_key = CLM_ELECTORAL_RUN_5
+	}
+	text = {
+		trigger = {
+			OR = { CLM = { has_country_flag = CLM_electoral_busy } CLM = { has_active_mission = CLM_fund_underdeveloped_mission } CLM = { has_active_mission = CLM_infra_grants_mission } }
+			check_variable = { CLM.CLM_run_id = 6 }
+		}
+		localization_key = CLM_ELECTORAL_RUN_6
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElFundTargetName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 150 }
+		}
+		localization_key = CLM_electoral_state_150_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 151 }
+		}
+		localization_key = CLM_electoral_state_151_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 152 }
+		}
+		localization_key = CLM_electoral_state_152_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 153 }
+		}
+		localization_key = CLM_electoral_state_153_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 154 }
+		}
+		localization_key = CLM_electoral_state_154_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 155 }
+		}
+		localization_key = CLM_electoral_state_155_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 156 }
+		}
+		localization_key = CLM_electoral_state_156_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 157 }
+		}
+		localization_key = CLM_electoral_state_157_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 158 }
+		}
+		localization_key = CLM_electoral_state_158_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 159 }
+		}
+		localization_key = CLM_electoral_state_159_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 160 }
+		}
+		localization_key = CLM_electoral_state_160_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 161 }
+		}
+		localization_key = CLM_electoral_state_161_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 162 }
+		}
+		localization_key = CLM_electoral_state_162_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_state_id = 163 }
+		}
+		localization_key = CLM_electoral_state_163_name
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElVisitStateName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 150 }
+		}
+		localization_key = CLM_electoral_state_150_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 151 }
+		}
+		localization_key = CLM_electoral_state_151_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 152 }
+		}
+		localization_key = CLM_electoral_state_152_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 153 }
+		}
+		localization_key = CLM_electoral_state_153_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 154 }
+		}
+		localization_key = CLM_electoral_state_154_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 155 }
+		}
+		localization_key = CLM_electoral_state_155_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 156 }
+		}
+		localization_key = CLM_electoral_state_156_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 157 }
+		}
+		localization_key = CLM_electoral_state_157_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 158 }
+		}
+		localization_key = CLM_electoral_state_158_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 159 }
+		}
+		localization_key = CLM_electoral_state_159_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 160 }
+		}
+		localization_key = CLM_electoral_state_160_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 161 }
+		}
+		localization_key = CLM_electoral_state_161_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 162 }
+		}
+		localization_key = CLM_electoral_state_162_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_state = 163 }
+		}
+		localization_key = CLM_electoral_state_163_name
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElFundStateName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 150 }
+		}
+		localization_key = CLM_electoral_state_150_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 151 }
+		}
+		localization_key = CLM_electoral_state_151_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 152 }
+		}
+		localization_key = CLM_electoral_state_152_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 153 }
+		}
+		localization_key = CLM_electoral_state_153_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 154 }
+		}
+		localization_key = CLM_electoral_state_154_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 155 }
+		}
+		localization_key = CLM_electoral_state_155_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 156 }
+		}
+		localization_key = CLM_electoral_state_156_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 157 }
+		}
+		localization_key = CLM_electoral_state_157_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 158 }
+		}
+		localization_key = CLM_electoral_state_158_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 159 }
+		}
+		localization_key = CLM_electoral_state_159_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 160 }
+		}
+		localization_key = CLM_electoral_state_160_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 161 }
+		}
+		localization_key = CLM_electoral_state_161_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 162 }
+		}
+		localization_key = CLM_electoral_state_162_name
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_sel_state = 163 }
+		}
+		localization_key = CLM_electoral_state_163_name
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElVisitPartyName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_party = 1 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_RED
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_party = 2 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_BLUE
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_party = 3 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_YELLOW
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}
+
+defined_text = {
+	name = GetElFundPartyName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_party = 1 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_RED
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_party = 2 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_BLUE
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_party = 3 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_YELLOW
+	}
+	text = {
+		localization_key = CLM_ELECTORAL_BLANK
+	}
+}

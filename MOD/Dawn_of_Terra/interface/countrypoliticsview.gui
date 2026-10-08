@@ -147,15 +147,6 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "national_control_button_2"
-			position = { x = 290 y = 185 }
-			quadTextureSprite = "GFX_icon_button_32x32"
-			scale = 1.4
-			pdx_tooltip = "Reserved for a future feature"
-			hide = yes
-		}
-
-		buttonType = {
 			name = "national_control_button_3"
 			position = { x = 360 y = 185 }
 			quadTextureSprite = "GFX_icon_button_32x32"

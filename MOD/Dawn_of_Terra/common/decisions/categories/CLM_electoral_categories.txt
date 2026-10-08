@@ -1,0 +1,14 @@
+CLM_electoral_missions_category = {
+	icon = GFX_decision_category_power_struggle
+
+	allowed = {
+		original_tag = CLM
+	}
+
+	visible_when_empty = no
+
+	priority = 85
+
+	visible = {
+	}
+}

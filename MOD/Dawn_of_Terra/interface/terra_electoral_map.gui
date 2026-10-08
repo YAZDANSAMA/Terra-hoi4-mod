@@ -1,0 +1,4090 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "terra_electoral_map_button_container"
+		position = { x = 290 y = 185 }
+		size = { width = 60 height = 60 }
+		clipping = no
+
+		buttonType = {
+			name = "national_control_button_2"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_icon_button_32x32"
+			scale = 1.4
+			pdx_tooltip = "Electoral Map"
+		}
+	}
+
+	containerWindowType = {
+		name = "terra_electoral_map_window"
+		position = { x = 552 y = 20 }
+		size = { width = 904 height = 837 }
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_terra_electoral_window_bg"
+		}
+
+		iconType = {
+			name = "electoral_header_bg"
+			spriteType = "GFX_terra_decisions_header_bg"
+			position = { x = 5 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = {
+			name = "electoral_title"
+			position = { x = 20 y = 12 }
+			font = "hoi_18mbs"
+			text = "Electoral Map"
+			maxWidth = 300
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "electoral_panel_header_bg"
+			spriteType = "GFX_terra_electoral_panel_header_bg"
+			position = { x = 563 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = {
+			name = "electoral_selected_name"
+			position = { x = 573 y = 12 }
+			font = "hoi_18mbs"
+			text = "CLM_ELECTORAL_SELECTED_NAME"
+			format = center
+			maxWidth = 310
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "electoral_map_area"
+			position = { x = 11 y = 46 }
+			size = { width = 538 height = 779 }
+			clipping = no
+
+			iconType = {
+				name = "electoral_state_150"
+				spriteType = "GFX_terra_electoral_state_150"
+				position = { x = 303 y = 374 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_151"
+				spriteType = "GFX_terra_electoral_state_151"
+				position = { x = 19 y = 14 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_152"
+				spriteType = "GFX_terra_electoral_state_152"
+				position = { x = 333 y = 236 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_153"
+				spriteType = "GFX_terra_electoral_state_153"
+				position = { x = 260 y = 125 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_154"
+				spriteType = "GFX_terra_electoral_state_154"
+				position = { x = 14 y = 359 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_155"
+				spriteType = "GFX_terra_electoral_state_155"
+				position = { x = 170 y = 467 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_156"
+				spriteType = "GFX_terra_electoral_state_156"
+				position = { x = 146 y = 584 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_157"
+				spriteType = "GFX_terra_electoral_state_157"
+				position = { x = 181 y = 320 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_158"
+				spriteType = "GFX_terra_electoral_state_158"
+				position = { x = 223 y = 226 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_159"
+				spriteType = "GFX_terra_electoral_state_159"
+				position = { x = 40 y = 174 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_160"
+				spriteType = "GFX_terra_electoral_state_160"
+				position = { x = 23 y = 287 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_161"
+				spriteType = "GFX_terra_electoral_state_161"
+				position = { x = 247 y = 383 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_162"
+				spriteType = "GFX_terra_electoral_state_162"
+				position = { x = 278 y = 264 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "electoral_state_163"
+				spriteType = "GFX_terra_electoral_state_163"
+				position = { x = 292 y = 563 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "electoral_hit_150_1"
+				position = { x = 353 y = 458 }
+				size = { x = 101 y = 74 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_2"
+				position = { x = 366 y = 605 }
+				size = { x = 42 y = 119 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_3"
+				position = { x = 324 y = 573 }
+				size = { x = 42 y = 62 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_4"
+				position = { x = 349 y = 410 }
+				size = { x = 54 y = 48 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_5"
+				position = { x = 454 y = 423 }
+				size = { x = 38 y = 46 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_6"
+				position = { x = 408 y = 689 }
+				size = { x = 33 y = 51 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_7"
+				position = { x = 329 y = 692 }
+				size = { x = 37 y = 38 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_8"
+				position = { x = 367 y = 532 }
+				size = { x = 60 y = 17 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_9"
+				position = { x = 366 y = 565 }
+				size = { x = 19 y = 40 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_150_10"
+				position = { x = 360 y = 394 }
+				size = { x = 31 y = 16 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Oreon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_1"
+				position = { x = 164 y = 74 }
+				size = { x = 156 y = 97 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_2"
+				position = { x = 46 y = 134 }
+				size = { x = 93 y = 83 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_3"
+				position = { x = 139 y = 90 }
+				size = { x = 25 y = 89 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_4"
+				position = { x = 320 y = 64 }
+				size = { x = 26 y = 83 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_5"
+				position = { x = 200 y = 45 }
+				size = { x = 73 y = 29 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_6"
+				position = { x = 174 y = 171 }
+				size = { x = 126 y = 6 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_7"
+				position = { x = 48 y = 217 }
+				size = { x = 68 y = 10 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_8"
+				position = { x = 207 y = 29 }
+				size = { x = 41 y = 16 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_9"
+				position = { x = 62 y = 126 }
+				size = { x = 77 y = 8 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_151_10"
+				position = { x = 117 y = 108 }
+				size = { x = 22 y = 18 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbian Yukon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_1"
+				position = { x = 349 y = 293 }
+				size = { x = 148 y = 76 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_2"
+				position = { x = 406 y = 369 }
+				size = { x = 75 y = 40 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_3"
+				position = { x = 394 y = 256 }
+				size = { x = 67 y = 37 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_4"
+				position = { x = 424 y = 409 }
+				size = { x = 19 y = 37 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_5"
+				position = { x = 461 y = 272 }
+				size = { x = 22 y = 21 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_6"
+				position = { x = 384 y = 369 }
+				size = { x = 22 y = 21 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_152_7"
+				position = { x = 421 y = 247 }
+				size = { x = 36 y = 9 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Appalene"
+			}
+
+			buttonType = {
+				name = "electoral_hit_153_1"
+				position = { x = 304 y = 174 }
+				size = { x = 111 y = 53 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Massara"
+			}
+
+			buttonType = {
+				name = "electoral_hit_153_2"
+				position = { x = 356 y = 134 }
+				size = { x = 49 y = 40 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Massara"
+			}
+
+			buttonType = {
+				name = "electoral_hit_153_3"
+				position = { x = 389 y = 227 }
+				size = { x = 52 y = 17 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Massara"
+			}
+
+			buttonType = {
+				name = "electoral_hit_153_4"
+				position = { x = 280 y = 195 }
+				size = { x = 24 y = 32 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Massara"
+			}
+
+			buttonType = {
+				name = "electoral_hit_153_5"
+				position = { x = 333 y = 161 }
+				size = { x = 23 y = 13 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Massara"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_1"
+				position = { x = 50 y = 542 }
+				size = { x = 120 y = 153 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_2"
+				position = { x = 69 y = 457 }
+				size = { x = 67 y = 85 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_3"
+				position = { x = 42 y = 695 }
+				size = { x = 105 y = 25 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_4"
+				position = { x = 31 y = 623 }
+				size = { x = 19 y = 72 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_5"
+				position = { x = 170 y = 524 }
+				size = { x = 35 y = 36 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_6"
+				position = { x = 63 y = 424 }
+				size = { x = 35 y = 33 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_7"
+				position = { x = 46 y = 368 }
+				size = { x = 16 y = 50 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_8"
+				position = { x = 78 y = 720 }
+				size = { x = 69 y = 10 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_9"
+				position = { x = 170 y = 619 }
+				size = { x = 18 y = 38 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_154_10"
+				position = { x = 136 y = 515 }
+				size = { x = 25 y = 27 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Nero"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_1"
+				position = { x = 307 y = 492 }
+				size = { x = 28 y = 70 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_2"
+				position = { x = 196 y = 566 }
+				size = { x = 73 y = 21 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_3"
+				position = { x = 233 y = 532 }
+				size = { x = 18 y = 34 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_4"
+				position = { x = 182 y = 579 }
+				size = { x = 14 y = 29 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_5"
+				position = { x = 335 y = 504 }
+				size = { x = 7 y = 51 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_6"
+				position = { x = 293 y = 538 }
+				size = { x = 14 y = 25 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_7"
+				position = { x = 288 y = 493 }
+				size = { x = 19 y = 18 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_155_8"
+				position = { x = 218 y = 489 }
+				size = { x = 22 y = 13 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Ontaron"
+			}
+
+			buttonType = {
+				name = "electoral_hit_156_1"
+				position = { x = 214 y = 595 }
+				size = { x = 96 y = 111 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Lucky"
+			}
+
+			buttonType = {
+				name = "electoral_hit_156_2"
+				position = { x = 192 y = 637 }
+				size = { x = 22 y = 78 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Lucky"
+			}
+
+			buttonType = {
+				name = "electoral_hit_156_3"
+				position = { x = 310 y = 646 }
+				size = { x = 33 y = 39 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Lucky"
+			}
+
+			buttonType = {
+				name = "electoral_hit_156_4"
+				position = { x = 172 y = 696 }
+				size = { x = 20 y = 23 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Lucky"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_1"
+				position = { x = 290 y = 333 }
+				size = { x = 43 y = 142 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_2"
+				position = { x = 220 y = 333 }
+				size = { x = 28 y = 141 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_3"
+				position = { x = 248 y = 333 }
+				size = { x = 42 y = 51 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_4"
+				position = { x = 248 y = 417 }
+				size = { x = 42 y = 51 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_5"
+				position = { x = 193 y = 361 }
+				size = { x = 27 y = 44 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_6"
+				position = { x = 333 y = 380 }
+				size = { x = 6 y = 102 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_7"
+				position = { x = 214 y = 425 }
+				size = { x = 6 y = 61 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_8"
+				position = { x = 300 y = 475 }
+				size = { x = 33 y = 11 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_9"
+				position = { x = 339 y = 382 }
+				size = { x = 14 y = 22 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_157_10"
+				position = { x = 196 y = 473 }
+				size = { x = 16 y = 19 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Columbia State"
+			}
+
+			buttonType = {
+				name = "electoral_hit_158_1"
+				position = { x = 307 y = 241 }
+				size = { x = 74 y = 43 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Illion"
+			}
+
+			buttonType = {
+				name = "electoral_hit_158_2"
+				position = { x = 238 y = 293 }
+				size = { x = 101 y = 29 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Illion"
+			}
+
+			buttonType = {
+				name = "electoral_hit_158_3"
+				position = { x = 275 y = 234 }
+				size = { x = 32 y = 31 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Illion"
+			}
+
+			buttonType = {
+				name = "electoral_hit_158_4"
+				position = { x = 252 y = 268 }
+				size = { x = 27 y = 25 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Illion"
+			}
+
+			buttonType = {
+				name = "electoral_hit_158_5"
+				position = { x = 303 y = 284 }
+				size = { x = 42 y = 9 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Illion"
+			}
+
+			buttonType = {
+				name = "electoral_hit_158_6"
+				position = { x = 287 y = 322 }
+				size = { x = 55 y = 6 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Illion"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_1"
+				position = { x = 160 y = 190 }
+				size = { x = 87 y = 85 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_2"
+				position = { x = 74 y = 237 }
+				size = { x = 86 y = 46 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_3"
+				position = { x = 69 y = 283 }
+				size = { x = 61 y = 17 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_4"
+				position = { x = 247 y = 185 }
+				size = { x = 14 y = 70 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_5"
+				position = { x = 120 y = 224 }
+				size = { x = 40 y = 13 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_6"
+				position = { x = 50 y = 252 }
+				size = { x = 24 y = 21 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_159_7"
+				position = { x = 160 y = 275 }
+				size = { x = 82 y = 4 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Calirinia"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_1"
+				position = { x = 81 y = 338 }
+				size = { x = 101 y = 74 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_2"
+				position = { x = 147 y = 412 }
+				size = { x = 39 y = 83 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_3"
+				position = { x = 39 y = 316 }
+				size = { x = 42 y = 44 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_4"
+				position = { x = 112 y = 412 }
+				size = { x = 35 y = 28 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_5"
+				position = { x = 186 y = 410 }
+				size = { x = 13 y = 57 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_6"
+				position = { x = 151 y = 326 }
+				size = { x = 46 y = 12 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_7"
+				position = { x = 32 y = 300 }
+				size = { x = 33 y = 16 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_8"
+				position = { x = 157 y = 495 }
+				size = { x = 34 y = 15 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_9"
+				position = { x = 71 y = 360 }
+				size = { x = 10 y = 32 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_160_10"
+				position = { x = 182 y = 338 }
+				size = { x = 14 y = 21 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "New Calidon"
+			}
+
+			buttonType = {
+				name = "electoral_hit_161_1"
+				position = { x = 262 y = 392 }
+				size = { x = 14 y = 13 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Max D.C."
+			}
+
+			buttonType = {
+				name = "electoral_hit_162_1"
+				position = { x = 288 y = 272 }
+				size = { x = 12 y = 11 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Trimounts"
+			}
+
+			buttonType = {
+				name = "electoral_hit_163_1"
+				position = { x = 301 y = 577 }
+				size = { x = 9 y = 9 }
+				quadTextureSprite = "GFX_terra_electoral_hit"
+				pdx_tooltip = "Tkaronto"
+			}
+		}
+
+		instantTextboxType = {
+			name = "electoral_senate_label"
+			position = { x = 563 y = 52 }
+			font = "hoi_18mbs"
+			text = "Senate"
+			format = center
+			maxWidth = 330
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_senate_counts"
+			position = { x = 563 y = 158 }
+			font = "hoi_18mbs"
+			text = "CLM_ELECTORAL_SENATE_COUNTS"
+			format = center
+			maxWidth = 330
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_house_label"
+			position = { x = 563 y = 205 }
+			font = "hoi_18mbs"
+			text = "House of Representatives"
+			format = center
+			maxWidth = 330
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_house_counts"
+			position = { x = 563 y = 408 }
+			font = "hoi_18mbs"
+			text = "CLM_ELECTORAL_HOUSE_COUNTS"
+			format = center
+			maxWidth = 330
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_party_1"
+			position = { x = 563 y = 452 }
+			spriteType = "GFX_terra_electoral_party_btn_red"
+			pdx_tooltip = "National Party"
+		}
+		iconType = {
+			name = "electoral_party_ring_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 563 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_party_text_1"
+			position = { x = 567 y = 456 }
+			font = "hoi_16mbs"
+			text = "National Party"
+			format = center
+			vertical_alignment = center
+			maxWidth = 96
+			maxHeight = 38
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_party_2"
+			position = { x = 676 y = 452 }
+			spriteType = "GFX_terra_electoral_party_btn_blue"
+			pdx_tooltip = "Federal Democratic Party"
+		}
+		iconType = {
+			name = "electoral_party_ring_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 676 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_party_text_2"
+			position = { x = 680 y = 456 }
+			font = "hoi_16mbs"
+			text = "Federal Democratic Party"
+			format = center
+			vertical_alignment = center
+			maxWidth = 96
+			maxHeight = 38
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_party_3"
+			position = { x = 789 y = 452 }
+			spriteType = "GFX_terra_electoral_party_btn_yellow"
+			pdx_tooltip = "Liberal Alliance"
+		}
+		iconType = {
+			name = "electoral_party_ring_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 789 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_party_text_3"
+			position = { x = 793 y = 456 }
+			font = "hoi_16mbs"
+			text = "Liberal Alliance"
+			format = center
+			vertical_alignment = center
+			maxWidth = 96
+			maxHeight = 38
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_support_header"
+			position = { x = 563 y = 508 }
+			font = "hoi_18mbs"
+			text = "CLM_ELECTORAL_SUPPORT_HEADER"
+			format = center
+			maxWidth = 330
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_dec_bg_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 563 y = 544 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_dec_text_1"
+			position = { x = 573 y = 552 }
+			font = "hoi_16mbs"
+			text = "CLM_ELECTORAL_DEC1_TEXT"
+			format = center
+			vertical_alignment = center
+			maxWidth = 310
+			maxHeight = 42
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_dec1_button"
+			position = { x = 563 y = 544 }
+			size = { x = 330 y = 58 }
+			quadTextureSprite = "GFX_terra_electoral_hit"
+			pdx_tooltip = "CLM_ELECTORAL_DEC1_TIPSLOT"
+		}
+		iconType = {
+			name = "electoral_dec_bg_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 563 y = 610 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_dec_text_2"
+			position = { x = 573 y = 618 }
+			font = "hoi_16mbs"
+			text = "CLM_ELECTORAL_DEC2_TEXT"
+			format = center
+			vertical_alignment = center
+			maxWidth = 310
+			maxHeight = 42
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_dec2_button"
+			position = { x = 563 y = 610 }
+			size = { x = 330 y = 58 }
+			quadTextureSprite = "GFX_terra_electoral_hit"
+			pdx_tooltip = "CLM_ELECTORAL_DEC2_TIPSLOT"
+		}
+		iconType = {
+			name = "electoral_dec_bg_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 563 y = 676 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_dec_text_3"
+			position = { x = 573 y = 684 }
+			font = "hoi_16mbs"
+			text = "CLM_ELECTORAL_DEC3_TEXT"
+			format = center
+			vertical_alignment = center
+			maxWidth = 310
+			maxHeight = 42
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_dec3_button"
+			position = { x = 563 y = 676 }
+			size = { x = 330 y = 58 }
+			quadTextureSprite = "GFX_terra_electoral_hit"
+			pdx_tooltip = "CLM_ELECTORAL_DEC3_TIPSLOT"
+		}
+		iconType = {
+			name = "electoral_mission_bg"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 563 y = 744 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_mission_text"
+			position = { x = 573 y = 752 }
+			font = "hoi_16mbs"
+			text = "CLM_ELECTORAL_MISSION_TEXT"
+			format = center
+			vertical_alignment = center
+			maxWidth = 310
+			maxHeight = 42
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_mission_bar"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 618 y = 808 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 643 y = 136 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 659 y = 136 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 676 y = 136 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_4"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 646 y = 123 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_5"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 662 y = 123 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_6"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 650 y = 110 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_7"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 122 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_8"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 669 y = 110 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_9"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 657 y = 98 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_10"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 688 y = 110 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_11"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 677 y = 99 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_12"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 666 y = 88 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_13"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 676 y = 79 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_14"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 688 y = 91 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_15"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 700 y = 102 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_16"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 688 y = 72 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_17"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 701 y = 84 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_18"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 701 y = 68 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_19"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 714 y = 98 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_20"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 714 y = 81 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_21"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 714 y = 65 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_22"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 728 y = 65 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_23"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 728 y = 81 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_24"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 728 y = 98 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_25"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 741 y = 68 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_26"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 741 y = 84 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_27"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 754 y = 72 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_28"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 742 y = 102 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_29"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 754 y = 91 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_30"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 766 y = 79 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_31"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 754 y = 110 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_32"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 765 y = 99 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_33"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 776 y = 88 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_34"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 785 y = 98 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_35"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 773 y = 110 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_36"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 762 y = 122 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_37"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 792 y = 110 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_38"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 780 y = 123 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_39"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 796 y = 123 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_40"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 766 y = 136 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_41"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 783 y = 136 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nsen_42"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 799 y = 136 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 574 y = 391 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 584 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 594 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_4"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 604 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_5"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 614 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_6"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 624 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_7"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 634 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_8"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 644 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_9"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 654 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_10"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 574 y = 381 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_11"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 584 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_12"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 594 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_13"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 605 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_14"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 615 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_15"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 625 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_16"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 576 y = 371 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_17"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 635 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_18"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 586 y = 369 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_19"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 645 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_20"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 596 y = 369 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_21"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 606 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_22"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 655 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_23"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 577 y = 361 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_24"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 617 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_25"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 627 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_26"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 588 y = 359 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_27"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 599 y = 359 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_28"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 637 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_29"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 580 y = 352 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_30"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 609 y = 359 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_31"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 648 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_32"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 620 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_33"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 591 y = 349 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_34"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 583 y = 343 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_35"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 602 y = 349 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_36"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 630 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_37"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 658 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_38"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 613 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_39"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 641 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_40"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 595 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_41"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 587 y = 334 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_42"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 623 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_43"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 606 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_44"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 652 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_45"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 634 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_46"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 617 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_47"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 600 y = 330 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_48"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 591 y = 325 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_49"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 663 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_50"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 646 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_51"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 628 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_52"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 611 y = 330 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_53"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 596 y = 316 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_54"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 605 y = 321 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_55"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 622 y = 331 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_56"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 341 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_57"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 657 y = 351 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_58"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 617 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_59"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 634 y = 332 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_60"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 602 y = 308 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_61"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 611 y = 312 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_62"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 651 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_63"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 628 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_64"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 669 y = 352 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_65"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 646 y = 333 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_66"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 623 y = 313 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_67"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 608 y = 300 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_68"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 617 y = 304 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_69"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 323 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_70"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 663 y = 343 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_71"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 635 y = 314 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_72"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 614 y = 293 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_73"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 658 y = 334 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_74"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 630 y = 305 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_75"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 653 y = 325 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_76"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 625 y = 297 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_77"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 648 y = 316 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_78"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 621 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_79"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 676 y = 344 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_80"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 642 y = 307 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_81"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 637 y = 298 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_82"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 671 y = 335 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_83"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 632 y = 289 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_84"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 666 y = 327 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_85"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 628 y = 280 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_86"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 661 y = 318 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_87"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 656 y = 309 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_88"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 650 y = 300 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_89"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 645 y = 292 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_90"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 283 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_91"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 636 y = 274 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_92"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 684 y = 338 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_93"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 679 y = 329 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_94"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 674 y = 320 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_95"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 669 y = 312 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_96"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 664 y = 303 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_97"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 659 y = 294 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_98"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 654 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_99"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 649 y = 277 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_100"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 644 y = 268 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_101"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 653 y = 263 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_102"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 658 y = 272 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_103"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 663 y = 280 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_104"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 668 y = 289 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_105"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 673 y = 298 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_106"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 678 y = 306 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_107"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 683 y = 315 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_108"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 688 y = 324 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_109"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 693 y = 332 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_110"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 662 y = 259 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_111"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 668 y = 267 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_112"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 673 y = 276 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_113"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 678 y = 285 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_114"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 683 y = 293 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_115"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 688 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_116"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 671 y = 255 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_117"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 693 y = 311 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_118"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 677 y = 263 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_119"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 698 y = 320 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_120"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 682 y = 272 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_121"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 687 y = 281 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_122"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 703 y = 329 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_123"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 252 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_124"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 693 y = 290 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_125"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 698 y = 299 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_126"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 687 y = 260 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_127"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 692 y = 269 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_128"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 703 y = 308 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_129"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 689 y = 249 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_130"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 698 y = 278 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_131"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 708 y = 317 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_132"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 703 y = 287 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_133"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 697 y = 258 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_134"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 699 y = 248 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_135"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 703 y = 267 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_136"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 708 y = 297 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_137"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 713 y = 326 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_138"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 708 y = 277 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_139"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 713 y = 306 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_140"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 708 y = 256 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_141"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 709 y = 246 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_142"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 713 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_143"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 713 y = 266 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_144"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 718 y = 316 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_145"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 718 y = 296 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_146"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 718 y = 276 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_147"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 718 y = 256 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_148"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 719 y = 246 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_149"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 724 y = 326 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_150"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 724 y = 306 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_151"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 724 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_152"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 724 y = 266 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_153"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 728 y = 246 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_154"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 729 y = 256 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_155"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 729 y = 276 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_156"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 729 y = 296 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_157"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 729 y = 316 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_158"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 734 y = 266 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_159"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 734 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_160"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 738 y = 246 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_161"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 739 y = 256 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_162"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 734 y = 306 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_163"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 739 y = 277 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_164"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 734 y = 326 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_165"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 739 y = 297 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_166"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 744 y = 267 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_167"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 748 y = 248 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_168"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 750 y = 258 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_169"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 744 y = 287 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_170"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 739 y = 317 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_171"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 749 y = 278 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_172"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 758 y = 249 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_173"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 744 y = 308 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_174"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 755 y = 269 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_175"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 749 y = 299 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_176"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 260 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_177"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 754 y = 290 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_178"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 767 y = 252 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_179"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 744 y = 329 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_180"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 281 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_181"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 765 y = 272 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_182"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 749 y = 320 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_183"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 770 y = 263 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_184"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 754 y = 311 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_185"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 776 y = 255 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_186"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 759 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_187"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 764 y = 293 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_188"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 769 y = 285 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_189"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 774 y = 276 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_190"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 779 y = 267 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_191"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 785 y = 259 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_192"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 754 y = 332 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_193"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 759 y = 324 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_194"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 764 y = 315 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_195"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 769 y = 306 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_196"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 774 y = 298 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_197"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 779 y = 289 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_198"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 784 y = 280 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_199"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 789 y = 272 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_200"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 794 y = 263 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_201"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 803 y = 268 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_202"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 798 y = 277 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_203"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 793 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_204"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 788 y = 294 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_205"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 783 y = 303 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_206"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 778 y = 312 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_207"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 773 y = 320 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_208"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 768 y = 329 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_209"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 763 y = 338 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_210"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 811 y = 274 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_211"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 807 y = 283 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_212"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 802 y = 292 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_213"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 797 y = 300 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_214"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 791 y = 309 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_215"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 786 y = 318 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_216"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 819 y = 280 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_217"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 781 y = 327 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_218"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 815 y = 289 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_219"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 776 y = 335 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_220"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 810 y = 298 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_221"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 805 y = 307 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_222"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 771 y = 344 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_223"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 826 y = 286 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_224"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 799 y = 316 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_225"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 794 y = 325 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_226"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 822 y = 297 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_227"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 817 y = 305 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_228"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 789 y = 334 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_229"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 833 y = 293 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_230"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 812 y = 314 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_231"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 784 y = 343 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_232"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 807 y = 323 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_233"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 830 y = 304 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_234"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 839 y = 300 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_235"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 824 y = 313 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_236"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 801 y = 333 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_237"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 778 y = 352 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_238"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 819 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_239"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 796 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_240"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 836 y = 312 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_241"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 845 y = 308 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_242"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 813 y = 332 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_243"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 830 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_244"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 790 y = 351 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_245"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 807 y = 341 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_246"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 825 y = 331 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_247"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 842 y = 321 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_248"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 851 y = 316 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_249"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 784 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_250"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 801 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_251"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 819 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_252"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 836 y = 330 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_253"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 856 y = 325 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_254"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 847 y = 330 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_255"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 830 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_256"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 813 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_257"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 795 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_258"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 841 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_259"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 824 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_260"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 860 y = 334 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_261"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 852 y = 340 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_262"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 806 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_263"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 834 y = 350 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_264"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 789 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_265"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 817 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_266"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 845 y = 349 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_267"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 864 y = 343 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_268"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 856 y = 349 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_269"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 827 y = 360 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_270"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 799 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_271"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 838 y = 359 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_272"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 867 y = 352 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_273"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 810 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_274"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 848 y = 359 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_275"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 820 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_276"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 859 y = 359 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_277"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 830 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_278"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 870 y = 361 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_279"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 792 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_280"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 841 y = 370 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_281"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 851 y = 369 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_282"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 802 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_283"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 861 y = 369 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_284"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 812 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_285"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 871 y = 371 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_286"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 822 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_287"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 832 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_288"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 842 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_289"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 853 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_290"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 863 y = 380 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_291"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 873 y = 381 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_292"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 793 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_293"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 803 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_294"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 813 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_295"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 823 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_296"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 833 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_297"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 843 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_298"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 853 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_299"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 863 y = 390 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_nhouse_300"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 873 y = 391 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_ssen_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 716 y = 70 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_ssen_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 716 y = 100 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_ssen_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 716 y = 130 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 580 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 600 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 620 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_4"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_5"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 660 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_6"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_7"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 700 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_8"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 720 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_9"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 740 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_10"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_11"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 780 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_12"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 800 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_13"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 820 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_14"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 840 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_15"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 860 y = 262 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_16"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 580 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_17"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 600 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_18"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 620 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_19"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_20"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 660 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_21"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_22"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 700 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_23"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 720 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_24"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 740 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_25"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_26"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 780 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_27"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 800 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_28"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 820 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_29"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 840 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_30"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 860 y = 282 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_31"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 580 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_32"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 600 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_33"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 620 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_34"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_35"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 660 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_36"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_37"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 700 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_38"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 720 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_39"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 740 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_40"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_41"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 780 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_42"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 800 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_43"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 820 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_44"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 840 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_45"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 860 y = 302 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_46"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 580 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_47"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 600 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_48"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 620 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_49"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_50"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 660 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_51"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_52"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 700 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_53"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 720 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_54"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 740 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_55"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_56"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 780 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_57"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 800 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_58"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 820 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_59"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 840 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_60"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 860 y = 322 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_61"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 580 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_62"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 600 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_63"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 620 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_64"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 640 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_65"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 660 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_66"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 680 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_67"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 700 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_68"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 720 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_69"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 740 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_70"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 760 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_71"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 780 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_72"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 800 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_73"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 820 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_74"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 840 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_shouse_75"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 860 y = 342 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "electoral_close_button"
+			position = { x = -42 y = 9 }
+			quadTextureSprite = "GFX_closebutton"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+}
