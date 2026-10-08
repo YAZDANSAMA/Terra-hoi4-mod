@@ -130,6 +130,10 @@ CLM_electoral_recalculate_all = {
 	multiply_variable = { CLM_electoral_party_152 = 3 }
 	add_to_variable = { CLM_electoral_party_152 = stripe }
 	if = {
+		limit = { check_variable = { CLM_locked_152 = 1 } }
+		set_variable = { CLM_electoral_party_152 = 11 }
+	}
+	if = {
 		limit = { check_variable = { CLM_electoral_selected = 152 } }
 		set_variable = { CLM_electoral_frame_152 = 10 }
 		set_variable = { CLM_sel_sen = CLM_sen_party_152 }
@@ -10201,6 +10205,15 @@ CLM_electoral_unlock_columbian_yukon = {
 	set_variable = { CLM_rep_blue_151 = CLM_dormant_blue_151 }
 	set_variable = { CLM_rep_yellow_151 = CLM_dormant_yellow_151 }
 	set_variable = { CLM_sen_party_151 = CLM_dormant_sen_151 }
+	CLM_electoral_recalculate_all = yes
+}
+
+CLM_electoral_unlock_appalene = {
+	set_variable = { CLM_locked_152 = 0 }
+	set_variable = { CLM_rep_red_152 = CLM_dormant_red_152 }
+	set_variable = { CLM_rep_blue_152 = CLM_dormant_blue_152 }
+	set_variable = { CLM_rep_yellow_152 = CLM_dormant_yellow_152 }
+	set_variable = { CLM_sen_party_152 = CLM_dormant_sen_152 }
 	CLM_electoral_recalculate_all = yes
 }
 

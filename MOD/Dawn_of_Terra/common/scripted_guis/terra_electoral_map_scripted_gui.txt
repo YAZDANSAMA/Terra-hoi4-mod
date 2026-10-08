@@ -6088,6 +6088,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -6575,6 +6579,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -6866,6 +6874,10 @@ scripted_gui = {
 									AND = {
 										state = 151
 										owner = { check_variable = { CLM_locked_151 = 1 } }
+									}
+									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
 									}
 									AND = {
 										state = 153
@@ -7355,6 +7367,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -7646,6 +7662,10 @@ scripted_gui = {
 									AND = {
 										state = 151
 										owner = { check_variable = { CLM_locked_151 = 1 } }
+									}
+									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
 									}
 									AND = {
 										state = 153
@@ -8135,6 +8155,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -8391,24 +8415,31 @@ scripted_gui = {
 			}
 			electoral_hit_152_1_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_152_2_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_152_3_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_152_4_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_152_5_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_152_6_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_152_7_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
+				check_variable = { CLM_locked_152 = 0 }
 			}
 			electoral_hit_153_1_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
@@ -8674,6 +8705,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -8781,6 +8816,10 @@ scripted_gui = {
 									AND = {
 										state = 151
 										owner = { check_variable = { CLM_locked_151 = 1 } }
+									}
+									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
 									}
 									AND = {
 										state = 153
@@ -8893,6 +8932,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -9000,6 +9043,10 @@ scripted_gui = {
 									AND = {
 										state = 151
 										owner = { check_variable = { CLM_locked_151 = 1 } }
+									}
+									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
 									}
 									AND = {
 										state = 153
@@ -9112,6 +9159,10 @@ scripted_gui = {
 										owner = { check_variable = { CLM_locked_151 = 1 } }
 									}
 									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
+									}
+									AND = {
 										state = 153
 										owner = { check_variable = { CLM_locked_153 = 1 } }
 									}
@@ -9219,6 +9270,10 @@ scripted_gui = {
 									AND = {
 										state = 151
 										owner = { check_variable = { CLM_locked_151 = 1 } }
+									}
+									AND = {
+										state = 152
+										owner = { check_variable = { CLM_locked_152 = 1 } }
 									}
 									AND = {
 										state = 153
