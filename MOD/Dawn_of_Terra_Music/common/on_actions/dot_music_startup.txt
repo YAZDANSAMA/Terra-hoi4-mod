@@ -1,0 +1,47 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            every_country = {
+                limit = { is_ai = no }
+                if = {
+                    limit = { tag = URS }
+                    clr_country_flag = dot_urs_music_war
+                    clr_country_flag = dot_urs_music_peace
+                    dot_ursus_music_sync = yes
+                }
+                if = {
+                    limit = { tag = VCT }
+                    clr_country_flag = dot_vct_music_war
+                    clr_country_flag = dot_vct_music_peace
+                    dot_victoria_music_sync = yes
+                }
+            }
+        }
+    }
+    # Explicit country scope avoids attacker/defender scope ambiguity.
+    on_war = {
+        effect = {
+            VCT = { dot_victoria_music_sync = yes }
+            URS = { dot_ursus_music_sync = yes }
+        }
+    }
+    on_peace = {
+        effect = {
+            VCT = { dot_victoria_music_sync = yes }
+            URS = { dot_ursus_music_sync = yes }
+        }
+    }
+    # Country-scoped daily fallback handles delayed relation updates and old saves.
+    on_daily = {
+        effect = {
+            if = {
+                limit = { tag = VCT is_ai = no }
+                dot_victoria_music_sync = yes
+            }
+            if = {
+                limit = { tag = URS is_ai = no }
+                dot_ursus_music_sync = yes
+            }
+        }
+    }
+}

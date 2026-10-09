@@ -1,0 +1,24 @@
+# Invoke in a country scope. Switch only when the player's war state changes.
+dot_ursus_music_sync = {
+    if = {
+        limit = { tag = URS is_ai = no }
+        if = {
+            limit = {
+                has_war = yes
+                NOT = { has_country_flag = dot_urs_music_war }
+            }
+            scoped_play_song = "dawn_ursus_unyielding"
+            set_country_flag = dot_urs_music_war
+            clr_country_flag = dot_urs_music_peace
+        }
+        else_if = {
+            limit = {
+                has_war = no
+                NOT = { has_country_flag = dot_urs_music_peace }
+            }
+            scoped_play_song = "dawn_ursus_proshchaniye_a"
+            set_country_flag = dot_urs_music_peace
+            clr_country_flag = dot_urs_music_war
+        }
+    }
+}

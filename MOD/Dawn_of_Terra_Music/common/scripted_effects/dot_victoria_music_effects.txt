@@ -1,0 +1,24 @@
+# Invoke in a country scope. Switch only when the player's war state changes.
+dot_victoria_music_sync = {
+    if = {
+        limit = { tag = VCT is_ai = no }
+        if = {
+            limit = {
+                has_war = yes
+                NOT = { has_country_flag = dot_vct_music_war }
+            }
+            scoped_play_song = "dawn_victoria_march_on"
+            set_country_flag = dot_vct_music_war
+            clr_country_flag = dot_vct_music_peace
+        }
+        else_if = {
+            limit = {
+                has_war = no
+                NOT = { has_country_flag = dot_vct_music_peace }
+            }
+            scoped_play_song = "dawn_victoria_towards_her_light"
+            set_country_flag = dot_vct_music_peace
+            clr_country_flag = dot_vct_music_war
+        }
+    }
+}

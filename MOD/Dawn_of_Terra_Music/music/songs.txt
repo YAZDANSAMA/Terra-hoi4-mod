@@ -1,0 +1,53 @@
+# Main menu theme registration.
+music_station = "base_music"
+
+music = {
+    song = "maintheme"
+    chance = {
+        factor = 0
+    }
+}
+
+# Ursus instrumental: one playlist entry for one recording.
+music = {
+    song = "dawn_ursus_proshchaniye_a"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { any_country = { exists = yes is_ai = no } } }
+        modifier = { factor = 0 NOT = { tag = URS } }
+        modifier = { factor = 0 has_war = yes }
+    }
+}
+
+# Victoria: peace; evaluated when choosing the next track.
+music = {
+    song = "dawn_victoria_towards_her_light"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { any_country = { exists = yes is_ai = no } } }
+        modifier = { factor = 0 NOT = { tag = VCT } }
+        modifier = { factor = 0 has_war = yes }
+    }
+}
+
+# Victoria: war; evaluated when choosing the next track.
+music = {
+    song = "dawn_victoria_march_on"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { any_country = { exists = yes is_ai = no } } }
+        modifier = { factor = 0 NOT = { tag = VCT } }
+        modifier = { factor = 0 has_war = no }
+    }
+}
+
+# Ursus war track; one recording and one playlist entry.
+music = {
+    song = "dawn_ursus_unyielding"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { any_country = { exists = yes is_ai = no } } }
+        modifier = { factor = 0 NOT = { tag = URS } }
+        modifier = { factor = 0 has_war = no }
+    }
+}
