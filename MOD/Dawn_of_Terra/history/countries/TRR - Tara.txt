@@ -9,6 +9,10 @@ set_technology = {
 	basic_train = 1
 }
 recruit_character = TRR_interim_leader
+VCT = {
+    puppet = TRR
+}
+
 set_politics = {
     ruling_party = monarchism
     elections_allowed = no
