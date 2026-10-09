@@ -273,6 +273,14 @@ CLM_columbian_car_and_foundry_organization = {
 	allowed = {
 		original_tag = CLM
 	}
+
+	visible = {
+		FROM = { has_completed_focus = CLM_columbian_carworks }
+	}
+
+	available = {
+		FROM = { has_completed_focus = CLM_columbian_carworks }
+	}
 }
 
 CLM_chamberville_locomotive_works_organization = {
@@ -281,6 +289,14 @@ CLM_chamberville_locomotive_works_organization = {
 
 	allowed = {
 		original_tag = CLM
+	}
+
+	visible = {
+		FROM = { has_completed_focus = CLM_the_engine_of_the_economy }
+	}
+
+	available = {
+		FROM = { has_completed_focus = CLM_the_engine_of_the_economy }
 	}
 }
 

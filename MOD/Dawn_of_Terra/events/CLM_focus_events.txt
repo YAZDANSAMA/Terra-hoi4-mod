@@ -72,3 +72,29 @@ country_event = {
 		name = CLM_focus.6.a
 	}
 }
+
+country_event = {
+	id = CLM_focus.7
+	title = CLM_focus.7.t
+	desc = CLM_focus.7.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.7.a
+		add_political_power = 25
+		add_command_power = 10
+	}
+}
+
+country_event = {
+	id = CLM_focus.8
+	title = CLM_focus.8.t
+	desc = CLM_focus.8.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.8.a
+	}
+}

@@ -1,0 +1,12 @@
+defined_text = {
+	name = GetCgeName
+	text = {
+		trigger = {
+			CLM = { has_country_flag = CLM_general_electrics_named }
+		}
+		localization_key = CLM_cge_name_general_electrics
+	}
+	text = {
+		localization_key = CLM_cge_name_energy_sector
+	}
+}

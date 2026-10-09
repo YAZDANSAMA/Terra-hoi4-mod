@@ -14,8 +14,8 @@ focus_tree = {
 	focus = {
 		id = CLM_the_long_road_ahead
 		icon = GFX_focus_generic_desert_training
-		x = 3
-		y = 0
+		x = 5
+		y = 1
 		cost = 1
 
 		ai_will_do = {
@@ -31,8 +31,8 @@ focus_tree = {
 	focus = {
 		id = CLM_a_country_for_you
 		icon = GFX_focus_generic_democratic_europe
-		x = 2
-		y = 1
+		x = 4
+		y = 2
 		cost = 2
 
 		prerequisite = { focus = CLM_the_long_road_ahead }
@@ -42,7 +42,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = CLM_a_country_for_you
+			add_ideas = CLM_a_country_for_you_spirit
 			country_event = { id = CLM_focus.2 }
 		}
 	}
@@ -50,8 +50,8 @@ focus_tree = {
 	focus = {
 		id = CLM_a_country_for_me
 		icon = GFX_focus_generic_currency_reforms
-		x = 4
-		y = 1
+		x = 6
+		y = 2
 		cost = 2
 
 		prerequisite = { focus = CLM_the_long_road_ahead }
@@ -70,8 +70,8 @@ focus_tree = {
 	focus = {
 		id = CLM_discuss_expansion_projects
 		icon = GFX_focus_generic_conference
-		x = 3
-		y = 2
+		x = 5
+		y = 3
 		cost = 1
 
 		prerequisite = { focus = CLM_a_country_for_you }
@@ -89,8 +89,8 @@ focus_tree = {
 	focus = {
 		id = CLM_conduct_aerial_recon
 		icon = GFX_focus_generic_copy_plane_designs
-		x = 1
-		y = 3
+		x = 3
+		y = 4
 		cost = 2
 
 		prerequisite = { focus = CLM_discuss_expansion_projects }
@@ -107,8 +107,8 @@ focus_tree = {
 	focus = {
 		id = CLM_prepare_the_industry
 		icon = GFX_focus_generic_resource_extraction
-		x = 3
-		y = 3
+		x = 5
+		y = 4
 		cost = 5
 
 		prerequisite = { focus = CLM_discuss_expansion_projects }
@@ -148,8 +148,8 @@ focus_tree = {
 	focus = {
 		id = CLM_set_aside_funds
 		icon = GFX_focus_generic_currency_reforms
-		x = 5
-		y = 3
+		x = 7
+		y = 4
 		cost = 2
 
 		prerequisite = { focus = CLM_discuss_expansion_projects }
@@ -169,8 +169,8 @@ focus_tree = {
 	focus = {
 		id = CLM_prepare_supply_roads
 		icon = GFX_focus_generic_daytime_bombing
-		x = 1
-		y = 4
+		x = 3
+		y = 5
 		cost = 4
 
 		prerequisite = { focus = CLM_conduct_aerial_recon }
@@ -221,8 +221,8 @@ focus_tree = {
 	focus = {
 		id = CLM_net_agricultural_surplus
 		icon = GFX_focus_generic_farmland
-		x = 3
-		y = 4
+		x = 5
+		y = 5
 		cost = 5
 
 		prerequisite = { focus = CLM_prepare_the_industry }
@@ -251,8 +251,8 @@ focus_tree = {
 	focus = {
 		id = CLM_a_thorough_population_census
 		icon = GFX_focus_generic_immigration
-		x = 5
-		y = 4
+		x = 7
+		y = 5
 		cost = 5
 
 		prerequisite = { focus = CLM_set_aside_funds }
@@ -280,8 +280,8 @@ focus_tree = {
 	focus = {
 		id = CLM_manifest_destiny
 		icon = GFX_focus_generic_democratic_asia
-		x = 3
-		y = 5
+		x = 5
+		y = 6
 		cost = 2
 
 		prerequisite = { focus = CLM_prepare_supply_roads }
@@ -312,8 +312,8 @@ focus_tree = {
 	focus = {
 		id = CLM_into_tl_l_c_ns_jungles
 		icon = GFX_focus_generic_promote_SA_immigration
-		x = 0
-		y = 6
+		x = 2
+		y = 7
 		cost = 1
 
 		prerequisite = { focus = CLM_manifest_destiny }
@@ -326,8 +326,8 @@ focus_tree = {
 	focus = {
 		id = CLM_encourage_colonial_migration
 		icon = GFX_focus_generic_population_growth
-		x = 0
-		y = 7
+		x = 2
+		y = 8
 		cost = 10
 
 		prerequisite = { focus = CLM_into_tl_l_c_ns_jungles }
@@ -346,8 +346,8 @@ focus_tree = {
 	focus = {
 		id = CLM_reinforce_the_border_against_sargon
 		icon = GFX_focus_generic_provoke_border_clashes
-		x = 0
-		y = 8
+		x = 2
+		y = 9
 		cost = 5
 
 		prerequisite = { focus = CLM_encourage_colonial_migration }
@@ -430,8 +430,8 @@ focus_tree = {
 	focus = {
 		id = CLM_kickstart_a_basic_industry
 		icon = GFX_focus_generic_price_controls
-		x = 0
-		y = 9
+		x = 2
+		y = 10
 		cost = 5
 
 		prerequisite = { focus = CLM_reinforce_the_border_against_sargon }
@@ -461,8 +461,8 @@ focus_tree = {
 	focus = {
 		id = CLM_welcome_lucky_into_the_fold
 		icon = GFX_focus_generic_public_meetings
-		x = 0
-		y = 10
+		x = 2
+		y = 11
 		cost = 2
 
 		prerequisite = { focus = CLM_kickstart_a_basic_industry }
@@ -479,8 +479,8 @@ focus_tree = {
 	focus = {
 		id = CLM_into_the_vast_yukon
 		icon = GFX_focus_generic_north_atlantic_fleet
-		x = 2
-		y = 6
+		x = 4
+		y = 7
 		cost = 1
 
 		prerequisite = { focus = CLM_manifest_destiny }
@@ -503,8 +503,8 @@ focus_tree = {
 	focus = {
 		id = CLM_establish_the_columbian_shipyards
 		icon = GFX_focus_generic_refit_civilian_ships
-		x = 2
-		y = 7
+		x = 4
+		y = 8
 		cost = 5
 
 		prerequisite = { focus = CLM_into_the_vast_yukon }
@@ -528,8 +528,8 @@ focus_tree = {
 	focus = {
 		id = CLM_steel_for_the_iron_beasts
 		icon = GFX_focus_generic_steel_mill
-		x = 2
-		y = 8
+		x = 4
+		y = 9
 		cost = 5
 
 		prerequisite = { focus = CLM_establish_the_columbian_shipyards }
@@ -553,8 +553,8 @@ focus_tree = {
 	focus = {
 		id = CLM_the_riches_of_the_seas
 		icon = GFX_focus_generic_offshore_oil_rig
-		x = 2
-		y = 9
+		x = 4
+		y = 10
 		cost = 10
 
 		prerequisite = { focus = CLM_steel_for_the_iron_beasts }
@@ -583,8 +583,8 @@ focus_tree = {
 	focus = {
 		id = CLM_reinforce_yukons_position
 		icon = GFX_focus_generic_public_meetings
-		x = 2
-		y = 10
+		x = 4
+		y = 11
 		cost = 2
 
 		prerequisite = { focus = CLM_the_riches_of_the_seas }
@@ -601,8 +601,8 @@ focus_tree = {
 	focus = {
 		id = CLM_roadbuilding_in_the_marshes
 		icon = GFX_focus_generic_road_investment
-		x = 6
-		y = 6
+		x = 8
+		y = 7
 		cost = 5
 
 		prerequisite = { focus = CLM_manifest_destiny }
@@ -631,8 +631,8 @@ focus_tree = {
 	focus = {
 		id = CLM_introduce_more_livestock
 		icon = GFX_focus_generic_sheep
-		x = 6
-		y = 7
+		x = 8
+		y = 8
 		cost = 5
 
 		prerequisite = { focus = CLM_roadbuilding_in_the_marshes }
@@ -661,11 +661,12 @@ focus_tree = {
 	focus = {
 		id = CLM_subsidise_farmers
 		icon = GFX_focus_generic_welfare
-		x = 6
-		y = 8
+		x = 8
+		y = 9
 		cost = 5
 
 		prerequisite = { focus = CLM_introduce_more_livestock }
+		prerequisite = { focus = CLM_the_engine_of_the_economy }
 
 		ai_will_do = {
 			factor = 1
@@ -691,8 +692,8 @@ focus_tree = {
 	focus = {
 		id = CLM_an_agricultural_paradise
 		icon = GFX_SOV_reverse_the_collectivization_process_ccp_2d_sov_compatibility
-		x = 6
-		y = 9
+		x = 8
+		y = 10
 		cost = 4
 
 		prerequisite = { focus = CLM_subsidise_farmers }
@@ -721,8 +722,8 @@ focus_tree = {
 	focus = {
 		id = CLM_massaran_bread_columbian_freedom
 		icon = GFX_focus_generic_public_meetings
-		x = 6
-		y = 10
+		x = 8
+		y = 11
 		cost = 2
 
 		prerequisite = { focus = CLM_an_agricultural_paradise }
@@ -739,8 +740,8 @@ focus_tree = {
 	focus = {
 		id = CLM_prospect_oreon_for_ores
 		icon = GFX_focus_generic_mineral_prospecting
-		x = 4
-		y = 6
+		x = 6
+		y = 7
 		cost = 5
 
 		prerequisite = { focus = CLM_manifest_destiny }
@@ -764,8 +765,8 @@ focus_tree = {
 	focus = {
 		id = CLM_mining_industry
 		icon = GFX_focus_generic_mining_industry
-		x = 4
-		y = 7
+		x = 6
+		y = 8
 		cost = 5
 
 		prerequisite = { focus = CLM_prospect_oreon_for_ores }
@@ -784,8 +785,8 @@ focus_tree = {
 	focus = {
 		id = CLM_land_reclamation
 		icon = GFX_focus_generic_land_reclamation
-		x = 4
-		y = 8
+		x = 6
+		y = 9
 		cost = 5
 
 		prerequisite = { focus = CLM_mining_industry }
@@ -814,9 +815,9 @@ focus_tree = {
 	focus = {
 		id = CLM_gold_gold_gold
 		icon = GFX_focus_generic_expand_gold_mining
-		x = 4
-		y = 9
-		cost = 10
+		x = 6
+		y = 10
+		cost = 1
 
 		prerequisite = { focus = CLM_land_reclamation }
 
@@ -832,8 +833,8 @@ focus_tree = {
 	focus = {
 		id = CLM_the_forge_of_democracy
 		icon = GFX_SOV_steel_casting_industry_ccp_2d_sov_compatibility
-		x = 4
-		y = 10
+		x = 6
+		y = 11
 		cost = 2
 
 		prerequisite = { focus = CLM_gold_gold_gold }
@@ -893,8 +894,8 @@ focus_tree = {
 	focus = {
 		id = CLM_crossing_calirinia
 		icon = GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
-		x = 2
-		y = 11
+		x = 4
+		y = 12
 		cost = 5
 
 		prerequisite = { focus = CLM_reinforce_yukons_position }
@@ -923,12 +924,13 @@ focus_tree = {
 	focus = {
 		id = CLM_columbian_metal
 		icon = GFX_SOV_optimize_production_lines_ccp_2d_sov_compatibility
-		x = 4
-		y = 12
+		x = 6
+		y = 13
 		cost = 10
 
 		prerequisite = { focus = CLM_crossing_calirinia }
 		prerequisite = { focus = CLM_the_forge_of_democracy }
+		prerequisite = { focus = CLM_massaran_bread_columbian_freedom }
 
 		ai_will_do = {
 			factor = 1
@@ -954,6 +956,3387 @@ focus_tree = {
 				}
 			}
 			CLM_electoral_unlock_calirinia = yes
+			swap_ideas = {
+				remove_idea = CLM_columbian_soil_f
+				add_idea = CLM_columbian_soil_fm
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_columbian_carworks
+		icon = GFX_focus_GER_kdf_wagen
+		x = 11
+		y = 7
+		cost = 10
+
+		prerequisite = { focus = CLM_framework_capitalism }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			157 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			add_stability = -0.1
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud
+					add_idea = CLM_sweat_and_mud_0010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1000
+					add_idea = CLM_sweat_and_mud_1010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2000
+					add_idea = CLM_sweat_and_mud_2010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3000
+					add_idea = CLM_sweat_and_mud_3010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3100
+					add_idea = CLM_sweat_and_mud_3110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3200
+					add_idea = CLM_sweat_and_mud_3210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3300
+					add_idea = CLM_sweat_and_mud_3310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3400 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3400
+					add_idea = CLM_sweat_and_mud_3410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4000
+					add_idea = CLM_sweat_and_mud_4010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4100
+					add_idea = CLM_sweat_and_mud_4110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4200
+					add_idea = CLM_sweat_and_mud_4210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4300
+					add_idea = CLM_sweat_and_mud_4310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4400 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4400
+					add_idea = CLM_sweat_and_mud_4410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5000
+					add_idea = CLM_sweat_and_mud_5010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5100
+					add_idea = CLM_sweat_and_mud_5110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5200
+					add_idea = CLM_sweat_and_mud_5210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5300
+					add_idea = CLM_sweat_and_mud_5310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5400 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5400
+					add_idea = CLM_sweat_and_mud_5410
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud
+						add_idea = CLM_sweat_and_mud_0010
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_00000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_00000
+					add_idea = CLM_columbian_middleman_10000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01000
+					add_idea = CLM_columbian_middleman_11000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01100
+					add_idea = CLM_columbian_middleman_11100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01200
+					add_idea = CLM_columbian_middleman_11200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01300
+					add_idea = CLM_columbian_middleman_11300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02000
+					add_idea = CLM_columbian_middleman_12000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02100
+					add_idea = CLM_columbian_middleman_12100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02200
+					add_idea = CLM_columbian_middleman_12200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02300
+					add_idea = CLM_columbian_middleman_12300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03000
+					add_idea = CLM_columbian_middleman_13000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03100
+					add_idea = CLM_columbian_middleman_13100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03200
+					add_idea = CLM_columbian_middleman_13200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03300
+					add_idea = CLM_columbian_middleman_13300
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_00000
+						add_idea = CLM_columbian_middleman_10000
+					}
+				}
+			}
+			mio:CLM_columbian_car_and_foundry_organization = {
+				add_mio_size = 1
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_declaration_of_independence
+		icon = GFX_focus_generic_treaty
+		x = 16
+		y = 1
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.7 }
+		}
+	}
+
+	focus = {
+		id = CLM_allocate_special_resources_to_maylander
+		icon = GFX_focus_GER_plenipotentiary_of_the_four_year_plan
+		x = 19
+		y = 4
+		cost = 2
+
+		prerequisite = { focus = CLM_the_maylander_foundation }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_setting_aside_maylander_funds
+				days = 90
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_welcome_columbia_to_the_world_stage
+		icon = GFX_focus_GER_reich_ministry_of_public_enlightenment
+		x = 29
+		y = 10
+		cost = 5
+
+		prerequisite = { focus = CLM_foreign_weapons_expertise }
+		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_maylander_foundation
+		icon = GFX_focus_GER_optimize_reich_labour_service
+		x = 20
+		y = 3
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_columbia }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_shadow_section
+		icon = GFX_focus_GER_strengthen_the_waffen_ss
+		x = 22
+		y = 4
+		cost = 1
+
+		prerequisite = { focus = CLM_the_maylander_foundation }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_framework_capitalism
+		icon = GFX_focus_GER_vereinigte_stahlwerke
+		x = 12
+		y = 4
+		cost = 10
+
+		prerequisite = { focus = CLM_the_state_of_the_economy }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = CLM_columbian_middleman_00000
+		}
+	}
+
+	focus = {
+		id = CLM_wunderwaffe_inner_circle
+		icon = GFX_focus_GER_wunderwaffe_inner_circle
+		x = 19
+		y = 8
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_yan
+		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
+		x = 32
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = CLM_hail_kazimierz }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_state_of_the_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 14
+		y = 3
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_columbia }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_columbia
+		icon = GFX_goal_generic_national_unity
+		x = 16
+		y = 2
+		cost = 2
+
+		prerequisite = { focus = CLM_declaration_of_independence }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.8 }
+		}
+	}
+
+	focus = {
+		id = CLM_foreign_weapons_expertise
+		icon = GFX_goal_generic_scientific_exchange
+		x = 29
+		y = 8
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_laterano }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_establish_proper_embassies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 28
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = CLM_reach_out_to_the_world }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_reach_out_to_the_world
+		icon = GFX_goal_generic_improve_relations
+		x = 28
+		y = 0
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_gaul
+		icon = GFX_goal_continuous_boost_freedom
+		x = 26
+		y = 3
+		cost = 2
+
+		prerequisite = { focus = CLM_establish_proper_embassies }
+
+		mutually_exclusive = { focus = CLM_hail_victoria }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_kazimierz
+		icon = GFX_goal_generic_cavalry
+		x = 28
+		y = 4
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_gaul focus = CLM_hail_victoria }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_victoria
+		icon = GFX_goal_generic_dangerous_deal
+		x = 30
+		y = 3
+		cost = 2
+
+		prerequisite = { focus = CLM_establish_proper_embassies }
+
+		mutually_exclusive = { focus = CLM_hail_gaul }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_laterano
+		icon = GFX_goal_generic_build_airforce
+		x = 29
+		y = 7
+		cost = 5
+
+		prerequisite = { focus = CLM_the_prince_of_death_in_kazdel focus = CLM_invite_theresa_to_a_banquet }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_prince_of_death_in_kazdel
+		icon = GFX_goal_generic_secret_weapon
+		x = 28
+		y = 6
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_siracusa }
+
+		mutually_exclusive = { focus = CLM_invite_theresa_to_a_banquet }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_siracusa
+		icon = GFX_goal_generic_wolf_pack
+		x = 29
+		y = 5
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_kazimierz }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_greet_ursus
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 26
+		y = 5
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_kazimierz }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_and_our_sami_neighbours_too
+		icon = GFX_focus_FIN_utilize_the_sami
+		x = 26
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = CLM_greet_ursus }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_invite_theresa_to_a_banquet
+		icon = GFX_focus_AUS_courting_the_princess_of_industry
+		x = 30
+		y = 6
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_siracusa }
+
+		mutually_exclusive = { focus = CLM_the_prince_of_death_in_kazdel }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_exotic_fruits
+		icon = GFX_focus_AFG_fruit_processing
+		x = 0
+		y = 11
+		cost = 10
+
+		prerequisite = { focus = CLM_kickstart_a_basic_industry }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			156 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_vast_riches_in_the_jungle
+		icon = GFX_focus_generic_rubber_plantations
+		x = 0
+		y = 12
+		cost = 10
+
+		prerequisite = { focus = CLM_exotic_fruits }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			156 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = rubber
+					amount = 25
+					state = 156
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_kickstart_general_electrics
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 14
+		y = 5
+		cost = 4
+
+		prerequisite = { focus = CLM_a_capital_fit_for_a_king_without_a_king }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = CLM_general_electrics_contracts
+			set_country_flag = CLM_general_electrics_named
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_1000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1000
+					add_idea = CLM_sweat_and_mud_2000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1010
+					add_idea = CLM_sweat_and_mud_2010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1020
+					add_idea = CLM_sweat_and_mud_2020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1030
+					add_idea = CLM_sweat_and_mud_2030
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_1000
+						add_idea = CLM_sweat_and_mud_2000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_a_capital_fit_for_a_king_without_a_king
+		icon = GFX_focus_AST_a_democratic_bulwark
+		x = 14
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = CLM_the_state_of_the_economy }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			161 = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6902
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud
+					add_idea = CLM_sweat_and_mud_1000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_0010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0010
+					add_idea = CLM_sweat_and_mud_1010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_0020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0020
+					add_idea = CLM_sweat_and_mud_1020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_0030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0030
+					add_idea = CLM_sweat_and_mud_1030
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud
+						add_idea = CLM_sweat_and_mud_1000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_employ_the_pioneers_for_expeditions
+		icon = GFX_focus_AST_call_that_a_knife
+		x = 0
+		y = 13
+		cost = 4
+
+		prerequisite = { focus = CLM_vast_riches_in_the_jungle }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_trimounts_institute_of_technology
+		icon = GFX_focus_NORDIC_dem_capstone_research
+		x = 16
+		y = 7
+		cost = 10
+
+		prerequisite = { focus = CLM_fund_researchers }
+		prerequisite = { focus = CLM_finance_new_tools }
+		prerequisite = { focus = CLM_columbian_patents }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+			162 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6074
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3000
+					add_idea = CLM_sweat_and_mud_3100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3010
+					add_idea = CLM_sweat_and_mud_3110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3020
+					add_idea = CLM_sweat_and_mud_3120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3030
+					add_idea = CLM_sweat_and_mud_3130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4000
+					add_idea = CLM_sweat_and_mud_4100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4010
+					add_idea = CLM_sweat_and_mud_4110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4020
+					add_idea = CLM_sweat_and_mud_4120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4030
+					add_idea = CLM_sweat_and_mud_4130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5000
+					add_idea = CLM_sweat_and_mud_5100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5010
+					add_idea = CLM_sweat_and_mud_5110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5020
+					add_idea = CLM_sweat_and_mud_5120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5030
+					add_idea = CLM_sweat_and_mud_5130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5031 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5031
+					add_idea = CLM_sweat_and_mud_5131
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_3000
+						add_idea = CLM_sweat_and_mud_3100
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_01000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01000
+					add_idea = CLM_columbian_middleman_01100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02000
+					add_idea = CLM_columbian_middleman_02100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03000
+					add_idea = CLM_columbian_middleman_03100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11000
+					add_idea = CLM_columbian_middleman_11100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12000
+					add_idea = CLM_columbian_middleman_12100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13000
+					add_idea = CLM_columbian_middleman_13100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21000
+					add_idea = CLM_columbian_middleman_21100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21010
+					add_idea = CLM_columbian_middleman_21110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22000
+					add_idea = CLM_columbian_middleman_22100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22010
+					add_idea = CLM_columbian_middleman_22110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23000
+					add_idea = CLM_columbian_middleman_23100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23010
+					add_idea = CLM_columbian_middleman_23110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23011 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23011
+					add_idea = CLM_columbian_middleman_23111
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_01000
+						add_idea = CLM_columbian_middleman_01100
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_technological_ascendancy
+		icon = GFX_focus_JAP_expand_the_showa_research_association
+		x = 21
+		y = 8
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_fund_researchers
+		icon = GFX_focus_NORDIC_dem_research
+		x = 18
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_allocate_special_resources_to_maylander }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_funding_researchers
+				days = 70
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_finance_new_tools
+		icon = GFX_focus_NORDIC_dem_selector_research
+		x = 20
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_allocate_special_resources_to_maylander }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_financing_new_tools
+				days = 70
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_columbian_patents
+		icon = GFX_focus_generic_navy_research_bonus
+		x = 13
+		y = 6
+		cost = 2
+
+		prerequisite = { focus = CLM_kickstart_general_electrics }
+		prerequisite = { focus = CLM_framework_capitalism }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_2000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2000
+					add_idea = CLM_sweat_and_mud_3000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2010
+					add_idea = CLM_sweat_and_mud_3010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2020
+					add_idea = CLM_sweat_and_mud_3020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2030
+					add_idea = CLM_sweat_and_mud_3030
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_2000
+						add_idea = CLM_sweat_and_mud_3000
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_00000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_00000
+					add_idea = CLM_columbian_middleman_01000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_10000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_10000
+					add_idea = CLM_columbian_middleman_11000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_20000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_20000
+					add_idea = CLM_columbian_middleman_21000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_20010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_20010
+					add_idea = CLM_columbian_middleman_21010
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_00000
+						add_idea = CLM_columbian_middleman_01000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_expeditions_to_the_frozen_north
+		icon = GFX_focus_generic_winter_warfare
+		x = 24
+		y = 7
+		cost = 10
+
+		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_maintenance_is_not_optional
+		icon = GFX_focus_GER_plenipotentiary_of_armaments
+		x = 13
+		y = 7
+		cost = 4
+
+		prerequisite = { focus = CLM_columbian_patents }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3000
+					add_idea = CLM_sweat_and_mud_4000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3010
+					add_idea = CLM_sweat_and_mud_4010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3020
+					add_idea = CLM_sweat_and_mud_4020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3030
+					add_idea = CLM_sweat_and_mud_4030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3100
+					add_idea = CLM_sweat_and_mud_4100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3110
+					add_idea = CLM_sweat_and_mud_4110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3120
+					add_idea = CLM_sweat_and_mud_4120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3130 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3130
+					add_idea = CLM_sweat_and_mud_4130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3200
+					add_idea = CLM_sweat_and_mud_4200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3210
+					add_idea = CLM_sweat_and_mud_4210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3220
+					add_idea = CLM_sweat_and_mud_4220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3230 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3230
+					add_idea = CLM_sweat_and_mud_4230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3300
+					add_idea = CLM_sweat_and_mud_4300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3310
+					add_idea = CLM_sweat_and_mud_4310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3320
+					add_idea = CLM_sweat_and_mud_4320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3330 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3330
+					add_idea = CLM_sweat_and_mud_4330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3400 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3400
+					add_idea = CLM_sweat_and_mud_4400
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3410 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3410
+					add_idea = CLM_sweat_and_mud_4410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3420 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3420
+					add_idea = CLM_sweat_and_mud_4420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3430 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3430
+					add_idea = CLM_sweat_and_mud_4430
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_3000
+						add_idea = CLM_sweat_and_mud_4000
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_01000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01000
+					add_idea = CLM_columbian_middleman_02000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01100
+					add_idea = CLM_columbian_middleman_02100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01200
+					add_idea = CLM_columbian_middleman_02200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_01300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01300
+					add_idea = CLM_columbian_middleman_02300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11000
+					add_idea = CLM_columbian_middleman_12000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11100
+					add_idea = CLM_columbian_middleman_12100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11200
+					add_idea = CLM_columbian_middleman_12200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11300
+					add_idea = CLM_columbian_middleman_12300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21000
+					add_idea = CLM_columbian_middleman_22000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21010
+					add_idea = CLM_columbian_middleman_22010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21100
+					add_idea = CLM_columbian_middleman_22100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21110 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21110
+					add_idea = CLM_columbian_middleman_22110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21200
+					add_idea = CLM_columbian_middleman_22200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21210 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21210
+					add_idea = CLM_columbian_middleman_22210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21300
+					add_idea = CLM_columbian_middleman_22300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21310 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21310
+					add_idea = CLM_columbian_middleman_22310
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_01000
+						add_idea = CLM_columbian_middleman_02000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_worlds_highest_standard_of_living
+		icon = GFX_focus_GER_wirtschaftswunder
+		x = 9
+		y = 14
+		cost = 2
+
+		prerequisite = { focus = CLM_columbian_metal }
+		prerequisite = { focus = CLM_time_to_open_up_the_markets }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud }
+				remove_ideas = CLM_sweat_and_mud
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_0010 }
+				remove_ideas = CLM_sweat_and_mud_0010
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_0020 }
+				remove_ideas = CLM_sweat_and_mud_0020
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_0030 }
+				remove_ideas = CLM_sweat_and_mud_0030
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_1000 }
+				remove_ideas = CLM_sweat_and_mud_1000
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_1010 }
+				remove_ideas = CLM_sweat_and_mud_1010
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_1020 }
+				remove_ideas = CLM_sweat_and_mud_1020
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_1030 }
+				remove_ideas = CLM_sweat_and_mud_1030
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_2000 }
+				remove_ideas = CLM_sweat_and_mud_2000
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_2010 }
+				remove_ideas = CLM_sweat_and_mud_2010
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_2020 }
+				remove_ideas = CLM_sweat_and_mud_2020
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_2030 }
+				remove_ideas = CLM_sweat_and_mud_2030
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3000 }
+				remove_ideas = CLM_sweat_and_mud_3000
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3010 }
+				remove_ideas = CLM_sweat_and_mud_3010
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3020 }
+				remove_ideas = CLM_sweat_and_mud_3020
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3030 }
+				remove_ideas = CLM_sweat_and_mud_3030
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3100 }
+				remove_ideas = CLM_sweat_and_mud_3100
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3110 }
+				remove_ideas = CLM_sweat_and_mud_3110
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3120 }
+				remove_ideas = CLM_sweat_and_mud_3120
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3130 }
+				remove_ideas = CLM_sweat_and_mud_3130
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3200 }
+				remove_ideas = CLM_sweat_and_mud_3200
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3210 }
+				remove_ideas = CLM_sweat_and_mud_3210
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3220 }
+				remove_ideas = CLM_sweat_and_mud_3220
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3230 }
+				remove_ideas = CLM_sweat_and_mud_3230
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3300 }
+				remove_ideas = CLM_sweat_and_mud_3300
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3310 }
+				remove_ideas = CLM_sweat_and_mud_3310
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3320 }
+				remove_ideas = CLM_sweat_and_mud_3320
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3330 }
+				remove_ideas = CLM_sweat_and_mud_3330
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3400 }
+				remove_ideas = CLM_sweat_and_mud_3400
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3410 }
+				remove_ideas = CLM_sweat_and_mud_3410
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3420 }
+				remove_ideas = CLM_sweat_and_mud_3420
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3430 }
+				remove_ideas = CLM_sweat_and_mud_3430
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4000 }
+				remove_ideas = CLM_sweat_and_mud_4000
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4010 }
+				remove_ideas = CLM_sweat_and_mud_4010
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4020 }
+				remove_ideas = CLM_sweat_and_mud_4020
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4030 }
+				remove_ideas = CLM_sweat_and_mud_4030
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4100 }
+				remove_ideas = CLM_sweat_and_mud_4100
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4110 }
+				remove_ideas = CLM_sweat_and_mud_4110
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4120 }
+				remove_ideas = CLM_sweat_and_mud_4120
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4130 }
+				remove_ideas = CLM_sweat_and_mud_4130
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4200 }
+				remove_ideas = CLM_sweat_and_mud_4200
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4210 }
+				remove_ideas = CLM_sweat_and_mud_4210
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4220 }
+				remove_ideas = CLM_sweat_and_mud_4220
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4230 }
+				remove_ideas = CLM_sweat_and_mud_4230
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4300 }
+				remove_ideas = CLM_sweat_and_mud_4300
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4310 }
+				remove_ideas = CLM_sweat_and_mud_4310
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4320 }
+				remove_ideas = CLM_sweat_and_mud_4320
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4330 }
+				remove_ideas = CLM_sweat_and_mud_4330
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4400 }
+				remove_ideas = CLM_sweat_and_mud_4400
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4410 }
+				remove_ideas = CLM_sweat_and_mud_4410
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4420 }
+				remove_ideas = CLM_sweat_and_mud_4420
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4430 }
+				remove_ideas = CLM_sweat_and_mud_4430
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5000 }
+				remove_ideas = CLM_sweat_and_mud_5000
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5010 }
+				remove_ideas = CLM_sweat_and_mud_5010
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5020 }
+				remove_ideas = CLM_sweat_and_mud_5020
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5030 }
+				remove_ideas = CLM_sweat_and_mud_5030
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5031 }
+				remove_ideas = CLM_sweat_and_mud_5031
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5100 }
+				remove_ideas = CLM_sweat_and_mud_5100
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5110 }
+				remove_ideas = CLM_sweat_and_mud_5110
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5120 }
+				remove_ideas = CLM_sweat_and_mud_5120
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5130 }
+				remove_ideas = CLM_sweat_and_mud_5130
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5131 }
+				remove_ideas = CLM_sweat_and_mud_5131
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5200 }
+				remove_ideas = CLM_sweat_and_mud_5200
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5210 }
+				remove_ideas = CLM_sweat_and_mud_5210
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5220 }
+				remove_ideas = CLM_sweat_and_mud_5220
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5230 }
+				remove_ideas = CLM_sweat_and_mud_5230
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5231 }
+				remove_ideas = CLM_sweat_and_mud_5231
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5300 }
+				remove_ideas = CLM_sweat_and_mud_5300
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5310 }
+				remove_ideas = CLM_sweat_and_mud_5310
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5320 }
+				remove_ideas = CLM_sweat_and_mud_5320
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5330 }
+				remove_ideas = CLM_sweat_and_mud_5330
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5331 }
+				remove_ideas = CLM_sweat_and_mud_5331
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5400 }
+				remove_ideas = CLM_sweat_and_mud_5400
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5410 }
+				remove_ideas = CLM_sweat_and_mud_5410
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5420 }
+				remove_ideas = CLM_sweat_and_mud_5420
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5430 }
+				remove_ideas = CLM_sweat_and_mud_5430
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5431 }
+				remove_ideas = CLM_sweat_and_mud_5431
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_o }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_o
+					add_idea = CLM_columbian_middleman_w
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_o
+						add_idea = CLM_columbian_middleman_w
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_engine_of_the_economy
+		icon = GFX_focus_BEL_engine_of_the_economy
+		x = 11
+		y = 8
+		cost = 4
+
+		prerequisite = { focus = CLM_columbian_carworks }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			155 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_0010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0010
+					add_idea = CLM_sweat_and_mud_0020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1010
+					add_idea = CLM_sweat_and_mud_1020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2010
+					add_idea = CLM_sweat_and_mud_2020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3010
+					add_idea = CLM_sweat_and_mud_3020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3110
+					add_idea = CLM_sweat_and_mud_3120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3210
+					add_idea = CLM_sweat_and_mud_3220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3310
+					add_idea = CLM_sweat_and_mud_3320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3410 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3410
+					add_idea = CLM_sweat_and_mud_3420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4010
+					add_idea = CLM_sweat_and_mud_4020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4110
+					add_idea = CLM_sweat_and_mud_4120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4210
+					add_idea = CLM_sweat_and_mud_4220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4310
+					add_idea = CLM_sweat_and_mud_4320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4410 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4410
+					add_idea = CLM_sweat_and_mud_4420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5010
+					add_idea = CLM_sweat_and_mud_5020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5110
+					add_idea = CLM_sweat_and_mud_5120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5210
+					add_idea = CLM_sweat_and_mud_5220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5310
+					add_idea = CLM_sweat_and_mud_5320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5410 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5410
+					add_idea = CLM_sweat_and_mud_5420
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_0010
+						add_idea = CLM_sweat_and_mud_0020
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_10000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_10000
+					add_idea = CLM_columbian_middleman_20000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11000
+					add_idea = CLM_columbian_middleman_21000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11100
+					add_idea = CLM_columbian_middleman_21100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11200
+					add_idea = CLM_columbian_middleman_21200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11300
+					add_idea = CLM_columbian_middleman_21300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12000
+					add_idea = CLM_columbian_middleman_22000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12100
+					add_idea = CLM_columbian_middleman_22100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12200
+					add_idea = CLM_columbian_middleman_22200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12300
+					add_idea = CLM_columbian_middleman_22300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13000
+					add_idea = CLM_columbian_middleman_23000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13100
+					add_idea = CLM_columbian_middleman_23100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13200
+					add_idea = CLM_columbian_middleman_23200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13300
+					add_idea = CLM_columbian_middleman_23300
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_10000
+						add_idea = CLM_columbian_middleman_20000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_modern_cities
+		icon = GFX_focus_SIA_a_modern_economy
+		x = 13
+		y = 9
+		cost = 10
+
+		prerequisite = { focus = CLM_modern_construction_methods }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			161 = {
+				add_extra_state_shared_building_slots = 10
+				add_manpower = 30000
+			}
+			162 = {
+				add_extra_state_shared_building_slots = 10
+				add_manpower = 30000
+			}
+			163 = {
+				add_extra_state_shared_building_slots = 10
+				add_manpower = 30000
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_02000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02000
+					add_idea = CLM_columbian_middleman_03000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02100
+					add_idea = CLM_columbian_middleman_03100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02200
+					add_idea = CLM_columbian_middleman_03200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02300
+					add_idea = CLM_columbian_middleman_03300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12000
+					add_idea = CLM_columbian_middleman_13000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12100
+					add_idea = CLM_columbian_middleman_13100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12200
+					add_idea = CLM_columbian_middleman_13200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12300
+					add_idea = CLM_columbian_middleman_13300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22000
+					add_idea = CLM_columbian_middleman_23000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22010
+					add_idea = CLM_columbian_middleman_23010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22100
+					add_idea = CLM_columbian_middleman_23100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22110 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22110
+					add_idea = CLM_columbian_middleman_23110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22200
+					add_idea = CLM_columbian_middleman_23200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22210 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22210
+					add_idea = CLM_columbian_middleman_23210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22300
+					add_idea = CLM_columbian_middleman_23300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22310 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22310
+					add_idea = CLM_columbian_middleman_23310
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_02000
+						add_idea = CLM_columbian_middleman_03000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_seamless_integration
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		x = 11
+		y = 11
+		cost = 4
+
+		prerequisite = { focus = CLM_modern_cities }
+		prerequisite = { focus = CLM_helicopter_money }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_5030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5030
+					add_idea = CLM_sweat_and_mud_5031
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5130 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5130
+					add_idea = CLM_sweat_and_mud_5131
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5230 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5230
+					add_idea = CLM_sweat_and_mud_5231
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5330 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5330
+					add_idea = CLM_sweat_and_mud_5331
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5430 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5430
+					add_idea = CLM_sweat_and_mud_5431
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_5030
+						add_idea = CLM_sweat_and_mud_5031
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_23010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23010
+					add_idea = CLM_columbian_middleman_23011
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23110 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23110
+					add_idea = CLM_columbian_middleman_23111
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23210 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23210
+					add_idea = CLM_columbian_middleman_23211
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23310 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23310
+					add_idea = CLM_columbian_middleman_23311
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_23010
+						add_idea = CLM_columbian_middleman_23011
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_finding_the_ghosts
+		icon = GFX_focus_CHI_planned_economy
+		x = 16
+		y = 8
+		cost = 2
+
+		prerequisite = { focus = CLM_the_trimounts_institute_of_technology }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3100
+					add_idea = CLM_sweat_and_mud_3200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3110
+					add_idea = CLM_sweat_and_mud_3210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3120
+					add_idea = CLM_sweat_and_mud_3220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3130 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3130
+					add_idea = CLM_sweat_and_mud_3230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4100
+					add_idea = CLM_sweat_and_mud_4200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4110
+					add_idea = CLM_sweat_and_mud_4210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4120
+					add_idea = CLM_sweat_and_mud_4220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4130 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4130
+					add_idea = CLM_sweat_and_mud_4230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5100
+					add_idea = CLM_sweat_and_mud_5200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5110
+					add_idea = CLM_sweat_and_mud_5210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5120
+					add_idea = CLM_sweat_and_mud_5220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5130 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5130
+					add_idea = CLM_sweat_and_mud_5230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5131 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5131
+					add_idea = CLM_sweat_and_mud_5231
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_3100
+						add_idea = CLM_sweat_and_mud_3200
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_01100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01100
+					add_idea = CLM_columbian_middleman_01200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02100
+					add_idea = CLM_columbian_middleman_02200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03100
+					add_idea = CLM_columbian_middleman_03200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11100
+					add_idea = CLM_columbian_middleman_11200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12100
+					add_idea = CLM_columbian_middleman_12200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13100
+					add_idea = CLM_columbian_middleman_13200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21100
+					add_idea = CLM_columbian_middleman_21200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21110 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21110
+					add_idea = CLM_columbian_middleman_21210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22100
+					add_idea = CLM_columbian_middleman_22200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22110 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22110
+					add_idea = CLM_columbian_middleman_22210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23100
+					add_idea = CLM_columbian_middleman_23200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23110 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23110
+					add_idea = CLM_columbian_middleman_23210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23111 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23111
+					add_idea = CLM_columbian_middleman_23211
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_01100
+						add_idea = CLM_columbian_middleman_01200
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_final_push_to_industrialisation
+		icon = GFX_focus_AFG_a_modern_economy
+		x = 14
+		y = 12
+		cost = 20
+		cancelable = no
+
+		prerequisite = { focus = CLM_modern_cities }
+		prerequisite = { focus = CLM_the_mighty_columbian_dollar }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			158 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 100000
+			}
+			157 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 100000
+			}
+			160 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 100000
+			}
+			155 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 100000
+			}
+			162 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			163 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			161 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			CLM_electoral_unlock_new_calidon = yes
+		}
+	}
+
+	focus = {
+		id = CLM_modern_construction_methods
+		icon = GFX_focus_NORDIC_dem_selector_civilian
+		x = 13
+		y = 8
+		cost = 4
+
+		prerequisite = { focus = CLM_maintenance_is_not_optional }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_4000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4000
+					add_idea = CLM_sweat_and_mud_5000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4010
+					add_idea = CLM_sweat_and_mud_5010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4020
+					add_idea = CLM_sweat_and_mud_5020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4030
+					add_idea = CLM_sweat_and_mud_5030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4100 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4100
+					add_idea = CLM_sweat_and_mud_5100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4110 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4110
+					add_idea = CLM_sweat_and_mud_5110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4120
+					add_idea = CLM_sweat_and_mud_5120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4130 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4130
+					add_idea = CLM_sweat_and_mud_5130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4200
+					add_idea = CLM_sweat_and_mud_5200
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4210
+					add_idea = CLM_sweat_and_mud_5210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4220
+					add_idea = CLM_sweat_and_mud_5220
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4230 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4230
+					add_idea = CLM_sweat_and_mud_5230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4300
+					add_idea = CLM_sweat_and_mud_5300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4310
+					add_idea = CLM_sweat_and_mud_5310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4320
+					add_idea = CLM_sweat_and_mud_5320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4330 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4330
+					add_idea = CLM_sweat_and_mud_5330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4400 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4400
+					add_idea = CLM_sweat_and_mud_5400
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4410 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4410
+					add_idea = CLM_sweat_and_mud_5410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4420 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4420
+					add_idea = CLM_sweat_and_mud_5420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4430 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4430
+					add_idea = CLM_sweat_and_mud_5430
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_4000
+						add_idea = CLM_sweat_and_mud_5000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_time_to_open_up_the_markets
+		icon = GFX_focus_INS_prioritize_dutch_companies
+		x = 12
+		y = 13
+		cost = 5
+
+		prerequisite = { focus = CLM_final_push_to_industrialisation }
+		prerequisite = { focus = CLM_seamless_integration }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_23311 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23311
+					add_idea = CLM_columbian_middleman_o
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_23311
+						add_idea = CLM_columbian_middleman_o
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_president_is_watching
+		icon = GFX_focus_ARG_anti_corruption_policies
+		x = 16
+		y = 9
+		cost = 2
+
+		prerequisite = { focus = CLM_finding_the_ghosts }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3200
+					add_idea = CLM_sweat_and_mud_3300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3210
+					add_idea = CLM_sweat_and_mud_3310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3220
+					add_idea = CLM_sweat_and_mud_3320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3230 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3230
+					add_idea = CLM_sweat_and_mud_3330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4200
+					add_idea = CLM_sweat_and_mud_4300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4210
+					add_idea = CLM_sweat_and_mud_4310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4220
+					add_idea = CLM_sweat_and_mud_4320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4230 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4230
+					add_idea = CLM_sweat_and_mud_4330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5200 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5200
+					add_idea = CLM_sweat_and_mud_5300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5210 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5210
+					add_idea = CLM_sweat_and_mud_5310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5220
+					add_idea = CLM_sweat_and_mud_5320
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5230 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5230
+					add_idea = CLM_sweat_and_mud_5330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5231 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5231
+					add_idea = CLM_sweat_and_mud_5331
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_3200
+						add_idea = CLM_sweat_and_mud_3300
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_01200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01200
+					add_idea = CLM_columbian_middleman_01300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02200
+					add_idea = CLM_columbian_middleman_02300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03200
+					add_idea = CLM_columbian_middleman_03300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11200
+					add_idea = CLM_columbian_middleman_11300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12200
+					add_idea = CLM_columbian_middleman_12300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13200
+					add_idea = CLM_columbian_middleman_13300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21200
+					add_idea = CLM_columbian_middleman_21300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21210 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21210
+					add_idea = CLM_columbian_middleman_21310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22200
+					add_idea = CLM_columbian_middleman_22300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22210 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22210
+					add_idea = CLM_columbian_middleman_22310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23200
+					add_idea = CLM_columbian_middleman_23300
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23210 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23210
+					add_idea = CLM_columbian_middleman_23310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23211 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23211
+					add_idea = CLM_columbian_middleman_23311
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_01200
+						add_idea = CLM_columbian_middleman_01300
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_mighty_columbian_dollar
+		icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+		x = 16
+		y = 10
+		cost = 2
+
+		prerequisite = { focus = CLM_the_president_is_watching }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3300
+					add_idea = CLM_sweat_and_mud_3400
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3310
+					add_idea = CLM_sweat_and_mud_3410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3320
+					add_idea = CLM_sweat_and_mud_3420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3330 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3330
+					add_idea = CLM_sweat_and_mud_3430
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4300
+					add_idea = CLM_sweat_and_mud_4400
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4310
+					add_idea = CLM_sweat_and_mud_4410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4320
+					add_idea = CLM_sweat_and_mud_4420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4330 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4330
+					add_idea = CLM_sweat_and_mud_4430
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5300 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5300
+					add_idea = CLM_sweat_and_mud_5400
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5310 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5310
+					add_idea = CLM_sweat_and_mud_5410
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5320
+					add_idea = CLM_sweat_and_mud_5420
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5330 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5330
+					add_idea = CLM_sweat_and_mud_5430
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5331 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5331
+					add_idea = CLM_sweat_and_mud_5431
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_3300
+						add_idea = CLM_sweat_and_mud_3400
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_helicopter_money
+		icon = GFX_focus_AST_liberty_loans
+		x = 11
+		y = 9
+		cost = 2
+
+		prerequisite = { focus = CLM_the_engine_of_the_economy }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_0020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0020
+					add_idea = CLM_sweat_and_mud_0030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1020
+					add_idea = CLM_sweat_and_mud_1030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2020
+					add_idea = CLM_sweat_and_mud_2030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3020
+					add_idea = CLM_sweat_and_mud_3030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3120
+					add_idea = CLM_sweat_and_mud_3130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3220
+					add_idea = CLM_sweat_and_mud_3230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3320
+					add_idea = CLM_sweat_and_mud_3330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3420 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3420
+					add_idea = CLM_sweat_and_mud_3430
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4020
+					add_idea = CLM_sweat_and_mud_4030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4120
+					add_idea = CLM_sweat_and_mud_4130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4220
+					add_idea = CLM_sweat_and_mud_4230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4320
+					add_idea = CLM_sweat_and_mud_4330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4420 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4420
+					add_idea = CLM_sweat_and_mud_4430
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5020
+					add_idea = CLM_sweat_and_mud_5030
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5120 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5120
+					add_idea = CLM_sweat_and_mud_5130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5220 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5220
+					add_idea = CLM_sweat_and_mud_5230
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5320 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5320
+					add_idea = CLM_sweat_and_mud_5330
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5420 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5420
+					add_idea = CLM_sweat_and_mud_5430
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_0020
+						add_idea = CLM_sweat_and_mud_0030
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_20000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_20000
+					add_idea = CLM_columbian_middleman_20010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21000
+					add_idea = CLM_columbian_middleman_21010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21100
+					add_idea = CLM_columbian_middleman_21110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21200
+					add_idea = CLM_columbian_middleman_21210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21300
+					add_idea = CLM_columbian_middleman_21310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22000
+					add_idea = CLM_columbian_middleman_22010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22100
+					add_idea = CLM_columbian_middleman_22110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22200
+					add_idea = CLM_columbian_middleman_22210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22300
+					add_idea = CLM_columbian_middleman_22310
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23000
+					add_idea = CLM_columbian_middleman_23010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23100 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23100
+					add_idea = CLM_columbian_middleman_23110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23200 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23200
+					add_idea = CLM_columbian_middleman_23210
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23300 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23300
+					add_idea = CLM_columbian_middleman_23310
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_20000
+						add_idea = CLM_columbian_middleman_20010
+					}
+				}
+			}
 		}
 	}
 }
