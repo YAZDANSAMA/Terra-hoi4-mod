@@ -1,0 +1,215 @@
+CLM_raythean_infantry_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_CLM_raythean
+
+	allowed = {
+		original_tag = CLM
+	}
+}
+
+CLM_raythean_tank_organization = {
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_CLM_raythean
+
+	allowed = {
+		original_tag = CLM
+	}
+	add_trait = {
+		token = SOV_mio_trait_merge_plant_no_174
+		name = SOV_merge_tank_plant
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+		position = { x=9 y=2 }
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+		available = {
+			FROM = {
+				has_full_control_of_state = 195
+			}
+			FROM = {
+				has_completed_focus = SOV_merge_tank_and_materiel_plants
+			}
+			FROM = {
+				NOT = { has_country_flag = SOV_merge_plant_no_174_flag }
+			}
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = SOV_merge_plant_no_174_flag
+			}
+		}
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+	add_trait = {
+		token = SOV_mio_trait_merge_plant_no_112
+		name = SOV_merge_tank_plant_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+		position = { x=9 y=3 }
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+		available = {
+			FROM = {
+				has_full_control_of_state = 252
+			}
+			FROM = {
+				has_completed_focus = SOV_merge_tank_and_materiel_plants
+			}
+			FROM = {
+				NOT = { has_country_flag = SOV_merge_plant_no_112_flag }
+			}
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = SOV_merge_plant_no_112_flag
+			}
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	add_trait = {
+		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
+		name = SOV_merge_tank_plant_3
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		special_trait_background = yes
+		position = { x=9 y=4 }
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+		available = {
+			FROM = {
+				has_full_control_of_state = 653
+			}
+			FROM = {
+				has_completed_focus = SOV_merge_tank_and_materiel_plants
+			}
+			FROM = {
+				NOT = { has_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag }
+			}
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
+			}
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+}
+
+CLM_raythean_aircraft_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_CLM_raythean
+
+	allowed = {
+		original_tag = CLM
+	}
+	equipment_type = {
+		mio_cat_eq_all_small_plane
+		maritime_patrol_plane
+	}
+	research_categories = {
+		mio_cat_all_light_fighter_and_modules
+	}
+	override_trait = {
+		token = generic_mio_trait_fuel_injection_engines
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_bigger_engines
+	}
+	override_trait = {
+		token = generic_mio_trait_high_octane_fuels
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_bigger_engines
+	}
+	override_trait = {
+		token = generic_mio_trait_subsidiary_suppliers
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_fuel_injection_engines
+	}
+	add_trait = {
+		token = ENG_mio_trait_seaplane_origins
+		name = ENG_mio_trait_seaplane_origins
+		icon = GFX_generic_mio_trait_icon_detection
+		special_trait_background = yes
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_minimum_weapon_requirements
+		limit_to_equipment_type = { mio_cat_eq_all_small_plane maritime_patrol_plane }
+		equipment_bonus = {
+			sub_detection = 0.05
+			surface_detection = 0.05
+			naval_strike_targetting = 0.1
+		}
+	}
+	add_trait = {
+		token = ENG_mio_trait_elliptical_wings
+		name = ENG_mio_trait_elliptical_wings
+		icon = GFX_generic_mio_trait_icon_defense
+		special_trait_background = yes
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_cantilever_wing_structure
+		any_parent = { generic_mio_trait_cantilever_wing_structure }
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+	add_trait = {
+		token = ENG_mio_trait_supercharger
+		name = ENG_mio_trait_supercharger
+		icon = GFX_generic_mio_trait_icon_defense
+		special_trait_background = yes
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_fuel_injection_engines
+		all_parents = { generic_mio_trait_fuel_injection_engines generic_mio_trait_high_octane_fuels }
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+}
+
+CLM_raythean_ships_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_CLM_raythean
+
+	allowed = {
+		original_tag = CLM
+	}
+	override_trait = {
+		token = generic_mio_trait_underway_replenishment_equipment
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_transom_stern
+	}
+	add_trait = {
+		token = ENG_mio_trait_flared_bow
+		name = ENG_mio_trait_flared_bow
+		icon = GFX_generic_mio_department_icon_ship_general_quality
+		special_trait_background = yes
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_underway_replenishment_equipment
+		any_parent = { generic_mio_trait_splinter_protection }
+		equipment_bonus = {
+			naval_weather_penalty_factor = -0.1
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_semi_armor_piercing_shells
+		name = generic_mio_trait_semi_armor_piercing_shells
+		icon = GFX_generic_mio_trait_icon_lg_attack
+		special_trait_background = yes
+		any_parent = { generic_mio_trait_secondary_fire_director_control }
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_secondary_fire_director_control
+		equipment_bonus = {
+			lg_attack = 0.05
+			lg_armor_piercing = 0.05
+		}
+	}
+}

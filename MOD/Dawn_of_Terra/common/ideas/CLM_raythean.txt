@@ -1,0 +1,41 @@
+ideas = {
+	industrial_concern = {
+		CLM_raythean = {
+			picture = CLM_raythean
+
+			allowed = {
+				original_tag = CLM
+			}
+
+			available = {
+				mio:CLM_raythean_infantry_organization = {
+					has_mio_size > 4
+				}
+				mio:CLM_raythean_tank_organization = {
+					has_mio_size > 4
+				}
+				mio:CLM_raythean_aircraft_organization = {
+					has_mio_size > 4
+				}
+				mio:CLM_raythean_ships_organization = {
+					has_mio_size > 4
+				}
+			}
+
+			modifier = {
+				political_power_gain = -0.15
+				production_speed_arms_factory_factor = 0.25
+				production_factory_max_efficiency_factor = 0.15
+				min_export = 0.25
+				war_support_factor = 0.1
+				stability_factor = -0.1
+			}
+
+			research_bonus = {
+				industry = 0.25
+			}
+
+			cost = 250
+		}
+	}
+}
