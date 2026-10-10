@@ -4339,4 +4339,20 @@ focus_tree = {
 			}
 		}
 	}
+
+ focus = {
+  id = CLM_secure_the_siesta_frontier
+  icon = GFX_goal_generic_territory_or_war
+  x = 0
+  y = 7
+  cost = 5
+  prerequisite = { focus = CLM_manifest_destiny }
+  available = { country_exists = SST SST = { is_subject = no } NOT = { has_war_with = SST } }
+  bypass = { NOT = { country_exists = SST } }
+  ai_will_do = { factor = 1 }
+  completion_reward = {
+   set_country_flag = CLM_siesta_frontier_authorized
+   create_wargoal = { type = annex_everything target = SST }
+  }
+ }
 }

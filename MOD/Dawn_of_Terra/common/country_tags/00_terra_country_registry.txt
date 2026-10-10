@@ -1,3 +1,32 @@
+dynamic_tags = no
+AGI = "countries/Terra_Aegir.txt"
+BLV = "countries/Terra_Bolivar.txt"
+CLM = "countries/Terra_Columbia.txt"
+HGS = "countries/Terra_Higashi.txt"
+HGN = "countries/Terra_North_Higashi.txt"
+HSS = "countries/Terra_South_Higashi.txt"
+IBR = "countries/Terra_Iberia.txt"
+KJG = "countries/Terra_Kjerag.txt"
+KZM = "countries/Terra_Kazimierz.txt"
+KZD = "countries/Terra_Kazdel.txt"
+LTR = "countries/Terra_Laterano.txt"
+LTH = "countries/Terra_Leithanien.txt"
+MNS = "countries/Terra_Minos.txt"
+RMB = "countries/Terra_Rim_Billiton.txt"
+SMN = "countries/Terra_Sami.txt"
+SGN = "countries/Terra_Sargon.txt"
+SST = "countries/Terra_Siesta.txt"
+SRC = "countries/Terra_Siracusa.txt"
+URS = "countries/Terra_Ursus.txt"
+VCT = "countries/Terra_Victoria.txt"
+YAN = "countries/Terra_Yan.txt"
+TRR = "countries/Terra_Tara.txt"
+LGL = "countries/Terra_Gaul.txt"
+
+VVA = "countries/Terra_Vouivre_Alliance.txt"
+TNJ = "countries/Terra_Ta_Netjer.txt"
+MSN = "countries/Terra_Sargonian_Minos.txt"
+
 # Dynamic country pool required by HOI4 flag atlases and civil-war systems.
 # The Terra mod replaces common/country_tags, so the vanilla dynamic pool must be restored.
 dynamic_tags = yes

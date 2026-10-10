@@ -1,0 +1,5 @@
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+ custom_trigger_tooltip = { tooltip = TERRA_SST_NO_GOVERNMENT NOT = { tag = SST } FROM = { NOT = { tag = SST } } }
+ if = { limit = { has_game_rule = { rule = allow_guarantees option = SAME_IDEOLOGY } } custom_trigger_tooltip = { tooltip = RULE_ALLOW_GUARANTEES_SAME_IDEOLOGY_TOOLTIP has_government = FROM } }
+ if = { limit = { has_game_rule = { rule = allow_guarantees option = BLOCKED } } custom_trigger_tooltip = { tooltip = RULE_ALLOW_GUARANTEES_BLOCKED_TOOLTIP always = no } }
+}
