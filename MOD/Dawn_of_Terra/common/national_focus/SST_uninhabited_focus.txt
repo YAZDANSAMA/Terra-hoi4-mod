@@ -1,0 +1,15 @@
+focus_tree = {
+ id = SST_uninhabited_focus
+ country = { factor = 0 modifier = { add = 100 tag = SST } }
+ default = no
+ focus = {
+  id = SST_no_settlements
+  icon = GFX_goal_generic_construct_civ_factory
+  x = 0
+  y = 0
+  cost = 1
+  available = { always = no }
+  ai_will_do = { factor = 0 }
+  completion_reward = { }
+ }
+}

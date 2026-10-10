@@ -1,0 +1,30 @@
+characters = {
+HGN_interim_leader = {
+        name = HGN_interim_leader
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+HSS_interim_leader = {
+        name = HSS_interim_leader
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+}

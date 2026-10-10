@@ -16,10 +16,7 @@ CLM = {
     color_ui = rgb { 42 79 225 }
 }
 
-HGS = {
-    color = rgb { 141 56 44 }
-    color_ui = rgb { 141 56 44 }
-}
+HGS = { color = rgb { 200 50 50 } color_ui = rgb { 200 50 50 } }
 
 IBR = {
     color = rgb { 49 125 124 }
@@ -81,10 +78,7 @@ SRC = {
     color_ui = rgb { 214 200 121 }
 }
 
-SST = {
-    color = rgb { 42 109 201 }
-    color_ui = rgb { 42 109 201 }
-}
+SST = { color = rgb { 100 100 100 } color_ui = rgb { 100 100 100 } }
 
 TRR = {
     color = rgb { 62 110 130 }
@@ -104,4 +98,23 @@ VCT = {
 YAN = {
     color = rgb { 200 184 46 }
     color_ui = rgb { 200 184 46 }
+}
+
+HGN = { color = rgb { 82 127 168 } color_ui = rgb { 82 127 168 } }
+
+HSS = { color = rgb { 233 131 145 } color_ui = rgb { 233 131 145 } }
+
+VVA = {
+    color = rgb { 245 74 68 }
+    color_ui = rgb { 245 74 68 }
+}
+
+TNJ = {
+    color = rgb { 213 183 95 }
+    color_ui = rgb { 213 183 95 }
+}
+
+MSN = {
+    color = rgb { 154 108 56 }
+    color_ui = rgb { 154 108 56 }
 }

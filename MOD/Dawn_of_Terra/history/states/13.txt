@@ -1,7 +1,7 @@
 state = {
 	id = 13
 	name = "STATE_13"
-	manpower = 6121439
+	manpower = 6190729
 	state_category = metropolis
 
 	resources = {
@@ -11,7 +11,8 @@ state = {
 
 	history = {
 		victory_points = { 222 80 }
-		owner = HGS
+		owner = HSS
+		add_core_of = HSS
 		add_core_of = HGS
 		buildings = {
 			infrastructure = 1

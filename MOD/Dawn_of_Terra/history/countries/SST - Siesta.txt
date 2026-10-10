@@ -1,22 +1,5 @@
-# Boot-safe minimal history for Siesta
 capital = 164
-
-
-
-oob = "SST_1028"
-set_technology = {
-    infantry_weapons = 1
-	basic_train = 1
-}
-recruit_character = SST_interim_leader
-set_politics = {
-    ruling_party = social_democracy
-    elections_allowed = no
-}
-
-set_popularities = {
-    social_democracy = 100
-}
-
-# Starting transport for the connected 1028 supply network.
-add_equipment_to_stockpile = { type = train_equipment_1 amount = 38 producer = SST }
+set_politics = { ruling_party = monarchism elections_allowed = no }
+set_popularities = { monarchism = 100 }
+set_country_flag = TERRA_uninhabited_territory
+set_rule = { can_not_declare_war = yes can_join_factions = no can_create_factions = no can_send_volunteers = no }

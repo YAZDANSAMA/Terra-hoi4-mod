@@ -1,0 +1,58 @@
+characters = {
+    SGN_babak_i = {
+        name = SGN_babak_i
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+    VVA_interim_khatun = {
+        name = VVA_interim_khatun
+        gender = female
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_female.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+    TNJ_interim_leader = {
+        name = TNJ_interim_leader
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+    MSN_sargonian_governor = {
+        name = MSN_sargonian_governor
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+}
