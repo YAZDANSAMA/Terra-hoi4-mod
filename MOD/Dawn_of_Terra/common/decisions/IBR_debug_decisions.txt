@@ -1,0 +1,57 @@
+IBR_debug_category = {
+	IBR_debug_summon_profound_silence = {
+		priority = 100
+
+		icon = GFX_decision_generic_assassination
+
+		allowed = {
+			original_tag = IBR
+		}
+
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		available = {
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			terra_cover_remove_all = yes
+		}
+	}
+
+	IBR_debug_revert_profound_silence = {
+		priority = 99
+
+		icon = GFX_decision_generic_assassination
+
+		allowed = {
+			original_tag = IBR
+		}
+
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		available = {
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			terra_cover_restore = yes
+		}
+	}
+}

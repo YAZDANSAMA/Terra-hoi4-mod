@@ -1,0 +1,10 @@
+terra_cover_remove_all = {
+	253 = {
+		set_building_level = { type = terra_cover_all level = 0 province = 10719 instant_build = yes }
+	}
+}
+terra_cover_restore = {
+	253 = {
+		set_building_level = { type = terra_cover_all level = 1 province = 10719 instant_build = yes }
+	}
+}

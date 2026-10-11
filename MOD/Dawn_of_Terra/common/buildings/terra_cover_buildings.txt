@@ -1,0 +1,13 @@
+buildings = {
+
+	terra_cover_all = {
+		show_on_map = 1
+		only_display_if_exists = yes
+		base_cost = 100
+		icon_frame = 7
+		value = 1
+		level_cap = {
+			province_max = 1
+		}
+	}
+}

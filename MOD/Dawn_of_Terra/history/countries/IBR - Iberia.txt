@@ -22,3 +22,12 @@ set_popularities = {
 # Starting transport for the connected 1028 supply network.
 add_equipment_to_stockpile = { type = train_equipment_1 amount = 373 producer = IBR }
 set_convoys = 300
+
+SEA = {
+	give_military_access = IBR
+}
+
+set_autonomy = {
+	target = SEA
+	autonomous_state = autonomy_puppet
+}

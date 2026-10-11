@@ -1,0 +1,17 @@
+state = {
+	id = 252
+	name = "STATE_252"
+	manpower = 1
+	state_category = wasteland
+
+	history = {
+		owner = SEA
+		add_core_of = IBR
+		add_core_of = SEA
+	}
+
+	provinces = {
+		8796 8797 8798 8799 8800 8801 8802 8804 8805 8808 8809 8810 8812 9105 9123 9124 9125 9126 9127 9128
+		9129 9130 9131 9132 9133 9226 9227 9228 9229 9230
+	}
+}

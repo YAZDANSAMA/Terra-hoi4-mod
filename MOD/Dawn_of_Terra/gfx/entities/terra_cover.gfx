@@ -1,0 +1,8 @@
+objectTypes = {
+	pdxmesh = {
+		name = "terra_cover_all_mesh"
+		file = "gfx/models/terra_cover/terra_cover_all.mesh"
+		scale = 1.0
+		cull_distance = 999999.0
+	}
+}
