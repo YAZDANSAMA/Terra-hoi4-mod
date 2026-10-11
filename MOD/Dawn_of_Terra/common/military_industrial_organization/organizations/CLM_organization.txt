@@ -1,6 +1,6 @@
 CLM_harrington_and_haraldson_organization = {
 	include = generic_infantry_equipment_organization
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	icon = GFX_idea_CLM_harrington_and_haraldson
 
 	allowed = {
 		original_tag = CLM
@@ -9,7 +9,7 @@ CLM_harrington_and_haraldson_organization = {
 
 CLM_fletcher_repeating_rifle_organization = {
 	include = generic_infantry_equipment_organization
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	icon = GFX_idea_CLM_fletcher_repeating_rifle
 
 	allowed = {
 		original_tag = CLM
@@ -18,7 +18,7 @@ CLM_fletcher_repeating_rifle_organization = {
 
 CLM_dribbs_seafury_organization = {
 	include = generic_artillery_organization
-	icon = GFX_idea_generic_artillery_manufacturer_2
+	icon = GFX_idea_CLM_dribbs_seafury
 
 	allowed = {
 		original_tag = CLM
@@ -27,7 +27,7 @@ CLM_dribbs_seafury_organization = {
 
 CLM_columbian_ordnance_organization = {
 	include = generic_artillery_organization
-	icon = GFX_idea_generic_artillery_manufacturer_2
+	icon = GFX_idea_CLM_columbian_ordnance
 
 	allowed = {
 		original_tag = CLM
