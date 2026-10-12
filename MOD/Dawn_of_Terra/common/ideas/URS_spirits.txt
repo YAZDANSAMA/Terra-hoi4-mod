@@ -26,6 +26,7 @@ ideas = {
             removal_cost = -1
             modifier = {
                 stability_factor = 0.08
+                war_support_factor = 0.07
                 political_power_factor = 0.05
                 drift_defence_factor = 0.10
             }
@@ -41,17 +42,6 @@ ideas = {
             }
         }
 
-        URS_marshals_armies = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                army_org_factor = 0.05
-                command_power_gain_mult = 0.10
-                political_power_factor = -0.05
-                stability_factor = -0.03
-            }
-        }
-
         URS_blocked_from_heartland = {
             picture = generic_production_bonus
             removal_cost = -1
@@ -62,16 +52,163 @@ ideas = {
             }
         }
 
-        # Defined from 1028, but intentionally NOT granted at game start.
-        # The 1030 Ursus focus branch grants this spirit.
-        URS_southern_ambitions = {
+        URS_kazdel_arts_attache_1 = {
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
-                war_support_factor = 0.10
-                planning_speed = 0.10
-                justify_war_goal_time = -0.05
+                army_attack_factor = 0.07
+                army_org_factor = -0.03
             }
         }
+        URS_kazdel_arts_attache_2 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.085
+                army_org_factor = -0.1
+                breakthrough_factor = 0.08
+                army_speed_factor = 0.075
+                experience_loss_factor = -0.05
+            }
+        }
+        URS_kazdel_arts_attache_3 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.1
+                army_org_factor = -0.1
+                breakthrough_factor = 0.08
+                army_speed_factor = 0.1
+                experience_loss_factor = -0.05
+                army_org_regain = 0.05
+                acclimatization_cold_climate_gain_factor = 0.1
+            }
+        }
+
+        URS_infantry_priority_1 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_infantry_attack_factor = 0.05
+                recruitable_population_factor = 0.05
+            }
+        }
+        URS_infantry_priority_2 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_infantry_attack_factor = 0.05
+                recruitable_population_factor = 0.05
+                winter_attrition_factor = -0.1
+                acclimatization_cold_climate_gain_factor = 0.08
+                supply_consumption_factor = -0.1
+                training_time_army_factor = 0.05
+            }
+        }
+        URS_infantry_priority_3 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_infantry_attack_factor = 0.15
+                recruitable_population_factor = 0.15
+                weekly_manpower = 250
+                winter_attrition_factor = -0.1
+                acclimatization_cold_climate_gain_factor = 0.08
+                supply_consumption_factor = -0.1
+                training_time_army_factor = 0.05
+                army_org_regain = -0.085
+            }
+        }
+
+        URS_infantry_priority_1 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_infantry_attack_factor = 0.05
+                recruitable_population_factor = 0.05
+            }
+        }
+        URS_infantry_priority_2 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_infantry_attack_factor = 0.05
+                recruitable_population_factor = 0.05
+                winter_attrition_factor = -0.1
+                acclimatization_cold_climate_gain_factor = 0.08
+                supply_consumption_factor = -0.1
+                training_time_army_factor = 0.05
+            }
+        }
+        URS_infantry_priority_3 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_infantry_attack_factor = 0.15
+                recruitable_population_factor = 0.15
+                weekly_manpower = 250
+                winter_attrition_factor = -0.1
+                acclimatization_cold_climate_gain_factor = 0.08
+                supply_consumption_factor = -0.1
+                training_time_army_factor = 0.05
+                army_org_regain = -0.085
+            }
+        }
+
+        URS_marshals_armies_1 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.05
+                political_power_factor = -0.05
+                max_planning_factor = 0.05
+            }
+        }
+        URS_marshals_armies_2 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.05
+                command_power_gain_mult = 0.10
+                political_power_factor = -0.05
+                max_planning_factor = 0.15
+                planning_speed = 0.1
+                coordination_bonus = 0.04
+            }
+        }
+        URS_purge_the_blight_idea = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            on_remove = {
+                add_command_power = 100
+                swap_ideas = {
+                    remove_idea = URS_marshals_armies_1
+                    add_idea = URS_marshals_armies_2
+                }
+            }
+
+            modifier = {
+                army_org_factor = -0.5
+                command_power_gain_mult = -0.25
+                experience_gain_army_factor = -0.25
+                training_time_factor = 0.5
+            }
+        }
+        URS_marshals_armies_3 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.05
+                command_power_gain_mult = 0.10
+                political_power_factor = -0.05
+                max_planning_factor = 0.15
+                planning_speed = 0.1
+                coordination_bonus = 0.04
+                experience_loss_factor = -0.05
+                promote_cost_factor = -0.25
+                initiative_factor = 0.15
+            }
+        }
+        
     }
 }
