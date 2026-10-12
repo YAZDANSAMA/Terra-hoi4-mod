@@ -332,4 +332,93 @@ characters = {
             traits = { CLM_president_of_columbia }
         }
     }
+
+    CLM_charles_fergusson = {
+        name = CLM_charles_fergusson
+        gender = male
+        portraits = {
+            civilian = {
+                small = "GFX_idea_generic_political_advisor_europe_1"
+            }
+        }
+        advisor = {
+            slot = cabinet_internal_affairs
+            idea_token = CLM_charles_fergusson
+            can_be_fired = no
+            allowed = {
+                original_tag = CLM
+            }
+            available = {
+                has_country_flag = CLM_charles_fergusson_unlocked
+            }
+            traits = { }
+        }
+    }
+
+    CLM_enrique_dubois = {
+        name = CLM_enrique_dubois
+        gender = male
+        portraits = {
+            civilian = {
+                small = "GFX_idea_generic_political_advisor_europe_2"
+            }
+        }
+        advisor = {
+            slot = cabinet_internal_affairs
+            idea_token = CLM_enrique_dubois
+            can_be_fired = no
+            allowed = {
+                original_tag = CLM
+            }
+            available = {
+                has_country_flag = CLM_enrique_dubois_unlocked
+            }
+            traits = { }
+        }
+    }
+
+    CLM_sonia_bagration = {
+        name = CLM_sonia_bagration
+        gender = female
+        portraits = {
+            civilian = {
+                small = "GFX_idea_generic_army_chief_off_eastern_european_2d"
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = CLM_sonia_bagration
+            ledger = army
+            allowed = {
+                original_tag = CLM
+            }
+            available = {
+                has_country_flag = CLM_sonia_bagration_unlocked
+            }
+            traits = { CLM_special_forces_specialist }
+            cost = 100
+        }
+    }
+
+    CLM_klaus_hensch = {
+        name = CLM_klaus_hensch
+        gender = male
+        portraits = {
+            civilian = {
+                small = "GFX_idea_generic_political_advisor_europe_3"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = CLM_klaus_hensch
+            allowed = {
+                original_tag = CLM
+            }
+            available = {
+                has_country_flag = CLM_klaus_hensch_unlocked
+            }
+            traits = { CLM_intelligence_specialist }
+            cost = 100
+        }
+    }
 }
