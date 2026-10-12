@@ -20,9 +20,6 @@ focus_tree = {
 
 		     icon = GFX_goal_generic_major_war
 
-
-
-
 		     available = {
 		     	LGL = {
 			has_war_with = LTH
@@ -50,12 +47,6 @@ focus_tree = {
 
 		icon = GFX_goal_generic_army_doctrines
 
-
-
-
-
-
-
 		ai_will_do = {
 		    factor = 1
 		}
@@ -65,15 +56,12 @@ focus_tree = {
 		}
 	}
 
-    
-
-    
 
 	focus = {
 		id = URS_military_start
 		x = -18
 		y = 0
-		cost = 10
+		cost = 2
 
 		icon = GFX_goal_generic_construct_civ_factory
 
@@ -86,12 +74,12 @@ focus_tree = {
 		id = URS_start
 		x = 2
 		y = 0
-		cost = 10
+		cost = 1
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			add_political_power = 100
 		}
 	}
 
@@ -99,7 +87,7 @@ focus_tree = {
 		id = URS_economic_start
 		x = 32
 		y = 0
-		cost = 10
+		cost = 1
 
 		icon = GFX_goal_generic_construct_civ_factory
 
@@ -113,7 +101,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = URS_military_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_military_start }
 		mutually_exclusive = { focus = URS_military_originium_1 }
@@ -129,8 +117,9 @@ focus_tree = {
 		id = URS_military_originium_1
 		x = -19
 		y = 1
-		cost = 10
+		cost = 4
 
+		prerequisite = { focus = URS_military_start }
 		mutually_exclusive = { focus = URS_military_arts_1 }
 
 		icon = GFX_goal_generic_construct_civ_factory
@@ -145,7 +134,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_military_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_military_start }
 		mutually_exclusive = { focus = URS_military_infantry_1 }
@@ -162,7 +151,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = URS_military_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_military_start }
 		mutually_exclusive = { focus = URS_military_officers_1 }
@@ -195,7 +184,7 @@ focus_tree = {
 		x = 10
 		y = 0
 		relative_position_id = URS_external_affairs
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_start }
 		mutually_exclusive = { focus = URS_rev_start }
@@ -212,7 +201,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = URS_start
-		cost = 10
+		cost = 3
 
 		prerequisite = { focus = URS_start }
 		mutually_exclusive = { focus = URS_imperial_start }
@@ -229,7 +218,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = URS_economic_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_start }
 		mutually_exclusive = { focus = URS_economic_command_start }
@@ -246,7 +235,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = URS_economic_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_start }
 		mutually_exclusive = { focus = URS_economic_market_start }
@@ -263,7 +252,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_military_arts_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_arts_1 }
 
@@ -279,7 +268,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_military_originium_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_originium_1 }
 
@@ -295,7 +284,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_military_officers_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_officers_1 }
 
@@ -311,7 +300,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_military_infantry_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_infantry_1 }
 
@@ -327,7 +316,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = URS_external_affairs
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_external_affairs }
 
@@ -343,7 +332,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = URS_external_affairs
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_external_affairs }
 
@@ -359,7 +348,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_imperial_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_start }
 		mutually_exclusive = { focus = URS_imperial_senate_1 }
@@ -376,7 +365,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = URS_imperial_tsar_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_start }
 		mutually_exclusive = { focus = URS_imperial_tsar_1 }
@@ -393,7 +382,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_rev_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_start }
 
@@ -406,10 +395,10 @@ focus_tree = {
 
 	focus = {
 		id = URS_rev_stu_1
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = URS_rev_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_start }
 
@@ -425,7 +414,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = URS_rev_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_rev_start }
 
@@ -441,7 +430,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_economic_market_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_market_start }
 
@@ -457,7 +446,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_economic_market_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_market_start }
 
@@ -489,7 +478,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_economic_command_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_economic_command_start }
 
@@ -505,7 +494,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_command_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_command_start }
 
@@ -521,7 +510,7 @@ focus_tree = {
 		x = -2
 		y = 3
 		relative_position_id = URS_military_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_originium_1 focus = URS_military_arts_1 }
 
@@ -537,7 +526,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = URS_military_tech
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_officers_2 focus = URS_military_infantry_2 }
 
@@ -553,7 +542,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_kazimierz_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_kazimierz_start }
 
@@ -569,7 +558,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_gaullei_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_gaullei_start }
 
@@ -585,7 +574,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_gaullei_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_gaullei_start }
 
@@ -601,7 +590,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_imperial_tsar_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_tsar_1 }
 
@@ -617,7 +606,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = URS_imperial_tsar_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_tsar_1 focus = URS_imperial_senate_1 }
 
@@ -633,7 +622,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_rev_work_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_rev_work_1 }
 
@@ -649,7 +638,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_rev_work_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_work_1 }
 
@@ -662,10 +651,10 @@ focus_tree = {
 
 	focus = {
 		id = URS_rev_stu_2
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = URS_rev_stu_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_stu_1 }
 
@@ -678,10 +667,10 @@ focus_tree = {
 
 	focus = {
 		id = URS_rev_stu_work
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = URS_rev_stu_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_rev_stu_1 }
 
@@ -697,7 +686,7 @@ focus_tree = {
 		x = 0
 		y = -1
 		relative_position_id = URS_hg_allies_1
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_hg_start }
 
@@ -713,7 +702,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_market_1a
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_market_1a }
 
@@ -729,7 +718,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_market_1b
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_economic_market_1b }
 
@@ -745,7 +734,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_economic_connect_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_economic_connect_1 }
 
@@ -761,7 +750,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_economic_connect_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_economic_connect_1 }
 
@@ -777,7 +766,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_command_mic_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_economic_command_mic_1 }
 
@@ -793,7 +782,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_command_diri_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_economic_command_diri_1 }
 
@@ -809,7 +798,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = URS_economic_command_diri_1
-		cost = 10
+		cost = 6
 
 		prerequisite = { focus = URS_economic_command_diri_1 }
 
@@ -825,7 +814,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_military_arts_2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_arts_2 }
 
@@ -841,7 +830,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_military_originium_2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_originium_2 }
 
@@ -857,7 +846,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_military_officers_2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_officers_2 }
 
@@ -873,7 +862,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_military_infantry_2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_military_infantry_2 }
 
@@ -889,9 +878,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_kazimierz_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_kazimierz_1 }
+		mutually_exclusive = { focus = URS_kazimierz_upper_right_1 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
@@ -905,9 +895,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_kazimierz_1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_kazimierz_1 }
+		mutually_exclusive = { focus = URS_kazimierz_upper_left }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
@@ -921,7 +912,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_gaul_pre_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_gaul_pre_1 }
 
@@ -937,7 +928,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_lei_pre_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_lei_pre_1 }
 
@@ -953,7 +944,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_imperial_tsar_2
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_imperial_tsar_2 }
 
@@ -969,7 +960,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_imperial_tsar_2
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_imperial_tsar_2 }
 
@@ -985,7 +976,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = URS_imperial_senate_1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_imperial_senate_1 }
 
@@ -1001,7 +992,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = URS_imperial_senate_1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_imperial_senate_1 }
 
@@ -1017,7 +1008,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_rev_work_2
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_rev_work_2 focus = URS_rev_stu_2 }
 
@@ -1033,7 +1024,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_rev_stu_2
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_rev_stu_2 focus = URS_rev_work_2 }
 
@@ -1049,7 +1040,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_rev_stu_2
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_rev_stu_2 focus = URS_rev_work_2 }
 
@@ -1065,7 +1056,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_hg_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_hg_1 }
 
@@ -1081,7 +1072,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_hg_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_hg_1 }
 
@@ -1097,7 +1088,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = URS_hg_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_hg_1 }
 
@@ -1129,7 +1120,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_economic_connect_2a
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_economic_connect_2a }
 
@@ -1162,7 +1153,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_command_mic_2
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_economic_command_mic_2 }
 
@@ -1178,7 +1169,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_command_diri_2
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_economic_command_diri_2 }
 
@@ -1194,7 +1185,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_command_agri_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_economic_command_agri_1 }
 
@@ -1230,7 +1221,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_kazimierz_upper_right_1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_kazimierz_upper_right_1 }
 
@@ -1246,7 +1237,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_imperial_tsar_3a
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_tsar_3a focus = URS_imperial_tsar_3b }
 
@@ -1262,7 +1253,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_imperial_senate_2l
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_imperial_senate_2l }
 
@@ -1278,7 +1269,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_imperial_senate_2r
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_imperial_senate_2r }
 
@@ -1294,7 +1285,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_rev_events_1
-		cost = 10
+		cost = 3
 
 		prerequisite = { focus = URS_rev_events_1 }
 		prerequisite = { focus = URS_rev_events_2 }
@@ -1313,7 +1304,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_rev_events_3
-		cost = 10
+		cost = 3
 
 		prerequisite = { focus = URS_rev_events_3 }
 		prerequisite = { focus = URS_rev_events_2 }
@@ -1332,7 +1323,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_hg_support_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_hg_support_1 }
 
@@ -1348,7 +1339,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_hg_support_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_hg_support_1 }
 
@@ -1364,7 +1355,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_hg_allies_1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_hg_allies_1 }
 
@@ -1380,7 +1371,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_hg_military_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_hg_military_1 }
 
@@ -1396,7 +1387,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_hg_military_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_hg_military_1 }
 
@@ -1412,7 +1403,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_economic_market_mid
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_economic_market_mid }
 
@@ -1428,7 +1419,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_economic_market_mid
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_economic_market_mid }
 
@@ -1476,7 +1467,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_gaullei_war_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_gaullei_war_start }
 		mutually_exclusive = { focus = URS_lei_war_1 focus = URS_gaullei_war_neutral_1 }
@@ -1510,7 +1501,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_imperial_tsar_4
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_tsar_4 }
 
@@ -1526,7 +1517,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = URS_imperial_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_imperial_1 }
 
@@ -1558,7 +1549,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_rev_work_3
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_work_3 }
 
@@ -1574,7 +1565,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_rev_stu_3
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_stu_3 }
 
@@ -1590,7 +1581,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_hg_support_2b
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_hg_support_2b focus = URS_hg_support_2a }
 
@@ -1606,7 +1597,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_hg_allies_1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_hg_allies_1 }
 
@@ -1622,7 +1613,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_hg_military_2a
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_hg_military_2a }
 
@@ -1638,7 +1629,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_hg_military_2b
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_hg_military_2b }
 
@@ -1654,7 +1645,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_economic_market_3a
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_economic_market_3a }
 
@@ -1670,7 +1661,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_kazimierz_war_start
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_kazimierz_war_start }
 
@@ -1686,7 +1677,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_kazimierz_war_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_kazimierz_war_start }
 
@@ -1702,7 +1693,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = URS_kazimierz_war_start
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_kazimierz_war_start }
 
@@ -1718,7 +1709,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_gaullei_war_neutral_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_gaullei_war_neutral_1 }
 
@@ -1734,7 +1725,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_gaullei_war_neutral_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_gaullei_war_neutral_1 }
 
@@ -1767,7 +1758,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = URS_rev_stu_3
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_rev_stu_3 focus = URS_rev_work_3 }
 
@@ -1783,7 +1774,7 @@ focus_tree = {
 		x = 3
 		y = 2
 		relative_position_id = URS_hg_support_2a
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_hg_allies_3 }
 		prerequisite = { focus = URS_hg_military_3a focus = URS_hg_military_3b }
@@ -1818,7 +1809,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_kazimierz_war_offense_1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_kazimierz_war_offense_1 }
 
@@ -1834,7 +1825,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_gaul_war_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_gaul_war_1 }
 
@@ -1850,7 +1841,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_gaullei_war_neutral_2b
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_gaullei_war_neutral_2b focus = URS_gaullei_war_neutral_2a }
 
@@ -1866,7 +1857,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_lei_war_1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_lei_war_1 }
 
@@ -1882,7 +1873,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_kazimierz_war_offense_2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = URS_kazimierz_war_offense_2 }
 
@@ -1914,7 +1905,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URS_gaul_war_2
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_gaul_war_2 }
 
@@ -1930,7 +1921,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_lei_war_2
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_lei_war_2 }
 
@@ -1946,7 +1937,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URS_rev_war
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_rev_war focus = URS_hg_fin }
 
@@ -1978,7 +1969,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = URS_ucw_start
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_ucw_start }
 
@@ -1994,7 +1985,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = URS_ucw_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_ucw_start }
 
@@ -2010,7 +2001,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_ucw_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_ucw_start }
 
@@ -2026,7 +2017,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = URS_ucw_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_ucw_start }
 
@@ -2042,7 +2033,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = URS_ucw_start
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_ucw_start }
 
@@ -2058,7 +2049,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_ucw_mil_raid
-		cost = 10
+		cost = 3
 
 		prerequisite = { focus = URS_ucw_mil_raid focus = URS_ucw_mil_winter }
 		mutually_exclusive = { focus = URS_ucw_mil_atk }
@@ -2075,7 +2066,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = URS_ucw_mil_raid
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_ucw_mil_raid focus = URS_ucw_mil_winter }
 		mutually_exclusive = { focus = URS_ucw_mil_def }
@@ -2092,7 +2083,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URS_ucw_rally_1
-		cost = 10
+		cost = 1
 
 		prerequisite = { focus = URS_ucw_rally_1 }
 
@@ -2108,7 +2099,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_ucw_mil_atk
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = URS_ucw_mil_atk focus = URS_ucw_mil_def }
 
@@ -2124,7 +2115,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URS_ucw_rally_2
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = URS_ucw_rally_2 }
 		prerequisite = { focus = URS_ucw_mil_def focus = URS_ucw_mil_atk }
