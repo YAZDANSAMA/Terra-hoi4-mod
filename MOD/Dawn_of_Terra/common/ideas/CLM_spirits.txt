@@ -2869,5 +2869,59 @@ ideas = {
 				factory_energy_consumption = -0.15
 			}
 		}
+
+		CLM_defanged_eagle_1 = {
+			picture = tur_disorganised_armed_forces
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.15
+				army_org_factor = -0.08
+				army_speed_factor = -0.1
+				training_time_factor = 0.25
+				naval_coordination = -0.15
+				air_accidents_factor = 0.15
+				minimum_training_level = -0.1
+				special_forces_cap = 0.1
+				modifier_army_sub_unit_category_special_forces_max_org_factor = 0.1
+			}
+		}
+
+		CLM_defanged_eagle_2 = {
+			picture = tur_disorganised_armed_forces
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.15
+				army_org_factor = -0.08
+				army_speed_factor = -0.1
+				training_time_factor = 0.25
+				naval_coordination = -0.15
+				air_accidents_factor = 0.15
+				minimum_training_level = -0.1
+				special_forces_cap = 0.1
+				modifier_army_sub_unit_category_special_forces_max_org_factor = 0.1
+				acclimatization_hot_climate_gain_factor = 0.2
+				acclimatization_cold_climate_gain_factor = 0.2
+			}
+		}
+		CLM_political_exiles_pardoned = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				ethnonationalism_drift = 0.1
+				monarchism_drift = 0.1
+				corporatism_drift = 0.1
+				technocracy_drift = 0.1
+			}
+		}
+
 	}
 }

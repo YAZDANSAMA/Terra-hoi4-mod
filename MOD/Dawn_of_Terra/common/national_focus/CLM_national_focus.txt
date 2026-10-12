@@ -12,19 +12,34 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = CLM_the_long_road_ahead
-		icon = GFX_focus_generic_desert_training
+		id = CLM_manifest_destiny
+		icon = GFX_focus_generic_democratic_asia
 		x = 5
-		y = 1
-		cost = 1
+		y = 6
+		cost = 2
+
+		prerequisite = { focus = CLM_prepare_supply_roads }
+		prerequisite = { focus = CLM_net_agricultural_surplus }
+		prerequisite = { focus = CLM_a_thorough_population_census }
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			country_event = { id = CLM_focus.1 }
+			if = {
+				limit = { has_country_flag = CLM_forge_of_democracy }
+				swap_ideas = {
+					remove_idea = CLM_bloodied_soil_1_f
+					add_idea = CLM_bloodied_soil_2_f
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CLM_bloodied_soil_1
+					add_idea = CLM_bloodied_soil_2
+				}
+			}
 		}
 	}
 
@@ -44,6 +59,23 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = CLM_a_country_for_you_spirit
 			country_event = { id = CLM_focus.2 }
+		}
+	}
+
+	focus = {
+		id = CLM_the_long_road_ahead
+		icon = GFX_focus_generic_desert_training
+		x = 5
+		y = 1
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = { id = CLM_focus.1 }
 		}
 	}
 
@@ -278,38 +310,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_manifest_destiny
-		icon = GFX_focus_generic_democratic_asia
-		x = 5
-		y = 6
-		cost = 2
-
-		prerequisite = { focus = CLM_prepare_supply_roads }
-		prerequisite = { focus = CLM_net_agricultural_surplus }
-		prerequisite = { focus = CLM_a_thorough_population_census }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_country_flag = CLM_forge_of_democracy }
-				swap_ideas = {
-					remove_idea = CLM_bloodied_soil_1_f
-					add_idea = CLM_bloodied_soil_2_f
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = CLM_bloodied_soil_1
-					add_idea = CLM_bloodied_soil_2
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = CLM_into_tl_l_c_ns_jungles
 		icon = GFX_focus_generic_promote_SA_immigration
 		x = 2
@@ -501,56 +501,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_establish_the_columbian_shipyards
-		icon = GFX_focus_generic_refit_civilian_ships
-		x = 4
-		y = 8
-		cost = 5
-
-		prerequisite = { focus = CLM_into_the_vast_yukon }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			151 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_steel_for_the_iron_beasts
-		icon = GFX_focus_generic_steel_mill
-		x = 4
-		y = 9
-		cost = 5
-
-		prerequisite = { focus = CLM_establish_the_columbian_shipyards }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			151 = {
-				add_resource = {
-					type = steel
-					amount = 34
-					state = 151
-				}
-				add_manpower = 140000
-			}
-		}
-	}
-
-	focus = {
 		id = CLM_the_riches_of_the_seas
 		icon = GFX_focus_generic_offshore_oil_rig
 		x = 4
@@ -581,6 +531,31 @@ focus_tree = {
 	}
 
 	focus = {
+		id = CLM_establish_the_columbian_shipyards
+		icon = GFX_focus_generic_refit_civilian_ships
+		x = 4
+		y = 8
+		cost = 5
+
+		prerequisite = { focus = CLM_into_the_vast_yukon }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			151 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = CLM_reinforce_yukons_position
 		icon = GFX_focus_generic_public_meetings
 		x = 4
@@ -595,6 +570,31 @@ focus_tree = {
 
 		completion_reward = {
 			CLM_electoral_unlock_columbian_yukon = yes
+		}
+	}
+
+	focus = {
+		id = CLM_steel_for_the_iron_beasts
+		icon = GFX_focus_generic_steel_mill
+		x = 4
+		y = 9
+		cost = 5
+
+		prerequisite = { focus = CLM_establish_the_columbian_shipyards }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			151 = {
+				add_resource = {
+					type = steel
+					amount = 34
+					state = 151
+				}
+				add_manpower = 140000
+			}
 		}
 	}
 
@@ -738,6 +738,54 @@ focus_tree = {
 	}
 
 	focus = {
+		id = CLM_gold_gold_gold
+		icon = GFX_focus_generic_expand_gold_mining
+		x = 6
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_land_reclamation }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.6 }
+		}
+	}
+
+	focus = {
+		id = CLM_land_reclamation
+		icon = GFX_focus_generic_land_reclamation
+		x = 6
+		y = 9
+		cost = 5
+
+		prerequisite = { focus = CLM_mining_industry }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			150 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = CLM_prospect_oreon_for_ores
 		icon = GFX_focus_generic_mineral_prospecting
 		x = 6
@@ -779,54 +827,6 @@ focus_tree = {
 			150 = {
 				add_manpower = 35000
 			}
-		}
-	}
-
-	focus = {
-		id = CLM_land_reclamation
-		icon = GFX_focus_generic_land_reclamation
-		x = 6
-		y = 9
-		cost = 5
-
-		prerequisite = { focus = CLM_mining_industry }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			150 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_gold_gold_gold
-		icon = GFX_focus_generic_expand_gold_mining
-		x = 6
-		y = 10
-		cost = 1
-
-		prerequisite = { focus = CLM_land_reclamation }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			country_event = { id = CLM_focus.6 }
 		}
 	}
 
@@ -1228,7 +1228,7 @@ focus_tree = {
 	focus = {
 		id = CLM_declaration_of_independence
 		icon = GFX_focus_generic_treaty
-		x = 16
+		x = 25
 		y = 1
 		cost = 1
 
@@ -1265,870 +1265,11 @@ focus_tree = {
 	focus = {
 		id = CLM_welcome_columbia_to_the_world_stage
 		icon = GFX_focus_GER_reich_ministry_of_public_enlightenment
-		x = 29
-		y = 10
+		x = 17
+		y = 25
 		cost = 5
 
 		prerequisite = { focus = CLM_foreign_weapons_expertise }
-		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_the_maylander_foundation
-		icon = GFX_focus_GER_optimize_reich_labour_service
-		x = 20
-		y = 3
-		cost = 1
-
-		prerequisite = { focus = CLM_hail_columbia }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_the_shadow_section
-		icon = GFX_focus_GER_strengthen_the_waffen_ss
-		x = 22
-		y = 4
-		cost = 1
-
-		prerequisite = { focus = CLM_the_maylander_foundation }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_framework_capitalism
-		icon = GFX_focus_GER_vereinigte_stahlwerke
-		x = 12
-		y = 4
-		cost = 10
-
-		prerequisite = { focus = CLM_the_state_of_the_economy }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_ideas = CLM_columbian_middleman_00000
-		}
-	}
-
-	focus = {
-		id = CLM_wunderwaffe_inner_circle
-		icon = GFX_focus_GER_wunderwaffe_inner_circle
-		x = 19
-		y = 8
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_yan
-		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
-		x = 32
-		y = 5
-		cost = 5
-
-		prerequisite = { focus = CLM_hail_kazimierz }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_the_state_of_the_economy
-		icon = GFX_goal_generic_consumer_goods
-		x = 14
-		y = 3
-		cost = 1
-
-		prerequisite = { focus = CLM_hail_columbia }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_columbia
-		icon = GFX_goal_generic_national_unity
-		x = 16
-		y = 2
-		cost = 2
-
-		prerequisite = { focus = CLM_declaration_of_independence }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			country_event = { id = CLM_focus.8 }
-		}
-	}
-
-	focus = {
-		id = CLM_foreign_weapons_expertise
-		icon = GFX_goal_generic_scientific_exchange
-		x = 29
-		y = 8
-		cost = 2
-
-		prerequisite = { focus = CLM_hail_laterano }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_establish_proper_embassies
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 28
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = CLM_reach_out_to_the_world }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_reach_out_to_the_world
-		icon = GFX_goal_generic_improve_relations
-		x = 28
-		y = 0
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_gaul
-		icon = GFX_goal_continuous_boost_freedom
-		x = 26
-		y = 3
-		cost = 2
-
-		prerequisite = { focus = CLM_establish_proper_embassies }
-
-		mutually_exclusive = { focus = CLM_hail_victoria }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_kazimierz
-		icon = GFX_goal_generic_cavalry
-		x = 28
-		y = 4
-		cost = 2
-
-		prerequisite = { focus = CLM_hail_gaul focus = CLM_hail_victoria }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_victoria
-		icon = GFX_goal_generic_dangerous_deal
-		x = 30
-		y = 3
-		cost = 2
-
-		prerequisite = { focus = CLM_establish_proper_embassies }
-
-		mutually_exclusive = { focus = CLM_hail_gaul }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_laterano
-		icon = GFX_goal_generic_build_airforce
-		x = 29
-		y = 7
-		cost = 5
-
-		prerequisite = { focus = CLM_the_prince_of_death_in_kazdel focus = CLM_invite_theresa_to_a_banquet }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_the_prince_of_death_in_kazdel
-		icon = GFX_goal_generic_secret_weapon
-		x = 28
-		y = 6
-		cost = 2
-
-		prerequisite = { focus = CLM_hail_siracusa }
-
-		mutually_exclusive = { focus = CLM_invite_theresa_to_a_banquet }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_hail_siracusa
-		icon = GFX_goal_generic_wolf_pack
-		x = 29
-		y = 5
-		cost = 2
-
-		prerequisite = { focus = CLM_hail_kazimierz }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_greet_ursus
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		x = 26
-		y = 5
-		cost = 2
-
-		prerequisite = { focus = CLM_hail_kazimierz }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_and_our_sami_neighbours_too
-		icon = GFX_focus_FIN_utilize_the_sami
-		x = 26
-		y = 6
-		cost = 5
-
-		prerequisite = { focus = CLM_greet_ursus }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_invite_theresa_to_a_banquet
-		icon = GFX_focus_AUS_courting_the_princess_of_industry
-		x = 30
-		y = 6
-		cost = 2
-
-		prerequisite = { focus = CLM_hail_siracusa }
-
-		mutually_exclusive = { focus = CLM_the_prince_of_death_in_kazdel }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_exotic_fruits
-		icon = GFX_focus_AFG_fruit_processing
-		x = 0
-		y = 11
-		cost = 10
-
-		prerequisite = { focus = CLM_kickstart_a_basic_industry }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			156 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_vast_riches_in_the_jungle
-		icon = GFX_focus_generic_rubber_plantations
-		x = 0
-		y = 12
-		cost = 10
-
-		prerequisite = { focus = CLM_exotic_fruits }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			156 = {
-				add_extra_state_shared_building_slots = 1
-				add_resource = {
-					type = rubber
-					amount = 25
-					state = 156
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_kickstart_general_electrics
-		icon = GFX_focus_ARG_develop_the_electricity_sector
-		x = 14
-		y = 5
-		cost = 4
-
-		prerequisite = { focus = CLM_a_capital_fit_for_a_king_without_a_king }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_ideas = CLM_general_electrics_contracts
-			set_country_flag = CLM_general_electrics_named
-			if = {
-				limit = { has_idea = CLM_sweat_and_mud_1000 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_1000
-					add_idea = CLM_sweat_and_mud_2000
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_1010 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_1010
-					add_idea = CLM_sweat_and_mud_2010
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_1020 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_1020
-					add_idea = CLM_sweat_and_mud_2020
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_1030 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_1030
-					add_idea = CLM_sweat_and_mud_2030
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_sweat_and_mud_1000
-						add_idea = CLM_sweat_and_mud_2000
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_a_capital_fit_for_a_king_without_a_king
-		icon = GFX_focus_AST_a_democratic_bulwark
-		x = 14
-		y = 4
-		cost = 5
-
-		prerequisite = { focus = CLM_the_state_of_the_economy }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			161 = {
-				add_extra_state_shared_building_slots = 7
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 6902
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-			}
-			if = {
-				limit = { has_idea = CLM_sweat_and_mud }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud
-					add_idea = CLM_sweat_and_mud_1000
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_0010 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_0010
-					add_idea = CLM_sweat_and_mud_1010
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_0020 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_0020
-					add_idea = CLM_sweat_and_mud_1020
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_0030 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_0030
-					add_idea = CLM_sweat_and_mud_1030
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_sweat_and_mud
-						add_idea = CLM_sweat_and_mud_1000
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_employ_the_pioneers_for_expeditions
-		icon = GFX_focus_AST_call_that_a_knife
-		x = 0
-		y = 13
-		cost = 4
-
-		prerequisite = { focus = CLM_vast_riches_in_the_jungle }
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_the_trimounts_institute_of_technology
-		icon = GFX_focus_NORDIC_dem_capstone_research
-		x = 16
-		y = 7
-		cost = 10
-
-		prerequisite = { focus = CLM_fund_researchers }
-		prerequisite = { focus = CLM_finance_new_tools }
-		prerequisite = { focus = CLM_columbian_patents }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-			162 = {
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6074
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			if = {
-				limit = { has_idea = CLM_sweat_and_mud_3000 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_3000
-					add_idea = CLM_sweat_and_mud_3100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_3010 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_3010
-					add_idea = CLM_sweat_and_mud_3110
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_3020 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_3020
-					add_idea = CLM_sweat_and_mud_3120
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_3030 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_3030
-					add_idea = CLM_sweat_and_mud_3130
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_4000 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_4000
-					add_idea = CLM_sweat_and_mud_4100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_4010 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_4010
-					add_idea = CLM_sweat_and_mud_4110
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_4020 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_4020
-					add_idea = CLM_sweat_and_mud_4120
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_4030 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_4030
-					add_idea = CLM_sweat_and_mud_4130
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_5000 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_5000
-					add_idea = CLM_sweat_and_mud_5100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_5010 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_5010
-					add_idea = CLM_sweat_and_mud_5110
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_5020 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_5020
-					add_idea = CLM_sweat_and_mud_5120
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_5030 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_5030
-					add_idea = CLM_sweat_and_mud_5130
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_5031 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_5031
-					add_idea = CLM_sweat_and_mud_5131
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_sweat_and_mud_3000
-						add_idea = CLM_sweat_and_mud_3100
-					}
-				}
-			}
-			if = {
-				limit = { has_idea = CLM_columbian_middleman_01000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_01000
-					add_idea = CLM_columbian_middleman_01100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_02000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_02000
-					add_idea = CLM_columbian_middleman_02100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_03000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_03000
-					add_idea = CLM_columbian_middleman_03100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_11000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_11000
-					add_idea = CLM_columbian_middleman_11100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_12000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_12000
-					add_idea = CLM_columbian_middleman_12100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_13000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_13000
-					add_idea = CLM_columbian_middleman_13100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_21000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_21000
-					add_idea = CLM_columbian_middleman_21100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_21010 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_21010
-					add_idea = CLM_columbian_middleman_21110
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_22000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_22000
-					add_idea = CLM_columbian_middleman_22100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_22010 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_22010
-					add_idea = CLM_columbian_middleman_22110
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_23000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_23000
-					add_idea = CLM_columbian_middleman_23100
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_23010 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_23010
-					add_idea = CLM_columbian_middleman_23110
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_23011 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_23011
-					add_idea = CLM_columbian_middleman_23111
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_columbian_middleman_01000
-						add_idea = CLM_columbian_middleman_01100
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_technological_ascendancy
-		icon = GFX_focus_JAP_expand_the_showa_research_association
-		x = 21
-		y = 8
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_fund_researchers
-		icon = GFX_focus_NORDIC_dem_research
-		x = 18
-		y = 5
-		cost = 1
-
-		prerequisite = { focus = CLM_allocate_special_resources_to_maylander }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = CLM_funding_researchers
-				days = 70
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_finance_new_tools
-		icon = GFX_focus_NORDIC_dem_selector_research
-		x = 20
-		y = 5
-		cost = 1
-
-		prerequisite = { focus = CLM_allocate_special_resources_to_maylander }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = CLM_financing_new_tools
-				days = 70
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_columbian_patents
-		icon = GFX_focus_generic_navy_research_bonus
-		x = 13
-		y = 6
-		cost = 2
-
-		prerequisite = { focus = CLM_kickstart_general_electrics }
-		prerequisite = { focus = CLM_framework_capitalism }
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = CLM_sweat_and_mud_2000 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_2000
-					add_idea = CLM_sweat_and_mud_3000
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_2010 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_2010
-					add_idea = CLM_sweat_and_mud_3010
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_2020 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_2020
-					add_idea = CLM_sweat_and_mud_3020
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_sweat_and_mud_2030 }
-				swap_ideas = {
-					remove_idea = CLM_sweat_and_mud_2030
-					add_idea = CLM_sweat_and_mud_3030
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_sweat_and_mud_2000
-						add_idea = CLM_sweat_and_mud_3000
-					}
-				}
-			}
-			if = {
-				limit = { has_idea = CLM_columbian_middleman_00000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_00000
-					add_idea = CLM_columbian_middleman_01000
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_10000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_10000
-					add_idea = CLM_columbian_middleman_11000
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_20000 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_20000
-					add_idea = CLM_columbian_middleman_21000
-				}
-			}
-			else_if = {
-				limit = { has_idea = CLM_columbian_middleman_20010 }
-				swap_ideas = {
-					remove_idea = CLM_columbian_middleman_20010
-					add_idea = CLM_columbian_middleman_21010
-				}
-			}
-			else = {
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_columbian_middleman_00000
-						add_idea = CLM_columbian_middleman_01000
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CLM_expeditions_to_the_frozen_north
-		icon = GFX_focus_generic_winter_warfare
-		x = 24
-		y = 7
-		cost = 10
-
 		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
 
 		ai_will_do = {
@@ -2418,6 +1559,70 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_maylander_foundation
+		icon = GFX_focus_GER_optimize_reich_labour_service
+		x = 20
+		y = 3
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_columbia }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			create_intelligence_agency = {
+				name = "Maylander"
+				icon = "GFX_intelligence_agency_logo_generic_4"
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_shadow_section
+		icon = GFX_focus_GER_strengthen_the_waffen_ss
+		x = 23
+		y = 4
+		cost = 1
+
+		prerequisite = { focus = CLM_the_maylander_foundation }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			upgrade_intelligence_agency = upgrade_passive_defense
+			upgrade_intelligence_agency = upgrade_passive_defense
+			upgrade_intelligence_agency = upgrade_passive_defense
+			upgrade_intelligence_agency = upgrade_passive_defense
+			upgrade_intelligence_agency = upgrade_economy_civilian
+			upgrade_intelligence_agency = upgrade_army_department
+			upgrade_intelligence_agency = upgrade_airforce_department
+			upgrade_intelligence_agency = upgrade_naval_department
+		}
+	}
+
+	focus = {
+		id = CLM_framework_capitalism
+		icon = GFX_focus_GER_vereinigte_stahlwerke
+		x = 12
+		y = 4
+		cost = 10
+
+		prerequisite = { focus = CLM_the_state_of_the_economy }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = CLM_columbian_middleman_00000
 		}
 	}
 
@@ -2759,6 +1964,819 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = CLM_we_have_done_it
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_GER_wunderwaffe_inner_circle = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 28
+		y = 15
+		cost = 1
+
+		prerequisite = { focus = CLM_they_say_it_cant_be_done }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+			has_completed_focus = CLM_no_research_without_borders
+			has_completed_focus = CLM_tools_for_the_job
+			has_completed_focus = CLM_pardon_political_exiles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_yan
+		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
+		x = 20
+		y = 20
+		cost = 5
+
+		prerequisite = { focus = CLM_hail_kazimierz }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_state_of_the_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 14
+		y = 3
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_columbia }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_columbia
+		icon = GFX_goal_generic_national_unity
+		x = 25
+		y = 2
+		cost = 2
+
+		prerequisite = { focus = CLM_declaration_of_independence }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.8 }
+		}
+	}
+
+	focus = {
+		id = CLM_foreign_weapons_expertise
+		icon = GFX_goal_generic_scientific_exchange
+		x = 17
+		y = 23
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_laterano }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_establish_proper_embassies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 16
+		y = 16
+		cost = 5
+
+		prerequisite = { focus = CLM_reach_out_to_the_world }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_reach_out_to_the_world
+		icon = GFX_goal_generic_improve_relations
+		x = 16
+		y = 15
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_gaul
+		icon = GFX_goal_continuous_boost_freedom
+		x = 14
+		y = 18
+		cost = 2
+
+		prerequisite = { focus = CLM_establish_proper_embassies }
+
+		mutually_exclusive = { focus = CLM_hail_victoria }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_kazimierz
+		icon = GFX_goal_generic_cavalry
+		x = 16
+		y = 19
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_gaul focus = CLM_hail_victoria }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_victoria
+		icon = GFX_goal_generic_dangerous_deal
+		x = 18
+		y = 18
+		cost = 2
+
+		prerequisite = { focus = CLM_establish_proper_embassies }
+
+		mutually_exclusive = { focus = CLM_hail_gaul }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_laterano
+		icon = GFX_goal_generic_build_airforce
+		x = 17
+		y = 22
+		cost = 5
+
+		prerequisite = { focus = CLM_the_prince_of_death_in_kazdel focus = CLM_invite_theresa_to_a_banquet }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_prince_of_death_in_kazdel
+		icon = GFX_goal_generic_secret_weapon
+		x = 16
+		y = 21
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_siracusa }
+
+		mutually_exclusive = { focus = CLM_invite_theresa_to_a_banquet }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hail_siracusa
+		icon = GFX_goal_generic_wolf_pack
+		x = 17
+		y = 20
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_kazimierz }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_greet_ursus
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 14
+		y = 20
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_kazimierz }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_and_our_sami_neighbours_too
+		icon = GFX_focus_FIN_utilize_the_sami
+		x = 14
+		y = 21
+		cost = 5
+
+		prerequisite = { focus = CLM_greet_ursus }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_invite_theresa_to_a_banquet
+		icon = GFX_focus_AUS_courting_the_princess_of_industry
+		x = 18
+		y = 21
+		cost = 2
+
+		prerequisite = { focus = CLM_hail_siracusa }
+
+		mutually_exclusive = { focus = CLM_the_prince_of_death_in_kazdel }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_exotic_fruits
+		icon = GFX_focus_AFG_fruit_processing
+		x = 0
+		y = 11
+		cost = 10
+
+		prerequisite = { focus = CLM_kickstart_a_basic_industry }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			156 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_vast_riches_in_the_jungle
+		icon = GFX_focus_generic_rubber_plantations
+		x = 0
+		y = 12
+		cost = 10
+
+		prerequisite = { focus = CLM_exotic_fruits }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			156 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = rubber
+					amount = 25
+					state = 156
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_kickstart_general_electrics
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 15
+		y = 5
+		cost = 4
+
+		prerequisite = { focus = CLM_a_capital_fit_for_a_king_without_a_king }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = CLM_general_electrics_contracts
+			set_country_flag = CLM_general_electrics_named
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_1000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1000
+					add_idea = CLM_sweat_and_mud_2000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1010
+					add_idea = CLM_sweat_and_mud_2010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1020
+					add_idea = CLM_sweat_and_mud_2020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_1030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_1030
+					add_idea = CLM_sweat_and_mud_2030
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_1000
+						add_idea = CLM_sweat_and_mud_2000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_a_capital_fit_for_a_king_without_a_king
+		icon = GFX_focus_AST_a_democratic_bulwark
+		x = 15
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = CLM_the_state_of_the_economy }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			161 = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6902
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud
+					add_idea = CLM_sweat_and_mud_1000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_0010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0010
+					add_idea = CLM_sweat_and_mud_1010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_0020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0020
+					add_idea = CLM_sweat_and_mud_1020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_0030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_0030
+					add_idea = CLM_sweat_and_mud_1030
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud
+						add_idea = CLM_sweat_and_mud_1000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_employ_the_pioneers_for_expeditions
+		icon = GFX_focus_AST_call_that_a_knife
+		x = 0
+		y = 13
+		cost = 4
+
+		prerequisite = { focus = CLM_vast_riches_in_the_jungle }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_trimounts_institute_of_technology
+		icon = GFX_focus_NORDIC_dem_capstone_research
+		x = 16
+		y = 7
+		cost = 10
+
+		prerequisite = { focus = CLM_fund_researchers }
+		prerequisite = { focus = CLM_finance_new_tools }
+		prerequisite = { focus = CLM_columbian_patents }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+			162 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6074
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_3000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3000
+					add_idea = CLM_sweat_and_mud_3100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3010
+					add_idea = CLM_sweat_and_mud_3110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3020
+					add_idea = CLM_sweat_and_mud_3120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_3030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_3030
+					add_idea = CLM_sweat_and_mud_3130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4000
+					add_idea = CLM_sweat_and_mud_4100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4010
+					add_idea = CLM_sweat_and_mud_4110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4020
+					add_idea = CLM_sweat_and_mud_4120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_4030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_4030
+					add_idea = CLM_sweat_and_mud_4130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5000
+					add_idea = CLM_sweat_and_mud_5100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5010
+					add_idea = CLM_sweat_and_mud_5110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5020
+					add_idea = CLM_sweat_and_mud_5120
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5030
+					add_idea = CLM_sweat_and_mud_5130
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_5031 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_5031
+					add_idea = CLM_sweat_and_mud_5131
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_3000
+						add_idea = CLM_sweat_and_mud_3100
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_01000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_01000
+					add_idea = CLM_columbian_middleman_01100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_02000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_02000
+					add_idea = CLM_columbian_middleman_02100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_03000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_03000
+					add_idea = CLM_columbian_middleman_03100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_11000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_11000
+					add_idea = CLM_columbian_middleman_11100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_12000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_12000
+					add_idea = CLM_columbian_middleman_12100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_13000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_13000
+					add_idea = CLM_columbian_middleman_13100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21000
+					add_idea = CLM_columbian_middleman_21100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_21010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_21010
+					add_idea = CLM_columbian_middleman_21110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22000
+					add_idea = CLM_columbian_middleman_22100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_22010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_22010
+					add_idea = CLM_columbian_middleman_22110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23000
+					add_idea = CLM_columbian_middleman_23100
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23010
+					add_idea = CLM_columbian_middleman_23110
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_23011 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_23011
+					add_idea = CLM_columbian_middleman_23111
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_01000
+						add_idea = CLM_columbian_middleman_01100
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_fund_researchers
+		icon = GFX_focus_NORDIC_dem_research
+		x = 18
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_allocate_special_resources_to_maylander }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_funding_researchers
+				days = 70
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_finance_new_tools
+		icon = GFX_focus_NORDIC_dem_selector_research
+		x = 20
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_allocate_special_resources_to_maylander }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_financing_new_tools
+				days = 70
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_columbian_patents
+		icon = GFX_focus_generic_navy_research_bonus
+		x = 13
+		y = 6
+		cost = 2
+
+		prerequisite = { focus = CLM_kickstart_general_electrics }
+		prerequisite = { focus = CLM_framework_capitalism }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = CLM_sweat_and_mud_2000 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2000
+					add_idea = CLM_sweat_and_mud_3000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2010 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2010
+					add_idea = CLM_sweat_and_mud_3010
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2020 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2020
+					add_idea = CLM_sweat_and_mud_3020
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_sweat_and_mud_2030 }
+				swap_ideas = {
+					remove_idea = CLM_sweat_and_mud_2030
+					add_idea = CLM_sweat_and_mud_3030
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_sweat_and_mud_2000
+						add_idea = CLM_sweat_and_mud_3000
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = CLM_columbian_middleman_00000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_00000
+					add_idea = CLM_columbian_middleman_01000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_10000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_10000
+					add_idea = CLM_columbian_middleman_11000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_20000 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_20000
+					add_idea = CLM_columbian_middleman_21000
+				}
+			}
+			else_if = {
+				limit = { has_idea = CLM_columbian_middleman_20010 }
+				swap_ideas = {
+					remove_idea = CLM_columbian_middleman_20010
+					add_idea = CLM_columbian_middleman_21010
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_columbian_middleman_00000
+						add_idea = CLM_columbian_middleman_01000
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_expeditions_to_the_frozen_north
+		icon = GFX_focus_generic_winter_warfare
+		x = 12
+		y = 22
+		cost = 10
+
+		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -4340,19 +4358,1638 @@ focus_tree = {
 		}
 	}
 
- focus = {
-  id = CLM_secure_the_siesta_frontier
-  icon = GFX_goal_generic_territory_or_war
-  x = 0
-  y = 7
-  cost = 5
-  prerequisite = { focus = CLM_manifest_destiny }
-  available = { country_exists = SST SST = { is_subject = no } NOT = { has_war_with = SST } }
-  bypass = { NOT = { country_exists = SST } }
-  ai_will_do = { factor = 1 }
-  completion_reward = {
-   set_country_flag = CLM_siesta_frontier_authorized
-   create_wargoal = { type = annex_everything target = SST }
-  }
- }
+	focus = {
+		id = CLM_warden_of_the_torch
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_ARG_defense_and_democracy = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 23
+		y = 14
+		cost = 1
+
+		prerequisite = { focus = CLM_the_human_sacrifices_will_stop focus = CLM_best_of_the_best }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_bane_of_criminals
+		icon = GFX_focus_ARG_establish_the_free_association
+		x = 22
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_the_shadow_section }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			upgrade_intelligence_agency = upgrade_anti_partisan
+			upgrade_intelligence_agency = upgrade_anti_partisan
+			upgrade_intelligence_agency = upgrade_blueprint_stealing
+			country_event = { id = CLM_focus.12 }
+		}
+	}
+
+	focus = {
+		id = CLM_no_research_without_borders
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_ARG_fascist_researchers = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 23
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_a_network_of_informants focus = CLM_tools_for_the_job }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_checks_and_balances
+		icon = GFX_focus_ARG_balancing_act
+		x = 40
+		y = 3
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_columbia }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_nudge_in_the_right_direction
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		x = 46
+		y = 4
+		cost = 1
+
+		prerequisite = { focus = CLM_checks_and_balances }
+
+		mutually_exclusive = { focus = CLM_no_interference }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_no_interference }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_wallis_bonnet_the_realist_fdp
+		icon = GFX_focus_ARG_invite_ghioldi_back_to_argentina
+		x = 38
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_welcome_the_gentlemen }
+
+		mutually_exclusive = { focus = CLM_simeon_mercer_the_idealist_la focus = CLM_richard_grants_the_militarist_np }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_simeon_mercer_the_idealist_la }
+			NOT = { has_completed_focus = CLM_richard_grants_the_militarist_np }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_richard_grants_the_militarist_np
+		icon = GFX_focus_ARG_juan_peron_elected
+		x = 35
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_welcome_the_gentlemen }
+
+		mutually_exclusive = { focus = CLM_wallis_bonnet_the_realist_fdp }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_wallis_bonnet_the_realist_fdp }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_alexander_brook_the_corporatist_corp
+		icon = GFX_focus_ARG_in_memory_of_yrigoyen
+		x = 32
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_letting_the_corpos_interfere }
+
+		mutually_exclusive = { focus = CLM_dr_rutherford_friends_tech }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_dr_rutherford_friends_tech }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_social_question_cannot_wait
+		icon = GFX_focus_generic_social_democracy
+		x = 46
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_a_nudge_in_the_right_direction }
+
+		mutually_exclusive = { focus = CLM_a_different_approach }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_a_different_approach }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_simeon_mercer_the_idealist_la
+		icon = GFX_focus_ARG_alvears_democracy
+		x = 41
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_welcome_the_gentlemen }
+
+		mutually_exclusive = { focus = CLM_wallis_bonnet_the_realist_fdp }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_wallis_bonnet_the_realist_fdp }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_democratic_cooperation
+		icon = GFX_focus_ITA_democratic_leadership
+		x = 46
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_timothy_callahan_socdem }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_no_interference
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 38
+		y = 4
+		cost = 2
+
+		prerequisite = { focus = CLM_checks_and_balances }
+
+		mutually_exclusive = { focus = CLM_a_nudge_in_the_right_direction }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_a_nudge_in_the_right_direction }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = CLM_let_the_parties_speak
+		icon = GFX_goal_support_democracy
+		x = 38
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_no_interference }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_pardon_political_exiles
+		icon = GFX_focus_AUS_pardon_political_exiles
+		x = 48
+		y = 3
+		cost = 2
+
+		prerequisite = { focus = CLM_checks_and_balances }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_political_exiles_pardoned
+				days = 140
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_timothy_callahan_socdem
+		icon = GFX_focus_BRA_pedro_henrique
+		x = 46
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_a_rising_star }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_francis_iv_duke_of_lancester_monarch
+		icon = GFX_focus_BRA_pedro_de_alcantara
+		x = 52
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_victorian_paramilitaries_to_the_rescue }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_pedro_di_siesta_ethnonat
+		icon = GFX_focus_CHL_ibanezs_coup
+		x = 54
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_stain_the_experiment_with_blood }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_welcome_the_gentlemen
+		icon = GFX_focus_CHL_sociedad_caupolican_defensora_de_la_araucania
+		x = 38
+		y = 6
+		cost = 1
+
+		prerequisite = { focus = CLM_let_the_parties_speak focus = CLM_the_social_question_cannot_wait }
+
+		mutually_exclusive = { focus = CLM_a_rising_star focus = CLM_letting_the_corpos_interfere }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_a_rising_star }
+			NOT = { has_completed_focus = CLM_letting_the_corpos_interfere }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_different_approach
+		icon = GFX_focus_CHL_unify_the_fascist_movements
+		x = 53
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_a_nudge_in_the_right_direction }
+		prerequisite = { focus = CLM_pardon_political_exiles }
+
+		mutually_exclusive = { focus = CLM_the_social_question_cannot_wait }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_the_social_question_cannot_wait }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_dr_rutherford_friends_tech
+		icon = GFX_focus_CHL_address_the_mapuche_conflict
+		x = 30
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_letting_the_corpos_interfere }
+
+		mutually_exclusive = { focus = CLM_alexander_brook_the_corporatist_corp }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_alexander_brook_the_corporatist_corp }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_network_of_informants
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_SWI_embrace_rote_drei = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 21
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_professor_fergusson }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = CLM_klaus_hensch_unlocked
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					set_country_flag = CLM_klaus_hensch_unlocked
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_navarch_of_the_seas
+		icon = GFX_focus_FIN_acquire_andros_dockyards
+		x = 4
+		y = 13
+		cost = 4
+
+		prerequisite = { focus = CLM_crossing_calirinia }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CLM_tb_navarch_carrier
+				bonus = 1
+				uses = 2
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = CLM_tb_navarch_battleship
+				bonus = 1
+				uses = 2
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = CLM_tb_navarch_cruiser
+				bonus = 1.5
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_port_hamilton_coastal_fort
+		icon = GFX_focus_NOR_drobak_coastal_fort
+		x = 4
+		y = 14
+		cost = 2
+
+		prerequisite = { focus = CLM_the_navarch_of_the_seas }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			151 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = dockyard
+					level = 6
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_hydroelectric_energy
+		icon = GFX_focus_generic_hydroelectric_energy
+		x = 2
+		y = 13
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_king_queen
+		icon = GFX_focus_AFG_retire_the_uncles
+		x = 24
+		y = 5
+		cost = 1
+
+		prerequisite = { focus = CLM_the_shadow_section }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.9 }
+		}
+	}
+
+	focus = {
+		id = CLM_hounds_of_bolivar
+		icon = GFX_focus_AST_off_leash
+		x = 24
+		y = 6
+		cost = 1
+
+		prerequisite = { focus = CLM_king_queen }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			upgrade_intelligence_agency = upgrade_interrogation_techniques
+			upgrade_intelligence_agency = upgrade_suicide_pills
+			upgrade_intelligence_agency = upgrade_commando_training
+			country_event = { id = CLM_focus.10 }
+		}
+	}
+
+	focus = {
+		id = CLM_a_killing_in_d_c
+		icon = GFX_focus_AST_owen_gun
+		x = 53
+		y = 6
+		cost = 1
+
+		prerequisite = { focus = CLM_a_different_approach }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_rising_star
+		icon = GFX_focus_AST_no1_flying_training_school
+		x = 46
+		y = 6
+		cost = 1
+
+		prerequisite = { focus = CLM_the_social_question_cannot_wait }
+
+		mutually_exclusive = { focus = CLM_welcome_the_gentlemen }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_welcome_the_gentlemen }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_letting_the_corpos_interfere
+		icon = GFX_focus_generic_turning_a_blind_eye
+		x = 31
+		y = 6
+		cost = 1
+
+		prerequisite = { focus = CLM_let_the_parties_speak }
+
+		mutually_exclusive = { focus = CLM_welcome_the_gentlemen }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_welcome_the_gentlemen }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_victorian_paramilitaries_to_the_rescue
+		icon = GFX_focus_CHI_start_looking_outwards
+		x = 52
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_raid_military_storages }
+
+		mutually_exclusive = { focus = CLM_stain_the_experiment_with_blood }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_stain_the_experiment_with_blood }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_stain_the_experiment_with_blood
+		icon = GFX_focus_generic_total_war
+		x = 54
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_raid_military_storages }
+
+		mutually_exclusive = { focus = CLM_victorian_paramilitaries_to_the_rescue }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_victorian_paramilitaries_to_the_rescue }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_purge_them
+		icon = GFX_focus_SIA_war_fervor
+		x = 54
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_pedro_di_siesta_ethnonat }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_fortify_castle_daggerstein
+		icon = GFX_goal_generic_construct_military
+		x = 52
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_francis_iv_duke_of_lancester_monarch }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_cooperation_with_the_nationalists
+		icon = GFX_focus_SWE_refuge_from_war
+		x = 38
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_wallis_bonnet_the_realist_fdp }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_first_vice_president
+		icon = GFX_focus_AFG_retire_the_uncles
+		x = 46
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_out_with_the_nationalists }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_out_with_the_nationalists
+		icon = GFX_focus_ETH_boots_on_the_shore
+		x = 46
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_democratic_cooperation }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_blessings_of_the_high_king
+		icon = GFX_focus_POL_expand_polish_intelligence
+		x = 38
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_cooperation_with_the_nationalists }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_money_is_might
+		icon = GFX_focus_CONGO_gold_and_diamonds
+		x = 32
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_alexander_brook_the_corporatist_corp }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_domestic_production_of_the_willys_mb
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		x = 28
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_departemento_de_las_tropas_nacistas_de_asalto
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		x = 30
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_raid_military_storages
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 53
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_a_killing_in_d_c }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_laws_to_change_the_world
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 41
+		y = 13
+		cost = 1
+
+		prerequisite = { focus = CLM_welcome_the_gentlemen focus = CLM_a_rising_star }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_no_need_for_career_politicians
+		icon = GFX_focus_BEL_government_resigns
+		x = 30
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_raythean_industries }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_amazon_colonization
+		icon = GFX_focus_BRA_amazon_colonization
+		x = 1
+		y = 15
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_might_makes_right
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 32
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_money_is_might }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_arrest_the_gentlemen
+		icon = GFX_focus_CHI_arrest_the_seven_gentlemen
+		x = 52
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_fortify_castle_daggerstein }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_support_labour_unions
+		icon = GFX_focus_CHI_commemorate_labour_corp
+		x = 48
+		y = 12
+		cost = 1
+
+		prerequisite = { focus = CLM_unexplained_wealth_orders }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_friends_in_high_places
+		icon = GFX_focus_CHI_connections_with_shanghai_elites
+		x = 32
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_might_makes_right }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_raythean_industries
+		icon = GFX_focus_CHI_co_opt_the_koh_hsin_movement
+		x = 30
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_instructions_unclear }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_instructions_unclear
+		icon = GFX_focus_CHI_invoke_the_nine_powers
+		x = 30
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_dr_rutherford_friends_tech }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_demand_higher_standards_for_officers
+		icon = GFX_focus_CHI_popular_army
+		x = 44
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_the_first_vice_president }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_true_meritocracy
+		icon = GFX_focus_CHI_Legitimise_du
+		x = 46
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_the_first_vice_president }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_tackle_the_army_problem
+		icon = GFX_focus_CHI_meritocratic_principles
+		x = 38
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_the_columbian_pioneers }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_mere_suggestions
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_CHI_reject_the_nine_powers = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 25
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_tools_for_the_job }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				add_stability = -0.1
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					add_stability = -0.1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_unexplained_wealth_orders
+		icon = GFX_focus_CHI_promote_national_currency
+		x = 48
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_the_first_vice_president }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_tongzi_jun
+		icon = GFX_focus_CHI_tongzi_jun
+		x = 33
+		y = 17
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_trimounts_military_institute
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		x = 35
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_the_comitaw }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_new_dynasty
+		icon = GFX_focus_CZE_our_royal_claims
+		x = 52
+		y = 12
+		cost = 1
+
+		prerequisite = { focus = CLM_arrest_the_gentlemen }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_comitaw
+		icon = GFX_focus_CZE_czos
+		x = 35
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_richard_grants_the_militarist_np }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_strong_but_fair
+		icon = GFX_focus_CZE_demonstration_of_military_achievements
+		x = 35
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_forced_resettlement }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_professor_fergusson
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_CZE_free_tuka = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 21
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_a_secret_election }
+
+		mutually_exclusive = { focus = CLM_the_columbian_bulldog }
+
+		available = {
+			always = no
+		}
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = CLM_charles_fergusson_unlocked
+				activate_advisor = CLM_charles_fergusson
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					set_country_flag = CLM_charles_fergusson_unlocked
+					activate_advisor = CLM_charles_fergusson
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_bulldog
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_CZE_full_faith_in_hacha = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 25
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_a_secret_election }
+
+		mutually_exclusive = { focus = CLM_professor_fergusson }
+
+		available = {
+			always = no
+		}
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = CLM_enrique_dubois_unlocked
+				activate_advisor = CLM_enrique_dubois
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					set_country_flag = CLM_enrique_dubois_unlocked
+					activate_advisor = CLM_enrique_dubois
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_general_supremo
+		icon = GFX_focus_eng_motion_of_no_confidence
+		x = 22
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_enter_kinsmen
+		icon = GFX_focus_eng_the_kings_party
+		x = 54
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_purge_them }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_forced_resettlement
+		icon = GFX_focus_eng_global_defense
+		x = 35
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_trimounts_military_institute }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_setting_the_stones_for_a_league_of_nations
+		icon = GFX_focus_ETH_addressing_the_league_of_nations
+		x = 41
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_democracy_defense_initiative }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_league_of_nations
+		icon = GFX_focus_generic_league_of_nations
+		x = 41
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_setting_the_stones_for_a_league_of_nations }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_democracy_defense_initiative
+		icon = GFX_focus_EST_republican_defence_league
+		x = 41
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_safeguard_personal_freedom }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_safeguard_personal_freedom
+		icon = GFX_focus_PRC_petition_for_freedom
+		x = 41
+		y = 8
+		cost = 1
+
+		prerequisite = { focus = CLM_simeon_mercer_the_idealist_la }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_pioneers
+		icon = GFX_focus_AFG_contact_amanullah_loyalists_alt
+		x = 38
+		y = 10
+		cost = 1
+
+		prerequisite = { focus = CLM_the_blessings_of_the_high_king }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_league_of_nations_shared
+		icon = GFX_focus_generic_league_of_nations
+		x = 24
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_secret_election
+		icon = GFX_focus_JAP_secretly_rebuild_the_party
+		x = 23
+		y = 7
+		cost = 2
+
+		prerequisite = { focus = CLM_hounds_of_bolivar focus = CLM_walls_like_jericho }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.13 }
+		}
+	}
+
+	focus = {
+		id = CLM_unless
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_generic_secret_agent_operative = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 28
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_no_research_without_borders }
+		prerequisite = { focus = CLM_tools_for_the_job }
+		prerequisite = { focus = CLM_pardon_political_exiles }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+			has_completed_focus = CLM_no_research_without_borders
+			has_completed_focus = CLM_tools_for_the_job
+			has_completed_focus = CLM_pardon_political_exiles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_tools_for_the_job
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_AFG_scavenging = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 25
+		y = 9
+		cost = 2
+
+		prerequisite = { focus = CLM_the_columbian_bulldog }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				add_tech_bonus = {
+					name = CLM_tb_tools_infantry
+					bonus = 1
+					uses = 1
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					name = CLM_tb_tools_support
+					bonus = 1
+					uses = 1
+					category = support_tech
+				}
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					add_tech_bonus = {
+						name = CLM_tb_tools_infantry
+						bonus = 1
+						uses = 1
+						category = infantry_weapons
+					}
+					add_tech_bonus = {
+						name = CLM_tb_tools_support
+						bonus = 1
+						uses = 1
+						category = support_tech
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_somewhere_in_the_mountains
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_AUS_osterreichische_gebirgsjager = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 28
+		y = 12
+		cost = 1
+
+		prerequisite = { focus = CLM_unless }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+			has_completed_focus = CLM_no_research_without_borders
+			has_completed_focus = CLM_tools_for_the_job
+			has_completed_focus = CLM_pardon_political_exiles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_leak_the_experiments
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_BEL_dam_the_consequences = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 21
+		y = 12
+		cost = 1
+
+		prerequisite = { focus = CLM_dornr_schen }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_walls_like_jericho
+		icon = GFX_focus_BEL_prisoner_king
+		x = 22
+		y = 6
+		cost = 1
+
+		prerequisite = { focus = CLM_the_bane_of_criminals }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			upgrade_intelligence_agency = upgrade_form_department
+			upgrade_intelligence_agency = upgrade_decryption_boost
+			upgrade_intelligence_agency = upgrade_decryption_boost
+			country_event = { id = CLM_focus.11 }
+		}
+	}
+
+	focus = {
+		id = CLM_dornr_schen
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_BEL_national_redoubt_at_antwerp = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 21
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_a_network_of_informants }
+		prerequisite = { focus = CLM_no_research_without_borders }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_best_of_the_best
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_BRA_air_force = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 25
+		y = 13
+		cost = 2
+
+		prerequisite = { focus = CLM_where_no_man_has_gone_before }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = CLM_sonia_bagration_unlocked
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					set_country_flag = CLM_sonia_bagration_unlocked
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_funnel_in_supplies
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_BRA_ethical_internationalism = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 28
+		y = 13
+		cost = 1
+
+		prerequisite = { focus = CLM_somewhere_in_the_mountains }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+			has_completed_focus = CLM_no_research_without_borders
+			has_completed_focus = CLM_tools_for_the_job
+			has_completed_focus = CLM_pardon_political_exiles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_they_say_it_cant_be_done
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_CHI_denounce_feudalism = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 28
+		y = 14
+		cost = 1
+
+		prerequisite = { focus = CLM_funnel_in_supplies }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+			has_completed_focus = CLM_no_research_without_borders
+			has_completed_focus = CLM_tools_for_the_job
+			has_completed_focus = CLM_pardon_political_exiles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_ahahahahahaha
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_JAP_expand_the_showa_research_association = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 28
+		y = 16
+		cost = 1
+
+		prerequisite = { focus = CLM_we_have_done_it }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+			has_completed_focus = CLM_no_research_without_borders
+			has_completed_focus = CLM_tools_for_the_job
+			has_completed_focus = CLM_pardon_political_exiles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_specialised_training
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_CHI_guerrilla_warfare = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 25
+		y = 11
+		cost = 2
+
+		prerequisite = { focus = CLM_mere_suggestions }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = CLM_defanged_eagle
+					add_idea = CLM_defanged_eagle_1
+				}
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_defanged_eagle
+						add_idea = CLM_defanged_eagle_1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_human_sacrifices_will_stop
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_CHI_decisive_battles = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 21
+		y = 13
+		cost = 1
+
+		prerequisite = { focus = CLM_leak_the_experiments }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_effectivize_ground_crew_usage
+		icon = GFX_focus_CHI_effectivize_ground_crew_usage
+		x = 33
+		y = 19
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_where_no_man_has_gone_before
+		icon = {
+			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
+			GFX_focus_generic_camel_corps = { has_completed_focus = CLM_a_secret_election }
+		}
+		x = 25
+		y = 12
+		cost = 2
+
+		prerequisite = { focus = CLM_specialised_training }
+
+		allow_branch = {
+			NOT = { has_completed_focus = CLM_professor_fergusson }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = CLM_defanged_eagle_1
+					add_idea = CLM_defanged_eagle_2
+				}
+			}
+			if = {
+				limit = { has_completed_focus = CLM_a_secret_election }
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLM_defanged_eagle_1
+						add_idea = CLM_defanged_eagle_2
+					}
+				}
+			}
+		}
+	}
 }

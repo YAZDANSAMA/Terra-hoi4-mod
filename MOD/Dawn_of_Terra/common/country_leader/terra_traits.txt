@@ -8,4 +8,16 @@ leader_traits = {
 		research_speed_factor = 0.04
 	}
 
+	CLM_special_forces_specialist = {
+		random = no
+		special_forces_cap = 0.10
+		special_forces_attack_factor = 0.15
+	}
+
+	CLM_intelligence_specialist = {
+		random = no
+		operative_slot = 2
+		agency_upgrade_time = -0.25
+	}
+
 }

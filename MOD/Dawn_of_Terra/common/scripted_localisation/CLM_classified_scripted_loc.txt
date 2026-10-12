@@ -1,0 +1,494 @@
+defined_text = {
+	name = CLM_name_we_have_done_it
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_we_have_done_it_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_we_have_done_it
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_we_have_done_it_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_warden_of_the_torch
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_warden_of_the_torch_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_warden_of_the_torch
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_warden_of_the_torch_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_no_research_without_borders
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_no_research_without_borders_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_no_research_without_borders
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_no_research_without_borders_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_a_network_of_informants
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_a_network_of_informants_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_a_network_of_informants
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_a_network_of_informants_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_mere_suggestions
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_mere_suggestions_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_mere_suggestions
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_mere_suggestions_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_professor_fergusson
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_professor_fergusson_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_professor_fergusson
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_professor_fergusson_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_the_columbian_bulldog
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_the_columbian_bulldog_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_the_columbian_bulldog
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_the_columbian_bulldog_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_unless
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_unless_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_unless
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_unless_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_tools_for_the_job
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_tools_for_the_job_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_tools_for_the_job
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_tools_for_the_job_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_somewhere_in_the_mountains
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_somewhere_in_the_mountains_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_somewhere_in_the_mountains
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_somewhere_in_the_mountains_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_leak_the_experiments
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_leak_the_experiments_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_leak_the_experiments
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_leak_the_experiments_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_dornr_schen
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_dornr_schen_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_dornr_schen
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_dornr_schen_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_best_of_the_best
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_best_of_the_best_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_best_of_the_best
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_best_of_the_best_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_funnel_in_supplies
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_funnel_in_supplies_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_funnel_in_supplies
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_funnel_in_supplies_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_they_say_it_cant_be_done
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_they_say_it_cant_be_done_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_they_say_it_cant_be_done
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_they_say_it_cant_be_done_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_ahahahahahaha
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_ahahahahahaha_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_ahahahahahaha
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_ahahahahahaha_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_specialised_training
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_specialised_training_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_specialised_training
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_specialised_training_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_the_human_sacrifices_will_stop
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_the_human_sacrifices_will_stop_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_the_human_sacrifices_will_stop
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_the_human_sacrifices_will_stop_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_name_where_no_man_has_gone_before
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_where_no_man_has_gone_before_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
+defined_text = {
+	name = CLM_desc_where_no_man_has_gone_before
+	text = {
+		trigger = {
+			CLM = { has_completed_focus = CLM_a_secret_election }
+		}
+		localization_key = CLM_where_no_man_has_gone_before_desc_real
+	}
+	text = {
+		localization_key = CLM_classified
+	}
+}
+
