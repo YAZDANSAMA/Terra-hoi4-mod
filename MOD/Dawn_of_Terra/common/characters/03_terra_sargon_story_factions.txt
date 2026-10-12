@@ -1,0 +1,58 @@
+characters = {
+    WSG_interim_council = {
+        name = WSG_interim_council
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = junta_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+    KTH_interim_council = {
+        name = KTH_interim_council
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+    VNH_interim_council = {
+        name = VNH_interim_council
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = revolutionary_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+    SCW_interim_claimant = {
+        name = SCW_interim_claimant
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+}

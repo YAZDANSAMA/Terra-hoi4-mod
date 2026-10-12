@@ -22,3 +22,6 @@ set_popularities = {
 # Starting transport for the connected 1028 supply network.
 add_equipment_to_stockpile = { type = train_equipment_1 amount = 762 producer = SGN }
 set_convoys = 80
+
+recruit_character = SGN_lohrasp
+recruit_character = SGN_harun

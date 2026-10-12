@@ -1,0 +1,33 @@
+characters = {
+    SGN_shapur_iii = {
+        name = SGN_shapur_iii
+        gender = male
+        portraits = { civilian = { large = "gfx/leaders/Terra/terra_generic_male.tga" small = "GFX_idea_generic_political_advisor_europe_1" } }
+
+    }
+    SGN_lohrasp = {
+        name = SGN_lohrasp
+        gender = male
+        portraits = { civilian = { large = "gfx/leaders/Terra/terra_generic_male.tga" small = "GFX_idea_generic_political_advisor_europe_1" } }
+        advisor = {
+            slot = political_advisor
+            idea_token = SGN_lohrasp
+            allowed = { original_tag = SGN }
+            traits = { SGN_lohrasp_statesman }
+            cost = 150
+        }
+    }
+    SGN_harun = {
+        name = SGN_harun
+        gender = male
+        portraits = { army = { large = "gfx/leaders/Terra/terra_generic_male.tga" } }
+        corps_commander = {
+            traits = { }
+            skill = 4
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+}

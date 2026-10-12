@@ -1,0 +1,14 @@
+# Template only; this landless faction starts with no deployed divisions.
+division_template = {
+    name = "Vanh Irregular Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+units = { }
