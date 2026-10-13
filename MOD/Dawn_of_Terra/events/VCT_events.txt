@@ -1,0 +1,127 @@
+add_namespace = victoria_gt
+
+# Gusev-Tracey, asked nicely
+country_event = {
+    id = victoria_gt.1
+    title = victoria_gt.1.t
+	desc = victoria_gt.1.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # accept
+    option = { 
+		name = victoria_gt.1.a
+        add_political_power = -20
+        add_ideas = VCT_gusev_tracey_pact
+        URS = { 
+            country_event = { 
+                id = ursus_gt.2
+                days = 5
+            }
+        }
+        ai_chance = {
+			factor = 95
+		}
+	}
+
+    # deny
+    option = { 
+		name = victoria_gt.1.b
+        add_political_power = 20
+        add_stability = 0.05
+        URS = { 
+            country_event = { 
+                id = ursus_gt.3
+                days = 5
+            }
+        }
+        ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+# Gusev-Tracey, asked normally
+country_event = {
+    id = victoria_gt.2
+    title = victoria_gt.2.t
+	desc = victoria_gt.2.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # accept
+    option = { 
+		name = victoria_gt.2.a
+        add_political_power = -50
+        add_ideas = VCT_gusev_tracey_pact
+        URS = { 
+            country_event = { 
+                id = ursus_gt.2
+                days = 5
+            }
+        }
+        ai_chance = {
+			factor = 50
+		}
+	}
+
+    # deny
+    option = { 
+		name = victoria_gt.2.b
+        add_political_power = 50
+        URS = { 
+            country_event = { 
+                id = ursus_gt.3
+                days = 5
+            }
+        }
+        ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Gusev-Tracey, asked meanly
+country_event = {
+    id = victoria_gt.3
+    title = victoria_gt.3.t
+	desc = victoria_gt.3.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # accept
+    option = { 
+		name = victoria_gt.3.a
+        add_political_power = -100
+        add_stability = -0.1
+        add_ideas = VCT_gusev_tracey_pact
+        URS = { 
+            country_event = { 
+                id = ursus_gt.2
+                days = 5
+            }
+        }
+        ai_chance = {
+			factor = 10
+		}
+	}
+
+    # deny
+    option = { 
+		name = victoria_gt.3.b
+        add_political_power = 100
+        add_stability = 0.1
+        URS = { 
+            country_event = { 
+                id = ursus_gt.3
+                days = 5
+            }
+        }
+        ai_chance = {
+			factor = 90
+		}
+	}
+}

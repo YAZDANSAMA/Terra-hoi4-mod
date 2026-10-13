@@ -208,7 +208,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			add_ideas = URS_tech_primacy_1
 		}
 	}
 
@@ -224,7 +224,10 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			swap_ideas = {
+				remove_idea = URS_tech_primacy_1
+				add_idea = URS_tech_primacy_2
+			}
 		}
 	}
 
@@ -240,7 +243,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			country_event = ursus_gt.1
 		}
 	}
 

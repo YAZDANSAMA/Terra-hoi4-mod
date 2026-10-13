@@ -86,6 +86,7 @@ ideas = {
         }
 
         URS_infantry_priority_1 = {
+            name = URS_infantry_priority
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
@@ -94,6 +95,7 @@ ideas = {
             }
         }
         URS_infantry_priority_2 = {
+            name = URS_infantry_priority
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
@@ -106,41 +108,7 @@ ideas = {
             }
         }
         URS_infantry_priority_3 = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                army_infantry_attack_factor = 0.15
-                recruitable_population_factor = 0.15
-                weekly_manpower = 250
-                winter_attrition_factor = -0.1
-                acclimatization_cold_climate_gain_factor = 0.08
-                supply_consumption_factor = -0.1
-                training_time_army_factor = 0.05
-                army_org_regain = -0.085
-            }
-        }
-
-        URS_infantry_priority_1 = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                army_infantry_attack_factor = 0.05
-                recruitable_population_factor = 0.05
-            }
-        }
-        URS_infantry_priority_2 = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                army_infantry_attack_factor = 0.05
-                recruitable_population_factor = 0.05
-                winter_attrition_factor = -0.1
-                acclimatization_cold_climate_gain_factor = 0.08
-                supply_consumption_factor = -0.1
-                training_time_army_factor = 0.05
-            }
-        }
-        URS_infantry_priority_3 = {
+            name = URS_infantry_priority
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
@@ -156,6 +124,7 @@ ideas = {
         }
 
         URS_marshals_armies_1 = {
+            name = URS_marshals_armies
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
@@ -165,6 +134,7 @@ ideas = {
             }
         }
         URS_marshals_armies_2 = {
+            name = URS_marshals_armies
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
@@ -195,6 +165,7 @@ ideas = {
             }
         }
         URS_marshals_armies_3 = {
+            name = URS_marshals_armies
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
@@ -209,6 +180,51 @@ ideas = {
                 initiative_factor = 0.15
             }
         }
-        
+        URS_tech_primacy_1 = {
+            name = URS_tech_primacy
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        URS_tech_primacy_2 = {
+            name = URS_tech_primacy
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.05
+                industrial_capacity_factory = 0.05
+                army_infantry_defence_factor = 0.075
+                army_infantry_attack_factor = 0.075
+                cavalry_defence_factor = 0.05
+                cavalry_attack_factor = 0.05
+                army_org_factor = 0.08
+            }
+        }
+        URS_tech_primacy_3 = {
+            name = URS_tech_primacy
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.08
+                industrial_capacity_factory = 0.05
+                army_infantry_defence_factor = 0.1
+                army_infantry_attack_factor = 0.075
+                cavalry_defence_factor = 0.1
+                cavalry_attack_factor = 0.075
+                army_org_factor = 0.08
+            }
+        }
+        URS_gusev_tracey_pact = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.05
+                army_artillery_attack_factor = 0.1
+                army_armor_attack_factor = 0.05
+            }
+        }
     }
 }

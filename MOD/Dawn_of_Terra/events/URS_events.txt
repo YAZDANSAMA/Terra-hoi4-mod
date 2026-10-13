@@ -1,0 +1,110 @@
+add_namespace = ursus_gt
+
+# Gusev-Tracey proposal
+country_event = {
+    id = ursus_gt.1
+	title = ursus_gt.1.t
+	desc = ursus_gt.1.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    # Ask nicely
+	option = { 
+		name = ursus_gt.1.a
+        add_political_power = -100
+        hidden_effect = {
+            VCT = { 
+                country_event = { 
+                    id = victoria_gt.1
+                    days = 5
+                }
+            }
+        }
+        ai_chance = {
+			factor = 70
+		}
+	}
+
+    # Normal
+	option = {
+		name = ursus_gt.1.b
+        hidden_effect = {
+            VCT = { 
+                country_event = { 
+                    id = victoria_gt.2
+                    days = 5
+                }
+            }
+        }
+        ai_chance = {
+			factor = 20
+		}
+    }
+
+    # Demand (not) nicely
+	option = { 
+		name = ursus_gt.1.c
+        add_political_power = 20
+        hidden_effect = {
+            VCT = { 
+                country_event = { 
+                    id = victoria_gt.3
+                    days = 5
+                }
+            }
+        }
+        ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Gusev-Tracey accept
+country_event = {
+    id = ursus_gt.2
+	title = ursus_gt.2.t
+	desc = ursus_gt.2.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+		name = ursus_gt.2.a
+        add_stability = 0.05
+        add_ideas = URS_gusev_tracey_pact
+        add_opinion_modifier = {
+			target = VCT
+			modifier = URS_VCT_gusev_tracey
+		}
+        VCT = { 
+            add_opinion_modifier = {
+			    target = URS
+			    modifier = VCT_URS_gusev_tracey
+		    }
+        }
+	}
+}
+
+# Gusev-Tracey deny
+country_event = {
+    id = ursus_gt.3
+	title = ursus_gt.3.t
+	desc = ursus_gt.3.d
+    picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+		name = ursus_gt.3.a
+        add_war_support = 0.05
+        swap_ideas = {
+            remove_idea = URS_tech_primacy_2
+            add_idea = URS_tech_primacy_3
+        }
+        add_opinion_modifier = {
+			target = VCT
+			modifier = URS_VCT_gusev_tracey_deny
+		}
+	}
+}

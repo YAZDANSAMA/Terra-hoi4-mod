@@ -38,5 +38,15 @@ ideas = {
                 consumer_goods_factor = 0.2
             }
         }
+
+        VCT_gusev_tracey_pact = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.1
+                army_infantry_attack_factor = 0.5
+                cavalry_attack_factor = 0.03
+            }
+        }
     }
 }
