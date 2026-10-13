@@ -1,0 +1,1123 @@
+# Dawn of Terra adaptive AI, calendar 1028 onward.
+# Original Terra rules informed by Expert AI's separation of construction,
+# recruitment and equipment demand, and native AI strategy documentation.
+# All rules use normal factories, manpower, equipment, research and XP.
+# The SEA contributor mechanics, empty Siesta and sacred Ta-Netjer are exempt.
+
+
+
+
+
+terra_ai_reserves = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes  }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_surplus_management id = infantry_equipment value = 12 }
+    ai_strategy = { type = equipment_production_surplus_management id = support_equipment value = 5 }
+    ai_strategy = { type = equipment_production_surplus_management id = artillery_equipment value = 4 }
+    ai_strategy = { type = equipment_production_surplus_management id = motorized_equipment value = 2 }
+    ai_strategy = { type = equipment_production_surplus_management id = train_equipment value = 2 }
+    ai_strategy = { type = equipment_production_surplus_management id = convoy value = 2 }
+}
+
+
+
+terra_ai_support_line = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 2 has_tech = tech_support }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment value = 1 }
+}
+
+terra_ai_artillery_line = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 4 has_tech = interwar_artillery }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment value = 1 }
+}
+
+terra_ai_recruit_first_division = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_divisions < 1 terra_ai_can_expand_army = yes }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_army id = infantry value = 1 }
+    ai_strategy = { type = force_build_armies value = 1 }
+}
+
+terra_ai_expand_during_war = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes terra_ai_can_expand_army = yes }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = ai_wanted_divisions_factor value = 15 }
+}
+
+terra_ai_small_peacetime_army = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_military_factories < 10 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = ai_wanted_divisions_factor value = -15 }
+}
+
+terra_ai_refill_before_recruiting = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_divisions > 0
+        OR = { has_manpower < 15000 has_equipment = { infantry_equipment < 200 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = infantry value = -100 }
+    ai_strategy = { type = role_ratio id = area_defense value = -10 }
+    ai_strategy = { type = build_army id = infantry value = -1 }
+    ai_strategy = { type = equipment_production_factor id = infantry value = 35 }
+    ai_strategy = { type = garrison_reinforcement_priority value = 50 }
+}
+
+terra_ai_motorized_army = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 11 terra_ai_can_expand_army = yes
+        fuel_ratio > 0.10 has_tech = motorised_infantry has_equipment = { motorized_equipment > 700 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = motorized value = 10 }
+}
+
+terra_ai_armored_army = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 17 terra_ai_can_expand_army = yes
+        fuel_ratio > 0.10 has_tech = motorised_infantry has_equipment = { motorized_equipment > 700 }
+        OR = { has_tech = basic_light_tank has_tech = basic_light_tank_chassis
+               has_tech = basic_medium_tank has_tech = basic_medium_tank_chassis } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = armor value = 10 }
+}
+
+
+
+terra_ai_marine_units = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 11
+        terra_ai_can_expand_army = yes naval_base > 0 has_tech = marines }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = marine value = 5 }
+}
+
+terra_ai_first_military_factory = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_civilian_factories > 0 num_of_military_factories < 1 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = arms_factory value = 1 }
+}
+
+terra_ai_civilian_foundation = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories < 8 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = industrial_complex value = 8 }
+    ai_strategy = { type = added_military_to_civilian_factory_ratio value = -25 }
+}
+
+terra_ai_peacetime_industry = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = added_military_to_civilian_factory_ratio value = -15 }
+}
+
+terra_ai_basic_arms_industry = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_civilian_factories > 5 num_of_military_factories < 4 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = arms_factory value = 4 }
+}
+
+terra_ai_wartime_industry = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = added_military_to_civilian_factory_ratio value = 40 }
+}
+
+terra_ai_wartime_arms_capacity = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_civilian_factories > 7
+        num_of_military_factories < 12 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = arms_factory value = 12 }
+}
+
+terra_ai_coastal_shipyards = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes naval_base > 0 num_of_civilian_factories > 11
+        num_of_military_factories > 5 num_of_naval_factories < 2 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = dockyard value = 2 }
+}
+
+terra_ai_basic_airfield = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 9 air_base < 1
+        OR = { has_tech = fighter1 has_tech = basic_small_airframe } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = air_base value = 1 }
+}
+
+terra_ai_fuel_storage = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_civilian_factories > 14 has_tech = fuel_silos
+        fuel_silo < 1 OR = { has_tech = motorised_infantry naval_base > 0 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = fuel_silo value = 1 }
+}
+
+terra_ai_radar_network = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_civilian_factories > 17 has_tech = radio_detection
+        radar_station < 1 has_war = yes }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = radar_station value = 1 }
+}
+
+terra_ai_wartime_air_defense = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_civilian_factories > 11 anti_air_building < 2 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = anti_air_building value = 2 }
+}
+
+terra_ai_synthetic_fuel = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_civilian_factories > 17 has_tech = synth_oil_experiments
+        synthetic_refinery < 1 fuel_ratio < 0.25 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = building_target id = synthetic_refinery value = 1 }
+}
+
+terra_ai_industrial_infrastructure_1 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 1 controls_state = 1
+        1 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 1 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_10 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 10 controls_state = 10
+        10 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 10 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_107 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 107 controls_state = 107
+        107 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 107 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_11 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 11 controls_state = 11
+        11 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 11 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_119 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 119 controls_state = 119
+        119 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 119 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_12 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 12 controls_state = 12
+        12 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 12 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_120 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 120 controls_state = 120
+        120 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 120 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_122 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 122 controls_state = 122
+        122 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 122 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_128 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 128 controls_state = 128
+        128 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 128 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_129 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 129 controls_state = 129
+        129 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 129 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_13 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 13 controls_state = 13
+        13 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 13 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_14 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 14 controls_state = 14
+        14 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 14 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_145 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 145 controls_state = 145
+        145 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 145 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_148 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 148 controls_state = 148
+        148 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 148 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_15 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 15 controls_state = 15
+        15 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 15 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_151 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 151 controls_state = 151
+        151 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 151 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_16 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 16 controls_state = 16
+        16 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 16 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_161 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 161 controls_state = 161
+        161 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 161 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_162 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 162 controls_state = 162
+        162 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 162 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_163 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 163 controls_state = 163
+        163 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 163 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_165 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 165 controls_state = 165
+        165 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 165 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_166 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 166 controls_state = 166
+        166 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 166 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_169 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 169 controls_state = 169
+        169 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 169 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_17 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 17 controls_state = 17
+        17 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 17 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_170 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 170 controls_state = 170
+        170 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 170 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_171 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 171 controls_state = 171
+        171 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 171 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_172 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 172 controls_state = 172
+        172 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 172 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_173 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 173 controls_state = 173
+        173 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 173 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_18 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 18 controls_state = 18
+        18 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 18 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_19 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 19 controls_state = 19
+        19 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 19 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_2 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 2 controls_state = 2
+        2 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 2 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_20 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 20 controls_state = 20
+        20 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 20 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_200 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 200 controls_state = 200
+        200 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 200 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_202 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 202 controls_state = 202
+        202 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 202 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_203 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 203 controls_state = 203
+        203 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 203 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_204 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 204 controls_state = 204
+        204 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 204 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_205 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 205 controls_state = 205
+        205 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 205 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_206 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 206 controls_state = 206
+        206 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 206 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_207 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 207 controls_state = 207
+        207 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 207 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_209 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 209 controls_state = 209
+        209 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 209 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_21 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 21 controls_state = 21
+        21 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 21 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_212 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 212 controls_state = 212
+        212 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 212 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_22 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 22 controls_state = 22
+        22 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 22 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_23 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 23 controls_state = 23
+        23 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 23 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_231 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 231 controls_state = 231
+        231 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 231 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_232 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 232 controls_state = 232
+        232 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 232 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_233 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 233 controls_state = 233
+        233 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 233 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_235 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 235 controls_state = 235
+        235 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 235 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_24 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 24 controls_state = 24
+        24 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 24 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_25 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 25 controls_state = 25
+        25 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 25 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_26 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 26 controls_state = 26
+        26 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 26 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_31 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 31 controls_state = 31
+        31 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 31 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_32 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 32 controls_state = 32
+        32 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 32 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_37 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 37 controls_state = 37
+        37 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 37 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_38 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 38 controls_state = 38
+        38 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 38 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_39 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 39 controls_state = 39
+        39 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 39 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_4 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 4 controls_state = 4
+        4 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 4 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_40 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 40 controls_state = 40
+        40 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 40 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_41 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 41 controls_state = 41
+        41 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 41 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_42 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 42 controls_state = 42
+        42 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 42 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_43 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 43 controls_state = 43
+        43 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 43 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_44 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 44 controls_state = 44
+        44 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 44 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_45 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 45 controls_state = 45
+        45 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 45 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_49 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 49 controls_state = 49
+        49 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 49 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_5 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 5 controls_state = 5
+        5 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 5 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_56 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 56 controls_state = 56
+        56 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 56 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_57 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 57 controls_state = 57
+        57 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 57 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_58 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 58 controls_state = 58
+        58 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 58 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_6 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 6 controls_state = 6
+        6 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 6 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_63 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 63 controls_state = 63
+        63 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 63 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_64 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 64 controls_state = 64
+        64 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 64 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_65 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 65 controls_state = 65
+        65 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 65 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_66 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 66 controls_state = 66
+        66 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 66 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_67 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 67 controls_state = 67
+        67 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 67 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_68 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 68 controls_state = 68
+        68 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 68 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_69 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 69 controls_state = 69
+        69 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 69 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_7 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 7 controls_state = 7
+        7 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 7 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_70 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 70 controls_state = 70
+        70 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 70 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_71 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 71 controls_state = 71
+        71 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 71 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_72 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 72 controls_state = 72
+        72 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 72 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_73 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 73 controls_state = 73
+        73 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 73 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_77 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 77 controls_state = 77
+        77 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 77 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_8 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 8 controls_state = 8
+        8 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 8 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_91 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 91 controls_state = 91
+        91 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 91 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_92 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 92 controls_state = 92
+        92 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 92 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_93 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 93 controls_state = 93
+        93 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 93 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_94 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 94 controls_state = 94
+        94 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 94 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_95 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 95 controls_state = 95
+        95 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 95 value = 1 }
+}
+
+terra_ai_industrial_infrastructure_96 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories > 7
+        owns_state = 96 controls_state = 96
+        96 = { is_core_of = ROOT infrastructure < 3
+                   OR = { industrial_complex > 2 arms_factory > 2 } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 96 value = 1 }
+}
+
+
+
+
+
+terra_ai_air_production = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 11
+        OR = { has_tech = fighter1 has_tech = basic_small_airframe } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = unit_ratio id = fighter value = 65 }
+    ai_strategy = { type = unit_ratio id = cas value = 25 }
+    ai_strategy = { type = unit_ratio id = tactical_bomber value = 10 }
+    ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+    ai_strategy = { type = unit_ratio id = heavy_fighter value = 0 }
+    ai_strategy = { type = unit_ratio id = naval_bomber value = 0 }
+}
+
+terra_ai_naval_air_production = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 17 naval_base > 0
+        OR = { has_tech = naval_bomber1 has_tech = air_torpedoe_1 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = unit_ratio id = naval_bomber value = 10 }
+}
+
+terra_ai_small_navy = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes naval_base > 0 num_of_naval_factories < 6 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = naval_capital_bb value = -100 }
+    ai_strategy = { type = role_ratio id = naval_capital_bc value = -100 }
+    ai_strategy = { type = role_ratio id = naval_carrier value = -100 }
+    ai_strategy = { type = role_ratio id = naval_carrier_light value = -100 }
+}
+
+terra_ai_conserve_army_in_war = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes
+        has_equipment = { infantry_equipment < 200 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = front_control country_trigger = { always = yes } ratio = 0.0 priority = 25 ordertype = front execution_type = careful }
+}

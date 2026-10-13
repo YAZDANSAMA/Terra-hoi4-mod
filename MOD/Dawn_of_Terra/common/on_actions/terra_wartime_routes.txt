@@ -1,0 +1,9 @@
+# These hooks add to the existing Columbia/UI hooks without changing them.
+on_actions = {
+    on_war = {
+        effect = { terra_refresh_wartime_routes_effect = yes }
+    }
+    on_weekly = {
+        effect = { terra_refresh_wartime_routes_effect = yes }
+    }
+}

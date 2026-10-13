@@ -1,0 +1,316 @@
+# Original Terra AI. Existing native constraints, XP costs and equipment costs apply.
+
+terra_ai_air_front_1 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 1 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 1 value = 7500  }
+}
+
+terra_ai_air_front_2 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 2 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 2 value = 7500  }
+}
+
+terra_ai_air_front_3 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 3 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 3 value = 7500  }
+}
+
+terra_ai_air_front_4 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 4 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 4 value = 7500  }
+}
+
+terra_ai_air_front_5 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 5 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 5 value = 7500  }
+}
+
+terra_ai_air_front_6 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 6 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 6 value = 7500  }
+}
+
+terra_ai_air_front_7 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 7 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 7 value = 7500  }
+}
+
+terra_ai_air_front_8 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 8 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 8 value = 7500  }
+}
+
+terra_ai_air_front_9 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 9 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 9 value = 7500  }
+}
+
+terra_ai_air_front_10 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 10 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 10 value = 7500  }
+}
+
+terra_ai_air_front_11 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 11 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 11 value = 7500  }
+}
+
+terra_ai_air_front_12 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 12 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 12 value = 7500  }
+}
+
+terra_ai_air_front_13 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 13 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 13 value = 7500  }
+}
+
+terra_ai_air_front_14 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 14 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 14 value = 7500  }
+}
+
+terra_ai_air_front_15 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 15 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 15 value = 7500  }
+}
+
+terra_ai_air_front_16 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 16 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 16 value = 7500  }
+}
+
+terra_ai_air_front_17 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 17 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 17 value = 7500  }
+}
+
+terra_ai_air_front_18 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 18 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 18 value = 7500  }
+}
+
+terra_ai_air_front_19 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 19 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 19 value = 7500  }
+}
+
+terra_ai_air_front_20 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 20 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 20 value = 7500  }
+}
+
+terra_ai_air_front_21 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 21 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 21 value = 7500  }
+}
+
+terra_ai_air_front_22 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 22 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 22 value = 7500  }
+}
+
+terra_ai_air_front_23 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 23 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 23 value = 7500  }
+}
+
+terra_ai_air_front_24 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 24 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 24 value = 7500  }
+}
+
+terra_ai_air_front_25 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 25 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 25 value = 7500  }
+}
+
+terra_ai_air_front_26 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 26 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 26 value = 7500  }
+}
+
+terra_ai_air_front_27 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 27 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 27 value = 7500  }
+}
+
+terra_ai_air_front_28 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 28 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 28 value = 7500  }
+}
+
+terra_ai_air_front_29 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 29 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 29 value = 7500  }
+}
+
+terra_ai_air_front_30 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 30 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 30 value = 7500  }
+}
+
+terra_ai_air_front_31 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 31 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 31 value = 7500  }
+}
+
+terra_ai_air_front_32 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 32 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 32 value = 7500  }
+}
+
+terra_ai_air_front_43 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 43 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 43 value = 7500  }
+}
+
+terra_ai_air_front_47 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 47 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 47 value = 7500  }
+}
+
+terra_ai_air_front_50 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 50 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 50 value = 7500  }
+}
+
+terra_ai_air_front_54 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 54 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 54 value = 7500  }
+}
+
+terra_ai_air_front_60 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 60 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 60 value = 7500  }
+}
+
+terra_ai_air_front_63 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 63 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 63 value = 7500  }
+}
+
+terra_ai_air_front_68 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 68 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 68 value = 7500  }
+}
+
+terra_ai_air_front_70 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 70 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 70 value = 7500  }
+}
+
+terra_ai_air_front_77 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 77 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 77 value = 7500  }
+}
+
+terra_ai_air_front_97 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 97 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 97 value = 7500  }
+}
+
+terra_ai_air_front_137 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 137 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 137 value = 7500  }
+}
+
+terra_ai_air_front_140 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 140 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 140 value = 7500  }
+}
+
+terra_ai_air_front_141 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 141 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 141 value = 7500  }
+}

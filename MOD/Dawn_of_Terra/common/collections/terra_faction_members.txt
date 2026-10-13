@@ -1,0 +1,4 @@
+terra_us_members = {
+    input = game:scope
+    operators = { faction_members }
+}

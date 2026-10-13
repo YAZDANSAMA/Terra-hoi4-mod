@@ -1,0 +1,221 @@
+# Terra generic AI equipment designs. Native archetypes and module slots.
+# Designer DLC rules are gated; legacy upgrades use native XP priorities.
+
+terra_design_generic_fighter = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_fighter }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_fighter_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = small_plane_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = { any_of = { aircraft_cannon_2_2x aircraft_cannon_1_2x light_mg_4x } }
+            fixed_auxiliary_weapon_slot_1 = { any_of = { aircraft_cannon_2_2x heavy_mg_4x aircraft_cannon_1_2x aircraft_cannon_1_1x } }
+            engine_type_slot = { any_of = { jet_engine_2x engine_4_1x engine_3_1x engine_2_1x engine_1_1x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_cas = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_cas }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_cas_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = small_plane_cas_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = { any_of = { small_bomb_bay bomb_locks } }
+            fixed_auxiliary_weapon_slot_1 = bomb_locks
+            engine_type_slot = { any_of = { engine_3_1x engine_2_2x engine_2_1x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_naval_bomber = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_naval_bomber }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_naval_bomber_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = small_plane_naval_bomber_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = torpedo_mounting
+            fixed_auxiliary_weapon_slot_1 = bomb_locks
+            engine_type_slot = { any_of = { engine_3_1x engine_2_2x engine_2_1x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_cv_fighter = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_cv_fighter }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_cv_fighter_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = cv_small_plane_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = { any_of = { aircraft_cannon_2_2x aircraft_cannon_1_2x light_mg_4x } }
+            fixed_auxiliary_weapon_slot_1 = { any_of = { aircraft_cannon_2_2x heavy_mg_4x aircraft_cannon_1_2x aircraft_cannon_1_1x } }
+            engine_type_slot = { any_of = { jet_engine_2x engine_4_1x engine_3_1x engine_2_1x engine_1_1x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_cv_cas = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_cv_cas }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_cv_cas_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = cv_small_plane_cas_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = { any_of = { bomb_locks small_bomb_bay } }
+            fixed_auxiliary_weapon_slot_1 = bomb_locks
+            engine_type_slot = { any_of = { engine_3_1x engine_2_2x engine_2_1x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_cv_naval_bomber = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_cv_naval_bomber }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_cv_naval_bomber_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = cv_small_plane_naval_bomber_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = torpedo_mounting
+            fixed_auxiliary_weapon_slot_1 = bomb_locks
+            engine_type_slot = { any_of = { engine_3_1x engine_2_1x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_tactical_bomber = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_tactical_bomber }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_tactical_bomber_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = medium_plane_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = medium_bomb_bay
+            fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+            engine_type_slot = { any_of = { jet_engine_2x engine_4_2x engine_3_2x engine_2_2x engine_1_2x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_heavy_fighter = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_heavy_fighter }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_heavy_fighter_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = medium_plane_fighter_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = { any_of = { heavy_mg_4x light_mg_4x } }
+            fixed_auxiliary_weapon_slot_1 = { any_of = { aircraft_cannon_2_2x aircraft_cannon_1_2x } }
+            engine_type_slot = { any_of = { engine_4_2x engine_3_2x engine_2_2x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_scout_plane = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_scout_plane }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_scout_plane_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = medium_plane_scout_plane_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = recon_camera
+            engine_type_slot = { any_of = { engine_4_2x engine_2_2x engine_1_2x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_strategic_bomber = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_strategic_bomber }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_strategic_bomber_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_large_airframe has_tech = basic_large_airframe has_tech = improved_large_airframe has_tech = advanced_large_airframe has_tech = modern_large_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = large_plane_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = large_bomb_bay
+            engine_type_slot = { any_of = { engine_4_4x engine_3_4x engine_2_4x engine_1_4x } }
+            }
+        }
+    }
+}
+
+terra_design_generic_maritime_patrol = {
+    category = air
+    available_for = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN SEA WSG KTH VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
+    roles = { air_maritime_patrol }
+    priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
+    terra_generic_maritime_patrol_current = {
+        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_large_airframe has_tech = basic_large_airframe has_tech = improved_large_airframe has_tech = advanced_large_airframe has_tech = modern_large_airframe } num_of_military_factories > 0 }
+        priority = { factor = 1 }
+        target_variant = {
+            type = large_plane_maritime_patrol_plane_airframe
+            match_value = 1000
+            modules = {
+            fixed_main_weapon_slot = torpedo_mounting
+            fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+            fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+            engine_type_slot = { any_of = { engine_4_4x engine_2_4x engine_1_4x } }
+            }
+        }
+    }
+}

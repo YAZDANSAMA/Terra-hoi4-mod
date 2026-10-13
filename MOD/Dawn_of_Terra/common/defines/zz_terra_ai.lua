@@ -1,0 +1,8 @@
+-- Defend useful points instead of assigning armies to every beach.
+NDefines.NAI.AREA_DEFENSE_SETTING_VP = true
+NDefines.NAI.AREA_DEFENSE_SETTING_PORTS = true
+NDefines.NAI.AREA_DEFENSE_SETTING_AIRBASES = true
+NDefines.NAI.AREA_DEFENSE_SETTING_BORDERS = false
+NDefines.NAI.AREA_DEFENSE_SETTING_FORTS = false
+NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES = false
+NDefines.NAI.AREA_DEFENSE_SETTING_RAILWAYS = false

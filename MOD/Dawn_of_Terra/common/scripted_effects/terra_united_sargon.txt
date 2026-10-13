@@ -1,0 +1,114 @@
+# Country scope. Called after history loading and once per day until settled.
+# Never pull independent countries or foreign faction members into US.
+terra_initialize_united_sargon_effect = {
+    if = {
+        limit = { country_exists = SGN }
+        SGN = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_country_flag = terra_us_setup_complete
+                            has_country_flag = terra_us_keep_existing_faction
+                            has_country_flag = terra_us_no_remaining_satrapies
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        is_in_faction = no
+                        is_subject = no
+                        has_capitulated = no
+                        OR = {
+                            AND = { country_exists = MSN MSN = { is_subject_of = SGN is_in_faction = no } }
+                            AND = { country_exists = VVA VVA = { is_subject_of = SGN is_in_faction = no } }
+                            AND = { country_exists = TNJ TNJ = { is_subject_of = SGN is_in_faction = no } }
+                        }
+                    }
+                    set_rule = { can_create_factions = yes }
+                    if = {
+                        limit = { has_dlc = "No Compromise, No Surrender" }
+                        create_faction_from_template = { template = terra_faction_template_us name = TERRA_UNITED_SARGON }
+                    }
+                    if = {
+                        limit = { NOT = { has_dlc = "No Compromise, No Surrender" } }
+                        create_faction = TERRA_UNITED_SARGON
+                    }
+                    if = {
+                        limit = { is_faction_leader = yes }
+                        set_country_flag = terra_us_formed
+                    }
+                }
+                if = {
+                    limit = {
+                        is_faction_leader = yes
+                        OR = {
+                            has_country_flag = terra_us_formed
+                            has_faction_template = terra_faction_template_us
+                        }
+                    }
+                    if = {
+                        limit = { country_exists = MSN MSN = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = MSN
+                    }
+                    if = {
+                        limit = { country_exists = VVA VVA = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = VVA
+                    }
+                    if = {
+                        limit = { country_exists = TNJ TNJ = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = TNJ
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                                NOT = { country_exists = MSN }
+                                MSN = { NOT = { is_subject_of = SGN } }
+                                MSN = { is_in_faction_with = SGN }
+                                MSN = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                            OR = {
+                                NOT = { country_exists = VVA }
+                                VVA = { NOT = { is_subject_of = SGN } }
+                                VVA = { is_in_faction_with = SGN }
+                                VVA = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                            OR = {
+                                NOT = { country_exists = TNJ }
+                                TNJ = { NOT = { is_subject_of = SGN } }
+                                TNJ = { is_in_faction_with = SGN }
+                                TNJ = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                        }
+                        set_country_flag = terra_us_setup_complete
+                    }
+                }
+                if = {
+                    limit = {
+                        is_in_faction = yes
+                        NOT = {
+                            OR = {
+                                has_country_flag = terra_us_formed
+                                has_faction_template = terra_faction_template_us
+                            }
+                        }
+                    }
+                    set_country_flag = terra_us_keep_existing_faction
+                }
+                if = {
+                    limit = {
+                        is_in_faction = no
+                        NOT = {
+                            OR = {
+                                AND = { country_exists = MSN MSN = { is_subject_of = SGN } }
+                                AND = { country_exists = VVA VVA = { is_subject_of = SGN } }
+                                AND = { country_exists = TNJ TNJ = { is_subject_of = SGN } }
+                            }
+                        }
+                    }
+                    set_country_flag = terra_us_no_remaining_satrapies
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+terra_ai_profile_allowed = {
+    NOT = { OR = { original_tag = SST original_tag = TNJ original_tag = SEA } }
+}
+terra_ai_civilian_profile_allowed = {
+    NOT = { OR = { original_tag = SST original_tag = SEA } }
+}
+terra_ai_active = {
+    is_ai = yes has_capitulated = no num_of_owned_states > 0
+}
+terra_ai_can_expand_army = {
+    terra_ai_active = yes num_of_military_factories > 0
+    has_manpower > 20000 has_equipment = { infantry_equipment > 1500 }
+}
+terra_ai_can_upgrade_infantry = {
+    terra_ai_active = yes num_of_military_factories > 5 has_manpower > 20000
+    has_tech = tech_engineers has_tech = interwar_artillery
+    OR = {
+        AND = { num_divisions < 11 has_equipment = { infantry_equipment > 3500 support_equipment > 250 artillery_equipment > 150 } }
+        AND = { num_divisions > 10 num_divisions < 31 has_equipment = { infantry_equipment > 10000 support_equipment > 750 artillery_equipment > 450 } }
+        AND = { num_divisions > 30 has_equipment = { infantry_equipment > 20000 support_equipment > 1500 artillery_equipment > 1000 } }
+    }
+}
+terra_ai_can_upgrade_mobile = {
+    terra_ai_can_expand_army = yes fuel_ratio > 0.10
+    has_tech = motorised_infantry has_tech = tech_engineers
+    has_tech = interwar_artillery has_tech = tech_logistics_company
+    has_equipment = { motorized_equipment > 700 support_equipment > 200 artillery_equipment > 100 }
+}

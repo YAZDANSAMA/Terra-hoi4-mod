@@ -1,0 +1,22 @@
+on_actions = {
+    on_startup = {
+        effect = { terra_initialize_united_sargon_effect = yes }
+    }
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = SGN
+                    NOT = {
+                        OR = {
+                            has_country_flag = terra_us_setup_complete
+                            has_country_flag = terra_us_keep_existing_faction
+                            has_country_flag = terra_us_no_remaining_satrapies
+                        }
+                    }
+                }
+                terra_initialize_united_sargon_effect = yes
+            }
+        }
+    }
+}

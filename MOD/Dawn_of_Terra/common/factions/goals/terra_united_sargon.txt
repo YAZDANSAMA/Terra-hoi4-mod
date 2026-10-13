@@ -1,0 +1,10 @@
+# A neutral charter, with no completion reward or scaling stat bonus.
+terra_us_common_defence = {
+    name = TERRA_US_COMMON_DEFENCE
+    description = TERRA_US_COMMON_DEFENCE_DESC
+    is_manifest = yes
+    ratio_progress = {
+        total_amount = 4
+        completed_amount_collection = collection:terra_us_members
+    }
+}

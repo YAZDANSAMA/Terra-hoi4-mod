@@ -1,0 +1,9 @@
+# Native DLC presentation only. The free-game path uses ordinary factions.
+terra_faction_template_us = {
+    name = TERRA_UNITED_SARGON
+    manifest = terra_us_common_defence
+    icon = GFX_faction_logo_generic_16
+    visible = { tag = SGN }
+    available = { tag = SGN }
+    default_rules = { change_leader_rule_never }
+}

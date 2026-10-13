@@ -25,3 +25,22 @@ set_convoys = 80
 
 recruit_character = SGN_lohrasp
 recruit_character = SGN_harun
+
+# United Sargon: history files require independent DLC branches.
+# A sibling else is not executed by the country-history loader.
+set_rule = { can_create_factions = yes }
+if = {
+    limit = { has_dlc = "No Compromise, No Surrender" }
+    create_faction_from_template = { template = terra_faction_template_us name = TERRA_UNITED_SARGON }
+}
+if = {
+    limit = { NOT = { has_dlc = "No Compromise, No Surrender" } }
+    create_faction = TERRA_UNITED_SARGON
+}
+add_to_faction = MSN
+add_to_faction = VVA
+add_to_faction = TNJ
+if = {
+    limit = { is_faction_leader = yes }
+    set_country_flag = terra_us_formed
+}
