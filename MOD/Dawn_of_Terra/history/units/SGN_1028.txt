@@ -30,7 +30,7 @@ division_template = {
 units = {
     division = {
         name = "1 Northern Royal Division"
-        location = 5271
+        location = 2120
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -38,7 +38,7 @@ units = {
     }
     division = {
         name = "2 Northern Royal Division"
-        location = 5270
+        location = 2122
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -46,7 +46,7 @@ units = {
     }
     division = {
         name = "3 Northern Royal Division"
-        location = 4767
+        location = 2123
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -54,7 +54,7 @@ units = {
     }
     division = {
         name = "4 Northern Royal Division"
-        location = 4765
+        location = 2359
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -62,7 +62,7 @@ units = {
     }
     division = {
         name = "5 Northern Royal Division"
-        location = 4771
+        location = 2365
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -70,7 +70,7 @@ units = {
     }
     division = {
         name = "6 Northern Royal Division"
-        location = 2932
+        location = 3799
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -78,7 +78,7 @@ units = {
     }
     division = {
         name = "7 Northern Royal Division"
-        location = 7255
+        location = 3800
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -86,38 +86,6 @@ units = {
     }
     division = {
         name = "8 Northern Royal Division"
-        location = 1171
-        division_template = "Sargon Line Division"
-        start_experience_factor = 0.20
-        start_equipment_factor = 1.00
-        start_manpower_factor = 1.00
-    }
-    division = {
-        name = "9 Northern Royal Division"
-        location = 2934
-        division_template = "Sargon Line Division"
-        start_experience_factor = 0.20
-        start_equipment_factor = 1.00
-        start_manpower_factor = 1.00
-    }
-    division = {
-        name = "10 Northern Royal Division"
-        location = 6408
-        division_template = "Sargon Line Division"
-        start_experience_factor = 0.20
-        start_equipment_factor = 1.00
-        start_manpower_factor = 1.00
-    }
-    division = {
-        name = "11 Northern Royal Division"
-        location = 1173
-        division_template = "Sargon Line Division"
-        start_experience_factor = 0.20
-        start_equipment_factor = 1.00
-        start_manpower_factor = 1.00
-    }
-    division = {
-        name = "12 Northern Royal Division"
         location = 5271
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -125,7 +93,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "13 Northern Royal Division"
+        name = "9 Northern Royal Division"
         location = 5270
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -133,7 +101,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "14 Northern Royal Division"
+        name = "10 Northern Royal Division"
         location = 4767
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -141,7 +109,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "15 Northern Royal Division"
+        name = "11 Northern Royal Division"
         location = 4765
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -149,7 +117,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "16 Northern Royal Division"
+        name = "12 Northern Royal Division"
         location = 4771
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -157,7 +125,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "17 Northern Royal Division"
+        name = "13 Northern Royal Division"
         location = 2932
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -165,7 +133,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "18 Northern Royal Division"
+        name = "14 Northern Royal Division"
         location = 7255
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -173,7 +141,7 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
-        name = "19 Northern Royal Division"
+        name = "15 Northern Royal Division"
         location = 1171
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
@@ -181,8 +149,40 @@ units = {
         start_manpower_factor = 1.00
     }
     division = {
+        name = "16 Northern Royal Division"
+        location = 419
+        division_template = "Sargon Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "17 Northern Royal Division"
+        location = 2363
+        division_template = "Sargon Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "18 Northern Royal Division"
+        location = 2364
+        division_template = "Sargon Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "19 Northern Royal Division"
+        location = 3521
+        division_template = "Sargon Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
         name = "20 Northern Royal Division"
-        location = 2934
+        location = 4764
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -190,7 +190,7 @@ units = {
     }
     division = {
         name = "21 Northern Royal Division"
-        location = 6408
+        location = 5268
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00
@@ -198,7 +198,7 @@ units = {
     }
     division = {
         name = "22 Northern Royal Division"
-        location = 1173
+        location = 5269
         division_template = "Sargon Line Division"
         start_experience_factor = 0.20
         start_equipment_factor = 1.00

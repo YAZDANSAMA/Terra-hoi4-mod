@@ -23,10 +23,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			
 		}
 		
 		categories = {
@@ -62,10 +59,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			
 		}
 		
 		categories = {
@@ -100,10 +94,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			
 		}
 		
 		categories = {
@@ -133,10 +124,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			
 		}
 		
 		categories = {
@@ -184,15 +172,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -233,15 +215,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -281,15 +257,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -325,15 +295,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -826,20 +790,11 @@ technologies = {
 				NOT = { has_war = yes }
 			}
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
 			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			
+			
+			
 		}
 		
 		categories = {
@@ -886,49 +841,15 @@ technologies = {
 				NOT = { has_war = yes }
 			}
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 50
-				tag = JAP
-				OR = {
-					has_war_with = USA
-					CHI = {  
-						OR = { 
-							has_capitulated = yes 
-							exists = no
-		                    is_subject_of = JAP
-						}
-					}
-				}
-			}
 			
-			modifier = {
-				factor = 5
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				has_war_with = GER
-			}
+			
 
-			modifier = {
-				factor = 10
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				has_war_with = GER
-				GER = { has_war_with = SOV }
-			}
+			
+			
+			
+
+			
 		}
 		
 		categories = {
@@ -962,20 +883,11 @@ technologies = {
 				NOT = { has_war = yes }
 			}
 			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
 			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			
+			
+			
 		}
 		
 		categories = {
@@ -1008,15 +920,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -1049,15 +955,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -1074,16 +974,7 @@ technologies = {
 			carrier_3
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					is_ai = no
-					has_dlc = "No Compromise, No Surrender"
-					has_dlc = "Gotterdammerung"
-					original_tag = PHI
-				}
-				set_country_flag = PHI_did_carrier_tech
-				mark_focus_tree_layout_dirty = yes
-			}
+			
 		}
 		
 		path = {
@@ -1112,15 +1003,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -1160,15 +1045,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			
+			
 		}
 		
 		categories = {
@@ -1213,10 +1092,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = GER
-			}
+			
 		}
 		
 		categories = {
@@ -1262,10 +1138,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = GER
-			}
+			
 		}
 		
 		categories = {
@@ -1299,10 +1172,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = GER
-			}
+			
 		}
 		
 		categories = {
@@ -1331,10 +1201,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = GER
-			}
+			
 		}
 		
 		categories = {

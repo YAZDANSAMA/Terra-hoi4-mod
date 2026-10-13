@@ -56,10 +56,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 4
-				tag = ENG
-			}
+			
 		}
 
 		categories = {
@@ -97,13 +94,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 5
-				OR = {
-					tag = ENG
-					tag = JAP
-				}
-			}
+			
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -145,14 +136,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 5
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 			
 			modifier = {
 				factor = 1.5
@@ -195,14 +179,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -235,10 +212,7 @@ technologies = {
 				factor = 0.1
 			}
 
-			modifier = {
-				factor = 4
-				tag = ENG
-			}
+			
 			
 			modifier = {
 				factor = 2
@@ -334,10 +308,7 @@ technologies = {
 		ai_will_do = {
 			factor = 4
 
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -382,10 +353,7 @@ technologies = {
 		ai_will_do = {
 			factor = 4
 
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -429,18 +397,12 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
 			}
-			modifier = {
-				factor = 0.1
-				original_tag = GER				
-			}
+			
 		}
 
 		categories = {
@@ -477,10 +439,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -520,10 +479,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -564,10 +520,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 5
 				anti_submarine_strategy_required_trigger = yes
@@ -617,10 +570,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -657,10 +607,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
+			
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -727,14 +674,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -775,14 +715,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -820,14 +753,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-				factor = 4
-			}
+			
 			modifier = {
 				factor = 1.5
 				date > 1031.1.1
@@ -869,13 +795,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -968,14 +888,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1033,14 +946,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 			modifier = {
 				is_major = yes
 				factor = 2
@@ -1094,14 +1000,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 			modifier = {
 				is_major = yes
 				factor = 2
@@ -1139,10 +1038,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 25
-				tag = JAP
-			}
+			
 		}
 
 
@@ -1180,10 +1076,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			
 			modifier = {
 				is_major = no
 				factor = 0
@@ -1237,11 +1130,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 5
-				tag = USA
-
-			}
+			
 			modifier = {
 				is_major = no
 				factor = 0
@@ -1290,14 +1179,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 			
 		}
 
@@ -1343,13 +1225,7 @@ technologies = {
 				date < 1031.1.1
 			}
 
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-			}
+			
 			modifier = {
 				has_tech = improved_ship_hull_heavy
 				factor = 2
@@ -1403,14 +1279,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1455,14 +1324,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1489,16 +1351,7 @@ early_ship_hull_carrier = {
 					PROJECT = sp_naval_ice_carrier	
 				}
 			}
-			if = {
-				limit = {
-					is_ai = no
-					has_dlc = "No Compromise, No Surrender"
-					has_dlc = "Gotterdammerung"
-					original_tag = PHI
-				}
-				set_country_flag = PHI_did_carrier_tech
-				mark_focus_tree_layout_dirty = yes
-			}
+			
 		}		
 		path = {
 			leads_to_tech = advanced_ship_hull_carrier
@@ -1522,14 +1375,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 			modifier = {
 				factor = 1.5
 				date > 1031.1.1
@@ -1578,14 +1424,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1640,13 +1479,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1701,13 +1534,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1750,13 +1577,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			
 			modifier = {
 				factor = 1.5
 				date > 1031.1.1
@@ -1797,13 +1618,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			
 		}
 
 		categories = {
@@ -1839,20 +1654,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = HOL
-				}
-			}
-			modifier = {
-				not = {
-					has_war_with = ENG
-					has_War_with = USA
-				}
-				factor = 0.5
-			}
+			
+			
 		}
 
 		categories = {
@@ -1888,13 +1691,7 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = HOL
-				}
-			}
+			
 		}
 
 		categories = {

@@ -83,13 +83,7 @@ technologies = {
 				date > "1031.1.1"
 			}
 
-			modifier = {
-				factor = 6
-				original_tag = CHI
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
+			
 
 		}
 	}
@@ -154,13 +148,7 @@ technologies = {
 				date > "1032.1.1"
 			}
 
-			modifier = {
-				factor = 6
-				original_tag = CHI
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
+			
 			
 		}
 
@@ -180,19 +168,7 @@ technologies = {
 				PROJECT = sp_land_military_engineering_vehicles
 			}
 
-			if = {
-				limit = {
-					original_tag = AFG
-					has_dlc = "Graveyard of Empires"
-					has_completed_focus = AFG_expand_quami_template
-				}
-				add_units_to_division_template = {
-					template_name = "Pashtun Levy" 
-					support = {
-						engineer = 0 
-					}
-				}
-			}
+			
 		}
 	}
 
@@ -683,17 +659,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					tag = ENG
-					is_ai = yes
-				}
-				add_units_to_division_template = {
-					template_name = "Army Headquarters"
-					support = { hq_military_police = 0 }
-				}
-			}
+			
 		}
 
 		path = {
@@ -721,38 +687,17 @@ technologies = {
 		ai_will_do = {
 			base = 0.5
 
-			modifier = {
-				factor = 5
-				tag = GER
-			}
+			
 
-			modifier = {
-				factor = 10
-				tag = GER
+			
 
-				POL = { has_capitulated = yes }
-				GER = { has_war = yes }
-			}
+			
 
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			
 
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
+			
 
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
+			
 
 			modifier = {
 				factor = 2
@@ -761,19 +706,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					original_tag = AFG
-					has_dlc = "Graveyard of Empires"
-					has_completed_focus = AFG_expand_quami_template
-				}
-				add_units_to_division_template = {
-					template_name = "Pashtun Levy" 
-					support = {
-						military_police = 0 
-					}
-				}
-			}
+			
 		}
 	}
 
@@ -919,17 +852,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					tag = FRA
-					is_ai = yes
-				}
-				add_units_to_division_template = {
-					template_name = "Quartier General d'Armee"
-					support = { hq_maintenance = 0 }
-				}
-			}
+			
 		}
 
 		path = {
@@ -972,11 +895,7 @@ technologies = {
 				date > "1031.1.1"
 			}
 
-			modifier = {
-				factor = 10
-				tag = GER
-				date > "1034.1.1"
-			}
+			
 		}
 	}
 
@@ -1201,19 +1120,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					original_tag = AFG
-					has_dlc = "Graveyard of Empires"
-					has_completed_focus = AFG_expand_quami_template
-				}
-				add_units_to_division_template = {
-					template_name = "Pashtun Levy" 
-					support = {
-						field_hospital = 0 
-					}
-				}
-			}
+			
 		}
 	}
 
@@ -1418,28 +1325,8 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					tag = USA
-					is_ai = yes
-				}
-				add_units_to_division_template = {
-					template_name = "Field Army Headquarters"
-					support = { hq_logistics = 0 }
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					tag = SOV
-					is_ai = yes
-				}
-				add_units_to_division_template = {
-					template_name = "Shtab Armii"
-					support = { hq_logistics = 0 }
-				}
-			}
+			
+			
 		}
 
 		path = {
@@ -1542,10 +1429,7 @@ technologies = {
 				date > "1034.1.1"
 			}
 
-			modifier = {
-				factor = 2
-				tag = GER
-			}
+			
 		}
 	}
 
@@ -1933,13 +1817,7 @@ technologies = {
 				factor = 1
 			}
 
-			modifier = {
-				OR = {
-					TAG = GER
-					tag = SOV
-				}
-				factor = 1.5
-			}
+			
 		}
 	}
 
@@ -2015,10 +1893,7 @@ technologies = {
 				has_war = yes
 				factor = 20
 			}
-			modifier = {
-				tag = GER
-				factor = 5
-			}
+			
 			modifier = {
 				factor = 1.2
 				date > "1030.1.1"

@@ -288,11 +288,7 @@ technologies = {
 				is_major = yes
 			}
 
-			modifier = {
-				factor = 0
-				original_tag = GER
-				date < "1032.2.1"
-			}
+			
 
 			modifier = {
 				factor = 1.2
@@ -441,10 +437,7 @@ technologies = {
 				is_major = yes
 				factor = 2
 			}
-			modifier = {
-				tag = GER
-				factor = 2
-			}
+			
 		}
 	}
 
@@ -766,16 +759,9 @@ technologies = {
 				factor = 0.1
 			}
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
 			
-			modifier = {
-				factor = 10
-				tag = USA
-				date > 1029.1.1
-			}
+			
+			
 		}
 	}
 	
@@ -810,15 +796,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
 			
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+			
+			
 		}
 	}
 	
@@ -871,15 +851,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
 			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			
+			
 		}
 	}
 	
@@ -914,15 +888,9 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
 			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			
+			
 		}
 	}
 	
@@ -1410,13 +1378,7 @@ technologies = {
 				}
 				factor = 5
 			}
-			modifier = {
-				OR = {
-					tag = USA
-					tag = GER
-				}
-				factor = 3
-			}
+			
 		}
 	}
 
@@ -1465,14 +1427,7 @@ technologies = {
 				}
 				factor = 5
 			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = SOV
-					tag = ENG
-				}
-				factor = 3
-			}
+			
 		}
 	}
 
@@ -1514,14 +1469,7 @@ technologies = {
 				}
 				factor = 5
 			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = SOV
-					tag = ENG
-				}
-				factor = 3
-			}
+			
 		}
 	}
 
@@ -1563,14 +1511,7 @@ technologies = {
 				}
 				factor = 5
 			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = SOV
-					tag = ENG
-				}
-				factor = 3
-			}
+			
 		}
 	}
 
@@ -1767,11 +1708,7 @@ technologies = {
 				factor = 8
 				date > "1032.6.1"
 			}
-			modifier = {
-				factor = 0
-				original_tag = GER
-				date < "1032.12.1"
-			}
+			
 			modifier = {
 				num_of_military_factories < 10
 				factor = 0
@@ -1904,13 +1841,7 @@ technologies = {
 				date > "1031.1.1"
 				factor = 3
 			}
-			modifier = {
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
-			}
+			
 		}
 	}
 
