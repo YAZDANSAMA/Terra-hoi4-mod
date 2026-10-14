@@ -1,0 +1,1850 @@
+# Reversible native strategies: actual decisions still pay their ordinary costs.
+# Subject military obligations are independent of sovereign exhaustion/trauma gates.
+terra_state_recovery_policy = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { is_ai = yes terra_state_ready = yes is_subject = no has_country_flag = terra_state_goal_recovery }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = avoid_starting_wars value = 150 }
+    ai_strategy = { type = pp_spend_priority id = idea value = 40 }
+    ai_strategy = { type = pp_spend_priority id = decision value = 25 }
+}
+
+terra_state_commercial_policy = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { is_ai = yes terra_state_ready = yes has_war = no has_country_flag = terra_state_goal_commerce }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = added_military_to_civilian_factory_ratio value = -10 }
+    ai_strategy = { type = pp_spend_priority id = relation value = 35 }
+}
+
+terra_state_security_policy = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { is_ai = yes terra_state_ready = yes is_subject = no has_country_flag = terra_state_goal_security }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = avoid_starting_wars value = 25 }
+    ai_strategy = { type = pp_spend_priority id = relation value = 20 }
+}
+
+terra_state_low_support_caution = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { is_ai = yes terra_state_ready = yes is_subject = no has_war_support < 0.35 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = avoid_starting_wars value = 100 }
+}
+
+terra_state_subject_loyalty_AGI = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = AGI
+        country_exists = AGI AGI = { has_war = yes }
+        NOT = { has_war_with = AGI } NOT = { has_war_together_with = AGI }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = AGI target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = AGI target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_AGI = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = AGI
+        country_exists = AGI has_war_together_with = AGI num_divisions > 0
+        NOT = { has_war_with = AGI }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = AGI value = 100 }
+}
+
+terra_state_subject_loyalty_BLV = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = BLV
+        country_exists = BLV BLV = { has_war = yes }
+        NOT = { has_war_with = BLV } NOT = { has_war_together_with = BLV }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = BLV target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = BLV target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_BLV = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = BLV
+        country_exists = BLV has_war_together_with = BLV num_divisions > 0
+        NOT = { has_war_with = BLV }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = BLV value = 100 }
+}
+
+terra_state_subject_loyalty_CLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = CLM
+        country_exists = CLM CLM = { has_war = yes }
+        NOT = { has_war_with = CLM } NOT = { has_war_together_with = CLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = CLM target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = CLM target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_CLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = CLM
+        country_exists = CLM has_war_together_with = CLM num_divisions > 0
+        NOT = { has_war_with = CLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = CLM value = 100 }
+}
+
+terra_state_subject_loyalty_HGS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HGS
+        country_exists = HGS HGS = { has_war = yes }
+        NOT = { has_war_with = HGS } NOT = { has_war_together_with = HGS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = HGS target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = HGS target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_HGS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HGS
+        country_exists = HGS has_war_together_with = HGS num_divisions > 0
+        NOT = { has_war_with = HGS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = HGS value = 100 }
+}
+
+terra_state_subject_loyalty_HGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HGN
+        country_exists = HGN HGN = { has_war = yes }
+        NOT = { has_war_with = HGN } NOT = { has_war_together_with = HGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = HGN target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = HGN target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_HGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HGN
+        country_exists = HGN has_war_together_with = HGN num_divisions > 0
+        NOT = { has_war_with = HGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = HGN value = 100 }
+}
+
+terra_state_subject_loyalty_HSS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HSS
+        country_exists = HSS HSS = { has_war = yes }
+        NOT = { has_war_with = HSS } NOT = { has_war_together_with = HSS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = HSS target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = HSS target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_HSS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HSS
+        country_exists = HSS has_war_together_with = HSS num_divisions > 0
+        NOT = { has_war_with = HSS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = HSS value = 100 }
+}
+
+terra_state_subject_loyalty_IBR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = IBR
+        country_exists = IBR IBR = { has_war = yes }
+        NOT = { has_war_with = IBR } NOT = { has_war_together_with = IBR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = IBR target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = IBR target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_IBR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = IBR
+        country_exists = IBR has_war_together_with = IBR num_divisions > 0
+        NOT = { has_war_with = IBR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = IBR value = 100 }
+}
+
+terra_state_subject_loyalty_KJG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KJG
+        country_exists = KJG KJG = { has_war = yes }
+        NOT = { has_war_with = KJG } NOT = { has_war_together_with = KJG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = KJG target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = KJG target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_KJG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KJG
+        country_exists = KJG has_war_together_with = KJG num_divisions > 0
+        NOT = { has_war_with = KJG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = KJG value = 100 }
+}
+
+terra_state_subject_loyalty_KZM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KZM
+        country_exists = KZM KZM = { has_war = yes }
+        NOT = { has_war_with = KZM } NOT = { has_war_together_with = KZM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = KZM target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = KZM target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_KZM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KZM
+        country_exists = KZM has_war_together_with = KZM num_divisions > 0
+        NOT = { has_war_with = KZM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = KZM value = 100 }
+}
+
+terra_state_subject_loyalty_KZD = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KZD
+        country_exists = KZD KZD = { has_war = yes }
+        NOT = { has_war_with = KZD } NOT = { has_war_together_with = KZD }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = KZD target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = KZD target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_KZD = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KZD
+        country_exists = KZD has_war_together_with = KZD num_divisions > 0
+        NOT = { has_war_with = KZD }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = KZD value = 100 }
+}
+
+terra_state_subject_loyalty_LTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = LTR
+        country_exists = LTR LTR = { has_war = yes }
+        NOT = { has_war_with = LTR } NOT = { has_war_together_with = LTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = LTR target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = LTR target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_LTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = LTR
+        country_exists = LTR has_war_together_with = LTR num_divisions > 0
+        NOT = { has_war_with = LTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = LTR value = 100 }
+}
+
+terra_state_subject_loyalty_LTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = LTH
+        country_exists = LTH LTH = { has_war = yes }
+        NOT = { has_war_with = LTH } NOT = { has_war_together_with = LTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = LTH target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = LTH target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_LTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = LTH
+        country_exists = LTH has_war_together_with = LTH num_divisions > 0
+        NOT = { has_war_with = LTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = LTH value = 100 }
+}
+
+terra_state_subject_loyalty_MNS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = MNS
+        country_exists = MNS MNS = { has_war = yes }
+        NOT = { has_war_with = MNS } NOT = { has_war_together_with = MNS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = MNS target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = MNS target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_MNS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = MNS
+        country_exists = MNS has_war_together_with = MNS num_divisions > 0
+        NOT = { has_war_with = MNS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = MNS value = 100 }
+}
+
+terra_state_subject_loyalty_RMB = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = RMB
+        country_exists = RMB RMB = { has_war = yes }
+        NOT = { has_war_with = RMB } NOT = { has_war_together_with = RMB }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = RMB target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = RMB target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_RMB = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = RMB
+        country_exists = RMB has_war_together_with = RMB num_divisions > 0
+        NOT = { has_war_with = RMB }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = RMB value = 100 }
+}
+
+terra_state_subject_loyalty_SMN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SMN
+        country_exists = SMN SMN = { has_war = yes }
+        NOT = { has_war_with = SMN } NOT = { has_war_together_with = SMN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = SMN target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = SMN target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_SMN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SMN
+        country_exists = SMN has_war_together_with = SMN num_divisions > 0
+        NOT = { has_war_with = SMN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = SMN value = 100 }
+}
+
+terra_state_subject_loyalty_SGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SGN
+        country_exists = SGN SGN = { has_war = yes }
+        NOT = { has_war_with = SGN } NOT = { has_war_together_with = SGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = SGN target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = SGN target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_SGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SGN
+        country_exists = SGN has_war_together_with = SGN num_divisions > 0
+        NOT = { has_war_with = SGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = SGN value = 100 }
+}
+
+terra_state_subject_loyalty_SRC = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SRC
+        country_exists = SRC SRC = { has_war = yes }
+        NOT = { has_war_with = SRC } NOT = { has_war_together_with = SRC }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = SRC target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = SRC target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_SRC = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SRC
+        country_exists = SRC has_war_together_with = SRC num_divisions > 0
+        NOT = { has_war_with = SRC }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = SRC value = 100 }
+}
+
+terra_state_subject_loyalty_URS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = URS
+        country_exists = URS URS = { has_war = yes }
+        NOT = { has_war_with = URS } NOT = { has_war_together_with = URS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = URS target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = URS target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_URS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = URS
+        country_exists = URS has_war_together_with = URS num_divisions > 0
+        NOT = { has_war_with = URS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = URS value = 100 }
+}
+
+terra_state_subject_loyalty_VCT = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = VCT
+        country_exists = VCT VCT = { has_war = yes }
+        NOT = { has_war_with = VCT } NOT = { has_war_together_with = VCT }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = VCT target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = VCT target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_VCT = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = VCT
+        country_exists = VCT has_war_together_with = VCT num_divisions > 0
+        NOT = { has_war_with = VCT }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = VCT value = 100 }
+}
+
+terra_state_subject_loyalty_YAN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = YAN
+        country_exists = YAN YAN = { has_war = yes }
+        NOT = { has_war_with = YAN } NOT = { has_war_together_with = YAN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = YAN target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = YAN target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_YAN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = YAN
+        country_exists = YAN has_war_together_with = YAN num_divisions > 0
+        NOT = { has_war_with = YAN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = YAN value = 100 }
+}
+
+terra_state_subject_loyalty_TRR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = TRR
+        country_exists = TRR TRR = { has_war = yes }
+        NOT = { has_war_with = TRR } NOT = { has_war_together_with = TRR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = TRR target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = TRR target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_TRR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = TRR
+        country_exists = TRR has_war_together_with = TRR num_divisions > 0
+        NOT = { has_war_with = TRR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = TRR value = 100 }
+}
+
+terra_state_subject_loyalty_LGL = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = LGL
+        country_exists = LGL LGL = { has_war = yes }
+        NOT = { has_war_with = LGL } NOT = { has_war_together_with = LGL }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = LGL target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = LGL target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_LGL = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = LGL
+        country_exists = LGL has_war_together_with = LGL num_divisions > 0
+        NOT = { has_war_with = LGL }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = LGL value = 100 }
+}
+
+terra_state_subject_loyalty_VVA = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = VVA
+        country_exists = VVA VVA = { has_war = yes }
+        NOT = { has_war_with = VVA } NOT = { has_war_together_with = VVA }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = VVA target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = VVA target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_VVA = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = VVA
+        country_exists = VVA has_war_together_with = VVA num_divisions > 0
+        NOT = { has_war_with = VVA }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = VVA value = 100 }
+}
+
+terra_state_subject_loyalty_TNJ = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = TNJ
+        country_exists = TNJ TNJ = { has_war = yes }
+        NOT = { has_war_with = TNJ } NOT = { has_war_together_with = TNJ }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = TNJ target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = TNJ target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_TNJ = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = TNJ
+        country_exists = TNJ has_war_together_with = TNJ num_divisions > 0
+        NOT = { has_war_with = TNJ }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = TNJ value = 100 }
+}
+
+terra_state_subject_loyalty_MSN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = MSN
+        country_exists = MSN MSN = { has_war = yes }
+        NOT = { has_war_with = MSN } NOT = { has_war_together_with = MSN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = MSN target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = MSN target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_MSN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = MSN
+        country_exists = MSN has_war_together_with = MSN num_divisions > 0
+        NOT = { has_war_with = MSN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = MSN value = 100 }
+}
+
+terra_state_subject_loyalty_WSG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = WSG
+        country_exists = WSG WSG = { has_war = yes }
+        NOT = { has_war_with = WSG } NOT = { has_war_together_with = WSG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = WSG target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = WSG target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_WSG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = WSG
+        country_exists = WSG has_war_together_with = WSG num_divisions > 0
+        NOT = { has_war_with = WSG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = WSG value = 100 }
+}
+
+terra_state_subject_loyalty_KTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KTH
+        country_exists = KTH KTH = { has_war = yes }
+        NOT = { has_war_with = KTH } NOT = { has_war_together_with = KTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = KTH target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_KTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = KTH
+        country_exists = KTH has_war_together_with = KTH num_divisions > 0
+        NOT = { has_war_with = KTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = KTH value = 100 }
+}
+
+terra_state_subject_loyalty_VNH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = VNH
+        country_exists = VNH VNH = { has_war = yes }
+        NOT = { has_war_with = VNH } NOT = { has_war_together_with = VNH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = VNH target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = VNH target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_VNH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = VNH
+        country_exists = VNH has_war_together_with = VNH num_divisions > 0
+        NOT = { has_war_with = VNH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = VNH value = 100 }
+}
+
+terra_state_subject_loyalty_SCW = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SCW
+        country_exists = SCW SCW = { has_war = yes }
+        NOT = { has_war_with = SCW } NOT = { has_war_together_with = SCW }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = SCW target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = SCW target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_SCW = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = SCW
+        country_exists = SCW has_war_together_with = SCW num_divisions > 0
+        NOT = { has_war_with = SCW }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = SCW value = 100 }
+}
+
+terra_state_subject_loyalty_D01 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D01
+        country_exists = D01 D01 = { has_war = yes }
+        NOT = { has_war_with = D01 } NOT = { has_war_together_with = D01 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D01 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D01 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D01 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D01
+        country_exists = D01 has_war_together_with = D01 num_divisions > 0
+        NOT = { has_war_with = D01 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D01 value = 100 }
+}
+
+terra_state_subject_loyalty_D02 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D02
+        country_exists = D02 D02 = { has_war = yes }
+        NOT = { has_war_with = D02 } NOT = { has_war_together_with = D02 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D02 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D02 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D02 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D02
+        country_exists = D02 has_war_together_with = D02 num_divisions > 0
+        NOT = { has_war_with = D02 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D02 value = 100 }
+}
+
+terra_state_subject_loyalty_D03 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D03
+        country_exists = D03 D03 = { has_war = yes }
+        NOT = { has_war_with = D03 } NOT = { has_war_together_with = D03 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D03 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D03 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D03 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D03
+        country_exists = D03 has_war_together_with = D03 num_divisions > 0
+        NOT = { has_war_with = D03 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D03 value = 100 }
+}
+
+terra_state_subject_loyalty_D04 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D04
+        country_exists = D04 D04 = { has_war = yes }
+        NOT = { has_war_with = D04 } NOT = { has_war_together_with = D04 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D04 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D04 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D04 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D04
+        country_exists = D04 has_war_together_with = D04 num_divisions > 0
+        NOT = { has_war_with = D04 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D04 value = 100 }
+}
+
+terra_state_subject_loyalty_D05 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D05
+        country_exists = D05 D05 = { has_war = yes }
+        NOT = { has_war_with = D05 } NOT = { has_war_together_with = D05 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D05 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D05 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D05 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D05
+        country_exists = D05 has_war_together_with = D05 num_divisions > 0
+        NOT = { has_war_with = D05 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D05 value = 100 }
+}
+
+terra_state_subject_loyalty_D06 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D06
+        country_exists = D06 D06 = { has_war = yes }
+        NOT = { has_war_with = D06 } NOT = { has_war_together_with = D06 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D06 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D06 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D06 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D06
+        country_exists = D06 has_war_together_with = D06 num_divisions > 0
+        NOT = { has_war_with = D06 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D06 value = 100 }
+}
+
+terra_state_subject_loyalty_D07 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D07
+        country_exists = D07 D07 = { has_war = yes }
+        NOT = { has_war_with = D07 } NOT = { has_war_together_with = D07 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D07 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D07 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D07 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D07
+        country_exists = D07 has_war_together_with = D07 num_divisions > 0
+        NOT = { has_war_with = D07 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D07 value = 100 }
+}
+
+terra_state_subject_loyalty_D08 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D08
+        country_exists = D08 D08 = { has_war = yes }
+        NOT = { has_war_with = D08 } NOT = { has_war_together_with = D08 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D08 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D08 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D08 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D08
+        country_exists = D08 has_war_together_with = D08 num_divisions > 0
+        NOT = { has_war_with = D08 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D08 value = 100 }
+}
+
+terra_state_subject_loyalty_D09 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D09
+        country_exists = D09 D09 = { has_war = yes }
+        NOT = { has_war_with = D09 } NOT = { has_war_together_with = D09 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D09 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D09 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D09 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D09
+        country_exists = D09 has_war_together_with = D09 num_divisions > 0
+        NOT = { has_war_with = D09 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D09 value = 100 }
+}
+
+terra_state_subject_loyalty_D10 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D10
+        country_exists = D10 D10 = { has_war = yes }
+        NOT = { has_war_with = D10 } NOT = { has_war_together_with = D10 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D10 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D10 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D10 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D10
+        country_exists = D10 has_war_together_with = D10 num_divisions > 0
+        NOT = { has_war_with = D10 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D10 value = 100 }
+}
+
+terra_state_subject_loyalty_D11 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D11
+        country_exists = D11 D11 = { has_war = yes }
+        NOT = { has_war_with = D11 } NOT = { has_war_together_with = D11 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D11 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D11 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D11 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D11
+        country_exists = D11 has_war_together_with = D11 num_divisions > 0
+        NOT = { has_war_with = D11 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D11 value = 100 }
+}
+
+terra_state_subject_loyalty_D12 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D12
+        country_exists = D12 D12 = { has_war = yes }
+        NOT = { has_war_with = D12 } NOT = { has_war_together_with = D12 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D12 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D12 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D12 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D12
+        country_exists = D12 has_war_together_with = D12 num_divisions > 0
+        NOT = { has_war_with = D12 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D12 value = 100 }
+}
+
+terra_state_subject_loyalty_D13 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D13
+        country_exists = D13 D13 = { has_war = yes }
+        NOT = { has_war_with = D13 } NOT = { has_war_together_with = D13 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D13 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D13 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D13 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D13
+        country_exists = D13 has_war_together_with = D13 num_divisions > 0
+        NOT = { has_war_with = D13 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D13 value = 100 }
+}
+
+terra_state_subject_loyalty_D14 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D14
+        country_exists = D14 D14 = { has_war = yes }
+        NOT = { has_war_with = D14 } NOT = { has_war_together_with = D14 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D14 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D14 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D14 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D14
+        country_exists = D14 has_war_together_with = D14 num_divisions > 0
+        NOT = { has_war_with = D14 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D14 value = 100 }
+}
+
+terra_state_subject_loyalty_D15 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D15
+        country_exists = D15 D15 = { has_war = yes }
+        NOT = { has_war_with = D15 } NOT = { has_war_together_with = D15 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D15 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D15 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D15 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D15
+        country_exists = D15 has_war_together_with = D15 num_divisions > 0
+        NOT = { has_war_with = D15 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D15 value = 100 }
+}
+
+terra_state_subject_loyalty_D16 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D16
+        country_exists = D16 D16 = { has_war = yes }
+        NOT = { has_war_with = D16 } NOT = { has_war_together_with = D16 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D16 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D16 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D16 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D16
+        country_exists = D16 has_war_together_with = D16 num_divisions > 0
+        NOT = { has_war_with = D16 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D16 value = 100 }
+}
+
+terra_state_subject_loyalty_D17 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D17
+        country_exists = D17 D17 = { has_war = yes }
+        NOT = { has_war_with = D17 } NOT = { has_war_together_with = D17 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D17 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D17 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D17 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D17
+        country_exists = D17 has_war_together_with = D17 num_divisions > 0
+        NOT = { has_war_with = D17 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D17 value = 100 }
+}
+
+terra_state_subject_loyalty_D18 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D18
+        country_exists = D18 D18 = { has_war = yes }
+        NOT = { has_war_with = D18 } NOT = { has_war_together_with = D18 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D18 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D18 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D18 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D18
+        country_exists = D18 has_war_together_with = D18 num_divisions > 0
+        NOT = { has_war_with = D18 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D18 value = 100 }
+}
+
+terra_state_subject_loyalty_D19 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D19
+        country_exists = D19 D19 = { has_war = yes }
+        NOT = { has_war_with = D19 } NOT = { has_war_together_with = D19 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D19 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D19 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D19 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D19
+        country_exists = D19 has_war_together_with = D19 num_divisions > 0
+        NOT = { has_war_with = D19 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D19 value = 100 }
+}
+
+terra_state_subject_loyalty_D20 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D20
+        country_exists = D20 D20 = { has_war = yes }
+        NOT = { has_war_with = D20 } NOT = { has_war_together_with = D20 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D20 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D20 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D20 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D20
+        country_exists = D20 has_war_together_with = D20 num_divisions > 0
+        NOT = { has_war_with = D20 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D20 value = 100 }
+}
+
+terra_state_subject_loyalty_D21 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D21
+        country_exists = D21 D21 = { has_war = yes }
+        NOT = { has_war_with = D21 } NOT = { has_war_together_with = D21 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D21 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D21 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D21 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D21
+        country_exists = D21 has_war_together_with = D21 num_divisions > 0
+        NOT = { has_war_with = D21 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D21 value = 100 }
+}
+
+terra_state_subject_loyalty_D22 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D22
+        country_exists = D22 D22 = { has_war = yes }
+        NOT = { has_war_with = D22 } NOT = { has_war_together_with = D22 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D22 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D22 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D22 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D22
+        country_exists = D22 has_war_together_with = D22 num_divisions > 0
+        NOT = { has_war_with = D22 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D22 value = 100 }
+}
+
+terra_state_subject_loyalty_D23 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D23
+        country_exists = D23 D23 = { has_war = yes }
+        NOT = { has_war_with = D23 } NOT = { has_war_together_with = D23 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D23 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D23 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D23 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D23
+        country_exists = D23 has_war_together_with = D23 num_divisions > 0
+        NOT = { has_war_with = D23 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D23 value = 100 }
+}
+
+terra_state_subject_loyalty_D24 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D24
+        country_exists = D24 D24 = { has_war = yes }
+        NOT = { has_war_with = D24 } NOT = { has_war_together_with = D24 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D24 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D24 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D24 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D24
+        country_exists = D24 has_war_together_with = D24 num_divisions > 0
+        NOT = { has_war_with = D24 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D24 value = 100 }
+}
+
+terra_state_subject_loyalty_D25 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D25
+        country_exists = D25 D25 = { has_war = yes }
+        NOT = { has_war_with = D25 } NOT = { has_war_together_with = D25 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D25 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D25 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D25 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D25
+        country_exists = D25 has_war_together_with = D25 num_divisions > 0
+        NOT = { has_war_with = D25 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D25 value = 100 }
+}
+
+terra_state_subject_loyalty_D26 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D26
+        country_exists = D26 D26 = { has_war = yes }
+        NOT = { has_war_with = D26 } NOT = { has_war_together_with = D26 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D26 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D26 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D26 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D26
+        country_exists = D26 has_war_together_with = D26 num_divisions > 0
+        NOT = { has_war_with = D26 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D26 value = 100 }
+}
+
+terra_state_subject_loyalty_D27 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D27
+        country_exists = D27 D27 = { has_war = yes }
+        NOT = { has_war_with = D27 } NOT = { has_war_together_with = D27 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D27 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D27 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D27 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D27
+        country_exists = D27 has_war_together_with = D27 num_divisions > 0
+        NOT = { has_war_with = D27 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D27 value = 100 }
+}
+
+terra_state_subject_loyalty_D28 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D28
+        country_exists = D28 D28 = { has_war = yes }
+        NOT = { has_war_with = D28 } NOT = { has_war_together_with = D28 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D28 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D28 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D28 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D28
+        country_exists = D28 has_war_together_with = D28 num_divisions > 0
+        NOT = { has_war_with = D28 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D28 value = 100 }
+}
+
+terra_state_subject_loyalty_D29 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D29
+        country_exists = D29 D29 = { has_war = yes }
+        NOT = { has_war_with = D29 } NOT = { has_war_together_with = D29 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D29 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D29 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D29 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D29
+        country_exists = D29 has_war_together_with = D29 num_divisions > 0
+        NOT = { has_war_with = D29 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D29 value = 100 }
+}
+
+terra_state_subject_loyalty_D30 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D30
+        country_exists = D30 D30 = { has_war = yes }
+        NOT = { has_war_with = D30 } NOT = { has_war_together_with = D30 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D30 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D30 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D30 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D30
+        country_exists = D30 has_war_together_with = D30 num_divisions > 0
+        NOT = { has_war_with = D30 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D30 value = 100 }
+}
+
+terra_state_subject_loyalty_D31 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D31
+        country_exists = D31 D31 = { has_war = yes }
+        NOT = { has_war_with = D31 } NOT = { has_war_together_with = D31 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D31 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D31 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D31 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D31
+        country_exists = D31 has_war_together_with = D31 num_divisions > 0
+        NOT = { has_war_with = D31 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D31 value = 100 }
+}
+
+terra_state_subject_loyalty_D32 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D32
+        country_exists = D32 D32 = { has_war = yes }
+        NOT = { has_war_with = D32 } NOT = { has_war_together_with = D32 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D32 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D32 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D32 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D32
+        country_exists = D32 has_war_together_with = D32 num_divisions > 0
+        NOT = { has_war_with = D32 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D32 value = 100 }
+}
+
+terra_state_subject_loyalty_D33 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D33
+        country_exists = D33 D33 = { has_war = yes }
+        NOT = { has_war_with = D33 } NOT = { has_war_together_with = D33 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D33 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D33 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D33 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D33
+        country_exists = D33 has_war_together_with = D33 num_divisions > 0
+        NOT = { has_war_with = D33 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D33 value = 100 }
+}
+
+terra_state_subject_loyalty_D34 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D34
+        country_exists = D34 D34 = { has_war = yes }
+        NOT = { has_war_with = D34 } NOT = { has_war_together_with = D34 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D34 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D34 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D34 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D34
+        country_exists = D34 has_war_together_with = D34 num_divisions > 0
+        NOT = { has_war_with = D34 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D34 value = 100 }
+}
+
+terra_state_subject_loyalty_D35 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D35
+        country_exists = D35 D35 = { has_war = yes }
+        NOT = { has_war_with = D35 } NOT = { has_war_together_with = D35 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D35 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D35 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D35 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D35
+        country_exists = D35 has_war_together_with = D35 num_divisions > 0
+        NOT = { has_war_with = D35 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D35 value = 100 }
+}
+
+terra_state_subject_loyalty_D36 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D36
+        country_exists = D36 D36 = { has_war = yes }
+        NOT = { has_war_with = D36 } NOT = { has_war_together_with = D36 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D36 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D36 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D36 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D36
+        country_exists = D36 has_war_together_with = D36 num_divisions > 0
+        NOT = { has_war_with = D36 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D36 value = 100 }
+}
+
+terra_state_subject_loyalty_D37 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D37
+        country_exists = D37 D37 = { has_war = yes }
+        NOT = { has_war_with = D37 } NOT = { has_war_together_with = D37 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D37 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D37 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D37 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D37
+        country_exists = D37 has_war_together_with = D37 num_divisions > 0
+        NOT = { has_war_with = D37 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D37 value = 100 }
+}
+
+terra_state_subject_loyalty_D38 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D38
+        country_exists = D38 D38 = { has_war = yes }
+        NOT = { has_war_with = D38 } NOT = { has_war_together_with = D38 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D38 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D38 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D38 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D38
+        country_exists = D38 has_war_together_with = D38 num_divisions > 0
+        NOT = { has_war_with = D38 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D38 value = 100 }
+}
+
+terra_state_subject_loyalty_D39 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D39
+        country_exists = D39 D39 = { has_war = yes }
+        NOT = { has_war_with = D39 } NOT = { has_war_together_with = D39 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D39 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D39 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D39 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D39
+        country_exists = D39 has_war_together_with = D39 num_divisions > 0
+        NOT = { has_war_with = D39 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D39 value = 100 }
+}
+
+terra_state_subject_loyalty_D40 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D40
+        country_exists = D40 D40 = { has_war = yes }
+        NOT = { has_war_with = D40 } NOT = { has_war_together_with = D40 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D40 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D40 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D40 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D40
+        country_exists = D40 has_war_together_with = D40 num_divisions > 0
+        NOT = { has_war_with = D40 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D40 value = 100 }
+}
+
+terra_state_subject_loyalty_D41 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D41
+        country_exists = D41 D41 = { has_war = yes }
+        NOT = { has_war_with = D41 } NOT = { has_war_together_with = D41 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D41 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D41 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D41 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D41
+        country_exists = D41 has_war_together_with = D41 num_divisions > 0
+        NOT = { has_war_with = D41 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D41 value = 100 }
+}
+
+terra_state_subject_loyalty_D42 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D42
+        country_exists = D42 D42 = { has_war = yes }
+        NOT = { has_war_with = D42 } NOT = { has_war_together_with = D42 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D42 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D42 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D42 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D42
+        country_exists = D42 has_war_together_with = D42 num_divisions > 0
+        NOT = { has_war_with = D42 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D42 value = 100 }
+}
+
+terra_state_subject_loyalty_D43 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D43
+        country_exists = D43 D43 = { has_war = yes }
+        NOT = { has_war_with = D43 } NOT = { has_war_together_with = D43 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D43 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D43 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D43 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D43
+        country_exists = D43 has_war_together_with = D43 num_divisions > 0
+        NOT = { has_war_with = D43 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D43 value = 100 }
+}
+
+terra_state_subject_loyalty_D44 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D44
+        country_exists = D44 D44 = { has_war = yes }
+        NOT = { has_war_with = D44 } NOT = { has_war_together_with = D44 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D44 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D44 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D44 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D44
+        country_exists = D44 has_war_together_with = D44 num_divisions > 0
+        NOT = { has_war_with = D44 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D44 value = 100 }
+}
+
+terra_state_subject_loyalty_D45 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D45
+        country_exists = D45 D45 = { has_war = yes }
+        NOT = { has_war_with = D45 } NOT = { has_war_together_with = D45 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D45 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D45 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D45 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D45
+        country_exists = D45 has_war_together_with = D45 num_divisions > 0
+        NOT = { has_war_with = D45 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D45 value = 100 }
+}
+
+terra_state_subject_loyalty_D46 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D46
+        country_exists = D46 D46 = { has_war = yes }
+        NOT = { has_war_with = D46 } NOT = { has_war_together_with = D46 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D46 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D46 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D46 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D46
+        country_exists = D46 has_war_together_with = D46 num_divisions > 0
+        NOT = { has_war_with = D46 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D46 value = 100 }
+}
+
+terra_state_subject_loyalty_D47 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D47
+        country_exists = D47 D47 = { has_war = yes }
+        NOT = { has_war_with = D47 } NOT = { has_war_together_with = D47 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D47 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D47 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D47 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D47
+        country_exists = D47 has_war_together_with = D47 num_divisions > 0
+        NOT = { has_war_with = D47 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D47 value = 100 }
+}
+
+terra_state_subject_loyalty_D48 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D48
+        country_exists = D48 D48 = { has_war = yes }
+        NOT = { has_war_with = D48 } NOT = { has_war_together_with = D48 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D48 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D48 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D48 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D48
+        country_exists = D48 has_war_together_with = D48 num_divisions > 0
+        NOT = { has_war_with = D48 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D48 value = 100 }
+}
+
+terra_state_subject_loyalty_D49 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D49
+        country_exists = D49 D49 = { has_war = yes }
+        NOT = { has_war_with = D49 } NOT = { has_war_together_with = D49 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D49 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D49 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D49 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D49
+        country_exists = D49 has_war_together_with = D49 num_divisions > 0
+        NOT = { has_war_with = D49 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D49 value = 100 }
+}
+
+terra_state_subject_loyalty_D50 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D50
+        country_exists = D50 D50 = { has_war = yes }
+        NOT = { has_war_with = D50 } NOT = { has_war_together_with = D50 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = D50 target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = D50 target = join_allies value = 1000 }
+}
+
+terra_state_subject_front_support_D50 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = D50
+        country_exists = D50 has_war_together_with = D50 num_divisions > 0
+        NOT = { has_war_with = D50 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = D50 value = 100 }
+}

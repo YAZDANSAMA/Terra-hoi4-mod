@@ -1,5 +1,7 @@
 # Dawn of Terra diplomacy director
 
+The all-country strategic extension is documented in [strategic_ai.md](strategic_ai.md). It adds current-ruler personality updates, domestic constraints, war fatigue and defeat memory, public reputation, staged warnings, intelligence confidence, common-threat coordination, conserved aid shipments, defensive commitments and strategic reports. This document explains the underlying directed diplomatic memory and the original dialogue layer; the extension's thresholds and checks take precedence where they augment that layer.
+
 این سیستم داخل خود مود اجرا می‌شود. کشورها شخصیت سیاسی، حافظهٔ اعتماد و دلخوری، منافع مشترک و هزینهٔ درگیری را در تصمیم‌های دیپلماتیک خود در نظر می‌گیرند. بازیکن می‌تواند مذاکره کند و پاسخ‌هایی متناسب با وضعیت و شخصیت طرف مقابل بگیرد. این یک شبیه‌سازی رفتاری با اسکریپت‌های HOI4 است؛ احساس واقعی یا گفت‌وگوی آزاد با یک مدل زبانی نیست.
 
 The director adds persistent political behavior to native HOI4 diplomacy. It runs in the mod's scripts, with no Python runtime, external model, API key, internet connection, or remote service. Developer validation tools outside the mod do not become game dependencies.

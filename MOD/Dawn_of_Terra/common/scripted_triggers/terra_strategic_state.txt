@@ -1,0 +1,67 @@
+# Shared strategic state is country-local; it never grants resources or changes sovereignty.
+terra_state_ready = {
+    terra_dip_ready = yes
+    has_country_flag = terra_state_initialized
+}
+
+# Capitulation has already changed has_capitulated by the time its hook executes.
+# Record callbacks deliberately retain access to previously initialized losers.
+terra_state_recordable = {
+    exists = yes
+    has_country_flag = terra_dip_initialized
+    has_country_flag = terra_state_initialized
+    NOT = { OR = { original_tag = SST original_tag = SEA } }
+}
+
+terra_state_needs_recovery = {
+    OR = {
+        has_civil_war = yes
+        check_variable = { terra_state_fatigue > 59 }
+        check_variable = { terra_state_defeat_memory > 49 }
+        check_variable = { terra_state_domestic_pressure > 59 }
+        AND = {
+            has_country_flag = terra_state_goal_recovery
+            OR = {
+                check_variable = { terra_state_fatigue > 34 }
+                check_variable = { terra_state_defeat_memory > 29 }
+                check_variable = { terra_state_domestic_pressure > 39 }
+            }
+        }
+    }
+}
+
+terra_state_has_foreign_core = {
+    any_other_country = {
+        terra_dip_participant = yes
+        NOT = { original_tag = TNJ }
+        any_owned_state = { is_core_of = ROOT }
+    }
+}
+
+terra_state_can_risk_new_war = {
+    terra_state_ready = yes
+    terra_ai_profile_allowed = yes
+    is_subject = no
+    has_civil_war = no
+    check_variable = { terra_state_fatigue < 45 }
+    check_variable = { terra_state_defeat_memory < 40 }
+    check_variable = { terra_state_domestic_pressure < 50 }
+    has_stability > 0.44
+    has_war_support > 0.34
+}
+
+terra_state_reliable_partner = {
+    terra_state_ready = yes
+    check_variable = { terra_state_reputation > 64 }
+}
+
+terra_state_unreliable_partner = {
+    terra_state_ready = yes
+    check_variable = { terra_state_reputation < 30 }
+}
+
+terra_state_subject_duty = {
+    terra_state_ready = yes
+    is_subject = yes
+    # Fatigue, defeat memory and domestic pressure do not release subject duties.
+}

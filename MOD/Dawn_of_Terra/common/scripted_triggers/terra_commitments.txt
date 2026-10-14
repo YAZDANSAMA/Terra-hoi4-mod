@@ -1,0 +1,253 @@
+# All event wrappers use ROOT/current and FROM as the actual negotiators.
+# Weekly processing requires ROOT=THIS. No mutable country event targets exist.
+terra_contract_free = {
+    terra_dip_ready = yes
+    terra_dip_sovereign = yes
+    NOT = { has_country_flag = terra_contract_pending }
+    NOT = { has_country_flag = terra_contract_active }
+}
+terra_contract_open_from = {
+    terra_contract_free = yes
+    FROM = { terra_contract_free = yes }
+    terra_dip_talks_available_from = yes
+    NOT = { terra_dip_conflicting_blocs_from = yes }
+    NOT = { has_country_flag = terra_contract_offer_cooldown }
+    FROM = { NOT = { has_country_flag = terra_contract_incoming_cooldown } }
+}
+terra_contract_pending_from = {
+    terra_dip_talks_available_from = yes
+    NOT = { terra_dip_conflicting_blocs_from = yes }
+    has_country_flag = terra_contract_pending
+    FROM = { has_country_flag = terra_contract_pending }
+    terra_contract_has_role_with = { PARTNER = FROM ROLE = pending_with }
+    FROM = { terra_contract_has_role_with = { PARTNER = ROOT ROLE = pending_with } }
+}
+terra_contract_aid_client_from = {
+    terra_contract_pending_from = yes
+    has_country_flag = terra_contract_pending_aid_client
+    FROM = { has_country_flag = terra_contract_pending_aid_donor }
+}
+terra_contract_aid_donor_from = {
+    terra_contract_pending_from = yes
+    has_country_flag = terra_contract_pending_aid_donor
+    FROM = { has_country_flag = terra_contract_pending_aid_client }
+}
+terra_contract_defense_client_from = {
+    terra_contract_pending_from = yes
+    has_country_flag = terra_contract_pending_protected
+    FROM = { has_country_flag = terra_contract_pending_defender }
+}
+terra_contract_defense_donor_from = {
+    terra_contract_pending_from = yes
+    has_country_flag = terra_contract_pending_defender
+    FROM = { has_country_flag = terra_contract_pending_protected }
+    NOT = { has_guaranteed = FROM }
+    DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = yes
+}
+terra_contract_pair_valid = {
+    terra_dip_ready = yes
+    terra_dip_sovereign = yes
+    $TARGET$ = { terra_dip_ready = yes terra_dip_sovereign = yes }
+    NOT = { has_war_with = $TARGET$ }
+    terra_contract_faction_unchanged = yes
+    $TARGET$ = { terra_contract_faction_unchanged = yes }
+    OR = {
+        is_in_faction = no
+        $TARGET$ = { is_in_faction = no }
+        is_in_faction_with = $TARGET$
+    }
+}
+terra_contract_aiding_defense_of = {
+    any_country = {
+        $TARGET$ = { has_defensive_war_with = PREV }
+        ROOT = { has_war_with = PREV }
+    }
+}
+terra_contract_defense_obligation_to = {
+    terra_dip_ready = yes
+    is_ai = yes
+    has_country_flag = terra_contract_defender_$TARGET$
+    has_guaranteed = $TARGET$
+    terra_contract_pair_valid = { TARGET = $TARGET$ }
+    $TARGET$ = { has_defensive_war = yes }
+}
+
+
+terra_contract_has_role_with = {
+    OR = {
+        AND = { $PARTNER$ = { tag = AGI } has_country_flag = terra_contract_$ROLE$_AGI }
+        AND = { $PARTNER$ = { tag = BLV } has_country_flag = terra_contract_$ROLE$_BLV }
+        AND = { $PARTNER$ = { tag = CLM } has_country_flag = terra_contract_$ROLE$_CLM }
+        AND = { $PARTNER$ = { tag = HGS } has_country_flag = terra_contract_$ROLE$_HGS }
+        AND = { $PARTNER$ = { tag = HGN } has_country_flag = terra_contract_$ROLE$_HGN }
+        AND = { $PARTNER$ = { tag = HSS } has_country_flag = terra_contract_$ROLE$_HSS }
+        AND = { $PARTNER$ = { tag = IBR } has_country_flag = terra_contract_$ROLE$_IBR }
+        AND = { $PARTNER$ = { tag = KJG } has_country_flag = terra_contract_$ROLE$_KJG }
+        AND = { $PARTNER$ = { tag = KZM } has_country_flag = terra_contract_$ROLE$_KZM }
+        AND = { $PARTNER$ = { tag = KZD } has_country_flag = terra_contract_$ROLE$_KZD }
+        AND = { $PARTNER$ = { tag = LTR } has_country_flag = terra_contract_$ROLE$_LTR }
+        AND = { $PARTNER$ = { tag = LTH } has_country_flag = terra_contract_$ROLE$_LTH }
+        AND = { $PARTNER$ = { tag = MNS } has_country_flag = terra_contract_$ROLE$_MNS }
+        AND = { $PARTNER$ = { tag = RMB } has_country_flag = terra_contract_$ROLE$_RMB }
+        AND = { $PARTNER$ = { tag = SMN } has_country_flag = terra_contract_$ROLE$_SMN }
+        AND = { $PARTNER$ = { tag = SGN } has_country_flag = terra_contract_$ROLE$_SGN }
+        AND = { $PARTNER$ = { tag = SST } has_country_flag = terra_contract_$ROLE$_SST }
+        AND = { $PARTNER$ = { tag = SRC } has_country_flag = terra_contract_$ROLE$_SRC }
+        AND = { $PARTNER$ = { tag = URS } has_country_flag = terra_contract_$ROLE$_URS }
+        AND = { $PARTNER$ = { tag = VCT } has_country_flag = terra_contract_$ROLE$_VCT }
+        AND = { $PARTNER$ = { tag = YAN } has_country_flag = terra_contract_$ROLE$_YAN }
+        AND = { $PARTNER$ = { tag = TRR } has_country_flag = terra_contract_$ROLE$_TRR }
+        AND = { $PARTNER$ = { tag = LGL } has_country_flag = terra_contract_$ROLE$_LGL }
+        AND = { $PARTNER$ = { tag = VVA } has_country_flag = terra_contract_$ROLE$_VVA }
+        AND = { $PARTNER$ = { tag = TNJ } has_country_flag = terra_contract_$ROLE$_TNJ }
+        AND = { $PARTNER$ = { tag = MSN } has_country_flag = terra_contract_$ROLE$_MSN }
+        AND = { $PARTNER$ = { tag = SEA } has_country_flag = terra_contract_$ROLE$_SEA }
+        AND = { $PARTNER$ = { tag = WSG } has_country_flag = terra_contract_$ROLE$_WSG }
+        AND = { $PARTNER$ = { tag = KTH } has_country_flag = terra_contract_$ROLE$_KTH }
+        AND = { $PARTNER$ = { tag = VNH } has_country_flag = terra_contract_$ROLE$_VNH }
+        AND = { $PARTNER$ = { tag = SCW } has_country_flag = terra_contract_$ROLE$_SCW }
+        AND = { $PARTNER$ = { tag = D01 } has_country_flag = terra_contract_$ROLE$_D01 }
+        AND = { $PARTNER$ = { tag = D02 } has_country_flag = terra_contract_$ROLE$_D02 }
+        AND = { $PARTNER$ = { tag = D03 } has_country_flag = terra_contract_$ROLE$_D03 }
+        AND = { $PARTNER$ = { tag = D04 } has_country_flag = terra_contract_$ROLE$_D04 }
+        AND = { $PARTNER$ = { tag = D05 } has_country_flag = terra_contract_$ROLE$_D05 }
+        AND = { $PARTNER$ = { tag = D06 } has_country_flag = terra_contract_$ROLE$_D06 }
+        AND = { $PARTNER$ = { tag = D07 } has_country_flag = terra_contract_$ROLE$_D07 }
+        AND = { $PARTNER$ = { tag = D08 } has_country_flag = terra_contract_$ROLE$_D08 }
+        AND = { $PARTNER$ = { tag = D09 } has_country_flag = terra_contract_$ROLE$_D09 }
+        AND = { $PARTNER$ = { tag = D10 } has_country_flag = terra_contract_$ROLE$_D10 }
+        AND = { $PARTNER$ = { tag = D11 } has_country_flag = terra_contract_$ROLE$_D11 }
+        AND = { $PARTNER$ = { tag = D12 } has_country_flag = terra_contract_$ROLE$_D12 }
+        AND = { $PARTNER$ = { tag = D13 } has_country_flag = terra_contract_$ROLE$_D13 }
+        AND = { $PARTNER$ = { tag = D14 } has_country_flag = terra_contract_$ROLE$_D14 }
+        AND = { $PARTNER$ = { tag = D15 } has_country_flag = terra_contract_$ROLE$_D15 }
+        AND = { $PARTNER$ = { tag = D16 } has_country_flag = terra_contract_$ROLE$_D16 }
+        AND = { $PARTNER$ = { tag = D17 } has_country_flag = terra_contract_$ROLE$_D17 }
+        AND = { $PARTNER$ = { tag = D18 } has_country_flag = terra_contract_$ROLE$_D18 }
+        AND = { $PARTNER$ = { tag = D19 } has_country_flag = terra_contract_$ROLE$_D19 }
+        AND = { $PARTNER$ = { tag = D20 } has_country_flag = terra_contract_$ROLE$_D20 }
+        AND = { $PARTNER$ = { tag = D21 } has_country_flag = terra_contract_$ROLE$_D21 }
+        AND = { $PARTNER$ = { tag = D22 } has_country_flag = terra_contract_$ROLE$_D22 }
+        AND = { $PARTNER$ = { tag = D23 } has_country_flag = terra_contract_$ROLE$_D23 }
+        AND = { $PARTNER$ = { tag = D24 } has_country_flag = terra_contract_$ROLE$_D24 }
+        AND = { $PARTNER$ = { tag = D25 } has_country_flag = terra_contract_$ROLE$_D25 }
+        AND = { $PARTNER$ = { tag = D26 } has_country_flag = terra_contract_$ROLE$_D26 }
+        AND = { $PARTNER$ = { tag = D27 } has_country_flag = terra_contract_$ROLE$_D27 }
+        AND = { $PARTNER$ = { tag = D28 } has_country_flag = terra_contract_$ROLE$_D28 }
+        AND = { $PARTNER$ = { tag = D29 } has_country_flag = terra_contract_$ROLE$_D29 }
+        AND = { $PARTNER$ = { tag = D30 } has_country_flag = terra_contract_$ROLE$_D30 }
+        AND = { $PARTNER$ = { tag = D31 } has_country_flag = terra_contract_$ROLE$_D31 }
+        AND = { $PARTNER$ = { tag = D32 } has_country_flag = terra_contract_$ROLE$_D32 }
+        AND = { $PARTNER$ = { tag = D33 } has_country_flag = terra_contract_$ROLE$_D33 }
+        AND = { $PARTNER$ = { tag = D34 } has_country_flag = terra_contract_$ROLE$_D34 }
+        AND = { $PARTNER$ = { tag = D35 } has_country_flag = terra_contract_$ROLE$_D35 }
+        AND = { $PARTNER$ = { tag = D36 } has_country_flag = terra_contract_$ROLE$_D36 }
+        AND = { $PARTNER$ = { tag = D37 } has_country_flag = terra_contract_$ROLE$_D37 }
+        AND = { $PARTNER$ = { tag = D38 } has_country_flag = terra_contract_$ROLE$_D38 }
+        AND = { $PARTNER$ = { tag = D39 } has_country_flag = terra_contract_$ROLE$_D39 }
+        AND = { $PARTNER$ = { tag = D40 } has_country_flag = terra_contract_$ROLE$_D40 }
+        AND = { $PARTNER$ = { tag = D41 } has_country_flag = terra_contract_$ROLE$_D41 }
+        AND = { $PARTNER$ = { tag = D42 } has_country_flag = terra_contract_$ROLE$_D42 }
+        AND = { $PARTNER$ = { tag = D43 } has_country_flag = terra_contract_$ROLE$_D43 }
+        AND = { $PARTNER$ = { tag = D44 } has_country_flag = terra_contract_$ROLE$_D44 }
+        AND = { $PARTNER$ = { tag = D45 } has_country_flag = terra_contract_$ROLE$_D45 }
+        AND = { $PARTNER$ = { tag = D46 } has_country_flag = terra_contract_$ROLE$_D46 }
+        AND = { $PARTNER$ = { tag = D47 } has_country_flag = terra_contract_$ROLE$_D47 }
+        AND = { $PARTNER$ = { tag = D48 } has_country_flag = terra_contract_$ROLE$_D48 }
+        AND = { $PARTNER$ = { tag = D49 } has_country_flag = terra_contract_$ROLE$_D49 }
+        AND = { $PARTNER$ = { tag = D50 } has_country_flag = terra_contract_$ROLE$_D50 }
+    }
+}
+
+terra_contract_faction_unchanged = {
+    OR = {
+        AND = { NOT = { has_country_flag = terra_contract_signed_in_faction } is_in_faction = no }
+        AND = {
+            has_country_flag = terra_contract_signed_in_faction
+            is_in_faction = yes
+            OR = {
+                AND = { has_country_flag = terra_contract_faction_anchor_AGI AGI = { is_faction_leader = yes } is_in_faction_with = AGI }
+                AND = { has_country_flag = terra_contract_faction_anchor_BLV BLV = { is_faction_leader = yes } is_in_faction_with = BLV }
+                AND = { has_country_flag = terra_contract_faction_anchor_CLM CLM = { is_faction_leader = yes } is_in_faction_with = CLM }
+                AND = { has_country_flag = terra_contract_faction_anchor_HGS HGS = { is_faction_leader = yes } is_in_faction_with = HGS }
+                AND = { has_country_flag = terra_contract_faction_anchor_HGN HGN = { is_faction_leader = yes } is_in_faction_with = HGN }
+                AND = { has_country_flag = terra_contract_faction_anchor_HSS HSS = { is_faction_leader = yes } is_in_faction_with = HSS }
+                AND = { has_country_flag = terra_contract_faction_anchor_IBR IBR = { is_faction_leader = yes } is_in_faction_with = IBR }
+                AND = { has_country_flag = terra_contract_faction_anchor_KJG KJG = { is_faction_leader = yes } is_in_faction_with = KJG }
+                AND = { has_country_flag = terra_contract_faction_anchor_KZM KZM = { is_faction_leader = yes } is_in_faction_with = KZM }
+                AND = { has_country_flag = terra_contract_faction_anchor_KZD KZD = { is_faction_leader = yes } is_in_faction_with = KZD }
+                AND = { has_country_flag = terra_contract_faction_anchor_LTR LTR = { is_faction_leader = yes } is_in_faction_with = LTR }
+                AND = { has_country_flag = terra_contract_faction_anchor_LTH LTH = { is_faction_leader = yes } is_in_faction_with = LTH }
+                AND = { has_country_flag = terra_contract_faction_anchor_MNS MNS = { is_faction_leader = yes } is_in_faction_with = MNS }
+                AND = { has_country_flag = terra_contract_faction_anchor_RMB RMB = { is_faction_leader = yes } is_in_faction_with = RMB }
+                AND = { has_country_flag = terra_contract_faction_anchor_SMN SMN = { is_faction_leader = yes } is_in_faction_with = SMN }
+                AND = { has_country_flag = terra_contract_faction_anchor_SGN SGN = { is_faction_leader = yes } is_in_faction_with = SGN }
+                AND = { has_country_flag = terra_contract_faction_anchor_SST SST = { is_faction_leader = yes } is_in_faction_with = SST }
+                AND = { has_country_flag = terra_contract_faction_anchor_SRC SRC = { is_faction_leader = yes } is_in_faction_with = SRC }
+                AND = { has_country_flag = terra_contract_faction_anchor_URS URS = { is_faction_leader = yes } is_in_faction_with = URS }
+                AND = { has_country_flag = terra_contract_faction_anchor_VCT VCT = { is_faction_leader = yes } is_in_faction_with = VCT }
+                AND = { has_country_flag = terra_contract_faction_anchor_YAN YAN = { is_faction_leader = yes } is_in_faction_with = YAN }
+                AND = { has_country_flag = terra_contract_faction_anchor_TRR TRR = { is_faction_leader = yes } is_in_faction_with = TRR }
+                AND = { has_country_flag = terra_contract_faction_anchor_LGL LGL = { is_faction_leader = yes } is_in_faction_with = LGL }
+                AND = { has_country_flag = terra_contract_faction_anchor_VVA VVA = { is_faction_leader = yes } is_in_faction_with = VVA }
+                AND = { has_country_flag = terra_contract_faction_anchor_TNJ TNJ = { is_faction_leader = yes } is_in_faction_with = TNJ }
+                AND = { has_country_flag = terra_contract_faction_anchor_MSN MSN = { is_faction_leader = yes } is_in_faction_with = MSN }
+                AND = { has_country_flag = terra_contract_faction_anchor_SEA SEA = { is_faction_leader = yes } is_in_faction_with = SEA }
+                AND = { has_country_flag = terra_contract_faction_anchor_WSG WSG = { is_faction_leader = yes } is_in_faction_with = WSG }
+                AND = { has_country_flag = terra_contract_faction_anchor_KTH KTH = { is_faction_leader = yes } is_in_faction_with = KTH }
+                AND = { has_country_flag = terra_contract_faction_anchor_VNH VNH = { is_faction_leader = yes } is_in_faction_with = VNH }
+                AND = { has_country_flag = terra_contract_faction_anchor_SCW SCW = { is_faction_leader = yes } is_in_faction_with = SCW }
+                AND = { has_country_flag = terra_contract_faction_anchor_D01 D01 = { is_faction_leader = yes } is_in_faction_with = D01 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D02 D02 = { is_faction_leader = yes } is_in_faction_with = D02 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D03 D03 = { is_faction_leader = yes } is_in_faction_with = D03 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D04 D04 = { is_faction_leader = yes } is_in_faction_with = D04 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D05 D05 = { is_faction_leader = yes } is_in_faction_with = D05 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D06 D06 = { is_faction_leader = yes } is_in_faction_with = D06 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D07 D07 = { is_faction_leader = yes } is_in_faction_with = D07 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D08 D08 = { is_faction_leader = yes } is_in_faction_with = D08 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D09 D09 = { is_faction_leader = yes } is_in_faction_with = D09 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D10 D10 = { is_faction_leader = yes } is_in_faction_with = D10 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D11 D11 = { is_faction_leader = yes } is_in_faction_with = D11 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D12 D12 = { is_faction_leader = yes } is_in_faction_with = D12 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D13 D13 = { is_faction_leader = yes } is_in_faction_with = D13 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D14 D14 = { is_faction_leader = yes } is_in_faction_with = D14 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D15 D15 = { is_faction_leader = yes } is_in_faction_with = D15 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D16 D16 = { is_faction_leader = yes } is_in_faction_with = D16 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D17 D17 = { is_faction_leader = yes } is_in_faction_with = D17 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D18 D18 = { is_faction_leader = yes } is_in_faction_with = D18 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D19 D19 = { is_faction_leader = yes } is_in_faction_with = D19 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D20 D20 = { is_faction_leader = yes } is_in_faction_with = D20 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D21 D21 = { is_faction_leader = yes } is_in_faction_with = D21 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D22 D22 = { is_faction_leader = yes } is_in_faction_with = D22 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D23 D23 = { is_faction_leader = yes } is_in_faction_with = D23 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D24 D24 = { is_faction_leader = yes } is_in_faction_with = D24 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D25 D25 = { is_faction_leader = yes } is_in_faction_with = D25 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D26 D26 = { is_faction_leader = yes } is_in_faction_with = D26 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D27 D27 = { is_faction_leader = yes } is_in_faction_with = D27 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D28 D28 = { is_faction_leader = yes } is_in_faction_with = D28 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D29 D29 = { is_faction_leader = yes } is_in_faction_with = D29 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D30 D30 = { is_faction_leader = yes } is_in_faction_with = D30 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D31 D31 = { is_faction_leader = yes } is_in_faction_with = D31 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D32 D32 = { is_faction_leader = yes } is_in_faction_with = D32 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D33 D33 = { is_faction_leader = yes } is_in_faction_with = D33 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D34 D34 = { is_faction_leader = yes } is_in_faction_with = D34 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D35 D35 = { is_faction_leader = yes } is_in_faction_with = D35 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D36 D36 = { is_faction_leader = yes } is_in_faction_with = D36 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D37 D37 = { is_faction_leader = yes } is_in_faction_with = D37 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D38 D38 = { is_faction_leader = yes } is_in_faction_with = D38 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D39 D39 = { is_faction_leader = yes } is_in_faction_with = D39 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D40 D40 = { is_faction_leader = yes } is_in_faction_with = D40 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D41 D41 = { is_faction_leader = yes } is_in_faction_with = D41 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D42 D42 = { is_faction_leader = yes } is_in_faction_with = D42 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D43 D43 = { is_faction_leader = yes } is_in_faction_with = D43 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D44 D44 = { is_faction_leader = yes } is_in_faction_with = D44 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D45 D45 = { is_faction_leader = yes } is_in_faction_with = D45 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D46 D46 = { is_faction_leader = yes } is_in_faction_with = D46 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D47 D47 = { is_faction_leader = yes } is_in_faction_with = D47 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D48 D48 = { is_faction_leader = yes } is_in_faction_with = D48 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D49 D49 = { is_faction_leader = yes } is_in_faction_with = D49 }
+                AND = { has_country_flag = terra_contract_faction_anchor_D50 D50 = { is_faction_leader = yes } is_in_faction_with = D50 }
+            }
+        }
+    }
+}

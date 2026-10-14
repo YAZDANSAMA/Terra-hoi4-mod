@@ -1,0 +1,446 @@
+# ROOT = THIS for weekly/monthly/motive/intelligence effects.
+# Warning cooldown survives a backdown; escalation notice does not.
+terra_security_refresh_intel_pair_effect = {
+    clr_country_flag = terra_security_intel_low_$TARGET$
+    clr_country_flag = terra_security_intel_medium_$TARGET$
+    clr_country_flag = terra_security_intel_high_$TARGET$
+    set_variable = { terra_security_intel_$TARGET$ = 1 }
+    if = {
+        limit = { terra_dip_pair_valid = { TARGET = $TARGET$ } }
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        has_dlc = "La Resistance"
+                        intel_level_over = { target = $TARGET$ army_intel > 0.65 }
+                    }
+                    AND = {
+                        NOT = { has_dlc = "La Resistance" }
+                        has_tech = advanced_decryption
+                        $TARGET$ = { NOT = { has_tech = advanced_encryption } }
+                    }
+                }
+            }
+            set_country_flag = terra_security_intel_high_$TARGET$
+            set_variable = { terra_security_intel_$TARGET$ = 3 }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    AND = {
+                        has_dlc = "La Resistance"
+                        intel_level_over = { target = $TARGET$ army_intel > 0.35 }
+                    }
+                    AND = {
+                        NOT = { has_dlc = "La Resistance" }
+                        OR = { has_tech = basic_decryption has_tech = improved_decryption has_tech = advanced_decryption }
+                        $TARGET$ = { NOT = { has_tech = advanced_encryption } }
+                    }
+                }
+            }
+            set_country_flag = terra_security_intel_medium_$TARGET$
+            set_variable = { terra_security_intel_$TARGET$ = 2 }
+        }
+        else = { set_country_flag = terra_security_intel_low_$TARGET$ }
+    }
+    else = { set_country_flag = terra_security_intel_low_$TARGET$ }
+}
+
+terra_security_refresh_warning_pair_effect = {
+    if = {
+        limit = { terra_security_can_warn = { TARGET = $TARGET$ } }
+        if = {
+            limit = {
+                NOT = { has_country_flag = terra_security_warned_$TARGET$ }
+                NOT = { has_country_flag = terra_security_warning_cooldown_$TARGET$ }
+                OR = {
+                    $TARGET$ = { is_ai = yes }
+                    $TARGET$ = { is_ai = no NOT = { has_country_flag = terra_security_notice_cooldown } }
+                }
+            }
+            set_country_flag = terra_security_warned_$TARGET$
+            clr_country_flag = terra_security_warning_mature_$TARGET$
+            set_country_flag = { flag = terra_security_warning_pending_$TARGET$ value = 1 days = 60 }
+            set_country_flag = { flag = terra_security_warning_cooldown_$TARGET$ value = 1 days = 180 }
+            if = {
+                limit = { $TARGET$ = { is_ai = no } }
+                $TARGET$ = {
+                    set_country_flag = { flag = terra_security_notice_cooldown value = 1 days = 30 }
+                    country_event = { id = terra_security.1 }
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = terra_security_warned_$TARGET$
+                NOT = { has_country_flag = terra_security_warning_pending_$TARGET$ }
+            }
+            set_country_flag = terra_security_warning_mature_$TARGET$
+        }
+    }
+    else = {
+        clr_country_flag = terra_security_warned_$TARGET$
+        clr_country_flag = terra_security_warning_pending_$TARGET$
+        clr_country_flag = terra_security_warning_mature_$TARGET$
+    }
+}
+
+terra_security_refresh_threat_pair_effect = {
+    if = {
+        limit = { terra_security_assesses_threat = { TARGET = $TARGET$ } }
+        set_country_flag = terra_security_threat_$TARGET$
+    }
+    else = { clr_country_flag = terra_security_threat_$TARGET$ }
+}
+
+terra_security_refresh_coalition_pair_effect = {
+    if = {
+        limit = { terra_security_can_coordinate = { PARTNER = $TARGET$ } }
+        set_country_flag = terra_security_coalition_$TARGET$
+    }
+    else = { clr_country_flag = terra_security_coalition_$TARGET$ }
+}
+
+terra_security_weekly_effect = {
+    terra_security_refresh_intel_pair_effect = { TARGET = AGI }
+    terra_security_refresh_warning_pair_effect = { TARGET = AGI }
+    terra_security_refresh_threat_pair_effect = { TARGET = AGI }
+    terra_security_refresh_intel_pair_effect = { TARGET = BLV }
+    terra_security_refresh_warning_pair_effect = { TARGET = BLV }
+    terra_security_refresh_threat_pair_effect = { TARGET = BLV }
+    terra_security_refresh_intel_pair_effect = { TARGET = CLM }
+    terra_security_refresh_warning_pair_effect = { TARGET = CLM }
+    terra_security_refresh_threat_pair_effect = { TARGET = CLM }
+    terra_security_refresh_intel_pair_effect = { TARGET = HGS }
+    terra_security_refresh_warning_pair_effect = { TARGET = HGS }
+    terra_security_refresh_threat_pair_effect = { TARGET = HGS }
+    terra_security_refresh_intel_pair_effect = { TARGET = HGN }
+    terra_security_refresh_warning_pair_effect = { TARGET = HGN }
+    terra_security_refresh_threat_pair_effect = { TARGET = HGN }
+    terra_security_refresh_intel_pair_effect = { TARGET = HSS }
+    terra_security_refresh_warning_pair_effect = { TARGET = HSS }
+    terra_security_refresh_threat_pair_effect = { TARGET = HSS }
+    terra_security_refresh_intel_pair_effect = { TARGET = IBR }
+    terra_security_refresh_warning_pair_effect = { TARGET = IBR }
+    terra_security_refresh_threat_pair_effect = { TARGET = IBR }
+    terra_security_refresh_intel_pair_effect = { TARGET = KJG }
+    terra_security_refresh_warning_pair_effect = { TARGET = KJG }
+    terra_security_refresh_threat_pair_effect = { TARGET = KJG }
+    terra_security_refresh_intel_pair_effect = { TARGET = KZM }
+    terra_security_refresh_warning_pair_effect = { TARGET = KZM }
+    terra_security_refresh_threat_pair_effect = { TARGET = KZM }
+    terra_security_refresh_intel_pair_effect = { TARGET = KZD }
+    terra_security_refresh_warning_pair_effect = { TARGET = KZD }
+    terra_security_refresh_threat_pair_effect = { TARGET = KZD }
+    terra_security_refresh_intel_pair_effect = { TARGET = LTR }
+    terra_security_refresh_warning_pair_effect = { TARGET = LTR }
+    terra_security_refresh_threat_pair_effect = { TARGET = LTR }
+    terra_security_refresh_intel_pair_effect = { TARGET = LTH }
+    terra_security_refresh_warning_pair_effect = { TARGET = LTH }
+    terra_security_refresh_threat_pair_effect = { TARGET = LTH }
+    terra_security_refresh_intel_pair_effect = { TARGET = MNS }
+    terra_security_refresh_warning_pair_effect = { TARGET = MNS }
+    terra_security_refresh_threat_pair_effect = { TARGET = MNS }
+    terra_security_refresh_intel_pair_effect = { TARGET = RMB }
+    terra_security_refresh_warning_pair_effect = { TARGET = RMB }
+    terra_security_refresh_threat_pair_effect = { TARGET = RMB }
+    terra_security_refresh_intel_pair_effect = { TARGET = SMN }
+    terra_security_refresh_warning_pair_effect = { TARGET = SMN }
+    terra_security_refresh_threat_pair_effect = { TARGET = SMN }
+    terra_security_refresh_intel_pair_effect = { TARGET = SGN }
+    terra_security_refresh_warning_pair_effect = { TARGET = SGN }
+    terra_security_refresh_threat_pair_effect = { TARGET = SGN }
+    terra_security_refresh_intel_pair_effect = { TARGET = SRC }
+    terra_security_refresh_warning_pair_effect = { TARGET = SRC }
+    terra_security_refresh_threat_pair_effect = { TARGET = SRC }
+    terra_security_refresh_intel_pair_effect = { TARGET = URS }
+    terra_security_refresh_warning_pair_effect = { TARGET = URS }
+    terra_security_refresh_threat_pair_effect = { TARGET = URS }
+    terra_security_refresh_intel_pair_effect = { TARGET = VCT }
+    terra_security_refresh_warning_pair_effect = { TARGET = VCT }
+    terra_security_refresh_threat_pair_effect = { TARGET = VCT }
+    terra_security_refresh_intel_pair_effect = { TARGET = YAN }
+    terra_security_refresh_warning_pair_effect = { TARGET = YAN }
+    terra_security_refresh_threat_pair_effect = { TARGET = YAN }
+    terra_security_refresh_intel_pair_effect = { TARGET = TRR }
+    terra_security_refresh_warning_pair_effect = { TARGET = TRR }
+    terra_security_refresh_threat_pair_effect = { TARGET = TRR }
+    terra_security_refresh_intel_pair_effect = { TARGET = LGL }
+    terra_security_refresh_warning_pair_effect = { TARGET = LGL }
+    terra_security_refresh_threat_pair_effect = { TARGET = LGL }
+    terra_security_refresh_intel_pair_effect = { TARGET = VVA }
+    terra_security_refresh_warning_pair_effect = { TARGET = VVA }
+    terra_security_refresh_threat_pair_effect = { TARGET = VVA }
+    terra_security_refresh_intel_pair_effect = { TARGET = TNJ }
+    terra_security_refresh_warning_pair_effect = { TARGET = TNJ }
+    terra_security_refresh_threat_pair_effect = { TARGET = TNJ }
+    terra_security_refresh_intel_pair_effect = { TARGET = MSN }
+    terra_security_refresh_warning_pair_effect = { TARGET = MSN }
+    terra_security_refresh_threat_pair_effect = { TARGET = MSN }
+    terra_security_refresh_intel_pair_effect = { TARGET = WSG }
+    terra_security_refresh_warning_pair_effect = { TARGET = WSG }
+    terra_security_refresh_threat_pair_effect = { TARGET = WSG }
+    terra_security_refresh_intel_pair_effect = { TARGET = KTH }
+    terra_security_refresh_warning_pair_effect = { TARGET = KTH }
+    terra_security_refresh_threat_pair_effect = { TARGET = KTH }
+    terra_security_refresh_intel_pair_effect = { TARGET = VNH }
+    terra_security_refresh_warning_pair_effect = { TARGET = VNH }
+    terra_security_refresh_threat_pair_effect = { TARGET = VNH }
+    terra_security_refresh_intel_pair_effect = { TARGET = SCW }
+    terra_security_refresh_warning_pair_effect = { TARGET = SCW }
+    terra_security_refresh_threat_pair_effect = { TARGET = SCW }
+    terra_security_refresh_intel_pair_effect = { TARGET = D01 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D01 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D01 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D02 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D02 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D02 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D03 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D03 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D03 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D04 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D04 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D04 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D05 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D05 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D05 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D06 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D06 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D06 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D07 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D07 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D07 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D08 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D08 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D08 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D09 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D09 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D09 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D10 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D10 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D10 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D11 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D11 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D11 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D12 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D12 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D12 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D13 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D13 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D13 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D14 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D14 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D14 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D15 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D15 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D15 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D16 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D16 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D16 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D17 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D17 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D17 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D18 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D18 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D18 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D19 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D19 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D19 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D20 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D20 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D20 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D21 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D21 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D21 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D22 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D22 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D22 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D23 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D23 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D23 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D24 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D24 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D24 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D25 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D25 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D25 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D26 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D26 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D26 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D27 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D27 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D27 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D28 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D28 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D28 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D29 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D29 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D29 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D30 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D30 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D30 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D31 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D31 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D31 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D32 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D32 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D32 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D33 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D33 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D33 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D34 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D34 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D34 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D35 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D35 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D35 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D36 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D36 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D36 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D37 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D37 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D37 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D38 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D38 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D38 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D39 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D39 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D39 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D40 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D40 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D40 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D41 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D41 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D41 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D42 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D42 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D42 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D43 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D43 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D43 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D44 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D44 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D44 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D45 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D45 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D45 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D46 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D46 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D46 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D47 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D47 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D47 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D48 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D48 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D48 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D49 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D49 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D49 }
+    terra_security_refresh_intel_pair_effect = { TARGET = D50 }
+    terra_security_refresh_warning_pair_effect = { TARGET = D50 }
+    terra_security_refresh_threat_pair_effect = { TARGET = D50 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = AGI }
+    terra_security_refresh_coalition_pair_effect = { TARGET = BLV }
+    terra_security_refresh_coalition_pair_effect = { TARGET = CLM }
+    terra_security_refresh_coalition_pair_effect = { TARGET = HGS }
+    terra_security_refresh_coalition_pair_effect = { TARGET = HGN }
+    terra_security_refresh_coalition_pair_effect = { TARGET = HSS }
+    terra_security_refresh_coalition_pair_effect = { TARGET = IBR }
+    terra_security_refresh_coalition_pair_effect = { TARGET = KJG }
+    terra_security_refresh_coalition_pair_effect = { TARGET = KZM }
+    terra_security_refresh_coalition_pair_effect = { TARGET = KZD }
+    terra_security_refresh_coalition_pair_effect = { TARGET = LTR }
+    terra_security_refresh_coalition_pair_effect = { TARGET = LTH }
+    terra_security_refresh_coalition_pair_effect = { TARGET = MNS }
+    terra_security_refresh_coalition_pair_effect = { TARGET = RMB }
+    terra_security_refresh_coalition_pair_effect = { TARGET = SMN }
+    terra_security_refresh_coalition_pair_effect = { TARGET = SGN }
+    terra_security_refresh_coalition_pair_effect = { TARGET = SRC }
+    terra_security_refresh_coalition_pair_effect = { TARGET = URS }
+    terra_security_refresh_coalition_pair_effect = { TARGET = VCT }
+    terra_security_refresh_coalition_pair_effect = { TARGET = YAN }
+    terra_security_refresh_coalition_pair_effect = { TARGET = TRR }
+    terra_security_refresh_coalition_pair_effect = { TARGET = LGL }
+    terra_security_refresh_coalition_pair_effect = { TARGET = VVA }
+    terra_security_refresh_coalition_pair_effect = { TARGET = TNJ }
+    terra_security_refresh_coalition_pair_effect = { TARGET = MSN }
+    terra_security_refresh_coalition_pair_effect = { TARGET = WSG }
+    terra_security_refresh_coalition_pair_effect = { TARGET = KTH }
+    terra_security_refresh_coalition_pair_effect = { TARGET = VNH }
+    terra_security_refresh_coalition_pair_effect = { TARGET = SCW }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D01 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D02 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D03 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D04 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D05 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D06 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D07 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D08 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D09 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D10 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D11 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D12 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D13 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D14 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D15 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D16 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D17 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D18 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D19 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D20 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D21 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D22 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D23 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D24 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D25 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D26 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D27 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D28 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D29 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D30 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D31 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D32 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D33 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D34 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D35 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D36 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D37 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D38 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D39 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D40 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D41 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D42 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D43 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D44 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D45 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D46 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D47 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D48 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D49 }
+    terra_security_refresh_coalition_pair_effect = { TARGET = D50 }
+}
+
+# Native human coordination is optional. No faction, guarantee, war or peace is
+# applied automatically. The receiving government makes its own real choice.
+terra_security_monthly_effect = {
+    if = {
+        limit = {
+            is_ai = yes
+            terra_security_actor_allowed = yes
+            NOT = { has_country_flag = terra_security_outreach_cooldown }
+            NOT = { has_country_flag = terra_state_goal_revision }
+            check_variable = { terra_state_fatigue < 70 }
+        }
+        random_country = {
+            limit = {
+                is_ai = no
+                terra_security_actor_allowed = yes
+                NOT = { has_country_flag = terra_security_invitation_cooldown }
+                terra_security_can_coordinate = { PARTNER = ROOT }
+            }
+            set_country_flag = { flag = terra_security_invitation_cooldown value = 1 days = 120 }
+            ROOT = { set_country_flag = { flag = terra_security_outreach_cooldown value = 1 days = 180 } }
+            country_event = { id = terra_security.10 }
+        }
+    }
+}

@@ -1,0 +1,257 @@
+# Country-local persistent strategic state. Pulse helpers require ROOT = THIS.
+# The initializer works in THIS even when called inside global on_startup's every_country.
+terra_state_initialize_effect = {
+    if = {
+        limit = { terra_dip_ready = yes NOT = { has_country_flag = terra_state_initialized } }
+        set_variable = { terra_state_fatigue = 0 }
+        set_variable = { terra_state_defeat_memory = 0 }
+        set_variable = { terra_state_reputation = 50 }
+        set_variable = { terra_state_domestic_pressure = 0 }
+        set_country_flag = terra_state_initialized
+        terra_state_refresh_personality_effect = yes
+        set_country_flag = terra_state_goal_security
+    }
+}
+
+# Re-evaluate the actual ruling character and current government. A new regime or
+# ruler supersedes the previous profile without erasing relationships or war memory.
+terra_state_refresh_personality_effect = {
+    clr_country_flag = terra_dip_personality_pragmatic
+    clr_country_flag = terra_dip_personality_mercantile
+    clr_country_flag = terra_dip_personality_imperial
+    clr_country_flag = terra_dip_personality_guardian
+    clr_country_flag = terra_dip_personality_cautious
+    clr_country_flag = terra_dip_personality_idealist
+    if = {
+        limit = {
+            has_government = monarchism
+            OR = {
+                has_country_leader = { character = URS_ivan ruling_only = yes }
+                has_country_leader = { character = VCT_frederick_iii ruling_only = yes }
+                has_country_leader = { character = LGL_corsica_i_bourbon ruling_only = yes }
+            }
+        }
+        set_country_flag = terra_dip_personality_imperial
+    }
+    else_if = {
+        limit = {
+            has_government = monarchism
+            has_country_leader = { character = LTH_witch_king ruling_only = yes }
+        }
+        set_country_flag = terra_dip_personality_cautious
+    }
+    else_if = {
+        limit = {
+            has_government = monarchism
+            has_country_leader = { character = SGN_babak_i ruling_only = yes }
+        }
+        set_country_flag = terra_dip_personality_guardian
+    }
+    else_if = {
+        limit = {
+            has_government = classical_liberalism
+            has_country_leader = { character = CLM_interim_leader ruling_only = yes }
+        }
+        set_country_flag = terra_dip_personality_pragmatic
+    }
+    else_if = {
+        limit = {
+            has_government = corporatism
+            has_country_leader = { character = RMB_interim_leader ruling_only = yes }
+        }
+        set_country_flag = terra_dip_personality_mercantile
+    }
+    else_if = {
+        limit = {
+            has_government = social_democracy
+            has_country_leader = { character = SMN_interim_leader ruling_only = yes }
+        }
+        set_country_flag = terra_dip_personality_idealist
+    }
+    else_if = {
+        limit = { has_government = ethnonationalism }
+        set_country_flag = terra_dip_personality_imperial
+    }
+    else_if = {
+        limit = { has_government = corporatism }
+        set_country_flag = terra_dip_personality_mercantile
+    }
+    else_if = {
+        limit = { OR = { has_government = classical_liberalism has_government = technocracy } }
+        set_country_flag = terra_dip_personality_pragmatic
+    }
+    else_if = {
+        limit = { OR = { has_government = social_democracy has_government = revolutionary } }
+        set_country_flag = terra_dip_personality_idealist
+    }
+    else_if = {
+        limit = { OR = { has_government = monarchism has_government = theocracy } }
+        set_country_flag = terra_dip_personality_guardian
+    }
+    else = { set_country_flag = terra_dip_personality_cautious }
+}
+
+terra_state_refresh_domestic_pressure_effect = {
+    set_variable = { terra_state_domestic_pressure = 0 }
+    if = { limit = { has_stability < 0.45 } add_to_variable = { terra_state_domestic_pressure = 25 } }
+    if = { limit = { has_stability < 0.25 } add_to_variable = { terra_state_domestic_pressure = 20 } }
+    if = {
+        limit = { has_war = yes has_war_support < 0.35 }
+        add_to_variable = { terra_state_domestic_pressure = 20 }
+    }
+    if = {
+        limit = { num_divisions > 5 has_manpower < 10000 }
+        add_to_variable = { terra_state_domestic_pressure = 20 }
+    }
+    if = {
+        limit = { num_divisions > 5 has_equipment = { infantry_equipment < 200 } }
+        add_to_variable = { terra_state_domestic_pressure = 15 }
+    }
+    if = { limit = { has_civil_war = yes } add_to_variable = { terra_state_domestic_pressure = 40 } }
+    if = { limit = { surrender_progress > 0.2 } add_to_variable = { terra_state_domestic_pressure = 25 } }
+    if = {
+        limit = { has_war = yes num_of_civilian_factories < 2 }
+        add_to_variable = { terra_state_domestic_pressure = 10 }
+    }
+    # Persistent trauma burdens planning even when the immediate battlefield improves.
+    set_temp_variable = { terra_state_fatigue_pressure = terra_state_fatigue }
+    divide_temp_variable = { terra_state_fatigue_pressure = 4 }
+    add_to_variable = { terra_state_domestic_pressure = terra_state_fatigue_pressure }
+    set_temp_variable = { terra_state_defeat_pressure = terra_state_defeat_memory }
+    divide_temp_variable = { terra_state_defeat_pressure = 5 }
+    add_to_variable = { terra_state_domestic_pressure = terra_state_defeat_pressure }
+    clamp_variable = { var = terra_state_domestic_pressure min = 0 max = 100 }
+}
+
+terra_state_refresh_goals_effect = {
+    # Recovery has separate entry/exit thresholds, so a marginal improvement does
+    # not make a badly strained country alternate its strategy every weekly pulse.
+    if = {
+        limit = { terra_state_needs_recovery = yes }
+        clr_country_flag = terra_state_goal_security
+        clr_country_flag = terra_state_goal_commerce
+        clr_country_flag = terra_state_goal_revision
+        set_country_flag = terra_state_goal_recovery
+    }
+    else = {
+        clr_country_flag = terra_state_goal_recovery
+        clr_country_flag = terra_state_goal_security
+        clr_country_flag = terra_state_goal_commerce
+        clr_country_flag = terra_state_goal_revision
+        if = {
+            limit = { OR = { has_war = yes is_subject = yes original_tag = TNJ } }
+            set_country_flag = terra_state_goal_security
+        }
+        else_if = {
+            limit = {
+                has_country_flag = terra_dip_personality_imperial
+                terra_state_can_risk_new_war = yes
+                terra_state_has_foreign_core = yes
+            }
+            set_country_flag = terra_state_goal_revision
+        }
+        else_if = {
+            limit = {
+                OR = { has_country_flag = terra_dip_personality_mercantile has_country_flag = terra_dip_personality_pragmatic }
+            }
+            set_country_flag = terra_state_goal_commerce
+        }
+        else = { set_country_flag = terra_state_goal_security }
+    }
+}
+
+terra_state_weekly_effect = {
+    terra_state_initialize_effect = yes
+    if = {
+        limit = { terra_state_ready = yes }
+        terra_state_refresh_personality_effect = yes
+        terra_state_refresh_domestic_pressure_effect = yes
+        terra_state_refresh_goals_effect = yes
+    }
+}
+
+terra_state_monthly_effect = {
+    terra_state_initialize_effect = yes
+    if = {
+        limit = { terra_state_ready = yes }
+        if = {
+            limit = { has_war = yes }
+            add_to_variable = { terra_state_fatigue = 2 }
+            if = { limit = { has_offensive_war = yes } add_to_variable = { terra_state_fatigue = 1 } }
+            if = { limit = { has_civil_war = yes } add_to_variable = { terra_state_fatigue = 2 } }
+            if = { limit = { has_stability < 0.4 } add_to_variable = { terra_state_fatigue = 1 } }
+            if = { limit = { surrender_progress > 0.2 } add_to_variable = { terra_state_fatigue = 2 } }
+            if = {
+                limit = { num_divisions > 5 has_manpower < 10000 }
+                add_to_variable = { terra_state_fatigue = 1 }
+            }
+        }
+        else = {
+            if = {
+                limit = { has_stability > 0.44 has_civil_war = no }
+                add_to_variable = { terra_state_fatigue = -4 }
+                add_to_variable = { terra_state_defeat_memory = -1 }
+            }
+            else = { add_to_variable = { terra_state_fatigue = -2 } }
+            # A quiet diplomatic record restores a damaged reputation slowly.
+            # It does not create fame above the neutral baseline without deeds.
+            if = {
+                limit = {
+                    check_variable = { terra_state_reputation < 50 }
+                    NOT = { has_country_flag = terra_dip_recent_aggressor }
+                    NOT = { has_country_flag = terra_dip_oathbreaker }
+                    NOT = { has_country_flag = terra_state_recent_breach }
+                }
+                add_to_variable = { terra_state_reputation = 1 }
+            }
+        }
+        clamp_variable = { var = terra_state_fatigue min = 0 max = 100 }
+        clamp_variable = { var = terra_state_defeat_memory min = 0 max = 100 }
+        clamp_variable = { var = terra_state_reputation min = 0 max = 100 }
+        terra_state_refresh_domestic_pressure_effect = yes
+        terra_state_refresh_goals_effect = yes
+    }
+}
+
+terra_state_record_defeat_effect = {
+    if = {
+        limit = { terra_state_recordable = yes NOT = { has_country_flag = terra_state_defeat_recorded_recently } }
+        add_to_variable = { terra_state_defeat_memory = 40 }
+        add_to_variable = { terra_state_fatigue = 20 }
+        clamp_variable = { var = terra_state_defeat_memory min = 0 max = 100 }
+        clamp_variable = { var = terra_state_fatigue min = 0 max = 100 }
+        set_country_flag = { flag = terra_state_defeat_recorded_recently value = 1 days = 30 }
+        clr_country_flag = terra_state_goal_security
+        clr_country_flag = terra_state_goal_commerce
+        clr_country_flag = terra_state_goal_revision
+        set_country_flag = terra_state_goal_recovery
+    }
+}
+
+terra_state_record_aggression_effect = {
+    if = {
+        limit = { terra_state_recordable = yes }
+        add_to_variable = { terra_state_reputation = -8 }
+        clamp_variable = { var = terra_state_reputation min = 0 max = 100 }
+        set_country_flag = { flag = terra_dip_recent_aggressor value = 1 days = 180 }
+    }
+}
+
+terra_state_record_fulfillment_effect = {
+    if = {
+        limit = { terra_state_recordable = yes NOT = { has_country_flag = terra_state_recent_fulfillment } }
+        add_to_variable = { terra_state_reputation = 3 }
+        clamp_variable = { var = terra_state_reputation min = 0 max = 100 }
+        set_country_flag = { flag = terra_state_recent_fulfillment value = 1 days = 30 }
+    }
+}
+
+terra_state_record_breach_effect = {
+    if = {
+        limit = { terra_state_recordable = yes NOT = { has_country_flag = terra_state_recent_breach } }
+        add_to_variable = { terra_state_reputation = -15 }
+        clamp_variable = { var = terra_state_reputation min = 0 max = 100 }
+        set_country_flag = { flag = terra_state_recent_breach value = 1 days = 30 }
+        set_country_flag = { flag = terra_dip_oathbreaker value = 1 days = 540 }
+    }
+}

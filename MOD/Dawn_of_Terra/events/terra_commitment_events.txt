@@ -1,0 +1,668 @@
+add_namespace = terra_promises
+
+# Refusal is first for every human-facing negotiation: timeout grants nothing.
+
+country_event = {
+    id = terra_promises.1
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = { limit = { terra_contract_aid_client_from = yes } FROM = { country_event = { id = terra_promises.101 days = 3 } } }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.101
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = { limit = { terra_contract_pending_from = yes } FROM = { country_event = { id = terra_promises.2 } } }
+        else = { terra_contract_cancel_pending_effect = yes country_event = { id = terra_promises.80 } }
+    }
+}
+
+country_event = {
+    id = terra_promises.2
+    title = terra_promises.2.t
+    desc = terra_promises.2.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    timeout_days = 30
+    option = {
+        name = terra_promises.2.c
+        trigger = { terra_contract_aid_client_from = yes }
+        ai_chance = {
+            base = 20
+            modifier = { factor = 8 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 5 terra_dip_rejects_from = yes }
+            modifier = { factor = 4 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_aid_client_from = yes }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.2.a
+        trigger = { terra_contract_aid_client_from = yes }
+        ai_chance = {
+            base = 65
+            modifier = { factor = 2 terra_dip_trusts_from = yes }
+            modifier = { factor = 1.8 terra_dip_has_common_interest_from = yes }
+            modifier = { factor = 0.1 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 0.2 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_aid_client_from = yes }
+            FROM = { country_event = { id = terra_promises.3 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.2.b
+        trigger = { terra_contract_aid_client_from = yes }
+        ai_chance = {
+            base = 35
+            modifier = { factor = 1.7 has_country_flag = terra_dip_personality_cautious }
+            modifier = { factor = 0.4 terra_dip_has_betrayal_from = yes }
+        }
+        if = {
+            limit = { terra_contract_aid_client_from = yes }
+            FROM = { country_event = { id = terra_promises.4 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.2.withdraw
+        trigger = { NOT = { terra_contract_aid_client_from = yes } }
+        ai_chance = {
+            base = 1
+        }
+        if = {
+            limit = { NOT = { terra_contract_aid_client_from = yes } }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.3
+    title = terra_promises.3.t
+    desc = terra_promises.3.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    timeout_days = 30
+    option = {
+        name = terra_promises.3.c
+        trigger = { terra_contract_aid_donor_from = yes }
+        ai_chance = {
+            base = 20
+            modifier = { factor = 8 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 5 terra_dip_rejects_from = yes }
+            modifier = { factor = 4 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_aid_donor_from = yes }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.3.a
+        trigger = { terra_contract_aid_donor_from = yes has_equipment = { infantry_equipment > 299 } }
+        ai_chance = {
+            base = 75
+            modifier = { factor = 1.3 has_country_flag = terra_dip_personality_mercantile }
+            modifier = { factor = 1.5 terra_dip_trusts_from = yes }
+        }
+        if = {
+            limit = { terra_contract_aid_donor_from = yes has_equipment = { infantry_equipment > 299 } }
+            terra_contract_sign_aid_effect = { MIN_STOCK = 299 SMALL = no }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.3.withdraw
+        trigger = { NOT = { terra_contract_aid_donor_from = yes } }
+        ai_chance = {
+            base = 1
+        }
+        if = {
+            limit = { NOT = { terra_contract_aid_donor_from = yes } }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.4
+    title = terra_promises.4.t
+    desc = terra_promises.4.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    timeout_days = 30
+    option = {
+        name = terra_promises.4.c
+        trigger = { terra_contract_aid_donor_from = yes }
+        ai_chance = {
+            base = 20
+            modifier = { factor = 8 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 5 terra_dip_rejects_from = yes }
+            modifier = { factor = 4 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_aid_donor_from = yes }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.4.a
+        trigger = { terra_contract_aid_donor_from = yes has_equipment = { infantry_equipment > 149 } }
+        ai_chance = {
+            base = 75
+            modifier = { factor = 1.3 has_country_flag = terra_dip_personality_mercantile }
+            modifier = { factor = 1.5 terra_dip_trusts_from = yes }
+        }
+        if = {
+            limit = { terra_contract_aid_donor_from = yes has_equipment = { infantry_equipment > 149 } }
+            terra_contract_sign_aid_effect = { MIN_STOCK = 149 SMALL = yes }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.4.withdraw
+        trigger = { NOT = { terra_contract_aid_donor_from = yes } }
+        ai_chance = {
+            base = 1
+        }
+        if = {
+            limit = { NOT = { terra_contract_aid_donor_from = yes } }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.5
+    title = terra_promises.5.t
+    desc = terra_promises.5.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.5.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.20
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = { limit = { terra_contract_defense_client_from = yes } FROM = { country_event = { id = terra_promises.120 days = 3 } } }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.120
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = { limit = { terra_contract_pending_from = yes } FROM = { country_event = { id = terra_promises.21 } } }
+        else = { terra_contract_cancel_pending_effect = yes country_event = { id = terra_promises.80 } }
+    }
+}
+
+country_event = {
+    id = terra_promises.21
+    title = terra_promises.21.t
+    desc = terra_promises.21.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    timeout_days = 30
+    option = {
+        name = terra_promises.21.c
+        trigger = { terra_contract_defense_client_from = yes }
+        ai_chance = {
+            base = 20
+            modifier = { factor = 8 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 5 terra_dip_rejects_from = yes }
+            modifier = { factor = 4 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_defense_client_from = yes }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.21.a
+        trigger = { terra_contract_defense_client_from = yes }
+        ai_chance = {
+            base = 65
+            modifier = { factor = 2 terra_dip_trusts_from = yes }
+            modifier = { factor = 0.1 terra_dip_has_betrayal_from = yes }
+        }
+        if = {
+            limit = { terra_contract_defense_client_from = yes }
+            FROM = { country_event = { id = terra_promises.22 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.21.b
+        trigger = { terra_contract_defense_client_from = yes }
+        ai_chance = {
+            base = 35
+            modifier = { factor = 1.8 has_country_flag = terra_dip_personality_cautious }
+        }
+        if = {
+            limit = { terra_contract_defense_client_from = yes }
+            FROM = { country_event = { id = terra_promises.23 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.21.withdraw
+        trigger = { NOT = { terra_contract_defense_client_from = yes } }
+        ai_chance = {
+            base = 1
+        }
+        if = {
+            limit = { NOT = { terra_contract_defense_client_from = yes } }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.22
+    title = terra_promises.22.t
+    desc = terra_promises.22.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    timeout_days = 30
+    option = {
+        name = terra_promises.22.c
+        trigger = { terra_contract_defense_donor_from = yes }
+        ai_chance = {
+            base = 20
+            modifier = { factor = 8 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 5 terra_dip_rejects_from = yes }
+            modifier = { factor = 4 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_defense_donor_from = yes }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.22.a
+        trigger = { terra_contract_defense_donor_from = yes }
+        ai_chance = {
+            base = 70
+            modifier = { factor = 1.8 terra_dip_trusts_from = yes }
+            modifier = { factor = 1.8 has_country_flag = terra_dip_personality_guardian }
+            modifier = { factor = 0.2 terra_dip_exhausted = yes }
+        }
+        if = {
+            limit = { terra_contract_defense_donor_from = yes }
+            terra_contract_sign_defense_effect = { DAYS = 180 }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.22.withdraw
+        trigger = { NOT = { terra_contract_defense_donor_from = yes } }
+        ai_chance = {
+            base = 1
+        }
+        if = {
+            limit = { NOT = { terra_contract_defense_donor_from = yes } }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.23
+    title = terra_promises.23.t
+    desc = terra_promises.23.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    timeout_days = 30
+    option = {
+        name = terra_promises.23.c
+        trigger = { terra_contract_defense_donor_from = yes }
+        ai_chance = {
+            base = 20
+            modifier = { factor = 8 terra_dip_has_betrayal_from = yes }
+            modifier = { factor = 5 terra_dip_rejects_from = yes }
+            modifier = { factor = 4 FROM = { has_country_flag = terra_contract_recent_default } }
+        }
+        if = {
+            limit = { terra_contract_defense_donor_from = yes }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.23.a
+        trigger = { terra_contract_defense_donor_from = yes }
+        ai_chance = {
+            base = 70
+            modifier = { factor = 1.8 terra_dip_trusts_from = yes }
+            modifier = { factor = 1.8 has_country_flag = terra_dip_personality_guardian }
+            modifier = { factor = 0.2 terra_dip_exhausted = yes }
+        }
+        if = {
+            limit = { terra_contract_defense_donor_from = yes }
+            terra_contract_sign_defense_effect = { DAYS = 90 }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+    option = {
+        name = terra_promises.23.withdraw
+        trigger = { NOT = { terra_contract_defense_donor_from = yes } }
+        ai_chance = {
+            base = 1
+        }
+        if = {
+            limit = { NOT = { terra_contract_defense_donor_from = yes } }
+            terra_contract_cancel_pending_effect = yes
+            FROM = { country_event = { id = terra_promises.80 } }
+        }
+        else = { terra_contract_cancel_pending_effect = yes FROM = { country_event = { id = terra_promises.80 } } }
+    }
+}
+
+country_event = {
+    id = terra_promises.25
+    title = terra_promises.25.t
+    desc = terra_promises.25.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.25.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.40
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        terra_contract_due_aid_effect = yes
+    }
+}
+
+country_event = {
+    id = terra_promises.41
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        terra_contract_aid_deadline_effect = yes
+    }
+}
+
+country_event = {
+    id = terra_promises.60
+    title = terra_promises.60.t
+    desc = terra_promises.60.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.60.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.61
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = { country_event = { id = terra_promises.62 } }
+    }
+}
+
+country_event = {
+    id = terra_promises.62
+    title = terra_promises.62.t
+    desc = terra_promises.62.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.62.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.65
+    title = terra_promises.65.t
+    desc = terra_promises.65.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.65.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.66
+    title = terra_promises.66.t
+    desc = terra_promises.66.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.66.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.67
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = { country_event = { id = terra_promises.68 } }
+    }
+}
+
+country_event = {
+    id = terra_promises.68
+    title = terra_promises.68.t
+    desc = terra_promises.68.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.68.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.70
+    title = terra_promises.70.t
+    desc = terra_promises.70.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.70.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.71
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = { country_event = { id = terra_promises.72 } }
+    }
+}
+
+country_event = {
+    id = terra_promises.72
+    title = terra_promises.72.t
+    desc = terra_promises.72.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.72.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.73
+    title = terra_promises.73.t
+    desc = terra_promises.73.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.73.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.75
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        terra_contract_cancel_from_effect = yes
+    }
+}
+
+country_event = {
+    id = terra_promises.80
+    title = terra_promises.80.t
+    desc = terra_promises.80.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = {
+        name = terra_promises.80.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.100
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = { is_ai = yes terra_contract_free = yes NOT = { has_country_flag = terra_contract_offer_cooldown } }
+            random_country = {
+                limit = {
+                    terra_contract_free = yes
+                    NOT = { tag = ROOT }
+                    NOT = { has_war_with = ROOT }
+                    NOT = { has_country_flag = terra_contract_incoming_cooldown }
+                    has_opinion = { target = ROOT value > 9 }
+                    OR = { is_neighbor_of = ROOT is_in_faction_with = ROOT has_war_together_with = ROOT }
+                }
+                country_event = { id = terra_promises.105 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.105
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                terra_contract_open_from = yes
+                NOT = { terra_dip_rejects_from = yes }
+                NOT = { terra_dip_has_betrayal_from = yes }
+            }
+            FROM = { country_event = { id = terra_promises.106 } }
+        }
+    }
+}
+
+country_event = {
+    id = terra_promises.106
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                is_ai = yes
+                terra_contract_open_from = yes
+                has_political_power > 24
+                has_equipment = { infantry_equipment > 999 }
+                NOT = { terra_dip_rejects_from = yes }
+                NOT = { terra_dip_has_betrayal_from = yes }
+                NOT = { terra_dip_claim_conflict_from = yes }
+                OR = { terra_dip_trusts_from = yes terra_dip_has_common_interest_from = yes }
+            }
+            if = {
+                limit = {
+                    has_country_flag = terra_dip_personality_guardian
+                    NOT = { is_in_faction_with = FROM }
+                    NOT = { has_guaranteed = FROM }
+                    DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = yes
+                    num_divisions > 10
+                    FROM = { num_divisions < 15 }
+                }
+                add_political_power = -25
+                terra_contract_offer_defense_effect = yes
+            }
+            else = {
+                add_political_power = -25
+                terra_contract_offer_aid_effect = yes
+            }
+        }
+    }
+}

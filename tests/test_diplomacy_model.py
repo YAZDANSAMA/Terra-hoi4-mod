@@ -141,6 +141,7 @@ class NativeModelTests(unittest.TestCase):
 
     def war_ready(self):
         self.pair(trust=0, grief=95, score=-95)
+        self.actor.flags.update({"terra_security_warned_URS", "terra_security_warning_mature_URS"})
         self.actor.variables["terra_dip_pressure"] = 0
         self.actor.attrs.update({"stability": 0.9, "war_support": 0.9, "has_manpower": 500000,
                                  "army_strength": 300, "num_divisions": 80,

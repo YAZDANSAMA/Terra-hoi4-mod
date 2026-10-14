@@ -1,0 +1,1916 @@
+# THIS = reader, FROM = assessed country. Reports do not change state.
+terra_brief_high_intel_from = {
+    OR = {
+        AND = {
+            FROM = {
+                tag = AGI
+            }
+            has_country_flag = terra_security_intel_high_AGI
+        }
+        AND = {
+            FROM = {
+                tag = BLV
+            }
+            has_country_flag = terra_security_intel_high_BLV
+        }
+        AND = {
+            FROM = {
+                tag = CLM
+            }
+            has_country_flag = terra_security_intel_high_CLM
+        }
+        AND = {
+            FROM = {
+                tag = HGS
+            }
+            has_country_flag = terra_security_intel_high_HGS
+        }
+        AND = {
+            FROM = {
+                tag = HGN
+            }
+            has_country_flag = terra_security_intel_high_HGN
+        }
+        AND = {
+            FROM = {
+                tag = HSS
+            }
+            has_country_flag = terra_security_intel_high_HSS
+        }
+        AND = {
+            FROM = {
+                tag = IBR
+            }
+            has_country_flag = terra_security_intel_high_IBR
+        }
+        AND = {
+            FROM = {
+                tag = KJG
+            }
+            has_country_flag = terra_security_intel_high_KJG
+        }
+        AND = {
+            FROM = {
+                tag = KZM
+            }
+            has_country_flag = terra_security_intel_high_KZM
+        }
+        AND = {
+            FROM = {
+                tag = KZD
+            }
+            has_country_flag = terra_security_intel_high_KZD
+        }
+        AND = {
+            FROM = {
+                tag = LTR
+            }
+            has_country_flag = terra_security_intel_high_LTR
+        }
+        AND = {
+            FROM = {
+                tag = LTH
+            }
+            has_country_flag = terra_security_intel_high_LTH
+        }
+        AND = {
+            FROM = {
+                tag = MNS
+            }
+            has_country_flag = terra_security_intel_high_MNS
+        }
+        AND = {
+            FROM = {
+                tag = RMB
+            }
+            has_country_flag = terra_security_intel_high_RMB
+        }
+        AND = {
+            FROM = {
+                tag = SMN
+            }
+            has_country_flag = terra_security_intel_high_SMN
+        }
+        AND = {
+            FROM = {
+                tag = SGN
+            }
+            has_country_flag = terra_security_intel_high_SGN
+        }
+        AND = {
+            FROM = {
+                tag = SRC
+            }
+            has_country_flag = terra_security_intel_high_SRC
+        }
+        AND = {
+            FROM = {
+                tag = URS
+            }
+            has_country_flag = terra_security_intel_high_URS
+        }
+        AND = {
+            FROM = {
+                tag = VCT
+            }
+            has_country_flag = terra_security_intel_high_VCT
+        }
+        AND = {
+            FROM = {
+                tag = YAN
+            }
+            has_country_flag = terra_security_intel_high_YAN
+        }
+        AND = {
+            FROM = {
+                tag = TRR
+            }
+            has_country_flag = terra_security_intel_high_TRR
+        }
+        AND = {
+            FROM = {
+                tag = LGL
+            }
+            has_country_flag = terra_security_intel_high_LGL
+        }
+        AND = {
+            FROM = {
+                tag = VVA
+            }
+            has_country_flag = terra_security_intel_high_VVA
+        }
+        AND = {
+            FROM = {
+                tag = TNJ
+            }
+            has_country_flag = terra_security_intel_high_TNJ
+        }
+        AND = {
+            FROM = {
+                tag = MSN
+            }
+            has_country_flag = terra_security_intel_high_MSN
+        }
+        AND = {
+            FROM = {
+                tag = WSG
+            }
+            has_country_flag = terra_security_intel_high_WSG
+        }
+        AND = {
+            FROM = {
+                tag = KTH
+            }
+            has_country_flag = terra_security_intel_high_KTH
+        }
+        AND = {
+            FROM = {
+                tag = VNH
+            }
+            has_country_flag = terra_security_intel_high_VNH
+        }
+        AND = {
+            FROM = {
+                tag = SCW
+            }
+            has_country_flag = terra_security_intel_high_SCW
+        }
+        AND = {
+            FROM = {
+                tag = D01
+            }
+            has_country_flag = terra_security_intel_high_D01
+        }
+        AND = {
+            FROM = {
+                tag = D02
+            }
+            has_country_flag = terra_security_intel_high_D02
+        }
+        AND = {
+            FROM = {
+                tag = D03
+            }
+            has_country_flag = terra_security_intel_high_D03
+        }
+        AND = {
+            FROM = {
+                tag = D04
+            }
+            has_country_flag = terra_security_intel_high_D04
+        }
+        AND = {
+            FROM = {
+                tag = D05
+            }
+            has_country_flag = terra_security_intel_high_D05
+        }
+        AND = {
+            FROM = {
+                tag = D06
+            }
+            has_country_flag = terra_security_intel_high_D06
+        }
+        AND = {
+            FROM = {
+                tag = D07
+            }
+            has_country_flag = terra_security_intel_high_D07
+        }
+        AND = {
+            FROM = {
+                tag = D08
+            }
+            has_country_flag = terra_security_intel_high_D08
+        }
+        AND = {
+            FROM = {
+                tag = D09
+            }
+            has_country_flag = terra_security_intel_high_D09
+        }
+        AND = {
+            FROM = {
+                tag = D10
+            }
+            has_country_flag = terra_security_intel_high_D10
+        }
+        AND = {
+            FROM = {
+                tag = D11
+            }
+            has_country_flag = terra_security_intel_high_D11
+        }
+        AND = {
+            FROM = {
+                tag = D12
+            }
+            has_country_flag = terra_security_intel_high_D12
+        }
+        AND = {
+            FROM = {
+                tag = D13
+            }
+            has_country_flag = terra_security_intel_high_D13
+        }
+        AND = {
+            FROM = {
+                tag = D14
+            }
+            has_country_flag = terra_security_intel_high_D14
+        }
+        AND = {
+            FROM = {
+                tag = D15
+            }
+            has_country_flag = terra_security_intel_high_D15
+        }
+        AND = {
+            FROM = {
+                tag = D16
+            }
+            has_country_flag = terra_security_intel_high_D16
+        }
+        AND = {
+            FROM = {
+                tag = D17
+            }
+            has_country_flag = terra_security_intel_high_D17
+        }
+        AND = {
+            FROM = {
+                tag = D18
+            }
+            has_country_flag = terra_security_intel_high_D18
+        }
+        AND = {
+            FROM = {
+                tag = D19
+            }
+            has_country_flag = terra_security_intel_high_D19
+        }
+        AND = {
+            FROM = {
+                tag = D20
+            }
+            has_country_flag = terra_security_intel_high_D20
+        }
+        AND = {
+            FROM = {
+                tag = D21
+            }
+            has_country_flag = terra_security_intel_high_D21
+        }
+        AND = {
+            FROM = {
+                tag = D22
+            }
+            has_country_flag = terra_security_intel_high_D22
+        }
+        AND = {
+            FROM = {
+                tag = D23
+            }
+            has_country_flag = terra_security_intel_high_D23
+        }
+        AND = {
+            FROM = {
+                tag = D24
+            }
+            has_country_flag = terra_security_intel_high_D24
+        }
+        AND = {
+            FROM = {
+                tag = D25
+            }
+            has_country_flag = terra_security_intel_high_D25
+        }
+        AND = {
+            FROM = {
+                tag = D26
+            }
+            has_country_flag = terra_security_intel_high_D26
+        }
+        AND = {
+            FROM = {
+                tag = D27
+            }
+            has_country_flag = terra_security_intel_high_D27
+        }
+        AND = {
+            FROM = {
+                tag = D28
+            }
+            has_country_flag = terra_security_intel_high_D28
+        }
+        AND = {
+            FROM = {
+                tag = D29
+            }
+            has_country_flag = terra_security_intel_high_D29
+        }
+        AND = {
+            FROM = {
+                tag = D30
+            }
+            has_country_flag = terra_security_intel_high_D30
+        }
+        AND = {
+            FROM = {
+                tag = D31
+            }
+            has_country_flag = terra_security_intel_high_D31
+        }
+        AND = {
+            FROM = {
+                tag = D32
+            }
+            has_country_flag = terra_security_intel_high_D32
+        }
+        AND = {
+            FROM = {
+                tag = D33
+            }
+            has_country_flag = terra_security_intel_high_D33
+        }
+        AND = {
+            FROM = {
+                tag = D34
+            }
+            has_country_flag = terra_security_intel_high_D34
+        }
+        AND = {
+            FROM = {
+                tag = D35
+            }
+            has_country_flag = terra_security_intel_high_D35
+        }
+        AND = {
+            FROM = {
+                tag = D36
+            }
+            has_country_flag = terra_security_intel_high_D36
+        }
+        AND = {
+            FROM = {
+                tag = D37
+            }
+            has_country_flag = terra_security_intel_high_D37
+        }
+        AND = {
+            FROM = {
+                tag = D38
+            }
+            has_country_flag = terra_security_intel_high_D38
+        }
+        AND = {
+            FROM = {
+                tag = D39
+            }
+            has_country_flag = terra_security_intel_high_D39
+        }
+        AND = {
+            FROM = {
+                tag = D40
+            }
+            has_country_flag = terra_security_intel_high_D40
+        }
+        AND = {
+            FROM = {
+                tag = D41
+            }
+            has_country_flag = terra_security_intel_high_D41
+        }
+        AND = {
+            FROM = {
+                tag = D42
+            }
+            has_country_flag = terra_security_intel_high_D42
+        }
+        AND = {
+            FROM = {
+                tag = D43
+            }
+            has_country_flag = terra_security_intel_high_D43
+        }
+        AND = {
+            FROM = {
+                tag = D44
+            }
+            has_country_flag = terra_security_intel_high_D44
+        }
+        AND = {
+            FROM = {
+                tag = D45
+            }
+            has_country_flag = terra_security_intel_high_D45
+        }
+        AND = {
+            FROM = {
+                tag = D46
+            }
+            has_country_flag = terra_security_intel_high_D46
+        }
+        AND = {
+            FROM = {
+                tag = D47
+            }
+            has_country_flag = terra_security_intel_high_D47
+        }
+        AND = {
+            FROM = {
+                tag = D48
+            }
+            has_country_flag = terra_security_intel_high_D48
+        }
+        AND = {
+            FROM = {
+                tag = D49
+            }
+            has_country_flag = terra_security_intel_high_D49
+        }
+        AND = {
+            FROM = {
+                tag = D50
+            }
+            has_country_flag = terra_security_intel_high_D50
+        }
+    }
+}
+
+terra_brief_medium_intel_from = {
+    OR = {
+        AND = {
+            FROM = {
+                tag = AGI
+            }
+            has_country_flag = terra_security_intel_medium_AGI
+        }
+        AND = {
+            FROM = {
+                tag = BLV
+            }
+            has_country_flag = terra_security_intel_medium_BLV
+        }
+        AND = {
+            FROM = {
+                tag = CLM
+            }
+            has_country_flag = terra_security_intel_medium_CLM
+        }
+        AND = {
+            FROM = {
+                tag = HGS
+            }
+            has_country_flag = terra_security_intel_medium_HGS
+        }
+        AND = {
+            FROM = {
+                tag = HGN
+            }
+            has_country_flag = terra_security_intel_medium_HGN
+        }
+        AND = {
+            FROM = {
+                tag = HSS
+            }
+            has_country_flag = terra_security_intel_medium_HSS
+        }
+        AND = {
+            FROM = {
+                tag = IBR
+            }
+            has_country_flag = terra_security_intel_medium_IBR
+        }
+        AND = {
+            FROM = {
+                tag = KJG
+            }
+            has_country_flag = terra_security_intel_medium_KJG
+        }
+        AND = {
+            FROM = {
+                tag = KZM
+            }
+            has_country_flag = terra_security_intel_medium_KZM
+        }
+        AND = {
+            FROM = {
+                tag = KZD
+            }
+            has_country_flag = terra_security_intel_medium_KZD
+        }
+        AND = {
+            FROM = {
+                tag = LTR
+            }
+            has_country_flag = terra_security_intel_medium_LTR
+        }
+        AND = {
+            FROM = {
+                tag = LTH
+            }
+            has_country_flag = terra_security_intel_medium_LTH
+        }
+        AND = {
+            FROM = {
+                tag = MNS
+            }
+            has_country_flag = terra_security_intel_medium_MNS
+        }
+        AND = {
+            FROM = {
+                tag = RMB
+            }
+            has_country_flag = terra_security_intel_medium_RMB
+        }
+        AND = {
+            FROM = {
+                tag = SMN
+            }
+            has_country_flag = terra_security_intel_medium_SMN
+        }
+        AND = {
+            FROM = {
+                tag = SGN
+            }
+            has_country_flag = terra_security_intel_medium_SGN
+        }
+        AND = {
+            FROM = {
+                tag = SRC
+            }
+            has_country_flag = terra_security_intel_medium_SRC
+        }
+        AND = {
+            FROM = {
+                tag = URS
+            }
+            has_country_flag = terra_security_intel_medium_URS
+        }
+        AND = {
+            FROM = {
+                tag = VCT
+            }
+            has_country_flag = terra_security_intel_medium_VCT
+        }
+        AND = {
+            FROM = {
+                tag = YAN
+            }
+            has_country_flag = terra_security_intel_medium_YAN
+        }
+        AND = {
+            FROM = {
+                tag = TRR
+            }
+            has_country_flag = terra_security_intel_medium_TRR
+        }
+        AND = {
+            FROM = {
+                tag = LGL
+            }
+            has_country_flag = terra_security_intel_medium_LGL
+        }
+        AND = {
+            FROM = {
+                tag = VVA
+            }
+            has_country_flag = terra_security_intel_medium_VVA
+        }
+        AND = {
+            FROM = {
+                tag = TNJ
+            }
+            has_country_flag = terra_security_intel_medium_TNJ
+        }
+        AND = {
+            FROM = {
+                tag = MSN
+            }
+            has_country_flag = terra_security_intel_medium_MSN
+        }
+        AND = {
+            FROM = {
+                tag = WSG
+            }
+            has_country_flag = terra_security_intel_medium_WSG
+        }
+        AND = {
+            FROM = {
+                tag = KTH
+            }
+            has_country_flag = terra_security_intel_medium_KTH
+        }
+        AND = {
+            FROM = {
+                tag = VNH
+            }
+            has_country_flag = terra_security_intel_medium_VNH
+        }
+        AND = {
+            FROM = {
+                tag = SCW
+            }
+            has_country_flag = terra_security_intel_medium_SCW
+        }
+        AND = {
+            FROM = {
+                tag = D01
+            }
+            has_country_flag = terra_security_intel_medium_D01
+        }
+        AND = {
+            FROM = {
+                tag = D02
+            }
+            has_country_flag = terra_security_intel_medium_D02
+        }
+        AND = {
+            FROM = {
+                tag = D03
+            }
+            has_country_flag = terra_security_intel_medium_D03
+        }
+        AND = {
+            FROM = {
+                tag = D04
+            }
+            has_country_flag = terra_security_intel_medium_D04
+        }
+        AND = {
+            FROM = {
+                tag = D05
+            }
+            has_country_flag = terra_security_intel_medium_D05
+        }
+        AND = {
+            FROM = {
+                tag = D06
+            }
+            has_country_flag = terra_security_intel_medium_D06
+        }
+        AND = {
+            FROM = {
+                tag = D07
+            }
+            has_country_flag = terra_security_intel_medium_D07
+        }
+        AND = {
+            FROM = {
+                tag = D08
+            }
+            has_country_flag = terra_security_intel_medium_D08
+        }
+        AND = {
+            FROM = {
+                tag = D09
+            }
+            has_country_flag = terra_security_intel_medium_D09
+        }
+        AND = {
+            FROM = {
+                tag = D10
+            }
+            has_country_flag = terra_security_intel_medium_D10
+        }
+        AND = {
+            FROM = {
+                tag = D11
+            }
+            has_country_flag = terra_security_intel_medium_D11
+        }
+        AND = {
+            FROM = {
+                tag = D12
+            }
+            has_country_flag = terra_security_intel_medium_D12
+        }
+        AND = {
+            FROM = {
+                tag = D13
+            }
+            has_country_flag = terra_security_intel_medium_D13
+        }
+        AND = {
+            FROM = {
+                tag = D14
+            }
+            has_country_flag = terra_security_intel_medium_D14
+        }
+        AND = {
+            FROM = {
+                tag = D15
+            }
+            has_country_flag = terra_security_intel_medium_D15
+        }
+        AND = {
+            FROM = {
+                tag = D16
+            }
+            has_country_flag = terra_security_intel_medium_D16
+        }
+        AND = {
+            FROM = {
+                tag = D17
+            }
+            has_country_flag = terra_security_intel_medium_D17
+        }
+        AND = {
+            FROM = {
+                tag = D18
+            }
+            has_country_flag = terra_security_intel_medium_D18
+        }
+        AND = {
+            FROM = {
+                tag = D19
+            }
+            has_country_flag = terra_security_intel_medium_D19
+        }
+        AND = {
+            FROM = {
+                tag = D20
+            }
+            has_country_flag = terra_security_intel_medium_D20
+        }
+        AND = {
+            FROM = {
+                tag = D21
+            }
+            has_country_flag = terra_security_intel_medium_D21
+        }
+        AND = {
+            FROM = {
+                tag = D22
+            }
+            has_country_flag = terra_security_intel_medium_D22
+        }
+        AND = {
+            FROM = {
+                tag = D23
+            }
+            has_country_flag = terra_security_intel_medium_D23
+        }
+        AND = {
+            FROM = {
+                tag = D24
+            }
+            has_country_flag = terra_security_intel_medium_D24
+        }
+        AND = {
+            FROM = {
+                tag = D25
+            }
+            has_country_flag = terra_security_intel_medium_D25
+        }
+        AND = {
+            FROM = {
+                tag = D26
+            }
+            has_country_flag = terra_security_intel_medium_D26
+        }
+        AND = {
+            FROM = {
+                tag = D27
+            }
+            has_country_flag = terra_security_intel_medium_D27
+        }
+        AND = {
+            FROM = {
+                tag = D28
+            }
+            has_country_flag = terra_security_intel_medium_D28
+        }
+        AND = {
+            FROM = {
+                tag = D29
+            }
+            has_country_flag = terra_security_intel_medium_D29
+        }
+        AND = {
+            FROM = {
+                tag = D30
+            }
+            has_country_flag = terra_security_intel_medium_D30
+        }
+        AND = {
+            FROM = {
+                tag = D31
+            }
+            has_country_flag = terra_security_intel_medium_D31
+        }
+        AND = {
+            FROM = {
+                tag = D32
+            }
+            has_country_flag = terra_security_intel_medium_D32
+        }
+        AND = {
+            FROM = {
+                tag = D33
+            }
+            has_country_flag = terra_security_intel_medium_D33
+        }
+        AND = {
+            FROM = {
+                tag = D34
+            }
+            has_country_flag = terra_security_intel_medium_D34
+        }
+        AND = {
+            FROM = {
+                tag = D35
+            }
+            has_country_flag = terra_security_intel_medium_D35
+        }
+        AND = {
+            FROM = {
+                tag = D36
+            }
+            has_country_flag = terra_security_intel_medium_D36
+        }
+        AND = {
+            FROM = {
+                tag = D37
+            }
+            has_country_flag = terra_security_intel_medium_D37
+        }
+        AND = {
+            FROM = {
+                tag = D38
+            }
+            has_country_flag = terra_security_intel_medium_D38
+        }
+        AND = {
+            FROM = {
+                tag = D39
+            }
+            has_country_flag = terra_security_intel_medium_D39
+        }
+        AND = {
+            FROM = {
+                tag = D40
+            }
+            has_country_flag = terra_security_intel_medium_D40
+        }
+        AND = {
+            FROM = {
+                tag = D41
+            }
+            has_country_flag = terra_security_intel_medium_D41
+        }
+        AND = {
+            FROM = {
+                tag = D42
+            }
+            has_country_flag = terra_security_intel_medium_D42
+        }
+        AND = {
+            FROM = {
+                tag = D43
+            }
+            has_country_flag = terra_security_intel_medium_D43
+        }
+        AND = {
+            FROM = {
+                tag = D44
+            }
+            has_country_flag = terra_security_intel_medium_D44
+        }
+        AND = {
+            FROM = {
+                tag = D45
+            }
+            has_country_flag = terra_security_intel_medium_D45
+        }
+        AND = {
+            FROM = {
+                tag = D46
+            }
+            has_country_flag = terra_security_intel_medium_D46
+        }
+        AND = {
+            FROM = {
+                tag = D47
+            }
+            has_country_flag = terra_security_intel_medium_D47
+        }
+        AND = {
+            FROM = {
+                tag = D48
+            }
+            has_country_flag = terra_security_intel_medium_D48
+        }
+        AND = {
+            FROM = {
+                tag = D49
+            }
+            has_country_flag = terra_security_intel_medium_D49
+        }
+        AND = {
+            FROM = {
+                tag = D50
+            }
+            has_country_flag = terra_security_intel_medium_D50
+        }
+    }
+}
+
+terra_brief_mature_notice_from = {
+    OR = {
+        AND = {
+            FROM = {
+                tag = AGI
+            }
+            has_country_flag = terra_security_warning_mature_AGI
+        }
+        AND = {
+            FROM = {
+                tag = BLV
+            }
+            has_country_flag = terra_security_warning_mature_BLV
+        }
+        AND = {
+            FROM = {
+                tag = CLM
+            }
+            has_country_flag = terra_security_warning_mature_CLM
+        }
+        AND = {
+            FROM = {
+                tag = HGS
+            }
+            has_country_flag = terra_security_warning_mature_HGS
+        }
+        AND = {
+            FROM = {
+                tag = HGN
+            }
+            has_country_flag = terra_security_warning_mature_HGN
+        }
+        AND = {
+            FROM = {
+                tag = HSS
+            }
+            has_country_flag = terra_security_warning_mature_HSS
+        }
+        AND = {
+            FROM = {
+                tag = IBR
+            }
+            has_country_flag = terra_security_warning_mature_IBR
+        }
+        AND = {
+            FROM = {
+                tag = KJG
+            }
+            has_country_flag = terra_security_warning_mature_KJG
+        }
+        AND = {
+            FROM = {
+                tag = KZM
+            }
+            has_country_flag = terra_security_warning_mature_KZM
+        }
+        AND = {
+            FROM = {
+                tag = KZD
+            }
+            has_country_flag = terra_security_warning_mature_KZD
+        }
+        AND = {
+            FROM = {
+                tag = LTR
+            }
+            has_country_flag = terra_security_warning_mature_LTR
+        }
+        AND = {
+            FROM = {
+                tag = LTH
+            }
+            has_country_flag = terra_security_warning_mature_LTH
+        }
+        AND = {
+            FROM = {
+                tag = MNS
+            }
+            has_country_flag = terra_security_warning_mature_MNS
+        }
+        AND = {
+            FROM = {
+                tag = RMB
+            }
+            has_country_flag = terra_security_warning_mature_RMB
+        }
+        AND = {
+            FROM = {
+                tag = SMN
+            }
+            has_country_flag = terra_security_warning_mature_SMN
+        }
+        AND = {
+            FROM = {
+                tag = SGN
+            }
+            has_country_flag = terra_security_warning_mature_SGN
+        }
+        AND = {
+            FROM = {
+                tag = SRC
+            }
+            has_country_flag = terra_security_warning_mature_SRC
+        }
+        AND = {
+            FROM = {
+                tag = URS
+            }
+            has_country_flag = terra_security_warning_mature_URS
+        }
+        AND = {
+            FROM = {
+                tag = VCT
+            }
+            has_country_flag = terra_security_warning_mature_VCT
+        }
+        AND = {
+            FROM = {
+                tag = YAN
+            }
+            has_country_flag = terra_security_warning_mature_YAN
+        }
+        AND = {
+            FROM = {
+                tag = TRR
+            }
+            has_country_flag = terra_security_warning_mature_TRR
+        }
+        AND = {
+            FROM = {
+                tag = LGL
+            }
+            has_country_flag = terra_security_warning_mature_LGL
+        }
+        AND = {
+            FROM = {
+                tag = VVA
+            }
+            has_country_flag = terra_security_warning_mature_VVA
+        }
+        AND = {
+            FROM = {
+                tag = TNJ
+            }
+            has_country_flag = terra_security_warning_mature_TNJ
+        }
+        AND = {
+            FROM = {
+                tag = MSN
+            }
+            has_country_flag = terra_security_warning_mature_MSN
+        }
+        AND = {
+            FROM = {
+                tag = WSG
+            }
+            has_country_flag = terra_security_warning_mature_WSG
+        }
+        AND = {
+            FROM = {
+                tag = KTH
+            }
+            has_country_flag = terra_security_warning_mature_KTH
+        }
+        AND = {
+            FROM = {
+                tag = VNH
+            }
+            has_country_flag = terra_security_warning_mature_VNH
+        }
+        AND = {
+            FROM = {
+                tag = SCW
+            }
+            has_country_flag = terra_security_warning_mature_SCW
+        }
+        AND = {
+            FROM = {
+                tag = D01
+            }
+            has_country_flag = terra_security_warning_mature_D01
+        }
+        AND = {
+            FROM = {
+                tag = D02
+            }
+            has_country_flag = terra_security_warning_mature_D02
+        }
+        AND = {
+            FROM = {
+                tag = D03
+            }
+            has_country_flag = terra_security_warning_mature_D03
+        }
+        AND = {
+            FROM = {
+                tag = D04
+            }
+            has_country_flag = terra_security_warning_mature_D04
+        }
+        AND = {
+            FROM = {
+                tag = D05
+            }
+            has_country_flag = terra_security_warning_mature_D05
+        }
+        AND = {
+            FROM = {
+                tag = D06
+            }
+            has_country_flag = terra_security_warning_mature_D06
+        }
+        AND = {
+            FROM = {
+                tag = D07
+            }
+            has_country_flag = terra_security_warning_mature_D07
+        }
+        AND = {
+            FROM = {
+                tag = D08
+            }
+            has_country_flag = terra_security_warning_mature_D08
+        }
+        AND = {
+            FROM = {
+                tag = D09
+            }
+            has_country_flag = terra_security_warning_mature_D09
+        }
+        AND = {
+            FROM = {
+                tag = D10
+            }
+            has_country_flag = terra_security_warning_mature_D10
+        }
+        AND = {
+            FROM = {
+                tag = D11
+            }
+            has_country_flag = terra_security_warning_mature_D11
+        }
+        AND = {
+            FROM = {
+                tag = D12
+            }
+            has_country_flag = terra_security_warning_mature_D12
+        }
+        AND = {
+            FROM = {
+                tag = D13
+            }
+            has_country_flag = terra_security_warning_mature_D13
+        }
+        AND = {
+            FROM = {
+                tag = D14
+            }
+            has_country_flag = terra_security_warning_mature_D14
+        }
+        AND = {
+            FROM = {
+                tag = D15
+            }
+            has_country_flag = terra_security_warning_mature_D15
+        }
+        AND = {
+            FROM = {
+                tag = D16
+            }
+            has_country_flag = terra_security_warning_mature_D16
+        }
+        AND = {
+            FROM = {
+                tag = D17
+            }
+            has_country_flag = terra_security_warning_mature_D17
+        }
+        AND = {
+            FROM = {
+                tag = D18
+            }
+            has_country_flag = terra_security_warning_mature_D18
+        }
+        AND = {
+            FROM = {
+                tag = D19
+            }
+            has_country_flag = terra_security_warning_mature_D19
+        }
+        AND = {
+            FROM = {
+                tag = D20
+            }
+            has_country_flag = terra_security_warning_mature_D20
+        }
+        AND = {
+            FROM = {
+                tag = D21
+            }
+            has_country_flag = terra_security_warning_mature_D21
+        }
+        AND = {
+            FROM = {
+                tag = D22
+            }
+            has_country_flag = terra_security_warning_mature_D22
+        }
+        AND = {
+            FROM = {
+                tag = D23
+            }
+            has_country_flag = terra_security_warning_mature_D23
+        }
+        AND = {
+            FROM = {
+                tag = D24
+            }
+            has_country_flag = terra_security_warning_mature_D24
+        }
+        AND = {
+            FROM = {
+                tag = D25
+            }
+            has_country_flag = terra_security_warning_mature_D25
+        }
+        AND = {
+            FROM = {
+                tag = D26
+            }
+            has_country_flag = terra_security_warning_mature_D26
+        }
+        AND = {
+            FROM = {
+                tag = D27
+            }
+            has_country_flag = terra_security_warning_mature_D27
+        }
+        AND = {
+            FROM = {
+                tag = D28
+            }
+            has_country_flag = terra_security_warning_mature_D28
+        }
+        AND = {
+            FROM = {
+                tag = D29
+            }
+            has_country_flag = terra_security_warning_mature_D29
+        }
+        AND = {
+            FROM = {
+                tag = D30
+            }
+            has_country_flag = terra_security_warning_mature_D30
+        }
+        AND = {
+            FROM = {
+                tag = D31
+            }
+            has_country_flag = terra_security_warning_mature_D31
+        }
+        AND = {
+            FROM = {
+                tag = D32
+            }
+            has_country_flag = terra_security_warning_mature_D32
+        }
+        AND = {
+            FROM = {
+                tag = D33
+            }
+            has_country_flag = terra_security_warning_mature_D33
+        }
+        AND = {
+            FROM = {
+                tag = D34
+            }
+            has_country_flag = terra_security_warning_mature_D34
+        }
+        AND = {
+            FROM = {
+                tag = D35
+            }
+            has_country_flag = terra_security_warning_mature_D35
+        }
+        AND = {
+            FROM = {
+                tag = D36
+            }
+            has_country_flag = terra_security_warning_mature_D36
+        }
+        AND = {
+            FROM = {
+                tag = D37
+            }
+            has_country_flag = terra_security_warning_mature_D37
+        }
+        AND = {
+            FROM = {
+                tag = D38
+            }
+            has_country_flag = terra_security_warning_mature_D38
+        }
+        AND = {
+            FROM = {
+                tag = D39
+            }
+            has_country_flag = terra_security_warning_mature_D39
+        }
+        AND = {
+            FROM = {
+                tag = D40
+            }
+            has_country_flag = terra_security_warning_mature_D40
+        }
+        AND = {
+            FROM = {
+                tag = D41
+            }
+            has_country_flag = terra_security_warning_mature_D41
+        }
+        AND = {
+            FROM = {
+                tag = D42
+            }
+            has_country_flag = terra_security_warning_mature_D42
+        }
+        AND = {
+            FROM = {
+                tag = D43
+            }
+            has_country_flag = terra_security_warning_mature_D43
+        }
+        AND = {
+            FROM = {
+                tag = D44
+            }
+            has_country_flag = terra_security_warning_mature_D44
+        }
+        AND = {
+            FROM = {
+                tag = D45
+            }
+            has_country_flag = terra_security_warning_mature_D45
+        }
+        AND = {
+            FROM = {
+                tag = D46
+            }
+            has_country_flag = terra_security_warning_mature_D46
+        }
+        AND = {
+            FROM = {
+                tag = D47
+            }
+            has_country_flag = terra_security_warning_mature_D47
+        }
+        AND = {
+            FROM = {
+                tag = D48
+            }
+            has_country_flag = terra_security_warning_mature_D48
+        }
+        AND = {
+            FROM = {
+                tag = D49
+            }
+            has_country_flag = terra_security_warning_mature_D49
+        }
+        AND = {
+            FROM = {
+                tag = D50
+            }
+            has_country_flag = terra_security_warning_mature_D50
+        }
+    }
+}
+
+terra_brief_active_notice_from = {
+    OR = {
+        AND = {
+            FROM = {
+                tag = AGI
+            }
+            has_country_flag = terra_security_warned_AGI
+        }
+        AND = {
+            FROM = {
+                tag = BLV
+            }
+            has_country_flag = terra_security_warned_BLV
+        }
+        AND = {
+            FROM = {
+                tag = CLM
+            }
+            has_country_flag = terra_security_warned_CLM
+        }
+        AND = {
+            FROM = {
+                tag = HGS
+            }
+            has_country_flag = terra_security_warned_HGS
+        }
+        AND = {
+            FROM = {
+                tag = HGN
+            }
+            has_country_flag = terra_security_warned_HGN
+        }
+        AND = {
+            FROM = {
+                tag = HSS
+            }
+            has_country_flag = terra_security_warned_HSS
+        }
+        AND = {
+            FROM = {
+                tag = IBR
+            }
+            has_country_flag = terra_security_warned_IBR
+        }
+        AND = {
+            FROM = {
+                tag = KJG
+            }
+            has_country_flag = terra_security_warned_KJG
+        }
+        AND = {
+            FROM = {
+                tag = KZM
+            }
+            has_country_flag = terra_security_warned_KZM
+        }
+        AND = {
+            FROM = {
+                tag = KZD
+            }
+            has_country_flag = terra_security_warned_KZD
+        }
+        AND = {
+            FROM = {
+                tag = LTR
+            }
+            has_country_flag = terra_security_warned_LTR
+        }
+        AND = {
+            FROM = {
+                tag = LTH
+            }
+            has_country_flag = terra_security_warned_LTH
+        }
+        AND = {
+            FROM = {
+                tag = MNS
+            }
+            has_country_flag = terra_security_warned_MNS
+        }
+        AND = {
+            FROM = {
+                tag = RMB
+            }
+            has_country_flag = terra_security_warned_RMB
+        }
+        AND = {
+            FROM = {
+                tag = SMN
+            }
+            has_country_flag = terra_security_warned_SMN
+        }
+        AND = {
+            FROM = {
+                tag = SGN
+            }
+            has_country_flag = terra_security_warned_SGN
+        }
+        AND = {
+            FROM = {
+                tag = SRC
+            }
+            has_country_flag = terra_security_warned_SRC
+        }
+        AND = {
+            FROM = {
+                tag = URS
+            }
+            has_country_flag = terra_security_warned_URS
+        }
+        AND = {
+            FROM = {
+                tag = VCT
+            }
+            has_country_flag = terra_security_warned_VCT
+        }
+        AND = {
+            FROM = {
+                tag = YAN
+            }
+            has_country_flag = terra_security_warned_YAN
+        }
+        AND = {
+            FROM = {
+                tag = TRR
+            }
+            has_country_flag = terra_security_warned_TRR
+        }
+        AND = {
+            FROM = {
+                tag = LGL
+            }
+            has_country_flag = terra_security_warned_LGL
+        }
+        AND = {
+            FROM = {
+                tag = VVA
+            }
+            has_country_flag = terra_security_warned_VVA
+        }
+        AND = {
+            FROM = {
+                tag = TNJ
+            }
+            has_country_flag = terra_security_warned_TNJ
+        }
+        AND = {
+            FROM = {
+                tag = MSN
+            }
+            has_country_flag = terra_security_warned_MSN
+        }
+        AND = {
+            FROM = {
+                tag = WSG
+            }
+            has_country_flag = terra_security_warned_WSG
+        }
+        AND = {
+            FROM = {
+                tag = KTH
+            }
+            has_country_flag = terra_security_warned_KTH
+        }
+        AND = {
+            FROM = {
+                tag = VNH
+            }
+            has_country_flag = terra_security_warned_VNH
+        }
+        AND = {
+            FROM = {
+                tag = SCW
+            }
+            has_country_flag = terra_security_warned_SCW
+        }
+        AND = {
+            FROM = {
+                tag = D01
+            }
+            has_country_flag = terra_security_warned_D01
+        }
+        AND = {
+            FROM = {
+                tag = D02
+            }
+            has_country_flag = terra_security_warned_D02
+        }
+        AND = {
+            FROM = {
+                tag = D03
+            }
+            has_country_flag = terra_security_warned_D03
+        }
+        AND = {
+            FROM = {
+                tag = D04
+            }
+            has_country_flag = terra_security_warned_D04
+        }
+        AND = {
+            FROM = {
+                tag = D05
+            }
+            has_country_flag = terra_security_warned_D05
+        }
+        AND = {
+            FROM = {
+                tag = D06
+            }
+            has_country_flag = terra_security_warned_D06
+        }
+        AND = {
+            FROM = {
+                tag = D07
+            }
+            has_country_flag = terra_security_warned_D07
+        }
+        AND = {
+            FROM = {
+                tag = D08
+            }
+            has_country_flag = terra_security_warned_D08
+        }
+        AND = {
+            FROM = {
+                tag = D09
+            }
+            has_country_flag = terra_security_warned_D09
+        }
+        AND = {
+            FROM = {
+                tag = D10
+            }
+            has_country_flag = terra_security_warned_D10
+        }
+        AND = {
+            FROM = {
+                tag = D11
+            }
+            has_country_flag = terra_security_warned_D11
+        }
+        AND = {
+            FROM = {
+                tag = D12
+            }
+            has_country_flag = terra_security_warned_D12
+        }
+        AND = {
+            FROM = {
+                tag = D13
+            }
+            has_country_flag = terra_security_warned_D13
+        }
+        AND = {
+            FROM = {
+                tag = D14
+            }
+            has_country_flag = terra_security_warned_D14
+        }
+        AND = {
+            FROM = {
+                tag = D15
+            }
+            has_country_flag = terra_security_warned_D15
+        }
+        AND = {
+            FROM = {
+                tag = D16
+            }
+            has_country_flag = terra_security_warned_D16
+        }
+        AND = {
+            FROM = {
+                tag = D17
+            }
+            has_country_flag = terra_security_warned_D17
+        }
+        AND = {
+            FROM = {
+                tag = D18
+            }
+            has_country_flag = terra_security_warned_D18
+        }
+        AND = {
+            FROM = {
+                tag = D19
+            }
+            has_country_flag = terra_security_warned_D19
+        }
+        AND = {
+            FROM = {
+                tag = D20
+            }
+            has_country_flag = terra_security_warned_D20
+        }
+        AND = {
+            FROM = {
+                tag = D21
+            }
+            has_country_flag = terra_security_warned_D21
+        }
+        AND = {
+            FROM = {
+                tag = D22
+            }
+            has_country_flag = terra_security_warned_D22
+        }
+        AND = {
+            FROM = {
+                tag = D23
+            }
+            has_country_flag = terra_security_warned_D23
+        }
+        AND = {
+            FROM = {
+                tag = D24
+            }
+            has_country_flag = terra_security_warned_D24
+        }
+        AND = {
+            FROM = {
+                tag = D25
+            }
+            has_country_flag = terra_security_warned_D25
+        }
+        AND = {
+            FROM = {
+                tag = D26
+            }
+            has_country_flag = terra_security_warned_D26
+        }
+        AND = {
+            FROM = {
+                tag = D27
+            }
+            has_country_flag = terra_security_warned_D27
+        }
+        AND = {
+            FROM = {
+                tag = D28
+            }
+            has_country_flag = terra_security_warned_D28
+        }
+        AND = {
+            FROM = {
+                tag = D29
+            }
+            has_country_flag = terra_security_warned_D29
+        }
+        AND = {
+            FROM = {
+                tag = D30
+            }
+            has_country_flag = terra_security_warned_D30
+        }
+        AND = {
+            FROM = {
+                tag = D31
+            }
+            has_country_flag = terra_security_warned_D31
+        }
+        AND = {
+            FROM = {
+                tag = D32
+            }
+            has_country_flag = terra_security_warned_D32
+        }
+        AND = {
+            FROM = {
+                tag = D33
+            }
+            has_country_flag = terra_security_warned_D33
+        }
+        AND = {
+            FROM = {
+                tag = D34
+            }
+            has_country_flag = terra_security_warned_D34
+        }
+        AND = {
+            FROM = {
+                tag = D35
+            }
+            has_country_flag = terra_security_warned_D35
+        }
+        AND = {
+            FROM = {
+                tag = D36
+            }
+            has_country_flag = terra_security_warned_D36
+        }
+        AND = {
+            FROM = {
+                tag = D37
+            }
+            has_country_flag = terra_security_warned_D37
+        }
+        AND = {
+            FROM = {
+                tag = D38
+            }
+            has_country_flag = terra_security_warned_D38
+        }
+        AND = {
+            FROM = {
+                tag = D39
+            }
+            has_country_flag = terra_security_warned_D39
+        }
+        AND = {
+            FROM = {
+                tag = D40
+            }
+            has_country_flag = terra_security_warned_D40
+        }
+        AND = {
+            FROM = {
+                tag = D41
+            }
+            has_country_flag = terra_security_warned_D41
+        }
+        AND = {
+            FROM = {
+                tag = D42
+            }
+            has_country_flag = terra_security_warned_D42
+        }
+        AND = {
+            FROM = {
+                tag = D43
+            }
+            has_country_flag = terra_security_warned_D43
+        }
+        AND = {
+            FROM = {
+                tag = D44
+            }
+            has_country_flag = terra_security_warned_D44
+        }
+        AND = {
+            FROM = {
+                tag = D45
+            }
+            has_country_flag = terra_security_warned_D45
+        }
+        AND = {
+            FROM = {
+                tag = D46
+            }
+            has_country_flag = terra_security_warned_D46
+        }
+        AND = {
+            FROM = {
+                tag = D47
+            }
+            has_country_flag = terra_security_warned_D47
+        }
+        AND = {
+            FROM = {
+                tag = D48
+            }
+            has_country_flag = terra_security_warned_D48
+        }
+        AND = {
+            FROM = {
+                tag = D49
+            }
+            has_country_flag = terra_security_warned_D49
+        }
+        AND = {
+            FROM = {
+                tag = D50
+            }
+            has_country_flag = terra_security_warned_D50
+        }
+    }
+}
