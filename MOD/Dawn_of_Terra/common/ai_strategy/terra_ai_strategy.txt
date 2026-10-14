@@ -1121,3 +1121,7 @@ terra_ai_conserve_army_in_war = {
     abort_when_not_enabled = yes
     ai_strategy = { type = front_control country_trigger = { always = yes } ratio = 0.0 priority = 25 ordertype = front execution_type = careful }
 }
+
+
+
+
