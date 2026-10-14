@@ -14,15 +14,17 @@
 
 ## Native layers and contracts
 
-The implementation is a collection of reversible native strategies, scripted effects, decisions and authored events. HOI4 owns battle execution, pathfinding, diplomatic legality, equipment inventories and faction membership. The development interpreter executes selected script primitives for regression scenarios; it is not an HOI4 emulator.
+The implementation is a collection of reversible native strategies, scripted effects, decisions and authored events. HOI4 owns battle execution, pathfinding and equipment inventories. The shared-war correction now explicitly forms factions between eligible AI governments, while player membership remains voluntary. The development interpreter executes selected script primitives for regression scenarios; it is not an HOI4 emulator.
 
-The 77 regression scenarios and source/asset checks passed. New native logic also passed the focused schema check; four unresolved vanilla references remain on unchanged lines of a modified legacy file. Full evidence and limits are recorded in [native_validation_strategic.md](native_validation_strategic.md).
+The current suite passes 90 regression scenarios. The pact and coalition correction passed its focused native check with zero errors; behavior, source/asset results and remaining game checks are documented in [diplomacy_policy_fix.md](diplomacy_policy_fix.md). Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
 
 | Layer | Source files | Behavior |
 | --- | --- | --- |
 | Directed diplomacy | `common/scripted_effects/terra_diplomacy.txt`, matching triggers and strategies | Separate trust, grievance and utility for each partner; ordinary diplomatic preferences. |
 | Persistent strategic state | `common/{scripted_effects,scripted_triggers,ai_strategy}/terra_strategic_state.txt` | Current ruler/government profile, domestic constraints, fatigue, defeat memory, reputation and strategic priorities. |
 | Security assessment | `common/{scripted_effects,scripted_triggers,ai_strategy}/terra_security.txt` | Intelligence confidence, escalation notices, perceived common danger and defensive coordination. |
+| Wartime faction formation | `common/{scripted_effects,scripted_triggers}/terra_coalitions.txt`, faction template and charter | Forms and extends named factions between independent AI countries already fighting a common enemy. |
+| Limited native pacts | `common/{scripted_triggers,ai_strategy}/terra_diplomacy_policy.txt` | Suppresses neutral startup pact spam; requires earned confidence and a concrete wartime use. |
 | War director | `common/scripted_triggers/terra_war_director.txt`, matching AI strategies | Recovery fronts, home defense, rifle/transport demand, conditional enemy-specific opportunities and allied cooperation. |
 | Concrete commitments | `common/scripted_effects/terra_commitments.txt`, matching triggers, decisions and events | Negotiated arms shipments and time-limited defensive guarantees with completion, lapse and breach handling. |
 | Explanations | `common/scripted_localisation/terra_strategic_report.txt`, report decisions and events | Authored qualitative reports selected from actual strategic state and the reader's assessment of the target. |
@@ -85,7 +87,7 @@ These are scenarios to run in HOI4, not claims that in-game testing has already 
 | 7. Reputation | Fulfill an actual agreement and breach another; reputation changes once for the credited callback, remains bounded and influences later evaluation. |
 | 8. Intelligence uncertainty | Test La Résistance intelligence and the non-DLC fallback; low-confidence planners require a larger margin than high-confidence planners. |
 | 9. Warnings and backdown | A hostile ready AI issues notice, waits through the period and backs down if the motive or readiness disappears; no missing notice should enable a director war preference. |
-| 10. Shared danger | Two states assess the same credible aggressor; coordination preferences rise without forced faction membership. |
+| 10. Shared danger | Before a common war, coordination preferences rise. Eligible independent AI countries actually fighting the same enemy can form a named faction; players and existing blocs are not enrolled. |
 | 11. Counteroffers and actual aid | Negotiate both aid quantities; final acceptance, insufficient stocks, grace period and delivery conserve real equipment and cannot deliver twice. |
 | 12. Defensive guarantees | Test both durations, a covered defensive war, refusal, voluntary release and annexation; only guarantees introduced by the contract are removed when it closes. |
 | 13. Fronts and logistics | Empty rifle or transport reserves while fighting several enemies; recovery priority wins over opportunistic attacks and production uses ordinary factories and technology. |

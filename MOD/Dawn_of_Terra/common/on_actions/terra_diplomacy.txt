@@ -29,6 +29,7 @@ on_actions = {
                 terra_state_weekly_effect = yes
                 terra_dip_refresh_effect = yes
                 terra_security_weekly_effect = yes
+                terra_coalition_weekly_effect = yes
             }
         }
     }
@@ -77,6 +78,12 @@ on_actions = {
                 limit = { has_country_flag = terra_dip_initialized }
                 # The departing country must not accuse its former partners of leaving it.
                 terra_dip_departure_effect = yes
+                if = {
+                    limit = { is_ai = yes has_country_flag = terra_coalition_member }
+                    clr_country_flag = terra_coalition_member
+                    clr_country_flag = terra_coalition_generated
+                    set_country_flag = { flag = terra_coalition_rejoin_cooldown value = 1 days = 365 }
+                }
             }
         }
     }
