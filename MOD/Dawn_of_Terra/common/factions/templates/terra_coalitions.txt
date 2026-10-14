@@ -1,0 +1,7 @@
+terra_faction_template_common_defense = {
+    name = terra_coalition_default_name
+    manifest = terra_coalition_common_defense
+    icon = GFX_faction_logo_generic_16
+    visible = { always = no }
+    available = { terra_coalition_actor = yes }
+}

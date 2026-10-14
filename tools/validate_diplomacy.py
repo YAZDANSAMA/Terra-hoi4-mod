@@ -174,6 +174,7 @@ class Country:
     ruling_leader: str | None = None
     technologies: set[str] = field(default_factory=set)
     intelligence: dict[str, dict[str, float]] = field(default_factory=dict)
+    rules: dict[str, bool] = field(default_factory=lambda: {"can_join_factions": True, "can_create_factions": False})
     effects: list[tuple[str, object]] = field(default_factory=list)
 
     def relation(self, kind: str, target: str, value: bool = True) -> None:
@@ -211,6 +212,8 @@ class Runtime:
         self.global_flags: set[str] = set()
         self.global_variables: dict[str, float] = {}
         self.deliveries: list[EventDelivery] = []
+        self.factions: dict[str, set[str]] = {}
+        self.random_choice_index = 0
         self.dlcs: set[str] = set()
         for path in sorted((self.mod / "common" / "country_tags").glob("*.txt")):
             for node in read(path):
@@ -332,6 +335,8 @@ class Runtime:
             return not self.check(node.children, scope)
         if key == "always":
             return value == "yes"
+        if key == "has_rule":
+            return country.rules.get(value, False)
         if key == "tag" or key == "original_tag":
             actual = scope.current if key == "tag" else country.attrs["original_tag"]
             return actual == self.resolve(str(value), scope)
@@ -522,7 +527,37 @@ class Runtime:
                 # actual scheduler and engine source scopes require playtesting.
                 self.deliveries.append(EventDelivery(scope.current, scope.root, node.scalar("id"), node.scalar("days", "0")))
                 country.effects.append((key, node))
-            elif key in {"add_opinion_modifier", "remove_opinion_modifier", "set_rule", "add_ideas", "remove_ideas", "create_wargoal", "add_to_faction", "set_truce", "diplomatic_relation"}:
+            elif key == "random_list":
+                # Deterministic fixture branch, not a simulation of engine randomness.
+                choices = [child for child in node.children if child.key.isdigit()]
+                if not choices or not 0 <= self.random_choice_index < len(choices):
+                    raise ScriptError("Missing fixture random-list choice")
+                self.execute(choices[self.random_choice_index].children, scope)
+            elif key == "set_rule":
+                for rule in node.children:
+                    if rule.value not in {"yes", "no"}:
+                        raise ScriptError("Only boolean country-rule fixtures are supported")
+                    country.rules[rule.key] = rule.value == "yes"
+                country.effects.append((key, node))
+            elif key in {"create_faction", "create_faction_from_template"}:
+                # Model only roster facts needed to test guards and repeated enrollment.
+                if country.attrs["is_in_faction"]:
+                    raise ScriptError("Fixture country already has a faction")
+                country.attrs.update({"is_in_faction": True, "is_faction_leader": True, "faction_leader": scope.current})
+                self.factions[scope.current] = {scope.current}
+                country.effects.append((key, node))
+            elif key == "add_to_faction":
+                target = self.country(self.resolve(value, scope))
+                if not country.attrs["is_faction_leader"] or target.attrs["is_in_faction"]:
+                    raise ScriptError("Invalid fixture faction enrollment")
+                roster = self.factions[scope.current]
+                for member in roster:
+                    target.relation("is_in_faction_with", member)
+                    self.country(member).relation("is_in_faction_with", target.tag)
+                roster.add(target.tag)
+                target.attrs.update({"is_in_faction": True, "is_faction_leader": False, "faction_leader": scope.current})
+                country.effects.append((key, node))
+            elif key in {"add_opinion_modifier", "remove_opinion_modifier", "add_ideas", "remove_ideas", "create_wargoal", "set_truce", "diplomatic_relation"}:
                 # Captured for assertions, not treated as simulated engine behavior.
                 country.effects.append((key, node))
             elif key in {"custom_effect_tooltip", "log", "tooltip", "save_event_target_as"}:
