@@ -52,14 +52,14 @@ terra_ai_small_navy_caution = {
 
 terra_ai_faction_remote_fronts = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_divisions > 2 surrender_progress < 0.10 NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } } is_in_faction = yes }
+    enable = { OR = { NOT = { terra_dip_ready = yes } terra_war_can_spare_allied_force = yes } terra_ai_active = yes has_war = yes num_divisions > 2 surrender_progress < 0.10 NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } } is_in_faction = yes }
     abort_when_not_enabled = yes
     ai_strategy = { type = front_unit_request value = 50 country_trigger = { has_war_with = FROM NOT = { is_neighbor_of = FROM } } }
 }
 
 terra_ai_united_sargon_support = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_divisions > 2 surrender_progress < 0.10 NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } } NOT = { tag = SGN } country_exists = SGN is_in_faction_with = SGN has_war_together_with = SGN }
+    enable = { OR = { NOT = { terra_dip_ready = yes } terra_war_can_spare_allied_force = yes } terra_ai_active = yes has_war = yes num_divisions > 2 surrender_progress < 0.10 NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } } NOT = { tag = SGN } country_exists = SGN is_in_faction_with = SGN has_war_together_with = SGN }
     abort_when_not_enabled = yes
     ai_strategy = { type = force_defend_ally_borders id = SGN value = 100  }
     ai_strategy = { type = front_unit_request value = 50 country_trigger = { has_war_with = FROM NOT = { is_neighbor_of = FROM } } }

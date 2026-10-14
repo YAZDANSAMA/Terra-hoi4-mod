@@ -814,6 +814,9 @@ terra_dip_can_prepare_against = {
     terra_dip_military_policy_allowed = yes
     has_war = no
     NOT = { terra_dip_exhausted = yes }
+    terra_war_can_sustain_operations = yes
+    terra_security_warning_ready = { TARGET = $TARGET$ }
+    NOT = { has_country_flag = terra_state_goal_recovery }
     NOT = { is_in_faction_with = $TARGET$ }
     NOT = { has_non_aggression_pact_with = $TARGET$ }
     $TARGET$ = { is_subject = no }
@@ -843,7 +846,7 @@ terra_dip_can_seek_war_against = {
     num_divisions > 5
     has_manpower > 20000
     has_equipment = { infantry_equipment > 1500 }
-    strength_ratio = { tag = $TARGET$ ratio > 1.35 }
+    terra_security_confident_advantage = { TARGET = $TARGET$ }
     # A weak isolated victim must not hide a much stronger defending coalition.
     NOT = {
         $TARGET$ = {
@@ -859,6 +862,7 @@ terra_dip_can_seek_war_against = {
 terra_dip_can_support_offensive_war = {
     terra_dip_pair_valid = { TARGET = $TARGET$ }
     NOT = { terra_dip_exhausted = yes }
+    terra_war_can_sustain_operations = yes
     has_stability > 0.39
     num_divisions > 3
     has_manpower > 10000

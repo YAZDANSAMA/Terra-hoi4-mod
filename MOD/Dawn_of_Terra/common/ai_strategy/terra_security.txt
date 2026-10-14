@@ -1,0 +1,4742 @@
+# Reversible native preferences only: never automatic membership or war effects.
+# All targets are concrete registry tags. ROOT/current actor is evaluated by HOI4.
+
+terra_security_notice_period_AGI = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = AGI }
+        has_country_flag = terra_security_warned_AGI
+        NOT = { has_country_flag = terra_security_warning_mature_AGI }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = AGI value = -1000 }
+}
+
+terra_security_contain_public_threat_AGI = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = AGI }
+        has_country_flag = terra_security_threat_AGI
+        AGI = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = AGI }
+        NOT = { has_non_aggression_pact_with = AGI }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = AGI value = 70 }
+}
+
+terra_security_defensive_coordination_AGI = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_AGI
+        terra_security_can_coordinate = { PARTNER = AGI }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = AGI value = 40 }
+    ai_strategy = { type = alliance id = AGI value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = AGI target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = AGI target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_AGI = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_AGI
+        terra_security_can_coordinate = { PARTNER = AGI }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = AGI }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = AGI value = 45 }
+    ai_strategy = { type = diplo_action_desire id = AGI target = guarantee value = 25 }
+}
+
+terra_security_notice_period_BLV = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = BLV }
+        has_country_flag = terra_security_warned_BLV
+        NOT = { has_country_flag = terra_security_warning_mature_BLV }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = BLV value = -1000 }
+}
+
+terra_security_contain_public_threat_BLV = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = BLV }
+        has_country_flag = terra_security_threat_BLV
+        BLV = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = BLV }
+        NOT = { has_non_aggression_pact_with = BLV }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = BLV value = 70 }
+}
+
+terra_security_defensive_coordination_BLV = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_BLV
+        terra_security_can_coordinate = { PARTNER = BLV }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = BLV value = 40 }
+    ai_strategy = { type = alliance id = BLV value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = BLV target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = BLV target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_BLV = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_BLV
+        terra_security_can_coordinate = { PARTNER = BLV }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = BLV }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = BLV value = 45 }
+    ai_strategy = { type = diplo_action_desire id = BLV target = guarantee value = 25 }
+}
+
+terra_security_notice_period_CLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = CLM }
+        has_country_flag = terra_security_warned_CLM
+        NOT = { has_country_flag = terra_security_warning_mature_CLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = CLM value = -1000 }
+}
+
+terra_security_contain_public_threat_CLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = CLM }
+        has_country_flag = terra_security_threat_CLM
+        CLM = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = CLM }
+        NOT = { has_non_aggression_pact_with = CLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = CLM value = 70 }
+}
+
+terra_security_defensive_coordination_CLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_CLM
+        terra_security_can_coordinate = { PARTNER = CLM }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = CLM value = 40 }
+    ai_strategy = { type = alliance id = CLM value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = CLM target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = CLM target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_CLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_CLM
+        terra_security_can_coordinate = { PARTNER = CLM }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = CLM }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = CLM value = 45 }
+    ai_strategy = { type = diplo_action_desire id = CLM target = guarantee value = 25 }
+}
+
+terra_security_notice_period_HGS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = HGS }
+        has_country_flag = terra_security_warned_HGS
+        NOT = { has_country_flag = terra_security_warning_mature_HGS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = HGS value = -1000 }
+}
+
+terra_security_contain_public_threat_HGS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = HGS }
+        has_country_flag = terra_security_threat_HGS
+        HGS = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = HGS }
+        NOT = { has_non_aggression_pact_with = HGS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = HGS value = 70 }
+}
+
+terra_security_defensive_coordination_HGS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HGS
+        terra_security_can_coordinate = { PARTNER = HGS }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = HGS value = 40 }
+    ai_strategy = { type = alliance id = HGS value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = HGS target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = HGS target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_HGS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HGS
+        terra_security_can_coordinate = { PARTNER = HGS }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = HGS }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = HGS value = 45 }
+    ai_strategy = { type = diplo_action_desire id = HGS target = guarantee value = 25 }
+}
+
+terra_security_notice_period_HGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = HGN }
+        has_country_flag = terra_security_warned_HGN
+        NOT = { has_country_flag = terra_security_warning_mature_HGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = HGN value = -1000 }
+}
+
+terra_security_contain_public_threat_HGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = HGN }
+        has_country_flag = terra_security_threat_HGN
+        HGN = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = HGN }
+        NOT = { has_non_aggression_pact_with = HGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = HGN value = 70 }
+}
+
+terra_security_defensive_coordination_HGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HGN
+        terra_security_can_coordinate = { PARTNER = HGN }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = HGN value = 40 }
+    ai_strategy = { type = alliance id = HGN value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = HGN target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = HGN target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_HGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HGN
+        terra_security_can_coordinate = { PARTNER = HGN }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = HGN }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = HGN value = 45 }
+    ai_strategy = { type = diplo_action_desire id = HGN target = guarantee value = 25 }
+}
+
+terra_security_notice_period_HSS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = HSS }
+        has_country_flag = terra_security_warned_HSS
+        NOT = { has_country_flag = terra_security_warning_mature_HSS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = HSS value = -1000 }
+}
+
+terra_security_contain_public_threat_HSS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = HSS }
+        has_country_flag = terra_security_threat_HSS
+        HSS = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = HSS }
+        NOT = { has_non_aggression_pact_with = HSS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = HSS value = 70 }
+}
+
+terra_security_defensive_coordination_HSS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HSS
+        terra_security_can_coordinate = { PARTNER = HSS }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = HSS value = 40 }
+    ai_strategy = { type = alliance id = HSS value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = HSS target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = HSS target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_HSS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HSS
+        terra_security_can_coordinate = { PARTNER = HSS }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = HSS }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = HSS value = 45 }
+    ai_strategy = { type = diplo_action_desire id = HSS target = guarantee value = 25 }
+}
+
+terra_security_notice_period_IBR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = IBR }
+        has_country_flag = terra_security_warned_IBR
+        NOT = { has_country_flag = terra_security_warning_mature_IBR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = IBR value = -1000 }
+}
+
+terra_security_contain_public_threat_IBR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = IBR }
+        has_country_flag = terra_security_threat_IBR
+        IBR = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = IBR }
+        NOT = { has_non_aggression_pact_with = IBR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = IBR value = 70 }
+}
+
+terra_security_defensive_coordination_IBR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_IBR
+        terra_security_can_coordinate = { PARTNER = IBR }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = IBR value = 40 }
+    ai_strategy = { type = alliance id = IBR value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = IBR target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = IBR target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_IBR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_IBR
+        terra_security_can_coordinate = { PARTNER = IBR }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = IBR }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = IBR value = 45 }
+    ai_strategy = { type = diplo_action_desire id = IBR target = guarantee value = 25 }
+}
+
+terra_security_notice_period_KJG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = KJG }
+        has_country_flag = terra_security_warned_KJG
+        NOT = { has_country_flag = terra_security_warning_mature_KJG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = KJG value = -1000 }
+}
+
+terra_security_contain_public_threat_KJG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = KJG }
+        has_country_flag = terra_security_threat_KJG
+        KJG = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = KJG }
+        NOT = { has_non_aggression_pact_with = KJG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = KJG value = 70 }
+}
+
+terra_security_defensive_coordination_KJG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KJG
+        terra_security_can_coordinate = { PARTNER = KJG }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = KJG value = 40 }
+    ai_strategy = { type = alliance id = KJG value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = KJG target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = KJG target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_KJG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KJG
+        terra_security_can_coordinate = { PARTNER = KJG }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = KJG }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = KJG value = 45 }
+    ai_strategy = { type = diplo_action_desire id = KJG target = guarantee value = 25 }
+}
+
+terra_security_notice_period_KZM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = KZM }
+        has_country_flag = terra_security_warned_KZM
+        NOT = { has_country_flag = terra_security_warning_mature_KZM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = KZM value = -1000 }
+}
+
+terra_security_contain_public_threat_KZM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = KZM }
+        has_country_flag = terra_security_threat_KZM
+        KZM = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = KZM }
+        NOT = { has_non_aggression_pact_with = KZM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = KZM value = 70 }
+}
+
+terra_security_defensive_coordination_KZM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KZM
+        terra_security_can_coordinate = { PARTNER = KZM }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = KZM value = 40 }
+    ai_strategy = { type = alliance id = KZM value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = KZM target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = KZM target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_KZM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KZM
+        terra_security_can_coordinate = { PARTNER = KZM }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = KZM }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = KZM value = 45 }
+    ai_strategy = { type = diplo_action_desire id = KZM target = guarantee value = 25 }
+}
+
+terra_security_notice_period_KZD = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = KZD }
+        has_country_flag = terra_security_warned_KZD
+        NOT = { has_country_flag = terra_security_warning_mature_KZD }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = KZD value = -1000 }
+}
+
+terra_security_contain_public_threat_KZD = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = KZD }
+        has_country_flag = terra_security_threat_KZD
+        KZD = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = KZD }
+        NOT = { has_non_aggression_pact_with = KZD }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = KZD value = 70 }
+}
+
+terra_security_defensive_coordination_KZD = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KZD
+        terra_security_can_coordinate = { PARTNER = KZD }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = KZD value = 40 }
+    ai_strategy = { type = alliance id = KZD value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = KZD target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = KZD target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_KZD = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KZD
+        terra_security_can_coordinate = { PARTNER = KZD }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = KZD }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = KZD value = 45 }
+    ai_strategy = { type = diplo_action_desire id = KZD target = guarantee value = 25 }
+}
+
+terra_security_notice_period_LTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = LTR }
+        has_country_flag = terra_security_warned_LTR
+        NOT = { has_country_flag = terra_security_warning_mature_LTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = LTR value = -1000 }
+}
+
+terra_security_contain_public_threat_LTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = LTR }
+        has_country_flag = terra_security_threat_LTR
+        LTR = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = LTR }
+        NOT = { has_non_aggression_pact_with = LTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = LTR value = 70 }
+}
+
+terra_security_defensive_coordination_LTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_LTR
+        terra_security_can_coordinate = { PARTNER = LTR }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = LTR value = 40 }
+    ai_strategy = { type = alliance id = LTR value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = LTR target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = LTR target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_LTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_LTR
+        terra_security_can_coordinate = { PARTNER = LTR }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = LTR }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = LTR value = 45 }
+    ai_strategy = { type = diplo_action_desire id = LTR target = guarantee value = 25 }
+}
+
+terra_security_notice_period_LTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = LTH }
+        has_country_flag = terra_security_warned_LTH
+        NOT = { has_country_flag = terra_security_warning_mature_LTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = LTH value = -1000 }
+}
+
+terra_security_contain_public_threat_LTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = LTH }
+        has_country_flag = terra_security_threat_LTH
+        LTH = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = LTH }
+        NOT = { has_non_aggression_pact_with = LTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = LTH value = 70 }
+}
+
+terra_security_defensive_coordination_LTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_LTH
+        terra_security_can_coordinate = { PARTNER = LTH }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = LTH value = 40 }
+    ai_strategy = { type = alliance id = LTH value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = LTH target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = LTH target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_LTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_LTH
+        terra_security_can_coordinate = { PARTNER = LTH }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = LTH }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = LTH value = 45 }
+    ai_strategy = { type = diplo_action_desire id = LTH target = guarantee value = 25 }
+}
+
+terra_security_notice_period_MNS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = MNS }
+        has_country_flag = terra_security_warned_MNS
+        NOT = { has_country_flag = terra_security_warning_mature_MNS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = MNS value = -1000 }
+}
+
+terra_security_contain_public_threat_MNS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = MNS }
+        has_country_flag = terra_security_threat_MNS
+        MNS = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = MNS }
+        NOT = { has_non_aggression_pact_with = MNS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = MNS value = 70 }
+}
+
+terra_security_defensive_coordination_MNS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_MNS
+        terra_security_can_coordinate = { PARTNER = MNS }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = MNS value = 40 }
+    ai_strategy = { type = alliance id = MNS value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = MNS target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = MNS target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_MNS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_MNS
+        terra_security_can_coordinate = { PARTNER = MNS }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = MNS }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = MNS value = 45 }
+    ai_strategy = { type = diplo_action_desire id = MNS target = guarantee value = 25 }
+}
+
+terra_security_notice_period_RMB = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = RMB }
+        has_country_flag = terra_security_warned_RMB
+        NOT = { has_country_flag = terra_security_warning_mature_RMB }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = RMB value = -1000 }
+}
+
+terra_security_contain_public_threat_RMB = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = RMB }
+        has_country_flag = terra_security_threat_RMB
+        RMB = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = RMB }
+        NOT = { has_non_aggression_pact_with = RMB }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = RMB value = 70 }
+}
+
+terra_security_defensive_coordination_RMB = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_RMB
+        terra_security_can_coordinate = { PARTNER = RMB }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = RMB value = 40 }
+    ai_strategy = { type = alliance id = RMB value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = RMB target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = RMB target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_RMB = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_RMB
+        terra_security_can_coordinate = { PARTNER = RMB }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = RMB }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = RMB value = 45 }
+    ai_strategy = { type = diplo_action_desire id = RMB target = guarantee value = 25 }
+}
+
+terra_security_notice_period_SMN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = SMN }
+        has_country_flag = terra_security_warned_SMN
+        NOT = { has_country_flag = terra_security_warning_mature_SMN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = SMN value = -1000 }
+}
+
+terra_security_contain_public_threat_SMN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = SMN }
+        has_country_flag = terra_security_threat_SMN
+        SMN = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = SMN }
+        NOT = { has_non_aggression_pact_with = SMN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = SMN value = 70 }
+}
+
+terra_security_defensive_coordination_SMN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SMN
+        terra_security_can_coordinate = { PARTNER = SMN }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = SMN value = 40 }
+    ai_strategy = { type = alliance id = SMN value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = SMN target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = SMN target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_SMN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SMN
+        terra_security_can_coordinate = { PARTNER = SMN }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = SMN }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = SMN value = 45 }
+    ai_strategy = { type = diplo_action_desire id = SMN target = guarantee value = 25 }
+}
+
+terra_security_notice_period_SGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = SGN }
+        has_country_flag = terra_security_warned_SGN
+        NOT = { has_country_flag = terra_security_warning_mature_SGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = SGN value = -1000 }
+}
+
+terra_security_contain_public_threat_SGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = SGN }
+        has_country_flag = terra_security_threat_SGN
+        SGN = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = SGN }
+        NOT = { has_non_aggression_pact_with = SGN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = SGN value = 70 }
+}
+
+terra_security_defensive_coordination_SGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SGN
+        terra_security_can_coordinate = { PARTNER = SGN }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = SGN value = 40 }
+    ai_strategy = { type = alliance id = SGN value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = SGN target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = SGN target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_SGN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SGN
+        terra_security_can_coordinate = { PARTNER = SGN }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = SGN }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = SGN value = 45 }
+    ai_strategy = { type = diplo_action_desire id = SGN target = guarantee value = 25 }
+}
+
+terra_security_notice_period_SRC = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = SRC }
+        has_country_flag = terra_security_warned_SRC
+        NOT = { has_country_flag = terra_security_warning_mature_SRC }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = SRC value = -1000 }
+}
+
+terra_security_contain_public_threat_SRC = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = SRC }
+        has_country_flag = terra_security_threat_SRC
+        SRC = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = SRC }
+        NOT = { has_non_aggression_pact_with = SRC }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = SRC value = 70 }
+}
+
+terra_security_defensive_coordination_SRC = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SRC
+        terra_security_can_coordinate = { PARTNER = SRC }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = SRC value = 40 }
+    ai_strategy = { type = alliance id = SRC value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = SRC target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = SRC target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_SRC = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SRC
+        terra_security_can_coordinate = { PARTNER = SRC }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = SRC }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = SRC value = 45 }
+    ai_strategy = { type = diplo_action_desire id = SRC target = guarantee value = 25 }
+}
+
+terra_security_notice_period_URS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = URS }
+        has_country_flag = terra_security_warned_URS
+        NOT = { has_country_flag = terra_security_warning_mature_URS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = URS value = -1000 }
+}
+
+terra_security_contain_public_threat_URS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = URS }
+        has_country_flag = terra_security_threat_URS
+        URS = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = URS }
+        NOT = { has_non_aggression_pact_with = URS }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = URS value = 70 }
+}
+
+terra_security_defensive_coordination_URS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_URS
+        terra_security_can_coordinate = { PARTNER = URS }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = URS value = 40 }
+    ai_strategy = { type = alliance id = URS value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = URS target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = URS target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_URS = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_URS
+        terra_security_can_coordinate = { PARTNER = URS }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = URS }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = URS value = 45 }
+    ai_strategy = { type = diplo_action_desire id = URS target = guarantee value = 25 }
+}
+
+terra_security_notice_period_VCT = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = VCT }
+        has_country_flag = terra_security_warned_VCT
+        NOT = { has_country_flag = terra_security_warning_mature_VCT }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = VCT value = -1000 }
+}
+
+terra_security_contain_public_threat_VCT = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = VCT }
+        has_country_flag = terra_security_threat_VCT
+        VCT = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = VCT }
+        NOT = { has_non_aggression_pact_with = VCT }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = VCT value = 70 }
+}
+
+terra_security_defensive_coordination_VCT = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_VCT
+        terra_security_can_coordinate = { PARTNER = VCT }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = VCT value = 40 }
+    ai_strategy = { type = alliance id = VCT value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = VCT target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = VCT target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_VCT = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_VCT
+        terra_security_can_coordinate = { PARTNER = VCT }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = VCT }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = VCT value = 45 }
+    ai_strategy = { type = diplo_action_desire id = VCT target = guarantee value = 25 }
+}
+
+terra_security_notice_period_YAN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = YAN }
+        has_country_flag = terra_security_warned_YAN
+        NOT = { has_country_flag = terra_security_warning_mature_YAN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = YAN value = -1000 }
+}
+
+terra_security_contain_public_threat_YAN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = YAN }
+        has_country_flag = terra_security_threat_YAN
+        YAN = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = YAN }
+        NOT = { has_non_aggression_pact_with = YAN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = YAN value = 70 }
+}
+
+terra_security_defensive_coordination_YAN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_YAN
+        terra_security_can_coordinate = { PARTNER = YAN }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = YAN value = 40 }
+    ai_strategy = { type = alliance id = YAN value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = YAN target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = YAN target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_YAN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_YAN
+        terra_security_can_coordinate = { PARTNER = YAN }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = YAN }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = YAN value = 45 }
+    ai_strategy = { type = diplo_action_desire id = YAN target = guarantee value = 25 }
+}
+
+terra_security_notice_period_TRR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = TRR }
+        has_country_flag = terra_security_warned_TRR
+        NOT = { has_country_flag = terra_security_warning_mature_TRR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = TRR value = -1000 }
+}
+
+terra_security_contain_public_threat_TRR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = TRR }
+        has_country_flag = terra_security_threat_TRR
+        TRR = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = TRR }
+        NOT = { has_non_aggression_pact_with = TRR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = TRR value = 70 }
+}
+
+terra_security_defensive_coordination_TRR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_TRR
+        terra_security_can_coordinate = { PARTNER = TRR }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = TRR value = 40 }
+    ai_strategy = { type = alliance id = TRR value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = TRR target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = TRR target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_TRR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_TRR
+        terra_security_can_coordinate = { PARTNER = TRR }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = TRR }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = TRR value = 45 }
+    ai_strategy = { type = diplo_action_desire id = TRR target = guarantee value = 25 }
+}
+
+terra_security_notice_period_LGL = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = LGL }
+        has_country_flag = terra_security_warned_LGL
+        NOT = { has_country_flag = terra_security_warning_mature_LGL }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = LGL value = -1000 }
+}
+
+terra_security_contain_public_threat_LGL = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = LGL }
+        has_country_flag = terra_security_threat_LGL
+        LGL = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = LGL }
+        NOT = { has_non_aggression_pact_with = LGL }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = LGL value = 70 }
+}
+
+terra_security_defensive_coordination_LGL = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_LGL
+        terra_security_can_coordinate = { PARTNER = LGL }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = LGL value = 40 }
+    ai_strategy = { type = alliance id = LGL value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = LGL target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = LGL target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_LGL = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_LGL
+        terra_security_can_coordinate = { PARTNER = LGL }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = LGL }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = LGL value = 45 }
+    ai_strategy = { type = diplo_action_desire id = LGL target = guarantee value = 25 }
+}
+
+terra_security_notice_period_VVA = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = VVA }
+        has_country_flag = terra_security_warned_VVA
+        NOT = { has_country_flag = terra_security_warning_mature_VVA }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = VVA value = -1000 }
+}
+
+terra_security_contain_public_threat_VVA = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = VVA }
+        has_country_flag = terra_security_threat_VVA
+        VVA = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = VVA }
+        NOT = { has_non_aggression_pact_with = VVA }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = VVA value = 70 }
+}
+
+terra_security_defensive_coordination_VVA = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_VVA
+        terra_security_can_coordinate = { PARTNER = VVA }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = VVA value = 40 }
+    ai_strategy = { type = alliance id = VVA value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = VVA target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = VVA target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_VVA = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_VVA
+        terra_security_can_coordinate = { PARTNER = VVA }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = VVA }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = VVA value = 45 }
+    ai_strategy = { type = diplo_action_desire id = VVA target = guarantee value = 25 }
+}
+
+terra_security_notice_period_TNJ = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = TNJ }
+        has_country_flag = terra_security_warned_TNJ
+        NOT = { has_country_flag = terra_security_warning_mature_TNJ }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = TNJ value = -1000 }
+}
+
+terra_security_contain_public_threat_TNJ = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = TNJ }
+        has_country_flag = terra_security_threat_TNJ
+        TNJ = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = TNJ }
+        NOT = { has_non_aggression_pact_with = TNJ }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = TNJ value = 70 }
+}
+
+terra_security_defensive_coordination_TNJ = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_TNJ
+        terra_security_can_coordinate = { PARTNER = TNJ }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = TNJ value = 40 }
+    ai_strategy = { type = alliance id = TNJ value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = TNJ target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = TNJ target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_TNJ = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_TNJ
+        terra_security_can_coordinate = { PARTNER = TNJ }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = TNJ }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = TNJ value = 45 }
+    ai_strategy = { type = diplo_action_desire id = TNJ target = guarantee value = 25 }
+}
+
+terra_security_notice_period_MSN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = MSN }
+        has_country_flag = terra_security_warned_MSN
+        NOT = { has_country_flag = terra_security_warning_mature_MSN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = MSN value = -1000 }
+}
+
+terra_security_contain_public_threat_MSN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = MSN }
+        has_country_flag = terra_security_threat_MSN
+        MSN = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = MSN }
+        NOT = { has_non_aggression_pact_with = MSN }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = MSN value = 70 }
+}
+
+terra_security_defensive_coordination_MSN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_MSN
+        terra_security_can_coordinate = { PARTNER = MSN }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = MSN value = 40 }
+    ai_strategy = { type = alliance id = MSN value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = MSN target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = MSN target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_MSN = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_MSN
+        terra_security_can_coordinate = { PARTNER = MSN }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = MSN }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = MSN value = 45 }
+    ai_strategy = { type = diplo_action_desire id = MSN target = guarantee value = 25 }
+}
+
+terra_security_notice_period_WSG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = WSG }
+        has_country_flag = terra_security_warned_WSG
+        NOT = { has_country_flag = terra_security_warning_mature_WSG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = WSG value = -1000 }
+}
+
+terra_security_contain_public_threat_WSG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = WSG }
+        has_country_flag = terra_security_threat_WSG
+        WSG = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = WSG }
+        NOT = { has_non_aggression_pact_with = WSG }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = WSG value = 70 }
+}
+
+terra_security_defensive_coordination_WSG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_WSG
+        terra_security_can_coordinate = { PARTNER = WSG }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = WSG value = 40 }
+    ai_strategy = { type = alliance id = WSG value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = WSG target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = WSG target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_WSG = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_WSG
+        terra_security_can_coordinate = { PARTNER = WSG }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = WSG }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = WSG value = 45 }
+    ai_strategy = { type = diplo_action_desire id = WSG target = guarantee value = 25 }
+}
+
+terra_security_notice_period_KTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = KTH }
+        has_country_flag = terra_security_warned_KTH
+        NOT = { has_country_flag = terra_security_warning_mature_KTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = KTH value = -1000 }
+}
+
+terra_security_contain_public_threat_KTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = KTH }
+        has_country_flag = terra_security_threat_KTH
+        KTH = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = KTH }
+        NOT = { has_non_aggression_pact_with = KTH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = KTH value = 70 }
+}
+
+terra_security_defensive_coordination_KTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KTH
+        terra_security_can_coordinate = { PARTNER = KTH }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = KTH value = 40 }
+    ai_strategy = { type = alliance id = KTH value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = KTH target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = KTH target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_KTH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_KTH
+        terra_security_can_coordinate = { PARTNER = KTH }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = KTH }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = KTH value = 45 }
+    ai_strategy = { type = diplo_action_desire id = KTH target = guarantee value = 25 }
+}
+
+terra_security_notice_period_VNH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = VNH }
+        has_country_flag = terra_security_warned_VNH
+        NOT = { has_country_flag = terra_security_warning_mature_VNH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = VNH value = -1000 }
+}
+
+terra_security_contain_public_threat_VNH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = VNH }
+        has_country_flag = terra_security_threat_VNH
+        VNH = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = VNH }
+        NOT = { has_non_aggression_pact_with = VNH }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = VNH value = 70 }
+}
+
+terra_security_defensive_coordination_VNH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_VNH
+        terra_security_can_coordinate = { PARTNER = VNH }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = VNH value = 40 }
+    ai_strategy = { type = alliance id = VNH value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = VNH target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = VNH target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_VNH = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_VNH
+        terra_security_can_coordinate = { PARTNER = VNH }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = VNH }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = VNH value = 45 }
+    ai_strategy = { type = diplo_action_desire id = VNH target = guarantee value = 25 }
+}
+
+terra_security_notice_period_SCW = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = SCW }
+        has_country_flag = terra_security_warned_SCW
+        NOT = { has_country_flag = terra_security_warning_mature_SCW }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = SCW value = -1000 }
+}
+
+terra_security_contain_public_threat_SCW = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = SCW }
+        has_country_flag = terra_security_threat_SCW
+        SCW = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = SCW }
+        NOT = { has_non_aggression_pact_with = SCW }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = SCW value = 70 }
+}
+
+terra_security_defensive_coordination_SCW = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SCW
+        terra_security_can_coordinate = { PARTNER = SCW }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = SCW value = 40 }
+    ai_strategy = { type = alliance id = SCW value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = SCW target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = SCW target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_SCW = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_SCW
+        terra_security_can_coordinate = { PARTNER = SCW }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = SCW }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = SCW value = 45 }
+    ai_strategy = { type = diplo_action_desire id = SCW target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D01 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D01 }
+        has_country_flag = terra_security_warned_D01
+        NOT = { has_country_flag = terra_security_warning_mature_D01 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D01 value = -1000 }
+}
+
+terra_security_contain_public_threat_D01 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D01 }
+        has_country_flag = terra_security_threat_D01
+        D01 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D01 }
+        NOT = { has_non_aggression_pact_with = D01 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D01 value = 70 }
+}
+
+terra_security_defensive_coordination_D01 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D01
+        terra_security_can_coordinate = { PARTNER = D01 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D01 value = 40 }
+    ai_strategy = { type = alliance id = D01 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D01 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D01 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D01 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D01
+        terra_security_can_coordinate = { PARTNER = D01 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D01 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D01 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D01 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D02 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D02 }
+        has_country_flag = terra_security_warned_D02
+        NOT = { has_country_flag = terra_security_warning_mature_D02 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D02 value = -1000 }
+}
+
+terra_security_contain_public_threat_D02 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D02 }
+        has_country_flag = terra_security_threat_D02
+        D02 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D02 }
+        NOT = { has_non_aggression_pact_with = D02 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D02 value = 70 }
+}
+
+terra_security_defensive_coordination_D02 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D02
+        terra_security_can_coordinate = { PARTNER = D02 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D02 value = 40 }
+    ai_strategy = { type = alliance id = D02 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D02 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D02 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D02 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D02
+        terra_security_can_coordinate = { PARTNER = D02 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D02 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D02 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D02 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D03 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D03 }
+        has_country_flag = terra_security_warned_D03
+        NOT = { has_country_flag = terra_security_warning_mature_D03 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D03 value = -1000 }
+}
+
+terra_security_contain_public_threat_D03 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D03 }
+        has_country_flag = terra_security_threat_D03
+        D03 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D03 }
+        NOT = { has_non_aggression_pact_with = D03 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D03 value = 70 }
+}
+
+terra_security_defensive_coordination_D03 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D03
+        terra_security_can_coordinate = { PARTNER = D03 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D03 value = 40 }
+    ai_strategy = { type = alliance id = D03 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D03 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D03 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D03 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D03
+        terra_security_can_coordinate = { PARTNER = D03 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D03 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D03 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D03 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D04 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D04 }
+        has_country_flag = terra_security_warned_D04
+        NOT = { has_country_flag = terra_security_warning_mature_D04 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D04 value = -1000 }
+}
+
+terra_security_contain_public_threat_D04 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D04 }
+        has_country_flag = terra_security_threat_D04
+        D04 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D04 }
+        NOT = { has_non_aggression_pact_with = D04 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D04 value = 70 }
+}
+
+terra_security_defensive_coordination_D04 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D04
+        terra_security_can_coordinate = { PARTNER = D04 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D04 value = 40 }
+    ai_strategy = { type = alliance id = D04 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D04 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D04 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D04 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D04
+        terra_security_can_coordinate = { PARTNER = D04 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D04 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D04 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D04 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D05 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D05 }
+        has_country_flag = terra_security_warned_D05
+        NOT = { has_country_flag = terra_security_warning_mature_D05 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D05 value = -1000 }
+}
+
+terra_security_contain_public_threat_D05 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D05 }
+        has_country_flag = terra_security_threat_D05
+        D05 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D05 }
+        NOT = { has_non_aggression_pact_with = D05 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D05 value = 70 }
+}
+
+terra_security_defensive_coordination_D05 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D05
+        terra_security_can_coordinate = { PARTNER = D05 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D05 value = 40 }
+    ai_strategy = { type = alliance id = D05 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D05 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D05 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D05 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D05
+        terra_security_can_coordinate = { PARTNER = D05 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D05 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D05 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D05 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D06 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D06 }
+        has_country_flag = terra_security_warned_D06
+        NOT = { has_country_flag = terra_security_warning_mature_D06 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D06 value = -1000 }
+}
+
+terra_security_contain_public_threat_D06 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D06 }
+        has_country_flag = terra_security_threat_D06
+        D06 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D06 }
+        NOT = { has_non_aggression_pact_with = D06 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D06 value = 70 }
+}
+
+terra_security_defensive_coordination_D06 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D06
+        terra_security_can_coordinate = { PARTNER = D06 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D06 value = 40 }
+    ai_strategy = { type = alliance id = D06 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D06 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D06 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D06 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D06
+        terra_security_can_coordinate = { PARTNER = D06 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D06 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D06 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D06 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D07 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D07 }
+        has_country_flag = terra_security_warned_D07
+        NOT = { has_country_flag = terra_security_warning_mature_D07 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D07 value = -1000 }
+}
+
+terra_security_contain_public_threat_D07 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D07 }
+        has_country_flag = terra_security_threat_D07
+        D07 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D07 }
+        NOT = { has_non_aggression_pact_with = D07 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D07 value = 70 }
+}
+
+terra_security_defensive_coordination_D07 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D07
+        terra_security_can_coordinate = { PARTNER = D07 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D07 value = 40 }
+    ai_strategy = { type = alliance id = D07 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D07 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D07 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D07 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D07
+        terra_security_can_coordinate = { PARTNER = D07 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D07 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D07 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D07 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D08 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D08 }
+        has_country_flag = terra_security_warned_D08
+        NOT = { has_country_flag = terra_security_warning_mature_D08 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D08 value = -1000 }
+}
+
+terra_security_contain_public_threat_D08 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D08 }
+        has_country_flag = terra_security_threat_D08
+        D08 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D08 }
+        NOT = { has_non_aggression_pact_with = D08 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D08 value = 70 }
+}
+
+terra_security_defensive_coordination_D08 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D08
+        terra_security_can_coordinate = { PARTNER = D08 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D08 value = 40 }
+    ai_strategy = { type = alliance id = D08 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D08 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D08 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D08 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D08
+        terra_security_can_coordinate = { PARTNER = D08 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D08 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D08 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D08 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D09 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D09 }
+        has_country_flag = terra_security_warned_D09
+        NOT = { has_country_flag = terra_security_warning_mature_D09 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D09 value = -1000 }
+}
+
+terra_security_contain_public_threat_D09 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D09 }
+        has_country_flag = terra_security_threat_D09
+        D09 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D09 }
+        NOT = { has_non_aggression_pact_with = D09 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D09 value = 70 }
+}
+
+terra_security_defensive_coordination_D09 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D09
+        terra_security_can_coordinate = { PARTNER = D09 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D09 value = 40 }
+    ai_strategy = { type = alliance id = D09 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D09 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D09 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D09 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D09
+        terra_security_can_coordinate = { PARTNER = D09 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D09 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D09 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D09 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D10 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D10 }
+        has_country_flag = terra_security_warned_D10
+        NOT = { has_country_flag = terra_security_warning_mature_D10 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D10 value = -1000 }
+}
+
+terra_security_contain_public_threat_D10 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D10 }
+        has_country_flag = terra_security_threat_D10
+        D10 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D10 }
+        NOT = { has_non_aggression_pact_with = D10 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D10 value = 70 }
+}
+
+terra_security_defensive_coordination_D10 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D10
+        terra_security_can_coordinate = { PARTNER = D10 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D10 value = 40 }
+    ai_strategy = { type = alliance id = D10 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D10 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D10 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D10 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D10
+        terra_security_can_coordinate = { PARTNER = D10 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D10 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D10 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D10 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D11 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D11 }
+        has_country_flag = terra_security_warned_D11
+        NOT = { has_country_flag = terra_security_warning_mature_D11 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D11 value = -1000 }
+}
+
+terra_security_contain_public_threat_D11 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D11 }
+        has_country_flag = terra_security_threat_D11
+        D11 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D11 }
+        NOT = { has_non_aggression_pact_with = D11 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D11 value = 70 }
+}
+
+terra_security_defensive_coordination_D11 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D11
+        terra_security_can_coordinate = { PARTNER = D11 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D11 value = 40 }
+    ai_strategy = { type = alliance id = D11 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D11 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D11 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D11 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D11
+        terra_security_can_coordinate = { PARTNER = D11 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D11 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D11 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D11 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D12 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D12 }
+        has_country_flag = terra_security_warned_D12
+        NOT = { has_country_flag = terra_security_warning_mature_D12 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D12 value = -1000 }
+}
+
+terra_security_contain_public_threat_D12 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D12 }
+        has_country_flag = terra_security_threat_D12
+        D12 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D12 }
+        NOT = { has_non_aggression_pact_with = D12 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D12 value = 70 }
+}
+
+terra_security_defensive_coordination_D12 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D12
+        terra_security_can_coordinate = { PARTNER = D12 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D12 value = 40 }
+    ai_strategy = { type = alliance id = D12 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D12 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D12 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D12 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D12
+        terra_security_can_coordinate = { PARTNER = D12 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D12 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D12 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D12 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D13 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D13 }
+        has_country_flag = terra_security_warned_D13
+        NOT = { has_country_flag = terra_security_warning_mature_D13 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D13 value = -1000 }
+}
+
+terra_security_contain_public_threat_D13 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D13 }
+        has_country_flag = terra_security_threat_D13
+        D13 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D13 }
+        NOT = { has_non_aggression_pact_with = D13 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D13 value = 70 }
+}
+
+terra_security_defensive_coordination_D13 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D13
+        terra_security_can_coordinate = { PARTNER = D13 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D13 value = 40 }
+    ai_strategy = { type = alliance id = D13 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D13 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D13 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D13 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D13
+        terra_security_can_coordinate = { PARTNER = D13 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D13 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D13 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D13 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D14 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D14 }
+        has_country_flag = terra_security_warned_D14
+        NOT = { has_country_flag = terra_security_warning_mature_D14 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D14 value = -1000 }
+}
+
+terra_security_contain_public_threat_D14 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D14 }
+        has_country_flag = terra_security_threat_D14
+        D14 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D14 }
+        NOT = { has_non_aggression_pact_with = D14 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D14 value = 70 }
+}
+
+terra_security_defensive_coordination_D14 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D14
+        terra_security_can_coordinate = { PARTNER = D14 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D14 value = 40 }
+    ai_strategy = { type = alliance id = D14 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D14 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D14 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D14 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D14
+        terra_security_can_coordinate = { PARTNER = D14 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D14 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D14 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D14 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D15 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D15 }
+        has_country_flag = terra_security_warned_D15
+        NOT = { has_country_flag = terra_security_warning_mature_D15 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D15 value = -1000 }
+}
+
+terra_security_contain_public_threat_D15 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D15 }
+        has_country_flag = terra_security_threat_D15
+        D15 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D15 }
+        NOT = { has_non_aggression_pact_with = D15 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D15 value = 70 }
+}
+
+terra_security_defensive_coordination_D15 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D15
+        terra_security_can_coordinate = { PARTNER = D15 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D15 value = 40 }
+    ai_strategy = { type = alliance id = D15 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D15 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D15 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D15 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D15
+        terra_security_can_coordinate = { PARTNER = D15 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D15 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D15 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D15 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D16 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D16 }
+        has_country_flag = terra_security_warned_D16
+        NOT = { has_country_flag = terra_security_warning_mature_D16 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D16 value = -1000 }
+}
+
+terra_security_contain_public_threat_D16 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D16 }
+        has_country_flag = terra_security_threat_D16
+        D16 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D16 }
+        NOT = { has_non_aggression_pact_with = D16 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D16 value = 70 }
+}
+
+terra_security_defensive_coordination_D16 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D16
+        terra_security_can_coordinate = { PARTNER = D16 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D16 value = 40 }
+    ai_strategy = { type = alliance id = D16 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D16 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D16 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D16 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D16
+        terra_security_can_coordinate = { PARTNER = D16 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D16 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D16 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D16 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D17 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D17 }
+        has_country_flag = terra_security_warned_D17
+        NOT = { has_country_flag = terra_security_warning_mature_D17 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D17 value = -1000 }
+}
+
+terra_security_contain_public_threat_D17 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D17 }
+        has_country_flag = terra_security_threat_D17
+        D17 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D17 }
+        NOT = { has_non_aggression_pact_with = D17 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D17 value = 70 }
+}
+
+terra_security_defensive_coordination_D17 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D17
+        terra_security_can_coordinate = { PARTNER = D17 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D17 value = 40 }
+    ai_strategy = { type = alliance id = D17 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D17 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D17 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D17 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D17
+        terra_security_can_coordinate = { PARTNER = D17 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D17 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D17 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D17 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D18 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D18 }
+        has_country_flag = terra_security_warned_D18
+        NOT = { has_country_flag = terra_security_warning_mature_D18 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D18 value = -1000 }
+}
+
+terra_security_contain_public_threat_D18 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D18 }
+        has_country_flag = terra_security_threat_D18
+        D18 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D18 }
+        NOT = { has_non_aggression_pact_with = D18 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D18 value = 70 }
+}
+
+terra_security_defensive_coordination_D18 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D18
+        terra_security_can_coordinate = { PARTNER = D18 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D18 value = 40 }
+    ai_strategy = { type = alliance id = D18 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D18 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D18 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D18 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D18
+        terra_security_can_coordinate = { PARTNER = D18 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D18 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D18 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D18 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D19 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D19 }
+        has_country_flag = terra_security_warned_D19
+        NOT = { has_country_flag = terra_security_warning_mature_D19 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D19 value = -1000 }
+}
+
+terra_security_contain_public_threat_D19 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D19 }
+        has_country_flag = terra_security_threat_D19
+        D19 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D19 }
+        NOT = { has_non_aggression_pact_with = D19 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D19 value = 70 }
+}
+
+terra_security_defensive_coordination_D19 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D19
+        terra_security_can_coordinate = { PARTNER = D19 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D19 value = 40 }
+    ai_strategy = { type = alliance id = D19 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D19 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D19 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D19 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D19
+        terra_security_can_coordinate = { PARTNER = D19 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D19 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D19 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D19 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D20 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D20 }
+        has_country_flag = terra_security_warned_D20
+        NOT = { has_country_flag = terra_security_warning_mature_D20 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D20 value = -1000 }
+}
+
+terra_security_contain_public_threat_D20 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D20 }
+        has_country_flag = terra_security_threat_D20
+        D20 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D20 }
+        NOT = { has_non_aggression_pact_with = D20 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D20 value = 70 }
+}
+
+terra_security_defensive_coordination_D20 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D20
+        terra_security_can_coordinate = { PARTNER = D20 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D20 value = 40 }
+    ai_strategy = { type = alliance id = D20 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D20 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D20 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D20 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D20
+        terra_security_can_coordinate = { PARTNER = D20 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D20 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D20 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D20 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D21 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D21 }
+        has_country_flag = terra_security_warned_D21
+        NOT = { has_country_flag = terra_security_warning_mature_D21 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D21 value = -1000 }
+}
+
+terra_security_contain_public_threat_D21 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D21 }
+        has_country_flag = terra_security_threat_D21
+        D21 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D21 }
+        NOT = { has_non_aggression_pact_with = D21 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D21 value = 70 }
+}
+
+terra_security_defensive_coordination_D21 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D21
+        terra_security_can_coordinate = { PARTNER = D21 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D21 value = 40 }
+    ai_strategy = { type = alliance id = D21 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D21 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D21 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D21 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D21
+        terra_security_can_coordinate = { PARTNER = D21 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D21 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D21 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D21 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D22 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D22 }
+        has_country_flag = terra_security_warned_D22
+        NOT = { has_country_flag = terra_security_warning_mature_D22 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D22 value = -1000 }
+}
+
+terra_security_contain_public_threat_D22 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D22 }
+        has_country_flag = terra_security_threat_D22
+        D22 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D22 }
+        NOT = { has_non_aggression_pact_with = D22 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D22 value = 70 }
+}
+
+terra_security_defensive_coordination_D22 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D22
+        terra_security_can_coordinate = { PARTNER = D22 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D22 value = 40 }
+    ai_strategy = { type = alliance id = D22 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D22 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D22 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D22 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D22
+        terra_security_can_coordinate = { PARTNER = D22 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D22 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D22 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D22 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D23 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D23 }
+        has_country_flag = terra_security_warned_D23
+        NOT = { has_country_flag = terra_security_warning_mature_D23 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D23 value = -1000 }
+}
+
+terra_security_contain_public_threat_D23 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D23 }
+        has_country_flag = terra_security_threat_D23
+        D23 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D23 }
+        NOT = { has_non_aggression_pact_with = D23 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D23 value = 70 }
+}
+
+terra_security_defensive_coordination_D23 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D23
+        terra_security_can_coordinate = { PARTNER = D23 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D23 value = 40 }
+    ai_strategy = { type = alliance id = D23 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D23 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D23 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D23 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D23
+        terra_security_can_coordinate = { PARTNER = D23 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D23 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D23 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D23 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D24 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D24 }
+        has_country_flag = terra_security_warned_D24
+        NOT = { has_country_flag = terra_security_warning_mature_D24 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D24 value = -1000 }
+}
+
+terra_security_contain_public_threat_D24 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D24 }
+        has_country_flag = terra_security_threat_D24
+        D24 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D24 }
+        NOT = { has_non_aggression_pact_with = D24 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D24 value = 70 }
+}
+
+terra_security_defensive_coordination_D24 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D24
+        terra_security_can_coordinate = { PARTNER = D24 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D24 value = 40 }
+    ai_strategy = { type = alliance id = D24 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D24 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D24 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D24 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D24
+        terra_security_can_coordinate = { PARTNER = D24 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D24 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D24 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D24 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D25 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D25 }
+        has_country_flag = terra_security_warned_D25
+        NOT = { has_country_flag = terra_security_warning_mature_D25 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D25 value = -1000 }
+}
+
+terra_security_contain_public_threat_D25 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D25 }
+        has_country_flag = terra_security_threat_D25
+        D25 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D25 }
+        NOT = { has_non_aggression_pact_with = D25 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D25 value = 70 }
+}
+
+terra_security_defensive_coordination_D25 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D25
+        terra_security_can_coordinate = { PARTNER = D25 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D25 value = 40 }
+    ai_strategy = { type = alliance id = D25 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D25 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D25 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D25 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D25
+        terra_security_can_coordinate = { PARTNER = D25 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D25 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D25 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D25 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D26 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D26 }
+        has_country_flag = terra_security_warned_D26
+        NOT = { has_country_flag = terra_security_warning_mature_D26 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D26 value = -1000 }
+}
+
+terra_security_contain_public_threat_D26 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D26 }
+        has_country_flag = terra_security_threat_D26
+        D26 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D26 }
+        NOT = { has_non_aggression_pact_with = D26 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D26 value = 70 }
+}
+
+terra_security_defensive_coordination_D26 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D26
+        terra_security_can_coordinate = { PARTNER = D26 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D26 value = 40 }
+    ai_strategy = { type = alliance id = D26 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D26 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D26 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D26 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D26
+        terra_security_can_coordinate = { PARTNER = D26 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D26 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D26 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D26 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D27 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D27 }
+        has_country_flag = terra_security_warned_D27
+        NOT = { has_country_flag = terra_security_warning_mature_D27 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D27 value = -1000 }
+}
+
+terra_security_contain_public_threat_D27 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D27 }
+        has_country_flag = terra_security_threat_D27
+        D27 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D27 }
+        NOT = { has_non_aggression_pact_with = D27 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D27 value = 70 }
+}
+
+terra_security_defensive_coordination_D27 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D27
+        terra_security_can_coordinate = { PARTNER = D27 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D27 value = 40 }
+    ai_strategy = { type = alliance id = D27 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D27 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D27 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D27 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D27
+        terra_security_can_coordinate = { PARTNER = D27 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D27 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D27 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D27 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D28 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D28 }
+        has_country_flag = terra_security_warned_D28
+        NOT = { has_country_flag = terra_security_warning_mature_D28 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D28 value = -1000 }
+}
+
+terra_security_contain_public_threat_D28 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D28 }
+        has_country_flag = terra_security_threat_D28
+        D28 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D28 }
+        NOT = { has_non_aggression_pact_with = D28 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D28 value = 70 }
+}
+
+terra_security_defensive_coordination_D28 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D28
+        terra_security_can_coordinate = { PARTNER = D28 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D28 value = 40 }
+    ai_strategy = { type = alliance id = D28 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D28 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D28 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D28 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D28
+        terra_security_can_coordinate = { PARTNER = D28 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D28 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D28 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D28 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D29 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D29 }
+        has_country_flag = terra_security_warned_D29
+        NOT = { has_country_flag = terra_security_warning_mature_D29 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D29 value = -1000 }
+}
+
+terra_security_contain_public_threat_D29 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D29 }
+        has_country_flag = terra_security_threat_D29
+        D29 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D29 }
+        NOT = { has_non_aggression_pact_with = D29 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D29 value = 70 }
+}
+
+terra_security_defensive_coordination_D29 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D29
+        terra_security_can_coordinate = { PARTNER = D29 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D29 value = 40 }
+    ai_strategy = { type = alliance id = D29 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D29 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D29 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D29 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D29
+        terra_security_can_coordinate = { PARTNER = D29 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D29 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D29 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D29 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D30 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D30 }
+        has_country_flag = terra_security_warned_D30
+        NOT = { has_country_flag = terra_security_warning_mature_D30 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D30 value = -1000 }
+}
+
+terra_security_contain_public_threat_D30 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D30 }
+        has_country_flag = terra_security_threat_D30
+        D30 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D30 }
+        NOT = { has_non_aggression_pact_with = D30 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D30 value = 70 }
+}
+
+terra_security_defensive_coordination_D30 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D30
+        terra_security_can_coordinate = { PARTNER = D30 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D30 value = 40 }
+    ai_strategy = { type = alliance id = D30 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D30 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D30 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D30 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D30
+        terra_security_can_coordinate = { PARTNER = D30 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D30 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D30 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D30 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D31 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D31 }
+        has_country_flag = terra_security_warned_D31
+        NOT = { has_country_flag = terra_security_warning_mature_D31 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D31 value = -1000 }
+}
+
+terra_security_contain_public_threat_D31 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D31 }
+        has_country_flag = terra_security_threat_D31
+        D31 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D31 }
+        NOT = { has_non_aggression_pact_with = D31 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D31 value = 70 }
+}
+
+terra_security_defensive_coordination_D31 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D31
+        terra_security_can_coordinate = { PARTNER = D31 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D31 value = 40 }
+    ai_strategy = { type = alliance id = D31 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D31 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D31 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D31 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D31
+        terra_security_can_coordinate = { PARTNER = D31 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D31 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D31 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D31 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D32 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D32 }
+        has_country_flag = terra_security_warned_D32
+        NOT = { has_country_flag = terra_security_warning_mature_D32 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D32 value = -1000 }
+}
+
+terra_security_contain_public_threat_D32 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D32 }
+        has_country_flag = terra_security_threat_D32
+        D32 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D32 }
+        NOT = { has_non_aggression_pact_with = D32 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D32 value = 70 }
+}
+
+terra_security_defensive_coordination_D32 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D32
+        terra_security_can_coordinate = { PARTNER = D32 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D32 value = 40 }
+    ai_strategy = { type = alliance id = D32 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D32 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D32 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D32 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D32
+        terra_security_can_coordinate = { PARTNER = D32 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D32 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D32 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D32 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D33 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D33 }
+        has_country_flag = terra_security_warned_D33
+        NOT = { has_country_flag = terra_security_warning_mature_D33 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D33 value = -1000 }
+}
+
+terra_security_contain_public_threat_D33 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D33 }
+        has_country_flag = terra_security_threat_D33
+        D33 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D33 }
+        NOT = { has_non_aggression_pact_with = D33 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D33 value = 70 }
+}
+
+terra_security_defensive_coordination_D33 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D33
+        terra_security_can_coordinate = { PARTNER = D33 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D33 value = 40 }
+    ai_strategy = { type = alliance id = D33 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D33 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D33 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D33 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D33
+        terra_security_can_coordinate = { PARTNER = D33 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D33 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D33 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D33 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D34 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D34 }
+        has_country_flag = terra_security_warned_D34
+        NOT = { has_country_flag = terra_security_warning_mature_D34 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D34 value = -1000 }
+}
+
+terra_security_contain_public_threat_D34 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D34 }
+        has_country_flag = terra_security_threat_D34
+        D34 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D34 }
+        NOT = { has_non_aggression_pact_with = D34 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D34 value = 70 }
+}
+
+terra_security_defensive_coordination_D34 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D34
+        terra_security_can_coordinate = { PARTNER = D34 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D34 value = 40 }
+    ai_strategy = { type = alliance id = D34 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D34 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D34 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D34 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D34
+        terra_security_can_coordinate = { PARTNER = D34 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D34 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D34 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D34 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D35 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D35 }
+        has_country_flag = terra_security_warned_D35
+        NOT = { has_country_flag = terra_security_warning_mature_D35 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D35 value = -1000 }
+}
+
+terra_security_contain_public_threat_D35 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D35 }
+        has_country_flag = terra_security_threat_D35
+        D35 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D35 }
+        NOT = { has_non_aggression_pact_with = D35 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D35 value = 70 }
+}
+
+terra_security_defensive_coordination_D35 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D35
+        terra_security_can_coordinate = { PARTNER = D35 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D35 value = 40 }
+    ai_strategy = { type = alliance id = D35 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D35 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D35 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D35 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D35
+        terra_security_can_coordinate = { PARTNER = D35 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D35 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D35 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D35 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D36 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D36 }
+        has_country_flag = terra_security_warned_D36
+        NOT = { has_country_flag = terra_security_warning_mature_D36 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D36 value = -1000 }
+}
+
+terra_security_contain_public_threat_D36 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D36 }
+        has_country_flag = terra_security_threat_D36
+        D36 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D36 }
+        NOT = { has_non_aggression_pact_with = D36 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D36 value = 70 }
+}
+
+terra_security_defensive_coordination_D36 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D36
+        terra_security_can_coordinate = { PARTNER = D36 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D36 value = 40 }
+    ai_strategy = { type = alliance id = D36 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D36 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D36 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D36 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D36
+        terra_security_can_coordinate = { PARTNER = D36 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D36 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D36 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D36 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D37 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D37 }
+        has_country_flag = terra_security_warned_D37
+        NOT = { has_country_flag = terra_security_warning_mature_D37 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D37 value = -1000 }
+}
+
+terra_security_contain_public_threat_D37 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D37 }
+        has_country_flag = terra_security_threat_D37
+        D37 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D37 }
+        NOT = { has_non_aggression_pact_with = D37 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D37 value = 70 }
+}
+
+terra_security_defensive_coordination_D37 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D37
+        terra_security_can_coordinate = { PARTNER = D37 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D37 value = 40 }
+    ai_strategy = { type = alliance id = D37 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D37 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D37 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D37 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D37
+        terra_security_can_coordinate = { PARTNER = D37 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D37 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D37 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D37 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D38 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D38 }
+        has_country_flag = terra_security_warned_D38
+        NOT = { has_country_flag = terra_security_warning_mature_D38 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D38 value = -1000 }
+}
+
+terra_security_contain_public_threat_D38 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D38 }
+        has_country_flag = terra_security_threat_D38
+        D38 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D38 }
+        NOT = { has_non_aggression_pact_with = D38 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D38 value = 70 }
+}
+
+terra_security_defensive_coordination_D38 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D38
+        terra_security_can_coordinate = { PARTNER = D38 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D38 value = 40 }
+    ai_strategy = { type = alliance id = D38 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D38 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D38 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D38 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D38
+        terra_security_can_coordinate = { PARTNER = D38 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D38 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D38 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D38 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D39 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D39 }
+        has_country_flag = terra_security_warned_D39
+        NOT = { has_country_flag = terra_security_warning_mature_D39 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D39 value = -1000 }
+}
+
+terra_security_contain_public_threat_D39 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D39 }
+        has_country_flag = terra_security_threat_D39
+        D39 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D39 }
+        NOT = { has_non_aggression_pact_with = D39 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D39 value = 70 }
+}
+
+terra_security_defensive_coordination_D39 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D39
+        terra_security_can_coordinate = { PARTNER = D39 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D39 value = 40 }
+    ai_strategy = { type = alliance id = D39 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D39 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D39 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D39 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D39
+        terra_security_can_coordinate = { PARTNER = D39 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D39 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D39 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D39 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D40 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D40 }
+        has_country_flag = terra_security_warned_D40
+        NOT = { has_country_flag = terra_security_warning_mature_D40 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D40 value = -1000 }
+}
+
+terra_security_contain_public_threat_D40 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D40 }
+        has_country_flag = terra_security_threat_D40
+        D40 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D40 }
+        NOT = { has_non_aggression_pact_with = D40 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D40 value = 70 }
+}
+
+terra_security_defensive_coordination_D40 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D40
+        terra_security_can_coordinate = { PARTNER = D40 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D40 value = 40 }
+    ai_strategy = { type = alliance id = D40 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D40 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D40 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D40 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D40
+        terra_security_can_coordinate = { PARTNER = D40 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D40 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D40 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D40 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D41 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D41 }
+        has_country_flag = terra_security_warned_D41
+        NOT = { has_country_flag = terra_security_warning_mature_D41 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D41 value = -1000 }
+}
+
+terra_security_contain_public_threat_D41 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D41 }
+        has_country_flag = terra_security_threat_D41
+        D41 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D41 }
+        NOT = { has_non_aggression_pact_with = D41 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D41 value = 70 }
+}
+
+terra_security_defensive_coordination_D41 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D41
+        terra_security_can_coordinate = { PARTNER = D41 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D41 value = 40 }
+    ai_strategy = { type = alliance id = D41 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D41 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D41 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D41 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D41
+        terra_security_can_coordinate = { PARTNER = D41 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D41 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D41 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D41 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D42 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D42 }
+        has_country_flag = terra_security_warned_D42
+        NOT = { has_country_flag = terra_security_warning_mature_D42 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D42 value = -1000 }
+}
+
+terra_security_contain_public_threat_D42 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D42 }
+        has_country_flag = terra_security_threat_D42
+        D42 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D42 }
+        NOT = { has_non_aggression_pact_with = D42 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D42 value = 70 }
+}
+
+terra_security_defensive_coordination_D42 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D42
+        terra_security_can_coordinate = { PARTNER = D42 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D42 value = 40 }
+    ai_strategy = { type = alliance id = D42 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D42 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D42 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D42 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D42
+        terra_security_can_coordinate = { PARTNER = D42 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D42 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D42 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D42 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D43 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D43 }
+        has_country_flag = terra_security_warned_D43
+        NOT = { has_country_flag = terra_security_warning_mature_D43 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D43 value = -1000 }
+}
+
+terra_security_contain_public_threat_D43 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D43 }
+        has_country_flag = terra_security_threat_D43
+        D43 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D43 }
+        NOT = { has_non_aggression_pact_with = D43 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D43 value = 70 }
+}
+
+terra_security_defensive_coordination_D43 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D43
+        terra_security_can_coordinate = { PARTNER = D43 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D43 value = 40 }
+    ai_strategy = { type = alliance id = D43 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D43 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D43 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D43 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D43
+        terra_security_can_coordinate = { PARTNER = D43 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D43 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D43 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D43 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D44 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D44 }
+        has_country_flag = terra_security_warned_D44
+        NOT = { has_country_flag = terra_security_warning_mature_D44 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D44 value = -1000 }
+}
+
+terra_security_contain_public_threat_D44 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D44 }
+        has_country_flag = terra_security_threat_D44
+        D44 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D44 }
+        NOT = { has_non_aggression_pact_with = D44 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D44 value = 70 }
+}
+
+terra_security_defensive_coordination_D44 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D44
+        terra_security_can_coordinate = { PARTNER = D44 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D44 value = 40 }
+    ai_strategy = { type = alliance id = D44 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D44 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D44 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D44 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D44
+        terra_security_can_coordinate = { PARTNER = D44 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D44 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D44 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D44 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D45 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D45 }
+        has_country_flag = terra_security_warned_D45
+        NOT = { has_country_flag = terra_security_warning_mature_D45 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D45 value = -1000 }
+}
+
+terra_security_contain_public_threat_D45 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D45 }
+        has_country_flag = terra_security_threat_D45
+        D45 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D45 }
+        NOT = { has_non_aggression_pact_with = D45 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D45 value = 70 }
+}
+
+terra_security_defensive_coordination_D45 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D45
+        terra_security_can_coordinate = { PARTNER = D45 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D45 value = 40 }
+    ai_strategy = { type = alliance id = D45 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D45 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D45 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D45 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D45
+        terra_security_can_coordinate = { PARTNER = D45 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D45 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D45 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D45 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D46 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D46 }
+        has_country_flag = terra_security_warned_D46
+        NOT = { has_country_flag = terra_security_warning_mature_D46 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D46 value = -1000 }
+}
+
+terra_security_contain_public_threat_D46 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D46 }
+        has_country_flag = terra_security_threat_D46
+        D46 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D46 }
+        NOT = { has_non_aggression_pact_with = D46 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D46 value = 70 }
+}
+
+terra_security_defensive_coordination_D46 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D46
+        terra_security_can_coordinate = { PARTNER = D46 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D46 value = 40 }
+    ai_strategy = { type = alliance id = D46 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D46 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D46 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D46 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D46
+        terra_security_can_coordinate = { PARTNER = D46 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D46 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D46 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D46 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D47 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D47 }
+        has_country_flag = terra_security_warned_D47
+        NOT = { has_country_flag = terra_security_warning_mature_D47 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D47 value = -1000 }
+}
+
+terra_security_contain_public_threat_D47 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D47 }
+        has_country_flag = terra_security_threat_D47
+        D47 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D47 }
+        NOT = { has_non_aggression_pact_with = D47 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D47 value = 70 }
+}
+
+terra_security_defensive_coordination_D47 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D47
+        terra_security_can_coordinate = { PARTNER = D47 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D47 value = 40 }
+    ai_strategy = { type = alliance id = D47 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D47 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D47 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D47 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D47
+        terra_security_can_coordinate = { PARTNER = D47 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D47 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D47 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D47 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D48 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D48 }
+        has_country_flag = terra_security_warned_D48
+        NOT = { has_country_flag = terra_security_warning_mature_D48 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D48 value = -1000 }
+}
+
+terra_security_contain_public_threat_D48 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D48 }
+        has_country_flag = terra_security_threat_D48
+        D48 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D48 }
+        NOT = { has_non_aggression_pact_with = D48 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D48 value = 70 }
+}
+
+terra_security_defensive_coordination_D48 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D48
+        terra_security_can_coordinate = { PARTNER = D48 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D48 value = 40 }
+    ai_strategy = { type = alliance id = D48 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D48 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D48 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D48 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D48
+        terra_security_can_coordinate = { PARTNER = D48 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D48 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D48 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D48 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D49 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D49 }
+        has_country_flag = terra_security_warned_D49
+        NOT = { has_country_flag = terra_security_warning_mature_D49 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D49 value = -1000 }
+}
+
+terra_security_contain_public_threat_D49 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D49 }
+        has_country_flag = terra_security_threat_D49
+        D49 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D49 }
+        NOT = { has_non_aggression_pact_with = D49 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D49 value = 70 }
+}
+
+terra_security_defensive_coordination_D49 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D49
+        terra_security_can_coordinate = { PARTNER = D49 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D49 value = 40 }
+    ai_strategy = { type = alliance id = D49 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D49 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D49 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D49 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D49
+        terra_security_can_coordinate = { PARTNER = D49 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D49 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D49 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D49 target = guarantee value = 25 }
+}
+
+terra_security_notice_period_D50 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = D50 }
+        has_country_flag = terra_security_warned_D50
+        NOT = { has_country_flag = terra_security_warning_mature_D50 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = D50 value = -1000 }
+}
+
+terra_security_contain_public_threat_D50 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = D50 }
+        has_country_flag = terra_security_threat_D50
+        D50 = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = D50 }
+        NOT = { has_non_aggression_pact_with = D50 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = D50 value = 70 }
+}
+
+terra_security_defensive_coordination_D50 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D50
+        terra_security_can_coordinate = { PARTNER = D50 }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = D50 value = 40 }
+    ai_strategy = { type = alliance id = D50 value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = D50 target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = D50 target = join_faction value = 20 }
+}
+
+terra_security_protect_common_target_D50 = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_D50
+        terra_security_can_coordinate = { PARTNER = D50 }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = D50 }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = D50 value = 45 }
+    ai_strategy = { type = diplo_action_desire id = D50 target = guarantee value = 25 }
+}

@@ -26,9 +26,10 @@ TOKEN = re.compile(r'\s+|#[^\n]*|"(?:\\.|[^"\\])*"|[{}]|>=|<=|!=|[=<>]|[^\s{}=<>
 COUNTRY_FACTS = frozenset({
     "exists", "is_ai", "is_subject", "has_civil_war", "has_capitulated",
     "has_war", "has_offensive_war", "has_defensive_war", "has_government",
-    "num_divisions", "num_of_factories", "num_of_military_factories", "is_major",
+    "num_divisions", "num_of_factories", "num_of_military_factories", "num_of_civilian_factories", "is_major",
     "is_in_faction", "has_manpower", "surrender_progress", "threat",
     "is_dynamic_country", "has_political_power", "has_stability", "has_war_support",
+    "is_faction_leader",
 })
 
 
@@ -149,6 +150,7 @@ def expand(node: Node, arguments: dict[str, str]) -> Node:
 class Country:
     tag: str
     variables: dict[str, float] = field(default_factory=dict)
+    temp_variables: dict[str, float] = field(default_factory=dict)
     flags: set[str] = field(default_factory=set)
     flag_days: dict[str, float] = field(default_factory=dict)
     attrs: dict[str, float | bool | str] = field(default_factory=lambda: {
@@ -160,13 +162,18 @@ class Country:
         "num_divisions": 30, "num_of_factories": 40, "army_strength": 100,
         "threat": 0, "is_major": False,
         "is_in_faction": False, "has_manpower": 200000,
-        "num_of_military_factories": 20, "industrial_capacity": 40,
+        "is_faction_leader": False,
+        "num_of_military_factories": 20, "num_of_civilian_factories": 20, "industrial_capacity": 40,
     })
     relations: dict[str, set[str]] = field(default_factory=dict)
     opinions: dict[str, float] = field(default_factory=dict)
     equipment: dict[str, float] = field(default_factory=lambda: {"infantry_equipment": 1})
     stockpiles: dict[str, float] = field(default_factory=lambda: {"infantry_equipment": 10000})
     owned_state_cores: list[set[str]] = field(default_factory=lambda: [set()])
+    leaders: set[str] = field(default_factory=set)
+    ruling_leader: str | None = None
+    technologies: set[str] = field(default_factory=set)
+    intelligence: dict[str, dict[str, float]] = field(default_factory=dict)
     effects: list[tuple[str, object]] = field(default_factory=list)
 
     def relation(self, kind: str, target: str, value: bool = True) -> None:
@@ -198,11 +205,13 @@ class Runtime:
     def __init__(self, mod: Path = MOD):
         self.mod = mod
         self.countries: dict[str, Country] = {}
+        self.country_ids: dict[str, int] = {}
         self.effects = self._definitions("scripted_effects")
         self.triggers = self._definitions("scripted_triggers")
         self.global_flags: set[str] = set()
         self.global_variables: dict[str, float] = {}
         self.deliveries: list[EventDelivery] = []
+        self.dlcs: set[str] = set()
         for path in sorted((self.mod / "common" / "country_tags").glob("*.txt")):
             for node in read(path):
                 if re.fullmatch(r"[A-Z][A-Z0-9]{2}", node.key):
@@ -221,6 +230,7 @@ class Runtime:
     def country(self, tag: str) -> Country:
         if tag not in self.countries:
             self.countries[tag] = Country(tag)
+            self.country_ids[tag] = len(self.country_ids) + 1000
             self.countries[tag].attrs["original_tag"] = tag
             self.countries[tag].attrs["is_dynamic_country"] = bool(re.fullmatch("D[0-9]{2}", tag))
         return self.countries[tag]
@@ -245,6 +255,10 @@ class Runtime:
         try:
             return float(value)
         except ValueError:
+            if value in {"ROOT", "FROM", "PREV", "THIS"} or re.fullmatch(r"[A-Z][A-Z0-9]{2}", value):
+                tag = self.resolve(value, scope)
+                self.country(tag)
+                return self.country_ids[tag]
             if value.startswith("global."):
                 return self.global_variables.get(value[7:], 0)
             if "." in value:
@@ -258,7 +272,7 @@ class Runtime:
                 return float(country.attrs[value])
             if "$" in value:
                 raise ScriptError(f"Unexpanded macro: {value}")
-            return country.variables.get(value, 0)
+            return country.temp_variables.get(value, country.variables.get(value, 0))
 
     @staticmethod
     def compare(left, op: str, right) -> bool:
@@ -335,6 +349,21 @@ class Runtime:
             return value in self.global_flags
         if key == "has_variable":
             return value in country.variables
+        if key == "has_tech":
+            return value in country.technologies
+        if key == "has_dlc":
+            return value in self.dlcs
+        if key == "intel_level_over":
+            target = self.resolve(node.scalar("target"), scope)
+            fields = [child for child in node.children if child.key != "target"]
+            if any(child.key not in {"army_intel", "civilian_intel", "navy_intel"} for child in fields):
+                raise ScriptError("Unsupported intelligence fixture field")
+            return all(self.compare(country.intelligence.get(target, {}).get(child.key, 0), ">=" if child.op == "=" else child.op, self.number(child.value, scope)) for child in fields)
+        if key == "has_country_leader":
+            leader = value if isinstance(value, str) else node.scalar("character")
+            if leader is None:
+                raise ScriptError("Only character-token leader fixtures are supported")
+            return leader == country.ruling_leader if not isinstance(value, str) and node.scalar("ruling_only", "no") == "yes" else leader in country.leaders or leader == country.ruling_leader
         if key == "check_variable":
             variable = node.scalar("var")
             names = {"equals": "=", "not_equals": "!=", "less_than": "<", "less_than_or_equals": "<=", "greater_than": ">", "greater_than_or_equals": ">="}
@@ -410,14 +439,15 @@ class Runtime:
                 self.call(key, scope, **self.parameters(node))
             elif key in {"hidden_effect", "effect"}:
                 self.execute(node.children, scope)
-            elif key in {"set_variable", "add_to_variable", "subtract_from_variable", "multiply_variable", "divide_variable", "set_temp_variable", "add_to_temp_variable", "multiply_temp_variable"}:
+            elif key in {"set_variable", "add_to_variable", "subtract_from_variable", "multiply_variable", "divide_variable", "set_temp_variable", "add_to_temp_variable", "subtract_from_temp_variable", "multiply_temp_variable", "divide_temp_variable"}:
                 variable = node.scalar("var")
                 amount = node.scalar("value")
                 if variable is None:
                     child = next(child for child in node.children if child.key not in {"tooltip", "if_zero"})
                     variable, amount = child.key, child.value
                 result = self.number(amount, scope)
-                previous = country.variables.get(variable, 0)
+                variable_pool = country.temp_variables if "temp_variable" in key else country.variables
+                previous = variable_pool.get(variable, 0)
                 if key.startswith("add_to"):
                     result = previous + result
                 elif key.startswith("subtract_from"):
@@ -426,7 +456,7 @@ class Runtime:
                     result = previous * result
                 elif key.startswith("divide"):
                     result = previous / result if result else self.number(node.scalar("if_zero", "0"), scope)
-                country.variables[variable] = result
+                variable_pool[variable] = result
             elif key == "clamp_variable":
                 variable = node.scalar("var")
                 low = self.number(node.scalar("min", "-inf"), scope)
@@ -436,6 +466,8 @@ class Runtime:
                 country.variables[variable] = max(low, min(high, country.variables.get(variable, 0)))
             elif key == "clear_variable":
                 country.variables.pop(value, None)
+            elif key == "clear_temp_variable":
+                country.temp_variables.pop(value, None)
             elif key in {"set_country_flag", "clr_country_flag"}:
                 flag = value if isinstance(value, str) else node.scalar("flag")
                 if key == "set_country_flag":
@@ -463,6 +495,28 @@ class Runtime:
                 country.attrs["stability"] += self.number(value, scope)
             elif key == "add_war_support":
                 country.attrs["war_support"] += self.number(value, scope)
+            elif key == "send_equipment":
+                # Native transfer inputs are explicit fixture stockpiles. This
+                # checks script conservation, not HOI4's variants or delivery.
+                equipment = node.scalar("type", node.scalar("equipment"))
+                if equipment is None:
+                    raise ScriptError("send_equipment requires an explicit fixture equipment type")
+                amount = self.number(node.scalar("amount"), scope)
+                recipient = self.country(self.resolve(node.scalar("target"), scope))
+                available = country.stockpiles.get(equipment, 0)
+                if amount < 0 or amount > available:
+                    raise ScriptError(f"Transfer requests unavailable equipment: {equipment} {amount}/{available}")
+                country.stockpiles[equipment] = available - amount
+                recipient.stockpiles[equipment] = recipient.stockpiles.get(equipment, 0) + amount
+                country.effects.append((key, node))
+            elif key == "add_equipment_to_stockpile":
+                equipment = node.scalar("type")
+                amount = self.number(node.scalar("amount"), scope)
+                total = country.stockpiles.get(equipment, 0) + amount
+                if total < 0:
+                    raise ScriptError(f"Negative fixture stockpile: {equipment}")
+                country.stockpiles[equipment] = total
+                country.effects.append((key, node))
             elif key == "country_event":
                 # The expected documented ROOT/FROM handoff is captured; the
                 # actual scheduler and engine source scopes require playtesting.
@@ -479,7 +533,7 @@ class Runtime:
 
 
 def main() -> int:
-    tests = unittest.defaultTestLoader.discover(str(REPOSITORY / "tests"), pattern="test_diplomacy*.py", top_level_dir=str(REPOSITORY))
+    tests = unittest.defaultTestLoader.discover(str(REPOSITORY / "tests"), pattern="test_*.py", top_level_dir=str(REPOSITORY))
     result = unittest.TextTestRunner(verbosity=2).run(tests)
     print("\nScope: native script AST regression checks only. HOI4 engine/playtesting is still required.")
     return 0 if result.wasSuccessful() and result.testsRun else 1

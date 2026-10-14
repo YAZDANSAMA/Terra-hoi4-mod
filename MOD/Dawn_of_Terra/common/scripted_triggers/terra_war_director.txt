@@ -1,0 +1,38 @@
+# Country scope. Recovery affects offensive choices, never a puppet's duty to answer its overlord.
+terra_war_supply_emergency = {
+    OR = {
+        has_manpower < 10000
+        has_equipment = { infantry_equipment < 400 }
+        AND = { num_divisions > 9 has_tech = basic_train has_equipment = { train_equipment < 5 } }
+        AND = { num_divisions > 24 has_tech = motorised_infantry has_equipment = { motorized_equipment < 100 } }
+    }
+}
+
+terra_war_recovery_required = {
+    OR = {
+        terra_war_supply_emergency = yes
+        surrender_progress > 0.15
+        has_stability < 0.4
+        check_variable = { terra_state_fatigue > 64 }
+        check_variable = { terra_state_domestic_pressure > 64 }
+    }
+}
+
+terra_war_can_sustain_operations = {
+    terra_dip_ready = yes
+    NOT = { terra_war_supply_emergency = yes }
+    has_stability > 0.44
+    has_manpower > 20000
+    has_equipment = { infantry_equipment > 1500 }
+    surrender_progress < 0.10
+    check_variable = { terra_state_fatigue < 55 }
+    check_variable = { terra_state_domestic_pressure < 60 }
+    check_variable = { terra_state_defeat_memory < 60 }
+}
+
+# A ally may request help; sending the entire army abroad while the homeland is collapsing is unsafe.
+terra_war_can_spare_allied_force = {
+    terra_war_can_sustain_operations = yes
+    num_divisions > 6
+    NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } }
+}
