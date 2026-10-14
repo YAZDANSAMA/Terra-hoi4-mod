@@ -1,0 +1,13 @@
+add_namespace = terra_coalition
+
+# One day allows war relations to settle; ROOT is the receiving AI government.
+country_event = {
+    id = terra_coalition.1
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        clr_country_flag = terra_coalition_check_pending
+        log = "Terra coalition: war-triggered check for [ROOT.GetName]."
+        terra_coalition_weekly_effect = yes
+    }
+}

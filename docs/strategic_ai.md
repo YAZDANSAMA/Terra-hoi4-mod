@@ -16,7 +16,7 @@
 
 The implementation is a collection of reversible native strategies, scripted effects, decisions and authored events. HOI4 owns battle execution, pathfinding and equipment inventories. The shared-war correction now explicitly forms factions between eligible AI governments, while player membership remains voluntary. The development interpreter executes selected script primitives for regression scenarios; it is not an HOI4 emulator.
 
-The current suite passes 90 regression scenarios. The pact and coalition correction passed its focused native check with zero errors; behavior, source/asset results and remaining game checks are documented in [diplomacy_policy_fix.md](diplomacy_policy_fix.md). Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
+The current suite passes 98 regression scenarios. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
 
 | Layer | Source files | Behavior |
 | --- | --- | --- |

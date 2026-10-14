@@ -174,7 +174,7 @@ class Country:
     ruling_leader: str | None = None
     technologies: set[str] = field(default_factory=set)
     intelligence: dict[str, dict[str, float]] = field(default_factory=dict)
-    rules: dict[str, bool] = field(default_factory=lambda: {"can_join_factions": True, "can_create_factions": False})
+    rules: dict[str, bool] = field(default_factory=dict)
     effects: list[tuple[str, object]] = field(default_factory=list)
 
     def relation(self, kind: str, target: str, value: bool = True) -> None:
@@ -209,11 +209,23 @@ class Runtime:
         self.country_ids: dict[str, int] = {}
         self.effects = self._definitions("scripted_effects")
         self.triggers = self._definitions("scripted_triggers")
+        # Read real ideology defaults instead of inventing positive faction rights.
+        self.ideology_rules: dict[str, dict[str, bool]] = {}
+        for path in sorted((self.mod / "common/ideologies").glob("*.txt")):
+            for root in read(path):
+                if root.key == "ideologies":
+                    for ideology in root.children:
+                        block = ideology.one("rules")
+                        self.ideology_rules[ideology.key] = {
+                            rule.key: rule.value == "yes" for rule in block.children
+                        } if block is not None else {}
         self.global_flags: set[str] = set()
         self.global_variables: dict[str, float] = {}
         self.deliveries: list[EventDelivery] = []
         self.factions: dict[str, set[str]] = {}
         self.random_choice_index = 0
+        self.faction_creation_failures: set[str] = set()
+        self.faction_join_failures: set[str] = set()
         self.dlcs: set[str] = set()
         for path in sorted((self.mod / "common" / "country_tags").glob("*.txt")):
             for node in read(path):
@@ -336,7 +348,7 @@ class Runtime:
         if key == "always":
             return value == "yes"
         if key == "has_rule":
-            return country.rules.get(value, False)
+            return country.rules.get(value, self.ideology_rules.get(country.attrs["has_government"], {}).get(value, False))
         if key == "tag" or key == "original_tag":
             actual = scope.current if key == "tag" else country.attrs["original_tag"]
             return actual == self.resolve(str(value), scope)
@@ -541,6 +553,9 @@ class Runtime:
                 country.effects.append((key, node))
             elif key in {"create_faction", "create_faction_from_template"}:
                 # Model only roster facts needed to test guards and repeated enrollment.
+                if scope.current in self.faction_creation_failures:
+                    country.effects.append((key, node))
+                    continue
                 if country.attrs["is_in_faction"]:
                     raise ScriptError("Fixture country already has a faction")
                 country.attrs.update({"is_in_faction": True, "is_faction_leader": True, "faction_leader": scope.current})
@@ -548,6 +563,9 @@ class Runtime:
                 country.effects.append((key, node))
             elif key == "add_to_faction":
                 target = self.country(self.resolve(value, scope))
+                if target.tag in self.faction_join_failures:
+                    country.effects.append((key, node))
+                    continue
                 if not country.attrs["is_faction_leader"] or target.attrs["is_in_faction"]:
                     raise ScriptError("Invalid fixture faction enrollment")
                 roster = self.factions[scope.current]

@@ -16,6 +16,8 @@ ideologies = {
 		ai_communist = yes
 		ai_ideology_wanted_units_factor = 1.20
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
@@ -47,6 +49,8 @@ ideologies = {
 		war_impact_on_world_tension = 1.0
 		faction_impact_on_world_tension = 1.0
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
@@ -81,6 +85,8 @@ ideologies = {
 		war_impact_on_world_tension = 1.0
 		faction_impact_on_world_tension = 1.0
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
@@ -115,6 +121,8 @@ ideologies = {
 		war_impact_on_world_tension = 1.0
 		faction_impact_on_world_tension = 1.0
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
@@ -149,6 +157,8 @@ ideologies = {
 		war_impact_on_world_tension = 1.0
 		faction_impact_on_world_tension = 1.0
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
@@ -181,6 +191,8 @@ ideologies = {
 		}
 		color = { 30 80 200 }
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = no
 			can_force_government = yes
@@ -226,6 +238,8 @@ ideologies = {
 		}
 		color = { 230 190 20 }
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = no
 			can_force_government = yes
@@ -271,6 +285,8 @@ ideologies = {
 		}
 		color = { 0 170 170 }
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = no
 			can_force_government = yes
@@ -318,6 +334,8 @@ ideologies = {
 		war_impact_on_world_tension = 0.25
 		faction_impact_on_world_tension = 0.1
 		rules = {
+			# Faction membership is available; creation still needs a focus or wartime bootstrap.
+			can_join_factions = yes
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = no

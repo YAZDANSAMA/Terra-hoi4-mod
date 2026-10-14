@@ -1,5 +1,17 @@
 # Only eligible AI governments already fighting a common enemy are enrolled.
 # ROOT=THIS; TARGET is always an explicit registry tag. No player or existing bloc is moved.
+terra_coalition_schedule_check_effect = {
+    # Safe in THIS under a war hook. The recipient event resets ROOT to THIS.
+    if = {
+        limit = {
+            terra_dip_ready = yes is_ai = yes is_subject = no
+            NOT = { has_country_flag = terra_coalition_check_pending }
+        }
+        set_country_flag = { flag = terra_coalition_check_pending value = 1 days = 2 }
+        country_event = { id = terra_coalition.1 days = 1 }
+    }
+}
+
 terra_coalition_create_named_effect = {
     if = {
         limit = { terra_coalition_actor = yes is_in_faction = no }
@@ -10,7 +22,15 @@ terra_coalition_create_named_effect = {
             create_faction_from_template = { template = terra_faction_template_common_defense name = $NAME$ }
         }
         else = { create_faction = $NAME$ }
-        if = { limit = { is_faction_leader = yes } set_country_flag = terra_coalition_generated }
+        if = {
+            limit = { is_faction_leader = yes }
+            set_country_flag = terra_coalition_generated
+            log = "Terra coalition: faction created by [ROOT.GetName]."
+        }
+        else = {
+            set_country_flag = { flag = terra_coalition_create_retry value = 1 days = 7 }
+            log = "Terra coalition: faction creation failed for [ROOT.GetName]; retry after seven days."
+        }
     }
 }
 
@@ -101,10 +121,18 @@ terra_coalition_form_pair_effect = {
                 terra_coalition_pair_eligible = { TARGET = $TARGET$ }
             }
             add_to_faction = $TARGET$
-            set_country_flag = terra_coalition_member
-            $TARGET$ = { set_country_flag = terra_coalition_member }
-            terra_dip_change_relation_effect = { PARTNER = $TARGET$ TRUST = 10 GRIEVANCE = -2 }
-            $TARGET$ = { terra_dip_change_relation_effect = { PARTNER = ROOT TRUST = 10 GRIEVANCE = -2 } }
+            if = {
+                limit = { is_in_faction_with = $TARGET$ }
+                set_country_flag = terra_coalition_member
+                $TARGET$ = { set_country_flag = terra_coalition_member }
+                terra_dip_change_relation_effect = { PARTNER = $TARGET$ TRUST = 10 GRIEVANCE = -2 }
+                $TARGET$ = { terra_dip_change_relation_effect = { PARTNER = ROOT TRUST = 10 GRIEVANCE = -2 } }
+                log = "Terra coalition: $TARGET$ joined the faction of [ROOT.GetName]."
+            }
+            else = {
+                set_country_flag = { flag = terra_coalition_join_failed_$TARGET$ value = 1 days = 7 }
+                log = "Terra coalition: $TARGET$ failed to join [ROOT.GetName]; retry after seven days."
+            }
         }
     }
 }
