@@ -1,7 +1,7 @@
 state = {
 	id = 173
 	name = "STATE_173"
-	manpower = 3494262
+	manpower = 4246514
 	state_category = rural
 
 	resources = {
@@ -10,9 +10,9 @@ state = {
 	}
 
 	history = {
-		victory_points = { 5269 10 }
-		
 		victory_points = { 5268 5 }
+		victory_points = { 5269 15 }
+
 		owner = SGN
 		add_core_of = SGN
 		buildings = {

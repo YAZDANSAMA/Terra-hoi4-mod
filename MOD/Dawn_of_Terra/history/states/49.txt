@@ -1,7 +1,7 @@
 state = {
 	id = 49
 	name = "STATE_49"
-	manpower = 1549966
+	manpower = 83341
 	state_category = metropolis
 
 	resources = {
@@ -11,8 +11,10 @@ state = {
 	}
 
 	history = {
+		victory_points = { 7406 1 }
+		victory_points = { 4920 1 }
+		victory_points = { 350 80 }
 		
-		victory_points = { 349 80 }
 		owner = MSN
 		add_core_of = MSN
 		buildings = {

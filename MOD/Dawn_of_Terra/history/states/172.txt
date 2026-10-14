@@ -1,7 +1,7 @@
 state = {
 	id = 172
 	name = "STATE_172"
-	manpower = 4702733
+	manpower = 5177018
 	state_category = rural
 
 	resources = {
@@ -11,9 +11,12 @@ state = {
 	}
 
 	history = {
-		victory_points = { 3518 10 }
-		
 		victory_points = { 2360 20 }
+		victory_points = { 6179 1 }
+		victory_points = { 2362 5 }
+		victory_points = { 6615 5 }
+		victory_points = { 3518 15 }
+
 		owner = TNJ
 		add_core_of = TNJ
 		buildings = {
