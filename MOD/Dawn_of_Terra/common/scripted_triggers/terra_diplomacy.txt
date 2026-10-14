@@ -1,0 +1,870 @@
+# Native diplomacy director. All memory is directed: A's trust in B is not B's trust in A.
+# Country/ROOT scope except the explicit FROM wrappers used by targeted decisions/events.
+terra_dip_participant = {
+    exists = yes
+    any_owned_state = { always = yes }
+    has_capitulated = no
+    NOT = { OR = { original_tag = SST original_tag = SEA } }
+    OR = {
+        tag = AGI
+        tag = BLV
+        tag = CLM
+        tag = HGS
+        tag = HGN
+        tag = HSS
+        tag = IBR
+        tag = KJG
+        tag = KZM
+        tag = KZD
+        tag = LTR
+        tag = LTH
+        tag = MNS
+        tag = RMB
+        tag = SMN
+        tag = SGN
+        tag = SST
+        tag = SRC
+        tag = URS
+        tag = VCT
+        tag = YAN
+        tag = TRR
+        tag = LGL
+        tag = VVA
+        tag = TNJ
+        tag = MSN
+        tag = SEA
+        tag = WSG
+        tag = KTH
+        tag = VNH
+        tag = SCW
+        tag = D01
+        tag = D02
+        tag = D03
+        tag = D04
+        tag = D05
+        tag = D06
+        tag = D07
+        tag = D08
+        tag = D09
+        tag = D10
+        tag = D11
+        tag = D12
+        tag = D13
+        tag = D14
+        tag = D15
+        tag = D16
+        tag = D17
+        tag = D18
+        tag = D19
+        tag = D20
+        tag = D21
+        tag = D22
+        tag = D23
+        tag = D24
+        tag = D25
+        tag = D26
+        tag = D27
+        tag = D28
+        tag = D29
+        tag = D30
+        tag = D31
+        tag = D32
+        tag = D33
+        tag = D34
+        tag = D35
+        tag = D36
+        tag = D37
+        tag = D38
+        tag = D39
+        tag = D40
+        tag = D41
+        tag = D42
+        tag = D43
+        tag = D44
+        tag = D45
+        tag = D46
+        tag = D47
+        tag = D48
+        tag = D49
+        tag = D50
+    }
+}
+
+terra_dip_sovereign = { terra_dip_participant = yes is_subject = no }
+terra_dip_ready = { terra_dip_participant = yes has_country_flag = terra_dip_initialized }
+terra_dip_exhausted = { check_variable = { terra_dip_pressure > 49 } }
+terra_dip_military_policy_allowed = {
+    terra_dip_ready = yes
+    terra_ai_profile_allowed = yes
+    is_subject = no
+}
+
+terra_dip_pair_valid = {
+    terra_dip_ready = yes
+    NOT = { tag = $TARGET$ }
+    country_exists = $TARGET$
+    $TARGET$ = { terra_dip_participant = yes }
+}
+
+terra_dip_conflicting_blocs_from = {
+    is_in_faction = yes
+    FROM = { is_in_faction = yes }
+    NOT = { is_in_faction_with = FROM }
+}
+
+terra_dip_claim_conflict_from = {
+    OR = {
+        FROM = { any_owned_state = { is_core_of = ROOT } }
+        any_owned_state = { is_core_of = FROM }
+    }
+}
+
+terra_dip_has_common_interest_from = {
+    OR = {
+        is_in_faction_with = FROM
+        has_war_together_with = FROM
+        has_non_aggression_pact_with = FROM
+        AND = {
+            is_neighbor_of = FROM
+            OR = {
+                has_country_flag = terra_dip_personality_mercantile
+                has_country_flag = terra_dip_personality_pragmatic
+                FROM = { has_country_flag = terra_dip_personality_mercantile }
+                FROM = { has_country_flag = terra_dip_personality_pragmatic }
+            }
+        }
+    }
+}
+
+terra_dip_talks_available_from = {
+    terra_dip_ready = yes
+    terra_dip_sovereign = yes
+    FROM = { terra_dip_ready = yes terra_dip_sovereign = yes NOT = { tag = ROOT } }
+    NOT = { has_war_with = FROM }
+}
+
+terra_dip_restraint_available_from = {
+    terra_dip_talks_available_from = yes
+    NOT = { has_non_aggression_pact_with = FROM }
+    NOT = { is_in_faction_with = FROM }
+    NOT = { terra_dip_conflicting_blocs_from = yes }
+}
+
+# One reusable dispatch, with numerical bounds supplied by the wrappers below.
+# Explicit registry bindings include D01-D50, so civil-war partners do not share one memory.
+terra_dip_relation_from = {
+    terra_dip_ready = yes
+    OR = {
+        AND = {
+            FROM = { tag = AGI }
+            check_variable = { terra_dip_trust_AGI > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_AGI > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_AGI < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_AGI > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_AGI < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = BLV }
+            check_variable = { terra_dip_trust_BLV > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_BLV > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_BLV < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_BLV > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_BLV < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = CLM }
+            check_variable = { terra_dip_trust_CLM > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_CLM > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_CLM < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_CLM > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_CLM < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = HGS }
+            check_variable = { terra_dip_trust_HGS > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_HGS > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_HGS < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_HGS > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_HGS < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = HGN }
+            check_variable = { terra_dip_trust_HGN > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_HGN > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_HGN < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_HGN > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_HGN < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = HSS }
+            check_variable = { terra_dip_trust_HSS > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_HSS > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_HSS < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_HSS > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_HSS < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = IBR }
+            check_variable = { terra_dip_trust_IBR > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_IBR > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_IBR < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_IBR > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_IBR < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = KJG }
+            check_variable = { terra_dip_trust_KJG > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_KJG > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_KJG < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_KJG > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_KJG < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = KZM }
+            check_variable = { terra_dip_trust_KZM > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_KZM > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_KZM < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_KZM > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_KZM < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = KZD }
+            check_variable = { terra_dip_trust_KZD > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_KZD > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_KZD < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_KZD > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_KZD < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = LTR }
+            check_variable = { terra_dip_trust_LTR > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_LTR > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_LTR < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_LTR > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_LTR < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = LTH }
+            check_variable = { terra_dip_trust_LTH > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_LTH > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_LTH < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_LTH > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_LTH < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = MNS }
+            check_variable = { terra_dip_trust_MNS > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_MNS > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_MNS < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_MNS > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_MNS < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = RMB }
+            check_variable = { terra_dip_trust_RMB > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_RMB > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_RMB < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_RMB > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_RMB < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = SMN }
+            check_variable = { terra_dip_trust_SMN > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_SMN > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_SMN < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_SMN > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_SMN < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = SGN }
+            check_variable = { terra_dip_trust_SGN > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_SGN > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_SGN < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_SGN > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_SGN < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = SRC }
+            check_variable = { terra_dip_trust_SRC > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_SRC > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_SRC < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_SRC > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_SRC < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = URS }
+            check_variable = { terra_dip_trust_URS > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_URS > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_URS < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_URS > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_URS < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = VCT }
+            check_variable = { terra_dip_trust_VCT > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_VCT > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_VCT < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_VCT > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_VCT < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = YAN }
+            check_variable = { terra_dip_trust_YAN > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_YAN > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_YAN < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_YAN > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_YAN < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = TRR }
+            check_variable = { terra_dip_trust_TRR > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_TRR > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_TRR < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_TRR > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_TRR < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = LGL }
+            check_variable = { terra_dip_trust_LGL > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_LGL > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_LGL < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_LGL > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_LGL < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = VVA }
+            check_variable = { terra_dip_trust_VVA > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_VVA > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_VVA < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_VVA > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_VVA < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = TNJ }
+            check_variable = { terra_dip_trust_TNJ > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_TNJ > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_TNJ < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_TNJ > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_TNJ < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = MSN }
+            check_variable = { terra_dip_trust_MSN > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_MSN > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_MSN < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_MSN > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_MSN < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = WSG }
+            check_variable = { terra_dip_trust_WSG > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_WSG > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_WSG < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_WSG > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_WSG < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = KTH }
+            check_variable = { terra_dip_trust_KTH > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_KTH > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_KTH < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_KTH > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_KTH < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = VNH }
+            check_variable = { terra_dip_trust_VNH > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_VNH > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_VNH < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_VNH > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_VNH < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = SCW }
+            check_variable = { terra_dip_trust_SCW > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_SCW > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_SCW < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_SCW > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_SCW < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D01 }
+            check_variable = { terra_dip_trust_D01 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D01 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D01 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D01 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D01 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D02 }
+            check_variable = { terra_dip_trust_D02 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D02 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D02 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D02 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D02 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D03 }
+            check_variable = { terra_dip_trust_D03 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D03 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D03 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D03 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D03 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D04 }
+            check_variable = { terra_dip_trust_D04 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D04 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D04 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D04 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D04 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D05 }
+            check_variable = { terra_dip_trust_D05 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D05 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D05 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D05 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D05 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D06 }
+            check_variable = { terra_dip_trust_D06 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D06 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D06 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D06 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D06 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D07 }
+            check_variable = { terra_dip_trust_D07 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D07 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D07 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D07 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D07 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D08 }
+            check_variable = { terra_dip_trust_D08 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D08 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D08 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D08 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D08 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D09 }
+            check_variable = { terra_dip_trust_D09 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D09 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D09 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D09 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D09 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D10 }
+            check_variable = { terra_dip_trust_D10 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D10 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D10 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D10 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D10 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D11 }
+            check_variable = { terra_dip_trust_D11 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D11 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D11 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D11 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D11 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D12 }
+            check_variable = { terra_dip_trust_D12 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D12 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D12 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D12 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D12 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D13 }
+            check_variable = { terra_dip_trust_D13 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D13 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D13 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D13 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D13 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D14 }
+            check_variable = { terra_dip_trust_D14 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D14 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D14 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D14 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D14 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D15 }
+            check_variable = { terra_dip_trust_D15 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D15 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D15 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D15 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D15 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D16 }
+            check_variable = { terra_dip_trust_D16 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D16 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D16 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D16 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D16 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D17 }
+            check_variable = { terra_dip_trust_D17 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D17 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D17 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D17 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D17 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D18 }
+            check_variable = { terra_dip_trust_D18 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D18 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D18 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D18 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D18 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D19 }
+            check_variable = { terra_dip_trust_D19 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D19 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D19 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D19 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D19 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D20 }
+            check_variable = { terra_dip_trust_D20 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D20 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D20 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D20 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D20 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D21 }
+            check_variable = { terra_dip_trust_D21 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D21 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D21 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D21 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D21 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D22 }
+            check_variable = { terra_dip_trust_D22 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D22 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D22 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D22 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D22 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D23 }
+            check_variable = { terra_dip_trust_D23 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D23 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D23 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D23 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D23 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D24 }
+            check_variable = { terra_dip_trust_D24 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D24 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D24 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D24 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D24 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D25 }
+            check_variable = { terra_dip_trust_D25 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D25 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D25 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D25 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D25 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D26 }
+            check_variable = { terra_dip_trust_D26 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D26 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D26 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D26 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D26 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D27 }
+            check_variable = { terra_dip_trust_D27 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D27 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D27 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D27 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D27 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D28 }
+            check_variable = { terra_dip_trust_D28 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D28 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D28 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D28 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D28 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D29 }
+            check_variable = { terra_dip_trust_D29 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D29 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D29 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D29 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D29 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D30 }
+            check_variable = { terra_dip_trust_D30 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D30 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D30 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D30 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D30 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D31 }
+            check_variable = { terra_dip_trust_D31 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D31 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D31 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D31 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D31 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D32 }
+            check_variable = { terra_dip_trust_D32 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D32 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D32 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D32 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D32 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D33 }
+            check_variable = { terra_dip_trust_D33 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D33 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D33 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D33 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D33 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D34 }
+            check_variable = { terra_dip_trust_D34 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D34 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D34 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D34 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D34 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D35 }
+            check_variable = { terra_dip_trust_D35 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D35 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D35 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D35 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D35 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D36 }
+            check_variable = { terra_dip_trust_D36 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D36 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D36 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D36 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D36 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D37 }
+            check_variable = { terra_dip_trust_D37 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D37 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D37 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D37 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D37 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D38 }
+            check_variable = { terra_dip_trust_D38 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D38 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D38 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D38 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D38 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D39 }
+            check_variable = { terra_dip_trust_D39 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D39 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D39 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D39 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D39 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D40 }
+            check_variable = { terra_dip_trust_D40 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D40 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D40 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D40 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D40 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D41 }
+            check_variable = { terra_dip_trust_D41 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D41 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D41 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D41 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D41 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D42 }
+            check_variable = { terra_dip_trust_D42 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D42 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D42 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D42 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D42 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D43 }
+            check_variable = { terra_dip_trust_D43 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D43 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D43 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D43 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D43 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D44 }
+            check_variable = { terra_dip_trust_D44 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D44 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D44 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D44 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D44 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D45 }
+            check_variable = { terra_dip_trust_D45 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D45 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D45 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D45 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D45 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D46 }
+            check_variable = { terra_dip_trust_D46 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D46 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D46 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D46 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D46 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D47 }
+            check_variable = { terra_dip_trust_D47 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D47 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D47 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D47 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D47 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D48 }
+            check_variable = { terra_dip_trust_D48 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D48 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D48 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D48 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D48 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D49 }
+            check_variable = { terra_dip_trust_D49 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D49 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D49 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D49 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D49 < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = D50 }
+            check_variable = { terra_dip_trust_D50 > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_D50 > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_D50 < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_D50 > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_D50 < $SCORE_BELOW$ }
+        }
+    }
+}
+
+terra_dip_trusts_from = {
+    terra_dip_relation_from = { TRUST_ABOVE = 39 GRIEF_ABOVE = -1 GRIEF_BELOW = 101 SCORE_ABOVE = -101 SCORE_BELOW = 101 }
+}
+terra_dip_distrusts_from = {
+    terra_dip_relation_from = { TRUST_ABOVE = -1 GRIEF_ABOVE = 49 GRIEF_BELOW = 101 SCORE_ABOVE = -101 SCORE_BELOW = 101 }
+}
+terra_dip_has_betrayal_from = {
+    terra_dip_relation_from = { TRUST_ABOVE = -1 GRIEF_ABOVE = 69 GRIEF_BELOW = 101 SCORE_ABOVE = -101 SCORE_BELOW = 101 }
+}
+terra_dip_welcomes_from = {
+    terra_dip_relation_from = { TRUST_ABOVE = -1 GRIEF_ABOVE = -1 GRIEF_BELOW = 50 SCORE_ABOVE = 29 SCORE_BELOW = 101 }
+}
+terra_dip_rejects_from = {
+    OR = {
+        terra_dip_has_betrayal_from = yes
+        terra_dip_relation_from = { TRUST_ABOVE = -1 GRIEF_ABOVE = -1 GRIEF_BELOW = 101 SCORE_ABOVE = -101 SCORE_BELOW = -34 }
+    }
+}
+
+terra_dip_can_prepare_against = {
+    terra_dip_pair_valid = { TARGET = $TARGET$ }
+    terra_dip_military_policy_allowed = yes
+    has_war = no
+    NOT = { terra_dip_exhausted = yes }
+    NOT = { is_in_faction_with = $TARGET$ }
+    NOT = { has_non_aggression_pact_with = $TARGET$ }
+    $TARGET$ = { is_subject = no }
+    OR = {
+        is_neighbor_of = $TARGET$
+        $TARGET$ = { any_owned_state = { is_core_of = ROOT } }
+    }
+    OR = {
+        check_variable = { terra_dip_grievance_$TARGET$ > 64 }
+        AND = {
+            has_country_flag = terra_dip_personality_imperial
+            check_variable = { terra_dip_score_$TARGET$ < -54 }
+        }
+        AND = {
+            $TARGET$ = { any_owned_state = { is_core_of = ROOT } }
+            check_variable = { terra_dip_score_$TARGET$ < -24 }
+        }
+    }
+}
+
+# Hatred is a motive, not permission or military capability. Native war rules remain authoritative.
+terra_dip_can_seek_war_against = {
+    terra_dip_can_prepare_against = { TARGET = $TARGET$ }
+    has_stability > 0.44
+    surrender_progress < 0.05
+    num_of_military_factories > 3
+    num_divisions > 5
+    has_manpower > 20000
+    has_equipment = { infantry_equipment > 1500 }
+    strength_ratio = { tag = $TARGET$ ratio > 1.35 }
+    # A weak isolated victim must not hide a much stronger defending coalition.
+    NOT = {
+        $TARGET$ = {
+            any_other_country = {
+                OR = { is_in_faction_with = PREV has_guaranteed = PREV }
+                NOT = { tag = ROOT }
+                NOT = { strength_ratio = { tag = ROOT ratio < 0.8 } }
+            }
+        }
+    }
+}
+
+terra_dip_can_support_offensive_war = {
+    terra_dip_pair_valid = { TARGET = $TARGET$ }
+    NOT = { terra_dip_exhausted = yes }
+    has_stability > 0.39
+    num_divisions > 3
+    has_manpower > 10000
+    check_variable = { terra_dip_trust_$TARGET$ > 39 }
+    check_variable = { terra_dip_score_$TARGET$ > 44 }
+    check_variable = { terra_dip_grievance_$TARGET$ < 50 }
+    # Do not sign a blank cheque for a partner already collapsing in an offensive war.
+    $TARGET$ = { has_offensive_war = yes surrender_progress < 0.15 }
+}
