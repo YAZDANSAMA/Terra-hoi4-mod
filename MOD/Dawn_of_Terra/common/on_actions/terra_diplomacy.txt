@@ -54,6 +54,14 @@ on_actions = {
             }
         }
     }
+    on_war_relation_added = {
+        effect = {
+            # ROOT is attacker, FROM defender. Schedule in each current country,
+            # then reset ROOT through the event before evaluating country pairs.
+            terra_coalition_schedule_check_effect = yes
+            FROM = { terra_coalition_schedule_check_effect = yes }
+        }
+    }
     on_join_allies = {
         effect = {
             if = {

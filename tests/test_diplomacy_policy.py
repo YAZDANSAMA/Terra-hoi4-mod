@@ -4,7 +4,7 @@ Faction rosters and random branches are explicit fixtures, not engine verificati
 """
 import unittest
 
-from tools.validate_diplomacy import MOD, Runtime, read
+from tools.validate_diplomacy import EventDelivery, MOD, Runtime, read
 
 
 class PolicyTests(unittest.TestCase):
@@ -148,7 +148,7 @@ class PolicyTests(unittest.TestCase):
                 else: self.partner.flags.add("terra_coalition_rejoin_cooldown")
                 self.runtime.call("terra_coalition_form_pair_effect", self.scope, TARGET="VCT")
                 self.assertFalse(self.runtime.factions)
-                self.assertFalse(self.actor.rules["can_create_factions"])
+                self.assertFalse(self.actor.rules.get("can_create_factions", False))
 
     def test_existing_story_faction_leader_does_not_enroll_outsiders(self):
         self.shared_war()
@@ -176,3 +176,97 @@ class PolicyTests(unittest.TestCase):
         self.enemy.attrs["has_capitulated"] = True
         self.runtime.call("terra_coalition_form_pair_effect", self.scope, TARGET="VCT")
         self.assertFalse(self.runtime.factions)
+
+
+class SargonDefensiveCoalitionTests(unittest.TestCase):
+    def setUp(self):
+        self.runtime = Runtime()
+        for tag, name in (("BLV", "Bolivar"), ("CLM", "Columbia"), ("SGN", "Sargon")):
+            country = self.runtime.country(tag)
+            # Use the mod's actual starting parties, not generic monarchy fixtures.
+            history = read(MOD / "history/countries" / f"{tag} - {name}.txt")
+            country.attrs["has_government"] = next(n.scalar("ruling_party") for n in history if n.key == "set_politics")
+            country.attrs["has_war"] = True
+            self.runtime.call("terra_dip_initialize_effect", self.runtime.scope(tag))
+            self.runtime.call("terra_state_initialize_effect", self.runtime.scope(tag))
+        self.sargon = self.runtime.country("SGN")
+        self.sargon.attrs.update({"is_ai": False, "is_in_faction": True, "is_faction_leader": True})
+        for tag in ("BLV", "CLM"):
+            self.runtime.country(tag).relation("has_war_with", "SGN")
+            self.runtime.country(tag).relation("has_defensive_war_with", "SGN")
+            self.sargon.relation("has_war_with", tag)
+        self.runtime.country("BLV").opinions["CLM"] = -80
+        self.runtime.country("CLM").opinions["BLV"] = -80
+        self.scope = self.runtime.scope("BLV", "SGN")
+
+    def test_real_starting_parties_have_explicit_join_defaults_without_fixture_permissions(self):
+        self.assertEqual("junta", self.runtime.country("BLV").attrs["has_government"])
+        self.assertEqual("classical_liberalism", self.runtime.country("CLM").attrs["has_government"])
+        for tag in ("BLV", "CLM"):
+            self.assertNotIn("can_join_factions", self.runtime.country(tag).rules)
+            self.assertTrue(self.runtime.trigger("terra_coalition_actor", self.runtime.scope(tag)))
+        for ideology, rules in self.runtime.ideology_rules.items():
+            self.assertTrue(rules.get("can_join_factions"), ideology)
+
+    def test_bolivar_and_columbia_defend_against_human_sargon_despite_ideological_dislike(self):
+        for dlc in (False, True):
+            with self.subTest(dlc=dlc):
+                self.setUp()
+                if dlc: self.runtime.dlcs.add("No Compromise, No Surrender")
+                self.runtime.call("terra_coalition_weekly_effect", self.scope)
+                self.assertEqual({"BLV": {"BLV", "CLM"}}, self.runtime.factions)
+                self.assertNotIn("terra_coalition_generated", self.sargon.flags)
+                self.assertTrue(self.sargon.attrs["is_faction_leader"])
+                self.assertFalse(self.sargon.rules)
+
+    def test_missing_real_ideology_permission_reproduces_the_old_bootstrap_block(self):
+        self.runtime.ideology_rules["junta"].pop("can_join_factions")
+        self.runtime.call("terra_coalition_weekly_effect", self.scope)
+        self.assertFalse(self.runtime.factions)
+
+    def test_dislike_exception_needs_defense_against_the_same_actual_enemy(self):
+        self.runtime.country("CLM").relation("has_defensive_war_with", "SGN", False)
+        self.runtime.country("CLM").attrs["has_defensive_war"] = True
+        self.runtime.country("CLM").relation("has_defensive_war_with", "URS")
+        self.assertFalse(self.runtime.trigger("terra_coalition_common_defensive_enemy", self.scope, TARGET="CLM"))
+        self.runtime.call("terra_coalition_weekly_effect", self.scope)
+        self.assertFalse(self.runtime.factions)
+
+    def test_explicit_country_join_ban_overrides_ideology_default(self):
+        self.runtime.country("CLM").rules["can_join_factions"] = False
+        self.runtime.call("terra_coalition_weekly_effect", self.scope)
+        self.assertFalse(self.runtime.factions)
+
+    def test_war_hook_schedules_ai_defender_and_event_resets_root_before_forming(self):
+        hooks = read(MOD / "common/on_actions/terra_diplomacy.txt")[0]
+        effect = hooks.one("on_war_relation_added").one("effect")
+        attacker_scope = self.runtime.scope("SGN", "BLV")
+        self.runtime.execute(effect.children, attacker_scope)
+        self.runtime.execute(effect.children, attacker_scope)
+        self.assertEqual([EventDelivery("BLV", "SGN", "terra_coalition.1", "1")], self.runtime.deliveries)
+        self.assertNotIn("terra_coalition_check_pending", self.sargon.flags)
+        event = next(n for n in read(MOD / "events/terra_coalition_events.txt") if n.key == "country_event")
+        self.runtime.execute(event.one("immediate").children, self.scope)
+        self.assertEqual({"BLV": {"BLV", "CLM"}}, self.runtime.factions)
+        self.assertNotIn("terra_coalition_check_pending", self.runtime.country("BLV").flags)
+
+    def test_failed_native_creation_does_not_enroll_or_reward_and_retry_is_throttled(self):
+        self.runtime.faction_creation_failures.add("BLV")
+        self.runtime.call("terra_coalition_weekly_effect", self.scope)
+        self.runtime.call("terra_coalition_weekly_effect", self.scope)
+        self.assertFalse(self.runtime.factions)
+        self.assertIn("terra_coalition_create_retry", self.runtime.country("BLV").flags)
+        self.assertEqual(1, sum(key == "create_faction" for key, _ in self.runtime.country("BLV").effects))
+        self.assertEqual(0, self.runtime.country("BLV").variables["terra_dip_trust_CLM"])
+        self.assertNotIn("terra_coalition_member", self.runtime.country("CLM").flags)
+
+    def test_failed_native_enrollment_does_not_grant_phantom_membership_or_trust(self):
+        self.runtime.faction_join_failures.add("CLM")
+        self.runtime.call("terra_coalition_form_pair_effect", self.scope, TARGET="CLM")
+        self.runtime.call("terra_coalition_form_pair_effect", self.scope, TARGET="CLM")
+        self.assertEqual({"BLV": {"BLV"}}, self.runtime.factions)
+        self.assertIn("terra_coalition_join_failed_CLM", self.runtime.country("BLV").flags)
+        self.assertFalse(self.runtime.country("CLM").attrs["is_in_faction"])
+        self.assertNotIn("terra_coalition_member", self.runtime.country("CLM").flags)
+        self.assertEqual(0, self.runtime.country("BLV").variables["terra_dip_trust_CLM"])
+        self.assertEqual(1, sum(key == "add_to_faction" for key, _ in self.runtime.country("BLV").effects))

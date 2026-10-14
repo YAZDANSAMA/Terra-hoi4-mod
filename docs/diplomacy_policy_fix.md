@@ -2,6 +2,8 @@
 
 Updated 2026-10-15, based on the report that countries flooded each other with non-aggression pacts at the start and did not create factions against a shared enemy.
 
+The later [defensive coalition bootstrap correction](defensive_coalition_fix.md) addresses the reported Sargon-versus-Bolivar-and-Columbia case. It explicitly declares ideology join permissions, permits mutual-defense cooperation despite ideological dislike, and adds a next-day war hook. Its result checks and the current 98-test suite supersede the timing and fixture assumptions described below.
+
 ## Causes and resulting behavior
 
 The old restraint strategy required utility above 9, low grievances and either adjacency, exhaustion or a cautious personality. Same-government utility alone was +10. A cautious country could therefore encourage and accept pacts with neutral countries before earning trust. The +35 proposal and acceptance weights amplified that behavior.
