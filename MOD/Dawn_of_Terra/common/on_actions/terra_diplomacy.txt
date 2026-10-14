@@ -1,0 +1,82 @@
+# Startup is global; daily/weekly/monthly hooks already execute in each country's scope.
+# Existing Columbia UI, United Sargon and wartime route hooks remain additive.
+on_actions = {
+    on_startup = {
+        effect = { every_country = { terra_dip_initialize_effect = yes } }
+    }
+    on_daily = {
+        effect = {
+            if = {
+                limit = { terra_dip_participant = yes NOT = { has_country_flag = terra_dip_initialized } }
+                terra_dip_initialize_effect = yes
+                terra_dip_refresh_effect = yes
+            }
+        }
+    }
+    on_weekly = {
+        effect = { if = { limit = { terra_dip_ready = yes } terra_dip_refresh_effect = yes } }
+    }
+    on_monthly = {
+        effect = {
+            if = {
+                limit = { terra_dip_ready = yes }
+                terra_dip_monthly_effect = yes
+                terra_dip_try_outreach_effect = yes
+            }
+        }
+    }
+    on_declare_war = {
+        effect = {
+            if = {
+                limit = { terra_dip_ready = yes FROM = { terra_dip_ready = yes } }
+                set_country_flag = { flag = terra_dip_recent_aggressor value = 1 days = 180 }
+                FROM = { terra_dip_record_attack_effect = { PARTNER = ROOT } }
+            }
+        }
+    }
+    on_join_allies = {
+        effect = {
+            if = {
+                limit = { terra_dip_ready = yes FROM = { terra_dip_ready = yes } }
+                # ROOT joined FROM's war. FROM remembers ROOT's help, not the reverse.
+                FROM = { terra_dip_record_help_effect = { PARTNER = ROOT KIND = war_help TRUST = 15 MODIFIER = terra_dip_war_help DAYS = 180 } }
+            }
+        }
+    }
+    on_call_allies = {
+        effect = {
+            if = {
+                limit = { terra_dip_ready = yes FROM = { terra_dip_ready = yes } }
+                # ROOT called; FROM accepted. The same guard also covers join requests.
+                terra_dip_record_help_effect = { PARTNER = FROM KIND = war_help TRUST = 15 MODIFIER = terra_dip_war_help DAYS = 180 }
+            }
+        }
+    }
+    on_leave_faction = {
+        effect = {
+            if = {
+                limit = { has_country_flag = terra_dip_initialized }
+                # The departing country must not accuse its former partners of leaving it.
+                terra_dip_departure_effect = yes
+            }
+        }
+    }
+    on_lend_lease = {
+        effect = {
+            if = {
+                limit = { terra_dip_ready = yes FROM = { terra_dip_ready = yes } }
+                # ROOT supplied FROM; the recipient remembers the donor.
+                FROM = { terra_dip_record_help_effect = { PARTNER = ROOT KIND = aid TRUST = 5 MODIFIER = terra_dip_lend_lease DAYS = 90 } }
+            }
+        }
+    }
+    on_incoming_lend_lease = {
+        effect = {
+            if = {
+                limit = { terra_dip_ready = yes FROM = { terra_dip_ready = yes } }
+                # ROOT accepted a supply request from FROM. Both aid hooks share a guard.
+                FROM = { terra_dip_record_help_effect = { PARTNER = ROOT KIND = aid TRUST = 5 MODIFIER = terra_dip_lend_lease DAYS = 90 } }
+            }
+        }
+    }
+}

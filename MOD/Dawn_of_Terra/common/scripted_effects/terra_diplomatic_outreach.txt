@@ -1,0 +1,61 @@
+# Bilateral event effects. ROOT and FROM must be the two actual participants.
+# Shared memories dispatch by current actual tag, including D01-D50.
+terra_dip_apply_dialogue_effect = {
+    terra_dip_change_relation_effect = {
+        PARTNER = FROM
+        TRUST = $TRUST$
+        GRIEVANCE = $GRIEVANCE$
+    }
+    add_opinion_modifier = { target = FROM modifier = $MODIFIER$ days = $DAYS$ }
+    FROM = {
+        terra_dip_change_relation_effect = {
+            PARTNER = ROOT
+            TRUST = $TRUST$
+            GRIEVANCE = $GRIEVANCE$
+        }
+        add_opinion_modifier = { target = ROOT modifier = $MODIFIER$ days = $DAYS$ }
+    }
+}
+
+# Evaluate the recipient's own memories before replying; receipt events should
+# not accidentally report the sender's view as the recipient's view.
+terra_dip_send_reasoned_refusal_effect = {
+    if = {
+        limit = { terra_dip_has_betrayal_from = yes }
+        FROM = { country_event = { id = terra_talks.70 } }
+    }
+    else_if = {
+        limit = { terra_dip_claim_conflict_from = yes }
+        FROM = { country_event = { id = terra_talks.71 } }
+    }
+    else_if = {
+        limit = {
+            OR = {
+                terra_dip_conflicting_blocs_from = yes
+                has_wargoal_against = FROM
+                FROM = { has_wargoal_against = ROOT }
+            }
+        }
+        FROM = { country_event = { id = terra_talks.72 } }
+    }
+    else_if = {
+        limit = { terra_dip_exhausted = yes }
+        FROM = { country_event = { id = terra_talks.73 } }
+    }
+    else = { FROM = { country_event = { id = terra_talks.74 } } }
+}
+
+# The monthly caller may be inside a country loop. Reset ROOT through a hidden
+# country event before looking for a human partner; no saved target can be
+# overwritten by another concurrent negotiation.
+terra_dip_try_outreach_effect = {
+    if = {
+        limit = {
+            is_ai = yes
+            terra_dip_ready = yes
+            terra_dip_sovereign = yes
+            NOT = { has_country_flag = terra_dip_outreach_cooldown }
+        }
+        country_event = { id = terra_talks.90 }
+    }
+}
