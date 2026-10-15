@@ -1,6 +1,0 @@
-terra_strategic_council = {
-    icon = GFX_decision_category_power_struggle
-    priority = 86
-    allowed = { always = yes }
-    visible = { is_ai = no terra_dip_ready = yes }
-}
