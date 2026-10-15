@@ -1,0 +1,25 @@
+# Called from the country-scoped monthly hook. All three spirits must be
+# present, and the donor must cover the complete transfer before any debit.
+terra_tnj_can_send_volunteers = {
+    tag = TNJ
+    exists = yes
+    has_capitulated = no
+    has_idea = TNJ_temple_volunteers
+    has_manpower >= 2000
+    SGN = {
+        exists = yes
+        has_capitulated = no
+        has_idea = SGN_tnj_reinforcements
+    }
+    MSN = {
+        exists = yes
+        has_capitulated = no
+        has_idea = MSN_tnj_auxiliaries
+    }
+    # The native monthly pulse provides calendar-month timing. This saved
+    # day stamp also rejects duplicate delivery on the same day after reload.
+    OR = {
+        NOT = { has_variable = terra_tnj_last_transfer_day }
+        check_variable = { terra_tnj_last_transfer_day < num_days }
+    }
+}

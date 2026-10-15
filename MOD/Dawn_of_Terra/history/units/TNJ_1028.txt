@@ -1,6 +1,11 @@
-# Templates only; starting divisions are assigned after the borders are defined.
+# Ten permanent defensive divisions. The locked template cannot be recruited
+# or duplicated through the normal designer; its native cap is also ten.
 division_template = {
     name = "Ta-Netjer Line Division"
+    role = area_defense
+    is_locked = yes
+    force_allow_recruiting = no
+    division_cap = 10
     regiments = {
         infantry = { x = 0 y = 0 }
         infantry = { x = 0 y = 1 }
@@ -11,4 +16,85 @@ division_template = {
     }
 }
 
-units = { }
+units = {
+    division = {
+        name = "1st Iunyt Temple Guard"
+        location = 2360
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "2nd Nekhen Temple Guard"
+        location = 3518
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "3rd Waset Temple Guard"
+        location = 6615
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "4th Djeba Temple Guard"
+        location = 2362
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "5th Iunu Temple Guard"
+        location = 5588
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "6th Iunu District Guard"
+        location = 2359
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "7th Sekhem Temple Guard"
+        location = 111
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "8th Hut-Waret Temple Guard"
+        location = 6175
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "9th Halab Temple Guard"
+        location = 2118
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "10th Qadesh Temple Guard"
+        location = 4545
+        division_template = "Ta-Netjer Line Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+}

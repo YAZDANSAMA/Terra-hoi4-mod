@@ -1,6 +1,12 @@
 # Sargonian satrapy at the 1028 start.
 capital = 199
 
+# The starting reserve supplement is historical and applied once, not a
+# recurring recruitment bonus. Total manpower is about 500,000, including
+# the 126,000 men in the existing twenty-one divisions.
+add_ideas = volunteer_only
+terra_vva_initialize_reserves_effect = yes
+
 oob = "VVA_1028"
 
 set_technology = {

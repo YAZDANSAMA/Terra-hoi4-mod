@@ -1,0 +1,21 @@
+ideas = {
+    country = {
+        TNJ_temple_volunteers = {
+            picture = generic_manpower_bonus
+            allowed = { original_tag = TNJ }
+            removal_cost = -1
+        }
+
+        SGN_tnj_reinforcements = {
+            picture = generic_infantry_bonus
+            allowed = { original_tag = SGN }
+            removal_cost = -1
+        }
+
+        MSN_tnj_auxiliaries = {
+            picture = generic_volunteer_expedition_bonus
+            allowed = { original_tag = MSN }
+            removal_cost = -1
+        }
+    }
+}

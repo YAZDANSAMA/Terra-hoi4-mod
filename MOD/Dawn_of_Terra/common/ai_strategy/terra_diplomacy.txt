@@ -72,7 +72,7 @@ terra_dip_legal_war_AGI = {
 }
 
 terra_dip_subject_duty_AGI = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = AGI } NOT = { has_war_with = AGI } is_subject_of = AGI AGI = { has_war = yes } NOT = { has_war_together_with = AGI } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = AGI target = call_allies value = 100 }
@@ -80,7 +80,7 @@ terra_dip_subject_duty_AGI = {
 }
 
 terra_dip_defend_partner_AGI = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = AGI } NOT = { has_war_with = AGI } OR = { is_in_faction_with = AGI is_subject_of = AGI AGI = { is_subject_of = ROOT } } AGI = { has_defensive_war = yes } NOT = { has_war_together_with = AGI } check_variable = { terra_dip_grievance_AGI < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = AGI target = call_allies value = 80 }
@@ -88,7 +88,7 @@ terra_dip_defend_partner_AGI = {
 }
 
 terra_dip_offensive_partner_AGI = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = AGI } NOT = { has_war_with = AGI } OR = { is_in_faction_with = AGI is_subject_of = AGI AGI = { is_subject_of = ROOT } } NOT = { has_war_together_with = AGI } terra_dip_can_support_offensive_war = { TARGET = AGI } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = AGI target = call_allies value = 25 }
@@ -182,7 +182,7 @@ terra_dip_legal_war_BLV = {
 }
 
 terra_dip_subject_duty_BLV = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = BLV } NOT = { has_war_with = BLV } is_subject_of = BLV BLV = { has_war = yes } NOT = { has_war_together_with = BLV } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = BLV target = call_allies value = 100 }
@@ -190,7 +190,7 @@ terra_dip_subject_duty_BLV = {
 }
 
 terra_dip_defend_partner_BLV = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = BLV } NOT = { has_war_with = BLV } OR = { is_in_faction_with = BLV is_subject_of = BLV BLV = { is_subject_of = ROOT } } BLV = { has_defensive_war = yes } NOT = { has_war_together_with = BLV } check_variable = { terra_dip_grievance_BLV < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = BLV target = call_allies value = 80 }
@@ -198,7 +198,7 @@ terra_dip_defend_partner_BLV = {
 }
 
 terra_dip_offensive_partner_BLV = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = BLV } NOT = { has_war_with = BLV } OR = { is_in_faction_with = BLV is_subject_of = BLV BLV = { is_subject_of = ROOT } } NOT = { has_war_together_with = BLV } terra_dip_can_support_offensive_war = { TARGET = BLV } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = BLV target = call_allies value = 25 }
@@ -292,7 +292,7 @@ terra_dip_legal_war_CLM = {
 }
 
 terra_dip_subject_duty_CLM = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = CLM } NOT = { has_war_with = CLM } is_subject_of = CLM CLM = { has_war = yes } NOT = { has_war_together_with = CLM } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = CLM target = call_allies value = 100 }
@@ -300,7 +300,7 @@ terra_dip_subject_duty_CLM = {
 }
 
 terra_dip_defend_partner_CLM = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = CLM } NOT = { has_war_with = CLM } OR = { is_in_faction_with = CLM is_subject_of = CLM CLM = { is_subject_of = ROOT } } CLM = { has_defensive_war = yes } NOT = { has_war_together_with = CLM } check_variable = { terra_dip_grievance_CLM < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = CLM target = call_allies value = 80 }
@@ -308,7 +308,7 @@ terra_dip_defend_partner_CLM = {
 }
 
 terra_dip_offensive_partner_CLM = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = CLM } NOT = { has_war_with = CLM } OR = { is_in_faction_with = CLM is_subject_of = CLM CLM = { is_subject_of = ROOT } } NOT = { has_war_together_with = CLM } terra_dip_can_support_offensive_war = { TARGET = CLM } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = CLM target = call_allies value = 25 }
@@ -402,7 +402,7 @@ terra_dip_legal_war_HGS = {
 }
 
 terra_dip_subject_duty_HGS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HGS } NOT = { has_war_with = HGS } is_subject_of = HGS HGS = { has_war = yes } NOT = { has_war_together_with = HGS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HGS target = call_allies value = 100 }
@@ -410,7 +410,7 @@ terra_dip_subject_duty_HGS = {
 }
 
 terra_dip_defend_partner_HGS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HGS } NOT = { has_war_with = HGS } OR = { is_in_faction_with = HGS is_subject_of = HGS HGS = { is_subject_of = ROOT } } HGS = { has_defensive_war = yes } NOT = { has_war_together_with = HGS } check_variable = { terra_dip_grievance_HGS < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HGS target = call_allies value = 80 }
@@ -418,7 +418,7 @@ terra_dip_defend_partner_HGS = {
 }
 
 terra_dip_offensive_partner_HGS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HGS } NOT = { has_war_with = HGS } OR = { is_in_faction_with = HGS is_subject_of = HGS HGS = { is_subject_of = ROOT } } NOT = { has_war_together_with = HGS } terra_dip_can_support_offensive_war = { TARGET = HGS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HGS target = call_allies value = 25 }
@@ -512,7 +512,7 @@ terra_dip_legal_war_HGN = {
 }
 
 terra_dip_subject_duty_HGN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HGN } NOT = { has_war_with = HGN } is_subject_of = HGN HGN = { has_war = yes } NOT = { has_war_together_with = HGN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HGN target = call_allies value = 100 }
@@ -520,7 +520,7 @@ terra_dip_subject_duty_HGN = {
 }
 
 terra_dip_defend_partner_HGN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HGN } NOT = { has_war_with = HGN } OR = { is_in_faction_with = HGN is_subject_of = HGN HGN = { is_subject_of = ROOT } } HGN = { has_defensive_war = yes } NOT = { has_war_together_with = HGN } check_variable = { terra_dip_grievance_HGN < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HGN target = call_allies value = 80 }
@@ -528,7 +528,7 @@ terra_dip_defend_partner_HGN = {
 }
 
 terra_dip_offensive_partner_HGN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HGN } NOT = { has_war_with = HGN } OR = { is_in_faction_with = HGN is_subject_of = HGN HGN = { is_subject_of = ROOT } } NOT = { has_war_together_with = HGN } terra_dip_can_support_offensive_war = { TARGET = HGN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HGN target = call_allies value = 25 }
@@ -622,7 +622,7 @@ terra_dip_legal_war_HSS = {
 }
 
 terra_dip_subject_duty_HSS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HSS } NOT = { has_war_with = HSS } is_subject_of = HSS HSS = { has_war = yes } NOT = { has_war_together_with = HSS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HSS target = call_allies value = 100 }
@@ -630,7 +630,7 @@ terra_dip_subject_duty_HSS = {
 }
 
 terra_dip_defend_partner_HSS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HSS } NOT = { has_war_with = HSS } OR = { is_in_faction_with = HSS is_subject_of = HSS HSS = { is_subject_of = ROOT } } HSS = { has_defensive_war = yes } NOT = { has_war_together_with = HSS } check_variable = { terra_dip_grievance_HSS < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HSS target = call_allies value = 80 }
@@ -638,7 +638,7 @@ terra_dip_defend_partner_HSS = {
 }
 
 terra_dip_offensive_partner_HSS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = HSS } NOT = { has_war_with = HSS } OR = { is_in_faction_with = HSS is_subject_of = HSS HSS = { is_subject_of = ROOT } } NOT = { has_war_together_with = HSS } terra_dip_can_support_offensive_war = { TARGET = HSS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = HSS target = call_allies value = 25 }
@@ -732,7 +732,7 @@ terra_dip_legal_war_IBR = {
 }
 
 terra_dip_subject_duty_IBR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = IBR } NOT = { has_war_with = IBR } is_subject_of = IBR IBR = { has_war = yes } NOT = { has_war_together_with = IBR } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = IBR target = call_allies value = 100 }
@@ -740,7 +740,7 @@ terra_dip_subject_duty_IBR = {
 }
 
 terra_dip_defend_partner_IBR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = IBR } NOT = { has_war_with = IBR } OR = { is_in_faction_with = IBR is_subject_of = IBR IBR = { is_subject_of = ROOT } } IBR = { has_defensive_war = yes } NOT = { has_war_together_with = IBR } check_variable = { terra_dip_grievance_IBR < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = IBR target = call_allies value = 80 }
@@ -748,7 +748,7 @@ terra_dip_defend_partner_IBR = {
 }
 
 terra_dip_offensive_partner_IBR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = IBR } NOT = { has_war_with = IBR } OR = { is_in_faction_with = IBR is_subject_of = IBR IBR = { is_subject_of = ROOT } } NOT = { has_war_together_with = IBR } terra_dip_can_support_offensive_war = { TARGET = IBR } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = IBR target = call_allies value = 25 }
@@ -842,7 +842,7 @@ terra_dip_legal_war_KJG = {
 }
 
 terra_dip_subject_duty_KJG = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KJG } NOT = { has_war_with = KJG } is_subject_of = KJG KJG = { has_war = yes } NOT = { has_war_together_with = KJG } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KJG target = call_allies value = 100 }
@@ -850,7 +850,7 @@ terra_dip_subject_duty_KJG = {
 }
 
 terra_dip_defend_partner_KJG = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KJG } NOT = { has_war_with = KJG } OR = { is_in_faction_with = KJG is_subject_of = KJG KJG = { is_subject_of = ROOT } } KJG = { has_defensive_war = yes } NOT = { has_war_together_with = KJG } check_variable = { terra_dip_grievance_KJG < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KJG target = call_allies value = 80 }
@@ -858,7 +858,7 @@ terra_dip_defend_partner_KJG = {
 }
 
 terra_dip_offensive_partner_KJG = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KJG } NOT = { has_war_with = KJG } OR = { is_in_faction_with = KJG is_subject_of = KJG KJG = { is_subject_of = ROOT } } NOT = { has_war_together_with = KJG } terra_dip_can_support_offensive_war = { TARGET = KJG } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KJG target = call_allies value = 25 }
@@ -952,7 +952,7 @@ terra_dip_legal_war_KZM = {
 }
 
 terra_dip_subject_duty_KZM = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KZM } NOT = { has_war_with = KZM } is_subject_of = KZM KZM = { has_war = yes } NOT = { has_war_together_with = KZM } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KZM target = call_allies value = 100 }
@@ -960,7 +960,7 @@ terra_dip_subject_duty_KZM = {
 }
 
 terra_dip_defend_partner_KZM = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KZM } NOT = { has_war_with = KZM } OR = { is_in_faction_with = KZM is_subject_of = KZM KZM = { is_subject_of = ROOT } } KZM = { has_defensive_war = yes } NOT = { has_war_together_with = KZM } check_variable = { terra_dip_grievance_KZM < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KZM target = call_allies value = 80 }
@@ -968,7 +968,7 @@ terra_dip_defend_partner_KZM = {
 }
 
 terra_dip_offensive_partner_KZM = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KZM } NOT = { has_war_with = KZM } OR = { is_in_faction_with = KZM is_subject_of = KZM KZM = { is_subject_of = ROOT } } NOT = { has_war_together_with = KZM } terra_dip_can_support_offensive_war = { TARGET = KZM } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KZM target = call_allies value = 25 }
@@ -1062,7 +1062,7 @@ terra_dip_legal_war_KZD = {
 }
 
 terra_dip_subject_duty_KZD = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KZD } NOT = { has_war_with = KZD } is_subject_of = KZD KZD = { has_war = yes } NOT = { has_war_together_with = KZD } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KZD target = call_allies value = 100 }
@@ -1070,7 +1070,7 @@ terra_dip_subject_duty_KZD = {
 }
 
 terra_dip_defend_partner_KZD = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KZD } NOT = { has_war_with = KZD } OR = { is_in_faction_with = KZD is_subject_of = KZD KZD = { is_subject_of = ROOT } } KZD = { has_defensive_war = yes } NOT = { has_war_together_with = KZD } check_variable = { terra_dip_grievance_KZD < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KZD target = call_allies value = 80 }
@@ -1078,7 +1078,7 @@ terra_dip_defend_partner_KZD = {
 }
 
 terra_dip_offensive_partner_KZD = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KZD } NOT = { has_war_with = KZD } OR = { is_in_faction_with = KZD is_subject_of = KZD KZD = { is_subject_of = ROOT } } NOT = { has_war_together_with = KZD } terra_dip_can_support_offensive_war = { TARGET = KZD } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KZD target = call_allies value = 25 }
@@ -1172,7 +1172,7 @@ terra_dip_legal_war_LTR = {
 }
 
 terra_dip_subject_duty_LTR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LTR } NOT = { has_war_with = LTR } is_subject_of = LTR LTR = { has_war = yes } NOT = { has_war_together_with = LTR } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LTR target = call_allies value = 100 }
@@ -1180,7 +1180,7 @@ terra_dip_subject_duty_LTR = {
 }
 
 terra_dip_defend_partner_LTR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LTR } NOT = { has_war_with = LTR } OR = { is_in_faction_with = LTR is_subject_of = LTR LTR = { is_subject_of = ROOT } } LTR = { has_defensive_war = yes } NOT = { has_war_together_with = LTR } check_variable = { terra_dip_grievance_LTR < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LTR target = call_allies value = 80 }
@@ -1188,7 +1188,7 @@ terra_dip_defend_partner_LTR = {
 }
 
 terra_dip_offensive_partner_LTR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LTR } NOT = { has_war_with = LTR } OR = { is_in_faction_with = LTR is_subject_of = LTR LTR = { is_subject_of = ROOT } } NOT = { has_war_together_with = LTR } terra_dip_can_support_offensive_war = { TARGET = LTR } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LTR target = call_allies value = 25 }
@@ -1282,7 +1282,7 @@ terra_dip_legal_war_LTH = {
 }
 
 terra_dip_subject_duty_LTH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LTH } NOT = { has_war_with = LTH } is_subject_of = LTH LTH = { has_war = yes } NOT = { has_war_together_with = LTH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LTH target = call_allies value = 100 }
@@ -1290,7 +1290,7 @@ terra_dip_subject_duty_LTH = {
 }
 
 terra_dip_defend_partner_LTH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LTH } NOT = { has_war_with = LTH } OR = { is_in_faction_with = LTH is_subject_of = LTH LTH = { is_subject_of = ROOT } } LTH = { has_defensive_war = yes } NOT = { has_war_together_with = LTH } check_variable = { terra_dip_grievance_LTH < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LTH target = call_allies value = 80 }
@@ -1298,7 +1298,7 @@ terra_dip_defend_partner_LTH = {
 }
 
 terra_dip_offensive_partner_LTH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LTH } NOT = { has_war_with = LTH } OR = { is_in_faction_with = LTH is_subject_of = LTH LTH = { is_subject_of = ROOT } } NOT = { has_war_together_with = LTH } terra_dip_can_support_offensive_war = { TARGET = LTH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LTH target = call_allies value = 25 }
@@ -1392,7 +1392,7 @@ terra_dip_legal_war_MNS = {
 }
 
 terra_dip_subject_duty_MNS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = MNS } NOT = { has_war_with = MNS } is_subject_of = MNS MNS = { has_war = yes } NOT = { has_war_together_with = MNS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = MNS target = call_allies value = 100 }
@@ -1400,7 +1400,7 @@ terra_dip_subject_duty_MNS = {
 }
 
 terra_dip_defend_partner_MNS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = MNS } NOT = { has_war_with = MNS } OR = { is_in_faction_with = MNS is_subject_of = MNS MNS = { is_subject_of = ROOT } } MNS = { has_defensive_war = yes } NOT = { has_war_together_with = MNS } check_variable = { terra_dip_grievance_MNS < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = MNS target = call_allies value = 80 }
@@ -1408,7 +1408,7 @@ terra_dip_defend_partner_MNS = {
 }
 
 terra_dip_offensive_partner_MNS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = MNS } NOT = { has_war_with = MNS } OR = { is_in_faction_with = MNS is_subject_of = MNS MNS = { is_subject_of = ROOT } } NOT = { has_war_together_with = MNS } terra_dip_can_support_offensive_war = { TARGET = MNS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = MNS target = call_allies value = 25 }
@@ -1502,7 +1502,7 @@ terra_dip_legal_war_RMB = {
 }
 
 terra_dip_subject_duty_RMB = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = RMB } NOT = { has_war_with = RMB } is_subject_of = RMB RMB = { has_war = yes } NOT = { has_war_together_with = RMB } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = RMB target = call_allies value = 100 }
@@ -1510,7 +1510,7 @@ terra_dip_subject_duty_RMB = {
 }
 
 terra_dip_defend_partner_RMB = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = RMB } NOT = { has_war_with = RMB } OR = { is_in_faction_with = RMB is_subject_of = RMB RMB = { is_subject_of = ROOT } } RMB = { has_defensive_war = yes } NOT = { has_war_together_with = RMB } check_variable = { terra_dip_grievance_RMB < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = RMB target = call_allies value = 80 }
@@ -1518,7 +1518,7 @@ terra_dip_defend_partner_RMB = {
 }
 
 terra_dip_offensive_partner_RMB = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = RMB } NOT = { has_war_with = RMB } OR = { is_in_faction_with = RMB is_subject_of = RMB RMB = { is_subject_of = ROOT } } NOT = { has_war_together_with = RMB } terra_dip_can_support_offensive_war = { TARGET = RMB } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = RMB target = call_allies value = 25 }
@@ -1612,7 +1612,7 @@ terra_dip_legal_war_SMN = {
 }
 
 terra_dip_subject_duty_SMN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SMN } NOT = { has_war_with = SMN } is_subject_of = SMN SMN = { has_war = yes } NOT = { has_war_together_with = SMN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SMN target = call_allies value = 100 }
@@ -1620,7 +1620,7 @@ terra_dip_subject_duty_SMN = {
 }
 
 terra_dip_defend_partner_SMN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SMN } NOT = { has_war_with = SMN } OR = { is_in_faction_with = SMN is_subject_of = SMN SMN = { is_subject_of = ROOT } } SMN = { has_defensive_war = yes } NOT = { has_war_together_with = SMN } check_variable = { terra_dip_grievance_SMN < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SMN target = call_allies value = 80 }
@@ -1628,7 +1628,7 @@ terra_dip_defend_partner_SMN = {
 }
 
 terra_dip_offensive_partner_SMN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SMN } NOT = { has_war_with = SMN } OR = { is_in_faction_with = SMN is_subject_of = SMN SMN = { is_subject_of = ROOT } } NOT = { has_war_together_with = SMN } terra_dip_can_support_offensive_war = { TARGET = SMN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SMN target = call_allies value = 25 }
@@ -1722,7 +1722,7 @@ terra_dip_legal_war_SGN = {
 }
 
 terra_dip_subject_duty_SGN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SGN } NOT = { has_war_with = SGN } is_subject_of = SGN SGN = { has_war = yes } NOT = { has_war_together_with = SGN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SGN target = call_allies value = 100 }
@@ -1730,7 +1730,7 @@ terra_dip_subject_duty_SGN = {
 }
 
 terra_dip_defend_partner_SGN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SGN } NOT = { has_war_with = SGN } OR = { is_in_faction_with = SGN is_subject_of = SGN SGN = { is_subject_of = ROOT } } SGN = { has_defensive_war = yes } NOT = { has_war_together_with = SGN } check_variable = { terra_dip_grievance_SGN < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SGN target = call_allies value = 80 }
@@ -1738,7 +1738,7 @@ terra_dip_defend_partner_SGN = {
 }
 
 terra_dip_offensive_partner_SGN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SGN } NOT = { has_war_with = SGN } OR = { is_in_faction_with = SGN is_subject_of = SGN SGN = { is_subject_of = ROOT } } NOT = { has_war_together_with = SGN } terra_dip_can_support_offensive_war = { TARGET = SGN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SGN target = call_allies value = 25 }
@@ -1832,7 +1832,7 @@ terra_dip_legal_war_SRC = {
 }
 
 terra_dip_subject_duty_SRC = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SRC } NOT = { has_war_with = SRC } is_subject_of = SRC SRC = { has_war = yes } NOT = { has_war_together_with = SRC } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SRC target = call_allies value = 100 }
@@ -1840,7 +1840,7 @@ terra_dip_subject_duty_SRC = {
 }
 
 terra_dip_defend_partner_SRC = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SRC } NOT = { has_war_with = SRC } OR = { is_in_faction_with = SRC is_subject_of = SRC SRC = { is_subject_of = ROOT } } SRC = { has_defensive_war = yes } NOT = { has_war_together_with = SRC } check_variable = { terra_dip_grievance_SRC < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SRC target = call_allies value = 80 }
@@ -1848,7 +1848,7 @@ terra_dip_defend_partner_SRC = {
 }
 
 terra_dip_offensive_partner_SRC = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SRC } NOT = { has_war_with = SRC } OR = { is_in_faction_with = SRC is_subject_of = SRC SRC = { is_subject_of = ROOT } } NOT = { has_war_together_with = SRC } terra_dip_can_support_offensive_war = { TARGET = SRC } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SRC target = call_allies value = 25 }
@@ -1942,7 +1942,7 @@ terra_dip_legal_war_URS = {
 }
 
 terra_dip_subject_duty_URS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = URS } NOT = { has_war_with = URS } is_subject_of = URS URS = { has_war = yes } NOT = { has_war_together_with = URS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = URS target = call_allies value = 100 }
@@ -1950,7 +1950,7 @@ terra_dip_subject_duty_URS = {
 }
 
 terra_dip_defend_partner_URS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = URS } NOT = { has_war_with = URS } OR = { is_in_faction_with = URS is_subject_of = URS URS = { is_subject_of = ROOT } } URS = { has_defensive_war = yes } NOT = { has_war_together_with = URS } check_variable = { terra_dip_grievance_URS < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = URS target = call_allies value = 80 }
@@ -1958,7 +1958,7 @@ terra_dip_defend_partner_URS = {
 }
 
 terra_dip_offensive_partner_URS = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = URS } NOT = { has_war_with = URS } OR = { is_in_faction_with = URS is_subject_of = URS URS = { is_subject_of = ROOT } } NOT = { has_war_together_with = URS } terra_dip_can_support_offensive_war = { TARGET = URS } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = URS target = call_allies value = 25 }
@@ -2052,7 +2052,7 @@ terra_dip_legal_war_VCT = {
 }
 
 terra_dip_subject_duty_VCT = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VCT } NOT = { has_war_with = VCT } is_subject_of = VCT VCT = { has_war = yes } NOT = { has_war_together_with = VCT } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VCT target = call_allies value = 100 }
@@ -2060,7 +2060,7 @@ terra_dip_subject_duty_VCT = {
 }
 
 terra_dip_defend_partner_VCT = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VCT } NOT = { has_war_with = VCT } OR = { is_in_faction_with = VCT is_subject_of = VCT VCT = { is_subject_of = ROOT } } VCT = { has_defensive_war = yes } NOT = { has_war_together_with = VCT } check_variable = { terra_dip_grievance_VCT < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VCT target = call_allies value = 80 }
@@ -2068,7 +2068,7 @@ terra_dip_defend_partner_VCT = {
 }
 
 terra_dip_offensive_partner_VCT = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VCT } NOT = { has_war_with = VCT } OR = { is_in_faction_with = VCT is_subject_of = VCT VCT = { is_subject_of = ROOT } } NOT = { has_war_together_with = VCT } terra_dip_can_support_offensive_war = { TARGET = VCT } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VCT target = call_allies value = 25 }
@@ -2162,7 +2162,7 @@ terra_dip_legal_war_YAN = {
 }
 
 terra_dip_subject_duty_YAN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = YAN } NOT = { has_war_with = YAN } is_subject_of = YAN YAN = { has_war = yes } NOT = { has_war_together_with = YAN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = YAN target = call_allies value = 100 }
@@ -2170,7 +2170,7 @@ terra_dip_subject_duty_YAN = {
 }
 
 terra_dip_defend_partner_YAN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = YAN } NOT = { has_war_with = YAN } OR = { is_in_faction_with = YAN is_subject_of = YAN YAN = { is_subject_of = ROOT } } YAN = { has_defensive_war = yes } NOT = { has_war_together_with = YAN } check_variable = { terra_dip_grievance_YAN < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = YAN target = call_allies value = 80 }
@@ -2178,7 +2178,7 @@ terra_dip_defend_partner_YAN = {
 }
 
 terra_dip_offensive_partner_YAN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = YAN } NOT = { has_war_with = YAN } OR = { is_in_faction_with = YAN is_subject_of = YAN YAN = { is_subject_of = ROOT } } NOT = { has_war_together_with = YAN } terra_dip_can_support_offensive_war = { TARGET = YAN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = YAN target = call_allies value = 25 }
@@ -2272,7 +2272,7 @@ terra_dip_legal_war_TRR = {
 }
 
 terra_dip_subject_duty_TRR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = TRR } NOT = { has_war_with = TRR } is_subject_of = TRR TRR = { has_war = yes } NOT = { has_war_together_with = TRR } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = TRR target = call_allies value = 100 }
@@ -2280,7 +2280,7 @@ terra_dip_subject_duty_TRR = {
 }
 
 terra_dip_defend_partner_TRR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = TRR } NOT = { has_war_with = TRR } OR = { is_in_faction_with = TRR is_subject_of = TRR TRR = { is_subject_of = ROOT } } TRR = { has_defensive_war = yes } NOT = { has_war_together_with = TRR } check_variable = { terra_dip_grievance_TRR < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = TRR target = call_allies value = 80 }
@@ -2288,7 +2288,7 @@ terra_dip_defend_partner_TRR = {
 }
 
 terra_dip_offensive_partner_TRR = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = TRR } NOT = { has_war_with = TRR } OR = { is_in_faction_with = TRR is_subject_of = TRR TRR = { is_subject_of = ROOT } } NOT = { has_war_together_with = TRR } terra_dip_can_support_offensive_war = { TARGET = TRR } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = TRR target = call_allies value = 25 }
@@ -2382,7 +2382,7 @@ terra_dip_legal_war_LGL = {
 }
 
 terra_dip_subject_duty_LGL = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LGL } NOT = { has_war_with = LGL } is_subject_of = LGL LGL = { has_war = yes } NOT = { has_war_together_with = LGL } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LGL target = call_allies value = 100 }
@@ -2390,7 +2390,7 @@ terra_dip_subject_duty_LGL = {
 }
 
 terra_dip_defend_partner_LGL = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LGL } NOT = { has_war_with = LGL } OR = { is_in_faction_with = LGL is_subject_of = LGL LGL = { is_subject_of = ROOT } } LGL = { has_defensive_war = yes } NOT = { has_war_together_with = LGL } check_variable = { terra_dip_grievance_LGL < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LGL target = call_allies value = 80 }
@@ -2398,7 +2398,7 @@ terra_dip_defend_partner_LGL = {
 }
 
 terra_dip_offensive_partner_LGL = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = LGL } NOT = { has_war_with = LGL } OR = { is_in_faction_with = LGL is_subject_of = LGL LGL = { is_subject_of = ROOT } } NOT = { has_war_together_with = LGL } terra_dip_can_support_offensive_war = { TARGET = LGL } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = LGL target = call_allies value = 25 }
@@ -2492,7 +2492,7 @@ terra_dip_legal_war_VVA = {
 }
 
 terra_dip_subject_duty_VVA = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VVA } NOT = { has_war_with = VVA } is_subject_of = VVA VVA = { has_war = yes } NOT = { has_war_together_with = VVA } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VVA target = call_allies value = 100 }
@@ -2500,7 +2500,7 @@ terra_dip_subject_duty_VVA = {
 }
 
 terra_dip_defend_partner_VVA = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VVA } NOT = { has_war_with = VVA } OR = { is_in_faction_with = VVA is_subject_of = VVA VVA = { is_subject_of = ROOT } } VVA = { has_defensive_war = yes } NOT = { has_war_together_with = VVA } check_variable = { terra_dip_grievance_VVA < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VVA target = call_allies value = 80 }
@@ -2508,7 +2508,7 @@ terra_dip_defend_partner_VVA = {
 }
 
 terra_dip_offensive_partner_VVA = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VVA } NOT = { has_war_with = VVA } OR = { is_in_faction_with = VVA is_subject_of = VVA VVA = { is_subject_of = ROOT } } NOT = { has_war_together_with = VVA } terra_dip_can_support_offensive_war = { TARGET = VVA } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VVA target = call_allies value = 25 }
@@ -2602,7 +2602,7 @@ terra_dip_legal_war_TNJ = {
 }
 
 terra_dip_subject_duty_TNJ = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = TNJ } NOT = { has_war_with = TNJ } is_subject_of = TNJ TNJ = { has_war = yes } NOT = { has_war_together_with = TNJ } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = TNJ target = call_allies value = 100 }
@@ -2610,7 +2610,7 @@ terra_dip_subject_duty_TNJ = {
 }
 
 terra_dip_defend_partner_TNJ = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = TNJ } NOT = { has_war_with = TNJ } OR = { is_in_faction_with = TNJ is_subject_of = TNJ TNJ = { is_subject_of = ROOT } } TNJ = { has_defensive_war = yes } NOT = { has_war_together_with = TNJ } check_variable = { terra_dip_grievance_TNJ < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = TNJ target = call_allies value = 80 }
@@ -2618,7 +2618,7 @@ terra_dip_defend_partner_TNJ = {
 }
 
 terra_dip_offensive_partner_TNJ = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = TNJ } NOT = { has_war_with = TNJ } OR = { is_in_faction_with = TNJ is_subject_of = TNJ TNJ = { is_subject_of = ROOT } } NOT = { has_war_together_with = TNJ } terra_dip_can_support_offensive_war = { TARGET = TNJ } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = TNJ target = call_allies value = 25 }
@@ -2712,7 +2712,7 @@ terra_dip_legal_war_MSN = {
 }
 
 terra_dip_subject_duty_MSN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = MSN } NOT = { has_war_with = MSN } is_subject_of = MSN MSN = { has_war = yes } NOT = { has_war_together_with = MSN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = MSN target = call_allies value = 100 }
@@ -2720,7 +2720,7 @@ terra_dip_subject_duty_MSN = {
 }
 
 terra_dip_defend_partner_MSN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = MSN } NOT = { has_war_with = MSN } OR = { is_in_faction_with = MSN is_subject_of = MSN MSN = { is_subject_of = ROOT } } MSN = { has_defensive_war = yes } NOT = { has_war_together_with = MSN } check_variable = { terra_dip_grievance_MSN < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = MSN target = call_allies value = 80 }
@@ -2728,7 +2728,7 @@ terra_dip_defend_partner_MSN = {
 }
 
 terra_dip_offensive_partner_MSN = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = MSN } NOT = { has_war_with = MSN } OR = { is_in_faction_with = MSN is_subject_of = MSN MSN = { is_subject_of = ROOT } } NOT = { has_war_together_with = MSN } terra_dip_can_support_offensive_war = { TARGET = MSN } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = MSN target = call_allies value = 25 }
@@ -2822,7 +2822,7 @@ terra_dip_legal_war_WSG = {
 }
 
 terra_dip_subject_duty_WSG = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = WSG } NOT = { has_war_with = WSG } is_subject_of = WSG WSG = { has_war = yes } NOT = { has_war_together_with = WSG } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = WSG target = call_allies value = 100 }
@@ -2830,7 +2830,7 @@ terra_dip_subject_duty_WSG = {
 }
 
 terra_dip_defend_partner_WSG = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = WSG } NOT = { has_war_with = WSG } OR = { is_in_faction_with = WSG is_subject_of = WSG WSG = { is_subject_of = ROOT } } WSG = { has_defensive_war = yes } NOT = { has_war_together_with = WSG } check_variable = { terra_dip_grievance_WSG < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = WSG target = call_allies value = 80 }
@@ -2838,7 +2838,7 @@ terra_dip_defend_partner_WSG = {
 }
 
 terra_dip_offensive_partner_WSG = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = WSG } NOT = { has_war_with = WSG } OR = { is_in_faction_with = WSG is_subject_of = WSG WSG = { is_subject_of = ROOT } } NOT = { has_war_together_with = WSG } terra_dip_can_support_offensive_war = { TARGET = WSG } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = WSG target = call_allies value = 25 }
@@ -2932,7 +2932,7 @@ terra_dip_legal_war_KTH = {
 }
 
 terra_dip_subject_duty_KTH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KTH } NOT = { has_war_with = KTH } is_subject_of = KTH KTH = { has_war = yes } NOT = { has_war_together_with = KTH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 100 }
@@ -2940,7 +2940,7 @@ terra_dip_subject_duty_KTH = {
 }
 
 terra_dip_defend_partner_KTH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KTH } NOT = { has_war_with = KTH } OR = { is_in_faction_with = KTH is_subject_of = KTH KTH = { is_subject_of = ROOT } } KTH = { has_defensive_war = yes } NOT = { has_war_together_with = KTH } check_variable = { terra_dip_grievance_KTH < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 80 }
@@ -2948,7 +2948,7 @@ terra_dip_defend_partner_KTH = {
 }
 
 terra_dip_offensive_partner_KTH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KTH } NOT = { has_war_with = KTH } OR = { is_in_faction_with = KTH is_subject_of = KTH KTH = { is_subject_of = ROOT } } NOT = { has_war_together_with = KTH } terra_dip_can_support_offensive_war = { TARGET = KTH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 25 }
@@ -3042,7 +3042,7 @@ terra_dip_legal_war_VNH = {
 }
 
 terra_dip_subject_duty_VNH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VNH } NOT = { has_war_with = VNH } is_subject_of = VNH VNH = { has_war = yes } NOT = { has_war_together_with = VNH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VNH target = call_allies value = 100 }
@@ -3050,7 +3050,7 @@ terra_dip_subject_duty_VNH = {
 }
 
 terra_dip_defend_partner_VNH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VNH } NOT = { has_war_with = VNH } OR = { is_in_faction_with = VNH is_subject_of = VNH VNH = { is_subject_of = ROOT } } VNH = { has_defensive_war = yes } NOT = { has_war_together_with = VNH } check_variable = { terra_dip_grievance_VNH < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VNH target = call_allies value = 80 }
@@ -3058,7 +3058,7 @@ terra_dip_defend_partner_VNH = {
 }
 
 terra_dip_offensive_partner_VNH = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = VNH } NOT = { has_war_with = VNH } OR = { is_in_faction_with = VNH is_subject_of = VNH VNH = { is_subject_of = ROOT } } NOT = { has_war_together_with = VNH } terra_dip_can_support_offensive_war = { TARGET = VNH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = VNH target = call_allies value = 25 }
@@ -3152,7 +3152,7 @@ terra_dip_legal_war_SCW = {
 }
 
 terra_dip_subject_duty_SCW = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SCW } NOT = { has_war_with = SCW } is_subject_of = SCW SCW = { has_war = yes } NOT = { has_war_together_with = SCW } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SCW target = call_allies value = 100 }
@@ -3160,7 +3160,7 @@ terra_dip_subject_duty_SCW = {
 }
 
 terra_dip_defend_partner_SCW = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SCW } NOT = { has_war_with = SCW } OR = { is_in_faction_with = SCW is_subject_of = SCW SCW = { is_subject_of = ROOT } } SCW = { has_defensive_war = yes } NOT = { has_war_together_with = SCW } check_variable = { terra_dip_grievance_SCW < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SCW target = call_allies value = 80 }
@@ -3168,7 +3168,7 @@ terra_dip_defend_partner_SCW = {
 }
 
 terra_dip_offensive_partner_SCW = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = SCW } NOT = { has_war_with = SCW } OR = { is_in_faction_with = SCW is_subject_of = SCW SCW = { is_subject_of = ROOT } } NOT = { has_war_together_with = SCW } terra_dip_can_support_offensive_war = { TARGET = SCW } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = SCW target = call_allies value = 25 }
@@ -3262,7 +3262,7 @@ terra_dip_legal_war_D01 = {
 }
 
 terra_dip_subject_duty_D01 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D01 } NOT = { has_war_with = D01 } is_subject_of = D01 D01 = { has_war = yes } NOT = { has_war_together_with = D01 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D01 target = call_allies value = 100 }
@@ -3270,7 +3270,7 @@ terra_dip_subject_duty_D01 = {
 }
 
 terra_dip_defend_partner_D01 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D01 } NOT = { has_war_with = D01 } OR = { is_in_faction_with = D01 is_subject_of = D01 D01 = { is_subject_of = ROOT } } D01 = { has_defensive_war = yes } NOT = { has_war_together_with = D01 } check_variable = { terra_dip_grievance_D01 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D01 target = call_allies value = 80 }
@@ -3278,7 +3278,7 @@ terra_dip_defend_partner_D01 = {
 }
 
 terra_dip_offensive_partner_D01 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D01 } NOT = { has_war_with = D01 } OR = { is_in_faction_with = D01 is_subject_of = D01 D01 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D01 } terra_dip_can_support_offensive_war = { TARGET = D01 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D01 target = call_allies value = 25 }
@@ -3372,7 +3372,7 @@ terra_dip_legal_war_D02 = {
 }
 
 terra_dip_subject_duty_D02 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D02 } NOT = { has_war_with = D02 } is_subject_of = D02 D02 = { has_war = yes } NOT = { has_war_together_with = D02 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D02 target = call_allies value = 100 }
@@ -3380,7 +3380,7 @@ terra_dip_subject_duty_D02 = {
 }
 
 terra_dip_defend_partner_D02 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D02 } NOT = { has_war_with = D02 } OR = { is_in_faction_with = D02 is_subject_of = D02 D02 = { is_subject_of = ROOT } } D02 = { has_defensive_war = yes } NOT = { has_war_together_with = D02 } check_variable = { terra_dip_grievance_D02 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D02 target = call_allies value = 80 }
@@ -3388,7 +3388,7 @@ terra_dip_defend_partner_D02 = {
 }
 
 terra_dip_offensive_partner_D02 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D02 } NOT = { has_war_with = D02 } OR = { is_in_faction_with = D02 is_subject_of = D02 D02 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D02 } terra_dip_can_support_offensive_war = { TARGET = D02 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D02 target = call_allies value = 25 }
@@ -3482,7 +3482,7 @@ terra_dip_legal_war_D03 = {
 }
 
 terra_dip_subject_duty_D03 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D03 } NOT = { has_war_with = D03 } is_subject_of = D03 D03 = { has_war = yes } NOT = { has_war_together_with = D03 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D03 target = call_allies value = 100 }
@@ -3490,7 +3490,7 @@ terra_dip_subject_duty_D03 = {
 }
 
 terra_dip_defend_partner_D03 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D03 } NOT = { has_war_with = D03 } OR = { is_in_faction_with = D03 is_subject_of = D03 D03 = { is_subject_of = ROOT } } D03 = { has_defensive_war = yes } NOT = { has_war_together_with = D03 } check_variable = { terra_dip_grievance_D03 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D03 target = call_allies value = 80 }
@@ -3498,7 +3498,7 @@ terra_dip_defend_partner_D03 = {
 }
 
 terra_dip_offensive_partner_D03 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D03 } NOT = { has_war_with = D03 } OR = { is_in_faction_with = D03 is_subject_of = D03 D03 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D03 } terra_dip_can_support_offensive_war = { TARGET = D03 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D03 target = call_allies value = 25 }
@@ -3592,7 +3592,7 @@ terra_dip_legal_war_D04 = {
 }
 
 terra_dip_subject_duty_D04 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D04 } NOT = { has_war_with = D04 } is_subject_of = D04 D04 = { has_war = yes } NOT = { has_war_together_with = D04 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D04 target = call_allies value = 100 }
@@ -3600,7 +3600,7 @@ terra_dip_subject_duty_D04 = {
 }
 
 terra_dip_defend_partner_D04 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D04 } NOT = { has_war_with = D04 } OR = { is_in_faction_with = D04 is_subject_of = D04 D04 = { is_subject_of = ROOT } } D04 = { has_defensive_war = yes } NOT = { has_war_together_with = D04 } check_variable = { terra_dip_grievance_D04 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D04 target = call_allies value = 80 }
@@ -3608,7 +3608,7 @@ terra_dip_defend_partner_D04 = {
 }
 
 terra_dip_offensive_partner_D04 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D04 } NOT = { has_war_with = D04 } OR = { is_in_faction_with = D04 is_subject_of = D04 D04 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D04 } terra_dip_can_support_offensive_war = { TARGET = D04 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D04 target = call_allies value = 25 }
@@ -3702,7 +3702,7 @@ terra_dip_legal_war_D05 = {
 }
 
 terra_dip_subject_duty_D05 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D05 } NOT = { has_war_with = D05 } is_subject_of = D05 D05 = { has_war = yes } NOT = { has_war_together_with = D05 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D05 target = call_allies value = 100 }
@@ -3710,7 +3710,7 @@ terra_dip_subject_duty_D05 = {
 }
 
 terra_dip_defend_partner_D05 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D05 } NOT = { has_war_with = D05 } OR = { is_in_faction_with = D05 is_subject_of = D05 D05 = { is_subject_of = ROOT } } D05 = { has_defensive_war = yes } NOT = { has_war_together_with = D05 } check_variable = { terra_dip_grievance_D05 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D05 target = call_allies value = 80 }
@@ -3718,7 +3718,7 @@ terra_dip_defend_partner_D05 = {
 }
 
 terra_dip_offensive_partner_D05 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D05 } NOT = { has_war_with = D05 } OR = { is_in_faction_with = D05 is_subject_of = D05 D05 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D05 } terra_dip_can_support_offensive_war = { TARGET = D05 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D05 target = call_allies value = 25 }
@@ -3812,7 +3812,7 @@ terra_dip_legal_war_D06 = {
 }
 
 terra_dip_subject_duty_D06 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D06 } NOT = { has_war_with = D06 } is_subject_of = D06 D06 = { has_war = yes } NOT = { has_war_together_with = D06 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D06 target = call_allies value = 100 }
@@ -3820,7 +3820,7 @@ terra_dip_subject_duty_D06 = {
 }
 
 terra_dip_defend_partner_D06 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D06 } NOT = { has_war_with = D06 } OR = { is_in_faction_with = D06 is_subject_of = D06 D06 = { is_subject_of = ROOT } } D06 = { has_defensive_war = yes } NOT = { has_war_together_with = D06 } check_variable = { terra_dip_grievance_D06 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D06 target = call_allies value = 80 }
@@ -3828,7 +3828,7 @@ terra_dip_defend_partner_D06 = {
 }
 
 terra_dip_offensive_partner_D06 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D06 } NOT = { has_war_with = D06 } OR = { is_in_faction_with = D06 is_subject_of = D06 D06 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D06 } terra_dip_can_support_offensive_war = { TARGET = D06 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D06 target = call_allies value = 25 }
@@ -3922,7 +3922,7 @@ terra_dip_legal_war_D07 = {
 }
 
 terra_dip_subject_duty_D07 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D07 } NOT = { has_war_with = D07 } is_subject_of = D07 D07 = { has_war = yes } NOT = { has_war_together_with = D07 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D07 target = call_allies value = 100 }
@@ -3930,7 +3930,7 @@ terra_dip_subject_duty_D07 = {
 }
 
 terra_dip_defend_partner_D07 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D07 } NOT = { has_war_with = D07 } OR = { is_in_faction_with = D07 is_subject_of = D07 D07 = { is_subject_of = ROOT } } D07 = { has_defensive_war = yes } NOT = { has_war_together_with = D07 } check_variable = { terra_dip_grievance_D07 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D07 target = call_allies value = 80 }
@@ -3938,7 +3938,7 @@ terra_dip_defend_partner_D07 = {
 }
 
 terra_dip_offensive_partner_D07 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D07 } NOT = { has_war_with = D07 } OR = { is_in_faction_with = D07 is_subject_of = D07 D07 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D07 } terra_dip_can_support_offensive_war = { TARGET = D07 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D07 target = call_allies value = 25 }
@@ -4032,7 +4032,7 @@ terra_dip_legal_war_D08 = {
 }
 
 terra_dip_subject_duty_D08 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D08 } NOT = { has_war_with = D08 } is_subject_of = D08 D08 = { has_war = yes } NOT = { has_war_together_with = D08 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D08 target = call_allies value = 100 }
@@ -4040,7 +4040,7 @@ terra_dip_subject_duty_D08 = {
 }
 
 terra_dip_defend_partner_D08 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D08 } NOT = { has_war_with = D08 } OR = { is_in_faction_with = D08 is_subject_of = D08 D08 = { is_subject_of = ROOT } } D08 = { has_defensive_war = yes } NOT = { has_war_together_with = D08 } check_variable = { terra_dip_grievance_D08 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D08 target = call_allies value = 80 }
@@ -4048,7 +4048,7 @@ terra_dip_defend_partner_D08 = {
 }
 
 terra_dip_offensive_partner_D08 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D08 } NOT = { has_war_with = D08 } OR = { is_in_faction_with = D08 is_subject_of = D08 D08 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D08 } terra_dip_can_support_offensive_war = { TARGET = D08 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D08 target = call_allies value = 25 }
@@ -4142,7 +4142,7 @@ terra_dip_legal_war_D09 = {
 }
 
 terra_dip_subject_duty_D09 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D09 } NOT = { has_war_with = D09 } is_subject_of = D09 D09 = { has_war = yes } NOT = { has_war_together_with = D09 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D09 target = call_allies value = 100 }
@@ -4150,7 +4150,7 @@ terra_dip_subject_duty_D09 = {
 }
 
 terra_dip_defend_partner_D09 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D09 } NOT = { has_war_with = D09 } OR = { is_in_faction_with = D09 is_subject_of = D09 D09 = { is_subject_of = ROOT } } D09 = { has_defensive_war = yes } NOT = { has_war_together_with = D09 } check_variable = { terra_dip_grievance_D09 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D09 target = call_allies value = 80 }
@@ -4158,7 +4158,7 @@ terra_dip_defend_partner_D09 = {
 }
 
 terra_dip_offensive_partner_D09 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D09 } NOT = { has_war_with = D09 } OR = { is_in_faction_with = D09 is_subject_of = D09 D09 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D09 } terra_dip_can_support_offensive_war = { TARGET = D09 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D09 target = call_allies value = 25 }
@@ -4252,7 +4252,7 @@ terra_dip_legal_war_D10 = {
 }
 
 terra_dip_subject_duty_D10 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D10 } NOT = { has_war_with = D10 } is_subject_of = D10 D10 = { has_war = yes } NOT = { has_war_together_with = D10 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D10 target = call_allies value = 100 }
@@ -4260,7 +4260,7 @@ terra_dip_subject_duty_D10 = {
 }
 
 terra_dip_defend_partner_D10 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D10 } NOT = { has_war_with = D10 } OR = { is_in_faction_with = D10 is_subject_of = D10 D10 = { is_subject_of = ROOT } } D10 = { has_defensive_war = yes } NOT = { has_war_together_with = D10 } check_variable = { terra_dip_grievance_D10 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D10 target = call_allies value = 80 }
@@ -4268,7 +4268,7 @@ terra_dip_defend_partner_D10 = {
 }
 
 terra_dip_offensive_partner_D10 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D10 } NOT = { has_war_with = D10 } OR = { is_in_faction_with = D10 is_subject_of = D10 D10 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D10 } terra_dip_can_support_offensive_war = { TARGET = D10 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D10 target = call_allies value = 25 }
@@ -4362,7 +4362,7 @@ terra_dip_legal_war_D11 = {
 }
 
 terra_dip_subject_duty_D11 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D11 } NOT = { has_war_with = D11 } is_subject_of = D11 D11 = { has_war = yes } NOT = { has_war_together_with = D11 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D11 target = call_allies value = 100 }
@@ -4370,7 +4370,7 @@ terra_dip_subject_duty_D11 = {
 }
 
 terra_dip_defend_partner_D11 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D11 } NOT = { has_war_with = D11 } OR = { is_in_faction_with = D11 is_subject_of = D11 D11 = { is_subject_of = ROOT } } D11 = { has_defensive_war = yes } NOT = { has_war_together_with = D11 } check_variable = { terra_dip_grievance_D11 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D11 target = call_allies value = 80 }
@@ -4378,7 +4378,7 @@ terra_dip_defend_partner_D11 = {
 }
 
 terra_dip_offensive_partner_D11 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D11 } NOT = { has_war_with = D11 } OR = { is_in_faction_with = D11 is_subject_of = D11 D11 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D11 } terra_dip_can_support_offensive_war = { TARGET = D11 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D11 target = call_allies value = 25 }
@@ -4472,7 +4472,7 @@ terra_dip_legal_war_D12 = {
 }
 
 terra_dip_subject_duty_D12 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D12 } NOT = { has_war_with = D12 } is_subject_of = D12 D12 = { has_war = yes } NOT = { has_war_together_with = D12 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D12 target = call_allies value = 100 }
@@ -4480,7 +4480,7 @@ terra_dip_subject_duty_D12 = {
 }
 
 terra_dip_defend_partner_D12 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D12 } NOT = { has_war_with = D12 } OR = { is_in_faction_with = D12 is_subject_of = D12 D12 = { is_subject_of = ROOT } } D12 = { has_defensive_war = yes } NOT = { has_war_together_with = D12 } check_variable = { terra_dip_grievance_D12 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D12 target = call_allies value = 80 }
@@ -4488,7 +4488,7 @@ terra_dip_defend_partner_D12 = {
 }
 
 terra_dip_offensive_partner_D12 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D12 } NOT = { has_war_with = D12 } OR = { is_in_faction_with = D12 is_subject_of = D12 D12 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D12 } terra_dip_can_support_offensive_war = { TARGET = D12 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D12 target = call_allies value = 25 }
@@ -4582,7 +4582,7 @@ terra_dip_legal_war_D13 = {
 }
 
 terra_dip_subject_duty_D13 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D13 } NOT = { has_war_with = D13 } is_subject_of = D13 D13 = { has_war = yes } NOT = { has_war_together_with = D13 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D13 target = call_allies value = 100 }
@@ -4590,7 +4590,7 @@ terra_dip_subject_duty_D13 = {
 }
 
 terra_dip_defend_partner_D13 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D13 } NOT = { has_war_with = D13 } OR = { is_in_faction_with = D13 is_subject_of = D13 D13 = { is_subject_of = ROOT } } D13 = { has_defensive_war = yes } NOT = { has_war_together_with = D13 } check_variable = { terra_dip_grievance_D13 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D13 target = call_allies value = 80 }
@@ -4598,7 +4598,7 @@ terra_dip_defend_partner_D13 = {
 }
 
 terra_dip_offensive_partner_D13 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D13 } NOT = { has_war_with = D13 } OR = { is_in_faction_with = D13 is_subject_of = D13 D13 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D13 } terra_dip_can_support_offensive_war = { TARGET = D13 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D13 target = call_allies value = 25 }
@@ -4692,7 +4692,7 @@ terra_dip_legal_war_D14 = {
 }
 
 terra_dip_subject_duty_D14 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D14 } NOT = { has_war_with = D14 } is_subject_of = D14 D14 = { has_war = yes } NOT = { has_war_together_with = D14 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D14 target = call_allies value = 100 }
@@ -4700,7 +4700,7 @@ terra_dip_subject_duty_D14 = {
 }
 
 terra_dip_defend_partner_D14 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D14 } NOT = { has_war_with = D14 } OR = { is_in_faction_with = D14 is_subject_of = D14 D14 = { is_subject_of = ROOT } } D14 = { has_defensive_war = yes } NOT = { has_war_together_with = D14 } check_variable = { terra_dip_grievance_D14 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D14 target = call_allies value = 80 }
@@ -4708,7 +4708,7 @@ terra_dip_defend_partner_D14 = {
 }
 
 terra_dip_offensive_partner_D14 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D14 } NOT = { has_war_with = D14 } OR = { is_in_faction_with = D14 is_subject_of = D14 D14 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D14 } terra_dip_can_support_offensive_war = { TARGET = D14 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D14 target = call_allies value = 25 }
@@ -4802,7 +4802,7 @@ terra_dip_legal_war_D15 = {
 }
 
 terra_dip_subject_duty_D15 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D15 } NOT = { has_war_with = D15 } is_subject_of = D15 D15 = { has_war = yes } NOT = { has_war_together_with = D15 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D15 target = call_allies value = 100 }
@@ -4810,7 +4810,7 @@ terra_dip_subject_duty_D15 = {
 }
 
 terra_dip_defend_partner_D15 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D15 } NOT = { has_war_with = D15 } OR = { is_in_faction_with = D15 is_subject_of = D15 D15 = { is_subject_of = ROOT } } D15 = { has_defensive_war = yes } NOT = { has_war_together_with = D15 } check_variable = { terra_dip_grievance_D15 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D15 target = call_allies value = 80 }
@@ -4818,7 +4818,7 @@ terra_dip_defend_partner_D15 = {
 }
 
 terra_dip_offensive_partner_D15 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D15 } NOT = { has_war_with = D15 } OR = { is_in_faction_with = D15 is_subject_of = D15 D15 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D15 } terra_dip_can_support_offensive_war = { TARGET = D15 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D15 target = call_allies value = 25 }
@@ -4912,7 +4912,7 @@ terra_dip_legal_war_D16 = {
 }
 
 terra_dip_subject_duty_D16 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D16 } NOT = { has_war_with = D16 } is_subject_of = D16 D16 = { has_war = yes } NOT = { has_war_together_with = D16 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D16 target = call_allies value = 100 }
@@ -4920,7 +4920,7 @@ terra_dip_subject_duty_D16 = {
 }
 
 terra_dip_defend_partner_D16 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D16 } NOT = { has_war_with = D16 } OR = { is_in_faction_with = D16 is_subject_of = D16 D16 = { is_subject_of = ROOT } } D16 = { has_defensive_war = yes } NOT = { has_war_together_with = D16 } check_variable = { terra_dip_grievance_D16 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D16 target = call_allies value = 80 }
@@ -4928,7 +4928,7 @@ terra_dip_defend_partner_D16 = {
 }
 
 terra_dip_offensive_partner_D16 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D16 } NOT = { has_war_with = D16 } OR = { is_in_faction_with = D16 is_subject_of = D16 D16 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D16 } terra_dip_can_support_offensive_war = { TARGET = D16 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D16 target = call_allies value = 25 }
@@ -5022,7 +5022,7 @@ terra_dip_legal_war_D17 = {
 }
 
 terra_dip_subject_duty_D17 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D17 } NOT = { has_war_with = D17 } is_subject_of = D17 D17 = { has_war = yes } NOT = { has_war_together_with = D17 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D17 target = call_allies value = 100 }
@@ -5030,7 +5030,7 @@ terra_dip_subject_duty_D17 = {
 }
 
 terra_dip_defend_partner_D17 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D17 } NOT = { has_war_with = D17 } OR = { is_in_faction_with = D17 is_subject_of = D17 D17 = { is_subject_of = ROOT } } D17 = { has_defensive_war = yes } NOT = { has_war_together_with = D17 } check_variable = { terra_dip_grievance_D17 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D17 target = call_allies value = 80 }
@@ -5038,7 +5038,7 @@ terra_dip_defend_partner_D17 = {
 }
 
 terra_dip_offensive_partner_D17 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D17 } NOT = { has_war_with = D17 } OR = { is_in_faction_with = D17 is_subject_of = D17 D17 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D17 } terra_dip_can_support_offensive_war = { TARGET = D17 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D17 target = call_allies value = 25 }
@@ -5132,7 +5132,7 @@ terra_dip_legal_war_D18 = {
 }
 
 terra_dip_subject_duty_D18 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D18 } NOT = { has_war_with = D18 } is_subject_of = D18 D18 = { has_war = yes } NOT = { has_war_together_with = D18 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D18 target = call_allies value = 100 }
@@ -5140,7 +5140,7 @@ terra_dip_subject_duty_D18 = {
 }
 
 terra_dip_defend_partner_D18 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D18 } NOT = { has_war_with = D18 } OR = { is_in_faction_with = D18 is_subject_of = D18 D18 = { is_subject_of = ROOT } } D18 = { has_defensive_war = yes } NOT = { has_war_together_with = D18 } check_variable = { terra_dip_grievance_D18 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D18 target = call_allies value = 80 }
@@ -5148,7 +5148,7 @@ terra_dip_defend_partner_D18 = {
 }
 
 terra_dip_offensive_partner_D18 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D18 } NOT = { has_war_with = D18 } OR = { is_in_faction_with = D18 is_subject_of = D18 D18 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D18 } terra_dip_can_support_offensive_war = { TARGET = D18 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D18 target = call_allies value = 25 }
@@ -5242,7 +5242,7 @@ terra_dip_legal_war_D19 = {
 }
 
 terra_dip_subject_duty_D19 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D19 } NOT = { has_war_with = D19 } is_subject_of = D19 D19 = { has_war = yes } NOT = { has_war_together_with = D19 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D19 target = call_allies value = 100 }
@@ -5250,7 +5250,7 @@ terra_dip_subject_duty_D19 = {
 }
 
 terra_dip_defend_partner_D19 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D19 } NOT = { has_war_with = D19 } OR = { is_in_faction_with = D19 is_subject_of = D19 D19 = { is_subject_of = ROOT } } D19 = { has_defensive_war = yes } NOT = { has_war_together_with = D19 } check_variable = { terra_dip_grievance_D19 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D19 target = call_allies value = 80 }
@@ -5258,7 +5258,7 @@ terra_dip_defend_partner_D19 = {
 }
 
 terra_dip_offensive_partner_D19 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D19 } NOT = { has_war_with = D19 } OR = { is_in_faction_with = D19 is_subject_of = D19 D19 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D19 } terra_dip_can_support_offensive_war = { TARGET = D19 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D19 target = call_allies value = 25 }
@@ -5352,7 +5352,7 @@ terra_dip_legal_war_D20 = {
 }
 
 terra_dip_subject_duty_D20 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D20 } NOT = { has_war_with = D20 } is_subject_of = D20 D20 = { has_war = yes } NOT = { has_war_together_with = D20 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D20 target = call_allies value = 100 }
@@ -5360,7 +5360,7 @@ terra_dip_subject_duty_D20 = {
 }
 
 terra_dip_defend_partner_D20 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D20 } NOT = { has_war_with = D20 } OR = { is_in_faction_with = D20 is_subject_of = D20 D20 = { is_subject_of = ROOT } } D20 = { has_defensive_war = yes } NOT = { has_war_together_with = D20 } check_variable = { terra_dip_grievance_D20 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D20 target = call_allies value = 80 }
@@ -5368,7 +5368,7 @@ terra_dip_defend_partner_D20 = {
 }
 
 terra_dip_offensive_partner_D20 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D20 } NOT = { has_war_with = D20 } OR = { is_in_faction_with = D20 is_subject_of = D20 D20 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D20 } terra_dip_can_support_offensive_war = { TARGET = D20 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D20 target = call_allies value = 25 }
@@ -5462,7 +5462,7 @@ terra_dip_legal_war_D21 = {
 }
 
 terra_dip_subject_duty_D21 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D21 } NOT = { has_war_with = D21 } is_subject_of = D21 D21 = { has_war = yes } NOT = { has_war_together_with = D21 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D21 target = call_allies value = 100 }
@@ -5470,7 +5470,7 @@ terra_dip_subject_duty_D21 = {
 }
 
 terra_dip_defend_partner_D21 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D21 } NOT = { has_war_with = D21 } OR = { is_in_faction_with = D21 is_subject_of = D21 D21 = { is_subject_of = ROOT } } D21 = { has_defensive_war = yes } NOT = { has_war_together_with = D21 } check_variable = { terra_dip_grievance_D21 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D21 target = call_allies value = 80 }
@@ -5478,7 +5478,7 @@ terra_dip_defend_partner_D21 = {
 }
 
 terra_dip_offensive_partner_D21 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D21 } NOT = { has_war_with = D21 } OR = { is_in_faction_with = D21 is_subject_of = D21 D21 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D21 } terra_dip_can_support_offensive_war = { TARGET = D21 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D21 target = call_allies value = 25 }
@@ -5572,7 +5572,7 @@ terra_dip_legal_war_D22 = {
 }
 
 terra_dip_subject_duty_D22 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D22 } NOT = { has_war_with = D22 } is_subject_of = D22 D22 = { has_war = yes } NOT = { has_war_together_with = D22 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D22 target = call_allies value = 100 }
@@ -5580,7 +5580,7 @@ terra_dip_subject_duty_D22 = {
 }
 
 terra_dip_defend_partner_D22 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D22 } NOT = { has_war_with = D22 } OR = { is_in_faction_with = D22 is_subject_of = D22 D22 = { is_subject_of = ROOT } } D22 = { has_defensive_war = yes } NOT = { has_war_together_with = D22 } check_variable = { terra_dip_grievance_D22 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D22 target = call_allies value = 80 }
@@ -5588,7 +5588,7 @@ terra_dip_defend_partner_D22 = {
 }
 
 terra_dip_offensive_partner_D22 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D22 } NOT = { has_war_with = D22 } OR = { is_in_faction_with = D22 is_subject_of = D22 D22 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D22 } terra_dip_can_support_offensive_war = { TARGET = D22 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D22 target = call_allies value = 25 }
@@ -5682,7 +5682,7 @@ terra_dip_legal_war_D23 = {
 }
 
 terra_dip_subject_duty_D23 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D23 } NOT = { has_war_with = D23 } is_subject_of = D23 D23 = { has_war = yes } NOT = { has_war_together_with = D23 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D23 target = call_allies value = 100 }
@@ -5690,7 +5690,7 @@ terra_dip_subject_duty_D23 = {
 }
 
 terra_dip_defend_partner_D23 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D23 } NOT = { has_war_with = D23 } OR = { is_in_faction_with = D23 is_subject_of = D23 D23 = { is_subject_of = ROOT } } D23 = { has_defensive_war = yes } NOT = { has_war_together_with = D23 } check_variable = { terra_dip_grievance_D23 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D23 target = call_allies value = 80 }
@@ -5698,7 +5698,7 @@ terra_dip_defend_partner_D23 = {
 }
 
 terra_dip_offensive_partner_D23 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D23 } NOT = { has_war_with = D23 } OR = { is_in_faction_with = D23 is_subject_of = D23 D23 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D23 } terra_dip_can_support_offensive_war = { TARGET = D23 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D23 target = call_allies value = 25 }
@@ -5792,7 +5792,7 @@ terra_dip_legal_war_D24 = {
 }
 
 terra_dip_subject_duty_D24 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D24 } NOT = { has_war_with = D24 } is_subject_of = D24 D24 = { has_war = yes } NOT = { has_war_together_with = D24 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D24 target = call_allies value = 100 }
@@ -5800,7 +5800,7 @@ terra_dip_subject_duty_D24 = {
 }
 
 terra_dip_defend_partner_D24 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D24 } NOT = { has_war_with = D24 } OR = { is_in_faction_with = D24 is_subject_of = D24 D24 = { is_subject_of = ROOT } } D24 = { has_defensive_war = yes } NOT = { has_war_together_with = D24 } check_variable = { terra_dip_grievance_D24 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D24 target = call_allies value = 80 }
@@ -5808,7 +5808,7 @@ terra_dip_defend_partner_D24 = {
 }
 
 terra_dip_offensive_partner_D24 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D24 } NOT = { has_war_with = D24 } OR = { is_in_faction_with = D24 is_subject_of = D24 D24 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D24 } terra_dip_can_support_offensive_war = { TARGET = D24 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D24 target = call_allies value = 25 }
@@ -5902,7 +5902,7 @@ terra_dip_legal_war_D25 = {
 }
 
 terra_dip_subject_duty_D25 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D25 } NOT = { has_war_with = D25 } is_subject_of = D25 D25 = { has_war = yes } NOT = { has_war_together_with = D25 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D25 target = call_allies value = 100 }
@@ -5910,7 +5910,7 @@ terra_dip_subject_duty_D25 = {
 }
 
 terra_dip_defend_partner_D25 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D25 } NOT = { has_war_with = D25 } OR = { is_in_faction_with = D25 is_subject_of = D25 D25 = { is_subject_of = ROOT } } D25 = { has_defensive_war = yes } NOT = { has_war_together_with = D25 } check_variable = { terra_dip_grievance_D25 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D25 target = call_allies value = 80 }
@@ -5918,7 +5918,7 @@ terra_dip_defend_partner_D25 = {
 }
 
 terra_dip_offensive_partner_D25 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D25 } NOT = { has_war_with = D25 } OR = { is_in_faction_with = D25 is_subject_of = D25 D25 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D25 } terra_dip_can_support_offensive_war = { TARGET = D25 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D25 target = call_allies value = 25 }
@@ -6012,7 +6012,7 @@ terra_dip_legal_war_D26 = {
 }
 
 terra_dip_subject_duty_D26 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D26 } NOT = { has_war_with = D26 } is_subject_of = D26 D26 = { has_war = yes } NOT = { has_war_together_with = D26 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D26 target = call_allies value = 100 }
@@ -6020,7 +6020,7 @@ terra_dip_subject_duty_D26 = {
 }
 
 terra_dip_defend_partner_D26 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D26 } NOT = { has_war_with = D26 } OR = { is_in_faction_with = D26 is_subject_of = D26 D26 = { is_subject_of = ROOT } } D26 = { has_defensive_war = yes } NOT = { has_war_together_with = D26 } check_variable = { terra_dip_grievance_D26 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D26 target = call_allies value = 80 }
@@ -6028,7 +6028,7 @@ terra_dip_defend_partner_D26 = {
 }
 
 terra_dip_offensive_partner_D26 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D26 } NOT = { has_war_with = D26 } OR = { is_in_faction_with = D26 is_subject_of = D26 D26 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D26 } terra_dip_can_support_offensive_war = { TARGET = D26 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D26 target = call_allies value = 25 }
@@ -6122,7 +6122,7 @@ terra_dip_legal_war_D27 = {
 }
 
 terra_dip_subject_duty_D27 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D27 } NOT = { has_war_with = D27 } is_subject_of = D27 D27 = { has_war = yes } NOT = { has_war_together_with = D27 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D27 target = call_allies value = 100 }
@@ -6130,7 +6130,7 @@ terra_dip_subject_duty_D27 = {
 }
 
 terra_dip_defend_partner_D27 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D27 } NOT = { has_war_with = D27 } OR = { is_in_faction_with = D27 is_subject_of = D27 D27 = { is_subject_of = ROOT } } D27 = { has_defensive_war = yes } NOT = { has_war_together_with = D27 } check_variable = { terra_dip_grievance_D27 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D27 target = call_allies value = 80 }
@@ -6138,7 +6138,7 @@ terra_dip_defend_partner_D27 = {
 }
 
 terra_dip_offensive_partner_D27 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D27 } NOT = { has_war_with = D27 } OR = { is_in_faction_with = D27 is_subject_of = D27 D27 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D27 } terra_dip_can_support_offensive_war = { TARGET = D27 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D27 target = call_allies value = 25 }
@@ -6232,7 +6232,7 @@ terra_dip_legal_war_D28 = {
 }
 
 terra_dip_subject_duty_D28 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D28 } NOT = { has_war_with = D28 } is_subject_of = D28 D28 = { has_war = yes } NOT = { has_war_together_with = D28 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D28 target = call_allies value = 100 }
@@ -6240,7 +6240,7 @@ terra_dip_subject_duty_D28 = {
 }
 
 terra_dip_defend_partner_D28 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D28 } NOT = { has_war_with = D28 } OR = { is_in_faction_with = D28 is_subject_of = D28 D28 = { is_subject_of = ROOT } } D28 = { has_defensive_war = yes } NOT = { has_war_together_with = D28 } check_variable = { terra_dip_grievance_D28 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D28 target = call_allies value = 80 }
@@ -6248,7 +6248,7 @@ terra_dip_defend_partner_D28 = {
 }
 
 terra_dip_offensive_partner_D28 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D28 } NOT = { has_war_with = D28 } OR = { is_in_faction_with = D28 is_subject_of = D28 D28 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D28 } terra_dip_can_support_offensive_war = { TARGET = D28 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D28 target = call_allies value = 25 }
@@ -6342,7 +6342,7 @@ terra_dip_legal_war_D29 = {
 }
 
 terra_dip_subject_duty_D29 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D29 } NOT = { has_war_with = D29 } is_subject_of = D29 D29 = { has_war = yes } NOT = { has_war_together_with = D29 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D29 target = call_allies value = 100 }
@@ -6350,7 +6350,7 @@ terra_dip_subject_duty_D29 = {
 }
 
 terra_dip_defend_partner_D29 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D29 } NOT = { has_war_with = D29 } OR = { is_in_faction_with = D29 is_subject_of = D29 D29 = { is_subject_of = ROOT } } D29 = { has_defensive_war = yes } NOT = { has_war_together_with = D29 } check_variable = { terra_dip_grievance_D29 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D29 target = call_allies value = 80 }
@@ -6358,7 +6358,7 @@ terra_dip_defend_partner_D29 = {
 }
 
 terra_dip_offensive_partner_D29 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D29 } NOT = { has_war_with = D29 } OR = { is_in_faction_with = D29 is_subject_of = D29 D29 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D29 } terra_dip_can_support_offensive_war = { TARGET = D29 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D29 target = call_allies value = 25 }
@@ -6452,7 +6452,7 @@ terra_dip_legal_war_D30 = {
 }
 
 terra_dip_subject_duty_D30 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D30 } NOT = { has_war_with = D30 } is_subject_of = D30 D30 = { has_war = yes } NOT = { has_war_together_with = D30 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D30 target = call_allies value = 100 }
@@ -6460,7 +6460,7 @@ terra_dip_subject_duty_D30 = {
 }
 
 terra_dip_defend_partner_D30 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D30 } NOT = { has_war_with = D30 } OR = { is_in_faction_with = D30 is_subject_of = D30 D30 = { is_subject_of = ROOT } } D30 = { has_defensive_war = yes } NOT = { has_war_together_with = D30 } check_variable = { terra_dip_grievance_D30 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D30 target = call_allies value = 80 }
@@ -6468,7 +6468,7 @@ terra_dip_defend_partner_D30 = {
 }
 
 terra_dip_offensive_partner_D30 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D30 } NOT = { has_war_with = D30 } OR = { is_in_faction_with = D30 is_subject_of = D30 D30 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D30 } terra_dip_can_support_offensive_war = { TARGET = D30 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D30 target = call_allies value = 25 }
@@ -6562,7 +6562,7 @@ terra_dip_legal_war_D31 = {
 }
 
 terra_dip_subject_duty_D31 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D31 } NOT = { has_war_with = D31 } is_subject_of = D31 D31 = { has_war = yes } NOT = { has_war_together_with = D31 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D31 target = call_allies value = 100 }
@@ -6570,7 +6570,7 @@ terra_dip_subject_duty_D31 = {
 }
 
 terra_dip_defend_partner_D31 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D31 } NOT = { has_war_with = D31 } OR = { is_in_faction_with = D31 is_subject_of = D31 D31 = { is_subject_of = ROOT } } D31 = { has_defensive_war = yes } NOT = { has_war_together_with = D31 } check_variable = { terra_dip_grievance_D31 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D31 target = call_allies value = 80 }
@@ -6578,7 +6578,7 @@ terra_dip_defend_partner_D31 = {
 }
 
 terra_dip_offensive_partner_D31 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D31 } NOT = { has_war_with = D31 } OR = { is_in_faction_with = D31 is_subject_of = D31 D31 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D31 } terra_dip_can_support_offensive_war = { TARGET = D31 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D31 target = call_allies value = 25 }
@@ -6672,7 +6672,7 @@ terra_dip_legal_war_D32 = {
 }
 
 terra_dip_subject_duty_D32 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D32 } NOT = { has_war_with = D32 } is_subject_of = D32 D32 = { has_war = yes } NOT = { has_war_together_with = D32 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D32 target = call_allies value = 100 }
@@ -6680,7 +6680,7 @@ terra_dip_subject_duty_D32 = {
 }
 
 terra_dip_defend_partner_D32 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D32 } NOT = { has_war_with = D32 } OR = { is_in_faction_with = D32 is_subject_of = D32 D32 = { is_subject_of = ROOT } } D32 = { has_defensive_war = yes } NOT = { has_war_together_with = D32 } check_variable = { terra_dip_grievance_D32 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D32 target = call_allies value = 80 }
@@ -6688,7 +6688,7 @@ terra_dip_defend_partner_D32 = {
 }
 
 terra_dip_offensive_partner_D32 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D32 } NOT = { has_war_with = D32 } OR = { is_in_faction_with = D32 is_subject_of = D32 D32 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D32 } terra_dip_can_support_offensive_war = { TARGET = D32 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D32 target = call_allies value = 25 }
@@ -6782,7 +6782,7 @@ terra_dip_legal_war_D33 = {
 }
 
 terra_dip_subject_duty_D33 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D33 } NOT = { has_war_with = D33 } is_subject_of = D33 D33 = { has_war = yes } NOT = { has_war_together_with = D33 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D33 target = call_allies value = 100 }
@@ -6790,7 +6790,7 @@ terra_dip_subject_duty_D33 = {
 }
 
 terra_dip_defend_partner_D33 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D33 } NOT = { has_war_with = D33 } OR = { is_in_faction_with = D33 is_subject_of = D33 D33 = { is_subject_of = ROOT } } D33 = { has_defensive_war = yes } NOT = { has_war_together_with = D33 } check_variable = { terra_dip_grievance_D33 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D33 target = call_allies value = 80 }
@@ -6798,7 +6798,7 @@ terra_dip_defend_partner_D33 = {
 }
 
 terra_dip_offensive_partner_D33 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D33 } NOT = { has_war_with = D33 } OR = { is_in_faction_with = D33 is_subject_of = D33 D33 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D33 } terra_dip_can_support_offensive_war = { TARGET = D33 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D33 target = call_allies value = 25 }
@@ -6892,7 +6892,7 @@ terra_dip_legal_war_D34 = {
 }
 
 terra_dip_subject_duty_D34 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D34 } NOT = { has_war_with = D34 } is_subject_of = D34 D34 = { has_war = yes } NOT = { has_war_together_with = D34 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D34 target = call_allies value = 100 }
@@ -6900,7 +6900,7 @@ terra_dip_subject_duty_D34 = {
 }
 
 terra_dip_defend_partner_D34 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D34 } NOT = { has_war_with = D34 } OR = { is_in_faction_with = D34 is_subject_of = D34 D34 = { is_subject_of = ROOT } } D34 = { has_defensive_war = yes } NOT = { has_war_together_with = D34 } check_variable = { terra_dip_grievance_D34 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D34 target = call_allies value = 80 }
@@ -6908,7 +6908,7 @@ terra_dip_defend_partner_D34 = {
 }
 
 terra_dip_offensive_partner_D34 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D34 } NOT = { has_war_with = D34 } OR = { is_in_faction_with = D34 is_subject_of = D34 D34 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D34 } terra_dip_can_support_offensive_war = { TARGET = D34 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D34 target = call_allies value = 25 }
@@ -7002,7 +7002,7 @@ terra_dip_legal_war_D35 = {
 }
 
 terra_dip_subject_duty_D35 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D35 } NOT = { has_war_with = D35 } is_subject_of = D35 D35 = { has_war = yes } NOT = { has_war_together_with = D35 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D35 target = call_allies value = 100 }
@@ -7010,7 +7010,7 @@ terra_dip_subject_duty_D35 = {
 }
 
 terra_dip_defend_partner_D35 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D35 } NOT = { has_war_with = D35 } OR = { is_in_faction_with = D35 is_subject_of = D35 D35 = { is_subject_of = ROOT } } D35 = { has_defensive_war = yes } NOT = { has_war_together_with = D35 } check_variable = { terra_dip_grievance_D35 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D35 target = call_allies value = 80 }
@@ -7018,7 +7018,7 @@ terra_dip_defend_partner_D35 = {
 }
 
 terra_dip_offensive_partner_D35 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D35 } NOT = { has_war_with = D35 } OR = { is_in_faction_with = D35 is_subject_of = D35 D35 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D35 } terra_dip_can_support_offensive_war = { TARGET = D35 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D35 target = call_allies value = 25 }
@@ -7112,7 +7112,7 @@ terra_dip_legal_war_D36 = {
 }
 
 terra_dip_subject_duty_D36 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D36 } NOT = { has_war_with = D36 } is_subject_of = D36 D36 = { has_war = yes } NOT = { has_war_together_with = D36 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D36 target = call_allies value = 100 }
@@ -7120,7 +7120,7 @@ terra_dip_subject_duty_D36 = {
 }
 
 terra_dip_defend_partner_D36 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D36 } NOT = { has_war_with = D36 } OR = { is_in_faction_with = D36 is_subject_of = D36 D36 = { is_subject_of = ROOT } } D36 = { has_defensive_war = yes } NOT = { has_war_together_with = D36 } check_variable = { terra_dip_grievance_D36 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D36 target = call_allies value = 80 }
@@ -7128,7 +7128,7 @@ terra_dip_defend_partner_D36 = {
 }
 
 terra_dip_offensive_partner_D36 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D36 } NOT = { has_war_with = D36 } OR = { is_in_faction_with = D36 is_subject_of = D36 D36 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D36 } terra_dip_can_support_offensive_war = { TARGET = D36 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D36 target = call_allies value = 25 }
@@ -7222,7 +7222,7 @@ terra_dip_legal_war_D37 = {
 }
 
 terra_dip_subject_duty_D37 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D37 } NOT = { has_war_with = D37 } is_subject_of = D37 D37 = { has_war = yes } NOT = { has_war_together_with = D37 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D37 target = call_allies value = 100 }
@@ -7230,7 +7230,7 @@ terra_dip_subject_duty_D37 = {
 }
 
 terra_dip_defend_partner_D37 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D37 } NOT = { has_war_with = D37 } OR = { is_in_faction_with = D37 is_subject_of = D37 D37 = { is_subject_of = ROOT } } D37 = { has_defensive_war = yes } NOT = { has_war_together_with = D37 } check_variable = { terra_dip_grievance_D37 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D37 target = call_allies value = 80 }
@@ -7238,7 +7238,7 @@ terra_dip_defend_partner_D37 = {
 }
 
 terra_dip_offensive_partner_D37 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D37 } NOT = { has_war_with = D37 } OR = { is_in_faction_with = D37 is_subject_of = D37 D37 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D37 } terra_dip_can_support_offensive_war = { TARGET = D37 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D37 target = call_allies value = 25 }
@@ -7332,7 +7332,7 @@ terra_dip_legal_war_D38 = {
 }
 
 terra_dip_subject_duty_D38 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D38 } NOT = { has_war_with = D38 } is_subject_of = D38 D38 = { has_war = yes } NOT = { has_war_together_with = D38 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D38 target = call_allies value = 100 }
@@ -7340,7 +7340,7 @@ terra_dip_subject_duty_D38 = {
 }
 
 terra_dip_defend_partner_D38 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D38 } NOT = { has_war_with = D38 } OR = { is_in_faction_with = D38 is_subject_of = D38 D38 = { is_subject_of = ROOT } } D38 = { has_defensive_war = yes } NOT = { has_war_together_with = D38 } check_variable = { terra_dip_grievance_D38 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D38 target = call_allies value = 80 }
@@ -7348,7 +7348,7 @@ terra_dip_defend_partner_D38 = {
 }
 
 terra_dip_offensive_partner_D38 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D38 } NOT = { has_war_with = D38 } OR = { is_in_faction_with = D38 is_subject_of = D38 D38 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D38 } terra_dip_can_support_offensive_war = { TARGET = D38 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D38 target = call_allies value = 25 }
@@ -7442,7 +7442,7 @@ terra_dip_legal_war_D39 = {
 }
 
 terra_dip_subject_duty_D39 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D39 } NOT = { has_war_with = D39 } is_subject_of = D39 D39 = { has_war = yes } NOT = { has_war_together_with = D39 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D39 target = call_allies value = 100 }
@@ -7450,7 +7450,7 @@ terra_dip_subject_duty_D39 = {
 }
 
 terra_dip_defend_partner_D39 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D39 } NOT = { has_war_with = D39 } OR = { is_in_faction_with = D39 is_subject_of = D39 D39 = { is_subject_of = ROOT } } D39 = { has_defensive_war = yes } NOT = { has_war_together_with = D39 } check_variable = { terra_dip_grievance_D39 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D39 target = call_allies value = 80 }
@@ -7458,7 +7458,7 @@ terra_dip_defend_partner_D39 = {
 }
 
 terra_dip_offensive_partner_D39 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D39 } NOT = { has_war_with = D39 } OR = { is_in_faction_with = D39 is_subject_of = D39 D39 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D39 } terra_dip_can_support_offensive_war = { TARGET = D39 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D39 target = call_allies value = 25 }
@@ -7552,7 +7552,7 @@ terra_dip_legal_war_D40 = {
 }
 
 terra_dip_subject_duty_D40 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D40 } NOT = { has_war_with = D40 } is_subject_of = D40 D40 = { has_war = yes } NOT = { has_war_together_with = D40 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D40 target = call_allies value = 100 }
@@ -7560,7 +7560,7 @@ terra_dip_subject_duty_D40 = {
 }
 
 terra_dip_defend_partner_D40 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D40 } NOT = { has_war_with = D40 } OR = { is_in_faction_with = D40 is_subject_of = D40 D40 = { is_subject_of = ROOT } } D40 = { has_defensive_war = yes } NOT = { has_war_together_with = D40 } check_variable = { terra_dip_grievance_D40 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D40 target = call_allies value = 80 }
@@ -7568,7 +7568,7 @@ terra_dip_defend_partner_D40 = {
 }
 
 terra_dip_offensive_partner_D40 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D40 } NOT = { has_war_with = D40 } OR = { is_in_faction_with = D40 is_subject_of = D40 D40 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D40 } terra_dip_can_support_offensive_war = { TARGET = D40 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D40 target = call_allies value = 25 }
@@ -7662,7 +7662,7 @@ terra_dip_legal_war_D41 = {
 }
 
 terra_dip_subject_duty_D41 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D41 } NOT = { has_war_with = D41 } is_subject_of = D41 D41 = { has_war = yes } NOT = { has_war_together_with = D41 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D41 target = call_allies value = 100 }
@@ -7670,7 +7670,7 @@ terra_dip_subject_duty_D41 = {
 }
 
 terra_dip_defend_partner_D41 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D41 } NOT = { has_war_with = D41 } OR = { is_in_faction_with = D41 is_subject_of = D41 D41 = { is_subject_of = ROOT } } D41 = { has_defensive_war = yes } NOT = { has_war_together_with = D41 } check_variable = { terra_dip_grievance_D41 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D41 target = call_allies value = 80 }
@@ -7678,7 +7678,7 @@ terra_dip_defend_partner_D41 = {
 }
 
 terra_dip_offensive_partner_D41 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D41 } NOT = { has_war_with = D41 } OR = { is_in_faction_with = D41 is_subject_of = D41 D41 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D41 } terra_dip_can_support_offensive_war = { TARGET = D41 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D41 target = call_allies value = 25 }
@@ -7772,7 +7772,7 @@ terra_dip_legal_war_D42 = {
 }
 
 terra_dip_subject_duty_D42 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D42 } NOT = { has_war_with = D42 } is_subject_of = D42 D42 = { has_war = yes } NOT = { has_war_together_with = D42 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D42 target = call_allies value = 100 }
@@ -7780,7 +7780,7 @@ terra_dip_subject_duty_D42 = {
 }
 
 terra_dip_defend_partner_D42 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D42 } NOT = { has_war_with = D42 } OR = { is_in_faction_with = D42 is_subject_of = D42 D42 = { is_subject_of = ROOT } } D42 = { has_defensive_war = yes } NOT = { has_war_together_with = D42 } check_variable = { terra_dip_grievance_D42 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D42 target = call_allies value = 80 }
@@ -7788,7 +7788,7 @@ terra_dip_defend_partner_D42 = {
 }
 
 terra_dip_offensive_partner_D42 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D42 } NOT = { has_war_with = D42 } OR = { is_in_faction_with = D42 is_subject_of = D42 D42 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D42 } terra_dip_can_support_offensive_war = { TARGET = D42 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D42 target = call_allies value = 25 }
@@ -7882,7 +7882,7 @@ terra_dip_legal_war_D43 = {
 }
 
 terra_dip_subject_duty_D43 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D43 } NOT = { has_war_with = D43 } is_subject_of = D43 D43 = { has_war = yes } NOT = { has_war_together_with = D43 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D43 target = call_allies value = 100 }
@@ -7890,7 +7890,7 @@ terra_dip_subject_duty_D43 = {
 }
 
 terra_dip_defend_partner_D43 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D43 } NOT = { has_war_with = D43 } OR = { is_in_faction_with = D43 is_subject_of = D43 D43 = { is_subject_of = ROOT } } D43 = { has_defensive_war = yes } NOT = { has_war_together_with = D43 } check_variable = { terra_dip_grievance_D43 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D43 target = call_allies value = 80 }
@@ -7898,7 +7898,7 @@ terra_dip_defend_partner_D43 = {
 }
 
 terra_dip_offensive_partner_D43 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D43 } NOT = { has_war_with = D43 } OR = { is_in_faction_with = D43 is_subject_of = D43 D43 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D43 } terra_dip_can_support_offensive_war = { TARGET = D43 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D43 target = call_allies value = 25 }
@@ -7992,7 +7992,7 @@ terra_dip_legal_war_D44 = {
 }
 
 terra_dip_subject_duty_D44 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D44 } NOT = { has_war_with = D44 } is_subject_of = D44 D44 = { has_war = yes } NOT = { has_war_together_with = D44 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D44 target = call_allies value = 100 }
@@ -8000,7 +8000,7 @@ terra_dip_subject_duty_D44 = {
 }
 
 terra_dip_defend_partner_D44 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D44 } NOT = { has_war_with = D44 } OR = { is_in_faction_with = D44 is_subject_of = D44 D44 = { is_subject_of = ROOT } } D44 = { has_defensive_war = yes } NOT = { has_war_together_with = D44 } check_variable = { terra_dip_grievance_D44 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D44 target = call_allies value = 80 }
@@ -8008,7 +8008,7 @@ terra_dip_defend_partner_D44 = {
 }
 
 terra_dip_offensive_partner_D44 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D44 } NOT = { has_war_with = D44 } OR = { is_in_faction_with = D44 is_subject_of = D44 D44 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D44 } terra_dip_can_support_offensive_war = { TARGET = D44 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D44 target = call_allies value = 25 }
@@ -8102,7 +8102,7 @@ terra_dip_legal_war_D45 = {
 }
 
 terra_dip_subject_duty_D45 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D45 } NOT = { has_war_with = D45 } is_subject_of = D45 D45 = { has_war = yes } NOT = { has_war_together_with = D45 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D45 target = call_allies value = 100 }
@@ -8110,7 +8110,7 @@ terra_dip_subject_duty_D45 = {
 }
 
 terra_dip_defend_partner_D45 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D45 } NOT = { has_war_with = D45 } OR = { is_in_faction_with = D45 is_subject_of = D45 D45 = { is_subject_of = ROOT } } D45 = { has_defensive_war = yes } NOT = { has_war_together_with = D45 } check_variable = { terra_dip_grievance_D45 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D45 target = call_allies value = 80 }
@@ -8118,7 +8118,7 @@ terra_dip_defend_partner_D45 = {
 }
 
 terra_dip_offensive_partner_D45 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D45 } NOT = { has_war_with = D45 } OR = { is_in_faction_with = D45 is_subject_of = D45 D45 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D45 } terra_dip_can_support_offensive_war = { TARGET = D45 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D45 target = call_allies value = 25 }
@@ -8212,7 +8212,7 @@ terra_dip_legal_war_D46 = {
 }
 
 terra_dip_subject_duty_D46 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D46 } NOT = { has_war_with = D46 } is_subject_of = D46 D46 = { has_war = yes } NOT = { has_war_together_with = D46 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D46 target = call_allies value = 100 }
@@ -8220,7 +8220,7 @@ terra_dip_subject_duty_D46 = {
 }
 
 terra_dip_defend_partner_D46 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D46 } NOT = { has_war_with = D46 } OR = { is_in_faction_with = D46 is_subject_of = D46 D46 = { is_subject_of = ROOT } } D46 = { has_defensive_war = yes } NOT = { has_war_together_with = D46 } check_variable = { terra_dip_grievance_D46 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D46 target = call_allies value = 80 }
@@ -8228,7 +8228,7 @@ terra_dip_defend_partner_D46 = {
 }
 
 terra_dip_offensive_partner_D46 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D46 } NOT = { has_war_with = D46 } OR = { is_in_faction_with = D46 is_subject_of = D46 D46 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D46 } terra_dip_can_support_offensive_war = { TARGET = D46 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D46 target = call_allies value = 25 }
@@ -8322,7 +8322,7 @@ terra_dip_legal_war_D47 = {
 }
 
 terra_dip_subject_duty_D47 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D47 } NOT = { has_war_with = D47 } is_subject_of = D47 D47 = { has_war = yes } NOT = { has_war_together_with = D47 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D47 target = call_allies value = 100 }
@@ -8330,7 +8330,7 @@ terra_dip_subject_duty_D47 = {
 }
 
 terra_dip_defend_partner_D47 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D47 } NOT = { has_war_with = D47 } OR = { is_in_faction_with = D47 is_subject_of = D47 D47 = { is_subject_of = ROOT } } D47 = { has_defensive_war = yes } NOT = { has_war_together_with = D47 } check_variable = { terra_dip_grievance_D47 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D47 target = call_allies value = 80 }
@@ -8338,7 +8338,7 @@ terra_dip_defend_partner_D47 = {
 }
 
 terra_dip_offensive_partner_D47 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D47 } NOT = { has_war_with = D47 } OR = { is_in_faction_with = D47 is_subject_of = D47 D47 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D47 } terra_dip_can_support_offensive_war = { TARGET = D47 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D47 target = call_allies value = 25 }
@@ -8432,7 +8432,7 @@ terra_dip_legal_war_D48 = {
 }
 
 terra_dip_subject_duty_D48 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D48 } NOT = { has_war_with = D48 } is_subject_of = D48 D48 = { has_war = yes } NOT = { has_war_together_with = D48 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D48 target = call_allies value = 100 }
@@ -8440,7 +8440,7 @@ terra_dip_subject_duty_D48 = {
 }
 
 terra_dip_defend_partner_D48 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D48 } NOT = { has_war_with = D48 } OR = { is_in_faction_with = D48 is_subject_of = D48 D48 = { is_subject_of = ROOT } } D48 = { has_defensive_war = yes } NOT = { has_war_together_with = D48 } check_variable = { terra_dip_grievance_D48 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D48 target = call_allies value = 80 }
@@ -8448,7 +8448,7 @@ terra_dip_defend_partner_D48 = {
 }
 
 terra_dip_offensive_partner_D48 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D48 } NOT = { has_war_with = D48 } OR = { is_in_faction_with = D48 is_subject_of = D48 D48 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D48 } terra_dip_can_support_offensive_war = { TARGET = D48 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D48 target = call_allies value = 25 }
@@ -8542,7 +8542,7 @@ terra_dip_legal_war_D49 = {
 }
 
 terra_dip_subject_duty_D49 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D49 } NOT = { has_war_with = D49 } is_subject_of = D49 D49 = { has_war = yes } NOT = { has_war_together_with = D49 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D49 target = call_allies value = 100 }
@@ -8550,7 +8550,7 @@ terra_dip_subject_duty_D49 = {
 }
 
 terra_dip_defend_partner_D49 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D49 } NOT = { has_war_with = D49 } OR = { is_in_faction_with = D49 is_subject_of = D49 D49 = { is_subject_of = ROOT } } D49 = { has_defensive_war = yes } NOT = { has_war_together_with = D49 } check_variable = { terra_dip_grievance_D49 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D49 target = call_allies value = 80 }
@@ -8558,7 +8558,7 @@ terra_dip_defend_partner_D49 = {
 }
 
 terra_dip_offensive_partner_D49 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D49 } NOT = { has_war_with = D49 } OR = { is_in_faction_with = D49 is_subject_of = D49 D49 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D49 } terra_dip_can_support_offensive_war = { TARGET = D49 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D49 target = call_allies value = 25 }
@@ -8652,7 +8652,7 @@ terra_dip_legal_war_D50 = {
 }
 
 terra_dip_subject_duty_D50 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D50 } NOT = { has_war_with = D50 } is_subject_of = D50 D50 = { has_war = yes } NOT = { has_war_together_with = D50 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D50 target = call_allies value = 100 }
@@ -8660,7 +8660,7 @@ terra_dip_subject_duty_D50 = {
 }
 
 terra_dip_defend_partner_D50 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D50 } NOT = { has_war_with = D50 } OR = { is_in_faction_with = D50 is_subject_of = D50 D50 = { is_subject_of = ROOT } } D50 = { has_defensive_war = yes } NOT = { has_war_together_with = D50 } check_variable = { terra_dip_grievance_D50 < 70 } NOT = { terra_dip_exhausted = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D50 target = call_allies value = 80 }
@@ -8668,7 +8668,7 @@ terra_dip_defend_partner_D50 = {
 }
 
 terra_dip_offensive_partner_D50 = {
-    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = D50 } NOT = { has_war_with = D50 } OR = { is_in_faction_with = D50 is_subject_of = D50 D50 = { is_subject_of = ROOT } } NOT = { has_war_together_with = D50 } terra_dip_can_support_offensive_war = { TARGET = D50 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = D50 target = call_allies value = 25 }

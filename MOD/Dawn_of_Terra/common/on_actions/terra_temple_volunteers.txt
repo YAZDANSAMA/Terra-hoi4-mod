@@ -1,0 +1,9 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+            # on_monthly is already country-scoped. The scripted trigger
+            # permits only TNJ to debit once and credit both recipients.
+            terra_tnj_monthly_volunteers_effect = yes
+        }
+    }
+}

@@ -1,6 +1,10 @@
 # Sargonian satrapy at the 1028 start.
 capital = 49
 
+# 2.5% of 4,000,000 core population covers all fifteen 6,000-man divisions
+# and leaves 10,000 free manpower before the monthly temple transfer.
+add_ideas = { limited_conscription MSN_tnj_auxiliaries }
+
 oob = "MSN_1028"
 
 set_technology = {

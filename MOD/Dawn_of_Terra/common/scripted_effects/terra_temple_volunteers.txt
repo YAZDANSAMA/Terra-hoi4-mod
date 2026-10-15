@@ -1,0 +1,50 @@
+# Off-map historical reservists supplement normal core-population recruitment.
+# They do not change state population, laws or periodic recruitment.
+# Country history calls these only at campaign setup; saved flags make an
+# accidental second call harmless. Old saves are never topped up on startup.
+terra_sgn_initialize_reserves_effect = {
+    if = {
+        limit = {
+            tag = SGN
+            NOT = { has_country_flag = terra_sgn_starting_reserves_set }
+        }
+        # 53,522,146 * 0.025 + 1,201,947 - 540,000 in the army
+        # leaves approximately 2,000,000 free recruits at the 1028 start.
+        add_manpower = 1201947
+        set_country_flag = terra_sgn_starting_reserves_set
+    }
+}
+
+terra_vva_initialize_reserves_effect = {
+    if = {
+        limit = {
+            tag = VVA
+            NOT = { has_country_flag = terra_vva_starting_reserves_set }
+        }
+        # 9,014,764 * 0.015 + 364,779 = approximately 500,000 total.
+        add_manpower = 364779
+        set_country_flag = terra_vva_starting_reserves_set
+    }
+}
+
+terra_tnj_initialize_reserves_effect = {
+    if = {
+        limit = {
+            tag = TNJ
+            NOT = { has_country_flag = terra_tnj_starting_reserves_set }
+        }
+        # 12,463,090 * 0.015 + 613,054 = approximately 800,000 free.
+        add_manpower = 613054
+        set_country_flag = terra_tnj_starting_reserves_set
+    }
+}
+
+terra_tnj_monthly_volunteers_effect = {
+    if = {
+        limit = { terra_tnj_can_send_volunteers = yes }
+        set_variable = { terra_tnj_last_transfer_day = num_days }
+        add_manpower = -2000
+        SGN = { add_manpower = 1000 }
+        MSN = { add_manpower = 1000 }
+    }
+}
