@@ -2,29 +2,14 @@
 capital = 172
 
 # The once-only supplement brings total recruits to about 800,000.
-# Ten full-strength home-guard divisions use 60,000, leaving about 740,000 free.
+# Ta-Netjer has no starting army; recruits remain available to its temple transfer.
 add_ideas = { volunteer_only TNJ_temple_volunteers }
 terra_tnj_initialize_reserves_effect = yes
 
 oob = "TNJ_1028"
 
-# The sanctuary maintains its existing guards; it does not raise a field army.
-country_lock_all_division_template = {
-    is_locked = yes
-    desc = TNJ_home_guard_limit
-}
-
-# Country rules override ideology and puppet defaults. Direct attacks on
-# Ta-Netjer still create a defensive war; allied calls do not draw it abroad.
-# Equipment aid and the existing monthly manpower transfer remain available.
-set_rule = {
-    desc = TNJ_home_guard_policy
-    can_be_called_to_war = no
-    can_decline_call_to_war = yes
-    can_send_volunteers = no
-    can_not_declare_war = yes
-    units_deployed_to_overlord = no
-}
+# No standing army; the same policy also migrates old saves once.
+terra_tnj_no_army_effect = yes
 
 set_technology = {
     infantry_weapons = 1

@@ -12,8 +12,11 @@ terra_story_gaul_actor = {
 
 terra_story_gaul_war_authorized = {
     terra_story_gaul_actor = yes
+    terra_story_gaul_war_date = yes
     has_completed_focus = LGL_wo4e_start
 }
+
+terra_story_gaul_war_date = { NOT = { date < 1029.1.1 } }
 
 terra_story_gaul_can_declare = {
     terra_story_gaul_war_authorized = yes

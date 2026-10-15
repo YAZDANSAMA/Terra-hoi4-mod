@@ -759,8 +759,9 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_ai = yes
+				AND = { is_ai = yes terra_story_gaul_war_date = yes }
 				AND = {
+					is_ai = no
 					custom_trigger_tooltip = {
 						tooltip = LTH_envoy_refuse_tt
 						has_country_flag = LTH_envoy_refuse

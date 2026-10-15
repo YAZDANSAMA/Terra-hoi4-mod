@@ -206,6 +206,7 @@ class Runtime:
     """The supported deterministic native primitives only; no engine emulation."""
     def __init__(self, mod: Path = MOD):
         self.mod = mod
+        self.date = "1028.1.1"
         self.countries: dict[str, Country] = {}
         self.country_ids: dict[str, int] = {}
         self.effects = self._definitions("scripted_effects")
@@ -348,6 +349,11 @@ class Runtime:
             return not self.check(node.children, scope)
         if key == "always":
             return value == "yes"
+        if key == "date":
+            def date_parts(text):
+                parts = tuple(int(n) for n in text.split("."))
+                return parts + (0,) * (4 - len(parts))
+            return self.compare(date_parts(self.date), node.op, date_parts(value))
         if key == "has_rule":
             return country.rules.get(value, self.ideology_rules.get(country.attrs["has_government"], {}).get(value, False))
         if key == "tag" or key == "original_tag":
@@ -517,6 +523,15 @@ class Runtime:
                 country.attrs["war_support"] += self.number(value, scope)
             elif key == "add_manpower":
                 country.attrs["has_manpower"] += self.number(value, scope)
+            elif key == "delete_unit":
+                # Only an unfiltered country-wide deletion is modeled. Native
+                # disband refunds and training queues require the actual engine.
+                if any(n.key != "disband" for n in node.children):
+                    raise ScriptError("Filtered unit deletion needs an explicit fixture")
+                country.attrs["num_divisions"] = 0
+                country.effects.append((key, node))
+            elif key == "country_lock_all_division_template":
+                country.effects.append((key, node))
             elif key == "send_equipment":
                 # Native transfer inputs are explicit fixture stockpiles. This
                 # checks script conservation, not HOI4's variants or delivery.

@@ -23,7 +23,7 @@ terra_story_gaul_start_war_effect = {
 }
 
 # Weekly watchdog: a route of sixteen checkpoints finishes in at most sixteen
-# weekly pulses when Gaul and Leithanien remain viable. Normal focus AI may
+# weekly pulses when viable, with the final checkpoint held until 1029. AI may
 # advance it sooner. This does not award unrelated military/economic focuses.
 terra_story_gaul_advance_focus_effect = {
     if = {
@@ -94,6 +94,23 @@ terra_story_gaul_advance_focus_effect = {
             complete_national_focus = LGL_wo4e_prelude
         }
         else_if = {
+            limit = { terra_story_gaul_war_date = yes NOT = { has_completed_focus = LGL_wo4e_start } }
+            complete_national_focus = LGL_wo4e_start
+        }
+        terra_story_gaul_start_war_effect = yes
+    }
+}
+
+# Prepared AI Gaul launches on the first daily pulse of 1029, rather than
+# waiting for its current optional focus or the next weekly planning pulse.
+terra_story_gaul_launch_1029_effect = {
+    if = {
+        limit = {
+            terra_story_gaul_actor = yes terra_story_gaul_war_date = yes
+            has_completed_focus = LGL_wo4e_prelude
+            NOT = { has_war_with = LTH }
+        }
+        if = {
             limit = { NOT = { has_completed_focus = LGL_wo4e_start } }
             complete_national_focus = LGL_wo4e_start
         }

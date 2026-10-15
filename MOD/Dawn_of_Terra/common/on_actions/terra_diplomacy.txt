@@ -11,6 +11,7 @@ on_actions = {
     }
     on_daily = {
         effect = {
+            terra_story_gaul_launch_1029_effect = yes
             if = {
                 limit = { terra_dip_participant = yes NOT = { has_country_flag = terra_dip_initialized } }
                 terra_dip_initialize_effect = yes
