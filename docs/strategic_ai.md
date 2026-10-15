@@ -4,11 +4,11 @@
 
 این نسخه داخل خود مود اجرا می‌شود؛ برای بازی به پایتون، API یا اتصال اینترنت نیاز ندارد. شخصیت کشورها، اعتماد و دلخوری، اعتبار بین‌المللی، خستگی جنگ و یاد شکست روی تصمیم‌های آن‌ها اثر می‌گذارد. این رفتار با اسکریپت‌های بومی HOI4 شبیه‌سازی شده است و گفت‌وگوی آزاد یا احساس واقعی یک مدل زبانی نیست.
 
-در بازی از **Decisions → Strategic Council** گزینهٔ **Review our national strategy** را بزن تا دلیل برنامه‌ریزی کشور خودت را ببینی. با **Assess [country]** می‌توانی ارزیابی کشور دیگر، میزان اطمینان اطلاعات نظامی و وضعیت هشدار دیپلماتیک را بخوانی. ارزیابی نظامی تضمین پیروزی نیست.
+بخش **Strategic Council** و گزارش‌های مربوط به آن از دیسیژن‌ها حذف شده‌اند تا فهرست شلوغ نشود. AI به‌صورت خودکار اجرا می‌شود و برای فعال‌شدن به دیسیژن نیاز ندارد.
 
 بخش دیپلماسی قبلی برای فرستادن فرستاده، بازسازی اعتماد، پیشنهاد همکاری و خویشتن‌داری باقی مانده است. بخش قراردادها پیشنهاد کمک تسلیحاتی و تضمین دفاعی دارد؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
 
-برای بررسی رفتار، یک کمپین تازه شروع کن و پس از اولین چرخهٔ هفتگی، گزارش راهبردی را دوباره باز کن. بارگذاری سیو موجود هم متغیرهای جدید را بدون پاک‌کردن حافظهٔ دیپلماتیک قبلی آماده می‌کند. فایل‌های داستان، شخصیت‌ها، فوکوس‌ها و روابط اولیهٔ سارگون پایهٔ سناریو می‌مانند.
+برای بررسی رفتار، یک کمپین تازه شروع کن و تغییر رفتار کشورها را پس از چرخه‌های هفتگی دنبال کن. بارگذاری سیو موجود هم متغیرهای جدید را بدون پاک‌کردن حافظهٔ دیپلماتیک قبلی آماده می‌کند. فایل‌های داستان، شخصیت‌ها، فوکوس‌ها و روابط اولیهٔ سارگون پایهٔ سناریو می‌مانند.
 
 آزمایش‌های خودکار اسکریپت جای اجرای واقعی بازی را نمی‌گیرند. نصب HOI4 در محیط توسعه موجود نیست؛ نتیجهٔ کمپین، کارایی، رفتار دقیق جبهه و سازگاری DLC باید داخل بازی بررسی شود.
 
@@ -16,7 +16,7 @@
 
 The implementation is a collection of reversible native strategies, scripted effects, decisions and authored events. HOI4 owns battle execution, pathfinding and equipment inventories. The shared-war correction now explicitly forms factions between eligible AI governments, while player membership remains voluntary. The development interpreter executes selected script primitives for regression scenarios; it is not an HOI4 emulator.
 
-The current suite passes 98 regression scenarios. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
+After removing the two obsolete report scenarios, the current suite contains 106 regression scenarios, including the Gaul focus-war coverage. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
 
 | Layer | Source files | Behavior |
 | --- | --- | --- |
@@ -27,7 +27,6 @@ The current suite passes 98 regression scenarios. The latest [defensive coalitio
 | Limited native pacts | `common/{scripted_triggers,ai_strategy}/terra_diplomacy_policy.txt` | Suppresses neutral startup pact spam; requires earned confidence and a concrete wartime use. |
 | War director | `common/scripted_triggers/terra_war_director.txt`, matching AI strategies | Recovery fronts, home defense, rifle/transport demand, conditional enemy-specific opportunities and allied cooperation. |
 | Concrete commitments | `common/scripted_effects/terra_commitments.txt`, matching triggers, decisions and events | Negotiated arms shipments and time-limited defensive guarantees with completion, lapse and breach handling. |
-| Explanations | `common/scripted_localisation/terra_strategic_report.txt`, report decisions and events | Authored qualitative reports selected from actual strategic state and the reader's assessment of the target. |
 
 The country registry includes 31 fixed tags and D01–D50. New landless countries wait until they become valid participants. Siesta and Seaborn retain their original-tag exclusions. Ta-Netjer retains its protected military-policy treatment; it receives passive state and subject obligations without being encouraged to start revisionist wars. Existing Sargon subjects, faction initialization and DLC safeguards remain intact.
 
@@ -91,6 +90,6 @@ These are scenarios to run in HOI4, not claims that in-game testing has already 
 | 11. Counteroffers and actual aid | Negotiate both aid quantities; final acceptance, insufficient stocks, grace period and delivery conserve real equipment and cannot deliver twice. |
 | 12. Defensive guarantees | Test both durations, a covered defensive war, refusal, voluntary release and annexation; only guarantees introduced by the contract are removed when it closes. |
 | 13. Fronts and logistics | Empty rifle or transport reserves while fighting several enemies; recovery priority wins over opportunistic attacks and production uses ordinary factories and technology. |
-| 14. Subject loyalty and reports | Exhaust a Sargonian subject and call it to war; obligations retain their intended preference. National and foreign reports show one valid reason/classification with the correct country names. |
+| 14. Subject loyalty | Exhaust a Sargonian subject and call it to war; obligations retain their intended preference. |
 
 Repeat campaigns with multiple countries and several game years before treating strategy weights as balanced. Frequency, CPU cost, fronts, guarantees and equipment-selection details require native engine observation.

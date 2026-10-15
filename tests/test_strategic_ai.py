@@ -481,7 +481,7 @@ class NewNativeStructureTests(unittest.TestCase):
     def test_strategic_system_never_mints_resources_or_forces_war_results(self):
         prohibited = {"add_equipment_to_stockpile", "add_manpower", "add_building_construction", "set_equipment_fraction",
                       "declare_war_on", "white_peace", "annex_country", "puppet", "create_faction"}
-        prefixes = ("terra_strategic_state", "terra_security", "terra_commitments", "terra_war_director", "terra_strategic_report")
+        prefixes = ("terra_strategic_state", "terra_security", "terra_commitments", "terra_war_director")
         found = []
         for folder in ("common/scripted_effects", "common/decisions", "events"):
             for path in sorted((MOD / folder).glob("*.txt")):
@@ -499,32 +499,6 @@ class NewNativeStructureTests(unittest.TestCase):
                 self.assertEqual("yes", profile.scalar("abort_when_not_enabled"), profile.key)
                 self.assertIsNotNone(profile.one("enable"), profile.key)
         self.assertGreater(count, 0)
-
-
-class StrategicReportTests(StrategicFixture):
-    def test_fractional_domestic_pressure_has_one_exclusive_report_band(self):
-        selector = next(node for node in read(MOD / "common/scripted_localisation/terra_strategic_report.txt") if node.scalar("name") == "GetTerraStrategicDomestic")
-        for pressure, expected in ((34, "low"), (34.25, "medium"), (64, "medium"), (64.25, "high")):
-            with self.subTest(pressure=pressure):
-                self.actor.variables["terra_state_domestic_pressure"] = pressure
-                enabled = [text.scalar("localization_key") for text in selector.fields("text") if self.runtime.check(text.one("trigger").children, self.scope)]
-                self.assertEqual(["terra_brief_domestic_" + expected], enabled)
-
-    def test_foreign_report_relay_keeps_reader_root_and_assessed_country_from(self):
-        self.actor.attrs["is_ai"] = False
-        self.runtime.call("terra_state_initialize_effect", self.scope)
-        self.runtime.call("terra_state_initialize_effect", self.runtime.scope("URS"))
-        decisions = next(node for node in read(MOD / "common/decisions/terra_strategic_report.txt") if node.key == "terra_strategic_council")
-        self.runtime.execute(decisions.one("terra_review_foreign_strategy").one("complete_effect").children, self.scope)
-        self.assertEqual([EventDelivery("URS", "SGN", "terra_brief.10", "0")], self.runtime.deliveries)
-        report = next(node for node in read(MOD / "events/terra_strategic_report_events.txt") if node.key == "country_event" and node.scalar("id") == "terra_brief.10")
-        self.runtime.deliveries.clear()
-        self.runtime.execute(report.one("immediate").children, self.runtime.scope("URS", "SGN"))
-        self.assertEqual([EventDelivery("SGN", "URS", "terra_brief.11", "0")], self.runtime.deliveries)
-        displayed = self.runtime.scope("SGN", "URS")
-        self.actor.flags.add("terra_security_intel_high_URS")
-        self.assertTrue(self.runtime.trigger("terra_brief_high_intel_from", displayed))
-        self.assertFalse(self.runtime.trigger("terra_brief_high_intel_from", self.runtime.scope("URS", "SGN")))
 
 
 if __name__ == "__main__":
