@@ -1,15 +1,5 @@
 ﻿l_english:
  # Negotiated finite obligations. Native conserved shipments; no spawned aid.
- terra_commitments:0 "Promises and Bargaining"
- terra_commitments_desc:0 "Negotiate concrete commitments instead of vague goodwill. An offer can be declined, accepted in principle, or countered. The provider must then confirm the final terms. Aid draws from actual infantry-equipment stocks at delivery; defensive commitments create real guarantees. Each government can hold one pending negotiation or active agreement. Promises have deadlines, and failure affects trust and reputation. Staying silent never accepts an offer."
- terra_contract_offer_arms:0 "Offer aid to [FROM.GetName]"
- terra_contract_offer_arms_desc:0 "Offer 300 actual infantry-equipment units, with a possible counteroffer of 150. The recipient answers first, then we explicitly confirm. A signed promise is due after 14 days. If stocks have fallen short, there is a seven-day grace period before a breach. No equipment is created or reserved at signing; delivery removes actual equipment from our stockpile. Negotiation costs political capital even when declined."
- terra_contract_offer_protection:0 "Offer protection to [FROM.GetName]"
- terra_contract_offer_protection_desc:0 "Offer a 180-day defensive guarantee; they may counter with 90 days. The final signature creates a real guarantee. When a defensive war is observed, we have 14 days to help fight a defensive aggressor. War entry remains our own choice through normal diplomacy; breaking the obligation damages trust and reputation. A pre-existing guarantee cannot be overwritten by this agreement."
- terra_contract_withdraw_promise:0 "Withdraw our promise to [FROM.GetName]"
- terra_contract_withdraw_promise_desc:0 "Abandon our active aid or defensive obligation. This is a breach, not a free cancellation: the beneficiary loses trust in us and our reputation suffers. Undelivered equipment stays in our stockpile. A guarantee created by this contract is withdrawn."
- terra_contract_release_provider:0 "Release [FROM.GetName] from their promise"
- terra_contract_release_provider_desc:0 "Release the other government from its commitment without treating it as a breach. No equipment is granted and no reputation reward is earned. Any guarantee created specifically by the released contract is removed."
  terra_contract_delivered:0 "Aid Delivered as Promised"
  terra_contract_breached:0 "A Concrete Promise Broken"
  terra_contract_defense_honored:0 "A Defensive Commitment Honoured"

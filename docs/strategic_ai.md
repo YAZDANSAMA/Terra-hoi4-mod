@@ -6,7 +6,7 @@
 
 بخش **Strategic Council** و گزارش‌های مربوط به آن از دیسیژن‌ها حذف شده‌اند تا فهرست شلوغ نشود. AI به‌صورت خودکار اجرا می‌شود و برای فعال‌شدن به دیسیژن نیاز ندارد.
 
-بخش دیپلماسی قبلی برای فرستادن فرستاده، بازسازی اعتماد، پیشنهاد همکاری و خویشتن‌داری باقی مانده است. بخش قراردادها پیشنهاد کمک تسلیحاتی و تضمین دفاعی دارد؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
+بخش دیپلماسی قبلی برای فرستادن فرستاده، بازسازی اعتماد، پیشنهاد همکاری و خویشتن‌داری باقی مانده است. دیسیژن‌های بخش **Promises and Bargaining** شامل **Offer aid** و **Offer protection** هم حذف شده‌اند. پیشنهادهای خودکار AI و قراردادهای موجود همچنان از طریق رویدادها پردازش می‌شوند؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
 
 برای بررسی رفتار، یک کمپین تازه شروع کن و تغییر رفتار کشورها را پس از چرخه‌های هفتگی دنبال کن. بارگذاری سیو موجود هم متغیرهای جدید را بدون پاک‌کردن حافظهٔ دیپلماتیک قبلی آماده می‌کند. فایل‌های داستان، شخصیت‌ها، فوکوس‌ها و روابط اولیهٔ سارگون پایهٔ سناریو می‌مانند.
 
@@ -26,7 +26,7 @@ After removing the home guard, enabling subject recruitment and dating Gaul's wa
 | Wartime faction formation | `common/{scripted_effects,scripted_triggers}/terra_coalitions.txt`, faction template and charter | Forms and extends named factions between independent AI countries already fighting a common enemy. |
 | Limited native pacts | `common/{scripted_triggers,ai_strategy}/terra_diplomacy_policy.txt` | Suppresses neutral startup pact spam; requires earned confidence and a concrete wartime use. |
 | War director | `common/scripted_triggers/terra_war_director.txt`, matching AI strategies | Recovery fronts, home defense, rifle/transport demand, conditional enemy-specific opportunities and allied cooperation. |
-| Concrete commitments | `common/scripted_effects/terra_commitments.txt`, matching triggers, decisions and events | Negotiated arms shipments and time-limited defensive guarantees with completion, lapse and breach handling. |
+| Concrete commitments | `common/scripted_effects/terra_commitments.txt`, matching triggers and events | Negotiated arms shipments and time-limited defensive guarantees with completion, lapse and breach handling. |
 
 The country registry includes 31 fixed tags and D01–D50. New landless countries wait until they become valid participants. Siesta and Seaborn retain their original-tag exclusions. Ta-Netjer retains its protected military-policy treatment; it receives passive strategic state and transfers temple recruits while maintaining no standing army. Existing Sargon subjects, faction initialization and DLC safeguards remain intact.
 
@@ -93,3 +93,14 @@ These are scenarios to run in HOI4, not claims that in-game testing has already 
 | 14. Subject loyalty | Exhaust a Sargonian subject and call it to war; obligations retain their intended preference. |
 
 Repeat campaigns with multiple countries and several game years before treating strategy weights as balanced. Frequency, CPU cost, fronts, guarantees and equipment-selection details require native engine observation.
+
+## Removed decision menus
+
+Strategic Council and Promises and Bargaining no longer define decision categories
+or manual actions. This removes the per-country Offer aid / Offer protection list,
+including its withdrawal/release actions. Existing automatic negotiation events,
+resource-conserving deliveries, deadlines and active contract cleanup remain.
+
+Comment-only files are retained at both old decision/category paths so extracting
+a new ZIP over an older installation replaces the obsolete UI definitions. No
+visible category is declared in those files. Restart HOI4 after updating the mod.
