@@ -1,0 +1,4 @@
+on_actions = {
+    # Only TNJ cleanup and its one-time rule migration run here. There are no state/army scans.
+    on_daily = { effect = { terra_tnj_no_army_effect = yes } }
+}

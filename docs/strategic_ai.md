@@ -16,7 +16,7 @@
 
 The implementation is a collection of reversible native strategies, scripted effects, decisions and authored events. HOI4 owns battle execution, pathfinding and equipment inventories. The shared-war correction now explicitly forms factions between eligible AI governments, while player membership remains voluntary. The development interpreter executes selected script primitives for regression scenarios; it is not an HOI4 emulator.
 
-After the home-guard and mandatory Gaul-war updates, the current suite contains 114 regression scenarios, including the Gaul focus-war coverage. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
+After removing the home guard, enabling subject recruitment and dating Gaul's war to 1029, the current suite contains 119 regression scenarios, including the Gaul focus-war coverage. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
 
 | Layer | Source files | Behavior |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ After the home-guard and mandatory Gaul-war updates, the current suite contains 
 | War director | `common/scripted_triggers/terra_war_director.txt`, matching AI strategies | Recovery fronts, home defense, rifle/transport demand, conditional enemy-specific opportunities and allied cooperation. |
 | Concrete commitments | `common/scripted_effects/terra_commitments.txt`, matching triggers, decisions and events | Negotiated arms shipments and time-limited defensive guarantees with completion, lapse and breach handling. |
 
-The country registry includes 31 fixed tags and D01–D50. New landless countries wait until they become valid participants. Siesta and Seaborn retain their original-tag exclusions. Ta-Netjer retains its protected military-policy treatment; it receives passive state and subject obligations without being encouraged to start revisionist wars. Existing Sargon subjects, faction initialization and DLC safeguards remain intact.
+The country registry includes 31 fixed tags and D01–D50. New landless countries wait until they become valid participants. Siesta and Seaborn retain their original-tag exclusions. Ta-Netjer retains its protected military-policy treatment; it receives passive strategic state and transfers temple recruits while maintaining no standing army. Existing Sargon subjects, faction initialization and DLC safeguards remain intact.
 
 ### Persistent state
 
@@ -61,7 +61,7 @@ Record callbacks use `terra_state_recordable`, which permits existing initialize
 
 Stable peace removes 4 fatigue and 1 defeat memory monthly; unstable peace removes 2 fatigue and retains defeat memory. A damaged reputation can recover toward 50 during quiet peace once recent aggression and breach records have expired. Reputation above 50 requires credited conduct, rather than passive time.
 
-Subject war-call and join-war preferences have an explicit high-weight native profile for each possible overlord, except for Ta-Netjer's dedicated sanctuary guard policy. Those profiles bypass sovereign fatigue and domestic-pressure gates. [Ta-Netjer's daily home-guard enforcement](tnj_home_guard_fix.md) returns its AI armies from foreign states to safe owned territory; [Gaul's mandatory story route](four_emperors_focus_war_fix.md) advances the required focuses and declares its authored war against Leithanien. Existing forces still obey native combat and supply constraints; the scripts do not invent an army to satisfy the obligation.
+Subject war-call and join-war preferences have an explicit high-weight native profile for each possible overlord, except for Ta-Netjer's no-army sanctuary policy. Those profiles bypass sovereign fatigue and domestic-pressure gates. [Ta-Netjer now has no army](tnj_no_army_and_subject_recruitment.md), while other subjects receive resource-gated infantry training requests; [Gaul's mandatory story route](four_emperors_focus_war_fix.md) prepares the required focuses during 1028 and launches its authored war against Leithanien at the opening of 1029. Existing forces still obey native combat and supply constraints; the scripts do not invent an army to satisfy the obligation.
 
 ### Timing, scope and conservation
 

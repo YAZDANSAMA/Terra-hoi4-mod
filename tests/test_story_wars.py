@@ -7,6 +7,7 @@ from tools.validate_diplomacy import EventDelivery, MOD, Runtime, read
 class GaulStoryWarTests(unittest.TestCase):
     def setUp(self):
         self.runtime = Runtime()
+        self.runtime.date = "1029.1.1"
         self.scope = self.runtime.scope('LGL')
         self.actor = self.runtime.country('LGL')
         self.runtime.scope('LTH')
@@ -50,6 +51,44 @@ class GaulStoryWarTests(unittest.TestCase):
 
     def test_actual_weekly_hook_repairs_an_already_completed_focus(self):
         self.weekly()
+        self.assertEqual(1, len(self.declarations()))
+
+    def daily(self):
+        hook = read(MOD / 'common/on_actions/terra_diplomacy.txt')[0].one('on_daily').one('effect')
+        self.runtime.execute(hook.children, self.scope)
+
+    def test_1028_preparation_stops_at_final_focus_even_after_envoy_refusal(self):
+        self.runtime.date = '1028.1.1'
+        self.actor.completed_focuses.clear()
+        self.actor.flags.add('LTH_envoy_refuse')
+        for _ in range(20): self.weekly()
+        self.assertIn('LGL_wo4e_prelude', self.actor.completed_focuses)
+        self.assertNotIn('LGL_wo4e_start', self.actor.completed_focuses)
+        self.assertFalse(self.runtime.check(self.focus.one('available').children, self.scope))
+        self.assertFalse(self.declarations())
+
+    def test_year_boundary_daily_hook_launches_on_january_first_1029(self):
+        self.actor.completed_focuses = {'LGL_wo4e_prelude'}
+        self.runtime.date = '1028.12.31.23'
+        self.daily()
+        self.assertFalse(self.declarations())
+        self.runtime.date = '1029.1.1'
+        self.daily()
+        self.assertIn('LGL_wo4e_start', self.actor.completed_focuses)
+        self.assertEqual(1, len(self.declarations()))
+        self.daily()
+        self.assertEqual(1, len(self.declarations()))
+
+    def test_old_completed_wargoal_does_not_trigger_scripted_war_before_1029(self):
+        self.runtime.date = '1028.12.31'
+        self.start()
+        self.assertFalse(self.declarations())
+        profile = next(n for n in read(MOD / 'common/ai_strategy/terra_story_wars.txt')
+                       if n.key == 'terra_gaul_wait_for_1029')
+        self.assertTrue(self.runtime.check(profile.one('enable').children, self.scope))
+        self.runtime.date = '1029.1.1'
+        self.assertFalse(self.runtime.check(profile.one('enable').children, self.scope))
+        self.start()
         self.assertEqual(1, len(self.declarations()))
 
     def test_existing_war_satisfies_story_and_does_not_restart_after_peace(self):

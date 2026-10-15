@@ -1,0 +1,26 @@
+# Remove TNJ's old guard and any later queued deployments. Native disbanding
+# refunds its real manpower/equipment; nothing is transferred to other countries.
+terra_tnj_no_army_effect = {
+    if = {
+        limit = {
+            tag = TNJ original_tag = TNJ exists = yes
+        }
+        if = {
+            limit = { num_divisions > 0 }
+            delete_unit = { disband = yes }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = terra_tnj_no_army_applied } }
+            country_lock_all_division_template = { is_locked = yes desc = TNJ_no_army_policy }
+            set_rule = {
+                desc = TNJ_no_army_policy
+                can_be_called_to_war = no
+                can_decline_call_to_war = yes
+                can_send_volunteers = no
+                can_not_declare_war = yes
+                units_deployed_to_overlord = no
+            }
+            set_country_flag = terra_tnj_no_army_applied
+        }
+    }
+}
