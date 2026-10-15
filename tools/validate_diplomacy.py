@@ -545,8 +545,8 @@ class Runtime:
                 self.deliveries.append(EventDelivery(scope.current, scope.root, node.scalar("id"), node.scalar("days", "0")))
                 country.effects.append((key, node))
             elif key == "declare_war_on":
-                # Model the direct bilateral relation only. Native legality is
-                # an explicit can_declare_war_on fixture, not an engine emulation.
+                # Model the direct bilateral relation only, not native war
+                # legality, faction participation, scheduling or combat.
                 target = self.country(self.resolve(node.scalar("target"), scope))
                 country.relation("has_war_with", target.tag)
                 country.relation("has_offensive_war_with", target.tag)
@@ -564,9 +564,39 @@ class Runtime:
                 self.execute(choices[self.random_choice_index].children, scope)
             elif key == "set_rule":
                 for rule in node.children:
+                    if rule.key == "desc":
+                        continue
                     if rule.value not in {"yes", "no"}:
                         raise ScriptError("Only boolean country-rule fixtures are supported")
                     country.rules[rule.key] = rule.value == "yes"
+                country.effects.append((key, node))
+            elif key == "complete_national_focus":
+                focus = value if isinstance(value, str) else node.scalar("focus")
+                if focus not in country.completed_focuses:
+                    country.completed_focuses.add(focus)
+                    if not hasattr(self, "focus_rewards"):
+                        self.focus_rewards = {}
+                        for path in (self.mod / "common/national_focus").glob("*.txt"):
+                            for root in read(path):
+                                if isinstance(root.value, str):
+                                    continue
+                                for definition in root.fields("focus"):
+                                    self.focus_rewards[definition.scalar("id")] = definition.one("completion_reward")
+                    reward = self.focus_rewards.get(focus)
+                    if reward is not None:
+                        self.execute(reward.children, scope)
+                country.effects.append((key, node))
+            elif key in {"remove_from_faction", "leave_faction"}:
+                member = self.country(self.resolve(value, scope)) if key == "remove_from_faction" else country
+                leader = member.attrs.get("faction_leader")
+                if leader in self.factions:
+                    roster = self.factions[leader]
+                    roster.discard(member.tag)
+                    for tag in roster:
+                        self.country(tag).relation("is_in_faction_with", member.tag, False)
+                        member.relation("is_in_faction_with", tag, False)
+                member.attrs.update({"is_in_faction": False, "is_faction_leader": False})
+                member.attrs.pop("faction_leader", None)
                 country.effects.append((key, node))
             elif key in {"create_faction", "create_faction_from_template"}:
                 # Model only roster facts needed to test guards and repeated enrollment.

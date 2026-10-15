@@ -4,7 +4,7 @@
 
 terra_tnj_home_guard = {
     allowed = { original_tag = TNJ }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } }
     abort_when_not_enabled = yes
 
     # All ten remain in the four home states, even during an allied war.

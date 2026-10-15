@@ -1,13 +1,102 @@
 terra_story_gaul_start_war_effect = {
     if = {
         limit = { terra_story_gaul_can_declare = yes }
-        # Only the completed "Silence the Kaiser" story branch may do this.
-        # The general diplomacy director continues to use its cautious war gates.
+        # This exact authored AI war deliberately overrides a peaceful envoy
+        # outcome, sandbox caution, expired goals and bilateral peace blockers.
+        if = {
+            limit = { is_in_faction_with = LTH }
+            if = {
+                limit = { is_faction_leader = yes }
+                remove_from_faction = LTH
+            }
+            else = { leave_faction = yes }
+        }
+        diplomatic_relation = { country = LTH relation = non_aggression_pact active = no }
+        set_truce = { target = LTH days = 0 }
         declare_war_on = { target = LTH type = annex_everything }
         if = {
             limit = { has_war_with = LTH }
             set_country_flag = terra_story_gaul_war_started
             log = "Terra story war: Gaul began the authorized Four Emperors war against Leithanien."
         }
+    }
+}
+
+# Weekly watchdog: a route of sixteen checkpoints finishes in at most sixteen
+# weekly pulses when Gaul and Leithanien remain viable. Normal focus AI may
+# advance it sooner. This does not award unrelated military/economic focuses.
+terra_story_gaul_advance_focus_effect = {
+    if = {
+        limit = { terra_story_gaul_actor = yes has_war_with = LTH }
+        # An existing war already satisfies the story. Never restart it after peace.
+        set_country_flag = terra_story_gaul_war_started
+    }
+    if = {
+        limit = { terra_story_gaul_actor = yes NOT = { has_war_with = LTH } }
+        if = {
+            limit = { NOT = { has_completed_focus = LGL_start } }
+            complete_national_focus = LGL_start
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_poli_start } }
+            complete_national_focus = LGL_poli_start
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_vic_start } }
+            complete_national_focus = LGL_vic_start
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_vic_1 } }
+            complete_national_focus = LGL_vic_1
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_vic_2 } }
+            complete_national_focus = LGL_vic_2
+        }
+        else_if = {
+            limit = { NOT = { OR = { has_completed_focus = LGL_vic_nonagg_aggro has_completed_focus = LGL_vic_nonagg_friend } } }
+            complete_national_focus = LGL_vic_nonagg_aggro
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_urs_start } }
+            complete_national_focus = LGL_urs_start
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_urs_1 } }
+            complete_national_focus = LGL_urs_1
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_urs_2 } }
+            complete_national_focus = LGL_urs_2
+        }
+        else_if = {
+            limit = { NOT = { OR = { has_completed_focus = LGL_urs_nonagg_aggro has_completed_focus = LGL_urs_nonagg_friend } } }
+            complete_national_focus = LGL_urs_nonagg_aggro
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_lei_start } }
+            complete_national_focus = LGL_lei_start
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_lei_1 } }
+            complete_national_focus = LGL_lei_1
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_lei_2 } }
+            complete_national_focus = LGL_lei_2
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_lei_3 } }
+            complete_national_focus = LGL_lei_3
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_wo4e_prelude } }
+            complete_national_focus = LGL_wo4e_prelude
+        }
+        else_if = {
+            limit = { NOT = { has_completed_focus = LGL_wo4e_start } }
+            complete_national_focus = LGL_wo4e_start
+        }
+        terra_story_gaul_start_war_effect = yes
     }
 }

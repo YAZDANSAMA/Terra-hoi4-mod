@@ -1,51 +1,36 @@
-# Four Emperors focus-war routing
+# Mandatory Gaul AI war route
 
-Gaul's `LGL_wo4e_start` ("Silence the Kaiser") only created an annexation
-wargoal against Leithanien. The new diplomacy director treats spontaneous wars
-as optional: they require grievances, warning maturity, reserves and a confident
-military advantage. Completing this story focus established none of those facts,
-so an AI Gaul could keep its wargoal indefinitely without declaring war.
+Gaul's "Silence the Kaiser" originally only granted a wargoal. The first fix
+waited for envoy refusal and ordinary native declaration legality. The requested
+behavior now makes this particular AI story war mandatory and accelerates the
+focus path; arbitrary wars by other countries still use normal diplomacy rules.
 
-The focus still awards the original wargoal. For AI Gaul it additionally queues
-a hidden event one day later, which checks the completed focus, Leithanien's
-refusal and native declaration legality before declaring this specific war.
-The weekly hook retries the same guarded effect, including for saves where the
-focus was already completed. A legal temporary blocker may delay that retry;
-the fix does not remove truces, existing nonaggression pacts or faction ties.
+An AI strategy plan prioritizes the sixteen required checkpoints, in either
+historical mode. A weekly watchdog completes at most one missing checkpoint with
+its native rewards. Existing friendly Victoria/Ursus branches satisfy their
+mutually exclusive checkpoints. With viable participants the route therefore
+reaches the war within sixteen weekly pulses (at most 112 days); ordinary focus
+progress can shorten this. An already-completed war focus is handled on the next
+weekly pulse, and its ordinary completion event still checks after one day.
 
-The route requires an independent, non-capitulated original Gaul and an existing,
-independent, non-capitulated Leithanien. It never controls a human Gaul. Submission,
-the alternative puppet focus, an already-started story war and the refusal event's
-back-down choice all block execution. Backing down now records a persistent flag
-and closes the war focus. Old saves cannot reconstruct a back-down choice made
-before this flag existed; a completed war focus plus a live legal wargoal is the
-old-save authorization. This exception is only for the authored Gaul/Leithanien
-branch; other countries' arbitrary wargoals retain ordinary AI decision rules.
+For AI Gaul the war focus no longer waits for envoy refusal or a back-down flag.
+The peaceful puppet focus is available only to a human Gaul. The exact scripted
+Gaul/Leithanien declaration clears their bilateral nonaggression pact and truce,
+and separates them if they share a faction: a Gaul-led faction removes only
+Leithanien, otherwise Gaul leaves. This is deliberately an authored declaration,
+not a discretionary AI preference conditioned on grievances, confidence, reserves,
+an unexpired goal or `can_declare_war_on`.
 
-No DLC is required. The change grants no equipment and changes no battlefield
-orders. Regression scenarios execute the actual trigger/effect/event AST and
-weekly hook, with native completed-focus, wargoal and legality facts supplied as
-explicit fixtures. They do not emulate HOI4's scheduler, full diplomatic legality
-or combat engine. In-game verification is still required: on an AI Gaul save with
-the refusal and completed focus, expect war after the one-day event, or within one
-weekly tick on an existing save, provided declaration remains legal. Confirm that
-human Gaul retains its wargoal without automatic declaration, and that submission
-and backing down remain peaceful.
+The callback requires existing, non-capitulated countries, original AI Gaul and
+an independent Gaul. It cannot resurrect annexed countries or guarantee a war
+against Gaul's own puppet in a save that already completed the old puppet branch.
+A successful declaration, or an already-existing war, records a persistent flag
+so peace does not cause a repeated declaration. Human Gaul retains ordinary focus
+and envoy choices and receives no forced focus completion or declaration. No DLC
+is required for the script mechanisms used here.
 
-Validation on 2026-10-15:
-
-- All 108 script regression scenarios passed, including ten focus-war scenarios
-  and the existing pact/coalition coverage.
-- The asset/structure validator passed with zero failures (753 scripts, 54
-  localisation files, map references, 999 images and five audio tracks).
-- Native CWTools validation preserved source hashes and retained its full report.
-  Full-mod validation did not pass: the cloud checkout lacks base-game catalogs
-  and already has unrelated diagnostics. The existing Gaul focus/event diagnostic
-  counts were identical to the prior baseline, whose file hashes were verified
-  against `origin/main`. The one additional native error is the new declaration's
-  reference to `annex_everything`: no base-game `common/wargoals` catalog is present
-  here. The unchanged focus already uses that same type. No fake wargoal definition
-  or schema relaxation was added to make that check pass. The new trigger, event
-  and weekly callback introduce no other native errors. Reports are retained in
-  `/tmp/terra-four-emperors-20261015-{report,summary,manifest,changed}.json` for this
-  environment; in-game verification remains outstanding.
+Verification: the regression suite executes the actual focus graph, rewards,
+weekly callback and event AST. Tests cover the full sixteen-pulse sequence,
+existing friendly branches, player control, peaceful AI outcomes, shared factions,
+missing participants and no repeated war after peace. These are explicit native
+script fixtures, not tests of HOI4's scheduler, diplomacy engine or combat.
