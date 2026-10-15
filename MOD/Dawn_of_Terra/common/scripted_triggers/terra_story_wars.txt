@@ -1,27 +1,21 @@
-# Authored wars have explicit story authorization; they are not spontaneous
-# expansion decisions. Never apply this exception to an arbitrary wargoal.
-terra_story_gaul_war_authorized = {
+# The user-selected mandatory AI story route is separate from sandbox wars.
+terra_story_gaul_actor = {
     tag = LGL
     original_tag = LGL
     is_ai = yes
     exists = yes
     has_capitulated = no
     is_subject = no
-    has_completed_focus = LGL_wo4e_start
-    has_country_flag = LTH_envoy_refuse
-    NOT = { has_completed_focus = LGL_wo4e_skip }
-    NOT = { has_country_flag = LTH_envoy_submit }
-    NOT = { has_country_flag = terra_story_gaul_backed_down }
     NOT = { has_country_flag = terra_story_gaul_war_started }
-    LTH = { exists = yes has_capitulated = no is_subject = no }
+    LTH = { exists = yes has_capitulated = no }
+}
+
+terra_story_gaul_war_authorized = {
+    terra_story_gaul_actor = yes
+    has_completed_focus = LGL_wo4e_start
 }
 
 terra_story_gaul_can_declare = {
     terra_story_gaul_war_authorized = yes
-    has_wargoal_against = LTH
     NOT = { has_war_with = LTH }
-    NOT = { is_in_faction_with = LTH }
-    NOT = { has_non_aggression_pact_with = LTH }
-    # Native legality still decides truces, diplomacy rules and other restrictions.
-    can_declare_war_on = LTH
 }

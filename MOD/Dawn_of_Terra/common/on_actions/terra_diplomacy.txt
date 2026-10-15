@@ -24,7 +24,7 @@ on_actions = {
         effect = {
             # Repair already-completed story focuses in existing saves, and
             # retry a legal declaration after a temporary diplomatic blocker.
-            terra_story_gaul_start_war_effect = yes
+            terra_story_gaul_advance_focus_effect = yes
             # Contracts must also cancel safely when their actor ceases to be eligible.
             terra_contract_weekly_effect = yes
             if = {

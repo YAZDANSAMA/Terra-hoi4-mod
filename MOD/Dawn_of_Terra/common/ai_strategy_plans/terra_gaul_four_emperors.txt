@@ -1,0 +1,43 @@
+# Applies in historical and non-historical campaigns; human Gaul is excluded.
+terra_gaul_four_emperors = {
+    allowed = { original_tag = LGL }
+    enable = { terra_story_gaul_actor = yes }
+    abort_when_not_enabled = yes
+    ai_national_focuses = {
+        LGL_start
+        LGL_poli_start
+        LGL_vic_start
+        LGL_vic_1
+        LGL_vic_2
+        LGL_vic_nonagg_aggro
+        LGL_urs_start
+        LGL_urs_1
+        LGL_urs_2
+        LGL_urs_nonagg_aggro
+        LGL_lei_start
+        LGL_lei_1
+        LGL_lei_2
+        LGL_lei_3
+        LGL_wo4e_prelude
+        LGL_wo4e_start
+    }
+    focus_factors = {
+        LGL_start = 1000
+        LGL_poli_start = 1000
+        LGL_vic_start = 1000
+        LGL_vic_1 = 1000
+        LGL_vic_2 = 1000
+        LGL_vic_nonagg_aggro = 1000
+        LGL_urs_start = 1000
+        LGL_urs_1 = 1000
+        LGL_urs_2 = 1000
+        LGL_urs_nonagg_aggro = 1000
+        LGL_lei_start = 1000
+        LGL_lei_1 = 1000
+        LGL_lei_2 = 1000
+        LGL_lei_3 = 1000
+        LGL_wo4e_prelude = 1000
+        LGL_wo4e_start = 1000
+        LGL_wo4e_skip = 0
+    }
+}
