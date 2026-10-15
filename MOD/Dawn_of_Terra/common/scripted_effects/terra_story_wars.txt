@@ -1,0 +1,13 @@
+terra_story_gaul_start_war_effect = {
+    if = {
+        limit = { terra_story_gaul_can_declare = yes }
+        # Only the completed "Silence the Kaiser" story branch may do this.
+        # The general diplomacy director continues to use its cautious war gates.
+        declare_war_on = { target = LTH type = annex_everything }
+        if = {
+            limit = { has_war_with = LTH }
+            set_country_flag = terra_story_gaul_war_started
+            log = "Terra story war: Gaul began the authorized Four Emperors war against Leithanien."
+        }
+    }
+}

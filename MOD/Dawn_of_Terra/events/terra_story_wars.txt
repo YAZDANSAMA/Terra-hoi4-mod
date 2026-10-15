@@ -1,0 +1,9 @@
+add_namespace = terra_story_wars
+
+# Delay one day so completion and its wargoal are committed before checking.
+country_event = {
+    id = terra_story_wars.1
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { terra_story_gaul_start_war_effect = yes }
+}

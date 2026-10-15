@@ -104,6 +104,7 @@ country_event = {
     # Back down
 	option = {
 		name = gaul.102.b
+        set_country_flag = terra_story_gaul_backed_down
         add_manpower = -5000
         add_stability = -0.4
         add_war_support = -0.4
