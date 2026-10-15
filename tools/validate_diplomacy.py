@@ -173,6 +173,7 @@ class Country:
     leaders: set[str] = field(default_factory=set)
     ruling_leader: str | None = None
     technologies: set[str] = field(default_factory=set)
+    completed_focuses: set[str] = field(default_factory=set)
     intelligence: dict[str, dict[str, float]] = field(default_factory=dict)
     rules: dict[str, bool] = field(default_factory=dict)
     effects: list[tuple[str, object]] = field(default_factory=list)
@@ -368,6 +369,8 @@ class Runtime:
             return value in country.variables
         if key == "has_tech":
             return value in country.technologies
+        if key == "has_completed_focus":
+            return value in country.completed_focuses
         if key == "has_dlc":
             return value in self.dlcs
         if key == "intel_level_over":
@@ -512,6 +515,8 @@ class Runtime:
                 country.attrs["stability"] += self.number(value, scope)
             elif key == "add_war_support":
                 country.attrs["war_support"] += self.number(value, scope)
+            elif key == "add_manpower":
+                country.attrs["has_manpower"] += self.number(value, scope)
             elif key == "send_equipment":
                 # Native transfer inputs are explicit fixture stockpiles. This
                 # checks script conservation, not HOI4's variants or delivery.
@@ -538,6 +543,18 @@ class Runtime:
                 # The expected documented ROOT/FROM handoff is captured; the
                 # actual scheduler and engine source scopes require playtesting.
                 self.deliveries.append(EventDelivery(scope.current, scope.root, node.scalar("id"), node.scalar("days", "0")))
+                country.effects.append((key, node))
+            elif key == "declare_war_on":
+                # Model the direct bilateral relation only. Native legality is
+                # an explicit can_declare_war_on fixture, not an engine emulation.
+                target = self.country(self.resolve(node.scalar("target"), scope))
+                country.relation("has_war_with", target.tag)
+                country.relation("has_offensive_war_with", target.tag)
+                target.relation("has_war_with", country.tag)
+                target.relation("has_defensive_war_with", country.tag)
+                country.attrs.update({"has_war": True, "has_offensive_war": True})
+                target.attrs.update({"has_war": True, "has_defensive_war": True})
+                country.relation("has_wargoal_against", target.tag, False)
                 country.effects.append((key, node))
             elif key == "random_list":
                 # Deterministic fixture branch, not a simulation of engine randomness.

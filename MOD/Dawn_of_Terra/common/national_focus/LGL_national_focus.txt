@@ -762,6 +762,7 @@ focus_tree = {
 				tooltip = LTH_envoy_refuse_tt
 				has_country_flag = LTH_envoy_refuse
 			}
+			NOT = { has_country_flag = terra_story_gaul_backed_down }
 		}
 
 		prerequisite = { focus = LGL_wo4e_prelude }
@@ -774,6 +775,10 @@ focus_tree = {
                 type = annex_everything 
                 target = LTH 
             } 
+			if = {
+				limit = { is_ai = yes }
+				country_event = { id = terra_story_wars.1 days = 1 }
+			}
 		}
 	}
 
