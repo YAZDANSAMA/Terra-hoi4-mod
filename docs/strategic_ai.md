@@ -6,7 +6,7 @@
 
 بخش **Strategic Council** و گزارش‌های مربوط به آن از دیسیژن‌ها حذف شده‌اند تا فهرست شلوغ نشود. AI به‌صورت خودکار اجرا می‌شود و برای فعال‌شدن به دیسیژن نیاز ندارد.
 
-بخش دیپلماسی قبلی برای فرستادن فرستاده، بازسازی اعتماد، پیشنهاد همکاری و خویشتن‌داری باقی مانده است. دیسیژن‌های بخش **Promises and Bargaining** شامل **Offer aid** و **Offer protection** هم حذف شده‌اند. پیشنهادهای خودکار AI و قراردادهای موجود همچنان از طریق رویدادها پردازش می‌شوند؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
+بخش **The Diplomatic Desk** هم همراه با گزینه‌های دستیِ فرستادن فرستاده، بازسازی اعتماد، همکاری، خویشتن‌داری و گزارش دیپلماتیک از دیسیژن‌ها حذف شده است. دیسیژن‌های بخش **Promises and Bargaining** شامل **Offer aid** و **Offer protection** هم حذف شده‌اند. پیشنهادهای خودکار AI و قراردادهای موجود همچنان از طریق رویدادها پردازش می‌شوند؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
 
 برای بررسی رفتار، یک کمپین تازه شروع کن و تغییر رفتار کشورها را پس از چرخه‌های هفتگی دنبال کن. بارگذاری سیو موجود هم متغیرهای جدید را بدون پاک‌کردن حافظهٔ دیپلماتیک قبلی آماده می‌کند. فایل‌های داستان، شخصیت‌ها، فوکوس‌ها و روابط اولیهٔ سارگون پایهٔ سناریو می‌مانند.
 
@@ -96,11 +96,11 @@ Repeat campaigns with multiple countries and several game years before treating 
 
 ## Removed decision menus
 
-Strategic Council and Promises and Bargaining no longer define decision categories
-or manual actions. This removes the per-country Offer aid / Offer protection list,
+Strategic Council, Promises and Bargaining, and The Diplomatic Desk no longer define decision categories
+or manual actions. This removes all per-country lists added by the AI director: Open a channel, Rebuild confidence, cooperation, restraint, briefings, Offer aid and Offer protection,
 including its withdrawal/release actions. Existing automatic negotiation events,
 resource-conserving deliveries, deadlines and active contract cleanup remain.
 
-Comment-only files are retained at both old decision/category paths so extracting
+Comment-only files are retained at all three old decision/category path pairs so extracting
 a new ZIP over an older installation replaces the obsolete UI definitions. No
 visible category is declared in those files. Restart HOI4 after updating the mod.
