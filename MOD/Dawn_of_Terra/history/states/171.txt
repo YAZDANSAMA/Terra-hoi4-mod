@@ -1,20 +1,26 @@
 state = {
 	id = 171
 	name = "STATE_171"
-	manpower = 9717804
+	manpower = 11106388
 	state_category = metropolis
 
 	resources = {
-		steel = 14
-		coal = 16
+		steel = 22
+		coal = 24
 		tungsten = 4
 		chromium = 10
+		aluminium = 2
 	}
 
 	history = {
 		victory_points = { 5140 80 }
 		victory_points = { 5139 15 }
 		victory_points = { 5141 5 }
+		victory_points = { 5271 5 }
+		victory_points = { 4767 3 }
+		victory_points = { 5142 3 }
+		victory_points = { 5143 3 }
+		victory_points = { 3565 3 }
 		owner = SGN
 		add_core_of = SGN
 		buildings = {
@@ -27,6 +33,8 @@ state = {
 
 	provinces = {
 		5139 5140 5141
+		1171 1173 2932 2933 2934 3429 3430 3565 3567 4765 4767 4771 5142 5143 5144 5199 5200 5202 5205 5206
+		5207 5270 5271 6408 7255 7256
 	}
 	local_supplies = 0.0
 }
