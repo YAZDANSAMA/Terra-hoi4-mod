@@ -2876,6 +2876,14 @@ terra_dip_goodwill_KTH = {
     ai_strategy = { type = diplo_action_desire id = KTH target = improve_relation value = 25 }
     ai_strategy = { type = diplo_action_acceptance id = KTH target = military_access value = 20 }
 }
+terra_dip_goodwill_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } check_variable = { terra_dip_score_PSE > 29 } check_variable = { terra_dip_grievance_PSE < 50 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = PSE value = 45 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = improve_relation value = 25 }
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = military_access value = 20 }
+}
 
 terra_dip_cooperation_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
@@ -2885,6 +2893,14 @@ terra_dip_cooperation_KTH = {
     ai_strategy = { type = diplo_action_acceptance id = KTH target = offer_join_faction value = 25 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_faction value = 20 }
 }
+terra_dip_cooperation_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } is_subject = no PSE = { is_subject = no } check_variable = { terra_dip_trust_PSE > 39 } check_variable = { terra_dip_score_PSE > 44 } check_variable = { terra_dip_grievance_PSE < 40 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = alliance id = PSE value = 35 }
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_faction value = 20 }
+}
 
 terra_dip_restraint_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
@@ -2892,6 +2908,13 @@ terra_dip_restraint_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_desire id = KTH target = non_aggression_pact value = 10 }
     ai_strategy = { type = diplo_action_acceptance id = KTH target = non_aggression_pact value = 10 }
+}
+terra_dip_restraint_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_can_offer_restraint = { TARGET = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = PSE target = non_aggression_pact value = 10 }
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = non_aggression_pact value = 10 }
 }
 
 terra_dip_hostility_KTH = {
@@ -2901,6 +2924,13 @@ terra_dip_hostility_KTH = {
     ai_strategy = { type = antagonize id = KTH value = 40 }
     ai_strategy = { type = diplo_action_acceptance id = KTH target = offer_join_faction value = -60 }
 }
+terra_dip_hostility_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } NOT = { is_in_faction_with = PSE } check_variable = { terra_dip_score_PSE < -34 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = antagonize id = PSE value = 40 }
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = offer_join_faction value = -60 }
+}
 
 terra_dip_contain_threat_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
@@ -2909,12 +2939,25 @@ terra_dip_contain_threat_KTH = {
     ai_strategy = { type = contain id = KTH value = 65 }
     ai_strategy = { type = declare_war id = KTH value = -100 }
 }
+terra_dip_contain_threat_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } terra_dip_military_policy_allowed = yes is_neighbor_of = PSE check_variable = { terra_dip_score_PSE < -24 } NOT = { strength_ratio = { tag = PSE ratio > 0.9 } } NOT = { is_in_faction_with = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = PSE value = 65 }
+    ai_strategy = { type = declare_war id = PSE value = -100 }
+}
 
 terra_dip_prepare_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KTH } terra_dip_can_prepare_against = { TARGET = KTH } }
     abort_when_not_enabled = yes
     ai_strategy = { type = prepare_for_war id = KTH value = 45 }
+}
+terra_dip_prepare_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } terra_dip_can_prepare_against = { TARGET = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = prepare_for_war id = PSE value = 45 }
 }
 
 terra_dip_seek_goal_KTH = {
@@ -2923,12 +2966,24 @@ terra_dip_seek_goal_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = conquer id = KTH value = 35 }
 }
+terra_dip_seek_goal_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } terra_dip_can_seek_war_against = { TARGET = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = conquer id = PSE value = 35 }
+}
 
 terra_dip_legal_war_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KTH } terra_dip_can_seek_war_against = { TARGET = KTH } has_wargoal_against = KTH can_declare_war_on = KTH }
     abort_when_not_enabled = yes
     ai_strategy = { type = declare_war id = KTH value = 80 }
+}
+terra_dip_legal_war_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } terra_dip_can_seek_war_against = { TARGET = PSE } has_wargoal_against = PSE can_declare_war_on = PSE }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = PSE value = 80 }
 }
 
 terra_dip_subject_duty_KTH = {
@@ -2938,6 +2993,13 @@ terra_dip_subject_duty_KTH = {
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 100 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_allies value = 100 }
 }
+terra_dip_subject_duty_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } is_subject_of = PSE PSE = { has_war = yes } NOT = { has_war_together_with = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = 100 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = 100 }
+}
 
 terra_dip_defend_partner_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
@@ -2945,6 +3007,13 @@ terra_dip_defend_partner_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 80 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_allies value = 60 }
+}
+terra_dip_defend_partner_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } OR = { is_in_faction_with = PSE is_subject_of = PSE PSE = { is_subject_of = ROOT } } PSE = { has_defensive_war = yes } NOT = { has_war_together_with = PSE } check_variable = { terra_dip_grievance_PSE < 70 } NOT = { terra_dip_exhausted = yes } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = 80 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = 60 }
 }
 
 terra_dip_offensive_partner_KTH = {
@@ -2954,6 +3023,13 @@ terra_dip_offensive_partner_KTH = {
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 25 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_allies value = 20 }
 }
+terra_dip_offensive_partner_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } OR = { is_in_faction_with = PSE is_subject_of = PSE PSE = { is_subject_of = ROOT } } NOT = { has_war_together_with = PSE } terra_dip_can_support_offensive_war = { TARGET = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = 25 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = 20 }
+}
 
 terra_dip_decline_costly_call_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
@@ -2962,12 +3038,25 @@ terra_dip_decline_costly_call_KTH = {
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = -80 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_allies value = -60 }
 }
+terra_dip_decline_costly_call_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } OR = { is_in_faction_with = PSE is_subject_of = PSE PSE = { is_subject_of = ROOT } } NOT = { is_subject_of = PSE } PSE = { has_war = yes } NOT = { has_war_together_with = PSE } OR = { terra_dip_exhausted = yes check_variable = { terra_dip_grievance_PSE > 69 } AND = { PSE = { has_offensive_war = yes } NOT = { terra_dip_can_support_offensive_war = { TARGET = PSE } } } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = -80 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = -60 }
+}
 
 terra_dip_call_partner_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
     enable = { is_ai = yes terra_dip_pair_valid = { TARGET = KTH } NOT = { has_war_with = KTH } OR = { is_in_faction_with = KTH is_subject_of = KTH KTH = { is_subject_of = ROOT } } has_war = yes NOT = { has_war_together_with = KTH } KTH = { NOT = { terra_dip_exhausted = yes } } OR = { has_defensive_war = yes check_variable = { terra_dip_trust_KTH > 39 } KTH = { is_subject_of = ROOT } } }
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_desire id = KTH target = call_allies value = 60 }
+}
+terra_dip_call_partner_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } OR = { is_in_faction_with = PSE is_subject_of = PSE PSE = { is_subject_of = ROOT } } has_war = yes NOT = { has_war_together_with = PSE } PSE = { NOT = { terra_dip_exhausted = yes } } OR = { has_defensive_war = yes check_variable = { terra_dip_trust_PSE > 39 } PSE = { is_subject_of = ROOT } } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = PSE target = call_allies value = 60 }
 }
 
 terra_dip_protect_partner_KTH = {
@@ -2976,6 +3065,13 @@ terra_dip_protect_partner_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = protect id = KTH value = 40 }
     ai_strategy = { type = diplo_action_desire id = KTH target = guarantee value = 25 }
+}
+terra_dip_protect_partner_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { is_ai = yes terra_dip_pair_valid = { TARGET = PSE } NOT = { has_war_with = PSE } terra_dip_military_policy_allowed = yes has_war = no NOT = { terra_dip_exhausted = yes } PSE = { is_subject = no } is_neighbor_of = PSE check_variable = { terra_dip_trust_PSE > 49 } check_variable = { terra_dip_score_PSE > 49 } NOT = { has_guaranteed = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = PSE value = 40 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = guarantee value = 25 }
 }
 
 terra_dip_goodwill_VNH = {

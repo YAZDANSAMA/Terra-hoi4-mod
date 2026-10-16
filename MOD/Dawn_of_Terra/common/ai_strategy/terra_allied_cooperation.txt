@@ -741,6 +741,15 @@ terra_accept_partner_war_KTH = {
     ai_strategy = { type = diplo_action_acceptance id = KTH target = call_allies value = 100 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_allies value = 100 }
 }
+terra_accept_partner_war_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = { NOT = { AND = { terra_dip_ready = yes PSE = { terra_dip_ready = yes } } } is_ai = yes has_capitulated = no NOT = { tag = PSE }
+        country_exists = PSE PSE = { has_capitulated = no }
+        OR = { is_subject_of = PSE PSE = { is_subject_of = ROOT } is_in_faction_with = PSE } PSE = { has_war = yes } NOT = { has_war_together_with = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = 100 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = 100 }
+}
 
 terra_call_partner_war_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
@@ -750,6 +759,14 @@ terra_call_partner_war_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = diplo_action_desire id = KTH target = call_allies value = 100 }
 }
+terra_call_partner_war_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = { NOT = { AND = { terra_dip_ready = yes PSE = { terra_dip_ready = yes } } } is_ai = yes has_capitulated = no NOT = { tag = PSE }
+        country_exists = PSE PSE = { has_capitulated = no }
+        OR = { is_subject_of = PSE PSE = { is_subject_of = ROOT } is_in_faction_with = PSE } has_war = yes NOT = { has_war_together_with = PSE } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = PSE target = call_allies value = 100 }
+}
 
 terra_help_partner_front_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = TNJ original_tag = SEA } } }
@@ -758,6 +775,14 @@ terra_help_partner_front_KTH = {
         has_war_together_with = KTH NOT = { has_war_with = KTH } num_divisions > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = force_defend_ally_borders id = KTH value = 100 }
+}
+terra_help_partner_front_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = TNJ original_tag = SEA } } }
+    enable = { is_ai = yes has_capitulated = no NOT = { tag = PSE }
+        country_exists = PSE PSE = { has_capitulated = no }
+        has_war_together_with = PSE NOT = { has_war_with = PSE } num_divisions > 0 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = PSE value = 100 }
 }
 
 terra_accept_partner_war_VNH = {

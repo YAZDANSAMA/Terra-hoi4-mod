@@ -1,0 +1,28 @@
+# Athura at the 1028 start; PSE is the internal tag, not the displayed name.
+# Farah (province 922) is the capital state's highest victory point.
+capital = 175
+
+# Recruit from the actual Athuran core population.
+add_ideas = { volunteer_only }
+
+oob = "PSE_1028"
+
+set_technology = {
+    infantry_weapons = 1
+    basic_train = 1
+}
+
+SGN = {
+    puppet = PSE
+}
+
+recruit_character = PSE_council_of_emirs
+
+set_politics = {
+    ruling_party = monarchism
+    elections_allowed = no
+}
+
+set_popularities = {
+    monarchism = 100
+}

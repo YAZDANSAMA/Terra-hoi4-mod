@@ -83,8 +83,11 @@ terra_dip_initialize_effect = {
         set_variable = { terra_dip_grievance_WSG = 0 }
         set_variable = { terra_dip_score_WSG = 0 }
         set_variable = { terra_dip_trust_KTH = 0 }
+        set_variable = { terra_dip_trust_PSE = 0 }
         set_variable = { terra_dip_grievance_KTH = 0 }
+        set_variable = { terra_dip_grievance_PSE = 0 }
         set_variable = { terra_dip_score_KTH = 0 }
+        set_variable = { terra_dip_score_PSE = 0 }
         set_variable = { terra_dip_trust_VNH = 0 }
         set_variable = { terra_dip_grievance_VNH = 0 }
         set_variable = { terra_dip_score_VNH = 0 }
@@ -388,6 +391,10 @@ terra_dip_initialize_effect = {
         if = {
             limit = { country_exists = KTH NOT = { tag = KTH } OR = { is_in_faction_with = KTH is_subject_of = KTH } }
             set_variable = { terra_dip_trust_KTH = 25 }
+        }
+        if = {
+            limit = { country_exists = PSE NOT = { tag = PSE } OR = { is_in_faction_with = PSE is_subject_of = PSE } }
+            set_variable = { terra_dip_trust_PSE = 25 }
         }
         if = {
             limit = { country_exists = VNH NOT = { tag = VNH } OR = { is_in_faction_with = VNH is_subject_of = VNH } }
@@ -720,6 +727,10 @@ terra_dip_change_relation_effect = {
         if = {
             limit = { $PARTNER$ = { tag = KTH } }
             terra_dip_change_pair_effect = { TARGET = KTH TRUST = $TRUST$ GRIEVANCE = $GRIEVANCE$ }
+        }
+        if = {
+            limit = { $PARTNER$ = { tag = PSE } }
+            terra_dip_change_pair_effect = { TARGET = PSE TRUST = $TRUST$ GRIEVANCE = $GRIEVANCE$ }
         }
         if = {
             limit = { $PARTNER$ = { tag = VNH } }
@@ -1066,6 +1077,7 @@ terra_dip_refresh_effect = {
     terra_dip_refresh_pair_effect = { TARGET = MSN }
     terra_dip_refresh_pair_effect = { TARGET = WSG }
     terra_dip_refresh_pair_effect = { TARGET = KTH }
+    terra_dip_refresh_pair_effect = { TARGET = PSE }
     terra_dip_refresh_pair_effect = { TARGET = VNH }
     terra_dip_refresh_pair_effect = { TARGET = SCW }
     terra_dip_refresh_pair_effect = { TARGET = D01 }
@@ -1170,6 +1182,7 @@ terra_dip_monthly_effect = {
     terra_dip_monthly_pair_effect = { TARGET = MSN }
     terra_dip_monthly_pair_effect = { TARGET = WSG }
     terra_dip_monthly_pair_effect = { TARGET = KTH }
+    terra_dip_monthly_pair_effect = { TARGET = PSE }
     terra_dip_monthly_pair_effect = { TARGET = VNH }
     terra_dip_monthly_pair_effect = { TARGET = SCW }
     terra_dip_monthly_pair_effect = { TARGET = D01 }
@@ -1575,6 +1588,19 @@ terra_dip_record_attack_effect = {
         else = {
             terra_dip_change_pair_effect = { TARGET = KTH TRUST = -50 GRIEVANCE = 45 }
             add_opinion_modifier = { target = KTH modifier = terra_dip_attacked days = 720 }
+        }
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = PSE } NOT = { tag = PSE } }
+        if = {
+            limit = { OR = { check_variable = { terra_dip_trust_PSE > 39 } has_country_flag = terra_dip_partner_PSE has_country_flag = terra_dip_pact_PSE } }
+            terra_dip_change_pair_effect = { TARGET = PSE TRUST = -80 GRIEVANCE = 80 }
+            add_opinion_modifier = { target = PSE modifier = terra_dip_betrayal days = 1080 }
+            $PARTNER$ = { set_country_flag = { flag = terra_dip_oathbreaker value = 1 days = 540 } terra_state_record_breach_effect = yes }
+        }
+        else = {
+            terra_dip_change_pair_effect = { TARGET = PSE TRUST = -50 GRIEVANCE = 45 }
+            add_opinion_modifier = { target = PSE modifier = terra_dip_attacked days = 720 }
         }
     }
     if = {
@@ -2421,6 +2447,12 @@ terra_dip_record_help_effect = {
         add_opinion_modifier = { target = KTH modifier = $MODIFIER$ days = $DAYS$ }
     }
     if = {
+        limit = { $PARTNER$ = { tag = PSE } NOT = { tag = PSE } NOT = { has_country_flag = terra_dip_$KIND$_PSE } }
+        terra_dip_change_pair_effect = { TARGET = PSE TRUST = $TRUST$ GRIEVANCE = -5 }
+        set_country_flag = { flag = terra_dip_$KIND$_PSE value = 1 days = $DAYS$ }
+        add_opinion_modifier = { target = PSE modifier = $MODIFIER$ days = $DAYS$ }
+    }
+    if = {
         limit = { $PARTNER$ = { tag = VNH } NOT = { tag = VNH } NOT = { has_country_flag = terra_dip_$KIND$_VNH } }
         terra_dip_change_pair_effect = { TARGET = VNH TRUST = $TRUST$ GRIEVANCE = -5 }
         set_country_flag = { flag = terra_dip_$KIND$_VNH value = 1 days = $DAYS$ }
@@ -2763,6 +2795,7 @@ terra_dip_departure_effect = {
     clr_country_flag = terra_dip_partner_MSN
     clr_country_flag = terra_dip_partner_WSG
     clr_country_flag = terra_dip_partner_KTH
+    clr_country_flag = terra_dip_partner_PSE
     clr_country_flag = terra_dip_partner_VNH
     clr_country_flag = terra_dip_partner_SCW
     clr_country_flag = terra_dip_partner_D01

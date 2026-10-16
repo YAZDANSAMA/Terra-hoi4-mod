@@ -1572,6 +1572,17 @@ terra_security_notice_period_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = declare_war id = KTH value = -1000 }
 }
+terra_security_notice_period_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = PSE }
+        has_country_flag = terra_security_warned_PSE
+        NOT = { has_country_flag = terra_security_warning_mature_PSE }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = PSE value = -1000 }
+}
 
 terra_security_contain_public_threat_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
@@ -1586,6 +1597,20 @@ terra_security_contain_public_threat_KTH = {
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = contain id = KTH value = 70 }
+}
+terra_security_contain_public_threat_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = PSE }
+        has_country_flag = terra_security_threat_PSE
+        PSE = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = PSE }
+        NOT = { has_non_aggression_pact_with = PSE }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = PSE value = 70 }
 }
 
 terra_security_defensive_coordination_KTH = {
@@ -1603,6 +1628,21 @@ terra_security_defensive_coordination_KTH = {
     ai_strategy = { type = diplo_action_acceptance id = KTH target = offer_join_faction value = 25 }
     ai_strategy = { type = diplo_action_desire id = KTH target = join_faction value = 20 }
 }
+terra_security_defensive_coordination_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_PSE
+        terra_security_can_coordinate = { PARTNER = PSE }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = PSE value = 40 }
+    ai_strategy = { type = alliance id = PSE value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = join_faction value = 20 }
+}
 
 terra_security_protect_common_target_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
@@ -1619,6 +1659,22 @@ terra_security_protect_common_target_KTH = {
     abort_when_not_enabled = yes
     ai_strategy = { type = protect id = KTH value = 45 }
     ai_strategy = { type = diplo_action_desire id = KTH target = guarantee value = 25 }
+}
+terra_security_protect_common_target_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_PSE
+        terra_security_can_coordinate = { PARTNER = PSE }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = PSE }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = PSE value = 45 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = guarantee value = 25 }
 }
 
 terra_security_notice_period_VNH = {

@@ -181,8 +181,11 @@ terra_security_weekly_effect = {
     terra_security_refresh_warning_pair_effect = { TARGET = WSG }
     terra_security_refresh_threat_pair_effect = { TARGET = WSG }
     terra_security_refresh_intel_pair_effect = { TARGET = KTH }
+    terra_security_refresh_intel_pair_effect = { TARGET = PSE }
     terra_security_refresh_warning_pair_effect = { TARGET = KTH }
+    terra_security_refresh_warning_pair_effect = { TARGET = PSE }
     terra_security_refresh_threat_pair_effect = { TARGET = KTH }
+    terra_security_refresh_threat_pair_effect = { TARGET = PSE }
     terra_security_refresh_intel_pair_effect = { TARGET = VNH }
     terra_security_refresh_warning_pair_effect = { TARGET = VNH }
     terra_security_refresh_threat_pair_effect = { TARGET = VNH }
@@ -366,6 +369,7 @@ terra_security_weekly_effect = {
     terra_security_refresh_coalition_pair_effect = { TARGET = MSN }
     terra_security_refresh_coalition_pair_effect = { TARGET = WSG }
     terra_security_refresh_coalition_pair_effect = { TARGET = KTH }
+    terra_security_refresh_coalition_pair_effect = { TARGET = PSE }
     terra_security_refresh_coalition_pair_effect = { TARGET = VNH }
     terra_security_refresh_coalition_pair_effect = { TARGET = SCW }
     terra_security_refresh_coalition_pair_effect = { TARGET = D01 }

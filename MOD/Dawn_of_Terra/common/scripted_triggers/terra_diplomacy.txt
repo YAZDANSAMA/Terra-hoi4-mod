@@ -35,6 +35,7 @@ terra_dip_participant = {
         tag = SEA
         tag = WSG
         tag = KTH
+        tag = PSE
         tag = VNH
         tag = SCW
         tag = D01
@@ -370,6 +371,14 @@ terra_dip_relation_from = {
             check_variable = { terra_dip_grievance_KTH < $GRIEF_BELOW$ }
             check_variable = { terra_dip_score_KTH > $SCORE_ABOVE$ }
             check_variable = { terra_dip_score_KTH < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = PSE }
+            check_variable = { terra_dip_trust_PSE > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_PSE > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_PSE < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_PSE > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_PSE < $SCORE_BELOW$ }
         }
         AND = {
             FROM = { tag = VNH }

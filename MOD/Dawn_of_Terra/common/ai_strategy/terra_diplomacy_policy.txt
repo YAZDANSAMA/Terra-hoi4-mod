@@ -323,6 +323,17 @@ terra_dip_reject_generic_pact_KTH = {
     ai_strategy = { type = diplo_action_desire id = KTH target = non_aggression_pact value = -1000 }
     ai_strategy = { type = diplo_action_acceptance id = KTH target = non_aggression_pact value = -1000 }
 }
+terra_dip_reject_generic_pact_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_dip_pair_valid = { TARGET = PSE }
+        NOT = { has_non_aggression_pact_with = PSE }
+        NOT = { terra_dip_can_offer_restraint = { TARGET = PSE } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = PSE target = non_aggression_pact value = -1000 }
+    ai_strategy = { type = diplo_action_acceptance id = PSE target = non_aggression_pact value = -1000 }
+}
 
 terra_dip_reject_generic_pact_VNH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }

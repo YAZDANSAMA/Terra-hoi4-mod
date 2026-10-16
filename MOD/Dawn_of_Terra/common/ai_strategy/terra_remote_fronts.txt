@@ -972,6 +972,21 @@ terra_subject_remote_support_KTH = {
     ai_strategy = { type = support id = KTH value = 100 }
     ai_strategy = { type = diplo_action_desire id = KTH target = send_expeditionary_force value = 75 }
 }
+terra_subject_remote_support_PSE = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        OR = { NOT = { terra_dip_ready = yes } terra_war_can_spare_allied_force = yes }
+        is_ai = yes has_capitulated = no num_divisions > 6
+        country_exists = PSE is_subject_of = PSE
+        PSE = { has_capitulated = no }
+        has_war_together_with = PSE NOT = { has_war_with = PSE }
+        surrender_progress < 0.10
+        NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = support id = PSE value = 100 }
+    ai_strategy = { type = diplo_action_desire id = PSE target = send_expeditionary_force value = 75 }
+}
 
 terra_subject_remote_support_KZD = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }

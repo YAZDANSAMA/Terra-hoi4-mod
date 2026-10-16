@@ -292,6 +292,13 @@ terra_security_has_shared_threat = {
             $PARTNER$ = { NOT = { tag = KTH } }
         }
         AND = {
+            has_country_flag = terra_security_threat_PSE
+            $PARTNER$ = { has_country_flag = terra_security_threat_PSE }
+            PSE = { terra_security_public_danger = yes }
+            NOT = { tag = PSE }
+            $PARTNER$ = { NOT = { tag = PSE } }
+        }
+        AND = {
             has_country_flag = terra_security_threat_VNH
             $PARTNER$ = { has_country_flag = terra_security_threat_VNH }
             VNH = { terra_security_public_danger = yes }

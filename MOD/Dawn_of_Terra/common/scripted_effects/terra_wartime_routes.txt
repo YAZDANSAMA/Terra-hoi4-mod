@@ -2401,6 +2401,25 @@ terra_refresh_wartime_routes_effect = {
     }
     if = {
         limit = {
+            is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = PSE } }
+            country_exists = PSE
+            PSE = { has_capitulated = no }
+            has_war_together_with = PSE
+            NOT = { has_war_with = PSE }
+            OR = {
+                is_subject_of = PSE
+                PSE = { is_subject_of = ROOT }
+                is_in_faction_with = PSE
+                AND = { is_subject = yes overlord = { has_subject = PSE } }
+            }
+            NOT = { has_military_access_to = PSE }
+        }
+        PSE = { give_military_access = ROOT }
+        set_country_flag = terra_wartime_access_from_PSE
+    }
+    if = {
+        limit = {
             has_country_flag = terra_wartime_access_from_KTH
             NOT = { is_ai = yes has_capitulated = no num_divisions > 0
             NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = KTH } }
@@ -2420,6 +2439,28 @@ terra_refresh_wartime_routes_effect = {
             diplomatic_relation = { country = KTH relation = military_access active = no }
         }
         clr_country_flag = terra_wartime_access_from_KTH
+    }
+    if = {
+        limit = {
+            has_country_flag = terra_wartime_access_from_PSE
+            NOT = { is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = PSE } }
+            country_exists = PSE
+            PSE = { has_capitulated = no }
+            has_war_together_with = PSE
+            NOT = { has_war_with = PSE }
+            OR = {
+                is_subject_of = PSE
+                PSE = { is_subject_of = ROOT }
+                is_in_faction_with = PSE
+                AND = { is_subject = yes overlord = { has_subject = PSE } }
+            } }
+        }
+        if = {
+            limit = { country_exists = PSE has_military_access_to = PSE }
+            diplomatic_relation = { country = PSE relation = military_access active = no }
+        }
+        clr_country_flag = terra_wartime_access_from_PSE
     }
     if = {
         limit = {

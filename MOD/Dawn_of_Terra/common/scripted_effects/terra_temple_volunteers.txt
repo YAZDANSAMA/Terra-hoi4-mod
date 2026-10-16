@@ -8,9 +8,9 @@ terra_sgn_initialize_reserves_effect = {
             tag = SGN
             NOT = { has_country_flag = terra_sgn_starting_reserves_set }
         }
-        # 53,522,146 * 0.025 + 1,201,947 - 540,000 in the army
+        # 37,687,232 * 0.025 + 1,459,820 - 402,000 in the army
         # leaves approximately 2,000,000 free recruits at the 1028 start.
-        add_manpower = 1201947
+        add_manpower = 1459820
         set_country_flag = terra_sgn_starting_reserves_set
     }
 }

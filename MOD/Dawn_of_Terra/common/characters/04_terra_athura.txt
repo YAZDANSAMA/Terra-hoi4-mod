@@ -1,0 +1,16 @@
+characters = {
+    PSE_council_of_emirs = {
+        name = PSE_council_of_emirs
+        gender = male
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/Terra/terra_generic_male.tga"
+            }
+        }
+        country_leader = {
+            ideology = monarchism_subtype
+            traits = { }
+            expire = "1965.1.1.1"
+        }
+    }
+}

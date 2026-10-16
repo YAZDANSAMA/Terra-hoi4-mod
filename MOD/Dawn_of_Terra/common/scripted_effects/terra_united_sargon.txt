@@ -23,6 +23,7 @@ terra_initialize_united_sargon_effect = {
                             AND = { country_exists = MSN MSN = { is_subject_of = SGN is_in_faction = no } }
                             AND = { country_exists = VVA VVA = { is_subject_of = SGN is_in_faction = no } }
                             AND = { country_exists = TNJ TNJ = { is_subject_of = SGN is_in_faction = no } }
+                            AND = { country_exists = PSE PSE = { is_subject_of = SGN is_in_faction = no } }
                         }
                     }
                     set_rule = { can_create_factions = yes }
@@ -60,6 +61,10 @@ terra_initialize_united_sargon_effect = {
                         add_to_faction = TNJ
                     }
                     if = {
+                        limit = { country_exists = PSE PSE = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = PSE
+                    }
+                    if = {
                         limit = {
                             OR = {
                                 NOT = { country_exists = MSN }
@@ -78,6 +83,12 @@ terra_initialize_united_sargon_effect = {
                                 TNJ = { NOT = { is_subject_of = SGN } }
                                 TNJ = { is_in_faction_with = SGN }
                                 TNJ = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                            OR = {
+                                NOT = { country_exists = PSE }
+                                PSE = { NOT = { is_subject_of = SGN } }
+                                PSE = { is_in_faction_with = SGN }
+                                PSE = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
                             }
                         }
                         set_country_flag = terra_us_setup_complete
@@ -103,6 +114,7 @@ terra_initialize_united_sargon_effect = {
                                 AND = { country_exists = MSN MSN = { is_subject_of = SGN } }
                                 AND = { country_exists = VVA VVA = { is_subject_of = SGN } }
                                 AND = { country_exists = TNJ TNJ = { is_subject_of = SGN } }
+                                AND = { country_exists = PSE PSE = { is_subject_of = SGN } }
                             }
                         }
                     }
