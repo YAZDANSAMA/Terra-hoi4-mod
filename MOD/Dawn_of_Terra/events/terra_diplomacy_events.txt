@@ -1632,7 +1632,6 @@ country_event = {
                 terra_dip_ready = yes
                 terra_dip_sovereign = yes
                 NOT = { has_country_flag = terra_dip_invitation_cooldown }
-                NOT = { has_country_flag = terra_dip_envoy_busy }
                 NOT = { has_war_with = ROOT }
                 NOT = { tag = ROOT }
                 has_opinion = { target = ROOT value > -1 }
@@ -1684,7 +1683,6 @@ country_event = {
                 FROM = {
                     is_ai = no
                     NOT = { has_country_flag = terra_dip_invitation_cooldown }
-                    NOT = { has_country_flag = terra_dip_envoy_busy }
                 }
                 OR = {
                     terra_dip_welcomes_from = yes

@@ -24,20 +24,25 @@ class StrategicFixture(unittest.TestCase):
 
 
 class WarLogisticsTests(StrategicFixture):
-    def test_supply_emergency_is_gated_by_unlocked_logistics_and_army_size(self):
+    def test_transport_reserve_shortage_does_not_become_global_combat_emergency(self):
         self.actor.stockpiles.update({"infantry_equipment": 4000, "train_equipment": 0, "motorized_equipment": 0})
         self.actor.attrs.update({"has_manpower": 50000, "num_divisions": 25})
         self.assertFalse(self.runtime.trigger("terra_war_supply_emergency", self.scope))
         self.actor.technologies.add("basic_train")
-        self.assertTrue(self.runtime.trigger("terra_war_supply_emergency", self.scope))
+        self.assertTrue(self.runtime.trigger("terra_war_transport_reserve_low", self.scope))
+        self.assertFalse(self.runtime.trigger("terra_war_recovery_required", self.scope))
         self.actor.stockpiles["train_equipment"] = 5
+        self.assertFalse(self.runtime.trigger("terra_war_transport_reserve_low", self.scope))
         self.assertFalse(self.runtime.trigger("terra_war_supply_emergency", self.scope))
         self.actor.technologies.add("motorised_infantry")
-        self.assertTrue(self.runtime.trigger("terra_war_supply_emergency", self.scope))
+        self.assertTrue(self.runtime.trigger("terra_war_transport_reserve_low", self.scope))
+        self.assertFalse(self.runtime.trigger("terra_war_recovery_required", self.scope))
         self.actor.attrs["num_divisions"] = 24
+        self.assertFalse(self.runtime.trigger("terra_war_transport_reserve_low", self.scope))
         self.assertFalse(self.runtime.trigger("terra_war_supply_emergency", self.scope))
         self.actor.attrs["num_divisions"] = 25
         self.actor.stockpiles["motorized_equipment"] = 100
+        self.assertFalse(self.runtime.trigger("terra_war_transport_reserve_low", self.scope))
         self.assertFalse(self.runtime.trigger("terra_war_supply_emergency", self.scope))
         self.actor.stockpiles["infantry_equipment"] = 399
         self.assertTrue(self.runtime.trigger("terra_war_supply_emergency", self.scope))

@@ -47,6 +47,7 @@ terra_state_subject_loyalty_AGI = {
 terra_state_subject_front_support_AGI = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = AGI
         country_exists = AGI has_war_together_with = AGI num_divisions > 0
         NOT = { has_war_with = AGI }
@@ -70,6 +71,7 @@ terra_state_subject_loyalty_BLV = {
 terra_state_subject_front_support_BLV = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = BLV
         country_exists = BLV has_war_together_with = BLV num_divisions > 0
         NOT = { has_war_with = BLV }
@@ -93,6 +95,7 @@ terra_state_subject_loyalty_CLM = {
 terra_state_subject_front_support_CLM = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = CLM
         country_exists = CLM has_war_together_with = CLM num_divisions > 0
         NOT = { has_war_with = CLM }
@@ -116,6 +119,7 @@ terra_state_subject_loyalty_HGS = {
 terra_state_subject_front_support_HGS = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = HGS
         country_exists = HGS has_war_together_with = HGS num_divisions > 0
         NOT = { has_war_with = HGS }
@@ -139,6 +143,7 @@ terra_state_subject_loyalty_HGN = {
 terra_state_subject_front_support_HGN = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = HGN
         country_exists = HGN has_war_together_with = HGN num_divisions > 0
         NOT = { has_war_with = HGN }
@@ -162,6 +167,7 @@ terra_state_subject_loyalty_HSS = {
 terra_state_subject_front_support_HSS = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = HSS
         country_exists = HSS has_war_together_with = HSS num_divisions > 0
         NOT = { has_war_with = HSS }
@@ -185,6 +191,7 @@ terra_state_subject_loyalty_IBR = {
 terra_state_subject_front_support_IBR = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = IBR
         country_exists = IBR has_war_together_with = IBR num_divisions > 0
         NOT = { has_war_with = IBR }
@@ -208,6 +215,7 @@ terra_state_subject_loyalty_KJG = {
 terra_state_subject_front_support_KJG = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = KJG
         country_exists = KJG has_war_together_with = KJG num_divisions > 0
         NOT = { has_war_with = KJG }
@@ -231,6 +239,7 @@ terra_state_subject_loyalty_KZM = {
 terra_state_subject_front_support_KZM = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = KZM
         country_exists = KZM has_war_together_with = KZM num_divisions > 0
         NOT = { has_war_with = KZM }
@@ -254,6 +263,7 @@ terra_state_subject_loyalty_KZD = {
 terra_state_subject_front_support_KZD = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = KZD
         country_exists = KZD has_war_together_with = KZD num_divisions > 0
         NOT = { has_war_with = KZD }
@@ -277,6 +287,7 @@ terra_state_subject_loyalty_LTR = {
 terra_state_subject_front_support_LTR = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = LTR
         country_exists = LTR has_war_together_with = LTR num_divisions > 0
         NOT = { has_war_with = LTR }
@@ -300,6 +311,7 @@ terra_state_subject_loyalty_LTH = {
 terra_state_subject_front_support_LTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = LTH
         country_exists = LTH has_war_together_with = LTH num_divisions > 0
         NOT = { has_war_with = LTH }
@@ -323,6 +335,7 @@ terra_state_subject_loyalty_MNS = {
 terra_state_subject_front_support_MNS = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = MNS
         country_exists = MNS has_war_together_with = MNS num_divisions > 0
         NOT = { has_war_with = MNS }
@@ -346,6 +359,7 @@ terra_state_subject_loyalty_RMB = {
 terra_state_subject_front_support_RMB = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = RMB
         country_exists = RMB has_war_together_with = RMB num_divisions > 0
         NOT = { has_war_with = RMB }
@@ -369,6 +383,7 @@ terra_state_subject_loyalty_SMN = {
 terra_state_subject_front_support_SMN = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = SMN
         country_exists = SMN has_war_together_with = SMN num_divisions > 0
         NOT = { has_war_with = SMN }
@@ -392,6 +407,7 @@ terra_state_subject_loyalty_SGN = {
 terra_state_subject_front_support_SGN = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = SGN
         country_exists = SGN has_war_together_with = SGN num_divisions > 0
         NOT = { has_war_with = SGN }
@@ -415,6 +431,7 @@ terra_state_subject_loyalty_SRC = {
 terra_state_subject_front_support_SRC = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = SRC
         country_exists = SRC has_war_together_with = SRC num_divisions > 0
         NOT = { has_war_with = SRC }
@@ -438,6 +455,7 @@ terra_state_subject_loyalty_URS = {
 terra_state_subject_front_support_URS = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = URS
         country_exists = URS has_war_together_with = URS num_divisions > 0
         NOT = { has_war_with = URS }
@@ -461,6 +479,7 @@ terra_state_subject_loyalty_VCT = {
 terra_state_subject_front_support_VCT = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = VCT
         country_exists = VCT has_war_together_with = VCT num_divisions > 0
         NOT = { has_war_with = VCT }
@@ -484,6 +503,7 @@ terra_state_subject_loyalty_YAN = {
 terra_state_subject_front_support_YAN = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = YAN
         country_exists = YAN has_war_together_with = YAN num_divisions > 0
         NOT = { has_war_with = YAN }
@@ -507,6 +527,7 @@ terra_state_subject_loyalty_TRR = {
 terra_state_subject_front_support_TRR = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = TRR
         country_exists = TRR has_war_together_with = TRR num_divisions > 0
         NOT = { has_war_with = TRR }
@@ -530,6 +551,7 @@ terra_state_subject_loyalty_LGL = {
 terra_state_subject_front_support_LGL = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = LGL
         country_exists = LGL has_war_together_with = LGL num_divisions > 0
         NOT = { has_war_with = LGL }
@@ -553,6 +575,7 @@ terra_state_subject_loyalty_VVA = {
 terra_state_subject_front_support_VVA = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = VVA
         country_exists = VVA has_war_together_with = VVA num_divisions > 0
         NOT = { has_war_with = VVA }
@@ -576,6 +599,7 @@ terra_state_subject_loyalty_TNJ = {
 terra_state_subject_front_support_TNJ = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = TNJ
         country_exists = TNJ has_war_together_with = TNJ num_divisions > 0
         NOT = { has_war_with = TNJ }
@@ -599,6 +623,7 @@ terra_state_subject_loyalty_MSN = {
 terra_state_subject_front_support_MSN = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = MSN
         country_exists = MSN has_war_together_with = MSN num_divisions > 0
         NOT = { has_war_with = MSN }
@@ -622,6 +647,7 @@ terra_state_subject_loyalty_WSG = {
 terra_state_subject_front_support_WSG = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = WSG
         country_exists = WSG has_war_together_with = WSG num_divisions > 0
         NOT = { has_war_with = WSG }
@@ -656,6 +682,7 @@ terra_state_subject_loyalty_PSE = {
 terra_state_subject_front_support_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = KTH
         country_exists = KTH has_war_together_with = KTH num_divisions > 0
         NOT = { has_war_with = KTH }
@@ -666,6 +693,7 @@ terra_state_subject_front_support_KTH = {
 terra_state_subject_front_support_PSE = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = PSE
         country_exists = PSE has_war_together_with = PSE num_divisions > 0
         NOT = { has_war_with = PSE }
@@ -689,6 +717,7 @@ terra_state_subject_loyalty_VNH = {
 terra_state_subject_front_support_VNH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = VNH
         country_exists = VNH has_war_together_with = VNH num_divisions > 0
         NOT = { has_war_with = VNH }
@@ -712,6 +741,7 @@ terra_state_subject_loyalty_SCW = {
 terra_state_subject_front_support_SCW = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = SCW
         country_exists = SCW has_war_together_with = SCW num_divisions > 0
         NOT = { has_war_with = SCW }
@@ -735,6 +765,7 @@ terra_state_subject_loyalty_D01 = {
 terra_state_subject_front_support_D01 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D01
         country_exists = D01 has_war_together_with = D01 num_divisions > 0
         NOT = { has_war_with = D01 }
@@ -758,6 +789,7 @@ terra_state_subject_loyalty_D02 = {
 terra_state_subject_front_support_D02 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D02
         country_exists = D02 has_war_together_with = D02 num_divisions > 0
         NOT = { has_war_with = D02 }
@@ -781,6 +813,7 @@ terra_state_subject_loyalty_D03 = {
 terra_state_subject_front_support_D03 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D03
         country_exists = D03 has_war_together_with = D03 num_divisions > 0
         NOT = { has_war_with = D03 }
@@ -804,6 +837,7 @@ terra_state_subject_loyalty_D04 = {
 terra_state_subject_front_support_D04 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D04
         country_exists = D04 has_war_together_with = D04 num_divisions > 0
         NOT = { has_war_with = D04 }
@@ -827,6 +861,7 @@ terra_state_subject_loyalty_D05 = {
 terra_state_subject_front_support_D05 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D05
         country_exists = D05 has_war_together_with = D05 num_divisions > 0
         NOT = { has_war_with = D05 }
@@ -850,6 +885,7 @@ terra_state_subject_loyalty_D06 = {
 terra_state_subject_front_support_D06 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D06
         country_exists = D06 has_war_together_with = D06 num_divisions > 0
         NOT = { has_war_with = D06 }
@@ -873,6 +909,7 @@ terra_state_subject_loyalty_D07 = {
 terra_state_subject_front_support_D07 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D07
         country_exists = D07 has_war_together_with = D07 num_divisions > 0
         NOT = { has_war_with = D07 }
@@ -896,6 +933,7 @@ terra_state_subject_loyalty_D08 = {
 terra_state_subject_front_support_D08 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D08
         country_exists = D08 has_war_together_with = D08 num_divisions > 0
         NOT = { has_war_with = D08 }
@@ -919,6 +957,7 @@ terra_state_subject_loyalty_D09 = {
 terra_state_subject_front_support_D09 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D09
         country_exists = D09 has_war_together_with = D09 num_divisions > 0
         NOT = { has_war_with = D09 }
@@ -942,6 +981,7 @@ terra_state_subject_loyalty_D10 = {
 terra_state_subject_front_support_D10 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D10
         country_exists = D10 has_war_together_with = D10 num_divisions > 0
         NOT = { has_war_with = D10 }
@@ -965,6 +1005,7 @@ terra_state_subject_loyalty_D11 = {
 terra_state_subject_front_support_D11 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D11
         country_exists = D11 has_war_together_with = D11 num_divisions > 0
         NOT = { has_war_with = D11 }
@@ -988,6 +1029,7 @@ terra_state_subject_loyalty_D12 = {
 terra_state_subject_front_support_D12 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D12
         country_exists = D12 has_war_together_with = D12 num_divisions > 0
         NOT = { has_war_with = D12 }
@@ -1011,6 +1053,7 @@ terra_state_subject_loyalty_D13 = {
 terra_state_subject_front_support_D13 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D13
         country_exists = D13 has_war_together_with = D13 num_divisions > 0
         NOT = { has_war_with = D13 }
@@ -1034,6 +1077,7 @@ terra_state_subject_loyalty_D14 = {
 terra_state_subject_front_support_D14 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D14
         country_exists = D14 has_war_together_with = D14 num_divisions > 0
         NOT = { has_war_with = D14 }
@@ -1057,6 +1101,7 @@ terra_state_subject_loyalty_D15 = {
 terra_state_subject_front_support_D15 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D15
         country_exists = D15 has_war_together_with = D15 num_divisions > 0
         NOT = { has_war_with = D15 }
@@ -1080,6 +1125,7 @@ terra_state_subject_loyalty_D16 = {
 terra_state_subject_front_support_D16 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D16
         country_exists = D16 has_war_together_with = D16 num_divisions > 0
         NOT = { has_war_with = D16 }
@@ -1103,6 +1149,7 @@ terra_state_subject_loyalty_D17 = {
 terra_state_subject_front_support_D17 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D17
         country_exists = D17 has_war_together_with = D17 num_divisions > 0
         NOT = { has_war_with = D17 }
@@ -1126,6 +1173,7 @@ terra_state_subject_loyalty_D18 = {
 terra_state_subject_front_support_D18 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D18
         country_exists = D18 has_war_together_with = D18 num_divisions > 0
         NOT = { has_war_with = D18 }
@@ -1149,6 +1197,7 @@ terra_state_subject_loyalty_D19 = {
 terra_state_subject_front_support_D19 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D19
         country_exists = D19 has_war_together_with = D19 num_divisions > 0
         NOT = { has_war_with = D19 }
@@ -1172,6 +1221,7 @@ terra_state_subject_loyalty_D20 = {
 terra_state_subject_front_support_D20 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D20
         country_exists = D20 has_war_together_with = D20 num_divisions > 0
         NOT = { has_war_with = D20 }
@@ -1195,6 +1245,7 @@ terra_state_subject_loyalty_D21 = {
 terra_state_subject_front_support_D21 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D21
         country_exists = D21 has_war_together_with = D21 num_divisions > 0
         NOT = { has_war_with = D21 }
@@ -1218,6 +1269,7 @@ terra_state_subject_loyalty_D22 = {
 terra_state_subject_front_support_D22 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D22
         country_exists = D22 has_war_together_with = D22 num_divisions > 0
         NOT = { has_war_with = D22 }
@@ -1241,6 +1293,7 @@ terra_state_subject_loyalty_D23 = {
 terra_state_subject_front_support_D23 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D23
         country_exists = D23 has_war_together_with = D23 num_divisions > 0
         NOT = { has_war_with = D23 }
@@ -1264,6 +1317,7 @@ terra_state_subject_loyalty_D24 = {
 terra_state_subject_front_support_D24 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D24
         country_exists = D24 has_war_together_with = D24 num_divisions > 0
         NOT = { has_war_with = D24 }
@@ -1287,6 +1341,7 @@ terra_state_subject_loyalty_D25 = {
 terra_state_subject_front_support_D25 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D25
         country_exists = D25 has_war_together_with = D25 num_divisions > 0
         NOT = { has_war_with = D25 }
@@ -1310,6 +1365,7 @@ terra_state_subject_loyalty_D26 = {
 terra_state_subject_front_support_D26 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D26
         country_exists = D26 has_war_together_with = D26 num_divisions > 0
         NOT = { has_war_with = D26 }
@@ -1333,6 +1389,7 @@ terra_state_subject_loyalty_D27 = {
 terra_state_subject_front_support_D27 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D27
         country_exists = D27 has_war_together_with = D27 num_divisions > 0
         NOT = { has_war_with = D27 }
@@ -1356,6 +1413,7 @@ terra_state_subject_loyalty_D28 = {
 terra_state_subject_front_support_D28 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D28
         country_exists = D28 has_war_together_with = D28 num_divisions > 0
         NOT = { has_war_with = D28 }
@@ -1379,6 +1437,7 @@ terra_state_subject_loyalty_D29 = {
 terra_state_subject_front_support_D29 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D29
         country_exists = D29 has_war_together_with = D29 num_divisions > 0
         NOT = { has_war_with = D29 }
@@ -1402,6 +1461,7 @@ terra_state_subject_loyalty_D30 = {
 terra_state_subject_front_support_D30 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D30
         country_exists = D30 has_war_together_with = D30 num_divisions > 0
         NOT = { has_war_with = D30 }
@@ -1425,6 +1485,7 @@ terra_state_subject_loyalty_D31 = {
 terra_state_subject_front_support_D31 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D31
         country_exists = D31 has_war_together_with = D31 num_divisions > 0
         NOT = { has_war_with = D31 }
@@ -1448,6 +1509,7 @@ terra_state_subject_loyalty_D32 = {
 terra_state_subject_front_support_D32 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D32
         country_exists = D32 has_war_together_with = D32 num_divisions > 0
         NOT = { has_war_with = D32 }
@@ -1471,6 +1533,7 @@ terra_state_subject_loyalty_D33 = {
 terra_state_subject_front_support_D33 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D33
         country_exists = D33 has_war_together_with = D33 num_divisions > 0
         NOT = { has_war_with = D33 }
@@ -1494,6 +1557,7 @@ terra_state_subject_loyalty_D34 = {
 terra_state_subject_front_support_D34 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D34
         country_exists = D34 has_war_together_with = D34 num_divisions > 0
         NOT = { has_war_with = D34 }
@@ -1517,6 +1581,7 @@ terra_state_subject_loyalty_D35 = {
 terra_state_subject_front_support_D35 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D35
         country_exists = D35 has_war_together_with = D35 num_divisions > 0
         NOT = { has_war_with = D35 }
@@ -1540,6 +1605,7 @@ terra_state_subject_loyalty_D36 = {
 terra_state_subject_front_support_D36 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D36
         country_exists = D36 has_war_together_with = D36 num_divisions > 0
         NOT = { has_war_with = D36 }
@@ -1563,6 +1629,7 @@ terra_state_subject_loyalty_D37 = {
 terra_state_subject_front_support_D37 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D37
         country_exists = D37 has_war_together_with = D37 num_divisions > 0
         NOT = { has_war_with = D37 }
@@ -1586,6 +1653,7 @@ terra_state_subject_loyalty_D38 = {
 terra_state_subject_front_support_D38 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D38
         country_exists = D38 has_war_together_with = D38 num_divisions > 0
         NOT = { has_war_with = D38 }
@@ -1609,6 +1677,7 @@ terra_state_subject_loyalty_D39 = {
 terra_state_subject_front_support_D39 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D39
         country_exists = D39 has_war_together_with = D39 num_divisions > 0
         NOT = { has_war_with = D39 }
@@ -1632,6 +1701,7 @@ terra_state_subject_loyalty_D40 = {
 terra_state_subject_front_support_D40 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D40
         country_exists = D40 has_war_together_with = D40 num_divisions > 0
         NOT = { has_war_with = D40 }
@@ -1655,6 +1725,7 @@ terra_state_subject_loyalty_D41 = {
 terra_state_subject_front_support_D41 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D41
         country_exists = D41 has_war_together_with = D41 num_divisions > 0
         NOT = { has_war_with = D41 }
@@ -1678,6 +1749,7 @@ terra_state_subject_loyalty_D42 = {
 terra_state_subject_front_support_D42 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D42
         country_exists = D42 has_war_together_with = D42 num_divisions > 0
         NOT = { has_war_with = D42 }
@@ -1701,6 +1773,7 @@ terra_state_subject_loyalty_D43 = {
 terra_state_subject_front_support_D43 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D43
         country_exists = D43 has_war_together_with = D43 num_divisions > 0
         NOT = { has_war_with = D43 }
@@ -1724,6 +1797,7 @@ terra_state_subject_loyalty_D44 = {
 terra_state_subject_front_support_D44 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D44
         country_exists = D44 has_war_together_with = D44 num_divisions > 0
         NOT = { has_war_with = D44 }
@@ -1747,6 +1821,7 @@ terra_state_subject_loyalty_D45 = {
 terra_state_subject_front_support_D45 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D45
         country_exists = D45 has_war_together_with = D45 num_divisions > 0
         NOT = { has_war_with = D45 }
@@ -1770,6 +1845,7 @@ terra_state_subject_loyalty_D46 = {
 terra_state_subject_front_support_D46 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D46
         country_exists = D46 has_war_together_with = D46 num_divisions > 0
         NOT = { has_war_with = D46 }
@@ -1793,6 +1869,7 @@ terra_state_subject_loyalty_D47 = {
 terra_state_subject_front_support_D47 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D47
         country_exists = D47 has_war_together_with = D47 num_divisions > 0
         NOT = { has_war_with = D47 }
@@ -1816,6 +1893,7 @@ terra_state_subject_loyalty_D48 = {
 terra_state_subject_front_support_D48 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D48
         country_exists = D48 has_war_together_with = D48 num_divisions > 0
         NOT = { has_war_with = D48 }
@@ -1839,6 +1917,7 @@ terra_state_subject_loyalty_D49 = {
 terra_state_subject_front_support_D49 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D49
         country_exists = D49 has_war_together_with = D49 num_divisions > 0
         NOT = { has_war_with = D49 }
@@ -1862,6 +1941,7 @@ terra_state_subject_loyalty_D50 = {
 terra_state_subject_front_support_D50 = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
     enable = {
+        terra_war_can_spare_allied_force = yes
         is_ai = yes terra_state_subject_duty = yes is_subject_of = D50
         country_exists = D50 has_war_together_with = D50 num_divisions > 0
         NOT = { has_war_with = D50 }

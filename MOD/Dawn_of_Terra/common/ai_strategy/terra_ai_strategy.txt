@@ -1,6 +1,6 @@
 # Dawn of Terra adaptive AI, calendar 1028 onward.
-# Original Terra rules informed by Expert AI's separation of construction,
-# recruitment and equipment demand, and native AI strategy documentation.
+# Original Terra rules; see docs/global_ai_repair.md for public design references.
+# Construction, recruitment and equipment demand share explicit readiness gates.
 # All rules use normal factories, manpower, equipment, research and XP.
 # The SEA contributor mechanics, empty Siesta and sacred Ta-Netjer are exempt.
 
@@ -24,21 +24,21 @@ terra_ai_reserves = {
 
 terra_ai_support_line = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes num_of_military_factories > 2 has_tech = tech_support }
+    enable = { terra_ai_active = yes num_of_military_factories > 3 has_tech = tech_support has_equipment = { infantry_equipment > 750 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment value = 1 }
 }
 
 terra_ai_artillery_line = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes num_of_military_factories > 4 has_tech = interwar_artillery }
+    enable = { terra_ai_active = yes num_of_military_factories > 4 has_tech = interwar_artillery has_equipment = { infantry_equipment > 750 } }
     abort_when_not_enabled = yes
     ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment value = 1 }
 }
 
 terra_ai_recruit_first_division = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes num_divisions < 1 terra_ai_can_expand_army = yes }
+    enable = { is_subject = no num_divisions < 1 terra_ai_can_train_infantry = yes }
     abort_when_not_enabled = yes
     ai_strategy = { type = build_army id = infantry value = 1 }
     ai_strategy = { type = force_build_armies value = 1 }
@@ -61,7 +61,7 @@ terra_ai_small_peacetime_army = {
 terra_ai_refill_before_recruiting = {
     allowed = { terra_ai_profile_allowed = yes }
     enable = { terra_ai_active = yes num_divisions > 0
-        OR = { has_manpower < 15000 has_equipment = { infantry_equipment < 200 } } }
+        NOT = { terra_ai_growth_reserves_ready = yes } }
     abort_when_not_enabled = yes
     ai_strategy = { type = role_ratio id = infantry value = -100 }
     ai_strategy = { type = role_ratio id = area_defense value = -10 }
@@ -103,11 +103,12 @@ terra_ai_first_military_factory = {
     enable = { terra_ai_active = yes num_of_civilian_factories > 0 num_of_military_factories < 1 }
     abort_when_not_enabled = yes
     ai_strategy = { type = building_target id = arms_factory value = 1 }
+    ai_strategy = { type = added_military_to_civilian_factory_ratio value = 75 }
 }
 
 terra_ai_civilian_foundation = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories < 8 }
+    enable = { terra_ai_active = yes has_war = no num_of_civilian_factories < 8 num_of_military_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = building_target id = industrial_complex value = 8 }
     ai_strategy = { type = added_military_to_civilian_factory_ratio value = -25 }
@@ -1085,12 +1086,13 @@ terra_ai_industrial_infrastructure_96 = {
 
 terra_ai_air_production = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes num_of_military_factories > 11
+    enable = { terra_ai_active = yes num_of_military_factories > 4 air_base > 0
+        has_equipment = { infantry_equipment > 750 }
         OR = { has_tech = fighter1 has_tech = basic_small_airframe } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = unit_ratio id = fighter value = 65 }
-    ai_strategy = { type = unit_ratio id = cas value = 25 }
-    ai_strategy = { type = unit_ratio id = tactical_bomber value = 10 }
+    ai_strategy = { type = unit_ratio id = fighter value = 60 }
+    ai_strategy = { type = unit_ratio id = cas value = 40 }
+    ai_strategy = { type = unit_ratio id = tactical_bomber value = 0 }
     ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
     ai_strategy = { type = unit_ratio id = heavy_fighter value = 0 }
     ai_strategy = { type = unit_ratio id = naval_bomber value = 0 }
@@ -1125,3 +1127,29 @@ terra_ai_conserve_army_in_war = {
 
 
 
+# Repeat ordinary paid recruitment below a country-sized goal. Subjects use
+# their own identical-cost request so the two force requests never stack.
+terra_ai_recruit_infantry = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_can_train_infantry = yes terra_ai_training_headroom = yes
+        is_subject = no num_divisions > 0
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_army id = infantry value = 1 }
+    ai_strategy = { type = force_build_armies value = 1 }
+}
+
+terra_ai_minor_air_budget = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 4 num_of_military_factories < 12 air_base > 0 has_equipment = { infantry_equipment > 750 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = air_factory_balance value = 15 }
+}
+
+terra_ai_major_air_budget = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_of_military_factories > 11 air_base > 0 has_equipment = { infantry_equipment > 750 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = air_factory_balance value = 25 }
+}

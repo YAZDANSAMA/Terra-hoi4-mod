@@ -32,22 +32,33 @@ class SubjectRecruitmentTests(unittest.TestCase):
         self.assertEqual({'build_army', 'force_build_armies', 'ai_wanted_divisions_factor'},
                          {n.scalar('type') for n in profile.fields('ai_strategy')})
 
-    def test_limits_expand_from_24_at_peace_to_48_during_war(self):
+    def test_country_size_goal_refreshes_after_expansion_and_war(self):
+        self.actor.owned_state_cores = [set() for _ in range(8)]
+        self.runtime.call('terra_ai_refresh_capacity_effect', self.scope)
+        self.assertEqual(24, self.actor.variables['terra_ai_training_target'])
         self.actor.attrs['num_divisions'] = 24
         self.assertFalse(self.eligible())
         self.actor.attrs['has_war'] = True
+        self.runtime.call('terra_ai_refresh_capacity_effect', self.scope)
+        self.assertEqual(36, self.actor.variables['terra_ai_training_target'])
         self.assertTrue(self.eligible())
-        self.actor.attrs['num_divisions'] = 48
+        self.actor.attrs['num_divisions'] = 36
         self.assertFalse(self.eligible())
+        self.actor.owned_state_cores.extend([set() for _ in range(4)])
+        self.runtime.call('terra_ai_refresh_capacity_effect', self.scope)
+        self.assertTrue(self.eligible())
 
-    def test_men_alone_cannot_replace_equipment_factory_or_infantry_technology(self):
-        for cause in ('equipment', 'factory', 'tech', 'manpower', 'human', 'independent', 'capitulated'):
+    def test_aid_funded_army_can_train_without_domestic_military_factory(self):
+        self.actor.attrs['num_of_military_factories'] = 0
+        self.assertTrue(self.eligible())
+
+    def test_training_still_requires_real_men_weapons_and_infantry_technology(self):
+        for cause in ('equipment', 'tech', 'manpower', 'human', 'independent', 'capitulated'):
             with self.subTest(cause=cause):
                 self.setUp()
-                if cause == 'equipment': self.actor.stockpiles['infantry_equipment'] = 900
-                elif cause == 'factory': self.actor.attrs['num_of_military_factories'] = 0
+                if cause == 'equipment': self.actor.stockpiles['infantry_equipment'] = 750
                 elif cause == 'tech': self.actor.technologies.clear()
-                elif cause == 'manpower': self.actor.attrs['has_manpower'] = 15000
+                elif cause == 'manpower': self.actor.attrs['has_manpower'] = 7500
                 elif cause == 'human': self.actor.attrs['is_ai'] = False
                 elif cause == 'independent': self.actor.attrs['is_subject'] = False
                 else: self.actor.attrs['has_capitulated'] = True

@@ -2,315 +2,945 @@
 
 terra_ai_air_front_1 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 1 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 1 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 1 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 1 value = 600  }
 }
 
 terra_ai_air_front_2 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 2 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 2 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 2 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 2 value = 600  }
 }
 
 terra_ai_air_front_3 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 3 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 3 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 3 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 3 value = 600  }
 }
 
 terra_ai_air_front_4 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 4 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 4 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 4 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 4 value = 600  }
 }
 
 terra_ai_air_front_5 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 5 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 5 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 5 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 5 value = 600  }
 }
 
 terra_ai_air_front_6 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 6 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 6 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 6 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 6 value = 600  }
 }
 
 terra_ai_air_front_7 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 7 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 7 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 7 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 7 value = 600  }
 }
 
 terra_ai_air_front_8 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 8 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 8 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 8 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 8 value = 600  }
 }
 
 terra_ai_air_front_9 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 9 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 9 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 9 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 9 value = 600  }
 }
 
 terra_ai_air_front_10 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 10 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 10 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 10 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 10 value = 600  }
 }
 
 terra_ai_air_front_11 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 11 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 11 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 11 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 11 value = 600  }
 }
 
 terra_ai_air_front_12 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 12 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 12 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 12 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 12 value = 600  }
 }
 
 terra_ai_air_front_13 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 13 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 13 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 13 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 13 value = 600  }
 }
 
 terra_ai_air_front_14 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 14 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 14 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 14 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 14 value = 600  }
 }
 
 terra_ai_air_front_15 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 15 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 15 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 15 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 15 value = 600  }
 }
 
 terra_ai_air_front_16 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 16 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 16 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 16 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 16 value = 600  }
 }
 
 terra_ai_air_front_17 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 17 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 17 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 17 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 17 value = 600  }
 }
 
 terra_ai_air_front_18 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 18 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 18 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 18 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 18 value = 600  }
 }
 
 terra_ai_air_front_19 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 19 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 19 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 19 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 19 value = 600  }
 }
 
 terra_ai_air_front_20 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 20 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 20 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 20 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 20 value = 600  }
 }
 
 terra_ai_air_front_21 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 21 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 21 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 21 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 21 value = 600  }
 }
 
 terra_ai_air_front_22 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 22 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 22 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 22 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 22 value = 600  }
 }
 
 terra_ai_air_front_23 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 23 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 23 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 23 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 23 value = 600  }
 }
 
 terra_ai_air_front_24 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 24 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 24 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 24 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 24 value = 600  }
 }
 
 terra_ai_air_front_25 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 25 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 25 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 25 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 25 value = 600  }
 }
 
 terra_ai_air_front_26 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 26 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 26 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 26 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 26 value = 600  }
 }
 
 terra_ai_air_front_27 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 27 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 27 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 27 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 27 value = 600  }
 }
 
 terra_ai_air_front_28 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 28 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 28 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 28 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 28 value = 600  }
 }
 
 terra_ai_air_front_29 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 29 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 29 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 29 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 29 value = 600  }
 }
 
 terra_ai_air_front_30 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 30 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 30 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 30 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 30 value = 600  }
 }
 
 terra_ai_air_front_31 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 31 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 31 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 31 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 31 value = 600  }
 }
 
 terra_ai_air_front_32 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 32 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 32 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 32 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 32 value = 600  }
 }
 
 terra_ai_air_front_43 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 43 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 43 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 43 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 43 value = 600  }
 }
 
 terra_ai_air_front_47 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 47 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 47 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 47 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 47 value = 600  }
 }
 
 terra_ai_air_front_50 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 50 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 50 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 50 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 50 value = 600  }
 }
 
 terra_ai_air_front_54 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 54 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 54 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 54 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 54 value = 600  }
 }
 
 terra_ai_air_front_60 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 60 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 60 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 60 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 60 value = 600  }
 }
 
 terra_ai_air_front_63 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 63 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 63 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 63 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 63 value = 600  }
 }
 
 terra_ai_air_front_68 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 68 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 68 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 68 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 68 value = 600  }
 }
 
 terra_ai_air_front_70 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 70 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 70 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 70 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 70 value = 600  }
 }
 
 terra_ai_air_front_77 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 77 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 77 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 77 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 77 value = 600  }
 }
 
 terra_ai_air_front_97 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 97 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 97 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 97 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 97 value = 600  }
 }
 
 terra_ai_air_front_137 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 137 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 137 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 137 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 137 value = 600  }
 }
 
 terra_ai_air_front_140 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 140 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 140 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 140 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 140 value = 600  }
 }
 
 terra_ai_air_front_141 = {
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes has_war = yes num_of_military_factories > 5 any_enemy_country = { any_controlled_state = { region = 141 any_neighbor_state = { is_controlled_by = ROOT } } } }
+    enable = { terra_ai_air_ready = yes any_enemy_country = { any_controlled_state = { region = 141 any_neighbor_state = { is_controlled_by = ROOT } } } }
     abort_when_not_enabled = yes
-    ai_strategy = { type = strategic_air_importance id = 141 value = 7500  }
+    ai_strategy = { type = strategic_air_importance id = 141 value = 600  }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_1 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 1 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 1 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_2 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 2 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 2 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_3 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 3 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 3 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_4 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 4 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 4 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_5 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 5 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 5 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_6 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 6 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 6 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_7 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 7 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 7 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_8 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 8 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 8 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_9 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 9 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 9 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_10 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 10 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 10 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_11 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 11 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 11 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_12 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 12 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 12 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_13 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 13 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 13 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_14 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 14 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 14 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_15 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 15 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 15 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_16 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 16 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 16 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_17 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 17 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 17 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_18 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 18 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 18 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_19 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 19 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 19 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_20 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 20 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 20 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_21 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 21 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 21 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_22 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 22 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 22 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_23 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 23 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 23 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_24 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 24 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 24 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_25 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 25 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 25 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_26 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 26 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 26 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_27 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 27 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 27 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_28 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 28 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 28 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_29 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 29 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 29 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_30 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 30 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 30 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_31 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 31 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 31 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_32 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 32 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 32 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_43 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 43 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 43 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_47 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 47 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 47 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_50 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 50 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 50 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_54 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 54 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 54 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_60 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 60 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 60 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_63 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 63 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 63 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_68 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 68 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 68 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_70 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 70 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 70 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_77 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 77 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 77 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_97 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 97 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 97 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_137 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 137 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 137 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_140 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 140 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 140 value = 900 }
+}
+
+# Defense over our own controlled territory takes priority over foreign fronts.
+terra_ai_air_home_141 = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = {
+        terra_ai_air_ready = yes
+        any_owned_state = {
+            region = 141 is_controlled_by = ROOT
+            any_neighbor_state = { controller = { has_war_with = ROOT } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = strategic_air_importance id = 141 value = 900 }
 }

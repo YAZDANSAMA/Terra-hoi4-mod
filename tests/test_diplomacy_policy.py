@@ -73,8 +73,9 @@ class PolicyTests(unittest.TestCase):
     def test_all_registry_pact_profiles_use_the_same_eligibility_guard(self):
         positive = [n for n in read(MOD / "common/ai_strategy/terra_diplomacy.txt") if n.key.startswith("terra_dip_restraint_")]
         negative = read(MOD / "common/ai_strategy/terra_diplomacy_policy.txt")
-        self.assertEqual(79, len(positive))
-        self.assertEqual(79, len(negative))
+        partners = set(self.runtime.countries) - {"SST", "SEA"}
+        self.assertEqual(partners, {n.key.removeprefix("terra_dip_restraint_") for n in positive})
+        self.assertEqual(partners, {n.one("enable").one("terra_dip_pair_valid").scalar("TARGET") for n in negative})
         for node in positive:
             self.assertIsNotNone(node.one("enable").one("terra_dip_can_offer_restraint"))
 

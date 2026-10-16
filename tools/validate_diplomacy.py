@@ -29,7 +29,7 @@ COUNTRY_FACTS = frozenset({
     "num_divisions", "num_of_factories", "num_of_military_factories", "num_of_civilian_factories", "is_major",
     "is_in_faction", "has_manpower", "surrender_progress", "threat",
     "is_dynamic_country", "has_political_power", "has_stability", "has_war_support",
-    "is_faction_leader",
+    "is_faction_leader", "num_of_naval_factories", "fuel_ratio", "air_base", "naval_base",
 })
 
 
@@ -163,6 +163,7 @@ class Country:
         "threat": 0, "is_major": False,
         "is_in_faction": False, "has_manpower": 200000,
         "is_faction_leader": False,
+        "num_of_naval_factories": 0, "fuel_ratio": 0, "air_base": 0, "naval_base": 0,
         "num_of_military_factories": 20, "num_of_civilian_factories": 20, "industrial_capacity": 40,
     })
     relations: dict[str, set[str]] = field(default_factory=dict)
