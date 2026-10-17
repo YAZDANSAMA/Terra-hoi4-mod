@@ -37,6 +37,9 @@ SCW = "countries/Terra_Sargonian_Royal_Opposition.txt"
 
 # Dynamic country pool required by HOI4 flag atlases and civil-war systems.
 # The Terra mod replaces common/country_tags, so the vanilla dynamic pool must be restored.
+GRM = "countries/Terra_Garama.txt"
+HTR = "countries/Terra_Hatra.txt"
+PLM = "countries/Terra_Palmyra.txt"
 dynamic_tags = yes
 D01 = "countries/Terra_Dynamic.txt"
 D02 = "countries/Terra_Dynamic.txt"

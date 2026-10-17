@@ -987,6 +987,51 @@ terra_subject_remote_support_PSE = {
     ai_strategy = { type = support id = PSE value = 100 }
     ai_strategy = { type = diplo_action_desire id = PSE target = send_expeditionary_force value = 75 }
 }
+terra_subject_remote_support_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        OR = { NOT = { terra_dip_ready = yes } terra_war_can_spare_allied_force = yes }
+        is_ai = yes has_capitulated = no num_divisions > 6
+        country_exists = GRM is_subject_of = GRM
+        GRM = { has_capitulated = no }
+        has_war_together_with = GRM NOT = { has_war_with = GRM }
+        surrender_progress < 0.10
+        NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = support id = GRM value = 100 }
+    ai_strategy = { type = diplo_action_desire id = GRM target = send_expeditionary_force value = 75 }
+}
+terra_subject_remote_support_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        OR = { NOT = { terra_dip_ready = yes } terra_war_can_spare_allied_force = yes }
+        is_ai = yes has_capitulated = no num_divisions > 6
+        country_exists = HTR is_subject_of = HTR
+        HTR = { has_capitulated = no }
+        has_war_together_with = HTR NOT = { has_war_with = HTR }
+        surrender_progress < 0.10
+        NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = support id = HTR value = 100 }
+    ai_strategy = { type = diplo_action_desire id = HTR target = send_expeditionary_force value = 75 }
+}
+terra_subject_remote_support_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        OR = { NOT = { terra_dip_ready = yes } terra_war_can_spare_allied_force = yes }
+        is_ai = yes has_capitulated = no num_divisions > 6
+        country_exists = PLM is_subject_of = PLM
+        PLM = { has_capitulated = no }
+        has_war_together_with = PLM NOT = { has_war_with = PLM }
+        surrender_progress < 0.10
+        NOT = { any_enemy_country = { is_neighbor_of = ROOT has_capitulated = no } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = support id = PLM value = 100 }
+    ai_strategy = { type = diplo_action_desire id = PLM target = send_expeditionary_force value = 75 }
+}
 
 terra_subject_remote_support_KZD = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }

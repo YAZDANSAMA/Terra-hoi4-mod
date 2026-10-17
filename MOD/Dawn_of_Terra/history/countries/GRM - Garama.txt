@@ -1,0 +1,22 @@
+# Sargonian satrapy at the 1028 start.
+# Capital: the largest existing city by mapped urban footprint, province 7426.
+capital = 197
+add_ideas = { volunteer_only }
+terra_grm_initialize_transferred_army_effect = yes
+oob = "GRM_1028"
+
+set_technology = {
+    infantry_weapons = 1
+    basic_train = 1
+}
+
+SGN = {
+    puppet = GRM
+}
+
+recruit_character = GRM_satrap
+set_politics = {
+    ruling_party = monarchism
+    elections_allowed = no
+}
+set_popularities = { monarchism = 100 }

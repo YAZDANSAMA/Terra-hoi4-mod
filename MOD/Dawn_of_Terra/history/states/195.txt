@@ -10,10 +10,11 @@ state = {
 	}
 
 	history = {
-		victory_points = { 6629 15 }
-		victory_points = { 7226 5 }
+		victory_points = { 6629 5 }
+		victory_points = { 7226 15 }
 		
-		owner = SGN
+		owner = HTR
+		add_core_of = HTR
 		add_core_of = SGN
 		buildings = {
 			infrastructure = 1

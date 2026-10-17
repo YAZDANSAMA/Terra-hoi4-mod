@@ -391,6 +391,45 @@ terra_contract_honour_defense_PSE = {
     ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = 160 }
     ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = 160 }
 }
+terra_contract_honour_defense_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_dip_ready = yes
+        terra_dip_pair_valid = { TARGET = GRM }
+        terra_contract_defense_obligation_to = { TARGET = GRM }
+        GRM = { has_defensive_war = yes }
+        NOT = { has_war_together_with = GRM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = GRM target = call_allies value = 160 }
+    ai_strategy = { type = diplo_action_desire id = GRM target = join_allies value = 160 }
+}
+terra_contract_honour_defense_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_dip_ready = yes
+        terra_dip_pair_valid = { TARGET = HTR }
+        terra_contract_defense_obligation_to = { TARGET = HTR }
+        HTR = { has_defensive_war = yes }
+        NOT = { has_war_together_with = HTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = HTR target = call_allies value = 160 }
+    ai_strategy = { type = diplo_action_desire id = HTR target = join_allies value = 160 }
+}
+terra_contract_honour_defense_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_dip_ready = yes
+        terra_dip_pair_valid = { TARGET = PLM }
+        terra_contract_defense_obligation_to = { TARGET = PLM }
+        PLM = { has_defensive_war = yes }
+        NOT = { has_war_together_with = PLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PLM target = call_allies value = 160 }
+    ai_strategy = { type = diplo_action_desire id = PLM target = join_allies value = 160 }
+}
 
 terra_contract_honour_defense_VNH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }

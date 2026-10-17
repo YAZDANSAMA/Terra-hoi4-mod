@@ -138,6 +138,9 @@ terra_contract_clear_local_snapshot_effect = {
     clr_country_flag = terra_contract_faction_anchor_WSG
     clr_country_flag = terra_contract_faction_anchor_KTH
     clr_country_flag = terra_contract_faction_anchor_PSE
+    clr_country_flag = terra_contract_faction_anchor_GRM
+    clr_country_flag = terra_contract_faction_anchor_HTR
+    clr_country_flag = terra_contract_faction_anchor_PLM
     clr_country_flag = terra_contract_faction_anchor_VNH
     clr_country_flag = terra_contract_faction_anchor_SCW
     clr_country_flag = terra_contract_faction_anchor_D01
@@ -493,6 +496,18 @@ terra_contract_mark_role_effect = {
         set_country_flag = terra_contract_$ROLE$_PSE
     }
     if = {
+        limit = { $PARTNER$ = { tag = GRM } }
+        set_country_flag = terra_contract_$ROLE$_GRM
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = HTR } }
+        set_country_flag = terra_contract_$ROLE$_HTR
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = PLM } }
+        set_country_flag = terra_contract_$ROLE$_PLM
+    }
+    if = {
         limit = { $PARTNER$ = { tag = VNH } }
         set_country_flag = terra_contract_$ROLE$_VNH
     }
@@ -822,6 +837,18 @@ terra_contract_mark_timed_role_effect = {
     if = {
         limit = { $PARTNER$ = { tag = PSE } }
         set_country_flag = { flag = terra_contract_$ROLE$_PSE value = 1 days = $DAYS$ }
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = GRM } }
+        set_country_flag = { flag = terra_contract_$ROLE$_GRM value = 1 days = $DAYS$ }
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = HTR } }
+        set_country_flag = { flag = terra_contract_$ROLE$_HTR value = 1 days = $DAYS$ }
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = PLM } }
+        set_country_flag = { flag = terra_contract_$ROLE$_PLM value = 1 days = $DAYS$ }
     }
     if = {
         limit = { $PARTNER$ = { tag = VNH } }
@@ -1155,6 +1182,18 @@ terra_contract_mark_pending_peer_effect = {
         set_country_flag = { flag = terra_contract_pending_with_PSE value = 1 days = 90 }
     }
     if = {
+        limit = { $PARTNER$ = { tag = GRM } }
+        set_country_flag = { flag = terra_contract_pending_with_GRM value = 1 days = 90 }
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = HTR } }
+        set_country_flag = { flag = terra_contract_pending_with_HTR value = 1 days = 90 }
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = PLM } }
+        set_country_flag = { flag = terra_contract_pending_with_PLM value = 1 days = 90 }
+    }
+    if = {
         limit = { $PARTNER$ = { tag = VNH } }
         set_country_flag = { flag = terra_contract_pending_with_VNH value = 1 days = 90 }
     }
@@ -1484,6 +1523,18 @@ terra_contract_clear_pending_peer_effect = {
     if = {
         limit = { $PARTNER$ = { tag = PSE } }
         clr_country_flag = terra_contract_pending_with_PSE
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = GRM } }
+        clr_country_flag = terra_contract_pending_with_GRM
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = HTR } }
+        clr_country_flag = terra_contract_pending_with_HTR
+    }
+    if = {
+        limit = { $PARTNER$ = { tag = PLM } }
+        clr_country_flag = terra_contract_pending_with_PLM
     }
     if = {
         limit = { $PARTNER$ = { tag = VNH } }
@@ -1993,6 +2044,36 @@ terra_contract_release_client_effect = {
         }
         clr_country_flag = terra_contract_aid_receiver_PSE
         clr_country_flag = terra_contract_protected_PSE
+        clr_country_flag = terra_contract_active
+        terra_contract_clear_local_snapshot_effect = yes
+    }
+    if = {
+        limit = {
+            $PARTNER$ = { tag = GRM }
+            OR = { has_country_flag = terra_contract_aid_receiver_GRM has_country_flag = terra_contract_protected_GRM }
+        }
+        clr_country_flag = terra_contract_aid_receiver_GRM
+        clr_country_flag = terra_contract_protected_GRM
+        clr_country_flag = terra_contract_active
+        terra_contract_clear_local_snapshot_effect = yes
+    }
+    if = {
+        limit = {
+            $PARTNER$ = { tag = HTR }
+            OR = { has_country_flag = terra_contract_aid_receiver_HTR has_country_flag = terra_contract_protected_HTR }
+        }
+        clr_country_flag = terra_contract_aid_receiver_HTR
+        clr_country_flag = terra_contract_protected_HTR
+        clr_country_flag = terra_contract_active
+        terra_contract_clear_local_snapshot_effect = yes
+    }
+    if = {
+        limit = {
+            $PARTNER$ = { tag = PLM }
+            OR = { has_country_flag = terra_contract_aid_receiver_PLM has_country_flag = terra_contract_protected_PLM }
+        }
+        clr_country_flag = terra_contract_aid_receiver_PLM
+        clr_country_flag = terra_contract_protected_PLM
         clr_country_flag = terra_contract_active
         terra_contract_clear_local_snapshot_effect = yes
     }
@@ -2549,6 +2630,9 @@ terra_contract_due_aid_effect = {
     if = { limit = { has_country_flag = terra_contract_aid_donor_WSG } clr_country_flag = terra_contract_aid_wait_WSG terra_contract_process_aid_effect = { TARGET = WSG } }
     if = { limit = { has_country_flag = terra_contract_aid_donor_KTH } clr_country_flag = terra_contract_aid_wait_KTH terra_contract_process_aid_effect = { TARGET = KTH } }
     if = { limit = { has_country_flag = terra_contract_aid_donor_PSE } clr_country_flag = terra_contract_aid_wait_PSE terra_contract_process_aid_effect = { TARGET = PSE } }
+    if = { limit = { has_country_flag = terra_contract_aid_donor_GRM } clr_country_flag = terra_contract_aid_wait_GRM terra_contract_process_aid_effect = { TARGET = GRM } }
+    if = { limit = { has_country_flag = terra_contract_aid_donor_HTR } clr_country_flag = terra_contract_aid_wait_HTR terra_contract_process_aid_effect = { TARGET = HTR } }
+    if = { limit = { has_country_flag = terra_contract_aid_donor_PLM } clr_country_flag = terra_contract_aid_wait_PLM terra_contract_process_aid_effect = { TARGET = PLM } }
     if = { limit = { has_country_flag = terra_contract_aid_donor_VNH } clr_country_flag = terra_contract_aid_wait_VNH terra_contract_process_aid_effect = { TARGET = VNH } }
     if = { limit = { has_country_flag = terra_contract_aid_donor_SCW } clr_country_flag = terra_contract_aid_wait_SCW terra_contract_process_aid_effect = { TARGET = SCW } }
     if = { limit = { has_country_flag = terra_contract_aid_donor_D01 } clr_country_flag = terra_contract_aid_wait_D01 terra_contract_process_aid_effect = { TARGET = D01 } }
@@ -3202,6 +3286,66 @@ terra_contract_aid_deadline_effect = {
         else = {
             terra_contract_close_pair_effect = { TARGET = PSE }
             terra_contract_record_breach_effect = { TARGET = PSE GRIEF = 15 }
+        }
+    }
+    if = {
+        limit = { has_country_flag = terra_contract_aid_donor_GRM has_country_flag = terra_contract_aid_due_GRM }
+        # The scheduled final-day check may still deliver; a later weekly pass may not.
+        if = {
+            limit = { NOT = { terra_contract_pair_valid = { TARGET = GRM } } }
+            terra_contract_invalid_pair_effect = { TARGET = GRM }
+        }
+        else_if = {
+            limit = { has_country_flag = terra_contract_aid_small has_equipment = { infantry_equipment > 149 } }
+            terra_contract_deliver_aid_effect = { TARGET = GRM AMOUNT = 150 MIN_STOCK = 149 }
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = terra_contract_aid_small } has_equipment = { infantry_equipment > 299 } }
+            terra_contract_deliver_aid_effect = { TARGET = GRM AMOUNT = 300 MIN_STOCK = 299 }
+        }
+        else = {
+            terra_contract_close_pair_effect = { TARGET = GRM }
+            terra_contract_record_breach_effect = { TARGET = GRM GRIEF = 15 }
+        }
+    }
+    if = {
+        limit = { has_country_flag = terra_contract_aid_donor_HTR has_country_flag = terra_contract_aid_due_HTR }
+        # The scheduled final-day check may still deliver; a later weekly pass may not.
+        if = {
+            limit = { NOT = { terra_contract_pair_valid = { TARGET = HTR } } }
+            terra_contract_invalid_pair_effect = { TARGET = HTR }
+        }
+        else_if = {
+            limit = { has_country_flag = terra_contract_aid_small has_equipment = { infantry_equipment > 149 } }
+            terra_contract_deliver_aid_effect = { TARGET = HTR AMOUNT = 150 MIN_STOCK = 149 }
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = terra_contract_aid_small } has_equipment = { infantry_equipment > 299 } }
+            terra_contract_deliver_aid_effect = { TARGET = HTR AMOUNT = 300 MIN_STOCK = 299 }
+        }
+        else = {
+            terra_contract_close_pair_effect = { TARGET = HTR }
+            terra_contract_record_breach_effect = { TARGET = HTR GRIEF = 15 }
+        }
+    }
+    if = {
+        limit = { has_country_flag = terra_contract_aid_donor_PLM has_country_flag = terra_contract_aid_due_PLM }
+        # The scheduled final-day check may still deliver; a later weekly pass may not.
+        if = {
+            limit = { NOT = { terra_contract_pair_valid = { TARGET = PLM } } }
+            terra_contract_invalid_pair_effect = { TARGET = PLM }
+        }
+        else_if = {
+            limit = { has_country_flag = terra_contract_aid_small has_equipment = { infantry_equipment > 149 } }
+            terra_contract_deliver_aid_effect = { TARGET = PLM AMOUNT = 150 MIN_STOCK = 149 }
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = terra_contract_aid_small } has_equipment = { infantry_equipment > 299 } }
+            terra_contract_deliver_aid_effect = { TARGET = PLM AMOUNT = 300 MIN_STOCK = 299 }
+        }
+        else = {
+            terra_contract_close_pair_effect = { TARGET = PLM }
+            terra_contract_record_breach_effect = { TARGET = PLM GRIEF = 15 }
         }
     }
     if = {
@@ -4398,6 +4542,21 @@ terra_contract_cancel_from_effect = {
         country_event = { id = terra_promises.73 }
     }
     if = {
+        limit = { FROM = { tag = GRM } OR = { has_country_flag = terra_contract_aid_donor_GRM has_country_flag = terra_contract_defender_GRM } }
+        terra_contract_close_pair_effect = { TARGET = GRM }
+        country_event = { id = terra_promises.73 }
+    }
+    if = {
+        limit = { FROM = { tag = HTR } OR = { has_country_flag = terra_contract_aid_donor_HTR has_country_flag = terra_contract_defender_HTR } }
+        terra_contract_close_pair_effect = { TARGET = HTR }
+        country_event = { id = terra_promises.73 }
+    }
+    if = {
+        limit = { FROM = { tag = PLM } OR = { has_country_flag = terra_contract_aid_donor_PLM has_country_flag = terra_contract_defender_PLM } }
+        terra_contract_close_pair_effect = { TARGET = PLM }
+        country_event = { id = terra_promises.73 }
+    }
+    if = {
         limit = { FROM = { tag = VNH } OR = { has_country_flag = terra_contract_aid_donor_VNH has_country_flag = terra_contract_defender_VNH } }
         terra_contract_close_pair_effect = { TARGET = VNH }
         country_event = { id = terra_promises.73 }
@@ -4809,6 +4968,21 @@ terra_contract_withdraw_from_effect = {
         limit = { FROM = { tag = PSE } OR = { has_country_flag = terra_contract_aid_donor_PSE has_country_flag = terra_contract_defender_PSE } }
         terra_contract_close_pair_effect = { TARGET = PSE }
         terra_contract_record_breach_effect = { TARGET = PSE GRIEF = 20 }
+    }
+    if = {
+        limit = { FROM = { tag = GRM } OR = { has_country_flag = terra_contract_aid_donor_GRM has_country_flag = terra_contract_defender_GRM } }
+        terra_contract_close_pair_effect = { TARGET = GRM }
+        terra_contract_record_breach_effect = { TARGET = GRM GRIEF = 20 }
+    }
+    if = {
+        limit = { FROM = { tag = HTR } OR = { has_country_flag = terra_contract_aid_donor_HTR has_country_flag = terra_contract_defender_HTR } }
+        terra_contract_close_pair_effect = { TARGET = HTR }
+        terra_contract_record_breach_effect = { TARGET = HTR GRIEF = 20 }
+    }
+    if = {
+        limit = { FROM = { tag = PLM } OR = { has_country_flag = terra_contract_aid_donor_PLM has_country_flag = terra_contract_defender_PLM } }
+        terra_contract_close_pair_effect = { TARGET = PLM }
+        terra_contract_record_breach_effect = { TARGET = PLM GRIEF = 20 }
     }
     if = {
         limit = { FROM = { tag = VNH } OR = { has_country_flag = terra_contract_aid_donor_VNH has_country_flag = terra_contract_defender_VNH } }
@@ -5496,8 +5670,14 @@ terra_contract_weekly_effect = {
     }
     if = { limit = { has_country_flag = terra_contract_aid_donor_KTH } terra_contract_process_aid_effect = { TARGET = KTH } }
     if = { limit = { has_country_flag = terra_contract_aid_donor_PSE } terra_contract_process_aid_effect = { TARGET = PSE } }
+    if = { limit = { has_country_flag = terra_contract_aid_donor_GRM } terra_contract_process_aid_effect = { TARGET = GRM } }
+    if = { limit = { has_country_flag = terra_contract_aid_donor_HTR } terra_contract_process_aid_effect = { TARGET = HTR } }
+    if = { limit = { has_country_flag = terra_contract_aid_donor_PLM } terra_contract_process_aid_effect = { TARGET = PLM } }
     if = { limit = { has_country_flag = terra_contract_defender_KTH } terra_contract_process_defense_effect = { TARGET = KTH } }
     if = { limit = { has_country_flag = terra_contract_defender_PSE } terra_contract_process_defense_effect = { TARGET = PSE } }
+    if = { limit = { has_country_flag = terra_contract_defender_GRM } terra_contract_process_defense_effect = { TARGET = GRM } }
+    if = { limit = { has_country_flag = terra_contract_defender_HTR } terra_contract_process_defense_effect = { TARGET = HTR } }
+    if = { limit = { has_country_flag = terra_contract_defender_PLM } terra_contract_process_defense_effect = { TARGET = PLM } }
     if = {
         limit = {
             OR = { has_country_flag = terra_contract_aid_receiver_KTH has_country_flag = terra_contract_protected_KTH }
@@ -5521,6 +5701,45 @@ terra_contract_weekly_effect = {
         }
         clr_country_flag = terra_contract_aid_receiver_PSE
         clr_country_flag = terra_contract_protected_PSE
+        clr_country_flag = terra_contract_active
+        terra_contract_clear_local_snapshot_effect = yes
+    }
+    if = {
+        limit = {
+            OR = { has_country_flag = terra_contract_aid_receiver_GRM has_country_flag = terra_contract_protected_GRM }
+            OR = {
+                GRM = { NOT = { terra_dip_sovereign = yes } }
+                GRM = { NOT = { has_country_flag = terra_contract_active } }
+            }
+        }
+        clr_country_flag = terra_contract_aid_receiver_GRM
+        clr_country_flag = terra_contract_protected_GRM
+        clr_country_flag = terra_contract_active
+        terra_contract_clear_local_snapshot_effect = yes
+    }
+    if = {
+        limit = {
+            OR = { has_country_flag = terra_contract_aid_receiver_HTR has_country_flag = terra_contract_protected_HTR }
+            OR = {
+                HTR = { NOT = { terra_dip_sovereign = yes } }
+                HTR = { NOT = { has_country_flag = terra_contract_active } }
+            }
+        }
+        clr_country_flag = terra_contract_aid_receiver_HTR
+        clr_country_flag = terra_contract_protected_HTR
+        clr_country_flag = terra_contract_active
+        terra_contract_clear_local_snapshot_effect = yes
+    }
+    if = {
+        limit = {
+            OR = { has_country_flag = terra_contract_aid_receiver_PLM has_country_flag = terra_contract_protected_PLM }
+            OR = {
+                PLM = { NOT = { terra_dip_sovereign = yes } }
+                PLM = { NOT = { has_country_flag = terra_contract_active } }
+            }
+        }
+        clr_country_flag = terra_contract_aid_receiver_PLM
+        clr_country_flag = terra_contract_protected_PLM
         clr_country_flag = terra_contract_active
         terra_contract_clear_local_snapshot_effect = yes
     }

@@ -36,6 +36,9 @@ terra_dip_participant = {
         tag = WSG
         tag = KTH
         tag = PSE
+        tag = GRM
+        tag = HTR
+        tag = PLM
         tag = VNH
         tag = SCW
         tag = D01
@@ -379,6 +382,30 @@ terra_dip_relation_from = {
             check_variable = { terra_dip_grievance_PSE < $GRIEF_BELOW$ }
             check_variable = { terra_dip_score_PSE > $SCORE_ABOVE$ }
             check_variable = { terra_dip_score_PSE < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = GRM }
+            check_variable = { terra_dip_trust_GRM > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_GRM > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_GRM < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_GRM > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_GRM < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = HTR }
+            check_variable = { terra_dip_trust_HTR > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_HTR > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_HTR < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_HTR > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_HTR < $SCORE_BELOW$ }
+        }
+        AND = {
+            FROM = { tag = PLM }
+            check_variable = { terra_dip_trust_PLM > $TRUST_ABOVE$ }
+            check_variable = { terra_dip_grievance_PLM > $GRIEF_ABOVE$ }
+            check_variable = { terra_dip_grievance_PLM < $GRIEF_BELOW$ }
+            check_variable = { terra_dip_score_PLM > $SCORE_ABOVE$ }
+            check_variable = { terra_dip_score_PLM < $SCORE_BELOW$ }
         }
         AND = {
             FROM = { tag = VNH }

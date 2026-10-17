@@ -1,0 +1,20 @@
+characters = {
+    GRM_satrap = {
+        name = GRM_satrap
+        gender = male
+        portraits = { civilian = { large = "gfx/leaders/Terra/terra_generic_male.tga" } }
+        country_leader = { ideology = monarchism_subtype traits = { } expire = "1965.1.1.1" }
+    }
+    HTR_satrap = {
+        name = HTR_satrap
+        gender = male
+        portraits = { civilian = { large = "gfx/leaders/Terra/terra_generic_male.tga" } }
+        country_leader = { ideology = monarchism_subtype traits = { } expire = "1965.1.1.1" }
+    }
+    PLM_satrap = {
+        name = PLM_satrap
+        gender = male
+        portraits = { civilian = { large = "gfx/leaders/Terra/terra_generic_male.tga" } }
+        country_leader = { ideology = monarchism_subtype traits = { } expire = "1965.1.1.1" }
+    }
+}

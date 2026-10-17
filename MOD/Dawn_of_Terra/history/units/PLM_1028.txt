@@ -1,0 +1,102 @@
+# Existing western garrison reassigned from Sargon; original composition retained.
+division_template = {
+    name = "Palmyrene Infantry Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+units = {
+    division = {
+        name = "1st Western Royal Division"
+        location = 1573
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "2nd Western Royal Division"
+        location = 6890
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "3rd Western Royal Division"
+        location = 1574
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "4th Western Royal Division"
+        location = 7366
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Western Royal Division"
+        location = 1582
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "6th Western Royal Division"
+        location = 2316
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "7th Western Royal Division"
+        location = 1575
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "8th Western Royal Division"
+        location = 6208
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "11th Western Royal Division"
+        location = 6882
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "12th Western Royal Division"
+        location = 2310
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "13th Western Royal Division"
+        location = 1651
+        division_template = "Palmyrene Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

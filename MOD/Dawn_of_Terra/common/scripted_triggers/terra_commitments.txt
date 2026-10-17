@@ -105,6 +105,9 @@ terra_contract_has_role_with = {
         AND = { $PARTNER$ = { tag = WSG } has_country_flag = terra_contract_$ROLE$_WSG }
         AND = { $PARTNER$ = { tag = KTH } has_country_flag = terra_contract_$ROLE$_KTH }
         AND = { $PARTNER$ = { tag = PSE } has_country_flag = terra_contract_$ROLE$_PSE }
+        AND = { $PARTNER$ = { tag = GRM } has_country_flag = terra_contract_$ROLE$_GRM }
+        AND = { $PARTNER$ = { tag = HTR } has_country_flag = terra_contract_$ROLE$_HTR }
+        AND = { $PARTNER$ = { tag = PLM } has_country_flag = terra_contract_$ROLE$_PLM }
         AND = { $PARTNER$ = { tag = VNH } has_country_flag = terra_contract_$ROLE$_VNH }
         AND = { $PARTNER$ = { tag = SCW } has_country_flag = terra_contract_$ROLE$_SCW }
         AND = { $PARTNER$ = { tag = D01 } has_country_flag = terra_contract_$ROLE$_D01 }
@@ -197,6 +200,9 @@ terra_contract_faction_unchanged = {
                 AND = { has_country_flag = terra_contract_faction_anchor_WSG WSG = { is_faction_leader = yes } is_in_faction_with = WSG }
                 AND = { has_country_flag = terra_contract_faction_anchor_KTH KTH = { is_faction_leader = yes } is_in_faction_with = KTH }
                 AND = { has_country_flag = terra_contract_faction_anchor_PSE PSE = { is_faction_leader = yes } is_in_faction_with = PSE }
+                AND = { has_country_flag = terra_contract_faction_anchor_GRM GRM = { is_faction_leader = yes } is_in_faction_with = GRM }
+                AND = { has_country_flag = terra_contract_faction_anchor_HTR HTR = { is_faction_leader = yes } is_in_faction_with = HTR }
+                AND = { has_country_flag = terra_contract_faction_anchor_PLM PLM = { is_faction_leader = yes } is_in_faction_with = PLM }
                 AND = { has_country_flag = terra_contract_faction_anchor_VNH VNH = { is_faction_leader = yes } is_in_faction_with = VNH }
                 AND = { has_country_flag = terra_contract_faction_anchor_SCW SCW = { is_faction_leader = yes } is_in_faction_with = SCW }
                 AND = { has_country_flag = terra_contract_faction_anchor_D01 D01 = { is_faction_leader = yes } is_in_faction_with = D01 }

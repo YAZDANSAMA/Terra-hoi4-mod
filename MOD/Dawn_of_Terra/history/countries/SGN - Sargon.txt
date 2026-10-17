@@ -1,8 +1,8 @@
 # Boot-safe minimal history for Sargon
 capital = 171
 
-# 2.5% of 37,687,232 core population plus once-only historical reservists,
-# less the 402,000-man starting army, leaves about 2,000,000 free manpower.
+# 2.5% of 27,525,293 core population plus once-only historical reservists,
+# less the 168,000-man starting army, leaves about 2,000,000 free manpower.
 # The separate temple grant remains a monthly transfer.
 add_ideas = { limited_conscription SGN_tnj_reinforcements }
 terra_sgn_initialize_reserves_effect = yes
@@ -47,6 +47,9 @@ add_to_faction = MSN
 add_to_faction = VVA
 add_to_faction = TNJ
 add_to_faction = PSE
+add_to_faction = GRM
+add_to_faction = HTR
+add_to_faction = PLM
 if = {
     limit = { is_faction_leader = yes }
     set_country_flag = terra_us_formed

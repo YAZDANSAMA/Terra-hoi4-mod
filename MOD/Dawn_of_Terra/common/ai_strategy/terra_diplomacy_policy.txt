@@ -334,6 +334,39 @@ terra_dip_reject_generic_pact_PSE = {
     ai_strategy = { type = diplo_action_desire id = PSE target = non_aggression_pact value = -1000 }
     ai_strategy = { type = diplo_action_acceptance id = PSE target = non_aggression_pact value = -1000 }
 }
+terra_dip_reject_generic_pact_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_dip_pair_valid = { TARGET = GRM }
+        NOT = { has_non_aggression_pact_with = GRM }
+        NOT = { terra_dip_can_offer_restraint = { TARGET = GRM } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = GRM target = non_aggression_pact value = -1000 }
+    ai_strategy = { type = diplo_action_acceptance id = GRM target = non_aggression_pact value = -1000 }
+}
+terra_dip_reject_generic_pact_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_dip_pair_valid = { TARGET = HTR }
+        NOT = { has_non_aggression_pact_with = HTR }
+        NOT = { terra_dip_can_offer_restraint = { TARGET = HTR } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = HTR target = non_aggression_pact value = -1000 }
+    ai_strategy = { type = diplo_action_acceptance id = HTR target = non_aggression_pact value = -1000 }
+}
+terra_dip_reject_generic_pact_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }
+    enable = {
+        is_ai = yes terra_dip_pair_valid = { TARGET = PLM }
+        NOT = { has_non_aggression_pact_with = PLM }
+        NOT = { terra_dip_can_offer_restraint = { TARGET = PLM } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_desire id = PLM target = non_aggression_pact value = -1000 }
+    ai_strategy = { type = diplo_action_acceptance id = PLM target = non_aggression_pact value = -1000 }
+}
 
 terra_dip_reject_generic_pact_VNH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA } } }

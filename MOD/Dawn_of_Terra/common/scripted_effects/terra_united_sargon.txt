@@ -24,6 +24,9 @@ terra_initialize_united_sargon_effect = {
                             AND = { country_exists = VVA VVA = { is_subject_of = SGN is_in_faction = no } }
                             AND = { country_exists = TNJ TNJ = { is_subject_of = SGN is_in_faction = no } }
                             AND = { country_exists = PSE PSE = { is_subject_of = SGN is_in_faction = no } }
+                            AND = { country_exists = GRM GRM = { is_subject_of = SGN is_in_faction = no } }
+                            AND = { country_exists = HTR HTR = { is_subject_of = SGN is_in_faction = no } }
+                            AND = { country_exists = PLM PLM = { is_subject_of = SGN is_in_faction = no } }
                         }
                     }
                     set_rule = { can_create_factions = yes }
@@ -65,6 +68,18 @@ terra_initialize_united_sargon_effect = {
                         add_to_faction = PSE
                     }
                     if = {
+                        limit = { country_exists = GRM GRM = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = GRM
+                    }
+                    if = {
+                        limit = { country_exists = HTR HTR = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = HTR
+                    }
+                    if = {
+                        limit = { country_exists = PLM PLM = { is_subject_of = SGN is_in_faction = no } }
+                        add_to_faction = PLM
+                    }
+                    if = {
                         limit = {
                             OR = {
                                 NOT = { country_exists = MSN }
@@ -89,6 +104,24 @@ terra_initialize_united_sargon_effect = {
                                 PSE = { NOT = { is_subject_of = SGN } }
                                 PSE = { is_in_faction_with = SGN }
                                 PSE = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                            OR = {
+                                NOT = { country_exists = GRM }
+                                GRM = { NOT = { is_subject_of = SGN } }
+                                GRM = { is_in_faction_with = SGN }
+                                GRM = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                            OR = {
+                                NOT = { country_exists = HTR }
+                                HTR = { NOT = { is_subject_of = SGN } }
+                                HTR = { is_in_faction_with = SGN }
+                                HTR = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
+                            }
+                            OR = {
+                                NOT = { country_exists = PLM }
+                                PLM = { NOT = { is_subject_of = SGN } }
+                                PLM = { is_in_faction_with = SGN }
+                                PLM = { is_in_faction = yes NOT = { is_in_faction_with = SGN } }
                             }
                         }
                         set_country_flag = terra_us_setup_complete
@@ -115,6 +148,9 @@ terra_initialize_united_sargon_effect = {
                                 AND = { country_exists = VVA VVA = { is_subject_of = SGN } }
                                 AND = { country_exists = TNJ TNJ = { is_subject_of = SGN } }
                                 AND = { country_exists = PSE PSE = { is_subject_of = SGN } }
+                                AND = { country_exists = GRM GRM = { is_subject_of = SGN } }
+                                AND = { country_exists = HTR HTR = { is_subject_of = SGN } }
+                                AND = { country_exists = PLM PLM = { is_subject_of = SGN } }
                             }
                         }
                     }

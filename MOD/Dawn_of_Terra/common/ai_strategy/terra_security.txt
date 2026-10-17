@@ -1583,6 +1583,39 @@ terra_security_notice_period_PSE = {
     abort_when_not_enabled = yes
     ai_strategy = { type = declare_war id = PSE value = -1000 }
 }
+terra_security_notice_period_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = GRM }
+        has_country_flag = terra_security_warned_GRM
+        NOT = { has_country_flag = terra_security_warning_mature_GRM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = GRM value = -1000 }
+}
+terra_security_notice_period_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = HTR }
+        has_country_flag = terra_security_warned_HTR
+        NOT = { has_country_flag = terra_security_warning_mature_HTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = HTR value = -1000 }
+}
+terra_security_notice_period_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_dip_pair_valid = { TARGET = PLM }
+        has_country_flag = terra_security_warned_PLM
+        NOT = { has_country_flag = terra_security_warning_mature_PLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = declare_war id = PLM value = -1000 }
+}
 
 terra_security_contain_public_threat_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
@@ -1611,6 +1644,48 @@ terra_security_contain_public_threat_PSE = {
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = contain id = PSE value = 70 }
+}
+terra_security_contain_public_threat_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = GRM }
+        has_country_flag = terra_security_threat_GRM
+        GRM = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = GRM }
+        NOT = { has_non_aggression_pact_with = GRM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = GRM value = 70 }
+}
+terra_security_contain_public_threat_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = HTR }
+        has_country_flag = terra_security_threat_HTR
+        HTR = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = HTR }
+        NOT = { has_non_aggression_pact_with = HTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = HTR value = 70 }
+}
+terra_security_contain_public_threat_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        terra_security_actor_allowed = yes
+        terra_dip_pair_valid = { TARGET = PLM }
+        has_country_flag = terra_security_threat_PLM
+        PLM = { terra_security_public_danger = yes }
+        NOT = { is_in_faction_with = PLM }
+        NOT = { has_non_aggression_pact_with = PLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = contain id = PLM value = 70 }
 }
 
 terra_security_defensive_coordination_KTH = {
@@ -1642,6 +1717,51 @@ terra_security_defensive_coordination_PSE = {
     ai_strategy = { type = alliance id = PSE value = 55 }
     ai_strategy = { type = diplo_action_acceptance id = PSE target = offer_join_faction value = 25 }
     ai_strategy = { type = diplo_action_desire id = PSE target = join_faction value = 20 }
+}
+terra_security_defensive_coordination_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_GRM
+        terra_security_can_coordinate = { PARTNER = GRM }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = GRM value = 40 }
+    ai_strategy = { type = alliance id = GRM value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = GRM target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = GRM target = join_faction value = 20 }
+}
+terra_security_defensive_coordination_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HTR
+        terra_security_can_coordinate = { PARTNER = HTR }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = HTR value = 40 }
+    ai_strategy = { type = alliance id = HTR value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = HTR target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = HTR target = join_faction value = 20 }
+}
+terra_security_defensive_coordination_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_PLM
+        terra_security_can_coordinate = { PARTNER = PLM }
+        NOT = { terra_dip_exhausted = yes }
+        check_variable = { terra_state_fatigue < 70 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = befriend id = PLM value = 40 }
+    ai_strategy = { type = alliance id = PLM value = 55 }
+    ai_strategy = { type = diplo_action_acceptance id = PLM target = offer_join_faction value = 25 }
+    ai_strategy = { type = diplo_action_desire id = PLM target = join_faction value = 20 }
 }
 
 terra_security_protect_common_target_KTH = {
@@ -1675,6 +1795,54 @@ terra_security_protect_common_target_PSE = {
     abort_when_not_enabled = yes
     ai_strategy = { type = protect id = PSE value = 45 }
     ai_strategy = { type = diplo_action_desire id = PSE target = guarantee value = 25 }
+}
+terra_security_protect_common_target_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_GRM
+        terra_security_can_coordinate = { PARTNER = GRM }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = GRM }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = GRM value = 45 }
+    ai_strategy = { type = diplo_action_desire id = GRM target = guarantee value = 25 }
+}
+terra_security_protect_common_target_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_HTR
+        terra_security_can_coordinate = { PARTNER = HTR }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = HTR }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = HTR value = 45 }
+    ai_strategy = { type = diplo_action_desire id = HTR target = guarantee value = 25 }
+}
+terra_security_protect_common_target_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes
+        has_country_flag = terra_security_coalition_PLM
+        terra_security_can_coordinate = { PARTNER = PLM }
+        has_war = no
+        NOT = { terra_dip_exhausted = yes }
+        NOT = { has_guaranteed = PLM }
+        check_variable = { terra_state_fatigue < 50 }
+        has_country_flag = terra_state_goal_security
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = protect id = PLM value = 45 }
+    ai_strategy = { type = diplo_action_desire id = PLM target = guarantee value = 25 }
 }
 
 terra_security_notice_period_VNH = {

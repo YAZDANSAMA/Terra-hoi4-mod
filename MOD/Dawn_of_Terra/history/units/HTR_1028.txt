@@ -1,0 +1,118 @@
+# Existing western garrison reassigned from Sargon; original composition retained.
+division_template = {
+    name = "Hatran Infantry Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+units = {
+    division = {
+        name = "9th Western Royal Division"
+        location = 1647
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "10th Western Royal Division"
+        location = 6407
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "14th Western Royal Division"
+        location = 1650
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "15th Western Royal Division"
+        location = 1646
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "16th Western Royal Division"
+        location = 7632
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "17th Western Royal Division"
+        location = 7633
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "18th Western Royal Division"
+        location = 7635
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "19th Western Royal Division"
+        location = 7626
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "20th Western Royal Division"
+        location = 7628
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "29th Western Royal Division"
+        location = 6624
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "30th Western Royal Division"
+        location = 6628
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "31st Western Royal Division"
+        location = 1649
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "32nd Western Royal Division"
+        location = 4107
+        division_template = "Hatran Infantry Division"
+        start_experience_factor = 0.20
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+}

@@ -2420,6 +2420,63 @@ terra_refresh_wartime_routes_effect = {
     }
     if = {
         limit = {
+            is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = GRM } }
+            country_exists = GRM
+            GRM = { has_capitulated = no }
+            has_war_together_with = GRM
+            NOT = { has_war_with = GRM }
+            OR = {
+                is_subject_of = GRM
+                GRM = { is_subject_of = ROOT }
+                is_in_faction_with = GRM
+                AND = { is_subject = yes overlord = { has_subject = GRM } }
+            }
+            NOT = { has_military_access_to = GRM }
+        }
+        GRM = { give_military_access = ROOT }
+        set_country_flag = terra_wartime_access_from_GRM
+    }
+    if = {
+        limit = {
+            is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = HTR } }
+            country_exists = HTR
+            HTR = { has_capitulated = no }
+            has_war_together_with = HTR
+            NOT = { has_war_with = HTR }
+            OR = {
+                is_subject_of = HTR
+                HTR = { is_subject_of = ROOT }
+                is_in_faction_with = HTR
+                AND = { is_subject = yes overlord = { has_subject = HTR } }
+            }
+            NOT = { has_military_access_to = HTR }
+        }
+        HTR = { give_military_access = ROOT }
+        set_country_flag = terra_wartime_access_from_HTR
+    }
+    if = {
+        limit = {
+            is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = PLM } }
+            country_exists = PLM
+            PLM = { has_capitulated = no }
+            has_war_together_with = PLM
+            NOT = { has_war_with = PLM }
+            OR = {
+                is_subject_of = PLM
+                PLM = { is_subject_of = ROOT }
+                is_in_faction_with = PLM
+                AND = { is_subject = yes overlord = { has_subject = PLM } }
+            }
+            NOT = { has_military_access_to = PLM }
+        }
+        PLM = { give_military_access = ROOT }
+        set_country_flag = terra_wartime_access_from_PLM
+    }
+    if = {
+        limit = {
             has_country_flag = terra_wartime_access_from_KTH
             NOT = { is_ai = yes has_capitulated = no num_divisions > 0
             NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = KTH } }
@@ -2461,6 +2518,72 @@ terra_refresh_wartime_routes_effect = {
             diplomatic_relation = { country = PSE relation = military_access active = no }
         }
         clr_country_flag = terra_wartime_access_from_PSE
+    }
+    if = {
+        limit = {
+            has_country_flag = terra_wartime_access_from_GRM
+            NOT = { is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = GRM } }
+            country_exists = GRM
+            GRM = { has_capitulated = no }
+            has_war_together_with = GRM
+            NOT = { has_war_with = GRM }
+            OR = {
+                is_subject_of = GRM
+                GRM = { is_subject_of = ROOT }
+                is_in_faction_with = GRM
+                AND = { is_subject = yes overlord = { has_subject = GRM } }
+            } }
+        }
+        if = {
+            limit = { country_exists = GRM has_military_access_to = GRM }
+            diplomatic_relation = { country = GRM relation = military_access active = no }
+        }
+        clr_country_flag = terra_wartime_access_from_GRM
+    }
+    if = {
+        limit = {
+            has_country_flag = terra_wartime_access_from_HTR
+            NOT = { is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = HTR } }
+            country_exists = HTR
+            HTR = { has_capitulated = no }
+            has_war_together_with = HTR
+            NOT = { has_war_with = HTR }
+            OR = {
+                is_subject_of = HTR
+                HTR = { is_subject_of = ROOT }
+                is_in_faction_with = HTR
+                AND = { is_subject = yes overlord = { has_subject = HTR } }
+            } }
+        }
+        if = {
+            limit = { country_exists = HTR has_military_access_to = HTR }
+            diplomatic_relation = { country = HTR relation = military_access active = no }
+        }
+        clr_country_flag = terra_wartime_access_from_HTR
+    }
+    if = {
+        limit = {
+            has_country_flag = terra_wartime_access_from_PLM
+            NOT = { is_ai = yes has_capitulated = no num_divisions > 0
+            NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ tag = PLM } }
+            country_exists = PLM
+            PLM = { has_capitulated = no }
+            has_war_together_with = PLM
+            NOT = { has_war_with = PLM }
+            OR = {
+                is_subject_of = PLM
+                PLM = { is_subject_of = ROOT }
+                is_in_faction_with = PLM
+                AND = { is_subject = yes overlord = { has_subject = PLM } }
+            } }
+        }
+        if = {
+            limit = { country_exists = PLM has_military_access_to = PLM }
+            diplomatic_relation = { country = PLM relation = military_access active = no }
+        }
+        clr_country_flag = terra_wartime_access_from_PLM
     }
     if = {
         limit = {

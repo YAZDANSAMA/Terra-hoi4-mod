@@ -8,10 +8,45 @@ terra_sgn_initialize_reserves_effect = {
             tag = SGN
             NOT = { has_country_flag = terra_sgn_starting_reserves_set }
         }
-        # 37,687,232 * 0.025 + 1,459,820 - 402,000 in the army
+        # 27,525,293 * 0.025 + 1,479,868 - 168,000 in the army
         # leaves approximately 2,000,000 free recruits at the 1028 start.
-        add_manpower = 1459820
+        add_manpower = 1479868
         set_country_flag = terra_sgn_starting_reserves_set
+    }
+}
+
+# The western garrisons' existing soldiers accompany their new owners.
+# These setup-only credits are deducted from Sargon's historical reserves.
+terra_grm_initialize_transferred_army_effect = {
+    if = {
+        limit = {
+            tag = GRM
+            NOT = { has_country_flag = terra_grm_transferred_army_set }
+        }
+        add_manpower = 90000
+        set_country_flag = terra_grm_transferred_army_set
+    }
+}
+
+terra_htr_initialize_transferred_army_effect = {
+    if = {
+        limit = {
+            tag = HTR
+            NOT = { has_country_flag = terra_htr_transferred_army_set }
+        }
+        add_manpower = 78000
+        set_country_flag = terra_htr_transferred_army_set
+    }
+}
+
+terra_plm_initialize_transferred_army_effect = {
+    if = {
+        limit = {
+            tag = PLM
+            NOT = { has_country_flag = terra_plm_transferred_army_set }
+        }
+        add_manpower = 66000
+        set_country_flag = terra_plm_transferred_army_set
     }
 }
 

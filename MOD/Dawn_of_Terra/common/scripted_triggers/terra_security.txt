@@ -299,6 +299,27 @@ terra_security_has_shared_threat = {
             $PARTNER$ = { NOT = { tag = PSE } }
         }
         AND = {
+            has_country_flag = terra_security_threat_GRM
+            $PARTNER$ = { has_country_flag = terra_security_threat_GRM }
+            GRM = { terra_security_public_danger = yes }
+            NOT = { tag = GRM }
+            $PARTNER$ = { NOT = { tag = GRM } }
+        }
+        AND = {
+            has_country_flag = terra_security_threat_HTR
+            $PARTNER$ = { has_country_flag = terra_security_threat_HTR }
+            HTR = { terra_security_public_danger = yes }
+            NOT = { tag = HTR }
+            $PARTNER$ = { NOT = { tag = HTR } }
+        }
+        AND = {
+            has_country_flag = terra_security_threat_PLM
+            $PARTNER$ = { has_country_flag = terra_security_threat_PLM }
+            PLM = { terra_security_public_danger = yes }
+            NOT = { tag = PLM }
+            $PARTNER$ = { NOT = { tag = PLM } }
+        }
+        AND = {
             has_country_flag = terra_security_threat_VNH
             $PARTNER$ = { has_country_flag = terra_security_threat_VNH }
             VNH = { terra_security_public_danger = yes }

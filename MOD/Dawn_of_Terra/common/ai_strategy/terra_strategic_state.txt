@@ -652,6 +652,39 @@ terra_state_subject_loyalty_PSE = {
     ai_strategy = { type = diplo_action_acceptance id = PSE target = call_allies value = 1000 }
     ai_strategy = { type = diplo_action_desire id = PSE target = join_allies value = 1000 }
 }
+terra_state_subject_loyalty_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = GRM
+        country_exists = GRM GRM = { has_war = yes }
+        NOT = { has_war_with = GRM } NOT = { has_war_together_with = GRM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = GRM target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = GRM target = join_allies value = 1000 }
+}
+terra_state_subject_loyalty_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HTR
+        country_exists = HTR HTR = { has_war = yes }
+        NOT = { has_war_with = HTR } NOT = { has_war_together_with = HTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = HTR target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = HTR target = join_allies value = 1000 }
+}
+terra_state_subject_loyalty_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = PLM
+        country_exists = PLM PLM = { has_war = yes }
+        NOT = { has_war_with = PLM } NOT = { has_war_together_with = PLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = diplo_action_acceptance id = PLM target = call_allies value = 1000 }
+    ai_strategy = { type = diplo_action_desire id = PLM target = join_allies value = 1000 }
+}
 
 terra_state_subject_front_support_KTH = {
     allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
@@ -672,6 +705,36 @@ terra_state_subject_front_support_PSE = {
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = force_defend_ally_borders id = PSE value = 100 }
+}
+terra_state_subject_front_support_GRM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = GRM
+        country_exists = GRM has_war_together_with = GRM num_divisions > 0
+        NOT = { has_war_with = GRM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = GRM value = 100 }
+}
+terra_state_subject_front_support_HTR = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = HTR
+        country_exists = HTR has_war_together_with = HTR num_divisions > 0
+        NOT = { has_war_with = HTR }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = HTR value = 100 }
+}
+terra_state_subject_front_support_PLM = {
+    allowed = { NOT = { OR = { original_tag = SST original_tag = SEA original_tag = TNJ } } }
+    enable = {
+        is_ai = yes terra_state_subject_duty = yes is_subject_of = PLM
+        country_exists = PLM has_war_together_with = PLM num_divisions > 0
+        NOT = { has_war_with = PLM }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = PLM value = 100 }
 }
 
 terra_state_subject_loyalty_VNH = {
