@@ -23,16 +23,18 @@ army, with positive division demand and one forced native training request. It
 uses normal recruitment, production and training costs; no units or equipment are
 granted and no subject's country-wide template lock is removed.
 
-Eligibility: AI subject, owned territory, non-capitulated, infantry technology,
-at least one military factory, more than 15,000 free manpower, more than 900 spare
-infantry equipment, and fewer than 24 divisions at peace or 48 at war. Original
-TNJ, SST and SEA are excluded. These are ceilings for this additional request,
-not hard engine caps on all recruitment. They do not guarantee instant deployment:
+Current eligibility: AI subject, owned territory, non-capitulated, infantry
+technology, sufficient spare manpower/weapons, and room in a country-sized
+training goal. A domestic military factory is no longer required to train with
+received equipment. The [global AI repair](global_ai_repair.md) replaces the former
+15,000-man/factory requirement and fixed 24/48 request thresholds with a shared
+reserve calculation and territory/industry budget. Original TNJ, SST and SEA are
+excluded. The goal limits this additional request, not native recruitment. These requests do not guarantee instant deployment:
 reinforcement demand, available factory output, equipment variants, recruitment
 queues and native autonomy rules still matter. An integrated subject may deploy
 its units to its overlord under the normal game rules.
 
-Verification on 2026-10-15: 119 AST regression scenarios passed, including the
+Historical verification on 2026-10-15 (before the global repair): 119 AST regression scenarios passed, including the
 1028/1029 calendar boundary, old TNJ armies/late deployments, Vouivre's 21 starting
 divisions and Minos's 15, registry-wide subject eligibility, resource gates and
 peacetime/wartime thresholds. The source/asset checks passed. New script files

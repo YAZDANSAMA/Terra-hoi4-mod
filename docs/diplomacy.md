@@ -74,29 +74,20 @@ The director expresses preferences through native AI strategies. A country can p
 
 Native engine rules remain authoritative. Strategies can change willingness; they cannot make an otherwise illegal justification, declaration, guarantee, faction invitation, or treaty legal. Decisions do not force a war, impose peace, annex territory, move armies, grant free resources or factories, or forcibly change faction membership.
 
-## Negotiating as a player
+## Automatic negotiations and removed decision menus
 
-Open **The Diplomatic Desk** in the decisions interface as an eligible sovereign human-controlled country. Each action targets a specific eligible sovereign partner:
+The Diplomatic Desk category and all five manual actions (briefing, envoy,
+reconciliation, cooperation and restraint) have been removed from Decisions.
+Together with Strategic Council and Promises and Bargaining, all custom menus
+introduced by this AI director are now absent. Comment-only files at their old
+paths overwrite old UI definitions when installing an updated ZIP over the mod.
+Restart HOI4 after replacing the files.
 
-| Action | Political-power cost | Re-enable delay |
-| --- | --- | --- |
-| Read the partner's position | 0 | 7 days |
-| Open a channel with an envoy | 15 | 30 days |
-| Rebuild confidence | 35 | 120 days |
-| Propose cooperation | 40 | 180 days |
-| Negotiate reciprocal restraint | 25 | 90 days |
-
-Paid requests share an additional country-wide seven-day outbound cooldown. Requests arrive after three days; the partner's response is then chosen by its AI preferences or the receiving human player. The briefing reports the **target's assessment of the reader**, including trust, territorial disputes, blocs, pressure, personality, and common interests. Trust and grievance change immediately, while utility and pressure normally refresh weekly, so a brief can contain a recent memory change alongside the previous weekly score. It is an assessment, not a guarantee of the next reply.
-
-Responses use authored event text selected by game conditions and profile. Outcomes include acceptance, guarded contact, a smaller cooperation counterproposal, or a respectful reasoned refusal. Refusal can cite a breach of trust, disputed territory, rival blocs or war goals, domestic pressure, or inadequate benefit. If the pair becomes invalid before delivery or signature, the exchange closes without imposing an agreement. This is structured diplomacy, not free-text chat or an LLM response; a deferred exchange does not automatically retry or create a ceasefire.
-
-An accepted cooperation offer improves relations, memory, and diplomatic preferences. It does not transfer trade resources or factories, grant an economic bonus, or add a country to a faction. Accepted reciprocal restraint can establish a native non-aggression pact when both countries remain alive, sovereign, at peace with each other, and in compatible diplomatic circumstances. The delayed response checks the pair again instead of assuming that the situation at the time of sending still exists.
-
-Full cooperation adds bilateral trust and goodwill; a smaller pilot returns to the initiating government for an actual accept/reject choice without an additional political-power charge. Guarded restraint opens limited channels without creating a pact. Respectful refusal does not add a new grievance merely because the offer was rejected.
-
-Invalidated paid requests return their original political-power cost to the human sender; an unsolicited AI offer has no player-paid cost to refund. Late acceptance rechecks the relationship too. Monthly AI outreach has a 180-day cooldown for the sending country and a 90-day invitation cooldown for the human recipient. It offers a real cooperation choice rather than assuming the human accepts.
-
-Delayed conversations retain the sender and recipient through country-event scopes, with no mutable global target shared between negotiations. Independent conversations in multiplayer must not reuse another pair's context. A player remains free to reject an offer. Requests or answers that no longer have valid countries or a legal relationship must stop safely.
+Automatic AI outreach and already-pending diplomatic events continue to use their
+existing guards, authored replies, bilateral memory and ordinary resource costs.
+A human recipient can still respond to an incoming event; no decision click is
+needed to activate the AI. Removing the menus does not add or remove war, peace,
+faction membership, equipment or factories.
 
 ## Existing mod integration
 
@@ -123,11 +114,11 @@ Game paths below are relative to `MOD/Dawn_of_Terra/`:
 | `common/on_actions/terra_diplomacy.txt` | Startup, daily initialization, weekly scores, monthly memory/outreach, declaration, joining an ally, and lend-lease hooks. |
 | `common/ai_strategy/terra_diplomacy.txt` | Reversible native friendship, alliance, restraint, containment, preparation, legal-war, guarantees and partner-call preferences. |
 | `common/opinion_modifiers/terra_diplomacy.txt` | Timed and decaying native opinion effects, independent of persistent memory. |
-| `common/decisions/categories/terra_diplomatic_desk.txt` | Sovereign player visibility and the diplomatic decision category. |
-| `common/decisions/terra_diplomatic_desk.txt` | Targeted briefing, envoy, reconciliation, cooperation and restraint decisions, costs, cooldowns and delayed delivery. |
+| `common/decisions/categories/terra_diplomatic_desk.txt` | Comment-only compatibility file; no decision category. |
+| `common/decisions/terra_diplomatic_desk.txt` | Comment-only compatibility file; all manual diplomacy actions removed. |
 | `common/scripted_effects/terra_diplomatic_outreach.txt` | Bilateral dialogue effects, reasoned refusal dispatch and AI outreach. |
 | `events/terra_diplomacy_events.txt` | Safe request routing, authored response choices, pilot counteroffers, treaty signatures, briefings, invalidation refunds and invitations. |
-| `localisation/english/terra_diplomacy_l_english.yml` | Player-facing decision labels, dialogue, outcome descriptions and briefings. |
+| `localisation/english/terra_diplomacy_l_english.yml` | Automatic dialogue, outcome descriptions and event briefings. |
 | `common/ai_strategy/terra_allied_cooperation.txt` | Existing fallback call/accept integration and unchanged shared-war front help. |
 
 The repository's `tools/validate_diplomacy.py` is a read-only developer check and limited script regression evaluator. Run it with `python3 tools/validate_diplomacy.py`; Python is not required to play the mod.
@@ -167,7 +158,7 @@ Run with only the intended Dawn of Terra content enabled, use a fresh campaign a
 | Cooperation and commercial ties | Relations and willingness change; no free material resources, factories, or army transfers appear. |
 | Betrayal and human provocation | Coercive human actions or breaking a relevant relationship affect the correct partner's memory and later behavior; forgiveness is gradual. |
 | AI invitation to a human | The invitation names the correct country; accepting and declining work; the cooldown prevents repeated popups. |
-| Concurrent multiplayer conversations | Two human senders negotiating with the same AI receive their own outcomes; no shared temporary target mixes up the pairs. |
+| Pending multiplayer exchanges from an older save | Two senders receive their own outcomes; no shared temporary target mixes up the pairs. |
 | Save and reload | Trust, grudges, profile, treaty state, cooldowns, and pending responses remain coherent; no duplicate invitations or reset personalities. |
 | Annexation while a response is pending | Response aborts safely; no references apply to an unrelated replacement country. |
 | Landless or later released country | It receives no active diplomacy while landless and initializes when it becomes a valid participant. |

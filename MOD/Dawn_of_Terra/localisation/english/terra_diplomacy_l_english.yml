@@ -1,19 +1,5 @@
 ﻿l_english:
- # Native diplomatic decisions, reasoned replies, and readable memories.
- terra_diplomatic_desk:0 "The Diplomatic Desk"
- terra_diplomatic_desk_desc:0 "Every government remembers how it has been treated. Send envoys, acknowledge old disputes, test practical cooperation, or negotiate mutual restraint. Replies reflect the other government's interests, character, trust, grievances, and domestic pressures. A polite refusal does not create an enemy; promises broken later are remembered. The diplomatic brief explains their current position before you spend political capital."
- terra_read_diplomatic_position:0 "Read [FROM.GetName]'s position"
- terra_read_diplomatic_position_desc:0 "Ask our diplomatic service for an assessment of [FROM.GetName]. The brief distinguishes their trust, unresolved territorial disputes, conflicting blocs, domestic pressure, and willingness to cooperate. It describes a current assessment, not a guarantee of their next choice."
- terra_send_envoy:0 "Open a channel with [FROM.GetName]"
- terra_send_envoy_desc:0 "Send an envoy without an ultimatum. A receptive government may open regular channels; a cautious one may agree only to limited talks. Neither response creates an alliance. Replies arrive after three days."
- terra_rebuild_confidence:0 "Rebuild confidence with [FROM.GetName]"
- terra_rebuild_confidence_desc:0 "Acknowledge past disputes and offer a credible path back to normal relations. Acceptance reduces grievances and builds trust, but does not erase a history of betrayal in one meeting. Territorial claims and current strategic interests still matter."
- terra_offer_cooperation:0 "Propose cooperation with [FROM.GetName]"
- terra_offer_cooperation_desc:0 "Propose a working relationship on trade and diplomatic coordination. They can accept, suggest a smaller pilot, or decline with a reason. The agreement improves goodwill and foreign-policy preferences; it does not transfer resources, factories, or faction membership."
- terra_propose_restraint:0 "Negotiate restraint with [FROM.GetName]"
- terra_propose_restraint_desc:0 "Offer reciprocal restraint between sovereign governments outside the same faction. Full acceptance creates a real non-aggression pact under the normal game rules. A guarded reply opens dialogue without signing a pact. Existing wars, subject status, or incompatible blocs prevent a signature."
- terra_dip_envoy_available_tt:0 "Our diplomatic service can handle another approach (seven days between outbound requests)."
- terra_dip_request_sent_tt:0 "An envoy departs. A reply is expected in three days. If sovereignty, war, or treaty circumstances invalidate the approach before delivery, the political-power cost is returned."
+ # Native automatic diplomatic dialogue and readable memories.
  terra_dip_valid_talks_tt:0 "Both governments remain sovereign, active, and at peace with one another."
  terra_dip_full_cooperation_tt:0 "Builds bilateral trust and goodwill for one year. No faction membership or material transfers are included."
  terra_dip_pilot_cooperation_tt:0 "Offers limited cooperation. The other government must agree before modest trust and goodwill are added."

@@ -6,7 +6,7 @@
 
 بخش **Strategic Council** و گزارش‌های مربوط به آن از دیسیژن‌ها حذف شده‌اند تا فهرست شلوغ نشود. AI به‌صورت خودکار اجرا می‌شود و برای فعال‌شدن به دیسیژن نیاز ندارد.
 
-بخش دیپلماسی قبلی برای فرستادن فرستاده، بازسازی اعتماد، پیشنهاد همکاری و خویشتن‌داری باقی مانده است. دیسیژن‌های بخش **Promises and Bargaining** شامل **Offer aid** و **Offer protection** هم حذف شده‌اند. پیشنهادهای خودکار AI و قراردادهای موجود همچنان از طریق رویدادها پردازش می‌شوند؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
+بخش **The Diplomatic Desk** هم همراه با گزینه‌های دستیِ فرستادن فرستاده، بازسازی اعتماد، همکاری، خویشتن‌داری و گزارش دیپلماتیک از دیسیژن‌ها حذف شده است. دیسیژن‌های بخش **Promises and Bargaining** شامل **Offer aid** و **Offer protection** هم حذف شده‌اند. پیشنهادهای خودکار AI و قراردادهای موجود همچنان از طریق رویدادها پردازش می‌شوند؛ طرف مقابل می‌تواند رد کند یا پیشنهاد کوچک‌تر بدهد و امضای نهایی جداگانه لازم است. وعدهٔ تسلیحاتی از تجهیزات واقعی کشور ارسال‌کننده تأمین می‌شود. پذیرفتن تضمین دفاعی، به‌تنهایی فرمان ورود اجباری بازیکن به جنگ صادر نمی‌کند؛ باید پیامدهای تعهد را در انتخاب‌های عادی دیپلماسی در نظر گرفت.
 
 برای بررسی رفتار، یک کمپین تازه شروع کن و تغییر رفتار کشورها را پس از چرخه‌های هفتگی دنبال کن. بارگذاری سیو موجود هم متغیرهای جدید را بدون پاک‌کردن حافظهٔ دیپلماتیک قبلی آماده می‌کند. فایل‌های داستان، شخصیت‌ها، فوکوس‌ها و روابط اولیهٔ سارگون پایهٔ سناریو می‌مانند.
 
@@ -16,7 +16,7 @@
 
 The implementation is a collection of reversible native strategies, scripted effects, decisions and authored events. HOI4 owns battle execution, pathfinding and equipment inventories. The shared-war correction now explicitly forms factions between eligible AI governments, while player membership remains voluntary. The development interpreter executes selected script primitives for regression scenarios; it is not an HOI4 emulator.
 
-After removing the home guard, enabling subject recruitment and dating Gaul's war to 1029, the current suite contains 119 regression scenarios, including the Gaul focus-war coverage. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
+The [global AI repair](global_ai_repair.md) documents the current economy, research, production, recruitment, fronts, air and naval changes and their validation limits. Earlier releases contained 119 regression scenarios, including the Gaul focus-war coverage. The latest [defensive coalition correction](defensive_coalition_fix.md) covers human Sargon attacking AI Bolivar and Columbia, real starting ideology permissions, the non-DLC faction path and a war-triggered check after one day. Its focused native check has zero errors. The earlier [pact correction](diplomacy_policy_fix.md) remains in effect. Evidence for the original strategic release, including its unresolved vanilla references, remains in [native_validation_strategic.md](native_validation_strategic.md).
 
 | Layer | Source files | Behavior |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ After removing the home guard, enabling subject recruitment and dating Gaul's wa
 | War director | `common/scripted_triggers/terra_war_director.txt`, matching AI strategies | Recovery fronts, home defense, rifle/transport demand, conditional enemy-specific opportunities and allied cooperation. |
 | Concrete commitments | `common/scripted_effects/terra_commitments.txt`, matching triggers and events | Negotiated arms shipments and time-limited defensive guarantees with completion, lapse and breach handling. |
 
-The country registry includes 31 fixed tags and D01–D50. New landless countries wait until they become valid participants. Siesta and Seaborn retain their original-tag exclusions. Ta-Netjer retains its protected military-policy treatment; it receives passive strategic state and transfers temple recruits while maintaining no standing army. Existing Sargon subjects, faction initialization and DLC safeguards remain intact.
+The country registry includes 35 fixed tags and D01–D50. New landless countries wait until they become valid participants. Siesta and Seaborn retain their original-tag exclusions. Ta-Netjer retains its protected military-policy treatment; it receives passive strategic state and transfers temple recruits while maintaining no standing army. Existing Sargon subjects, faction initialization and DLC safeguards remain intact.
 
 ### Persistent state
 
@@ -89,18 +89,18 @@ These are scenarios to run in HOI4, not claims that in-game testing has already 
 | 10. Shared danger | Before a common war, coordination preferences rise. Eligible independent AI countries actually fighting the same enemy can form a named faction; players and existing blocs are not enrolled. |
 | 11. Counteroffers and actual aid | Negotiate both aid quantities; final acceptance, insufficient stocks, grace period and delivery conserve real equipment and cannot deliver twice. |
 | 12. Defensive guarantees | Test both durations, a covered defensive war, refusal, voluntary release and annexation; only guarantees introduced by the contract are removed when it closes. |
-| 13. Fronts and logistics | Empty rifle or transport reserves while fighting several enemies; recovery priority wins over opportunistic attacks and production uses ordinary factories and technology. |
+| 13. Fronts and logistics | Empty rifle reserves while fighting several enemies; recovery priority wins over opportunistic attacks. Low spare trains/trucks alone change production demand, not global recovery. Production uses ordinary factories and technology. |
 | 14. Subject loyalty | Exhaust a Sargonian subject and call it to war; obligations retain their intended preference. |
 
 Repeat campaigns with multiple countries and several game years before treating strategy weights as balanced. Frequency, CPU cost, fronts, guarantees and equipment-selection details require native engine observation.
 
 ## Removed decision menus
 
-Strategic Council and Promises and Bargaining no longer define decision categories
-or manual actions. This removes the per-country Offer aid / Offer protection list,
+Strategic Council, Promises and Bargaining, and The Diplomatic Desk no longer define decision categories
+or manual actions. This removes all per-country lists added by the AI director: Open a channel, Rebuild confidence, cooperation, restraint, briefings, Offer aid and Offer protection,
 including its withdrawal/release actions. Existing automatic negotiation events,
 resource-conserving deliveries, deadlines and active contract cleanup remain.
 
-Comment-only files are retained at both old decision/category paths so extracting
+Comment-only files are retained at all three old decision/category path pairs so extracting
 a new ZIP over an older installation replaces the obsolete UI definitions. No
 visible category is declared in those files. Restart HOI4 after updating the mod.

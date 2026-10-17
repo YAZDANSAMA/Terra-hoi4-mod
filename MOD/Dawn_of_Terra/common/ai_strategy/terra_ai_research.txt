@@ -2,217 +2,217 @@
 
 terra_ai_research_basic_machine_tools = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1027.12.31 NOT = { has_tech = basic_machine_tools } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1027.12.31 NOT = { has_tech = basic_machine_tools } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_tech id = basic_machine_tools value = 100  }
 }
 
 terra_ai_research_construction1 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1027.12.31 NOT = { has_tech = construction1 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1027.12.31 NOT = { has_tech = construction1 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_tech id = construction1 value = 100  }
 }
 
 terra_ai_research_electronic_mechanical_engineering = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1027.12.31 NOT = { has_tech = electronic_mechanical_engineering } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1027.12.31 NOT = { has_tech = electronic_mechanical_engineering } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_tech id = electronic_mechanical_engineering value = 100  }
 }
 
 terra_ai_research_improved_machine_tools = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1028.12.31 NOT = { has_tech = improved_machine_tools } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1028.12.31 NOT = { has_tech = improved_machine_tools } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = improved_machine_tools value = 80  }
 }
 
 terra_ai_research_advanced_machine_tools = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1030.12.31 NOT = { has_tech = advanced_machine_tools } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1030.12.31 NOT = { has_tech = advanced_machine_tools } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = advanced_machine_tools value = 80  }
 }
 
 terra_ai_research_assembly_line_production = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1032.12.31 NOT = { has_tech = assembly_line_production } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1032.12.31 NOT = { has_tech = assembly_line_production } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = assembly_line_production value = 80  }
 }
 
 terra_ai_research_flexible_line = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1034.12.31 NOT = { has_tech = flexible_line } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1034.12.31 NOT = { has_tech = flexible_line } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = flexible_line value = 80  }
 }
 
 terra_ai_research_streamlined_line = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1034.12.31 NOT = { has_tech = streamlined_line } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1034.12.31 NOT = { has_tech = streamlined_line } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = streamlined_line value = 80  }
 }
 
 terra_ai_research_construction2 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1028.12.31 NOT = { has_tech = construction2 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1028.12.31 NOT = { has_tech = construction2 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = construction2 value = 80  }
 }
 
 terra_ai_research_construction3 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1030.12.31 NOT = { has_tech = construction3 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1030.12.31 NOT = { has_tech = construction3 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = construction3 value = 80  }
 }
 
 terra_ai_research_construction4 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1032.12.31 NOT = { has_tech = construction4 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1032.12.31 NOT = { has_tech = construction4 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = construction4 value = 80  }
 }
 
 terra_ai_research_construction5 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1034.12.31 NOT = { has_tech = construction5 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1034.12.31 NOT = { has_tech = construction5 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = construction5 value = 80  }
 }
 
 terra_ai_research_mechanical_computing = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1001.12.31 NOT = { has_tech = mechanical_computing } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1001.12.31 NOT = { has_tech = mechanical_computing } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = mechanical_computing value = 80  }
 }
 
 terra_ai_research_computing_machine = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1029.12.31 NOT = { has_tech = computing_machine } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1029.12.31 NOT = { has_tech = computing_machine } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = computing_machine value = 80  }
 }
 
 terra_ai_research_improved_computing_machine = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1031.12.31 NOT = { has_tech = improved_computing_machine } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1031.12.31 NOT = { has_tech = improved_computing_machine } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = improved_computing_machine value = 80  }
 }
 
 terra_ai_research_advanced_computing_machine = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1033.12.31 NOT = { has_tech = advanced_computing_machine } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1033.12.31 NOT = { has_tech = advanced_computing_machine } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = advanced_computing_machine value = 80  }
 }
 
 terra_ai_research_excavation1 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1001.12.31 NOT = { has_tech = excavation1 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1001.12.31 NOT = { has_tech = excavation1 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = excavation1 value = 80  }
 }
 
 terra_ai_research_excavation2 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1028.12.31 NOT = { has_tech = excavation2 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1028.12.31 NOT = { has_tech = excavation2 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = excavation2 value = 80  }
 }
 
 terra_ai_research_excavation3 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1030.12.31 NOT = { has_tech = excavation3 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1030.12.31 NOT = { has_tech = excavation3 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = excavation3 value = 80  }
 }
 
 terra_ai_research_excavation4 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1032.12.31 NOT = { has_tech = excavation4 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1032.12.31 NOT = { has_tech = excavation4 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = excavation4 value = 80  }
 }
 
 terra_ai_research_excavation5 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1034.12.31 NOT = { has_tech = excavation5 } num_of_civilian_factories > 0 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1034.12.31 NOT = { has_tech = excavation5 } num_of_civilian_factories > 0 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = excavation5 value = 80  }
 }
 
 terra_ai_research_concentrated_industry = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1001.12.31 NOT = { has_tech = concentrated_industry } num_of_military_factories < 12 has_tech = basic_machine_tools NOT = { has_tech = dispersed_industry } }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1001.12.31 NOT = { has_tech = concentrated_industry } num_of_military_factories < 12 has_tech = basic_machine_tools NOT = { has_tech = dispersed_industry } }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_tech id = concentrated_industry value = 100  }
 }
 
 terra_ai_research_dispersed_industry = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1001.12.31 NOT = { has_tech = dispersed_industry } num_of_military_factories > 11 has_tech = basic_machine_tools NOT = { has_tech = concentrated_industry } }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1001.12.31 NOT = { has_tech = dispersed_industry } num_of_military_factories > 11 has_tech = basic_machine_tools NOT = { has_tech = concentrated_industry } }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_tech id = dispersed_industry value = 100  }
 }
 
 terra_ai_research_concentrated_industry2 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1028.12.31 NOT = { has_tech = concentrated_industry2 } has_tech = concentrated_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1028.12.31 NOT = { has_tech = concentrated_industry2 } has_tech = concentrated_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = concentrated_industry2 value = 75  }
 }
 
 terra_ai_research_concentrated_industry3 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1030.12.31 NOT = { has_tech = concentrated_industry3 } has_tech = concentrated_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1030.12.31 NOT = { has_tech = concentrated_industry3 } has_tech = concentrated_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = concentrated_industry3 value = 75  }
 }
 
 terra_ai_research_concentrated_industry4 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1032.12.31 NOT = { has_tech = concentrated_industry4 } has_tech = concentrated_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1032.12.31 NOT = { has_tech = concentrated_industry4 } has_tech = concentrated_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = concentrated_industry4 value = 75  }
 }
 
 terra_ai_research_concentrated_industry5 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1034.12.31 NOT = { has_tech = concentrated_industry5 } has_tech = concentrated_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1034.12.31 NOT = { has_tech = concentrated_industry5 } has_tech = concentrated_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = concentrated_industry5 value = 75  }
 }
 
 terra_ai_research_dispersed_industry2 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1028.12.31 NOT = { has_tech = dispersed_industry2 } has_tech = dispersed_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1028.12.31 NOT = { has_tech = dispersed_industry2 } has_tech = dispersed_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = dispersed_industry2 value = 75  }
 }
 
 terra_ai_research_dispersed_industry3 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1030.12.31 NOT = { has_tech = dispersed_industry3 } has_tech = dispersed_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1030.12.31 NOT = { has_tech = dispersed_industry3 } has_tech = dispersed_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = dispersed_industry3 value = 75  }
 }
 
 terra_ai_research_dispersed_industry4 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1032.12.31 NOT = { has_tech = dispersed_industry4 } has_tech = dispersed_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1032.12.31 NOT = { has_tech = dispersed_industry4 } has_tech = dispersed_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = dispersed_industry4 value = 75  }
 }
 
 terra_ai_research_dispersed_industry5 = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1034.12.31 NOT = { has_tech = dispersed_industry5 } has_tech = dispersed_industry }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1034.12.31 NOT = { has_tech = dispersed_industry5 } has_tech = dispersed_industry }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = dispersed_industry5 value = 75  }
 }
@@ -520,14 +520,14 @@ terra_ai_research_improved_transport_plane = {
 
 terra_ai_research_radio_detection = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1001.12.31 NOT = { has_tech = radio_detection } num_of_civilian_factories > 17 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1001.12.31 NOT = { has_tech = radio_detection } num_of_civilian_factories > 17 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = radio_detection value = 55  }
 }
 
 terra_ai_research_centimetric_radar = {
     allowed = { terra_ai_civilian_profile_allowed = yes }
-    enable = { is_ai = yes has_capitulated = no num_of_owned_states > 0 date > 1031.12.31 NOT = { has_tech = centimetric_radar } num_of_civilian_factories > 17 }
+    enable = { is_ai = yes has_capitulated = no any_owned_state = { always = yes } date > 1031.12.31 NOT = { has_tech = centimetric_radar } num_of_civilian_factories > 17 }
     abort_when_not_enabled = yes
     ai_strategy = { type = research_weight_factor id = centimetric_radar value = 55  }
 }

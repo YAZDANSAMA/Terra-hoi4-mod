@@ -7,7 +7,7 @@ terra_design_generic_fighter = {
     roles = { air_fighter }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_fighter_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = small_plane_airframe
@@ -27,7 +27,7 @@ terra_design_generic_cas = {
     roles = { air_cas }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_cas_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = small_plane_cas_airframe
@@ -47,7 +47,7 @@ terra_design_generic_naval_bomber = {
     roles = { air_naval_bomber }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_naval_bomber_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = small_plane_naval_bomber_airframe
@@ -67,7 +67,7 @@ terra_design_generic_cv_fighter = {
     roles = { air_cv_fighter }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_cv_fighter_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_naval_factories > 24 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = cv_small_plane_airframe
@@ -87,7 +87,7 @@ terra_design_generic_cv_cas = {
     roles = { air_cv_cas }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_cv_cas_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_naval_factories > 24 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = cv_small_plane_cas_airframe
@@ -107,7 +107,7 @@ terra_design_generic_cv_naval_bomber = {
     roles = { air_cv_naval_bomber }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_cv_naval_bomber_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_naval_factories > 24 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_small_airframe has_tech = basic_small_airframe has_tech = improved_small_airframe has_tech = advanced_small_airframe has_tech = modern_small_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = cv_small_plane_naval_bomber_airframe
@@ -127,7 +127,7 @@ terra_design_generic_tactical_bomber = {
     roles = { air_tactical_bomber }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_tactical_bomber_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_military_factories > 23 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = medium_plane_airframe
@@ -147,7 +147,7 @@ terra_design_generic_heavy_fighter = {
     roles = { air_heavy_fighter }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_heavy_fighter_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_military_factories > 23 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = medium_plane_fighter_airframe
@@ -167,7 +167,7 @@ terra_design_generic_scout_plane = {
     roles = { air_scout_plane }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_scout_plane_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_military_factories > 17 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_medium_airframe has_tech = basic_medium_airframe has_tech = improved_medium_airframe has_tech = advanced_medium_airframe has_tech = modern_medium_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = medium_plane_scout_plane_airframe
@@ -186,7 +186,7 @@ terra_design_generic_strategic_bomber = {
     roles = { air_strategic_bomber }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_strategic_bomber_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_large_airframe has_tech = basic_large_airframe has_tech = improved_large_airframe has_tech = advanced_large_airframe has_tech = modern_large_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_military_factories > 39 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_large_airframe has_tech = basic_large_airframe has_tech = improved_large_airframe has_tech = advanced_large_airframe has_tech = modern_large_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = large_plane_airframe
@@ -205,7 +205,7 @@ terra_design_generic_maritime_patrol = {
     roles = { air_maritime_patrol }
     priority = { factor = 1 modifier = { factor = 0 is_ai = no } }
     terra_generic_maritime_patrol_current = {
-        enable = { has_dlc = "By Blood Alone" OR = { has_tech = iw_large_airframe has_tech = basic_large_airframe has_tech = improved_large_airframe has_tech = advanced_large_airframe has_tech = modern_large_airframe } num_of_military_factories > 0 }
+        enable = { OR = { original_tag = SEA AND = { num_of_military_factories > 29 naval_base > 0 terra_ai_air_design_budget = yes } } has_dlc = "By Blood Alone" OR = { has_tech = iw_large_airframe has_tech = basic_large_airframe has_tech = improved_large_airframe has_tech = advanced_large_airframe has_tech = modern_large_airframe } num_of_military_factories > 0 }
         priority = { factor = 1 }
         target_variant = {
             type = large_plane_maritime_patrol_plane_airframe
