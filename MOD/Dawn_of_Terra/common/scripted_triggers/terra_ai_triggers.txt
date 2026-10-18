@@ -12,26 +12,46 @@ terra_ai_can_expand_army = {
     has_manpower > 20000 has_equipment = { infantry_equipment > 1500 }
 }
 
-# Training spends stored weapons, not factory slots. Aid-funded countries with
-# no military industry must be able to train the same six-battalion foundation.
+# This is permission for an additional recruitment request, not a statement
+# that a queued division can already deploy. A rifle producer can supply the
+# queue as production arrives; a country without industry needs received guns.
 terra_ai_can_train_infantry = {
     terra_ai_profile_allowed = yes
     terra_ai_active = yes
     has_tech = infantry_weapons
-    terra_ai_growth_reserves_ready = yes
+    terra_ai_growth_manpower_ready = yes
+    OR = {
+        num_of_military_factories > 0
+        terra_ai_growth_rifles_ready = yes
+    }
 }
 
 terra_ai_growth_reserves_ready = {
+    terra_ai_growth_manpower_ready = yes
+    terra_ai_growth_rifles_ready = yes
+}
+
+terra_ai_growth_manpower_ready = {
     OR = {
         AND = {
             has_variable = terra_ai_manpower_reserve
-            has_variable = terra_ai_rifle_reserve
             has_manpower > terra_ai_manpower_reserve
-            has_equipment = { infantry_equipment > terra_ai_rifle_reserve }
         }
         AND = {
             NOT = { has_variable = terra_ai_manpower_reserve }
             has_manpower > 7500
+        }
+    }
+}
+
+terra_ai_growth_rifles_ready = {
+    OR = {
+        AND = {
+            has_variable = terra_ai_rifle_reserve
+            has_equipment = { infantry_equipment > terra_ai_rifle_reserve }
+        }
+        AND = {
+            NOT = { has_variable = terra_ai_rifle_reserve }
             has_equipment = { infantry_equipment > 750 }
         }
     }

@@ -59,13 +59,26 @@ terra_ai_small_peacetime_army = {
 }
 
 terra_ai_refill_before_recruiting = {
+    # Retire the original controller explicitly so an existing save can abort
+    # it. Keep its original entries for removal; it must never activate again.
     allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_ai_active = yes num_divisions > 0
-        NOT = { terra_ai_growth_reserves_ready = yes } }
+    enable = { always = no }
     abort_when_not_enabled = yes
     ai_strategy = { type = role_ratio id = infantry value = -100 }
     ai_strategy = { type = role_ratio id = area_defense value = -10 }
     ai_strategy = { type = build_army id = infantry value = -1 }
+    ai_strategy = { type = equipment_production_factor id = infantry value = 35 }
+    ai_strategy = { type = garrison_reinforcement_priority value = 50 }
+}
+
+terra_ai_reinforce_without_recruitment_lock = {
+    allowed = { terra_ai_profile_allowed = yes }
+    enable = { terra_ai_active = yes num_divisions > 0
+        NOT = { terra_ai_growth_reserves_ready = yes } }
+    abort_when_not_enabled = yes
+    # Preserve infantry/area-defense roles and normal recruitment demand.
+    # Stock needed by new divisions can arrive while they are in training.
+    # This profile only prioritizes real production and field replacements.
     ai_strategy = { type = equipment_production_factor id = infantry value = 35 }
     ai_strategy = { type = garrison_reinforcement_priority value = 50 }
 }

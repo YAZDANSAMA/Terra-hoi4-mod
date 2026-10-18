@@ -92,12 +92,12 @@ class GlobalAIRepairTests(unittest.TestCase):
         self.assertEqual(15, self.actor.attrs['num_divisions'])
         self.assertEqual(10000, self.actor.attrs['has_manpower'])
         self.assertTrue(self.runtime.trigger('terra_subject_can_recruit_infantry', self.scope))
-        self.assertFalse(self.profile('terra_ai_refill_before_recruiting', 'terra_ai_strategy.txt'))
+        self.assertFalse(self.profile('terra_ai_reinforce_without_recruitment_lock', 'terra_ai_strategy.txt'))
         # Spending the baseline six-battalion manpower cost leaves too little
         # for another request. The evaluator does not simulate actual training.
         self.actor.attrs['has_manpower'] -= 6000
         self.assertFalse(self.runtime.trigger('terra_subject_can_recruit_infantry', self.scope))
-        self.assertTrue(self.profile('terra_ai_refill_before_recruiting', 'terra_ai_strategy.txt'))
+        self.assertTrue(self.profile('terra_ai_reinforce_without_recruitment_lock', 'terra_ai_strategy.txt'))
 
     def test_real_athura_three_factory_start_can_replace_trains_without_freezing_front(self):
         self.load_history('PSE')
@@ -190,13 +190,15 @@ class GlobalAIRepairTests(unittest.TestCase):
         self.assertEqual(25000, self.actor.variables['terra_ai_manpower_reserve'])
         self.assertEqual(1500, self.actor.variables['terra_ai_rifle_reserve'])
         self.assertFalse(self.runtime.trigger('terra_ai_can_train_infantry', self.scope))
-        self.assertTrue(self.profile('terra_ai_refill_before_recruiting', 'terra_ai_strategy.txt'))
+        self.assertTrue(self.profile('terra_ai_reinforce_without_recruitment_lock', 'terra_ai_strategy.txt'))
         self.actor.attrs['has_manpower'] = 25001
         self.actor.stockpiles['infantry_equipment'] = 1500
-        self.assertFalse(self.runtime.trigger('terra_ai_can_train_infantry', self.scope))
+        self.assertTrue(self.runtime.trigger('terra_ai_can_train_infantry', self.scope))
+        self.assertFalse(self.runtime.trigger('terra_ai_growth_reserves_ready', self.scope))
+        self.assertTrue(self.profile('terra_ai_reinforce_without_recruitment_lock', 'terra_ai_strategy.txt'))
         self.actor.stockpiles['infantry_equipment'] = 1501
         self.assertTrue(self.runtime.trigger('terra_ai_can_train_infantry', self.scope))
-        self.assertFalse(self.profile('terra_ai_refill_before_recruiting', 'terra_ai_strategy.txt'))
+        self.assertFalse(self.profile('terra_ai_reinforce_without_recruitment_lock', 'terra_ai_strategy.txt'))
 
     def test_one_factory_country_alternates_rifle_and_train_floor_with_real_reserve(self):
         self.actor.attrs.update(num_of_military_factories=1, num_divisions=8)

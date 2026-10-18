@@ -52,11 +52,13 @@ class SubjectRecruitmentTests(unittest.TestCase):
         self.actor.attrs['num_of_military_factories'] = 0
         self.assertTrue(self.eligible())
 
-    def test_training_still_requires_real_men_weapons_and_infantry_technology(self):
+    def test_extra_request_requires_men_tech_and_equipment_or_domestic_production(self):
         for cause in ('equipment', 'tech', 'manpower', 'human', 'independent', 'capitulated'):
             with self.subTest(cause=cause):
                 self.setUp()
-                if cause == 'equipment': self.actor.stockpiles['infantry_equipment'] = 750
+                if cause == 'equipment':
+                    self.actor.attrs['num_of_military_factories'] = 0
+                    self.actor.stockpiles['infantry_equipment'] = 750
                 elif cause == 'tech': self.actor.technologies.clear()
                 elif cause == 'manpower': self.actor.attrs['has_manpower'] = 7500
                 elif cause == 'human': self.actor.attrs['is_ai'] = False

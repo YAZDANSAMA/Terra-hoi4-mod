@@ -24,7 +24,8 @@ uses normal recruitment, production and training costs; no units or equipment ar
 granted and no subject's country-wide template lock is removed.
 
 Current eligibility: AI subject, owned territory, non-capitulated, infantry
-technology, sufficient spare manpower/weapons, and room in a country-sized
+technology, sufficient spare manpower, production or stored/received weapons,
+and room in a country-sized
 training goal. A domestic military factory is no longer required to train with
 received equipment. The [global AI repair](global_ai_repair.md) replaces the former
 15,000-man/factory requirement and fixed 24/48 request thresholds with a shared
@@ -42,3 +43,9 @@ introduce no native schema/scope errors. Full CWTools validation still fails on
 existing vanilla-catalog references and unrelated mod diagnostics; those errors
 remain visible in `/tmp/terra-no-army-1029-1-report.json`. Native refunds, actual
 training and campaign behavior still require HOI4 playtesting.
+
+The [recruitment stall correction](infantry_recruitment_fix.md) retires the old
+profile that canceled basic infantry roles during shortages. Rifle producers may
+request training while equipment is still being produced; industry-free subjects
+still need received stock for the extra request. This is not a claim that native
+queues, actual delivery or in-game deployment have been verified.
