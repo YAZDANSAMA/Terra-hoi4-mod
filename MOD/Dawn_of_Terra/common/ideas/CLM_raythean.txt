@@ -8,16 +8,21 @@ ideas = {
 			}
 
 			available = {
-				mio:CLM_raythean_infantry_organization = {
+				has_dlc = "Arms Against Tyranny"
+				any_military_industrial_organization = {
+					is_military_industrial_organization = CLM_raythean_infantry_organization
 					has_mio_size > 4
 				}
-				mio:CLM_raythean_tank_organization = {
+				any_military_industrial_organization = {
+					is_military_industrial_organization = CLM_raythean_tank_organization
 					has_mio_size > 4
 				}
-				mio:CLM_raythean_aircraft_organization = {
+				any_military_industrial_organization = {
+					is_military_industrial_organization = CLM_raythean_aircraft_organization
 					has_mio_size > 4
 				}
-				mio:CLM_raythean_ships_organization = {
+				any_military_industrial_organization = {
+					is_military_industrial_organization = CLM_raythean_ships_organization
 					has_mio_size > 4
 				}
 			}

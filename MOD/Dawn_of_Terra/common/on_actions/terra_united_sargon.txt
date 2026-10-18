@@ -1,6 +1,6 @@
 on_actions = {
     on_startup = {
-        effect = { terra_initialize_united_sargon_effect = yes }
+        effect = { SGN = { terra_initialize_united_sargon_effect = yes } }
     }
     on_daily = {
         effect = {

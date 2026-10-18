@@ -5,7 +5,7 @@ terra_tnj_can_send_volunteers = {
     exists = yes
     has_capitulated = no
     has_idea = TNJ_temple_volunteers
-    has_manpower >= 2000
+    has_manpower > 1999
     SGN = {
         exists = yes
         has_capitulated = no
