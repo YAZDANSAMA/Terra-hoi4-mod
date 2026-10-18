@@ -1,13 +1,4 @@
-# Request ordinary paid training after the starting army, including at peace.
-terra_subject_recruit_infantry = {
-    allowed = { terra_ai_profile_allowed = yes }
-    enable = { terra_subject_can_recruit_infantry = yes }
-    abort_when_not_enabled = yes
-    ai_strategy = { type = build_army id = infantry value = 1 }
-    ai_strategy = { type = force_build_armies value = 1 }
-    ai_strategy = { type = ai_wanted_divisions_factor value = 45 }
-}
-
+# Story exception only. All other subjects use installed HOI4 AI.
 # TNJ has no standing army. No geographic buffers, fronts or teleporting.
 terra_tnj_no_army = {
     allowed = { original_tag = TNJ }

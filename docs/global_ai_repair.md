@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # بازبینی و اصلاح AI عمومی Dawn of Terra
 
 مبنای کار: `main` در کامیت `ed79cf9`، اکتبر ۲۰۲۶. این بسته اقتصاد، تحقیق،

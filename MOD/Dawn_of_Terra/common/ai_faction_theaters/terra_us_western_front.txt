@@ -1,12 +1,2 @@
-# A shared theater over the real Terra regions; valid for a human Sargon leader.
-terra_us_western_front = {
-    name = TERRA_US_WESTERN_FRONT
-    regions = { 1 2 4 10 13 14 16 20 21 22 27 }
-    can_skip_first_region = yes
-    preferred_countries = { SGN VVA MSN }
-    cancel = { OR = { has_war = no NOT = { country_exists = SGN } NOT = { OR = { tag = SGN is_in_faction_with = SGN } } } }
-    ai_will_do = {
-        base = 0
-        modifier = { add = 200 tag = SGN has_war = yes is_in_faction = yes }
-    }
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.

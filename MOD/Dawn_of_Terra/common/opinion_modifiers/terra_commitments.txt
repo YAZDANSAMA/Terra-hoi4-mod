@@ -1,5 +1,2 @@
-opinion_modifiers = {
-    terra_contract_delivered = { value = 15 decay = 1 days = 180 }
-    terra_contract_breached = { value = -30 decay = 1 days = 365 }
-    terra_contract_defense_honored = { value = 20 decay = 1 days = 180 }
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.

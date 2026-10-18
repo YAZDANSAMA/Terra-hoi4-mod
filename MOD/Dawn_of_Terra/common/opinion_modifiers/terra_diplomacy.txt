@@ -1,13 +1,2 @@
-# Timed native opinion memories complement the persistent bilateral trust/grievance variables.
-opinion_modifiers = {
-    terra_dip_open_channels = { value = 10 decay = 1 days = 180 }
-    terra_dip_trust_rebuilt = { value = 20 decay = 1 days = 360 }
-    terra_dip_cooperation = { value = 30 decay = 1 days = 540 }
-    terra_dip_restraint = { value = 15 decay = 1 days = 365 }
-    terra_dip_snub = { value = -10 decay = 1 days = 90 }
-    terra_dip_betrayal = { value = -60 decay = 1 days = 1080 }
-    terra_dip_broken_compact = { value = -20 decay = 1 days = 180 }
-    terra_dip_war_help = { value = 20 decay = 1 days = 180 }
-    terra_dip_lend_lease = { value = 10 decay = 1 days = 90 }
-    terra_dip_attacked = { value = -40 decay = 1 days = 720 }
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.

@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # Dawn of Terra strategic AI
 
 [اصلاح توقف ساخت پیاده‌نظام، ۱۸ اکتبر ۲۰۲۶](infantry_recruitment_fix.md).

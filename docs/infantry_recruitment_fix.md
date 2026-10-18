@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # رفع توقف درخواست ساخت پیاده‌نظام — ۱۸ اکتبر ۲۰۲۶
 
 گزارش بازیکن: کشورها تحقیق و تولید تجهیزات را ادامه می‌دهند و برنامهٔ جبهه

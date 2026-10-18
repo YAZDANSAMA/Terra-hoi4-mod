@@ -1,16 +1,2 @@
-# General fallback for any wartime Terra faction. Existing relationships
-# remain intact; the engine coordinates allied AI units, including in a
-# player-led faction. Subjects outside a faction also have the direct
-# force_defend_ally_borders rules above.
-terra_combined_front = {
-    name = TERRA_COMBINED_FRONT
-    regions = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 43 47 50 54 60 63 68 70 77 97 137 140 141 }
-    can_skip_first_region = yes
-    preferred_countries = { AGI BLV CLM HGS HGN HSS IBR KJG KZM KZD LTR LTH MNS RMB SMN SGN SRC URS VCT YAN TRR LGL VVA MSN WSG KTH PSE GRM HTR PLM VNH SCW D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 }
-    cancel = { OR = { has_war = no is_in_faction = no } }
-    ai_will_do = {
-        base = 100
-        modifier = { factor = 0 has_war = no }
-        modifier = { factor = 0 is_in_faction = no }
-    }
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.

@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # Strategic AI validation evidence
 
 Validated on 2026-10-14. HOI4 and Steam are not installed in the cloud environment, so these results do not establish in-game behavior, campaign balance, save compatibility or CPU performance.

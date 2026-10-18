@@ -1,5 +1,2 @@
-terra_subject_can_recruit_infantry = {
-    terra_ai_can_train_infantry = yes
-    is_subject = yes
-    terra_ai_training_headroom = yes
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.

@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # Defensive coalition bootstrap correction
 
 Updated 2026-10-15 after the report that player-controlled Sargon could fight Bolivar and Columbia without either AI forming a common faction. The reported game uses the non-DLC faction-creation path. The earlier non-aggression correction remains unchanged.

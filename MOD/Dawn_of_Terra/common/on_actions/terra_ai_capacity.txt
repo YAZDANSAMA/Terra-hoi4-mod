@@ -1,4 +1,2 @@
-on_actions = {
-    on_startup = { effect = { every_country = { terra_ai_refresh_capacity_effect = yes } } }
-    on_weekly = { effect = { terra_ai_refresh_capacity_effect = yes } }
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.

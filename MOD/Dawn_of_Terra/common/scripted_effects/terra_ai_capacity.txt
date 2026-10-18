@@ -1,25 +1,2 @@
-terra_ai_refresh_capacity_effect = {
-    if = {
-        limit = { terra_ai_active = yes terra_ai_profile_allowed = yes }
-        # Territory and usable industry matter; a single fixed 24/48 target
-        # over-recruits tiny countries and under-requests larger economies.
-        set_variable = { terra_ai_training_target = num_owned_states }
-        multiply_variable = { terra_ai_training_target = 2 }
-        add_to_variable = { terra_ai_training_target = num_of_military_factories }
-        add_to_variable = { terra_ai_training_target = 6 }
-        clamp_variable = { var = terra_ai_training_target min = 6 max = 96 }
-        if = {
-            limit = { has_war = yes }
-            multiply_variable = { terra_ai_training_target = 1.5 }
-            clamp_variable = { var = terra_ai_training_target min = 8 max = 144 }
-        }
-        # Reserve requirements scale with the standing army. They are spare
-        # resources for growth/foreign assistance, not measured field strength.
-        set_variable = { terra_ai_manpower_reserve = num_divisions }
-        multiply_variable = { terra_ai_manpower_reserve = 250 }
-        clamp_variable = { var = terra_ai_manpower_reserve min = 7500 max = 100000 }
-        set_variable = { terra_ai_rifle_reserve = num_divisions }
-        multiply_variable = { terra_ai_rifle_reserve = 15 }
-        clamp_variable = { var = terra_ai_rifle_reserve min = 750 max = 10000 }
-    }
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.
