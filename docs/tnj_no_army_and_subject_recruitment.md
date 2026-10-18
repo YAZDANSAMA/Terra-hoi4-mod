@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # Ta-Netjer without an army; recruitment for other subjects
 
 The requested sanctuary policy now removes Ta-Netjer's ten guards completely.

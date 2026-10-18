@@ -1,3 +1,6 @@
+> Historical implementation notes. The custom AI and its test counts below were retired.
+> See [the current native AI baseline](native_ai_baseline.md) for active behavior and validation.
+
 # Pact spam and wartime coalition correction
 
 Updated 2026-10-15, based on the report that countries flooded each other with non-aggression pacts at the start and did not create factions against a shared enemy.

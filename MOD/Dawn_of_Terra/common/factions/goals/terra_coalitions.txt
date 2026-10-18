@@ -1,6 +1,2 @@
-# A defensive charter, without equipment, factory or combat-stat rewards.
-terra_coalition_common_defense = {
-    name = terra_coalition_charter
-    description = terra_coalition_charter_desc
-    is_manifest = yes
-}
+# Retired by the native AI baseline; see docs/native_ai_baseline.md.
+# Keep this empty file so ZIP overlays replace the old custom controller.
