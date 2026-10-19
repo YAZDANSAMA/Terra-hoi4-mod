@@ -2,7 +2,7 @@ state = {
 	id = 170
 	name = "STATE_170"
 	manpower = 2878841
-	state_category = rural
+	state_category = megalopolis
 
 	resources = {
 		steel = 10
@@ -22,7 +22,6 @@ state = {
 			industrial_complex = 3
 			arms_factory = 3
 		}
-		add_extra_state_shared_building_slots = 6
 	}
 
 	provinces = {

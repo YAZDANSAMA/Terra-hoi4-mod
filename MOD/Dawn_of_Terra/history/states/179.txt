@@ -2,7 +2,7 @@ state = {
 	id = 179
 	name = "STATE_179"
 	manpower = 1184163
-	state_category = rural
+	state_category = large_city
 
 	resources = {
 		coal = 16
@@ -17,6 +17,7 @@ state = {
 		add_core_of = SGN
 		add_core_of = TNJ
 		buildings = {
+			industrial_complex = 1
 			infrastructure = 1
 		}
 	}

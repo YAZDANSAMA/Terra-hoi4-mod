@@ -42,11 +42,17 @@ class TaNetjerNoArmyTests(unittest.TestCase):
         self.assertEqual(88, self.other.attrs['num_divisions'])
 
     def test_other_country_cannot_execute_tnj_cleanup(self):
-        self.scope = self.runtime.scope('SGN')
-        self.daily()
-        self.assertEqual(10, self.actor.attrs['num_divisions'])
-        self.assertEqual(88, self.other.attrs['num_divisions'])
-        self.assertFalse(self.other.effects)
+        for tag in self.runtime.countries:
+            if tag == 'TNJ':
+                continue
+            with self.subTest(tag=tag):
+                self.scope = self.runtime.scope(tag)
+                other = self.runtime.country(tag)
+                other.attrs['num_divisions'] = 88
+                self.daily()
+                self.assertEqual(10, self.actor.attrs['num_divisions'])
+                self.assertEqual(88, other.attrs['num_divisions'])
+                self.assertFalse(other.effects)
 
 
 if __name__ == '__main__':

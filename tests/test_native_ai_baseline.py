@@ -1,8 +1,7 @@
-"""Verify the native-AI boundary, not HOI4 recruitment or combat behavior.
+"""Check Terra's native-policy boundary, not HOI4 recruitment or combat.
 
-The installed game's AI scripts are deliberately not vendored or simulated.
-These checks catch a blocked fallback, an old controller returning, or a
-story exception affecting an ordinary country.
+Upstream b4b5e78 supplies Terra AI profiles. These checks preserve their
+isolation and story exceptions and catch the raw BOM rejected in player logs.
 """
 import re
 import unittest
@@ -11,31 +10,50 @@ from tools.validate_diplomacy import MOD, Runtime, read, walk
 
 
 class NativeAIBaselineTests(unittest.TestCase):
-    def test_both_descriptors_allow_installed_generic_ai_files(self):
+    def test_both_descriptors_isolate_terra_ai_from_installed_earth_ai(self):
         required = {
             'common/ai_strategy', 'common/ai_templates', 'common/ai_equipment',
-            'common/ai_navy/goals', 'common/peace_conference/ai_peace',
+            'common/ai_navy/goals', 'common/ai_navy/fleet',
+            'common/ai_navy/taskforce', 'common/peace_conference/ai_peace',
         }
         descriptors = (MOD / 'descriptor.mod', MOD.parent / 'Dawn_of_Terra.mod')
         for path in descriptors:
             replacements = {n.value for n in read(path) if n.key == 'replace_path'}
             with self.subTest(path=path.name):
                 for target in required:
-                    self.assertFalse(any(target == root or target.startswith(root + '/')
-                                         for root in replacements), target)
+                    # The real log shows that replacing the naval parent path
+                    # alone did not exclude installed leaf-directory files.
+                    self.assertIn(target, replacements)
                 # Earth-specific focus plans and theaters do not fit Terra's map.
                 self.assertIn('common/ai_strategy_plans', replacements)
                 self.assertIn('common/ai_faction_theaters', replacements)
 
-    def test_only_the_two_documented_story_strategy_exceptions_remain(self):
+    def test_native_ai_files_use_plain_utf8_bytes_without_a_bom(self):
+        # read()/parse() normalize BOMs, hiding the byte the engine rejected.
+        for path in (MOD / 'common').rglob('*.txt'):
+            relative = path.relative_to(MOD).as_posix()
+            if not (relative.startswith('common/ai_') or
+                    relative.startswith('common/peace_conference/ai_peace/')):
+                continue
+            with self.subTest(file=relative):
+                raw = path.read_bytes()
+                self.assertFalse(raw.startswith(b'\xef\xbb\xbf'), relative)
+                self.assertNotIn('\ufeff', raw.decode('utf-8'))
+
+    def test_source_contains_story_exceptions_and_terra_profiles(self):
         profiles = {n.key: n for p in (MOD / 'common/ai_strategy').glob('*.txt')
                     for n in read(p)}
-        self.assertEqual({'terra_gaul_wait_for_1029', 'terra_tnj_no_army'}, set(profiles))
+        exceptions = {'terra_gaul_wait_for_1029', 'terra_tnj_no_army'}
+        self.assertTrue(exceptions <= set(profiles))
+        self.assertTrue(all(key in exceptions or key.startswith('terra_brain_') for key in profiles))
+        self.assertGreater(len(profiles), 2)
         for profile in profiles.values():
             self.assertEqual('yes', profile.scalar('abort_when_not_enabled'))
 
-    def test_no_custom_templates_designs_naval_goals_or_allied_theaters_load(self):
-        for directory in ('ai_templates', 'ai_equipment', 'ai_navy/goals', 'ai_faction_theaters'):
+    def test_source_contains_templates_designs_goals_and_no_old_theaters(self):
+        for directory in ('ai_templates', 'ai_equipment', 'ai_navy/goals'):
+            self.assertTrue([n for path in (MOD / 'common' / directory).glob('*.txt') for n in read(path)])
+        for directory in ('ai_faction_theaters',):
             for path in (MOD / 'common' / directory).glob('*.txt'):
                 with self.subTest(path=path):
                     self.assertEqual((), read(path))
@@ -70,22 +88,21 @@ class NativeAIBaselineTests(unittest.TestCase):
                         continue
                     self.assertIsNone(retired.match(node.key), f'{path}:{node.line}: {node.key}')
 
-    def test_standard_recruitment_is_not_replaced_by_a_new_scripted_workaround(self):
-        prohibited = {'add_ai_strategy', 'remove_ai_strategy', 'force_build_armies',
-                      'build_army', 'ai_wanted_divisions_factor', 'role_ratio'}
-        exceptions = {'common/ai_strategy/terra_subject_recruitment.txt'}
-        for directory in ('common/ai_strategy', 'common/scripted_effects', 'common/on_actions', 'events'):
+    def test_native_profiles_never_spawn_free_resources_or_suppress_regular_infantry(self):
+        prohibited = {'add_ai_strategy', 'remove_ai_strategy', 'create_unit', 'load_oob',
+                      'add_manpower', 'add_equipment_to_stockpile', 'set_technology'}
+        for directory in ('common/ai_strategy', 'common/ai_templates', 'common/ai_equipment'):
             for path in (MOD / directory).glob('*.txt'):
-                if path.relative_to(MOD).as_posix() in exceptions:
-                    continue
                 for node in walk(read(path)):
                     self.assertNotIn(node.key, prohibited, f'{path}:{node.line}')
                     if node.key == 'ai_strategy':
-                        self.assertNotIn(node.scalar('type'), prohibited, f'{path}:{node.line}')
+                        if path.name != 'terra_subject_recruitment.txt' and node.scalar('type') in {'role_ratio', 'build_army'}:
+                            self.assertGreaterEqual(float(node.scalar('value')), 0, f'{path}:{node.line}')
 
     def test_story_strategy_exceptions_never_apply_to_normal_countries(self):
         runtime = Runtime()
-        profiles = [n for p in (MOD / 'common/ai_strategy').glob('*.txt') for n in read(p)]
+        profiles = [n for p in (MOD / 'common/ai_strategy').glob('*.txt') for n in read(p)
+                    if n.key in {'terra_gaul_wait_for_1029', 'terra_tnj_no_army'}]
         # Real registry, including dynamic tags and the newest western satrapies.
         for tag in runtime.countries:
             if tag in {'LGL', 'TNJ'}:

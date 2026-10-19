@@ -1,5 +1,10 @@
 # Native AI baseline
 
+> Historical notes for v0.0.68. Upstream `b4b5e78` subsequently replaced this
+> fallback with Terra-specific native AI profiles. Current v0.0.74 behavior,
+> source checks and observed in-game results are documented in
+> [ai_load_fixes_0_0_74.md](ai_load_fixes_0_0_74.md).
+
 نسخهٔ `0.0.68-native-ai-baseline` کنترل‌کننده‌های عمومی AI مود را کنار می‌گذارد تا یک پایهٔ قابل بررسی بر اساس AI نصب‌شدهٔ HOI4 داشته باشیم. این تغییر ادعای رفع تأییدشدهٔ مشکل آموزش لشکر نیست؛ نتیجهٔ صف آموزش باید در خود بازی مشاهده شود.
 
 ## تغییرات فعال

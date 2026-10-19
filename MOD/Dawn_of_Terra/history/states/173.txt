@@ -2,7 +2,7 @@ state = {
 	id = 173
 	name = "STATE_173"
 	manpower = 4246514
-	state_category = rural
+	state_category = megalopolis
 
 	resources = {
 		tungsten = 10
@@ -10,16 +10,17 @@ state = {
 	}
 
 	history = {
+		add_extra_state_shared_building_slots = 8
 		victory_points = { 5268 5 }
 		victory_points = { 5269 15 }
 
 		owner = SGN
 		add_core_of = SGN
 		buildings = {
+			industrial_complex = 5
 			infrastructure = 1
-			arms_factory = 3
+			arms_factory = 7
 		}
-		add_extra_state_shared_building_slots = 3
 	}
 
 	provinces = {

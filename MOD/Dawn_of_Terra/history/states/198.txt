@@ -2,7 +2,7 @@ state = {
 	id = 198
 	name = "STATE_198"
 	manpower = 3216697
-	state_category = rural
+	state_category = megalopolis
 
 	resources = {
 		originium = 14
@@ -10,12 +10,15 @@ state = {
 	}
 
 	history = {
+		add_extra_state_shared_building_slots = 4
 		victory_points = { 4172 15 }
 		victory_points = { 4110 3 }
 		
 		owner = VVA
 		add_core_of = VVA
 		buildings = {
+			arms_factory = 1
+			industrial_complex = 4
 			infrastructure = 1
 		}
 	}

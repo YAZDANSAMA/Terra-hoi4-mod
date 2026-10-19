@@ -2,7 +2,7 @@ state = {
 	id = 169
 	name = "STATE_169"
 	manpower = 1013375
-	state_category = city
+	state_category = megalopolis
 
 	resources = {
 		coal = 18
@@ -10,6 +10,7 @@ state = {
 	}
 
 	history = {
+		add_extra_state_shared_building_slots = 4
 		victory_points = { 2485 5 }
 		
 		owner = PSE
@@ -20,7 +21,6 @@ state = {
 			industrial_complex = 6
 			arms_factory = 3
 		}
-		add_extra_state_shared_building_slots = 5
 	}
 
 	provinces = {

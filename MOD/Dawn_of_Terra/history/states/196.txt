@@ -2,7 +2,7 @@ state = {
 	id = 196
 	name = "STATE_196"
 	manpower = 1860923
-	state_category = rural
+	state_category = megalopolis
 
 	resources = {
 		originium = 6
@@ -15,6 +15,8 @@ state = {
 		owner = SGN
 		add_core_of = SGN
 		buildings = {
+			industrial_complex = 2
+			arms_factory = 1
 			infrastructure = 1
 		}
 	}
