@@ -1,0 +1,136 @@
+add_namespace = CLM_election
+
+country_event = {
+	id = CLM_election.1
+	title = CLM_election.1.t
+	desc = CLM_election.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.1.a
+		CLM_great_experiment_stability_down = yes
+		set_country_flag = CLM_coalition_with_the_gentlemen
+		complete_national_focus = CLM_welcome_the_gentlemen
+	}
+
+	option = {
+		name = CLM_election.1.b
+		complete_national_focus = CLM_a_rising_star
+	}
+}
+
+country_event = {
+	id = CLM_election.2
+	title = CLM_election.2.t
+	desc = CLM_election.2.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.2.a
+		set_country_flag = CLM_trust_the_three_gentlemen
+		complete_national_focus = CLM_welcome_the_gentlemen
+	}
+
+	option = {
+		name = CLM_election.2.b
+		set_country_flag = CLM_corpos_may_interfere
+		complete_national_focus = CLM_letting_the_corpos_interfere
+	}
+}
+
+country_event = {
+	id = CLM_election.3
+	title = CLM_election.3.t
+	desc = CLM_election.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.3.a
+		set_country_flag = CLM_vp_richard_grants
+	}
+
+	option = {
+		name = CLM_election.3.b
+		set_country_flag = CLM_vp_wallis_bonnet
+	}
+
+	option = {
+		name = CLM_election.3.c
+		set_country_flag = CLM_vp_simeon_mercer
+	}
+
+	option = {
+		name = CLM_election.3.d
+		CLM_great_experiment_stability_down = yes
+		set_country_flag = CLM_coalition_with_the_social_democrats
+	}
+}
+
+country_event = {
+	id = CLM_election.4
+	title = CLM_election.4.t
+	desc = CLM_election.4.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.4.a
+		set_country_flag = CLM_corpo_alexander_brook
+		complete_national_focus = CLM_alexander_brook_the_corporatist_corp
+	}
+
+	option = {
+		name = CLM_election.4.b
+		set_country_flag = CLM_corpo_dr_rutherford
+		complete_national_focus = CLM_dr_rutherford_friends_tech
+	}
+}
+
+country_event = {
+	id = CLM_election.5
+	title = CLM_election.5.t
+	desc = CLM_election.5.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.5.a
+		complete_national_focus = CLM_timothy_callahan_socdem
+	}
+}
+
+country_event = {
+	id = CLM_election.6
+	title = CLM_election.6.t
+	desc = CLM_election.6.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.6.a
+		set_country_flag = CLM_1029_event_fired
+		set_country_flag = CLM_1029_no_interference
+	}
+
+	option = {
+		name = CLM_election.6.b
+		set_country_flag = CLM_1029_event_fired
+		set_country_flag = CLM_1029_interference
+	}
+}
+
+country_event = {
+	id = CLM_election.7
+	title = CLM_election.7.t
+	desc = CLM_election.7.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_election.7.a
+		set_country_flag = CLM_1033_event_fired
+	}
+}

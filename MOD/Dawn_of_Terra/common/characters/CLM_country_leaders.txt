@@ -1,0 +1,136 @@
+characters = {
+	CLM_alphonse_durand = {
+		name = CLM_alphonse_durand
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_richard_grants = {
+		name = CLM_richard_grants
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_wallis_bonnet = {
+		name = CLM_wallis_bonnet
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_simeon_mercer = {
+		name = CLM_simeon_mercer
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_ernesto_rutherford = {
+		name = CLM_ernesto_rutherford
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = technocracy_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_alexander_brook = {
+		name = CLM_alexander_brook
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = corporatism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_timothy_callahan = {
+		name = CLM_timothy_callahan
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_democracy_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_francis_iv_battohan = {
+		name = CLM_francis_iv_battohan
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = monarchism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	CLM_pedro_di_siesta = {
+		name = CLM_pedro_di_siesta
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = ethnonationalism_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+}

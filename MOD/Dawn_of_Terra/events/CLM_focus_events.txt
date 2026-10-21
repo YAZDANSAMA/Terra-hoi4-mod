@@ -165,3 +165,91 @@ country_event = {
 		complete_national_focus = CLM_the_columbian_bulldog
 	}
 }
+
+news_event = {
+	id = CLM_focus.14
+	title = CLM_focus.14.t
+	desc = CLM_focus.14.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.14.a
+	}
+}
+
+news_event = {
+	id = CLM_focus.15
+	title = CLM_focus.15.t
+	desc = CLM_focus.15.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.15.a
+		news_event = { id = CLM_focus.16 }
+	}
+}
+
+news_event = {
+	id = CLM_focus.16
+	title = CLM_focus.16.t
+	desc = CLM_focus.16.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.16.a
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+}
+
+news_event = {
+	id = CLM_focus.17
+	title = CLM_focus.17.t
+	desc = CLM_focus.17.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.17.a
+		news_event = { id = CLM_focus.18 }
+	}
+}
+
+news_event = {
+	id = CLM_focus.18
+	title = CLM_focus.18.t
+	desc = CLM_focus.18.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.18.a
+		add_manpower = 1
+		recruit_character = CLM_glacier
+	}
+}
+
+country_event = {
+	id = CLM_focus.19
+	title = CLM_focus.19.t
+	desc = CLM_focus.19.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_focus.19.a
+		164 = { transfer_state_to = SIS }
+		149 = { transfer_state_to = SIS }
+		SIS = { inherit_technology = CLM }
+		add_stability = 0.05
+	}
+	option = {
+		name = CLM_focus.19.b
+		164 = { transfer_state_to = SIS }
+		149 = { transfer_state_to = SIS }
+		SIS = { inherit_technology = CLM }
+	}
+}

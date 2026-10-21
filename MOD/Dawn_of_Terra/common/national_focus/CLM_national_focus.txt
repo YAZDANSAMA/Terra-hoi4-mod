@@ -751,7 +751,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			country_event = { id = CLM_focus.6 }
+			country_event = { id = CLM_mountain.1 }
 		}
 	}
 
@@ -824,9 +824,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = race_durin_nonexistent }
+				swap_ideas = {
+					remove_idea = race_durin_nonexistent
+					add_idea = race_durin_majority_regions
+				}
+			}
+			else_if = {
+				limit = { has_idea = race_durin_small_settlements }
+				swap_ideas = {
+					remove_idea = race_durin_small_settlements
+					add_idea = race_durin_majority_regions
+				}
+			}
 			150 = {
 				add_manpower = 35000
+				add_resource = {
+					type = steel
+					amount = 34
+					state = 150
+				}
+				add_resource = {
+					type = coal
+					amount = 30
+					state = 150
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+					state = 150
+				}
 			}
+			news_event = { id = CLM_focus.14 }
 		}
 	}
 
@@ -1265,12 +1295,11 @@ focus_tree = {
 	focus = {
 		id = CLM_welcome_columbia_to_the_world_stage
 		icon = GFX_focus_GER_reich_ministry_of_public_enlightenment
-		x = 17
+		x = 16
 		y = 25
 		cost = 5
 
 		prerequisite = { focus = CLM_foreign_weapons_expertise }
-		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
 
 		ai_will_do = {
 			factor = 1
@@ -1588,7 +1617,7 @@ focus_tree = {
 		icon = GFX_focus_GER_strengthen_the_waffen_ss
 		x = 23
 		y = 4
-		cost = 1
+		cost = 2
 
 		prerequisite = { focus = CLM_the_maylander_foundation }
 
@@ -1964,27 +1993,18 @@ focus_tree = {
 					}
 				}
 			}
+			add_research_slot = 1
 		}
 	}
 
 	focus = {
 		id = CLM_we_have_done_it
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_GER_wunderwaffe_inner_circle = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_GER_wunderwaffe_inner_circle
 		x = 28
 		y = 15
 		cost = 1
 
 		prerequisite = { focus = CLM_they_say_it_cant_be_done }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-			has_completed_focus = CLM_no_research_without_borders
-			has_completed_focus = CLM_tools_for_the_job
-			has_completed_focus = CLM_pardon_political_exiles
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -1994,7 +2014,7 @@ focus_tree = {
 	focus = {
 		id = CLM_hail_yan
 		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
-		x = 20
+		x = 19
 		y = 20
 		cost = 5
 
@@ -2040,7 +2060,7 @@ focus_tree = {
 	focus = {
 		id = CLM_foreign_weapons_expertise
 		icon = GFX_goal_generic_scientific_exchange
-		x = 17
+		x = 16
 		y = 23
 		cost = 2
 
@@ -2054,7 +2074,7 @@ focus_tree = {
 	focus = {
 		id = CLM_establish_proper_embassies
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 16
+		x = 15
 		y = 16
 		cost = 5
 
@@ -2068,7 +2088,7 @@ focus_tree = {
 	focus = {
 		id = CLM_reach_out_to_the_world
 		icon = GFX_goal_generic_improve_relations
-		x = 16
+		x = 15
 		y = 15
 		cost = 1
 
@@ -2080,7 +2100,7 @@ focus_tree = {
 	focus = {
 		id = CLM_hail_gaul
 		icon = GFX_goal_continuous_boost_freedom
-		x = 14
+		x = 13
 		y = 18
 		cost = 2
 
@@ -2096,7 +2116,7 @@ focus_tree = {
 	focus = {
 		id = CLM_hail_kazimierz
 		icon = GFX_goal_generic_cavalry
-		x = 16
+		x = 15
 		y = 19
 		cost = 2
 
@@ -2110,7 +2130,7 @@ focus_tree = {
 	focus = {
 		id = CLM_hail_victoria
 		icon = GFX_goal_generic_dangerous_deal
-		x = 18
+		x = 17
 		y = 18
 		cost = 2
 
@@ -2126,7 +2146,7 @@ focus_tree = {
 	focus = {
 		id = CLM_hail_laterano
 		icon = GFX_goal_generic_build_airforce
-		x = 17
+		x = 16
 		y = 22
 		cost = 5
 
@@ -2140,7 +2160,7 @@ focus_tree = {
 	focus = {
 		id = CLM_the_prince_of_death_in_kazdel
 		icon = GFX_goal_generic_secret_weapon
-		x = 16
+		x = 15
 		y = 21
 		cost = 2
 
@@ -2156,7 +2176,7 @@ focus_tree = {
 	focus = {
 		id = CLM_hail_siracusa
 		icon = GFX_goal_generic_wolf_pack
-		x = 17
+		x = 16
 		y = 20
 		cost = 2
 
@@ -2170,7 +2190,7 @@ focus_tree = {
 	focus = {
 		id = CLM_greet_ursus
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		x = 14
+		x = 13
 		y = 20
 		cost = 2
 
@@ -2184,7 +2204,7 @@ focus_tree = {
 	focus = {
 		id = CLM_and_our_sami_neighbours_too
 		icon = GFX_focus_FIN_utilize_the_sami
-		x = 14
+		x = 13
 		y = 21
 		cost = 5
 
@@ -2198,7 +2218,7 @@ focus_tree = {
 	focus = {
 		id = CLM_invite_theresa_to_a_banquet
 		icon = GFX_focus_AUS_courting_the_princess_of_industry
-		x = 18
+		x = 17
 		y = 21
 		cost = 2
 
@@ -2418,7 +2438,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_research_slot = 1
+			add_research_slot = 2
 			162 = {
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
@@ -2635,6 +2655,20 @@ focus_tree = {
 	}
 
 	focus = {
+		id = CLM_ahahahahahaha
+		icon = GFX_focus_JAP_expand_the_showa_research_association
+		x = 28
+		y = 16
+		cost = 1
+
+		prerequisite = { focus = CLM_we_have_done_it }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
 		id = CLM_fund_researchers
 		icon = GFX_focus_NORDIC_dem_research
 		x = 18
@@ -2769,7 +2803,7 @@ focus_tree = {
 	focus = {
 		id = CLM_expeditions_to_the_frozen_north
 		icon = GFX_focus_generic_winter_warfare
-		x = 12
+		x = 11
 		y = 22
 		cost = 10
 
@@ -4360,18 +4394,19 @@ focus_tree = {
 
 	focus = {
 		id = CLM_warden_of_the_torch
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_ARG_defense_and_democracy = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_ARG_defense_and_democracy
 		x = 23
 		y = 14
-		cost = 1
+		cost = 2
 
 		prerequisite = { focus = CLM_the_human_sacrifices_will_stop focus = CLM_best_of_the_best }
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = CLM_warden_of_the_torch
 		}
 	}
 
@@ -4398,10 +4433,7 @@ focus_tree = {
 
 	focus = {
 		id = CLM_no_research_without_borders
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_ARG_fascist_researchers = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_ARG_fascist_researchers
 		x = 23
 		y = 10
 		cost = 1
@@ -4422,28 +4454,41 @@ focus_tree = {
 
 		prerequisite = { focus = CLM_hail_columbia }
 
+		available = {
+			has_country_flag = CLM_1029_event_fired
+		}
+
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			CLM_great_experiment_stability_down = yes
 		}
 	}
 
 	focus = {
 		id = CLM_a_nudge_in_the_right_direction
 		icon = GFX_focus_ARG_keep_it_in_the_party
-		x = 46
+		x = 47
 		y = 4
-		cost = 1
+		cost = 2
 
 		prerequisite = { focus = CLM_checks_and_balances }
 
 		mutually_exclusive = { focus = CLM_no_interference }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_no_interference }
+		available = {
+			has_country_flag = CLM_1029_interference
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = -100
+			CLM_great_experiment_stability_down = yes
 		}
 	}
 
@@ -4458,13 +4503,21 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_simeon_mercer_the_idealist_la focus = CLM_richard_grants_the_militarist_np }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_simeon_mercer_the_idealist_la }
-			NOT = { has_completed_focus = CLM_richard_grants_the_militarist_np }
+		available = {
+			has_country_flag = CLM_vp_wallis_bonnet
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			promote_character = CLM_wallis_bonnet
+			set_party_name = {
+				ideology = classical_liberalism
+				long_name = CLM_party_fdp_long
+				name = CLM_party_fdp
+			}
 		}
 	}
 
@@ -4479,12 +4532,21 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_wallis_bonnet_the_realist_fdp }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_wallis_bonnet_the_realist_fdp }
+		available = {
+			has_country_flag = CLM_vp_richard_grants
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			promote_character = CLM_richard_grants
+			set_party_name = {
+				ideology = classical_liberalism
+				long_name = CLM_party_np_long
+				name = CLM_party_np
+			}
 		}
 	}
 
@@ -4499,19 +4561,27 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_dr_rutherford_friends_tech }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_dr_rutherford_friends_tech }
+		available = {
+			always = no
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			promote_character = CLM_alexander_brook
+			set_politics = {
+				ruling_party = corporatism
+				elections_allowed = no
+			}
 		}
 	}
 
 	focus = {
 		id = CLM_the_social_question_cannot_wait
 		icon = GFX_focus_generic_social_democracy
-		x = 46
+		x = 47
 		y = 5
 		cost = 1
 
@@ -4519,12 +4589,19 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_a_different_approach }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_a_different_approach }
+		available = {
+			has_power_balance_value = {
+				id = CLM_max_balance
+				value < -0.15
+			}
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_election.1 }
 		}
 	}
 
@@ -4537,21 +4614,30 @@ focus_tree = {
 
 		prerequisite = { focus = CLM_welcome_the_gentlemen }
 
-		mutually_exclusive = { focus = CLM_wallis_bonnet_the_realist_fdp }
+		mutually_exclusive = { focus = CLM_wallis_bonnet_the_realist_fdp focus = CLM_three_and_a_half_parties }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_wallis_bonnet_the_realist_fdp }
+		available = {
+			has_country_flag = CLM_vp_simeon_mercer
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			promote_character = CLM_simeon_mercer
+			set_party_name = {
+				ideology = classical_liberalism
+				long_name = CLM_party_la_long
+				name = CLM_party_la
+			}
 		}
 	}
 
 	focus = {
 		id = CLM_democratic_cooperation
 		icon = GFX_focus_ITA_democratic_leadership
-		x = 46
+		x = 47
 		y = 8
 		cost = 1
 
@@ -4559,6 +4645,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.2
+			}
 		}
 	}
 
@@ -4573,8 +4666,8 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_a_nudge_in_the_right_direction }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_a_nudge_in_the_right_direction }
+		available = {
+			has_country_flag = CLM_1029_no_interference
 		}
 
 		ai_will_do = {
@@ -4583,7 +4676,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.1
+			CLM_great_experiment_stability_up = yes
 		}
 	}
 
@@ -4599,12 +4692,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		completion_reward = {
+			country_event = { id = CLM_election.2 }
+		}
 	}
 
 	focus = {
 		id = CLM_pardon_political_exiles
 		icon = GFX_focus_AUS_pardon_political_exiles
-		x = 48
+		x = 50
 		y = 3
 		cost = 2
 
@@ -4625,21 +4722,33 @@ focus_tree = {
 	focus = {
 		id = CLM_timothy_callahan_socdem
 		icon = GFX_focus_BRA_pedro_henrique
-		x = 46
+		x = 47
 		y = 7
 		cost = 1
 
 		prerequisite = { focus = CLM_a_rising_star }
 
+		available = {
+			always = no
+		}
+
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			promote_character = CLM_timothy_callahan
+			set_politics = {
+				ruling_party = social_democracy
+				elections_allowed = no
+			}
 		}
 	}
 
 	focus = {
 		id = CLM_francis_iv_duke_of_lancester_monarch
 		icon = GFX_focus_BRA_pedro_de_alcantara
-		x = 52
+		x = 54
 		y = 9
 		cost = 1
 
@@ -4653,7 +4762,7 @@ focus_tree = {
 	focus = {
 		id = CLM_pedro_di_siesta_ethnonat
 		icon = GFX_focus_CHL_ibanezs_coup
-		x = 54
+		x = 56
 		y = 9
 		cost = 1
 
@@ -4667,42 +4776,44 @@ focus_tree = {
 	focus = {
 		id = CLM_welcome_the_gentlemen
 		icon = GFX_focus_CHL_sociedad_caupolican_defensora_de_la_araucania
-		x = 38
+		x = 39
 		y = 6
 		cost = 1
 
-		prerequisite = { focus = CLM_let_the_parties_speak focus = CLM_the_social_question_cannot_wait }
-
 		mutually_exclusive = { focus = CLM_a_rising_star focus = CLM_letting_the_corpos_interfere }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_a_rising_star }
-			NOT = { has_completed_focus = CLM_letting_the_corpos_interfere }
+		available = {
+			always = no
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_election.3 }
 		}
 	}
 
 	focus = {
 		id = CLM_a_different_approach
 		icon = GFX_focus_CHL_unify_the_fascist_movements
-		x = 53
+		x = 55
 		y = 5
-		cost = 1
+		cost = 2
 
 		prerequisite = { focus = CLM_a_nudge_in_the_right_direction }
 		prerequisite = { focus = CLM_pardon_political_exiles }
 
 		mutually_exclusive = { focus = CLM_the_social_question_cannot_wait }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_the_social_question_cannot_wait }
-		}
-
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			CLM_great_experiment_stability_down = yes
+			CLM_great_experiment_stability_down = yes
 		}
 	}
 
@@ -4717,29 +4828,8 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_alexander_brook_the_corporatist_corp }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_alexander_brook_the_corporatist_corp }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_a_network_of_informants
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_SWI_embrace_rote_drei = { has_completed_focus = CLM_a_secret_election }
-		}
-		x = 21
-		y = 9
-		cost = 1
-
-		prerequisite = { focus = CLM_professor_fergusson }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
+		available = {
+			always = no
 		}
 
 		ai_will_do = {
@@ -4747,15 +4837,29 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				set_country_flag = CLM_klaus_hensch_unlocked
+			promote_character = CLM_ernesto_rutherford
+			set_politics = {
+				ruling_party = technocracy
+				elections_allowed = no
 			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					set_country_flag = CLM_klaus_hensch_unlocked
-				}
-			}
+		}
+	}
+
+	focus = {
+		id = CLM_a_network_of_informants
+		icon = GFX_focus_SWI_embrace_rote_drei
+		x = 21
+		y = 9
+		cost = 1
+
+		prerequisite = { focus = CLM_professor_fergusson }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			set_country_flag = CLM_klaus_hensch_unlocked
 		}
 	}
 
@@ -4799,7 +4903,7 @@ focus_tree = {
 		icon = GFX_focus_NOR_drobak_coastal_fort
 		x = 4
 		y = 14
-		cost = 2
+		cost = 4
 
 		prerequisite = { focus = CLM_the_navarch_of_the_seas }
 
@@ -4825,14 +4929,47 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_hydroelectric_energy
+		id = CLM_thermal_and_hydroelectric_energy
 		icon = GFX_focus_generic_hydroelectric_energy
-		x = 2
-		y = 13
-		cost = 1
+		x = 6
+		y = 15
+		cost = 5
+
+		prerequisite = { focus = CLM_frontier_exploration }
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			164 = {
+				add_manpower = 100000
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			149 = {
+				add_manpower = 100000
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -4878,7 +5015,7 @@ focus_tree = {
 	focus = {
 		id = CLM_a_killing_in_d_c
 		icon = GFX_focus_AST_owen_gun
-		x = 53
+		x = 55
 		y = 6
 		cost = 1
 
@@ -4892,7 +5029,7 @@ focus_tree = {
 	focus = {
 		id = CLM_a_rising_star
 		icon = GFX_focus_AST_no1_flying_training_school
-		x = 46
+		x = 47
 		y = 6
 		cost = 1
 
@@ -4900,12 +5037,16 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_welcome_the_gentlemen }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_welcome_the_gentlemen }
+		available = {
+			always = no
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_election.5 }
 		}
 	}
 
@@ -4920,29 +5061,29 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CLM_welcome_the_gentlemen }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_welcome_the_gentlemen }
+		available = {
+			always = no
 		}
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_election.4 }
 		}
 	}
 
 	focus = {
 		id = CLM_victorian_paramilitaries_to_the_rescue
 		icon = GFX_focus_CHI_start_looking_outwards
-		x = 52
+		x = 54
 		y = 8
 		cost = 1
 
 		prerequisite = { focus = CLM_raid_military_storages }
 
 		mutually_exclusive = { focus = CLM_stain_the_experiment_with_blood }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_stain_the_experiment_with_blood }
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -4952,17 +5093,13 @@ focus_tree = {
 	focus = {
 		id = CLM_stain_the_experiment_with_blood
 		icon = GFX_focus_generic_total_war
-		x = 54
+		x = 56
 		y = 8
 		cost = 1
 
 		prerequisite = { focus = CLM_raid_military_storages }
 
 		mutually_exclusive = { focus = CLM_victorian_paramilitaries_to_the_rescue }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_victorian_paramilitaries_to_the_rescue }
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -4972,7 +5109,7 @@ focus_tree = {
 	focus = {
 		id = CLM_purge_them
 		icon = GFX_focus_SIA_war_fervor
-		x = 54
+		x = 56
 		y = 10
 		cost = 1
 
@@ -4986,7 +5123,7 @@ focus_tree = {
 	focus = {
 		id = CLM_fortify_castle_daggerstein
 		icon = GFX_goal_generic_construct_military
-		x = 52
+		x = 54
 		y = 10
 		cost = 1
 
@@ -5014,28 +5151,41 @@ focus_tree = {
 	focus = {
 		id = CLM_the_first_vice_president
 		icon = GFX_focus_AFG_retire_the_uncles
-		x = 46
+		x = 47
 		y = 10
-		cost = 1
+		cost = 2
 
 		prerequisite = { focus = CLM_out_with_the_nationalists }
 
 		ai_will_do = {
 			factor = 1
 		}
+
+		completion_reward = {
+			CLM_timothy_callahan = {
+				add_trait = {
+					trait = CLM_the_shining_warden
+					ideology = social_democracy_subtype
+				}
+			}
+		}
 	}
 
 	focus = {
 		id = CLM_out_with_the_nationalists
 		icon = GFX_focus_ETH_boots_on_the_shore
-		x = 46
+		x = 47
 		y = 9
-		cost = 1
+		cost = 2
 
 		prerequisite = { focus = CLM_democratic_cooperation }
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			set_country_flag = CLM_national_party_renamed
 		}
 	}
 
@@ -5068,11 +5218,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_domestic_production_of_the_willys_mb
+		id = CLM_industrial_cooperation
 		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
-		x = 28
-		y = 18
+		x = 30
+		y = 20
 		cost = 1
+
+		prerequisite = { focus = CLM_a_permanent_headquarters }
 
 		ai_will_do = {
 			factor = 1
@@ -5080,11 +5232,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_departemento_de_las_tropas_nacistas_de_asalto
+		id = CLM_international_peacekeepers
 		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
 		x = 30
-		y = 18
+		y = 22
 		cost = 1
+
+		prerequisite = { focus = CLM_industrial_cooperation }
 
 		ai_will_do = {
 			factor = 1
@@ -5094,7 +5248,7 @@ focus_tree = {
 	focus = {
 		id = CLM_raid_military_storages
 		icon = GFX_focus_AUS_raid_military_storages
-		x = 53
+		x = 55
 		y = 7
 		cost = 1
 
@@ -5110,12 +5264,16 @@ focus_tree = {
 		icon = GFX_focus_AUS_lawmaking_leniency
 		x = 41
 		y = 13
-		cost = 1
+		cost = 4
 
 		prerequisite = { focus = CLM_welcome_the_gentlemen focus = CLM_a_rising_star }
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			complete_national_focus = CLM_columbia_and_the_world
 		}
 	}
 
@@ -5134,14 +5292,27 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_amazon_colonization
+		id = CLM_frontier_exploration
 		icon = GFX_focus_BRA_amazon_colonization
-		x = 1
-		y = 15
+		x = 6
+		y = 14
 		cost = 1
+
+		prerequisite = { focus = CLM_columbian_metal }
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			164 = {
+				transfer_state_to = CLM
+				add_core_of = CLM
+			}
+			149 = {
+				transfer_state_to = CLM
+				add_core_of = CLM
+			}
 		}
 	}
 
@@ -5162,7 +5333,7 @@ focus_tree = {
 	focus = {
 		id = CLM_arrest_the_gentlemen
 		icon = GFX_focus_CHI_arrest_the_seven_gentlemen
-		x = 52
+		x = 54
 		y = 11
 		cost = 1
 
@@ -5176,7 +5347,7 @@ focus_tree = {
 	focus = {
 		id = CLM_support_labour_unions
 		icon = GFX_focus_CHI_commemorate_labour_corp
-		x = 48
+		x = 49
 		y = 12
 		cost = 1
 
@@ -5232,7 +5403,7 @@ focus_tree = {
 	focus = {
 		id = CLM_demand_higher_standards_for_officers
 		icon = GFX_focus_CHI_popular_army
-		x = 44
+		x = 45
 		y = 11
 		cost = 1
 
@@ -5241,12 +5412,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_completed_focus = CLM_tackling_the_army_problem } }
+				complete_national_focus = CLM_tackling_the_army_problem
+			}
+		}
 	}
 
 	focus = {
 		id = CLM_a_true_meritocracy
 		icon = GFX_focus_CHI_Legitimise_du
-		x = 46
+		x = 47
 		y = 11
 		cost = 1
 
@@ -5269,45 +5447,37 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_completed_focus = CLM_tackling_the_army_problem } }
+				complete_national_focus = CLM_tackling_the_army_problem
+			}
+		}
 	}
 
 	focus = {
 		id = CLM_mere_suggestions
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_CHI_reject_the_nine_powers = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_CHI_reject_the_nine_powers
 		x = 25
 		y = 10
 		cost = 1
 
 		prerequisite = { focus = CLM_tools_for_the_job }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				add_stability = -0.1
-			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					add_stability = -0.1
-				}
-			}
+			add_stability = -0.1
 		}
 	}
 
 	focus = {
 		id = CLM_unexplained_wealth_orders
 		icon = GFX_focus_CHI_promote_national_currency
-		x = 48
+		x = 49
 		y = 11
 		cost = 1
 
@@ -5319,11 +5489,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CLM_tongzi_jun
+		id = CLM_who_exactly_is_vice_president_now
 		icon = GFX_focus_CHI_tongzi_jun
-		x = 33
-		y = 17
+		x = 44
+		y = 8
 		cost = 1
+
+		prerequisite = { focus = CLM_three_and_a_half_parties }
 
 		ai_will_do = {
 			factor = 1
@@ -5347,7 +5519,7 @@ focus_tree = {
 	focus = {
 		id = CLM_a_new_dynasty
 		icon = GFX_focus_CZE_our_royal_claims
-		x = 52
+		x = 54
 		y = 12
 		cost = 1
 
@@ -5388,10 +5560,7 @@ focus_tree = {
 
 	focus = {
 		id = CLM_professor_fergusson
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_CZE_free_tuka = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_CZE_free_tuka
 		x = 21
 		y = 8
 		cost = 1
@@ -5404,35 +5573,19 @@ focus_tree = {
 			always = no
 		}
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				set_country_flag = CLM_charles_fergusson_unlocked
-				activate_advisor = CLM_charles_fergusson
-			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					set_country_flag = CLM_charles_fergusson_unlocked
-					activate_advisor = CLM_charles_fergusson
-				}
-			}
+			set_country_flag = CLM_charles_fergusson_unlocked
+			activate_advisor = CLM_charles_fergusson
 		}
 	}
 
 	focus = {
 		id = CLM_the_columbian_bulldog
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_CZE_full_faith_in_hacha = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_CZE_full_faith_in_hacha
 		x = 25
 		y = 8
 		cost = 1
@@ -5445,35 +5598,26 @@ focus_tree = {
 			always = no
 		}
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				set_country_flag = CLM_enrique_dubois_unlocked
-				activate_advisor = CLM_enrique_dubois
-			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					set_country_flag = CLM_enrique_dubois_unlocked
-					activate_advisor = CLM_enrique_dubois
-				}
-			}
+			set_country_flag = CLM_enrique_dubois_unlocked
+			activate_advisor = CLM_enrique_dubois
 		}
 	}
 
 	focus = {
 		id = CLM_general_supremo
 		icon = GFX_focus_eng_motion_of_no_confidence
-		x = 22
-		y = 18
+		x = 21
+		y = 22
 		cost = 1
+
+		prerequisite = { focus = CLM_name_a_military_advisor }
+
+		mutually_exclusive = { focus = CLM_the_kazdel_war_council }
 
 		ai_will_do = {
 			factor = 1
@@ -5483,11 +5627,13 @@ focus_tree = {
 	focus = {
 		id = CLM_enter_kinsmen
 		icon = GFX_focus_eng_the_kings_party
-		x = 54
+		x = 56
 		y = 11
 		cost = 1
 
 		prerequisite = { focus = CLM_purge_them }
+
+		mutually_exclusive = { focus = CLM_enter_maylander }
 
 		ai_will_do = {
 			factor = 1
@@ -5581,7 +5727,7 @@ focus_tree = {
 	focus = {
 		id = CLM_the_league_of_nations_shared
 		icon = GFX_focus_generic_league_of_nations
-		x = 24
+		x = 27
 		y = 18
 		cost = 1
 
@@ -5610,10 +5756,7 @@ focus_tree = {
 
 	focus = {
 		id = CLM_unless
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_generic_secret_agent_operative = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_generic_secret_agent_operative
 		x = 28
 		y = 11
 		cost = 1
@@ -5622,13 +5765,6 @@ focus_tree = {
 		prerequisite = { focus = CLM_tools_for_the_job }
 		prerequisite = { focus = CLM_pardon_political_exiles }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-			has_completed_focus = CLM_no_research_without_borders
-			has_completed_focus = CLM_tools_for_the_job
-			has_completed_focus = CLM_pardon_political_exiles
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -5636,77 +5772,41 @@ focus_tree = {
 
 	focus = {
 		id = CLM_tools_for_the_job
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_AFG_scavenging = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_AFG_scavenging
 		x = 25
 		y = 9
 		cost = 2
 
 		prerequisite = { focus = CLM_the_columbian_bulldog }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				add_tech_bonus = {
-					name = CLM_tb_tools_infantry
-					bonus = 1
-					uses = 1
-					category = infantry_weapons
-				}
-				add_tech_bonus = {
-					name = CLM_tb_tools_support
-					bonus = 1
-					uses = 1
-					category = support_tech
-				}
+			add_tech_bonus = {
+				name = CLM_tb_tools_infantry
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
 			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					add_tech_bonus = {
-						name = CLM_tb_tools_infantry
-						bonus = 1
-						uses = 1
-						category = infantry_weapons
-					}
-					add_tech_bonus = {
-						name = CLM_tb_tools_support
-						bonus = 1
-						uses = 1
-						category = support_tech
-					}
-				}
+			add_tech_bonus = {
+				name = CLM_tb_tools_support
+				bonus = 1
+				uses = 1
+				category = support_tech
 			}
 		}
 	}
 
 	focus = {
 		id = CLM_somewhere_in_the_mountains
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_AUS_osterreichische_gebirgsjager = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_AUS_osterreichische_gebirgsjager
 		x = 28
 		y = 12
 		cost = 1
 
 		prerequisite = { focus = CLM_unless }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-			has_completed_focus = CLM_no_research_without_borders
-			has_completed_focus = CLM_tools_for_the_job
-			has_completed_focus = CLM_pardon_political_exiles
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -5715,22 +5815,19 @@ focus_tree = {
 
 	focus = {
 		id = CLM_leak_the_experiments
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_BEL_dam_the_consequences = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_BEL_dam_the_consequences
 		x = 21
 		y = 12
 		cost = 1
 
 		prerequisite = { focus = CLM_dornr_schen }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
-		}
-
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			news_event = { id = CLM_focus.15 }
 		}
 	}
 
@@ -5757,77 +5854,72 @@ focus_tree = {
 
 	focus = {
 		id = CLM_dornr_schen
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_BEL_national_redoubt_at_antwerp = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
 		x = 21
 		y = 11
-		cost = 1
+		cost = 5
 
 		prerequisite = { focus = CLM_a_network_of_informants }
 		prerequisite = { focus = CLM_no_research_without_borders }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_best_of_the_best
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_BRA_air_force = { has_completed_focus = CLM_a_secret_election }
-		}
-		x = 25
-		y = 13
-		cost = 2
-
-		prerequisite = { focus = CLM_where_no_man_has_gone_before }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-		}
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				set_country_flag = CLM_sonia_bagration_unlocked
-			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					set_country_flag = CLM_sonia_bagration_unlocked
+			155 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 220
+					instant_build = yes
 				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 220
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = nuclear_facility
+					level = 1
+					province = 220
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 220
+				value = 1
 			}
 		}
 	}
 
 	focus = {
-		id = CLM_funnel_in_supplies
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_BRA_ethical_internationalism = { has_completed_focus = CLM_a_secret_election }
+		id = CLM_best_of_the_best
+		icon = GFX_focus_BRA_air_force
+		x = 25
+		y = 13
+		cost = 2
+
+		prerequisite = { focus = CLM_where_no_man_has_gone_before }
+
+		ai_will_do = {
+			factor = 1
 		}
+
+		completion_reward = {
+			set_country_flag = CLM_sonia_bagration_unlocked
+		}
+	}
+
+	focus = {
+		id = CLM_funnel_in_supplies
+		icon = GFX_focus_BRA_ethical_internationalism
 		x = 28
 		y = 13
 		cost = 1
 
 		prerequisite = { focus = CLM_somewhere_in_the_mountains }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-			has_completed_focus = CLM_no_research_without_borders
-			has_completed_focus = CLM_tools_for_the_job
-			has_completed_focus = CLM_pardon_political_exiles
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -5836,46 +5928,12 @@ focus_tree = {
 
 	focus = {
 		id = CLM_they_say_it_cant_be_done
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_CHI_denounce_feudalism = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_CHI_denounce_feudalism
 		x = 28
 		y = 14
 		cost = 1
 
 		prerequisite = { focus = CLM_funnel_in_supplies }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-			has_completed_focus = CLM_no_research_without_borders
-			has_completed_focus = CLM_tools_for_the_job
-			has_completed_focus = CLM_pardon_political_exiles
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = CLM_ahahahahahaha
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_JAP_expand_the_showa_research_association = { has_completed_focus = CLM_a_secret_election }
-		}
-		x = 28
-		y = 16
-		cost = 1
-
-		prerequisite = { focus = CLM_we_have_done_it }
-
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-			has_completed_focus = CLM_no_research_without_borders
-			has_completed_focus = CLM_tools_for_the_job
-			has_completed_focus = CLM_pardon_political_exiles
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -5884,70 +5942,51 @@ focus_tree = {
 
 	focus = {
 		id = CLM_specialised_training
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_CHI_guerrilla_warfare = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_CHI_guerrilla_warfare
 		x = 25
 		y = 11
 		cost = 2
 
 		prerequisite = { focus = CLM_mere_suggestions }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				swap_ideas = {
-					remove_idea = CLM_defanged_eagle
-					add_idea = CLM_defanged_eagle_1
-				}
-			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_defanged_eagle
-						add_idea = CLM_defanged_eagle_1
-					}
-				}
+			swap_ideas = {
+				remove_idea = CLM_defanged_eagle
+				add_idea = CLM_defanged_eagle_1
 			}
 		}
 	}
 
 	focus = {
 		id = CLM_the_human_sacrifices_will_stop
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_CHI_decisive_battles = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_CHI_decisive_battles
 		x = 21
 		y = 13
 		cost = 1
 
 		prerequisite = { focus = CLM_leak_the_experiments }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_the_columbian_bulldog }
-		}
-
 		ai_will_do = {
 			factor = 1
+		}
+
+		completion_reward = {
+			news_event = { id = CLM_focus.17 }
 		}
 	}
 
 	focus = {
-		id = CLM_effectivize_ground_crew_usage
+		id = CLM_standardized_parts
 		icon = GFX_focus_CHI_effectivize_ground_crew_usage
 		x = 33
-		y = 19
+		y = 21
 		cost = 1
+
+		prerequisite = { focus = CLM_industrial_cooperation }
 
 		ai_will_do = {
 			factor = 1
@@ -5956,18 +5995,39 @@ focus_tree = {
 
 	focus = {
 		id = CLM_where_no_man_has_gone_before
-		icon = {
-			GFX_focus_CLM_classified = { NOT = { has_completed_focus = CLM_a_secret_election } }
-			GFX_focus_generic_camel_corps = { has_completed_focus = CLM_a_secret_election }
-		}
+		icon = GFX_focus_generic_camel_corps
 		x = 25
 		y = 12
 		cost = 2
 
 		prerequisite = { focus = CLM_specialised_training }
 
-		allow_branch = {
-			NOT = { has_completed_focus = CLM_professor_fergusson }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CLM_defanged_eagle_1
+				add_idea = CLM_defanged_eagle_2
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_three_and_a_half_parties
+		icon = GFX_focus_generic_social_democracy
+		x = 44
+		y = 7
+		cost = 1
+
+		prerequisite = { focus = CLM_the_social_question_cannot_wait }
+		prerequisite = { focus = CLM_welcome_the_gentlemen }
+
+		mutually_exclusive = { focus = CLM_simeon_mercer_the_idealist_la }
+
+		available = {
+			has_country_flag = CLM_coalition_with_the_social_democrats
 		}
 
 		ai_will_do = {
@@ -5975,20 +6035,825 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				swap_ideas = {
-					remove_idea = CLM_defanged_eagle_1
-					add_idea = CLM_defanged_eagle_2
+			set_party_name = {
+				ideology = classical_liberalism
+				long_name = CLM_party_cdc_long
+				name = CLM_party_cdc
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_strongarm
+		icon = GFX_focus_chi_army_reform
+		x = 59
+		y = 19
+		cost = 1
+
+		prerequisite = { focus = CLM_the_columbian_army_academy }
+		prerequisite = { focus = CLM_combined_arms focus = CLM_tank_development_program }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_permanent_headquarters
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 27
+		y = 19
+		cost = 1
+
+		prerequisite = { focus = CLM_the_league_of_nations_shared }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_name_a_military_advisor
+		icon = GFX_focus_PRC_invite_soviet_general
+		x = 24
+		y = 20
+		cost = 1
+
+		prerequisite = { focus = CLM_a_permanent_headquarters }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_kazdel_war_council
+		icon = GFX_focus_mex_support_general_cedillo
+		x = 23
+		y = 22
+		cost = 1
+
+		prerequisite = { focus = CLM_name_a_military_advisor }
+
+		mutually_exclusive = { focus = CLM_general_supremo focus = CLM_peng_d_d }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_peng_d_d
+		icon = GFX_focus_CONGO_congolese_generals
+		x = 25
+		y = 22
+		cost = 1
+
+		prerequisite = { focus = CLM_name_a_military_advisor }
+
+		mutually_exclusive = { focus = CLM_the_kazdel_war_council focus = CLM_the_kings_cousin }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_enter_maylander
+		icon = GFX_focus_CHI_first_lady_abroad
+		x = 58
+		y = 11
+		cost = 1
+
+		prerequisite = { focus = CLM_purge_them }
+
+		mutually_exclusive = { focus = CLM_enter_kinsmen }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_kings_cousin
+		icon = GFX_focus_LIT_king_of_poland
+		x = 27
+		y = 22
+		cost = 1
+
+		prerequisite = { focus = CLM_name_a_military_advisor }
+
+		mutually_exclusive = { focus = CLM_peng_d_d }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_laws_of_war
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 28
+		y = 24
+		cost = 1
+
+		prerequisite = { focus = CLM_international_peacekeepers }
+		prerequisite = { focus = CLM_general_supremo focus = CLM_the_kazdel_war_council focus = CLM_peng_d_d focus = CLM_the_kings_cousin }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_election_of_1033
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 38
+		y = 14
+		cost = 1
+
+		available = {
+			has_country_flag = CLM_1033_event_fired
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_yearly_army_budget
+		icon = GFX_focus_generic_currency_reforms
+		x = 55
+		y = 15
+		cost = 1
+
+		prerequisite = { focus = CLM_tackling_the_army_problem }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_pioneer_legions
+		icon = GFX_focus_JAP_implement_army_reforms
+		x = 51
+		y = 19
+		cost = 1
+
+		prerequisite = { focus = CLM_battleship_support }
+		prerequisite = { focus = CLM_superiority_of_the_infantryman }
+		prerequisite = { focus = CLM_small_arms_development }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_tank_development_program
+		icon = GFX_focus_JAP_reform_the_army
+		x = 57
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_a_standing_army }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_standing_army
+		icon = GFX_focus_CZE_army_reform
+		x = 59
+		y = 17
+		cost = 1
+
+		prerequisite = { focus = CLM_army_weapons_administration_hq }
+
+		mutually_exclusive = { focus = CLM_promote_the_militias }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_tackling_the_army_problem
+		icon = GFX_focus_CHI_popular_army
+		x = 55
+		y = 14
+		cost = 1
+
+		available = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_eagle_ascended
+		icon = GFX_focus_INS_the_peoples_security_army
+		x = 55
+		y = 23
+		cost = 1
+
+		prerequisite = { focus = CLM_the_unstoppable_force focus = CLM_sky_cavalry }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_unstoppable_force
+		icon = GFX_focus_GER_german_army_invincible
+		x = 59
+		y = 21
+		cost = 1
+
+		prerequisite = { focus = CLM_armored_core }
+		prerequisite = { focus = CLM_death_from_above }
+		prerequisite = { focus = CLM_the_columbian_ocean }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_army_academy
+		icon = GFX_focus_HUN_establish_the_mavag_army_division
+		x = 59
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_a_standing_army }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_army_weapons_administration_hq
+		icon = GFX_focus_JAP_army_weapons_administration_hq
+		x = 55
+		y = 16
+		cost = 1
+
+		prerequisite = { focus = CLM_a_yearly_army_budget }
+		prerequisite = { focus = CLM_revise_tactics focus = CLM_inter_species_integration }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_revise_tactics
+		icon = GFX_focus_generic_army_attack
+		x = 57
+		y = 15
+		cost = 1
+
+		prerequisite = { focus = CLM_tackling_the_army_problem }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_inter_species_integration
+		icon = GFX_focus_generic_diverse_army
+		x = 53
+		y = 15
+		cost = 1
+
+		prerequisite = { focus = CLM_tackling_the_army_problem }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_armored_core
+		icon = GFX_focus_generic_army_tanks2
+		x = 57
+		y = 20
+		cost = 1
+
+		prerequisite = { focus = CLM_the_columbian_strongarm }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_combined_arms
+		icon = GFX_focus_generic_cas_aircraft
+		x = 61
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_a_standing_army }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_ocean
+		icon = GFX_focus_PER_bolster_the_caspian
+		x = 61
+		y = 20
+		cost = 1
+
+		prerequisite = { focus = CLM_the_columbian_strongarm }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_death_from_above
+		icon = GFX_goal_generic_CAS
+		x = 59
+		y = 20
+		cost = 1
+
+		prerequisite = { focus = CLM_the_columbian_strongarm }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_superiority_of_the_infantryman
+		icon = GFX_focus_AFG_against_kabul
+		x = 51
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_promote_the_militias }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_promote_the_militias
+		icon = GFX_focus_AFG_quami
+		x = 51
+		y = 17
+		cost = 1
+
+		prerequisite = { focus = CLM_army_weapons_administration_hq }
+
+		mutually_exclusive = { focus = CLM_a_standing_army }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_small_arms_development
+		icon = GFX_focus_AFG_scavenging
+		x = 53
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_promote_the_militias }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_battleship_support
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+		x = 49
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_promote_the_militias }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_infantry_fighting_vehicles
+		icon = GFX_focus_ARG_the_war_machine
+		x = 51
+		y = 20
+		cost = 1
+
+		prerequisite = { focus = CLM_pioneer_legions }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_sky_cavalry
+		icon = GFX_focus_generic_early_helicopter
+		x = 51
+		y = 22
+		cost = 1
+
+		prerequisite = { focus = CLM_a_new_prototype }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_new_prototype
+		icon = GFX_focus_BEL_early_helicopters
+		x = 51
+		y = 21
+		cost = 1
+
+		prerequisite = { focus = CLM_infantry_fighting_vehicles }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_gentlemen_once_again
+		icon = GFX_focus_CHL_sociedad_caupolican_defensora_de_la_araucania
+		x = 38
+		y = 15
+		cost = 1
+
+		prerequisite = { focus = CLM_the_election_of_1033 }
+		prerequisite = { focus = CLM_welcome_the_gentlemen }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_election.3 }
+		}
+	}
+
+	focus = {
+		id = CLM_ethical_science_for_everybody
+		icon = GFX_SOV_the_ussr_academy_of_sciences_ccp_2d_sov_compatibility
+		x = 19
+		y = 14
+		cost = 4
+
+		prerequisite = { focus = CLM_the_human_sacrifices_will_stop }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_free_siesta
+		icon = GFX_focus_INS_liberate_malaya
+		x = 6
+		y = 17
+		cost = 2
+
+		prerequisite = { focus = CLM_establish_a_trading_hq }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_focus.19 }
+		}
+	}
+
+	focus = {
+		id = CLM_establish_a_trading_hq
+		icon = GFX_goal_generic_trade
+		x = 6
+		y = 16
+		cost = 4
+
+		prerequisite = { focus = CLM_thermal_and_hydroelectric_energy }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			164 = {
+				add_manpower = 300000
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
 				}
 			}
-			if = {
-				limit = { has_completed_focus = CLM_a_secret_election }
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = CLM_defanged_eagle_1
-						add_idea = CLM_defanged_eagle_2
-					}
+			149 = {
+				add_manpower = 200000
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_and_sargon
+		icon = GFX_focus_generic_camel_corps
+		x = 13
+		y = 23
+		cost = 1
+
+		prerequisite = { focus = CLM_and_our_sami_neighbours_too }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_preemptive_expedition_into_the_desert
+		icon = GFX_focus_ETH_victory_in_the_desert
+		x = 11
+		y = 23
+		cost = 1
+
+		prerequisite = { focus = CLM_and_sargon }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_columbia_and_the_world
+		icon = GFX_focus_RAJ_to_shake_the_world
+		x = 42
+		y = 18
+		cost = 1
+
+		available = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_new_era_of_science
+		icon = GFX_SOV_the_ussr_academy_of_sciences_ccp_2d_sov_compatibility
+		x = 38
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_a_new_era_of_commerce
+		icon = GFX_focus_generic_industry_3
+		x = 40
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_total_war
+		icon = GFX_focus_generic_total_war
+		x = 46
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_hegemon_of_the_world
+		icon = GFX_focus_NOR_for_the_king_and_prince
+		x = 44
+		y = 18
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_friends_in_tara
+		icon = GFX_focus_eng_god_save_the_king
+		x = 20
+		y = 19
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_victoria }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_the_forests_of_appalene
+		icon = GFX_focus_SIA_jungle_tanks
+		x = 2
+		y = 12
+		cost = 2
+
+		prerequisite = { focus = CLM_welcome_lucky_into_the_fold }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_victory_points = {
+				province = 5800
+				value = 1
+			}
+			152 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_lumber_settements
+		icon = GFX_focus_PHI_encourage_chinese_immigration
+		x = 2
+		y = 13
+		cost = 2
+
+		prerequisite = { focus = CLM_the_forests_of_appalene }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			152 = {
+				add_manpower = 300000
+			}
+			CLM_electoral_unlock_appalene = yes
+		}
+	}
+
+	focus = {
+		id = CLM_the_bolivar_issue
+		icon = GFX_goal_generic_wolf_pack
+		x = 10
+		y = 19
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_gaul }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = CLM_nero_is_here
+		icon = GFX_focus_LIT_new_kind_of_iron_wolf
+		x = 7
+		y = 23
+		cost = 1
+
+		prerequisite = { focus = CLM_military_industry }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			CLM_electoral_unlock_nero = yes
+		}
+	}
+
+	focus = {
+		id = CLM_the_gateway_to_bolivar
+		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+		x = 7
+		y = 20
+		cost = 2
+
+		prerequisite = { focus = CLM_the_bolivar_issue }
+		prerequisite = { focus = CLM_manifest_destiny }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			154 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_the_interstate_railway
+		icon = GFX_focus_CHL_expand_southern_infrastructure
+		x = 7
+		y = 21
+		cost = 4
+
+		prerequisite = { focus = CLM_the_gateway_to_bolivar }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			build_railway = {
+				level = 5
+				fallback = yes
+				path = { 218 5718 5722 }
+			}
+			build_railway = {
+				level = 5
+				fallback = yes
+				path = { 218 2541 4133 }
+			}
+		}
+	}
+
+	focus = {
+		id = CLM_military_industry
+		icon = GFX_focus_generic_military_industry
+		x = 7
+		y = 22
+		cost = 4
+
+		prerequisite = { focus = CLM_the_interstate_railway }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			154 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_manpower = 100000
 			}
 		}
 	}

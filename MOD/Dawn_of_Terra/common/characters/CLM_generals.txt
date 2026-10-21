@@ -1,0 +1,18 @@
+characters = {
+	CLM_glacier = {
+		name = CLM_glacier
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/Portrait_Britain_Generic_land_1.dds"
+			}
+		}
+		corps_commander = {
+			traits = { CLM_frontline_officer brave infantry_officer trickster commando swamp_fox jungle_rat urban_assault_specialist CLM_charismatic }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

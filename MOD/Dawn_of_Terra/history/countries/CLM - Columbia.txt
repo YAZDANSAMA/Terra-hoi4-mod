@@ -7,13 +7,42 @@ set_technology = {
     infantry_weapons = 1
 	basic_train = 1
 }
-recruit_character = CLM_interim_leader
+recruit_character = CLM_alphonse_durand
+recruit_character = CLM_richard_grants
+recruit_character = CLM_wallis_bonnet
+recruit_character = CLM_simeon_mercer
+recruit_character = CLM_ernesto_rutherford
+recruit_character = CLM_alexander_brook
+recruit_character = CLM_timothy_callahan
+recruit_character = CLM_francis_iv_battohan
+recruit_character = CLM_pedro_di_siesta
 recruit_character = CLM_mark_max
 recruit_character = CLM_klaus_hensch
 recruit_character = CLM_enrique_dubois
 recruit_character = CLM_charles_fergusson
 recruit_character = CLM_sonia_bagration
 activate_advisor = CLM_mark_max
+set_party_name = {
+    ideology = classical_liberalism
+    long_name = CLM_party_cclp_long
+    name = CLM_party_cclp
+}
+set_party_name = {
+    ideology = social_democracy
+    long_name = CLM_party_sdp_long
+    name = CLM_party_sdp
+}
+set_party_name = {
+    ideology = technocracy
+    long_name = CLM_party_tech_long
+    name = CLM_party_tech
+}
+set_party_name = {
+    ideology = corporatism
+    long_name = CLM_party_corp_long
+    name = CLM_party_corp
+}
+promote_character = CLM_alphonse_durand
 set_power_balance = {
     id = CLM_max_balance
     left_side = CLM_max_dominance_side
@@ -589,6 +618,7 @@ add_ideas = {
     CLM_bloodied_soil
     CLM_sweat_and_mud
     CLM_defanged_eagle
+    CLM_the_great_experiment_2
 }
 
 # Starting transport for the connected 1028 supply network.

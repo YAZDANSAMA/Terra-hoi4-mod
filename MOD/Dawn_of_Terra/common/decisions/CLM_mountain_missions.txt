@@ -1,0 +1,43 @@
+CLM_mountain_missions_category = {
+	CLM_mountain_king_mission = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			has_equipment = { infantry_equipment > 29999 }
+			has_equipment = { support_equipment > 199 }
+			has_equipment = { artillery_equipment > 0 }
+		}
+
+		visible = {
+		}
+
+		activation = {
+			always = no
+		}
+
+		selectable_mission = yes
+		is_good = yes
+		days_mission_timeout = 40
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -1
+			}
+			add_manpower = 1
+			country_event = { id = CLM_mountain.2 }
+		}
+
+		timeout_effect = {
+			country_event = { id = CLM_mountain.3 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

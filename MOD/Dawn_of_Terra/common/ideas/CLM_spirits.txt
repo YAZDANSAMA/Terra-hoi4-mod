@@ -2923,5 +2923,16 @@ ideas = {
 			}
 		}
 
+		CLM_warden_of_the_torch = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				drift_defence_factor = 1
+			}
+		}
 	}
 }

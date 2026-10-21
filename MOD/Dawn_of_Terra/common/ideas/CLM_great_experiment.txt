@@ -1,0 +1,168 @@
+ideas = {
+	country = {
+		CLM_the_great_experiment_0 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_1 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_2 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_3 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_4 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_5 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.5
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_6 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.6
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_7 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.7
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_8 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.8
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_9 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.9
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		CLM_the_great_experiment_10 = {
+			picture = por_unstable_republic
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -1
+				war_support_factor = -0.2
+				political_power_gain = -0.25
+				drift_defence_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,151 @@
+CLM_great_experiment_stability_down = {
+	custom_effect_tooltip = CLM_great_experiment_stability_down_tt
+	hidden_effect = {
+		if = {
+			limit = { has_idea = CLM_the_great_experiment_0 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_0
+				add_idea = CLM_the_great_experiment_1
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_1 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_1
+				add_idea = CLM_the_great_experiment_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_2 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_2
+				add_idea = CLM_the_great_experiment_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_3 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_3
+				add_idea = CLM_the_great_experiment_4
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_4 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_4
+				add_idea = CLM_the_great_experiment_5
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_5 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_5
+				add_idea = CLM_the_great_experiment_6
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_6 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_6
+				add_idea = CLM_the_great_experiment_7
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_7 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_7
+				add_idea = CLM_the_great_experiment_8
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_8 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_8
+				add_idea = CLM_the_great_experiment_9
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_9 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_9
+				add_idea = CLM_the_great_experiment_10
+			}
+		}
+	}
+}
+
+CLM_great_experiment_stability_up = {
+	custom_effect_tooltip = CLM_great_experiment_stability_up_tt
+	hidden_effect = {
+		if = {
+			limit = { has_idea = CLM_the_great_experiment_1 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_1
+				add_idea = CLM_the_great_experiment_0
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_2 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_2
+				add_idea = CLM_the_great_experiment_1
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_3 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_3
+				add_idea = CLM_the_great_experiment_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_4 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_4
+				add_idea = CLM_the_great_experiment_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_5 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_5
+				add_idea = CLM_the_great_experiment_4
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_6 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_6
+				add_idea = CLM_the_great_experiment_5
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_7 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_7
+				add_idea = CLM_the_great_experiment_6
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_8 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_8
+				add_idea = CLM_the_great_experiment_7
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_9 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_9
+				add_idea = CLM_the_great_experiment_8
+			}
+		}
+		else_if = {
+			limit = { has_idea = CLM_the_great_experiment_10 }
+			swap_ideas = {
+				remove_idea = CLM_the_great_experiment_10
+				add_idea = CLM_the_great_experiment_9
+			}
+		}
+	}
+}

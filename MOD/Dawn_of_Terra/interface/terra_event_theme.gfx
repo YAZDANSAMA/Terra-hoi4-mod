@@ -21,4 +21,25 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "GFX_terra_event_top_bg_wide"
+		textureFile = "gfx/interface/terra_event/top_bg_wide.png"
+		alwaystransparent = yes
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_terra_event_mid_bg_wide"
+		size = { x = 580 y = 66 }
+		textureFile = "gfx/interface/terra_event/mid_bg_wide.png"
+		borderSize = { x = 6 y = 1 }
+		tilingCenter = yes
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_terra_event_bottom_bg_wide"
+		textureFile = "gfx/interface/terra_event/bottom_bg_wide.png"
+		alwaystransparent = yes
+	}
+
 }
