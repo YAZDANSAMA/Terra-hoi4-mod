@@ -23,14 +23,6 @@ terra_brain_defensive_fronts = {
     ai_strategy = { type = garrison value = 10 }
 }
 
-terra_brain_supply_priority = {
-    allowed = { NOT = { OR = { original_tag = TNJ original_tag = SEA original_tag = SST } } }
-    enable = {
-        is_ai = yes exists = yes has_capitulated = no
-        any_owned_state = { always = yes }
-        has_war = yes num_of_civilian_factories > 0
-    }
-    abort_when_not_enabled = yes
-    ai_strategy = { type = building_target id = rail_way value = 2 }
-    ai_strategy = { type = building_target id = supply_node value = 1 }
-}
+# Railway paths and hub locations are selected by the native supply planner.
+# A country-wide building minimum does not describe a connected rail route.
+# Queue priorities live in defines/zz_terra_ai.lua; train demand is in production.

@@ -58,10 +58,35 @@ class NativeAIBaselineTests(unittest.TestCase):
                 with self.subTest(path=path):
                     self.assertEqual((), read(path))
 
-    def test_no_lua_ai_define_overrides_remain(self):
+    def test_common_enemy_routes_cover_the_current_country_registry(self):
+        tags = {n.key for path in (MOD / 'common/country_tags').glob('*.txt')
+                for n in read(path) if re.fullmatch(r'[A-Z0-9]{3}', n.key)} - {'TNJ', 'SEA', 'SST'}
+        effects = read(MOD / 'common/scripted_effects/terra_brain_access.txt')
+        refresh = next(n for n in effects if n.key == 'terra_brain_access_refresh_host_effect')
+        guests = [n.scalar('GUEST') for n in walk((refresh,))
+                  if n.key == 'terra_brain_access_reconcile_pair_effect']
+        self.assertCountEqual(tags, guests)
+        fronts = read(MOD / 'common/ai_strategy/terra_brain_common_fronts.txt')
+        self.assertCountEqual({'terra_brain_common_front_' + tag for tag in tags},
+                              [n.key for n in fronts])
+
+    def test_only_reviewed_construction_priority_overrides_remain(self):
+        expected = {
+            'CONSTRUCTION_PRIO_INFRASTRUCTURE': 0.45,
+            'CONSTRUCTION_PRIO_SUPPLY_BUILDING': 12,
+            'CONSTRUCTION_PRIO_RAILWAY': 14,
+        }
+        actual = {}
         for path in (MOD / 'common/defines').glob('*.lua'):
             source = re.sub(r'--[^\n]*', '', path.read_text(encoding='utf-8-sig'))
-            self.assertNotRegex(source, r'NDefines\s*\.\s*NAI\s*\.')
+            references = re.findall(r'NDefines\s*\.\s*NAI\s*\.', source)
+            assignments = re.findall(
+                r'NDefines\s*\.\s*NAI\s*\.\s*(\w+)\s*=\s*([^\n]+)', source)
+            self.assertEqual(len(references), len(assignments), path.name)
+            for name, value in assignments:
+                self.assertNotIn(name, actual, f'Duplicate override: {name}')
+                actual[name] = float(value.strip())
+        self.assertEqual(expected, actual)
 
     def test_custom_areas_only_adapt_the_global_continent_to_terra(self):
         areas = read(MOD / 'common/ai_areas/terra_areas.txt')[0]

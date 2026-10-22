@@ -1,0 +1,140 @@
+# Terra wartime access 0.0.78. Source: tools/build_terra_access_ai.py.
+# Current scope is the host. At least one participant must be AI.
+# Pair-specific flags mark only permissions created by this feature.
+terra_brain_access_reconcile_pair_effect = {
+    if = {
+        limit = { terra_brain_access_pair_eligible = { GUEST = $GUEST$ } }
+        if = {
+            limit = {
+                NOT = { gives_military_access_to = $GUEST$ }
+            }
+            give_military_access = $GUEST$
+            # Own a route only after the native access trigger confirms it.
+            if = {
+                limit = { gives_military_access_to = $GUEST$ }
+                set_country_flag = terra_brain_access_granted_$GUEST$
+            }
+        }
+        if = {
+            limit = { has_country_flag = terra_brain_access_granted_$GUEST$ }
+            set_country_flag = terra_brain_access_has_routes
+        }
+    }
+    else_if = {
+        limit = { has_country_flag = terra_brain_access_granted_$GUEST$ }
+        if = {
+            limit = {
+                $GUEST$ = { exists = yes }
+                gives_military_access_to = $GUEST$
+            }
+            # military_access diplomatic_relation is removed in the guest's
+            # scope: cancel that country's permission to enter this host.
+            # Do not revoke the host's independent access in the other direction.
+            $GUEST$ = {
+                diplomatic_relation = {
+                    country = PREV
+                    relation = military_access
+                    active = no
+                }
+            }
+        }
+        clr_country_flag = terra_brain_access_granted_$GUEST$
+    }
+}
+
+# Cheap outer guard: peaceful countries without a managed route do no pair work.
+# The pending marker is rebuilt from surviving per-recipient markers each pulse.
+terra_brain_access_refresh_host_effect = {
+    if = {
+        limit = {
+            OR = {
+                AND = { has_war = yes terra_brain_access_participant = yes }
+                has_country_flag = terra_brain_access_has_routes
+            }
+        }
+        clr_country_flag = terra_brain_access_has_routes
+        terra_brain_access_reconcile_pair_effect = { GUEST = AGI }
+        terra_brain_access_reconcile_pair_effect = { GUEST = BLV }
+        terra_brain_access_reconcile_pair_effect = { GUEST = CLM }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D01 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D02 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D03 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D04 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D05 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D06 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D07 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D08 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D09 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D10 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D11 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D12 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D13 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D14 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D15 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D16 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D17 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D18 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D19 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D20 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D21 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D22 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D23 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D24 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D25 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D26 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D27 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D28 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D29 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D30 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D31 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D32 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D33 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D34 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D35 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D36 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D37 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D38 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D39 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D40 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D41 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D42 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D43 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D44 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D45 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D46 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D47 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D48 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D49 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = D50 }
+        terra_brain_access_reconcile_pair_effect = { GUEST = GRM }
+        terra_brain_access_reconcile_pair_effect = { GUEST = HGN }
+        terra_brain_access_reconcile_pair_effect = { GUEST = HGS }
+        terra_brain_access_reconcile_pair_effect = { GUEST = HSS }
+        terra_brain_access_reconcile_pair_effect = { GUEST = HTR }
+        terra_brain_access_reconcile_pair_effect = { GUEST = IBR }
+        terra_brain_access_reconcile_pair_effect = { GUEST = KJG }
+        terra_brain_access_reconcile_pair_effect = { GUEST = KTH }
+        terra_brain_access_reconcile_pair_effect = { GUEST = KZD }
+        terra_brain_access_reconcile_pair_effect = { GUEST = KZM }
+        terra_brain_access_reconcile_pair_effect = { GUEST = LGL }
+        terra_brain_access_reconcile_pair_effect = { GUEST = LTH }
+        terra_brain_access_reconcile_pair_effect = { GUEST = LTR }
+        terra_brain_access_reconcile_pair_effect = { GUEST = MNS }
+        terra_brain_access_reconcile_pair_effect = { GUEST = MSN }
+        terra_brain_access_reconcile_pair_effect = { GUEST = PLM }
+        terra_brain_access_reconcile_pair_effect = { GUEST = PSE }
+        terra_brain_access_reconcile_pair_effect = { GUEST = RMB }
+        terra_brain_access_reconcile_pair_effect = { GUEST = SCW }
+        terra_brain_access_reconcile_pair_effect = { GUEST = SGN }
+        terra_brain_access_reconcile_pair_effect = { GUEST = SIS }
+        terra_brain_access_reconcile_pair_effect = { GUEST = SMN }
+        terra_brain_access_reconcile_pair_effect = { GUEST = SRC }
+        terra_brain_access_reconcile_pair_effect = { GUEST = TRR }
+        terra_brain_access_reconcile_pair_effect = { GUEST = URS }
+        terra_brain_access_reconcile_pair_effect = { GUEST = VCT }
+        terra_brain_access_reconcile_pair_effect = { GUEST = VNH }
+        terra_brain_access_reconcile_pair_effect = { GUEST = VVA }
+        terra_brain_access_reconcile_pair_effect = { GUEST = WSG }
+        terra_brain_access_reconcile_pair_effect = { GUEST = YAN }
+    }
+}

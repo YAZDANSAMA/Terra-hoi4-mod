@@ -1,2 +1,5 @@
--- Native AI defaults: no NAI overrides. See docs/native_ai_baseline.md.
--- Keep this file so ZIP overlays replace the old overrides.
+-- Only construction queue priorities change. Native AI still chooses rail
+-- paths/hubs and pays ordinary costs. Recruitment, combat and budgets stay native.
+NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.45
+NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 12
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 14

@@ -1,0 +1,20 @@
+# Wartime transit only. A shared rival, wargoal or faction is not a shared enemy.
+terra_brain_access_participant = {
+    exists = yes
+    has_capitulated = no
+    any_owned_state = { always = yes }
+    NOT = { OR = { original_tag = TNJ original_tag = SEA original_tag = SST } }
+}
+
+# Current country is host/actor. GUEST is an explicit registry tag, so the check
+# does not depend on ROOT/FROM in startup, daily or scripted-effect callers.
+terra_brain_access_pair_eligible = {
+    terra_brain_access_participant = yes
+    NOT = { tag = $GUEST$ }
+    NOT = { has_war_with = $GUEST$ }
+    $GUEST$ = { terra_brain_access_participant = yes }
+    # The player's country can host an AI co-belligerent as well as receive
+    # access. Two human countries keep their normal diplomatic choices.
+    OR = { is_ai = yes $GUEST$ = { is_ai = yes } }
+    any_enemy_country = { has_war_with = $GUEST$ }
+}

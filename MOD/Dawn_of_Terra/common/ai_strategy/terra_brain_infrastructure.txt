@@ -1,0 +1,3170 @@
+# Terra growth AI 0.0.75. Source: tools/build_terra_growth_ai.py.
+# Targeted native construction: owned, controlled core states with room to develop.
+terra_brain_infrastructure_1 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 1 controls_state = 1
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        1 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 1 value = 2 }
+}
+
+terra_brain_infrastructure_2 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 2 controls_state = 2
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        2 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 2 value = 2 }
+}
+
+terra_brain_infrastructure_3 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 3 controls_state = 3
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        3 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 3 value = 2 }
+}
+
+terra_brain_infrastructure_4 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 4 controls_state = 4
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        4 = { is_core_of = ROOT infrastructure < 2
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 4 value = 2 }
+}
+
+terra_brain_infrastructure_5 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 5 controls_state = 5
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        5 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 5 value = 2 }
+}
+
+terra_brain_infrastructure_6 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 6 controls_state = 6
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        6 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 6 value = 2 }
+}
+
+terra_brain_infrastructure_7 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 7 controls_state = 7
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        7 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 7 value = 2 }
+}
+
+terra_brain_infrastructure_8 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 8 controls_state = 8
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        8 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 8 value = 2 }
+}
+
+terra_brain_infrastructure_9 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 9 controls_state = 9
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        9 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 9 value = 2 }
+}
+
+terra_brain_infrastructure_10 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 10 controls_state = 10
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        10 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 10 value = 2 }
+}
+
+terra_brain_infrastructure_11 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 11 controls_state = 11
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        11 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 11 value = 2 }
+}
+
+terra_brain_infrastructure_12 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 12 controls_state = 12
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        12 = { is_core_of = ROOT infrastructure < 2
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 12 value = 2 }
+}
+
+terra_brain_infrastructure_13 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 13 controls_state = 13
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        13 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 13 value = 2 }
+}
+
+terra_brain_infrastructure_14 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 14 controls_state = 14
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        14 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 14 value = 2 }
+}
+
+terra_brain_infrastructure_15 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 15 controls_state = 15
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        15 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 15 value = 2 }
+}
+
+terra_brain_infrastructure_16 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 16 controls_state = 16
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        16 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 16 value = 2 }
+}
+
+terra_brain_infrastructure_17 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 17 controls_state = 17
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        17 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 17 value = 2 }
+}
+
+terra_brain_infrastructure_18 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 18 controls_state = 18
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        18 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 18 value = 2 }
+}
+
+terra_brain_infrastructure_19 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 19 controls_state = 19
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        19 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 19 value = 2 }
+}
+
+terra_brain_infrastructure_20 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 20 controls_state = 20
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        20 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 20 value = 2 }
+}
+
+terra_brain_infrastructure_21 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 21 controls_state = 21
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        21 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 21 value = 2 }
+}
+
+terra_brain_infrastructure_22 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 22 controls_state = 22
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        22 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 22 value = 2 }
+}
+
+terra_brain_infrastructure_23 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 23 controls_state = 23
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        23 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 23 value = 2 }
+}
+
+terra_brain_infrastructure_24 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 24 controls_state = 24
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        24 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 24 value = 2 }
+}
+
+terra_brain_infrastructure_25 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 25 controls_state = 25
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        25 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 25 value = 2 }
+}
+
+terra_brain_infrastructure_26 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 26 controls_state = 26
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        26 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 26 value = 2 }
+}
+
+terra_brain_infrastructure_27 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 27 controls_state = 27
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        27 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 27 value = 2 }
+}
+
+terra_brain_infrastructure_28 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 28 controls_state = 28
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        28 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 28 value = 2 }
+}
+
+terra_brain_infrastructure_29 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 29 controls_state = 29
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        29 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 29 value = 2 }
+}
+
+terra_brain_infrastructure_30 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 30 controls_state = 30
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        30 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 30 value = 2 }
+}
+
+terra_brain_infrastructure_31 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 31 controls_state = 31
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        31 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 31 value = 2 }
+}
+
+terra_brain_infrastructure_32 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 32 controls_state = 32
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        32 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 32 value = 2 }
+}
+
+terra_brain_infrastructure_33 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 33 controls_state = 33
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        33 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 33 value = 2 }
+}
+
+terra_brain_infrastructure_34 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 34 controls_state = 34
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        34 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 34 value = 2 }
+}
+
+terra_brain_infrastructure_36 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 36 controls_state = 36
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        36 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 36 value = 2 }
+}
+
+terra_brain_infrastructure_37 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 37 controls_state = 37
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        37 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 37 value = 2 }
+}
+
+terra_brain_infrastructure_38 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 38 controls_state = 38
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        38 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 38 value = 2 }
+}
+
+terra_brain_infrastructure_39 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 39 controls_state = 39
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        39 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 39 value = 2 }
+}
+
+terra_brain_infrastructure_40 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 40 controls_state = 40
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        40 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 40 value = 2 }
+}
+
+terra_brain_infrastructure_41 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 41 controls_state = 41
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        41 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 41 value = 2 }
+}
+
+terra_brain_infrastructure_42 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 42 controls_state = 42
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        42 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 42 value = 2 }
+}
+
+terra_brain_infrastructure_43 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 43 controls_state = 43
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        43 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 43 value = 2 }
+}
+
+terra_brain_infrastructure_44 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 44 controls_state = 44
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        44 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 44 value = 2 }
+}
+
+terra_brain_infrastructure_45 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 45 controls_state = 45
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        45 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 45 value = 2 }
+}
+
+terra_brain_infrastructure_46 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 46 controls_state = 46
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        46 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 46 value = 2 }
+}
+
+terra_brain_infrastructure_47 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 47 controls_state = 47
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        47 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 47 value = 2 }
+}
+
+terra_brain_infrastructure_48 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 48 controls_state = 48
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        48 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 48 value = 2 }
+}
+
+terra_brain_infrastructure_49 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 49 controls_state = 49
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        49 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 49 value = 2 }
+}
+
+terra_brain_infrastructure_50 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 50 controls_state = 50
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        50 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 50 value = 2 }
+}
+
+terra_brain_infrastructure_51 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 51 controls_state = 51
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        51 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 51 value = 2 }
+}
+
+terra_brain_infrastructure_52 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 52 controls_state = 52
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        52 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 52 value = 2 }
+}
+
+terra_brain_infrastructure_53 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 53 controls_state = 53
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        53 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 53 value = 2 }
+}
+
+terra_brain_infrastructure_54 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 54 controls_state = 54
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        54 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 54 value = 2 }
+}
+
+terra_brain_infrastructure_55 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 55 controls_state = 55
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        55 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 55 value = 2 }
+}
+
+terra_brain_infrastructure_56 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 56 controls_state = 56
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        56 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 56 value = 2 }
+}
+
+terra_brain_infrastructure_57 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 57 controls_state = 57
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        57 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 57 value = 2 }
+}
+
+terra_brain_infrastructure_58 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 58 controls_state = 58
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        58 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 58 value = 2 }
+}
+
+terra_brain_infrastructure_59 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 59 controls_state = 59
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        59 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 59 value = 2 }
+}
+
+terra_brain_infrastructure_60 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 60 controls_state = 60
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        60 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 60 value = 2 }
+}
+
+terra_brain_infrastructure_61 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 61 controls_state = 61
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        61 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 61 value = 2 }
+}
+
+terra_brain_infrastructure_63 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 63 controls_state = 63
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        63 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 63 value = 2 }
+}
+
+terra_brain_infrastructure_64 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 64 controls_state = 64
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        64 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 64 value = 2 }
+}
+
+terra_brain_infrastructure_65 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 65 controls_state = 65
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        65 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 65 value = 2 }
+}
+
+terra_brain_infrastructure_66 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 66 controls_state = 66
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        66 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 66 value = 2 }
+}
+
+terra_brain_infrastructure_67 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 67 controls_state = 67
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        67 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 67 value = 2 }
+}
+
+terra_brain_infrastructure_68 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 68 controls_state = 68
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        68 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 68 value = 2 }
+}
+
+terra_brain_infrastructure_69 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 69 controls_state = 69
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        69 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 69 value = 2 }
+}
+
+terra_brain_infrastructure_70 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 70 controls_state = 70
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        70 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 70 value = 2 }
+}
+
+terra_brain_infrastructure_71 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 71 controls_state = 71
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        71 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 71 value = 2 }
+}
+
+terra_brain_infrastructure_72 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 72 controls_state = 72
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        72 = { is_core_of = ROOT infrastructure < 2
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 72 value = 2 }
+}
+
+terra_brain_infrastructure_73 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 73 controls_state = 73
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        73 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 73 value = 2 }
+}
+
+terra_brain_infrastructure_74 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 74 controls_state = 74
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        74 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 74 value = 2 }
+}
+
+terra_brain_infrastructure_75 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 75 controls_state = 75
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        75 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 75 value = 2 }
+}
+
+terra_brain_infrastructure_77 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 77 controls_state = 77
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        77 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 77 value = 2 }
+}
+
+terra_brain_infrastructure_78 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 78 controls_state = 78
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        78 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 78 value = 2 }
+}
+
+terra_brain_infrastructure_79 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 79 controls_state = 79
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        79 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 79 value = 2 }
+}
+
+terra_brain_infrastructure_80 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 80 controls_state = 80
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        80 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 80 value = 2 }
+}
+
+terra_brain_infrastructure_81 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 81 controls_state = 81
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        81 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 81 value = 2 }
+}
+
+terra_brain_infrastructure_84 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 84 controls_state = 84
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        84 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 84 value = 2 }
+}
+
+terra_brain_infrastructure_85 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 85 controls_state = 85
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        85 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 85 value = 2 }
+}
+
+terra_brain_infrastructure_86 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 86 controls_state = 86
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        86 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 86 value = 2 }
+}
+
+terra_brain_infrastructure_87 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 87 controls_state = 87
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        87 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 87 value = 2 }
+}
+
+terra_brain_infrastructure_88 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 88 controls_state = 88
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        88 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 88 value = 2 }
+}
+
+terra_brain_infrastructure_90 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 90 controls_state = 90
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        90 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 90 value = 2 }
+}
+
+terra_brain_infrastructure_91 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 91 controls_state = 91
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        91 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 91 value = 2 }
+}
+
+terra_brain_infrastructure_92 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 92 controls_state = 92
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        92 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 92 value = 2 }
+}
+
+terra_brain_infrastructure_93 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 93 controls_state = 93
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        93 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 93 value = 2 }
+}
+
+terra_brain_infrastructure_94 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 94 controls_state = 94
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        94 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 94 value = 2 }
+}
+
+terra_brain_infrastructure_95 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 95 controls_state = 95
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        95 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 95 value = 2 }
+}
+
+terra_brain_infrastructure_96 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 96 controls_state = 96
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        96 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 96 value = 2 }
+}
+
+terra_brain_infrastructure_97 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 97 controls_state = 97
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        97 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 97 value = 2 }
+}
+
+terra_brain_infrastructure_98 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 98 controls_state = 98
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        98 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 98 value = 2 }
+}
+
+terra_brain_infrastructure_99 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 99 controls_state = 99
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        99 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 99 value = 2 }
+}
+
+terra_brain_infrastructure_100 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 100 controls_state = 100
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        100 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 100 value = 2 }
+}
+
+terra_brain_infrastructure_101 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 101 controls_state = 101
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        101 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 101 value = 2 }
+}
+
+terra_brain_infrastructure_102 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 102 controls_state = 102
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        102 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 102 value = 2 }
+}
+
+terra_brain_infrastructure_103 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 103 controls_state = 103
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        103 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 103 value = 2 }
+}
+
+terra_brain_infrastructure_104 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 104 controls_state = 104
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        104 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 104 value = 2 }
+}
+
+terra_brain_infrastructure_105 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 105 controls_state = 105
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        105 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 105 value = 2 }
+}
+
+terra_brain_infrastructure_107 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 107 controls_state = 107
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        107 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 107 value = 2 }
+}
+
+terra_brain_infrastructure_108 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 108 controls_state = 108
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        108 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 108 value = 2 }
+}
+
+terra_brain_infrastructure_109 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 109 controls_state = 109
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        109 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 109 value = 2 }
+}
+
+terra_brain_infrastructure_110 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 110 controls_state = 110
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        110 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 110 value = 2 }
+}
+
+terra_brain_infrastructure_111 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 111 controls_state = 111
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        111 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 111 value = 2 }
+}
+
+terra_brain_infrastructure_112 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 112 controls_state = 112
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        112 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 112 value = 2 }
+}
+
+terra_brain_infrastructure_113 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 113 controls_state = 113
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        113 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 113 value = 2 }
+}
+
+terra_brain_infrastructure_115 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 115 controls_state = 115
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        115 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 115 value = 2 }
+}
+
+terra_brain_infrastructure_116 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 116 controls_state = 116
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        116 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 116 value = 2 }
+}
+
+terra_brain_infrastructure_117 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 117 controls_state = 117
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        117 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 117 value = 2 }
+}
+
+terra_brain_infrastructure_119 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 119 controls_state = 119
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        119 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 119 value = 2 }
+}
+
+terra_brain_infrastructure_120 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 120 controls_state = 120
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        120 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 120 value = 2 }
+}
+
+terra_brain_infrastructure_121 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 121 controls_state = 121
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        121 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 121 value = 2 }
+}
+
+terra_brain_infrastructure_122 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 122 controls_state = 122
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        122 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 122 value = 2 }
+}
+
+terra_brain_infrastructure_123 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 123 controls_state = 123
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        123 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 123 value = 2 }
+}
+
+terra_brain_infrastructure_124 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 124 controls_state = 124
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        124 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 124 value = 2 }
+}
+
+terra_brain_infrastructure_125 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 125 controls_state = 125
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        125 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 125 value = 2 }
+}
+
+terra_brain_infrastructure_126 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 126 controls_state = 126
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        126 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 126 value = 2 }
+}
+
+terra_brain_infrastructure_127 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 127 controls_state = 127
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        127 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 127 value = 2 }
+}
+
+terra_brain_infrastructure_128 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 128 controls_state = 128
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        128 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 128 value = 2 }
+}
+
+terra_brain_infrastructure_129 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 129 controls_state = 129
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        129 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 129 value = 2 }
+}
+
+terra_brain_infrastructure_130 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 130 controls_state = 130
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        130 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 130 value = 2 }
+}
+
+terra_brain_infrastructure_131 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 131 controls_state = 131
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        131 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 131 value = 2 }
+}
+
+terra_brain_infrastructure_132 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 132 controls_state = 132
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        132 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 132 value = 2 }
+}
+
+terra_brain_infrastructure_133 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 133 controls_state = 133
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        133 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 133 value = 2 }
+}
+
+terra_brain_infrastructure_134 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 134 controls_state = 134
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        134 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 134 value = 2 }
+}
+
+terra_brain_infrastructure_135 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 135 controls_state = 135
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        135 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 135 value = 2 }
+}
+
+terra_brain_infrastructure_137 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 137 controls_state = 137
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        137 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 137 value = 2 }
+}
+
+terra_brain_infrastructure_138 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 138 controls_state = 138
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        138 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 138 value = 2 }
+}
+
+terra_brain_infrastructure_139 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 139 controls_state = 139
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        139 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 139 value = 2 }
+}
+
+terra_brain_infrastructure_140 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 140 controls_state = 140
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        140 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 140 value = 2 }
+}
+
+terra_brain_infrastructure_141 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 141 controls_state = 141
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        141 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 141 value = 2 }
+}
+
+terra_brain_infrastructure_143 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 143 controls_state = 143
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        143 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 143 value = 2 }
+}
+
+terra_brain_infrastructure_144 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 144 controls_state = 144
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        144 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 144 value = 2 }
+}
+
+terra_brain_infrastructure_145 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 145 controls_state = 145
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        145 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 145 value = 2 }
+}
+
+terra_brain_infrastructure_146 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 146 controls_state = 146
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        146 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 146 value = 2 }
+}
+
+terra_brain_infrastructure_147 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 147 controls_state = 147
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        147 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 147 value = 2 }
+}
+
+terra_brain_infrastructure_148 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 148 controls_state = 148
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        148 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 148 value = 2 }
+}
+
+terra_brain_infrastructure_150 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 150 controls_state = 150
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        150 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 150 value = 2 }
+}
+
+terra_brain_infrastructure_151 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 151 controls_state = 151
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        151 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 151 value = 2 }
+}
+
+terra_brain_infrastructure_153 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 153 controls_state = 153
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        153 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 153 value = 2 }
+}
+
+terra_brain_infrastructure_156 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 156 controls_state = 156
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        156 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 156 value = 2 }
+}
+
+terra_brain_infrastructure_157 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 157 controls_state = 157
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        157 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 157 value = 2 }
+}
+
+terra_brain_infrastructure_158 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 158 controls_state = 158
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        158 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 158 value = 2 }
+}
+
+terra_brain_infrastructure_159 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 159 controls_state = 159
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        159 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 159 value = 2 }
+}
+
+terra_brain_infrastructure_161 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 161 controls_state = 161
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        161 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 161 value = 2 }
+}
+
+terra_brain_infrastructure_162 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 162 controls_state = 162
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        162 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 162 value = 2 }
+}
+
+terra_brain_infrastructure_163 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 163 controls_state = 163
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        163 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 163 value = 2 }
+}
+
+terra_brain_infrastructure_165 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 165 controls_state = 165
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        165 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 165 value = 2 }
+}
+
+terra_brain_infrastructure_166 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 166 controls_state = 166
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        166 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 166 value = 2 }
+}
+
+terra_brain_infrastructure_167 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 167 controls_state = 167
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        167 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 167 value = 2 }
+}
+
+terra_brain_infrastructure_168 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 168 controls_state = 168
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        168 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 168 value = 2 }
+}
+
+terra_brain_infrastructure_169 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 169 controls_state = 169
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        169 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 169 value = 2 }
+}
+
+terra_brain_infrastructure_170 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 170 controls_state = 170
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        170 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 170 value = 2 }
+}
+
+terra_brain_infrastructure_171 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 171 controls_state = 171
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        171 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 171 value = 2 }
+}
+
+terra_brain_infrastructure_172 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 172 controls_state = 172
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        172 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 172 value = 2 }
+}
+
+terra_brain_infrastructure_173 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 173 controls_state = 173
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        173 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 173 value = 2 }
+}
+
+terra_brain_infrastructure_174 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 174 controls_state = 174
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        174 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 174 value = 2 }
+}
+
+terra_brain_infrastructure_175 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 175 controls_state = 175
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        175 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 175 value = 2 }
+}
+
+terra_brain_infrastructure_176 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 176 controls_state = 176
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        176 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 176 value = 2 }
+}
+
+terra_brain_infrastructure_177 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 177 controls_state = 177
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        177 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 177 value = 2 }
+}
+
+terra_brain_infrastructure_179 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 179 controls_state = 179
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        179 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 179 value = 2 }
+}
+
+terra_brain_infrastructure_180 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 180 controls_state = 180
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        180 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 180 value = 2 }
+}
+
+terra_brain_infrastructure_181 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 181 controls_state = 181
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        181 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 181 value = 2 }
+}
+
+terra_brain_infrastructure_182 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 182 controls_state = 182
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        182 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 182 value = 2 }
+}
+
+terra_brain_infrastructure_183 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 183 controls_state = 183
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        183 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 183 value = 2 }
+}
+
+terra_brain_infrastructure_184 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 184 controls_state = 184
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        184 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 184 value = 2 }
+}
+
+terra_brain_infrastructure_185 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 185 controls_state = 185
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        185 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 185 value = 2 }
+}
+
+terra_brain_infrastructure_186 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 186 controls_state = 186
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        186 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 186 value = 2 }
+}
+
+terra_brain_infrastructure_188 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 188 controls_state = 188
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        188 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 188 value = 2 }
+}
+
+terra_brain_infrastructure_189 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 189 controls_state = 189
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        189 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 189 value = 2 }
+}
+
+terra_brain_infrastructure_190 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 190 controls_state = 190
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        190 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 190 value = 2 }
+}
+
+terra_brain_infrastructure_191 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 191 controls_state = 191
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        191 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 191 value = 2 }
+}
+
+terra_brain_infrastructure_192 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 192 controls_state = 192
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        192 = { is_core_of = ROOT infrastructure < 2
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 192 value = 2 }
+}
+
+terra_brain_infrastructure_193 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 193 controls_state = 193
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        193 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 193 value = 2 }
+}
+
+terra_brain_infrastructure_194 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 194 controls_state = 194
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        194 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 194 value = 2 }
+}
+
+terra_brain_infrastructure_195 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 195 controls_state = 195
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        195 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 195 value = 2 }
+}
+
+terra_brain_infrastructure_196 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 196 controls_state = 196
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        196 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 196 value = 2 }
+}
+
+terra_brain_infrastructure_197 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 197 controls_state = 197
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        197 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 197 value = 2 }
+}
+
+terra_brain_infrastructure_198 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 198 controls_state = 198
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        198 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 198 value = 2 }
+}
+
+terra_brain_infrastructure_199 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 199 controls_state = 199
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        199 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 199 value = 2 }
+}
+
+terra_brain_infrastructure_200 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 200 controls_state = 200
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        200 = { is_core_of = ROOT infrastructure < 3
+            OR = { free_building_slots = { building = industrial_complex size > 1 include_locked = no } free_building_slots = { building = arms_factory size > 1 include_locked = no } }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 200 value = 2 }
+}
+
+terra_brain_infrastructure_202 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 202 controls_state = 202
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        202 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 202 value = 2 }
+}
+
+terra_brain_infrastructure_203 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 203 controls_state = 203
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        203 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 203 value = 2 }
+}
+
+terra_brain_infrastructure_204 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 204 controls_state = 204
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        204 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 204 value = 2 }
+}
+
+terra_brain_infrastructure_205 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 205 controls_state = 205
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        205 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 205 value = 2 }
+}
+
+terra_brain_infrastructure_206 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 206 controls_state = 206
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        206 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 206 value = 2 }
+}
+
+terra_brain_infrastructure_207 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 207 controls_state = 207
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        207 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 207 value = 2 }
+}
+
+terra_brain_infrastructure_209 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 209 controls_state = 209
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        209 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 209 value = 2 }
+}
+
+terra_brain_infrastructure_211 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 211 controls_state = 211
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        211 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 211 value = 2 }
+}
+
+terra_brain_infrastructure_212 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 212 controls_state = 212
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        212 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 212 value = 2 }
+}
+
+terra_brain_infrastructure_214 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 214 controls_state = 214
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        214 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 214 value = 2 }
+}
+
+terra_brain_infrastructure_216 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 216 controls_state = 216
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        216 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 216 value = 2 }
+}
+
+terra_brain_infrastructure_217 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 217 controls_state = 217
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        217 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 217 value = 2 }
+}
+
+terra_brain_infrastructure_219 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 219 controls_state = 219
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        219 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 219 value = 2 }
+}
+
+terra_brain_infrastructure_220 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 220 controls_state = 220
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        220 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 220 value = 2 }
+}
+
+terra_brain_infrastructure_221 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 221 controls_state = 221
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        221 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 221 value = 2 }
+}
+
+terra_brain_infrastructure_223 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 223 controls_state = 223
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        223 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 223 value = 2 }
+}
+
+terra_brain_infrastructure_224 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 224 controls_state = 224
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        224 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 224 value = 2 }
+}
+
+terra_brain_infrastructure_225 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 225 controls_state = 225
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        225 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 225 value = 2 }
+}
+
+terra_brain_infrastructure_226 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 226 controls_state = 226
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        226 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 226 value = 2 }
+}
+
+terra_brain_infrastructure_227 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 227 controls_state = 227
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        227 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 227 value = 2 }
+}
+
+terra_brain_infrastructure_228 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 228 controls_state = 228
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        228 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 228 value = 2 }
+}
+
+terra_brain_infrastructure_229 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 229 controls_state = 229
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        229 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 229 value = 2 }
+}
+
+terra_brain_infrastructure_230 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 230 controls_state = 230
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        230 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 230 value = 2 }
+}
+
+terra_brain_infrastructure_231 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 231 controls_state = 231
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        231 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 231 value = 2 }
+}
+
+terra_brain_infrastructure_232 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 232 controls_state = 232
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        232 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 232 value = 2 }
+}
+
+terra_brain_infrastructure_233 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 233 controls_state = 233
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        233 = { is_core_of = ROOT infrastructure < 3
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 233 value = 2 }
+}
+
+terra_brain_infrastructure_234 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 234 controls_state = 234
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        234 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 234 value = 2 }
+}
+
+terra_brain_infrastructure_235 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 235 controls_state = 235
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        235 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 235 value = 2 }
+}
+
+terra_brain_infrastructure_251 = {
+    allowed = { NOT = { OR = { original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes exists = yes has_capitulated = no
+        any_owned_state = { always = yes }
+        owns_state = 251 controls_state = 251
+        num_of_civilian_factories > 5
+        OR = { has_war = no num_of_civilian_factories > 19 }
+        251 = { is_core_of = ROOT infrastructure < 2
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = build_building id = infrastructure target = 251 value = 2 }
+}

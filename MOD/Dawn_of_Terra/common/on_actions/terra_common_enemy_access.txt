@@ -1,0 +1,17 @@
+on_actions = {
+    # Startup has no country scope and needs an explicit whole-country sweep.
+    on_startup = {
+        effect = { every_country = { terra_brain_access_refresh_host_effect = yes } }
+    }
+    # Fires for each new bilateral war relation, including countries joining
+    # an existing war. Reconcile both sides of every eligible access pair.
+    # Daily processing below remains the fallback and handles cleanup.
+    on_war_relation_added = {
+        effect = { every_country = { terra_brain_access_refresh_host_effect = yes } }
+    }
+    # Native on_daily already runs once per country. Do not nest every_country.
+    # This also initializes existing saves and handles peace/annexation cleanup.
+    on_daily = {
+        effect = { terra_brain_access_refresh_host_effect = yes }
+    }
+}

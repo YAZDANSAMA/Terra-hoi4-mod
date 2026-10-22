@@ -1,6 +1,6 @@
 name="Dawn of Terra"
 picture="thumbnail.png"
-version="0.0.74-ai-schema-fix"
+version="0.0.79-merged"
 tags={
 	"Alternative History"
 	"Gameplay"
