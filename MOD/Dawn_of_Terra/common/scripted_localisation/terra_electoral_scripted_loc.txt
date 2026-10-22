@@ -2311,6 +2311,14 @@ defined_text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
 			check_variable = { CLM.CLM_sel_sen = 1 }
+			CLM = { has_country_flag = CLM_national_party_renamed }
+		}
+		localization_key = CLM_ELECTORAL_SENATE_ST_RED_SDP
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 1 }
 		}
 		localization_key = CLM_ELECTORAL_SENATE_ST_RED
 	}
@@ -2736,6 +2744,14 @@ defined_text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
 			check_variable = { CLM.CLM_electoral_party_sel = 1 }
+			CLM = { has_country_flag = CLM_national_party_renamed }
+		}
+		localization_key = CLM_ELECTORAL_SUPPORT_RED_SDP
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 1 }
 		}
 		localization_key = CLM_ELECTORAL_SUPPORT_RED
 	}
@@ -3117,6 +3133,13 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { CLM.CLM_visit_party = 1 }
+			CLM = { has_country_flag = CLM_national_party_renamed }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_RED_SDP
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_party = 1 }
 		}
 		localization_key = CLM_ELECTORAL_PARTY_RED
 	}
@@ -3139,6 +3162,13 @@ defined_text = {
 
 defined_text = {
 	name = GetElFundPartyName
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_party = 1 }
+			CLM = { has_country_flag = CLM_national_party_renamed }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_RED_SDP
+	}
 	text = {
 		trigger = {
 			check_variable = { CLM.CLM_fund_party = 1 }
