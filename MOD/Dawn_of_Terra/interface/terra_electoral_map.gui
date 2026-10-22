@@ -950,7 +950,7 @@ guiTypes = {
 			name = "electoral_party_1"
 			position = { x = 563 y = 452 }
 			spriteType = "GFX_terra_electoral_party_btn_red"
-			pdx_tooltip = "National Party"
+			pdx_tooltip = "CLM_ELECTORAL_BTN_RED"
 		}
 		iconType = {
 			name = "electoral_party_ring_1"
@@ -963,7 +963,7 @@ guiTypes = {
 			name = "electoral_party_text_1"
 			position = { x = 567 y = 456 }
 			font = "hoi_16mbs"
-			text = "National Party"
+			text = "CLM_ELECTORAL_BTN_RED"
 			format = center
 			vertical_alignment = center
 			maxWidth = 96

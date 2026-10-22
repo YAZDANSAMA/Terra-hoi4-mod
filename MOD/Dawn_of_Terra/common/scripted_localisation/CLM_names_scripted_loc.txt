@@ -10,3 +10,16 @@ defined_text = {
 		localization_key = CLM_cge_name_energy_sector
 	}
 }
+
+defined_text = {
+	name = GetElRedBtnName
+	text = {
+		trigger = {
+			CLM = { has_country_flag = CLM_national_party_renamed }
+		}
+		localization_key = CLM_electoral_name_sdp
+	}
+	text = {
+		localization_key = CLM_electoral_name_np
+	}
+}
