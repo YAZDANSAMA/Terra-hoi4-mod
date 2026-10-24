@@ -4,6 +4,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_4"
 				large = "gfx/leaders/USA/Portrait_USA_Generic_1.dds"
 			}
 		}
@@ -12,6 +13,18 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_alphonse_durand_pf
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_alphonse_durand } }
+			}
+			traits = { popular_figurehead }
+			cost = 100
+		}
 	}
 
 	CLM_richard_grants = {
@@ -19,6 +32,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
 				large = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
 			}
 		}
@@ -27,6 +41,25 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_richard_grants_pt
+			allowed = {
+				original_tag = CLM
+			}
+			traits = { prince_of_terror }
+			cost = 100
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = CLM_richard_grants_nr
+			allowed = {
+				original_tag = CLM
+			}
+			ledger = navy
+			traits = { navy_chief_reform_1 }
+			cost = 100
+		}
 	}
 
 	CLM_wallis_bonnet = {
@@ -34,6 +67,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_2"
 				large = "gfx/leaders/USA/Portrait_USA_Generic_3.dds"
 			}
 		}
@@ -42,6 +76,15 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_wallis_bonnet_sw
+			allowed = {
+				original_tag = CLM
+			}
+			traits = { silent_workhorse }
+			cost = 100
+		}
 	}
 
 	CLM_simeon_mercer = {
@@ -49,6 +92,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_3"
 				large = "gfx/leaders/FRA/Portrait_France_Generic_1.dds"
 			}
 		}
@@ -56,6 +100,25 @@ characters = {
 			ideology = classical_liberalism_subtype
 			traits = { }
 			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CLM_simeon_mercer_ls
+			allowed = {
+				original_tag = CLM
+			}
+			ledger = army
+			traits = { army_logistics_1 }
+			cost = 100
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_simeon_mercer_er
+			allowed = {
+				original_tag = CLM
+			}
+			traits = { economic_reformer }
+			cost = 100
 		}
 	}
 

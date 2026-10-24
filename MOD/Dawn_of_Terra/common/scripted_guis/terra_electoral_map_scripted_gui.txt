@@ -12,6 +12,12 @@ scripted_gui = {
 			always = no
 		}
 
+		triggers = {
+			national_control_button_2_click_enabled = {
+				NOT = { has_country_flag = CLM_electoral_map_locked }
+			}
+		}
+
 		effects = {
 			national_control_button_2_click = {
 				if = {
@@ -32,6 +38,7 @@ scripted_gui = {
 
 		visible = {
 			has_country_flag = CLM_electoral_map_open
+			NOT = { has_country_flag = CLM_electoral_map_locked }
 		}
 
 		ai_enabled = {

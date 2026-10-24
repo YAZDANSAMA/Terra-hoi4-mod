@@ -1,0 +1,95 @@
+CLM_ge_adj_killing = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_ws = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_cooperation = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = -0.05 }
+		add_to_variable = { CLM_ge_adj_ws = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_strong_but_fair = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = -0.05 }
+		add_to_variable = { CLM_ge_adj_ws = 0.05 }
+		add_to_variable = { CLM_ge_adj_drift = -0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_safeguard = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_pp = 0.25 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_democracy_defense = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_ws = 0.1 }
+		add_to_variable = { CLM_ge_adj_pp = 0.25 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_league_stones = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_ws = 0.05 }
+		add_to_variable = { CLM_ge_adj_pp = 0.25 }
+		force_update_dynamic_modifier = yes
+	}
+}
+

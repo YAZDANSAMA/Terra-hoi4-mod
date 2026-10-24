@@ -1,0 +1,158 @@
+add_namespace = CLM_coalition
+add_namespace = CLM_embassy
+add_namespace = CLM_assassination
+
+country_event = {
+	id = CLM_coalition.1
+	title = CLM_coalition.1.t
+	desc = {
+		text = CLM_coalition.1.d_done
+		trigger = {
+			has_completed_focus = CLM_richard_grants_the_militarist_np
+			has_completed_focus = CLM_wallis_bonnet_the_realist_fdp
+			has_completed_focus = CLM_simeon_mercer_the_idealist_la
+		}
+	}
+	desc = {
+		text = CLM_coalition.1.d
+		trigger = {
+			OR = {
+				NOT = { has_completed_focus = CLM_richard_grants_the_militarist_np }
+				NOT = { has_completed_focus = CLM_wallis_bonnet_the_realist_fdp }
+				NOT = { has_completed_focus = CLM_simeon_mercer_the_idealist_la }
+			}
+		}
+	}
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_coalition.1.a
+		trigger = {
+			NOT = { has_completed_focus = CLM_richard_grants_the_militarist_np }
+		}
+		set_country_flag = CLM_coalition_skip_richard_grants
+		complete_national_focus = CLM_richard_grants_the_militarist_np
+	}
+
+	option = {
+		name = CLM_coalition.1.b
+		trigger = {
+			NOT = { has_completed_focus = CLM_wallis_bonnet_the_realist_fdp }
+		}
+		set_country_flag = CLM_coalition_skip_wallis_bonnet
+		complete_national_focus = CLM_wallis_bonnet_the_realist_fdp
+	}
+
+	option = {
+		name = CLM_coalition.1.c
+		trigger = {
+			NOT = { has_completed_focus = CLM_simeon_mercer_the_idealist_la }
+		}
+		set_country_flag = CLM_coalition_skip_simeon_mercer
+		complete_national_focus = CLM_simeon_mercer_the_idealist_la
+	}
+
+	option = {
+		name = CLM_coalition.1.d_opt
+		trigger = {
+			has_completed_focus = CLM_richard_grants_the_militarist_np
+			has_completed_focus = CLM_wallis_bonnet_the_realist_fdp
+			has_completed_focus = CLM_simeon_mercer_the_idealist_la
+		}
+	}
+}
+
+country_event = {
+	id = CLM_embassy.1
+	title = CLM_embassy.1.t
+	desc = CLM_embassy.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_embassy.1.a
+		ai_chance = {
+			base = 4
+			modifier = {
+				factor = 0.1
+				has_opinion = {
+					target = CLM
+					value < -50
+				}
+			}
+		}
+		add_stability = 0.03
+		add_opinion_modifier = {
+			target = CLM
+			modifier = CLM_embassy_established
+		}
+		CLM = {
+			add_political_power = 10
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = CLM_embassy_established
+			}
+		}
+	}
+
+	option = {
+		name = CLM_embassy.1.b
+		ai_chance = {
+			base = 1
+		}
+		CLM = {
+			add_stability = -0.01
+		}
+	}
+}
+
+country_event = {
+	id = CLM_embassy.2
+	title = CLM_embassy.2.t
+	desc = CLM_embassy.2.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_embassy.2.a
+		100 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		152 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = CLM_assassination.1
+	title = CLM_assassination.1.t
+	desc = CLM_assassination.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_assassination.1.a
+		retire_character = CLM_simeon_mercer
+		retire_character = CLM_wallis_bonnet
+		retire_character = CLM_richard_grants
+		clr_country_flag = CLM_electoral_map_open
+		set_country_flag = CLM_electoral_map_locked
+		custom_effect_tooltip = CLM_electoral_map_locked_tt
+		CLM_great_experiment_stability_down = yes
+		CLM_great_experiment_stability_down = yes
+		custom_effect_tooltip = CLM_ge_tt_killing
+		CLM_ge_adj_killing = yes
+	}
+}

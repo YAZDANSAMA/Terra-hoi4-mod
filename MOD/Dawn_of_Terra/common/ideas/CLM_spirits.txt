@@ -2934,5 +2934,17 @@ ideas = {
 				drift_defence_factor = 1
 			}
 		}
+
+		CLM_everyman_science = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = -0.1
+			}
+		}
 	}
 }
