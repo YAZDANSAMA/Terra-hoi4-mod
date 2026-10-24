@@ -1,0 +1,97 @@
+
+URS_recalc_economic_spirit = {
+    set_variable = { URS_cg_var = 0.8 }
+    set_variable = { URS_milout_var = -0.3 }
+    set_variable = { URS_construct_var = -0.15 }
+    set_variable = { URS_resource_var = 0 }
+
+    set_variable = { URS_effigain_var = 0 }
+    set_variable = { URS_effimax_var = 0 }
+    set_variable = { URS_export_var = -0.1 }
+
+    set_variable = { URS_fuelgain_var = 0.05 }
+    set_variable = { URS_tradeopin_var = 0 }
+    set_variable = { URS_eqbns_if_var = 0 }
+
+    set_variable = { URS_monthpop_var = 0 }
+    set_variable = { URS_buildslots_var = 0 }
+    set_variable = { URS_stab_var = -0.25 }
+    set_variable = { URS_mp_var = 0 }
+    set_variable = { URS_stabtick_var = -0.03 }
+
+    set_variable = { URS_locres_var = 0 }
+    set_variable = { URS_respen_var = 0 }
+    set_variable = { URS_pptick_var = 0 }
+
+    # --- soldier ---
+    if = {
+        limit = { has_country_flag = URS_aut_mic_1_done }
+        add_to_variable = { URS_export_var = -0.15 }
+        add_to_variable = { URS_cg_var = -0.15 }
+        add_to_variable = { URS_tradeopin_var = -0.45 }
+        add_to_variable = { URS_milout_var = 0.10 }
+    }
+    if = {
+        limit = { has_country_flag = URS_aut_mic_2_done }
+        add_to_variable = { URS_milout_var = 0.15 }
+        add_to_variable = { URS_effimax_var = 0.015 }
+        add_to_variable = { URS_effigain_var = 0.0125 }
+    }
+    if = {
+        limit = { has_country_flag = URS_aut_mic_3_done }
+        add_to_variable = { URS_eqbns_if_var = -0.25 }
+        add_to_variable = { URS_milout_var = 0.15 }
+
+    }
+
+    # --- merchant ---
+    if = {
+        limit = { has_country_flag = URS_aut_diri_1_done }
+        add_to_variable = { URS_milout_var = 0.15 }
+        add_to_variable = { URS_cg_var = -0.3 }
+    }
+    if = {
+        limit = { has_country_flag = URS_aut_diri_2_done }
+        add_to_variable = { URS_fuelgain_var = 0.05 }
+        add_to_variable = { URS_resource_var = 0.075 }
+        add_to_variable = { URS_construct_var = 0.15 }
+    }
+    if = {
+        limit = { has_country_flag = URS_aut_diri_3_done }
+        add_to_variable = { URS_fuelgain_var = 0.15 }
+        add_to_variable = { URS_cg_var = -0.35 }
+        add_to_variable = { URS_construct_var = 0.075 }
+        add_to_variable = { URS_tradeopin_var = -0.35 }
+    }
+
+
+    # --- people ---
+    if = {
+        limit = { has_country_flag = URS_aut_agri_1_done }
+        add_to_variable = { URS_monthpop_var = 0.05 } 
+        add_to_variable = { URS_buildslots_var = 2 }
+        add_to_variable = { URS_stab_var = 0.05 }
+        add_to_variable = { URS_stabtick_var = 0.02 }
+    }
+    if = {
+        limit = { has_country_flag = URS_aut_agri_2_done }
+        add_to_variable = { URS_stab_var = 0.1 }
+        add_to_variable = { URS_stabtick_var = 0.015 }
+        add_to_variable = { URS_monthpop_var = 0.15 }
+        add_to_variable = { URS_mp_var = 20 }
+    }
+
+
+    # --- final ---
+    if = {
+        limit = { has_country_flag = URS_aut_final_done }
+        add_to_variable = { URS_pptick_var = 0.05 } 
+        add_to_variable = { URS_respen_var = -0.1 }
+        add_to_variable = { URS_resource_var = 0.05 }
+        add_to_variable = { URS_stab_var = 0.1 }
+        add_to_variable = { URS_construct_var = 0.15 }
+        add_to_variable = { URS_cg_var = -0.15 }
+    }
+
+    force_update_dynamic_modifier = yes
+}

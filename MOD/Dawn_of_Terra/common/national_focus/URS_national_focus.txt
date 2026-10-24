@@ -38,7 +38,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = -0.05
-			# add kazdel opinion
+			
 			add_ideas = URS_kazdel_arts_attache_1
 		}
 	}
@@ -308,12 +308,16 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			add_political_power = -50
+			add_timed_idea = {
+				idea = URS_four_year_plan
+    			years = 4
+			}
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_start
+		id = URS_economic_autarky_start
 		x = 5
 		y = 1
 		relative_position_id = URS_economic_start
@@ -325,151 +329,173 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_start_tt
+			hidden_effect = { add_dynamic_modifier = { modifier = URS_autarky_spirit } }
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_agri_1
+		id = URS_economic_autarky_agri_1
 		x = 2
 		y = 1
-		relative_position_id = URS_economic_command_diri_1
+		relative_position_id = URS_economic_autarky_diri_1
 		cost = 6
 
-		prerequisite = { focus = URS_economic_command_diri_1 }
+		prerequisite = { focus = URS_economic_autarky_diri_1 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_agri_1_tt
+			set_country_flag = URS_aut_agri_1_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_agri_2
+		id = URS_economic_autarky_agri_2
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_agri_1
+		relative_position_id = URS_economic_autarky_agri_1
 		cost = 4
 
-		prerequisite = { focus = URS_economic_command_agri_1 }
+		prerequisite = { focus = URS_economic_autarky_agri_1 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_agri_2_tt
+			set_country_flag = URS_aut_agri_2_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_diri_1
+		id = URS_economic_autarky_diri_1
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_start
+		relative_position_id = URS_economic_autarky_start
 		cost = 2
 
-		prerequisite = { focus = URS_economic_command_start }
+		prerequisite = { focus = URS_economic_autarky_start }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_diri_1_tt
+			set_country_flag = URS_aut_diri_1_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_diri_2
+		id = URS_economic_autarky_diri_2
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_diri_1
+		relative_position_id = URS_economic_autarky_diri_1
 		cost = 5
 
-		prerequisite = { focus = URS_economic_command_diri_1 }
+		prerequisite = { focus = URS_economic_autarky_diri_1 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_diri_2_tt
+			set_country_flag = URS_aut_diri_2_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_diri_3
+		id = URS_economic_autarky_diri_3
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_diri_2
+		relative_position_id = URS_economic_autarky_diri_2
 		cost = 4
 
-		prerequisite = { focus = URS_economic_command_diri_2 }
+		prerequisite = { focus = URS_economic_autarky_diri_2 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_diri_3_tt
+			set_country_flag = URS_aut_diri_3_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_mic_1
+		id = URS_economic_autarky_mic_1
 		x = -2
 		y = 1
-		relative_position_id = URS_economic_command_start
+		relative_position_id = URS_economic_autarky_start
 		cost = 4
 
-		prerequisite = { focus = URS_economic_command_start }
+		prerequisite = { focus = URS_economic_autarky_start }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_mic_1_tt
+			set_country_flag = URS_aut_mic_1_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_mic_2
+		id = URS_economic_autarky_mic_2
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_mic_1
+		relative_position_id = URS_economic_autarky_mic_1
 		cost = 5
 
-		prerequisite = { focus = URS_economic_command_mic_1 }
+		prerequisite = { focus = URS_economic_autarky_mic_1 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_mic_2_tt
+			set_country_flag = URS_aut_mic_2_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_mic_3
+		id = URS_economic_autarky_mic_3
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_mic_2
+		relative_position_id = URS_economic_autarky_mic_2
 		cost = 4
 
-		prerequisite = { focus = URS_economic_command_mic_2 }
+		prerequisite = { focus = URS_economic_autarky_mic_2 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_mic_3_tt
+			set_country_flag = URS_aut_mic_3_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
 	focus = {
-		id = URS_economic_command_fin
+		id = URS_economic_autarky_fin
 		x = 0
 		y = 1
-		relative_position_id = URS_economic_command_diri_3
+		relative_position_id = URS_economic_autarky_diri_3
 		cost = 10
 
-		prerequisite = { focus = URS_economic_command_diri_3 focus = URS_economic_command_mic_3 focus = URS_economic_command_agri_2 }
+		prerequisite = { focus = URS_economic_autarky_diri_3 }
+		prerequisite = { focus = URS_economic_autarky_mic_3 }
+		prerequisite = { focus = URS_economic_autarky_agri_2 }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			custom_effect_tooltip = URS_aut_final_tt
+			set_country_flag = URS_aut_final_done
+			URS_recalc_economic_spirit = yes
 		}
 	}
 
@@ -481,7 +507,7 @@ focus_tree = {
 		cost = 2
 
 		prerequisite = { focus = URS_economic_start }
-		mutually_exclusive = { focus = URS_economic_command_start }
+		mutually_exclusive = { focus = URS_economic_autarky_start }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
@@ -642,7 +668,7 @@ focus_tree = {
 		relative_position_id = URS_economic_market_start
 		cost = 10
 
-		prerequisite = { focus = URS_economic_market_start focus = URS_economic_command_start }
+		prerequisite = { focus = URS_economic_market_start focus = URS_economic_autarky_start }
 
 		icon = GFX_goal_generic_construct_civ_factory
 
@@ -757,7 +783,13 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			add_state_claim = 97
+			KZM = {
+				add_opinion_modifier = {
+					target = URS
+					modifier = KZM_URS_wargoal
+				}
+			}
 		}
 	}
 
@@ -773,7 +805,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			add_timed_idea = {
+				idea = URS_KZM_war_planning_1
+    			days = 120
+			}
+			army_experience = 50
 		}
 	}
 
@@ -790,7 +826,12 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			set_country_flag = URS_KZM_war_fast
+			add_stability = -0.05
+			modify_timed_idea = {
+				idea = URS_KZM_war_planning_1
+    			days = -30
+			}
 		}
 	}
 
@@ -807,7 +848,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			set_country_flag = URS_KZM_war_slow
+			swap_ideas = {
+				remove_idea = URS_KZM_war_planning_1
+				add_idea = URS_KZM_war_planning_2
+			}
 		}
 	}
 
@@ -836,10 +881,36 @@ focus_tree = {
 
 		prerequisite = { focus = URS_kazimierz_upper_right_2 focus = URS_kazimierz_upper_left }
 
+		available = {
+			NOT = {
+				OR = {
+					has_idea = URS_KZM_war_planning_1
+					has_idea = URS_KZM_war_planning_2
+				}
+				
+			}
+		}
+
 		icon = GFX_goal_generic_construct_civ_factory
 
 		completion_reward = {
-			add_political_power = 0
+			declare_war_on = {
+				target = KZM
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					has_country_flag = URS_KZM_war_slow
+				}
+				add_idea = URS_KZM_war_spirit_fast
+			}
+			else if = {
+				limit = {
+					has_country_flag = URS_KZM_war_fast
+				}
+				add_idea = URS_KZM_war_spirit_slow
+			}
+
 		}
 	}
 

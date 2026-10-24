@@ -226,5 +226,147 @@ ideas = {
                 army_armor_attack_factor = 0.05
             }
         }
+        URS_KZM_war_planning_1 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                max_planning_factor = 0.2
+                planning_speed = 0.15
+            }
+        }
+        URS_KZM_war_planning_2 = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                max_planning_factor = 0.2
+                planning_speed = 0.15
+                training_time_army_factor = -0.10
+                industrial_capacity_factory = 0.05
+                research_speed_factor = 0.075
+            }
+        }
+        URS_KZM_war_spirit_fast = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.05
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.075
+                }
+                army_org_factor = -0.08
+                max_planning_factor = 0.15
+                planning_speed = 0.1
+            }
+        }
+        URS_KZM_war_spirit_slow = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                targeted_modifier = {
+                    tag = KZM
+                    defense_bonus_against = 0.1
+                }
+                army_org_factor = 0.08
+                max_planning_factor = 0.1
+                planning_speed = 0.05
+            }
+        }
+        URS_KZM_war_krasnyy_chas = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+        URS_KZM_war_final_push = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+        URS_KZM_war_nsb = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.075
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+
+        URS_four_year_plan = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.025
+            }
+        }
+        URS_imperial_bank = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.075
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+        URS_imperial_economy = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.075
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+        URS_migration_program = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.075
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+        URS_reconnected = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.075
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
+        URS_tourism_model = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_speed_factor = 0.075
+                targeted_modifier = {
+                    tag = KZM
+                    attack_bonus_against = 0.1
+                }
+            }
+        }
     }
 }

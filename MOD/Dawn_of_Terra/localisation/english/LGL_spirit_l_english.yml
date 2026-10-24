@@ -1,0 +1,57 @@
+﻿l_english:
+ LGL_military_spirit: "La Grande Armée"
+ LGL_military_spirit_desc: "The Grande Armée stands as Terra's premier fighting force, forged in centuries of triumph and crowned by our recent victory in the Gallo-Victorian War. Yet behind this martial glory lies a dangerous reality: our command is stagnant, and our tactics are relics of a bygone era. If we want to cement our dominance across Terra for years to come, we must confront the failures of our past and drag our military into the modern age."
+
+ LGL_mil_start_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_ARMY_SPEED_FACTOR$: §G+3.0%§!\n$MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!"
+
+ LGL_asym_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_ARMY_SPEED_FACTOR$: §G+3.0%§!\n$MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!"
+ LGL_asym_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+5.0%§!\n$MODIFIER_ATTRITION_FACTOR$: §G-15.0%§!\n$MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-2.5%§!\n$MODIFIER_NO_SUPPLY_GRACE$: §G+30§! $MOD_HOUR$"
+ LGL_asym_3_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+10.0%§!\n$MODIFIER_ARMY_ORG_FACTOR$: §R-10.0%§!"
+
+ LGL_stat_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!\n$MODIFIER_TRAINING_TIME_FACTOR$: §G-5.0%§!\n$MODIFIER_XP_GAIN_ARMY$: §G+10%§!"
+ LGL_stat_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+5.0%§!\n$MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+5.0%§!"
+ LGL_stat_3_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_ARMY_SPEED_FACTOR$: §G+7.5%§!\n$MODIFIER_WINTER_ATTRITION_FACTOR$: §G-10.0%§!\n$MODIFIER_PLANNING_SPEED$: §G+10.0%§!"
+ 
+ LGL_shared_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_PLANNING_SPEED$: §G+15.0%§!\n$MODIFIER_MAX_PLANNING_FACTOR$: §G+12.5%§!\n$MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-7.5%§!"
+ LGL_shared_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_TRAINING_TIME_FACTOR$: §G-10.0%§!\n$MODIFIER_RECRUITABLE_POPULATION_FACTOR$: §G10%§!"
+ 
+ LGL_arts_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+8.0%§!\n$MODIFIER_ARMY_ORG_FACTOR$: §R-3.0%§!"
+ LGL_arts_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIER_ARMY_SPEED_FACTOR$: §R-5.0%§!\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+7.0%§!"
+ 
+ LGL_steam_1_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+4.0%§!\n$MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+8.0%§!"
+ LGL_steam_2_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIERS_ARMY_DEFENCE_FACTOR$: §G+9.0%§!\n$MODIFIER_ARMY_ORG_FACTOR$: §G+2.0%§!"
+ 
+ LGL_mil_final_tt: "Modify §Y$LGL_military_spirit$§! by:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+8.0%§!\n$MODIFIER_ARMY_ORG_FACTOR$: §G+7.0%§!\n$MODIFIER_RECRUITABLE_POPULATION_FACTOR$: §G10%§!\n$MODIFIER_XP_GAIN_ARMY$: §G+10%§!"
+
+ LGL_economic_spirit: "Gaul's Glitz and Glamour"
+ LGL_economic_spirit_desc: "The lights of our cities and the smog of our factories serve to speak of beauty and prosperity. Yet, behind the glitz and the glamour of our nation, our people chase opulence and pleasure while our factories and assembly lines toil with outdated technology and undesirable inefficiency. If we want to continue spreading our hegemony and ensure our legacy persists beyond time, we must ensure that we don't fall to the vices of obstinacy and neglect."
+
+ LGL_notre_langue: "The \"Notre Langue\""
+ LGL_notre_langue_desc: "The Gallic language has evolved to become the world's lingua franca, but only in name. With the release of the modern Gallic language textbook, we have finally made our linguistic influence over Terra a reality, becoming a staple in classrooms and libraries all over the continent."
+
+ LGL_livre_standard: "The Livre Standard"
+ LGL_livre_mod: "Standardized Livre"
+ LGL_livre_standard_desc: "Our currency, the livre, has become the standard across all of Terra, used in transactions and trade internationally and becoming the de facto standard of some nations."
+
+ LGL_eco_start_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §G-3.0%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+2.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+2.5%§!"
+ LGL_ind_res_1_tt: "Add §Y$LGL_notre_langue$§!, which grants:\n$MODIFIER_POLITICAL_POWER_GAIN$: §G+5.0%§!\n$MODIFIER_GLOBAL_MONTHLY_POPULATION$: §G+20.0%§!\n$MODIFIER_OPINION_GAIN_MONTHLY_FACTOR$: §G+10.0%§!\n$MODIFIER_COMPLIANCE_GROWTH$: §G+7.0%§!\n\nModify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+3.5%§!\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-5.0%§!"
+ LGL_ind_res_2_tt: "Gain §G1§! research slot.\n\nModify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+10.0%§!\n$MODIFIER_TRADE_OPINION_FACTOR$: §G+50§!"
+
+ LGL_ind_mil_1_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §G+5.0%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+2.5%§!"
+ LGL_ind_mil_2_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.0%§!\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: §G+7.5%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+4.0%§!"
+
+ LGL_ind_civ_1_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-2.0%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.0%§!"
+
+ LGL_econ_final_tt: "Modify §Y$LGL_economic_spirit$§! by:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §G-2.0%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.0%§!"
+
+ LGL_gallic_hegemony: "Waning Gallic Hegemony"
+ LGL_gallic_hegemony_desc: "Gaul enters the 11th century with unprecedented global influence, won through the rapid growth and expansion of the past few centuries. Yet this dominance has bred decadence within its noble courts and bureaucracy, and Gaul has fallen into stagnation as its neighboring powers continue to eye the fading empire. As Corsica I rose to the throne to lead forth a new Gallic Era, he seeks to remedy these ills by any means possible.\n\n§REven if it means we must shed our countrymen's blood once more.§!"
+
+ LGL_victorian_reparations: "Victorian Reparations"
+ LGL_VCT_reps: "Victorian Reparations"
+ LGL_victorian_reparations_desc: "Emerging as the victtor in the brutal Gallo-Victorian War, Gaul's victory in the Gallo-Victorian War was costly, but the peace it dictated was harsher still. The reparations imposed upon the young Victorian nation have not broken it, yet they have bred a lasting bitterness toward Gaul and its habit of meddling in Victorian affairs.\n\n§RWe must be careful not to provoke a cornered lion more than once. Especially one that can still bite back.§!"
+
+ LGL_leithanien_gifts: "Gifts to Leithanien"
+ LGL_leithanien_gifts_desc: "The gifts we sent and promised to Leithanien are expensive for our civilian and military economy. If an enemy were to attack us, our industry will not be able to keep up."
+ LGL_military_administration: "Leithanien Military Administration"
+ LGL_military_administration_desc: "Sending the majority of our general staff and army to oversee the military administration places a massive strain on our domestic forces. We should take care to be vigilant of our neighbors in case of an attack on us."

@@ -1,0 +1,31 @@
+URS_autarky_spirit = {
+    icon = GFX_idea_JAP_pan_asian_union
+    
+    consumer_goods_factor = URS_cg_var
+    industrial_capacity_factory = URS_milout_var
+    production_speed_buildings_factor = URS_construct_var
+    local_resources_factor = URS_resource_var
+
+    fuel_gain_factor = URS_fuelgain_var
+    trade_opinion_factor = URS_tradeopin_var
+    min_export = URS_export_var
+
+    production_factory_efficiency_gain_factor = URS_effigain_var
+    production_factory_max_efficiency_factor = URS_effimax_var
+
+    monthly_population = URS_monthpop_var
+    global_building_slots = URS_buildslots_var
+    stability_factor = URS_stab_var
+    stability_weekly_factor = URS_stabtick_var
+    weekly_manpower = URS_mp_var
+    
+    production_lack_of_resource_penalty_factor = URS_respen_var
+    political_power_gain = URS_pptick_var
+
+    equipment_bonus = {
+        infantry_equipment = {
+            build_cost_ic = URS_eqbns_if_var
+        }
+    }
+}
+
