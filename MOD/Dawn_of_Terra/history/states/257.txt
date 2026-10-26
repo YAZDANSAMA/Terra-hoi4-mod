@@ -1,0 +1,26 @@
+state = {
+	id = 257
+	name = "Ursus Eastern Military Frontier"
+	manpower = 1
+	state_category = rural
+
+	resources = {
+		originium = 20
+		aluminium = 8
+		tungsten = 14
+		chromium = 10
+	}
+
+	history = {
+		owner = URS
+		add_core_of = KZM
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		2200 2201 2213 2214 2219 3098 3101
+	}
+	local_supplies = 0.0
+}
