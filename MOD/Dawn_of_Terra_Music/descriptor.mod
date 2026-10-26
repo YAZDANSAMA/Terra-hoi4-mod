@@ -1,4 +1,5 @@
-version="0.0.3"
-name="Dawn_of_Terra_Music"
+version="0.0.4"
+name="Dawn of Terra Music"
+supported_version="1.19.*"
 tags={ "Sound" }
 replace_path="music"

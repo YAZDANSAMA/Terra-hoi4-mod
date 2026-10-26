@@ -901,6 +901,23 @@ terra_brain_common_front_D50 = {
     ai_strategy = { type = force_defend_ally_borders id = D50 value = 80 }
 }
 
+terra_brain_common_front_FCL = {
+    allowed = { NOT = { OR = { original_tag = TNJ original_tag = SEA original_tag = SST } } }
+    enable = {
+        is_ai = yes
+        num_divisions > 0
+        terra_brain_access_pair_eligible = { GUEST = FCL }
+        OR = {
+            has_military_access_to = FCL
+            is_in_faction_with = FCL
+            is_subject_of = FCL
+            has_subject = FCL
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = force_defend_ally_borders id = FCL value = 80 }
+}
+
 terra_brain_common_front_GRM = {
     allowed = { NOT = { OR = { original_tag = TNJ original_tag = SEA original_tag = SST } } }
     enable = {

@@ -1,4 +1,6 @@
 # Main menu theme registration.
+# Its recording contains Dom followed by Imperial in that fixed order.
+# Weight zero excludes it from the in-game Weighted Shuffle playlist.
 music_station = "base_music"
 
 music = {
@@ -48,6 +50,38 @@ music = {
         base = 1
         modifier = { factor = 0 NOT = { any_country = { exists = yes is_ai = no } } }
         modifier = { factor = 0 NOT = { tag = URS } }
+        modifier = { factor = 0 has_war = no }
+    }
+}
+
+# Leithanien: peace.
+music = {
+    song = "dawn_leithanien_visage"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { tag = LTH } }
+        modifier = { factor = 0 is_ai = yes }
+        modifier = { factor = 0 has_war = yes }
+    }
+}
+
+# Leithanien: both recordings are available during war.
+music = {
+    song = "dawn_leithanien_der_hexenkoenig"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { tag = LTH } }
+        modifier = { factor = 0 is_ai = yes }
+        modifier = { factor = 0 has_war = no }
+    }
+}
+
+music = {
+    song = "dawn_leithanien_die_suenden_des_herkunftshorns"
+    chance = {
+        base = 1
+        modifier = { factor = 0 NOT = { tag = LTH } }
+        modifier = { factor = 0 is_ai = yes }
         modifier = { factor = 0 has_war = no }
     }
 }

@@ -1,0 +1,30 @@
+# One country-scoped handoff from the menu to the local player's soundtrack.
+# The silent handoff is not a radio playlist entry; it also ends the menu
+# recording for countries which have no dedicated soundtrack yet.
+dot_music_player_initialize = {
+    if = {
+        limit = { is_ai = no }
+        set_country_flag = dot_music_004_initialized
+        if = {
+            limit = { tag = VCT }
+            clr_country_flag = dot_vct_music_war
+            clr_country_flag = dot_vct_music_peace
+            dot_victoria_music_sync = yes
+        }
+        else_if = {
+            limit = { tag = URS }
+            clr_country_flag = dot_urs_music_war
+            clr_country_flag = dot_urs_music_peace
+            dot_ursus_music_sync = yes
+        }
+        else_if = {
+            limit = { tag = LTH }
+            clr_country_flag = dot_lth_music_war
+            clr_country_flag = dot_lth_music_peace
+            dot_leithanien_music_sync = yes
+        }
+        else = {
+            scoped_play_song = "dot_music_handoff"
+        }
+    }
+}
