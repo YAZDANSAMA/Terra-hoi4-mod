@@ -1,18 +1,5 @@
-# Terra 1028 starting army - stable infantry-only OOB
 division_template = {
-    name = "Ursus Line Division"
-    regiments = {
-        infantry = { x = 0 y = 0 }
-        infantry = { x = 0 y = 1 }
-        infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-        infantry = { x = 1 y = 1 }
-        infantry = { x = 1 y = 2 }
-    }
-}
-
-division_template = {
-    name = "Imperial Guard Division"
+    name = "Ursus Infantry Division"
     regiments = {
         infantry = { x = 0 y = 0 }
         infantry = { x = 0 y = 1 }
@@ -24,232 +11,435 @@ division_template = {
         infantry = { x = 2 y = 1 }
         infantry = { x = 2 y = 2 }
     }
-    priority = 2
+}
+
+division_template = {
+    name = "Ursus Cavalry Division"
+    regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+        cavalry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Ursus Artillery Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        artillery_brigade = { x = 1 y = 0 }
+        artillery_brigade = { x = 1 y = 1 }
+        artillery_brigade = { x = 1 y = 2 }
+    }
+}
+division_template = {
+    name = "Ursus Armored Division"
+    regiments = {
+        light_armor = { x = 0 y = 0 }
+        light_armor = { x = 0 y = 1 }
+        light_armor = { x = 0 y = 2 }
+        light_armor = { x = 0 y = 3 }
+        motorized = { x = 1 y = 0 }
+        motorized = { x = 1 y = 1 }
+        motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+        motorized = { x = 2 y = 2 }
+    }
 }
 
 units = {
+
+	division = {
+    name = "1st Artillery Division, 2nd Army"
+    location = 2219
+    division_template = "Ursus Artillery Division"
+    start_experience_factor = 1.00
+    start_equipment_factor = 1.00
+    start_manpower_factor = 1.00
+}
+	division = {
+    name = "2st Artillery Division, 2nd Army"
+    location = 5644
+    division_template = "Ursus Artillery Division"
+    start_experience_factor = 1.00
+    start_equipment_factor = 1.00
+    start_manpower_factor = 1.00
+}
+	division = {
+    name = "3st Artillery Division, 2nd Army"
+    location = 96
+    division_template = "Ursus Artillery Division"
+    start_experience_factor = 1.00
+    start_equipment_factor = 1.00
+    start_manpower_factor = 1.00
+}
     division = {
-        name = "1st Ursus Line Division"
-        location = 870
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "1st Motorized Division, 2nd Army"
+        location = 2219
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "2nd Ursus Line Division"
-        location = 871
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "2nd Motorized Division, 2nd Army"
+        location = 2200
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "3rd Ursus Line Division"
-        location = 555
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "3rd Motorized Division, 2nd Army"
+        location = 2201
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "4th Ursus Line Division"
-        location = 556
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "4th Motorized Division, 2nd Army"
+        location = 5638
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "5th Ursus Line Division"
-        location = 95
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "5th Motorized Division, 2nd Army"
+        location = 5643
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "6th Ursus Line Division"
+        name = "6th Motorized Division, 2nd Army"
+        location = 5641
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+        division = {
+        name = "7st Motorized Division, 2nd Army"
         location = 96
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "7th Ursus Line Division"
-        location = 258
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "1st Infantry Division, 2nd Army"
+        location = 2200 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "8th Ursus Line Division"
-        location = 260
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "2nd Infantry Division, 2nd Army"
+        location = 2201 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "9th Ursus Line Division"
-        location = 1599
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "3rd Infantry Division, 2nd Army"
+        location = 2213 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "10th Ursus Line Division"
-        location = 1600
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "4th Infantry Division, 2nd Army"
+        location = 2214 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "11th Ursus Line Division"
-        location = 244
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "5th Infantry Division, 2nd Army"
+        location = 2219 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "12th Ursus Line Division"
-        location = 246
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "6th Infantry Division, 2nd Army"
+        location = 3098 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "13th Ursus Line Division"
-        location = 33
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "7th Infantry Division, 2nd Army"
+        location = 3101
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "14th Ursus Line Division"
-        location = 34
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "8th Infantry Division, 2nd Army"
+        location = 5638 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "15th Ursus Line Division"
-        location = 243
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "9th Infantry Division, 2nd Army"
+        location = 5641 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "16th Ursus Line Division"
-        location = 247
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "10th Infantry Division, 2nd Army"
+        location = 5643 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "17th Ursus Line Division"
-        location = 4955
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "11th Infantry Division, 2nd Army"
+        location = 5644
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "18th Ursus Line Division"
-        location = 4956
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "12th Infantry Division, 2nd Army"
+        location = 1162 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "19th Ursus Line Division"
-        location = 7449
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "13th Infantry Division, 2nd Army"
+        location = 1165 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "20th Ursus Line Division"
-        location = 2181
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "14th Infantry Division, 2nd Army"
+        location = 1168
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+	division = {
+    name = "1st Artillery Division, 7nd Army"
+    location = 95 
+    division_template = "Ursus Artillery Division"
+    start_experience_factor = 1.00
+    start_equipment_factor = 1.00
+    start_manpower_factor = 1.00
+}
+	division = {
+    name = "2st Artillery Division, 7nd Army"
+    location = 97 
+    division_template = "Ursus Artillery Division"
+    start_experience_factor = 1.00
+    start_equipment_factor = 1.00
+    start_manpower_factor = 1.00
+}
+	division = {
+    name = "3st Artillery Division, 7nd Army"
+    location = 99 
+    division_template = "Ursus Artillery Division"
+    start_experience_factor = 1.00
+    start_equipment_factor = 1.00
+    start_manpower_factor = 1.00
+}
+    division = {
+        name = "1st Motorized Division, 7nd Army"
+        location = 100 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "21st Ursus Line Division"
-        location = 1
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "2nd Motorized Division, 7nd Army"
+        location = 101 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "22nd Ursus Line Division"
-        location = 139
-        division_template = "Ursus Line Division"
-        start_experience_factor = 0.20
+        name = "3rd Motorized Division, 7nd Army"
+        location = 102 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "1st Imperial Guard Division"
-        location = 385
-        division_template = "Imperial Guard Division"
-        start_experience_factor = 0.35
+        name = "4th Motorized Division, 7nd Army"
+        location = 103 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "2nd Imperial Guard Division"
-        location = 804
-        division_template = "Imperial Guard Division"
-        start_experience_factor = 0.35
+        name = "5th Motorized Division, 7nd Army"
+        location = 5885 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "3rd Imperial Guard Division"
-        location = 955
-        division_template = "Imperial Guard Division"
-        start_experience_factor = 0.35
+        name = "6th Motorized Division, 7nd Army"
+        location = 5888 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+        division = {
+        name = "7st Motorized Division, 7nd Army"
+        location = 6471 
+        division_template = "Ursus Armored Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "4th Imperial Guard Division"
-        location = 956
-        division_template = "Imperial Guard Division"
-        start_experience_factor = 0.35
+        name = "1st Infantry Division, 7nd Army"
+        location = 6472 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "5th Imperial Guard Division"
-        location = 870
-        division_template = "Imperial Guard Division"
-        start_experience_factor = 0.35
+        name = "2nd Infantry Division, 7nd Army"
+        location = 6473 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
     division = {
-        name = "6th Imperial Guard Division"
-        location = 871
-        division_template = "Imperial Guard Division"
-        start_experience_factor = 0.35
+        name = "3rd Infantry Division, 7nd Army"
+        location = 6474 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
         start_equipment_factor = 1.00
         start_manpower_factor = 1.00
     }
+    division = {
+        name = "4th Infantry Division, 7nd Army"
+        location = 6475 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "5th Infantry Division, 7nd Army"
+        location = 6476 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "6th Infantry Division, 7nd Army"
+        location = 6477 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "7th Infantry Division, 7nd Army"
+        location = 6478 
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "8th Infantry Division, 7nd Army"
+        location = 6479  
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "9th Infantry Division, 7nd Army"
+        location = 101
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "10th Infantry Division, 7nd Army"
+        location = 5888
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "11th Infantry Division, 7nd Army"
+        location = 6478
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "12th Infantry Division, 7nd Army"
+        location = 6477
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "13th Infantry Division, 7nd Army"
+        location = 6477
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+    division = {
+        name = "14th Infantry Division, 7nd Army"
+        location = 6472
+        division_template = "Ursus Infantry Division"
+        start_experience_factor = 1.00
+        start_equipment_factor = 1.00
+        start_manpower_factor = 1.00
+    }
+
+
+
+
 }
