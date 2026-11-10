@@ -86,7 +86,7 @@ guiTypes = {
 			name ="change_background_button"
 			position = { x = -206 y = -24 }
 			
-			quadTextureSprite = "GFX_terra_frontend_button_238x38"
+			quadTextureSprite = "GFX_button_238x38"
 			buttonText = "CHANGE_BACKGROUND"
 			buttonFont = "hoi_24header"
 			Orientation = center
@@ -100,7 +100,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_terra_frontend_tiled_window2_1b_border"
+				quadTextureSprite ="GFX_tiled_window2_1b_border"
 			}
 			
 			checkboxType = {
@@ -128,12 +128,12 @@ guiTypes = {
 			name = "background_selection_list"
 			size = { width = 230 height = 576 }
 			position = { x = 0 y = 90 }
-			verticalScrollbar = "terra_frontend_right_vertical_slider"
+			verticalScrollbar = "right_vertical_slider"
 			scroll_wheel_factor = 63
 			smooth_scrolling = yes
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_terra_frontend_tiled_window_transparent"
+				quadTextureSprite ="GFX_tiled_window_transparent"
 			}
 			
 				gridBoxType = {
@@ -156,7 +156,7 @@ guiTypes = {
 		buttonType = {
 			name = "change_background_button"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_terra_frontend_tiled_window_1b_border"
+			spriteType = "GFX_tiled_window_1b_border"
 		}
 		
 		containerWindowType = {
@@ -681,7 +681,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "toggle_button"
-				quadTextureSprite = "GFX_terra_frontend_sort_button_83x29" ## Orig: 60x29
+				quadTextureSprite = "GFX_sort_button_83x29" ## Orig: 60x29
 				position = { x=0 y=0  }
 				buttonFont = "hoi_16mbs"
 			}

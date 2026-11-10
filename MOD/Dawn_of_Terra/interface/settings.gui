@@ -1217,7 +1217,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "settings_tab_1"
-				position = { x = 25 y = 68 }
+				position = { x = 16 y = 68 }
 				quadTextureSprite ="GFX_settings_ingame_tab"	
 				font = "hoi_18mbs"
 				text = "SM_GAME"				
@@ -1227,7 +1227,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "settings_tab_2"
-				position = { x = 132 y = 68 }
+				position = { x = 129.67 y = 68 }
 				quadTextureSprite ="GFX_settings_ingame_tab"	
 				font = "hoi_18mbs"
 				text =	 "SM_VIDEO"					
@@ -1237,7 +1237,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "settings_tab_3"
-				position = { x = 240 y = 68 }
+				position = { x = 243.33 y = 68 }
 				quadTextureSprite ="GFX_settings_ingame_tab"	
 				font = "hoi_18mbs"
 				text = "SM_AUDIO"					
@@ -1247,7 +1247,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "settings_tab_4"
-				position = { x = 347 y = 68 }
+				position = { x = 357 y = 68 }
 				quadTextureSprite ="GFX_settings_ingame_tab"	
 				font = "hoi_16mbs"
 				text = "SETTINGS_ACCESSIBILITY"	
