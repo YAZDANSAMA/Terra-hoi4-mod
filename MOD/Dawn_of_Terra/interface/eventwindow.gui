@@ -30,7 +30,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"	
-				spriteType ="GFX_terra_event_top_bg"
+				spriteType ="GFX_event_report_top_win"
 			}			
 		
 			instantTextBoxType = {
@@ -64,7 +64,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"	
-				quadTextureSprite ="GFX_terra_event_mid_bg"
+				quadTextureSprite ="GFX_event_report_tileable_midsection"
 			}
 
 			instantTextBoxType = {
@@ -94,7 +94,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"	
-				spriteType ="GFX_terra_event_bottom_bg"
+				spriteType ="GFX_event_report_bottom_win"
 			}
 
 			iconType = {
