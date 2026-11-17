@@ -241,15 +241,27 @@ country_event = {
 
 	option = {
 		name = CLM_focus.19.a
-		164 = { transfer_state_to = SIS }
-		149 = { transfer_state_to = SIS }
+		164 = {
+			transfer_state_to = SIS
+			add_core_of = SIS
+		}
+		149 = {
+			transfer_state_to = SIS
+			add_core_of = SIS
+		}
 		SIS = { inherit_technology = CLM }
 		add_stability = 0.05
 	}
 	option = {
 		name = CLM_focus.19.b
-		164 = { transfer_state_to = SIS }
-		149 = { transfer_state_to = SIS }
+		164 = {
+			transfer_state_to = SIS
+			add_core_of = SIS
+		}
+		149 = {
+			transfer_state_to = SIS
+			add_core_of = SIS
+		}
 		SIS = { inherit_technology = CLM }
 	}
 }

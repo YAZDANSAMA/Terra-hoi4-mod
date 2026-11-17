@@ -1,0 +1,15 @@
+CLM_np_popular = {
+	check_variable = { CLM_electoral_ok_red = 1 }
+}
+
+CLM_fdp_popular = {
+	check_variable = { CLM_electoral_ok_blue = 1 }
+}
+
+CLM_la_popular = {
+	check_variable = { CLM_electoral_ok_yellow = 1 }
+}
+
+CLM_sd_popular = {
+	check_variable = { CLM_electoral_ok_sd = 1 }
+}

@@ -42,15 +42,6 @@ characters = {
 			expire = "1965.1.1.1"
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = CLM_richard_grants_pt
-			allowed = {
-				original_tag = CLM
-			}
-			traits = { prince_of_terror }
-			cost = 100
-		}
-		advisor = {
 			slot = navy_chief
 			idea_token = CLM_richard_grants_nr
 			allowed = {
@@ -59,6 +50,17 @@ characters = {
 			ledger = navy
 			traits = { navy_chief_reform_1 }
 			cost = 100
+		}
+		advisor = {
+			slot = cabinet_defence
+			idea_token = CLM_richard_grants_def
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_pedro_di_siesta } }
+			}
+			traits = { naval_theorist CLM_war_hawk }
 		}
 	}
 
@@ -127,6 +129,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
 				large = "gfx/leaders/FRA/Portrait_France_Generic_2.dds"
 			}
 		}
@@ -135,6 +138,28 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = cabinet_health
+			idea_token = CLM_ernesto_rutherford_h
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_ernesto_rutherford } }
+			}
+			traits = { CLM_medical_researcher }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_ernesto_rutherford_dir
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_ernesto_rutherford } }
+			}
+			traits = { CLM_trimounts_director }
+		}
 	}
 
 	CLM_alexander_brook = {
@@ -142,6 +167,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_6"
 				large = "gfx/leaders/FRA/Portrait_France_Generic_3.dds"
 			}
 		}
@@ -150,6 +176,17 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = cabinet_finance
+			idea_token = CLM_alexander_brook_fin
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_alexander_brook } }
+			}
+			traits = { captain_of_industry economic_organizer }
+		}
 	}
 
 	CLM_timothy_callahan = {
@@ -157,6 +194,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_5"
 				large = "gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
 			}
 		}
@@ -165,6 +203,18 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = cabinet_finance
+			idea_token = CLM_timothy_callahan_fin
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_timothy_callahan } }
+				has_completed_focus = CLM_the_social_question_cannot_wait
+			}
+			traits = { PRC_labor_rights_advocate }
+		}
 	}
 
 	CLM_francis_iv_battohan = {
@@ -172,6 +222,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_2"
 				large = "gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
 			}
 		}
@@ -180,6 +231,18 @@ characters = {
 			traits = { }
 			expire = "1965.1.1.1"
 		}
+		advisor = {
+			slot = cabinet_foreign_affairs
+			idea_token = CLM_francis_iv_battohan_fa
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_francis_iv_battohan } }
+				NOT = { has_government = corporatism }
+			}
+			traits = { royal_legitimist skillful_diplomat }
+		}
 	}
 
 	CLM_pedro_di_siesta = {
@@ -187,6 +250,7 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
+				small = "GFX_idea_generic_political_advisor_south_america_2"
 				large = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 			}
 		}
@@ -194,6 +258,25 @@ characters = {
 			ideology = ethnonationalism_subtype
 			traits = { }
 			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_pedro_di_siesta_pt
+			allowed = {
+				original_tag = CLM
+			}
+			traits = { prince_of_terror }
+		}
+		advisor = {
+			slot = cabinet_defence
+			idea_token = CLM_pedro_di_siesta_def
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				NOT = { has_country_leader = { character = CLM_pedro_di_siesta } }
+			}
+			traits = { CLM_iron_fist_minister }
 		}
 	}
 }

@@ -1,0 +1,14 @@
+add_namespace = CLM_v5
+
+country_event = {
+	id = CLM_v5.1
+	title = CLM_v5.1.t
+	desc = CLM_v5.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_v5.1.a
+		activate_mission = CLM_time_to_shine_mission
+	}
+}

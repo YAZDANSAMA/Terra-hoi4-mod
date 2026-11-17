@@ -1608,6 +1608,21 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_00000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
 		CLM_columbian_middleman_01000 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1624,6 +1639,23 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_01000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_01100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1635,6 +1667,24 @@ ideas = {
 			}
 
 			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_01100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -1659,6 +1709,24 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_01200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_01300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1671,6 +1739,24 @@ ideas = {
 
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_01300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -1697,6 +1783,26 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_02000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_02100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1712,6 +1818,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_02100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -1739,6 +1866,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_02200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_02300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1754,6 +1902,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_02300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.25
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -1782,6 +1951,28 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_03000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_03100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1798,6 +1989,29 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_03100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
@@ -1828,6 +2042,29 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_03200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_03300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1851,6 +2088,29 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_03300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_10000 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1863,6 +2123,22 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+		}
+
+		CLM_columbian_middleman_10000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 
@@ -1883,6 +2159,24 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_11000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_11100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1895,6 +2189,25 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.05
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_11100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -1920,6 +2233,25 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_11200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_11300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1933,6 +2265,25 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_11300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -1959,6 +2310,26 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_12000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_12100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -1974,6 +2345,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_12100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -2001,6 +2393,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_12200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_12300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2016,6 +2429,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_12300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.25
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -2044,6 +2478,28 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_13000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_13100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2060,6 +2516,29 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_13100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
@@ -2090,6 +2569,29 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_13200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_13300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2106,6 +2608,29 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_13300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
@@ -2130,6 +2655,24 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_20000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
 		CLM_columbian_middleman_20010 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2144,6 +2687,25 @@ ideas = {
 				consumer_goods_factor = -0.05
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		CLM_columbian_middleman_20010_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 				war_support_factor = -0.05
 			}
 		}
@@ -2167,6 +2729,26 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_21000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_21010 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2181,6 +2763,26 @@ ideas = {
 				consumer_goods_factor = -0.05
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		CLM_columbian_middleman_21010_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 				stability_factor = 0.1
 				war_support_factor = -0.1
 			}
@@ -2206,6 +2808,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_21100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_21110 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2220,6 +2843,27 @@ ideas = {
 				consumer_goods_factor = -0.05
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_21110_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.2
@@ -2247,6 +2891,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_21200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_21210 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2262,6 +2927,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_21210_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.2
@@ -2289,6 +2975,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_21300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_21310 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2304,6 +3011,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_21310_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.2
@@ -2330,6 +3058,26 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_22000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_22010 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2350,6 +3098,26 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_22010_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
 		CLM_columbian_middleman_22100 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2365,6 +3133,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				industrial_capacity_factory = 0.15
 				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_22100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -2392,6 +3181,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_22110_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
 		CLM_columbian_middleman_22200 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2407,6 +3217,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				industrial_capacity_factory = 0.15
 				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_22200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.2
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.15
@@ -2434,6 +3265,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_22210_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
 		CLM_columbian_middleman_22300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2455,6 +3307,27 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_22300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.25
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_22310 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2470,6 +3343,27 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				industrial_capacity_factory = 0.15
 				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_22310_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.25
 				research_speed_factor = 0.1
 				stability_factor = 0.2
 				war_support_factor = -0.2
@@ -2498,6 +3392,28 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23000_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
 		CLM_columbian_middleman_23010 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2520,6 +3436,28 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23010_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
 		CLM_columbian_middleman_23011 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2536,6 +3474,30 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		CLM_columbian_middleman_23011_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				production_speed_buildings_factor = 0.15
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
@@ -2567,6 +3529,29 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23100_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_23110 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2583,6 +3568,29 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_23110_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
@@ -2615,6 +3623,31 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23111_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
 		CLM_columbian_middleman_23200 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2638,6 +3671,29 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23200_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
 		CLM_columbian_middleman_23210 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2654,6 +3710,29 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_23210_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.2
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
@@ -2686,6 +3765,31 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23211_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
 		CLM_columbian_middleman_23300 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2702,6 +3806,29 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.15
+			}
+		}
+
+		CLM_columbian_middleman_23300_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.1
 				stability_factor = 0.2
@@ -2732,6 +3859,29 @@ ideas = {
 			}
 		}
 
+		CLM_columbian_middleman_23310_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
 		CLM_columbian_middleman_23311 = {
 			picture = generic_central_management
 			allowed = { always = no }
@@ -2748,6 +3898,31 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_23311_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
 				production_speed_buildings_factor = 0.15
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
@@ -2800,6 +3975,58 @@ ideas = {
 				min_export = 0.25
 				monthly_population = 0.1
 				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.3
+				war_support_factor = -0.3
+			}
+		}
+
+		CLM_columbian_middleman_o_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.25
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.25
+				min_export = 0.25
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		CLM_columbian_middleman_w_r = {
+			picture = generic_central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = {
+				NOT = { has_character = CLM_mark_max }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.25
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.25
+				min_export = 0.25
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.25
 				production_speed_buildings_factor = 0.15
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
@@ -2944,6 +4171,94 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.1
 				political_power_gain = -0.1
+			}
+		}
+
+		CLM_the_home_guard = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison = -0.3
+				resistance_growth = -0.1
+			}
+		}
+
+		CLM_birds_of_prey = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+				stability_weekly = 0.0025
+			}
+		}
+
+		CLM_marketplace_of_ideas = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = 0.05
+				war_support_factor = -0.1
+			}
+		}
+
+		CLM_marketplace_of_ideas_foreign = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.03
+				war_support_factor = -0.03
+			}
+		}
+
+		CLM_a_sky_dyed_blue = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				classical_liberalism_drift = 0.1
+				social_democracy_drift = 0.1
+			}
+		}
+
+		CLM_a_red_hue_of_blue = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				social_democracy_drift = 0.1
+				stability_weekly = 0.0005
+			}
+		}
+
+		CLM_hummingbird = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.0005
+				production_factory_efficiency_gain_factor = -0.025
+				production_speed_buildings_factor = -0.025
+				monthly_population = 0.1
 			}
 		}
 	}

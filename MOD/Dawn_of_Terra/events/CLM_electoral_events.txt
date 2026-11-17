@@ -76,6 +76,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 150 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_150 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 150 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_150 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 151 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -94,6 +108,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_151 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 151 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_151 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 151 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_151 }
 		}
 		if = {
 			limit = {
@@ -118,6 +146,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 152 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_152 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 152 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_152 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 153 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -136,6 +178,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_153 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 153 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_153 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 153 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_153 }
 		}
 		if = {
 			limit = {
@@ -160,6 +216,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 154 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_154 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 154 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_154 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 155 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -178,6 +248,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_155 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 155 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_155 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 155 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_155 }
 		}
 		if = {
 			limit = {
@@ -202,6 +286,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 156 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_156 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 156 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_156 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 157 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -220,6 +318,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_157 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 157 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_157 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 157 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_157 }
 		}
 		if = {
 			limit = {
@@ -244,6 +356,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 158 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_158 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 158 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_158 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 159 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -262,6 +388,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_159 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 159 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_159 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 159 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_159 }
 		}
 		if = {
 			limit = {
@@ -286,6 +426,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 160 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_160 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 160 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_160 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 161 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -304,6 +458,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_161 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 161 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_161 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 161 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_161 }
 		}
 		if = {
 			limit = {
@@ -328,6 +496,20 @@ country_event = {
 		}
 		if = {
 			limit = {
+				check_variable = { CLM_visit_state = 162 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_162 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 162 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_162 }
+		}
+		if = {
+			limit = {
 				check_variable = { CLM_visit_state = 163 }
 				check_variable = { CLM_visit_party = 1 }
 			}
@@ -346,6 +528,20 @@ country_event = {
 				check_variable = { CLM_visit_party = 3 }
 			}
 			set_variable = { CLM_xfer_n = CLM_rep_yellow_163 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 163 }
+				check_variable = { CLM_visit_party = 4 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_sd_163 }
+		}
+		if = {
+			limit = {
+				check_variable = { CLM_visit_state = 163 }
+				check_variable = { CLM_visit_party = 5 }
+			}
+			set_variable = { CLM_xfer_n = CLM_rep_dis_163 }
 		}
 		clamp_variable = { var = CLM_xfer_n min = 0 max = 10 }
 		CLM_electoral_transfer = yes

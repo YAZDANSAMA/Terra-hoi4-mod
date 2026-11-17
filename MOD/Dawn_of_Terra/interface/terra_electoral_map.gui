@@ -950,10 +950,17 @@ guiTypes = {
 			name = "electoral_party_1"
 			position = { x = 563 y = 452 }
 			spriteType = "GFX_terra_electoral_party_btn_red"
-			pdx_tooltip = "CLM_ELECTORAL_BTN_RED"
+			pdx_tooltip = "National Party"
 		}
 		iconType = {
 			name = "electoral_party_ring_1"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 563 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_party_dim_1"
 			spriteType = "GFX_terra_electoral_dot_none"
 			position = { x = 563 y = 452 }
 			Orientation = "UPPER_LEFT"
@@ -963,60 +970,138 @@ guiTypes = {
 			name = "electoral_party_text_1"
 			position = { x = 567 y = 456 }
 			font = "hoi_16mbs"
-			text = "CLM_ELECTORAL_BTN_RED"
+			text = "NP"
 			format = center
 			vertical_alignment = center
-			maxWidth = 96
+			maxWidth = 54
 			maxHeight = 38
 			fixedsize = yes
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "electoral_party_2"
-			position = { x = 676 y = 452 }
+			position = { x = 630 y = 452 }
 			spriteType = "GFX_terra_electoral_party_btn_blue"
 			pdx_tooltip = "Federal Democratic Party"
 		}
 		iconType = {
 			name = "electoral_party_ring_2"
 			spriteType = "GFX_terra_electoral_dot_none"
-			position = { x = 676 y = 452 }
+			position = { x = 630 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_party_dim_2"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 630 y = 452 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 		instantTextboxType = {
 			name = "electoral_party_text_2"
-			position = { x = 680 y = 456 }
+			position = { x = 634 y = 456 }
 			font = "hoi_16mbs"
-			text = "Federal Democratic Party"
+			text = "FDP"
 			format = center
 			vertical_alignment = center
-			maxWidth = 96
+			maxWidth = 54
 			maxHeight = 38
 			fixedsize = yes
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "electoral_party_3"
-			position = { x = 789 y = 452 }
+			position = { x = 697 y = 452 }
 			spriteType = "GFX_terra_electoral_party_btn_yellow"
 			pdx_tooltip = "Liberal Alliance"
 		}
 		iconType = {
 			name = "electoral_party_ring_3"
 			spriteType = "GFX_terra_electoral_dot_none"
-			position = { x = 789 y = 452 }
+			position = { x = 697 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_party_dim_3"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 697 y = 452 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 		instantTextboxType = {
 			name = "electoral_party_text_3"
-			position = { x = 793 y = 456 }
+			position = { x = 701 y = 456 }
 			font = "hoi_16mbs"
-			text = "Liberal Alliance"
+			text = "LA"
 			format = center
 			vertical_alignment = center
-			maxWidth = 96
+			maxWidth = 54
+			maxHeight = 38
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_party_4"
+			position = { x = 764 y = 452 }
+			spriteType = "GFX_terra_electoral_party_btn_sd"
+			pdx_tooltip = "Social Democrats"
+		}
+		iconType = {
+			name = "electoral_party_ring_4"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 764 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_party_dim_4"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 764 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_party_text_4"
+			position = { x = 768 y = 456 }
+			font = "hoi_16mbs"
+			text = "SD"
+			format = center
+			vertical_alignment = center
+			maxWidth = 54
+			maxHeight = 38
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "electoral_party_5"
+			position = { x = 831 y = 452 }
+			spriteType = "GFX_terra_electoral_party_btn_dis"
+			pdx_tooltip = "Dissidents"
+		}
+		iconType = {
+			name = "electoral_party_ring_5"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 831 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "electoral_party_dim_5"
+			spriteType = "GFX_terra_electoral_dot_none"
+			position = { x = 831 y = 452 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "electoral_party_text_5"
+			position = { x = 835 y = 456 }
+			font = "hoi_16mbs"
+			text = "DIS"
+			format = center
+			vertical_alignment = center
+			maxWidth = 54
 			maxHeight = 38
 			fixedsize = yes
 			alwaystransparent = yes

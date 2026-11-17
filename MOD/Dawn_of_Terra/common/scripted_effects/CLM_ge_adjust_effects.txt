@@ -93,3 +93,67 @@ CLM_ge_adj_league_stones = {
 	}
 }
 
+CLM_ge_adj_np_second_term = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = 0.02 }
+		add_to_variable = { CLM_ge_adj_ws = 0.03 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_fdp_second_mandate = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = 0.03 }
+		add_to_variable = { CLM_ge_adj_pp = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_la_second_term = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = 0.03 }
+		add_to_variable = { CLM_ge_adj_pp = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+CLM_ge_adj_opposition_organises = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = 0.02 }
+		add_to_variable = { CLM_ge_adj_pp = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+

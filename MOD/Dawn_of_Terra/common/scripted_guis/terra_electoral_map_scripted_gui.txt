@@ -1780,12 +1780,40 @@ scripted_gui = {
 				image = "[GetElPartyRing1]"
 				frame = 1
 			}
+			electoral_party_dim_1 = {
+				image = "[GetElPartyDim1]"
+				frame = 1
+			}
 			electoral_party_ring_2 = {
 				image = "[GetElPartyRing2]"
 				frame = 1
 			}
+			electoral_party_dim_2 = {
+				image = "[GetElPartyDim2]"
+				frame = 1
+			}
 			electoral_party_ring_3 = {
 				image = "[GetElPartyRing3]"
+				frame = 1
+			}
+			electoral_party_dim_3 = {
+				image = "[GetElPartyDim3]"
+				frame = 1
+			}
+			electoral_party_ring_4 = {
+				image = "[GetElPartyRing4]"
+				frame = 1
+			}
+			electoral_party_dim_4 = {
+				image = "[GetElPartyDim4]"
+				frame = 1
+			}
+			electoral_party_ring_5 = {
+				image = "[GetElPartyRing5]"
+				frame = 1
+			}
+			electoral_party_dim_5 = {
+				image = "[GetElPartyDim5]"
 				frame = 1
 			}
 			electoral_dec_bg_1 = {
@@ -1845,8 +1873,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -1891,8 +1929,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -1937,8 +1985,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -1983,8 +2041,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2029,8 +2097,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2075,8 +2153,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2121,8 +2209,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2167,8 +2265,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2213,8 +2321,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2259,8 +2377,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_150 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_150 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_150 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_150 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_150 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_150 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_150 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 150 }
 					set_variable = { CLM_electoral_frame_150 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2305,8 +2433,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2351,8 +2489,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2397,8 +2545,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2443,8 +2601,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2489,8 +2657,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2535,8 +2713,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2581,8 +2769,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2627,8 +2825,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2673,8 +2881,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2719,8 +2937,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_151 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_151 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_151 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_151 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_151 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_151 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_151 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 151 }
 					set_variable = { CLM_electoral_frame_151 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2765,8 +2993,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2811,8 +3049,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2857,8 +3105,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2903,8 +3161,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2949,8 +3217,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -2995,8 +3273,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3041,8 +3329,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_152 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_152 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_152 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_152 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_152 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_152 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_152 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 152 }
 					set_variable = { CLM_electoral_frame_152 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3087,8 +3385,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_153 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_153 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_153 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_153 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_153 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_153 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_153 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 153 }
 					set_variable = { CLM_electoral_frame_153 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3133,8 +3441,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_153 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_153 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_153 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_153 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_153 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_153 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_153 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 153 }
 					set_variable = { CLM_electoral_frame_153 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3179,8 +3497,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_153 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_153 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_153 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_153 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_153 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_153 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_153 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 153 }
 					set_variable = { CLM_electoral_frame_153 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3225,8 +3553,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_153 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_153 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_153 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_153 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_153 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_153 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_153 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 153 }
 					set_variable = { CLM_electoral_frame_153 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3271,8 +3609,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_153 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_153 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_153 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_153 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_153 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_153 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_153 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 153 }
 					set_variable = { CLM_electoral_frame_153 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3317,8 +3665,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3363,8 +3721,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3409,8 +3777,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3455,8 +3833,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3501,8 +3889,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3547,8 +3945,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3593,8 +4001,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3639,8 +4057,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3685,8 +4113,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3731,8 +4169,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_154 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_154 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_154 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_154 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_154 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_154 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_154 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 154 }
 					set_variable = { CLM_electoral_frame_154 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3777,8 +4225,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3823,8 +4281,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3869,8 +4337,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3915,8 +4393,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -3961,8 +4449,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4007,8 +4505,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4053,8 +4561,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4099,8 +4617,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_155 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_155 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_155 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_155 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_155 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_155 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_155 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 155 }
 					set_variable = { CLM_electoral_frame_155 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4145,8 +4673,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_156 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_156 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_156 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_156 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_156 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_156 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_156 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 156 }
 					set_variable = { CLM_electoral_frame_156 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4191,8 +4729,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_156 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_156 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_156 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_156 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_156 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_156 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_156 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 156 }
 					set_variable = { CLM_electoral_frame_156 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4237,8 +4785,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_156 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_156 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_156 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_156 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_156 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_156 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_156 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 156 }
 					set_variable = { CLM_electoral_frame_156 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4283,8 +4841,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_156 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_156 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_156 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_156 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_156 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_156 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_156 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 156 }
 					set_variable = { CLM_electoral_frame_156 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4329,8 +4897,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4375,8 +4953,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4421,8 +5009,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4467,8 +5065,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4513,8 +5121,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4559,8 +5177,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4605,8 +5233,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4651,8 +5289,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4697,8 +5345,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4743,8 +5401,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_157 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_157 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_157 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_157 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_157 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_157 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_157 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 157 }
 					set_variable = { CLM_electoral_frame_157 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4789,8 +5457,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_158 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_158 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_158 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_158 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_158 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_158 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_158 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 158 }
 					set_variable = { CLM_electoral_frame_158 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4835,8 +5513,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_158 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_158 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_158 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_158 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_158 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_158 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_158 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 158 }
 					set_variable = { CLM_electoral_frame_158 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4881,8 +5569,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_158 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_158 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_158 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_158 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_158 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_158 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_158 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 158 }
 					set_variable = { CLM_electoral_frame_158 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4927,8 +5625,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_158 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_158 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_158 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_158 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_158 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_158 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_158 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 158 }
 					set_variable = { CLM_electoral_frame_158 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -4973,8 +5681,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_158 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_158 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_158 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_158 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_158 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_158 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_158 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 158 }
 					set_variable = { CLM_electoral_frame_158 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5019,8 +5737,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_158 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_158 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_158 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_158 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_158 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_158 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_158 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 158 }
 					set_variable = { CLM_electoral_frame_158 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5065,8 +5793,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5111,8 +5849,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5157,8 +5905,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5203,8 +5961,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5249,8 +6017,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5295,8 +6073,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5341,8 +6129,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_159 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_159 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_159 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_159 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_159 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_159 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_159 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 159 }
 					set_variable = { CLM_electoral_frame_159 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5387,8 +6185,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5433,8 +6241,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5479,8 +6297,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5525,8 +6353,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5571,8 +6409,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5617,8 +6465,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5663,8 +6521,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5709,8 +6577,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5755,8 +6633,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5801,8 +6689,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_160 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_160 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_160 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_160 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_160 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_160 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_160 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 160 }
 					set_variable = { CLM_electoral_frame_160 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5847,8 +6745,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_161 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_161 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_161 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_161 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_161 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_161 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_161 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 161 }
 					set_variable = { CLM_electoral_frame_161 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5893,8 +6801,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_162 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_162 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_162 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_162 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_162 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_162 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_162 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 162 }
 					set_variable = { CLM_electoral_frame_162 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5939,8 +6857,18 @@ scripted_gui = {
 					set_variable = { CLM_sel_red = CLM_rep_red_163 }
 					set_variable = { CLM_sel_blue = CLM_rep_blue_163 }
 					set_variable = { CLM_sel_yellow = CLM_rep_yellow_163 }
-					set_variable = { CLM_sel_rb = CLM_rep_rb_163 }
+					set_variable = { CLM_sel_sd = CLM_rep_sd_163 }
+					set_variable = { CLM_sel_dis = CLM_rep_dis_163 }
 					set_variable = { CLM_sel_total = CLM_rep_tot_163 }
+					set_variable = { CLM_sel_c1 = CLM_sel_sd }
+					set_variable = { CLM_sel_c2 = CLM_sel_c1 }
+					add_to_variable = { CLM_sel_c2 = CLM_sel_red }
+					set_variable = { CLM_sel_c3 = CLM_sel_c2 }
+					add_to_variable = { CLM_sel_c3 = CLM_sel_blue }
+					set_variable = { CLM_sel_c4 = CLM_sel_c3 }
+					add_to_variable = { CLM_sel_c4 = CLM_sel_yellow }
+					set_variable = { CLM_sel_c5 = CLM_sel_c4 }
+					add_to_variable = { CLM_sel_c5 = CLM_sel_dis }
 					set_variable = { CLM_electoral_selected = 163 }
 					set_variable = { CLM_electoral_frame_163 = 10 }
 					set_variable = { CLM_electoral_party_sel = 0 }
@@ -5971,6 +6899,24 @@ scripted_gui = {
 				}
 				else = {
 					set_variable = { CLM_electoral_party_sel = 3 }
+				}
+			}
+			electoral_party_4_click = {
+				if = {
+					limit = { check_variable = { CLM_electoral_party_sel = 4 } }
+					set_variable = { CLM_electoral_party_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_electoral_party_sel = 4 }
+				}
+			}
+			electoral_party_5_click = {
+				if = {
+					limit = { check_variable = { CLM_electoral_party_sel = 5 } }
+					set_variable = { CLM_electoral_party_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_electoral_party_sel = 5 }
 				}
 			}
 			electoral_dec1_button_click = {
@@ -8676,14 +9622,27 @@ scripted_gui = {
 			electoral_party_1_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
 				NOT = { check_variable = { CLM_electoral_selected = 0 } }
+				check_variable = { CLM_electoral_active_1 = 1 }
 			}
 			electoral_party_2_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
 				NOT = { check_variable = { CLM_electoral_selected = 0 } }
+				check_variable = { CLM_electoral_active_2 = 1 }
 			}
 			electoral_party_3_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
 				NOT = { check_variable = { CLM_electoral_selected = 0 } }
+				check_variable = { CLM_electoral_active_3 = 1 }
+			}
+			electoral_party_4_click_enabled = {
+				NOT = { has_country_flag = CLM_electoral_busy }
+				NOT = { check_variable = { CLM_electoral_selected = 0 } }
+				check_variable = { CLM_electoral_active_4 = 1 }
+			}
+			electoral_party_5_click_enabled = {
+				NOT = { has_country_flag = CLM_electoral_busy }
+				NOT = { check_variable = { CLM_electoral_selected = 0 } }
+				check_variable = { CLM_electoral_active_5 = 1 }
 			}
 			electoral_dec1_button_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_busy }
@@ -8750,6 +9709,7 @@ scripted_gui = {
 					AND = {
 						check_variable = { CLM_dec_slot_1 = 5 }
 						has_political_power > 149.9
+						NOT = { check_variable = { CLM_electoral_party_sel = 5 } }
 						OR = {
 							AND = {
 								check_variable = { CLM_electoral_selected = 150 }
@@ -8851,6 +9811,7 @@ scripted_gui = {
 								}
 							}
 						}
+						NOT = { check_variable = { CLM_electoral_party_sel = 5 } }
 						OR = {
 							AND = {
 								check_variable = { CLM_electoral_selected = 150 }
@@ -8977,6 +9938,7 @@ scripted_gui = {
 					AND = {
 						check_variable = { CLM_dec_slot_2 = 5 }
 						has_political_power > 149.9
+						NOT = { check_variable = { CLM_electoral_party_sel = 5 } }
 						OR = {
 							AND = {
 								check_variable = { CLM_electoral_selected = 150 }
@@ -9078,6 +10040,7 @@ scripted_gui = {
 								}
 							}
 						}
+						NOT = { check_variable = { CLM_electoral_party_sel = 5 } }
 						OR = {
 							AND = {
 								check_variable = { CLM_electoral_selected = 150 }
@@ -9204,6 +10167,7 @@ scripted_gui = {
 					AND = {
 						check_variable = { CLM_dec_slot_3 = 5 }
 						has_political_power > 149.9
+						NOT = { check_variable = { CLM_electoral_party_sel = 5 } }
 						OR = {
 							AND = {
 								check_variable = { CLM_electoral_selected = 150 }
@@ -9305,6 +10269,7 @@ scripted_gui = {
 								}
 							}
 						}
+						NOT = { check_variable = { CLM_electoral_party_sel = 5 } }
 						OR = {
 							AND = {
 								check_variable = { CLM_electoral_selected = 150 }

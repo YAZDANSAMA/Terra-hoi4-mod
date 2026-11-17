@@ -1,0 +1,87 @@
+characters = {
+	CLM_geronimo_hosch = {
+		name = CLM_geronimo_hosch
+		gender = male
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+		advisor = {
+			slot = cabinet_finance
+			idea_token = CLM_geronimo_hosch
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				OR = {
+					has_government = technocracy
+					has_government = classical_liberalism
+					has_government = social_democracy
+				}
+			}
+			traits = { economy_reformer liberal_economist }
+		}
+	}
+
+	CLM_stanislaw_nearl = {
+		name = CLM_stanislaw_nearl
+		gender = male
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = cabinet_finance
+			idea_token = CLM_stanislaw_nearl
+			allowed = {
+				original_tag = CLM
+			}
+			available = {
+				OR = {
+					has_government = monarchism
+					has_government = classical_liberalism
+				}
+				has_completed_focus = CLM_hail_kazimierz
+			}
+			traits = { noble_beurocrat CLM_realm_steward }
+		}
+	}
+
+	CLM_milio_de_riviera = {
+		name = CLM_milio_de_riviera
+		gender = male
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+		advisor = {
+			slot = cabinet_foreign_affairs
+			idea_token = CLM_milio_de_riviera
+			allowed = {
+				original_tag = CLM
+			}
+			traits = { smooth_talking_charmer CLM_un_envoy }
+		}
+	}
+
+	CLM_marie_nightingale = {
+		name = CLM_marie_nightingale
+		gender = female
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_female_europe"
+			}
+		}
+		advisor = {
+			slot = cabinet_health
+			idea_token = CLM_marie_nightingale
+			allowed = {
+				original_tag = CLM
+			}
+			traits = { CLM_public_health_pioneer }
+		}
+	}
+}

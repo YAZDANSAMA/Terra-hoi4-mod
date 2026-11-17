@@ -139,6 +139,13 @@ defined_text = {
 		localization_key = GFX_terra_electoral_dot_big_yellow
 	}
 	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_sd
+	}
+	text = {
 		localization_key = GFX_terra_electoral_dot_none
 	}
 }
@@ -165,6 +172,13 @@ defined_text = {
 			check_variable = { CLM.CLM_sel_sen = 3 }
 		}
 		localization_key = GFX_terra_electoral_dot_big_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_sd
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -195,6 +209,13 @@ defined_text = {
 		localization_key = GFX_terra_electoral_dot_big_yellow
 	}
 	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_big_sd
+	}
+	text = {
 		localization_key = GFX_terra_electoral_dot_none
 	}
 }
@@ -204,23 +225,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 0 }
+			check_variable = { CLM.CLM_sel_c1 > 0 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 0 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 0 }
+			check_variable = { CLM.CLM_sel_c3 > 0 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 0 }
+			check_variable = { CLM.CLM_sel_c4 > 0 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 0 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -232,23 +267,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 1 }
+			check_variable = { CLM.CLM_sel_c1 > 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 1 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 1 }
+			check_variable = { CLM.CLM_sel_c3 > 1 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 1 }
+			check_variable = { CLM.CLM_sel_c4 > 1 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 1 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -260,23 +309,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 2 }
+			check_variable = { CLM.CLM_sel_c1 > 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 2 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 2 }
+			check_variable = { CLM.CLM_sel_c3 > 2 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 2 }
+			check_variable = { CLM.CLM_sel_c4 > 2 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 2 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -288,23 +351,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 3 }
+			check_variable = { CLM.CLM_sel_c1 > 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 3 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 3 }
+			check_variable = { CLM.CLM_sel_c3 > 3 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 3 }
+			check_variable = { CLM.CLM_sel_c4 > 3 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 3 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -316,23 +393,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 4 }
+			check_variable = { CLM.CLM_sel_c1 > 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 4 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 4 }
+			check_variable = { CLM.CLM_sel_c3 > 4 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 4 }
+			check_variable = { CLM.CLM_sel_c4 > 4 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 4 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -344,23 +435,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 5 }
+			check_variable = { CLM.CLM_sel_c1 > 5 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 5 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 5 }
+			check_variable = { CLM.CLM_sel_c3 > 5 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 5 }
+			check_variable = { CLM.CLM_sel_c4 > 5 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 5 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -372,23 +477,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 6 }
+			check_variable = { CLM.CLM_sel_c1 > 6 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 6 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 6 }
+			check_variable = { CLM.CLM_sel_c3 > 6 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 6 }
+			check_variable = { CLM.CLM_sel_c4 > 6 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 6 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -400,23 +519,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 7 }
+			check_variable = { CLM.CLM_sel_c1 > 7 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 7 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 7 }
+			check_variable = { CLM.CLM_sel_c3 > 7 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 7 }
+			check_variable = { CLM.CLM_sel_c4 > 7 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 7 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -428,23 +561,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 8 }
+			check_variable = { CLM.CLM_sel_c1 > 8 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 8 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 8 }
+			check_variable = { CLM.CLM_sel_c3 > 8 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 8 }
+			check_variable = { CLM.CLM_sel_c4 > 8 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 8 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -456,23 +603,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 9 }
+			check_variable = { CLM.CLM_sel_c1 > 9 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 9 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 9 }
+			check_variable = { CLM.CLM_sel_c3 > 9 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 9 }
+			check_variable = { CLM.CLM_sel_c4 > 9 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 9 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -484,23 +645,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 10 }
+			check_variable = { CLM.CLM_sel_c1 > 10 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 10 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 10 }
+			check_variable = { CLM.CLM_sel_c3 > 10 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 10 }
+			check_variable = { CLM.CLM_sel_c4 > 10 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 10 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -512,23 +687,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 11 }
+			check_variable = { CLM.CLM_sel_c1 > 11 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 11 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 11 }
+			check_variable = { CLM.CLM_sel_c3 > 11 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 11 }
+			check_variable = { CLM.CLM_sel_c4 > 11 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 11 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -540,23 +729,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 12 }
+			check_variable = { CLM.CLM_sel_c1 > 12 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 12 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 12 }
+			check_variable = { CLM.CLM_sel_c3 > 12 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 12 }
+			check_variable = { CLM.CLM_sel_c4 > 12 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 12 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -568,23 +771,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 13 }
+			check_variable = { CLM.CLM_sel_c1 > 13 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 13 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 13 }
+			check_variable = { CLM.CLM_sel_c3 > 13 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 13 }
+			check_variable = { CLM.CLM_sel_c4 > 13 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 13 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -596,23 +813,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 14 }
+			check_variable = { CLM.CLM_sel_c1 > 14 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 14 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 14 }
+			check_variable = { CLM.CLM_sel_c3 > 14 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 14 }
+			check_variable = { CLM.CLM_sel_c4 > 14 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 14 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -624,23 +855,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 15 }
+			check_variable = { CLM.CLM_sel_c1 > 15 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 15 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 15 }
+			check_variable = { CLM.CLM_sel_c3 > 15 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 15 }
+			check_variable = { CLM.CLM_sel_c4 > 15 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 15 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -652,23 +897,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 16 }
+			check_variable = { CLM.CLM_sel_c1 > 16 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 16 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 16 }
+			check_variable = { CLM.CLM_sel_c3 > 16 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 16 }
+			check_variable = { CLM.CLM_sel_c4 > 16 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 16 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -680,23 +939,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 17 }
+			check_variable = { CLM.CLM_sel_c1 > 17 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 17 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 17 }
+			check_variable = { CLM.CLM_sel_c3 > 17 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 17 }
+			check_variable = { CLM.CLM_sel_c4 > 17 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 17 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -708,23 +981,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 18 }
+			check_variable = { CLM.CLM_sel_c1 > 18 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 18 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 18 }
+			check_variable = { CLM.CLM_sel_c3 > 18 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 18 }
+			check_variable = { CLM.CLM_sel_c4 > 18 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 18 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -736,23 +1023,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 19 }
+			check_variable = { CLM.CLM_sel_c1 > 19 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 19 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 19 }
+			check_variable = { CLM.CLM_sel_c3 > 19 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 19 }
+			check_variable = { CLM.CLM_sel_c4 > 19 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 19 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -764,23 +1065,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 20 }
+			check_variable = { CLM.CLM_sel_c1 > 20 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 20 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 20 }
+			check_variable = { CLM.CLM_sel_c3 > 20 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 20 }
+			check_variable = { CLM.CLM_sel_c4 > 20 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 20 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -792,23 +1107,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 21 }
+			check_variable = { CLM.CLM_sel_c1 > 21 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 21 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 21 }
+			check_variable = { CLM.CLM_sel_c3 > 21 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 21 }
+			check_variable = { CLM.CLM_sel_c4 > 21 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 21 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -820,23 +1149,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 22 }
+			check_variable = { CLM.CLM_sel_c1 > 22 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 22 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 22 }
+			check_variable = { CLM.CLM_sel_c3 > 22 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 22 }
+			check_variable = { CLM.CLM_sel_c4 > 22 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 22 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -848,23 +1191,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 23 }
+			check_variable = { CLM.CLM_sel_c1 > 23 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 23 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 23 }
+			check_variable = { CLM.CLM_sel_c3 > 23 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 23 }
+			check_variable = { CLM.CLM_sel_c4 > 23 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 23 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -876,23 +1233,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 24 }
+			check_variable = { CLM.CLM_sel_c1 > 24 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 24 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 24 }
+			check_variable = { CLM.CLM_sel_c3 > 24 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 24 }
+			check_variable = { CLM.CLM_sel_c4 > 24 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 24 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -904,23 +1275,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 25 }
+			check_variable = { CLM.CLM_sel_c1 > 25 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 25 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 25 }
+			check_variable = { CLM.CLM_sel_c3 > 25 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 25 }
+			check_variable = { CLM.CLM_sel_c4 > 25 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 25 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -932,23 +1317,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 26 }
+			check_variable = { CLM.CLM_sel_c1 > 26 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 26 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 26 }
+			check_variable = { CLM.CLM_sel_c3 > 26 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 26 }
+			check_variable = { CLM.CLM_sel_c4 > 26 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 26 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -960,23 +1359,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 27 }
+			check_variable = { CLM.CLM_sel_c1 > 27 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 27 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 27 }
+			check_variable = { CLM.CLM_sel_c3 > 27 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 27 }
+			check_variable = { CLM.CLM_sel_c4 > 27 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 27 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -988,23 +1401,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 28 }
+			check_variable = { CLM.CLM_sel_c1 > 28 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 28 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 28 }
+			check_variable = { CLM.CLM_sel_c3 > 28 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 28 }
+			check_variable = { CLM.CLM_sel_c4 > 28 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 28 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1016,23 +1443,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 29 }
+			check_variable = { CLM.CLM_sel_c1 > 29 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 29 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 29 }
+			check_variable = { CLM.CLM_sel_c3 > 29 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 29 }
+			check_variable = { CLM.CLM_sel_c4 > 29 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 29 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1044,23 +1485,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 30 }
+			check_variable = { CLM.CLM_sel_c1 > 30 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 30 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 30 }
+			check_variable = { CLM.CLM_sel_c3 > 30 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 30 }
+			check_variable = { CLM.CLM_sel_c4 > 30 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 30 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1072,23 +1527,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 31 }
+			check_variable = { CLM.CLM_sel_c1 > 31 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 31 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 31 }
+			check_variable = { CLM.CLM_sel_c3 > 31 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 31 }
+			check_variable = { CLM.CLM_sel_c4 > 31 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 31 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1100,23 +1569,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 32 }
+			check_variable = { CLM.CLM_sel_c1 > 32 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 32 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 32 }
+			check_variable = { CLM.CLM_sel_c3 > 32 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 32 }
+			check_variable = { CLM.CLM_sel_c4 > 32 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 32 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1128,23 +1611,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 33 }
+			check_variable = { CLM.CLM_sel_c1 > 33 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 33 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 33 }
+			check_variable = { CLM.CLM_sel_c3 > 33 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 33 }
+			check_variable = { CLM.CLM_sel_c4 > 33 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 33 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1156,23 +1653,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 34 }
+			check_variable = { CLM.CLM_sel_c1 > 34 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 34 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 34 }
+			check_variable = { CLM.CLM_sel_c3 > 34 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 34 }
+			check_variable = { CLM.CLM_sel_c4 > 34 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 34 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1184,23 +1695,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 35 }
+			check_variable = { CLM.CLM_sel_c1 > 35 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 35 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 35 }
+			check_variable = { CLM.CLM_sel_c3 > 35 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 35 }
+			check_variable = { CLM.CLM_sel_c4 > 35 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 35 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1212,23 +1737,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 36 }
+			check_variable = { CLM.CLM_sel_c1 > 36 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 36 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 36 }
+			check_variable = { CLM.CLM_sel_c3 > 36 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 36 }
+			check_variable = { CLM.CLM_sel_c4 > 36 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 36 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1240,23 +1779,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 37 }
+			check_variable = { CLM.CLM_sel_c1 > 37 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 37 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 37 }
+			check_variable = { CLM.CLM_sel_c3 > 37 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 37 }
+			check_variable = { CLM.CLM_sel_c4 > 37 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 37 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1268,23 +1821,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 38 }
+			check_variable = { CLM.CLM_sel_c1 > 38 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 38 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 38 }
+			check_variable = { CLM.CLM_sel_c3 > 38 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 38 }
+			check_variable = { CLM.CLM_sel_c4 > 38 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 38 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1296,23 +1863,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 39 }
+			check_variable = { CLM.CLM_sel_c1 > 39 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 39 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 39 }
+			check_variable = { CLM.CLM_sel_c3 > 39 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 39 }
+			check_variable = { CLM.CLM_sel_c4 > 39 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 39 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1324,23 +1905,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 40 }
+			check_variable = { CLM.CLM_sel_c1 > 40 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 40 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 40 }
+			check_variable = { CLM.CLM_sel_c3 > 40 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 40 }
+			check_variable = { CLM.CLM_sel_c4 > 40 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 40 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1352,23 +1947,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 41 }
+			check_variable = { CLM.CLM_sel_c1 > 41 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 41 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 41 }
+			check_variable = { CLM.CLM_sel_c3 > 41 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 41 }
+			check_variable = { CLM.CLM_sel_c4 > 41 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 41 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1380,23 +1989,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 42 }
+			check_variable = { CLM.CLM_sel_c1 > 42 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 42 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 42 }
+			check_variable = { CLM.CLM_sel_c3 > 42 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 42 }
+			check_variable = { CLM.CLM_sel_c4 > 42 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 42 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1408,23 +2031,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 43 }
+			check_variable = { CLM.CLM_sel_c1 > 43 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 43 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 43 }
+			check_variable = { CLM.CLM_sel_c3 > 43 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 43 }
+			check_variable = { CLM.CLM_sel_c4 > 43 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 43 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1436,23 +2073,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 44 }
+			check_variable = { CLM.CLM_sel_c1 > 44 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 44 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 44 }
+			check_variable = { CLM.CLM_sel_c3 > 44 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 44 }
+			check_variable = { CLM.CLM_sel_c4 > 44 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 44 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1464,23 +2115,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 45 }
+			check_variable = { CLM.CLM_sel_c1 > 45 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 45 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 45 }
+			check_variable = { CLM.CLM_sel_c3 > 45 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 45 }
+			check_variable = { CLM.CLM_sel_c4 > 45 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 45 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1492,23 +2157,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 46 }
+			check_variable = { CLM.CLM_sel_c1 > 46 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 46 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 46 }
+			check_variable = { CLM.CLM_sel_c3 > 46 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 46 }
+			check_variable = { CLM.CLM_sel_c4 > 46 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 46 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1520,23 +2199,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 47 }
+			check_variable = { CLM.CLM_sel_c1 > 47 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 47 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 47 }
+			check_variable = { CLM.CLM_sel_c3 > 47 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 47 }
+			check_variable = { CLM.CLM_sel_c4 > 47 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 47 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1548,23 +2241,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 48 }
+			check_variable = { CLM.CLM_sel_c1 > 48 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 48 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 48 }
+			check_variable = { CLM.CLM_sel_c3 > 48 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 48 }
+			check_variable = { CLM.CLM_sel_c4 > 48 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 48 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1576,23 +2283,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 49 }
+			check_variable = { CLM.CLM_sel_c1 > 49 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 49 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 49 }
+			check_variable = { CLM.CLM_sel_c3 > 49 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 49 }
+			check_variable = { CLM.CLM_sel_c4 > 49 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 49 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1604,23 +2325,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 50 }
+			check_variable = { CLM.CLM_sel_c1 > 50 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 50 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 50 }
+			check_variable = { CLM.CLM_sel_c3 > 50 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 50 }
+			check_variable = { CLM.CLM_sel_c4 > 50 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 50 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1632,23 +2367,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 51 }
+			check_variable = { CLM.CLM_sel_c1 > 51 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 51 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 51 }
+			check_variable = { CLM.CLM_sel_c3 > 51 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 51 }
+			check_variable = { CLM.CLM_sel_c4 > 51 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 51 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1660,23 +2409,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 52 }
+			check_variable = { CLM.CLM_sel_c1 > 52 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 52 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 52 }
+			check_variable = { CLM.CLM_sel_c3 > 52 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 52 }
+			check_variable = { CLM.CLM_sel_c4 > 52 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 52 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1688,23 +2451,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 53 }
+			check_variable = { CLM.CLM_sel_c1 > 53 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 53 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 53 }
+			check_variable = { CLM.CLM_sel_c3 > 53 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 53 }
+			check_variable = { CLM.CLM_sel_c4 > 53 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 53 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1716,23 +2493,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 54 }
+			check_variable = { CLM.CLM_sel_c1 > 54 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 54 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 54 }
+			check_variable = { CLM.CLM_sel_c3 > 54 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 54 }
+			check_variable = { CLM.CLM_sel_c4 > 54 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 54 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1744,23 +2535,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 55 }
+			check_variable = { CLM.CLM_sel_c1 > 55 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 55 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 55 }
+			check_variable = { CLM.CLM_sel_c3 > 55 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 55 }
+			check_variable = { CLM.CLM_sel_c4 > 55 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 55 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1772,23 +2577,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 56 }
+			check_variable = { CLM.CLM_sel_c1 > 56 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 56 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 56 }
+			check_variable = { CLM.CLM_sel_c3 > 56 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 56 }
+			check_variable = { CLM.CLM_sel_c4 > 56 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 56 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1800,23 +2619,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 57 }
+			check_variable = { CLM.CLM_sel_c1 > 57 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 57 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 57 }
+			check_variable = { CLM.CLM_sel_c3 > 57 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 57 }
+			check_variable = { CLM.CLM_sel_c4 > 57 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 57 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1828,23 +2661,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 58 }
+			check_variable = { CLM.CLM_sel_c1 > 58 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 58 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 58 }
+			check_variable = { CLM.CLM_sel_c3 > 58 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 58 }
+			check_variable = { CLM.CLM_sel_c4 > 58 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 58 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1856,23 +2703,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 59 }
+			check_variable = { CLM.CLM_sel_c1 > 59 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 59 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 59 }
+			check_variable = { CLM.CLM_sel_c3 > 59 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 59 }
+			check_variable = { CLM.CLM_sel_c4 > 59 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 59 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1884,23 +2745,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 60 }
+			check_variable = { CLM.CLM_sel_c1 > 60 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 60 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 60 }
+			check_variable = { CLM.CLM_sel_c3 > 60 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 60 }
+			check_variable = { CLM.CLM_sel_c4 > 60 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 60 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1912,23 +2787,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 61 }
+			check_variable = { CLM.CLM_sel_c1 > 61 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 61 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 61 }
+			check_variable = { CLM.CLM_sel_c3 > 61 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 61 }
+			check_variable = { CLM.CLM_sel_c4 > 61 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 61 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1940,23 +2829,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 62 }
+			check_variable = { CLM.CLM_sel_c1 > 62 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 62 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 62 }
+			check_variable = { CLM.CLM_sel_c3 > 62 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 62 }
+			check_variable = { CLM.CLM_sel_c4 > 62 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 62 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1968,23 +2871,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 63 }
+			check_variable = { CLM.CLM_sel_c1 > 63 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 63 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 63 }
+			check_variable = { CLM.CLM_sel_c3 > 63 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 63 }
+			check_variable = { CLM.CLM_sel_c4 > 63 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 63 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -1996,23 +2913,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 64 }
+			check_variable = { CLM.CLM_sel_c1 > 64 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 64 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 64 }
+			check_variable = { CLM.CLM_sel_c3 > 64 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 64 }
+			check_variable = { CLM.CLM_sel_c4 > 64 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 64 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2024,23 +2955,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 65 }
+			check_variable = { CLM.CLM_sel_c1 > 65 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 65 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 65 }
+			check_variable = { CLM.CLM_sel_c3 > 65 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 65 }
+			check_variable = { CLM.CLM_sel_c4 > 65 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 65 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2052,23 +2997,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 66 }
+			check_variable = { CLM.CLM_sel_c1 > 66 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 66 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 66 }
+			check_variable = { CLM.CLM_sel_c3 > 66 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 66 }
+			check_variable = { CLM.CLM_sel_c4 > 66 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 66 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2080,23 +3039,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 67 }
+			check_variable = { CLM.CLM_sel_c1 > 67 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 67 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 67 }
+			check_variable = { CLM.CLM_sel_c3 > 67 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 67 }
+			check_variable = { CLM.CLM_sel_c4 > 67 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 67 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2108,23 +3081,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 68 }
+			check_variable = { CLM.CLM_sel_c1 > 68 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 68 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 68 }
+			check_variable = { CLM.CLM_sel_c3 > 68 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 68 }
+			check_variable = { CLM.CLM_sel_c4 > 68 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 68 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2136,23 +3123,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 69 }
+			check_variable = { CLM.CLM_sel_c1 > 69 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 69 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 69 }
+			check_variable = { CLM.CLM_sel_c3 > 69 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 69 }
+			check_variable = { CLM.CLM_sel_c4 > 69 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 69 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2164,23 +3165,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 70 }
+			check_variable = { CLM.CLM_sel_c1 > 70 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 70 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 70 }
+			check_variable = { CLM.CLM_sel_c3 > 70 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 70 }
+			check_variable = { CLM.CLM_sel_c4 > 70 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 70 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2192,23 +3207,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 71 }
+			check_variable = { CLM.CLM_sel_c1 > 71 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 71 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 71 }
+			check_variable = { CLM.CLM_sel_c3 > 71 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 71 }
+			check_variable = { CLM.CLM_sel_c4 > 71 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 71 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2220,23 +3249,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 72 }
+			check_variable = { CLM.CLM_sel_c1 > 72 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 72 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 72 }
+			check_variable = { CLM.CLM_sel_c3 > 72 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 72 }
+			check_variable = { CLM.CLM_sel_c4 > 72 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 72 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2248,23 +3291,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 73 }
+			check_variable = { CLM.CLM_sel_c1 > 73 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 73 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 73 }
+			check_variable = { CLM.CLM_sel_c3 > 73 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 73 }
+			check_variable = { CLM.CLM_sel_c4 > 73 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 73 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2276,23 +3333,37 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_red > 74 }
+			check_variable = { CLM.CLM_sel_c1 > 74 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_sd
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c2 > 74 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_red
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_rb > 74 }
+			check_variable = { CLM.CLM_sel_c3 > 74 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_blue
 	}
 	text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_total > 74 }
+			check_variable = { CLM.CLM_sel_c4 > 74 }
 		}
 		localization_key = GFX_terra_electoral_dot_state_yellow
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_c5 > 74 }
+		}
+		localization_key = GFX_terra_electoral_dot_state_dis
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2306,14 +3377,6 @@ defined_text = {
 			check_variable = { CLM.CLM_electoral_selected = 0 }
 		}
 		localization_key = CLM_ELECTORAL_SENATE_NAT
-	}
-	text = {
-		trigger = {
-			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_sel_sen = 1 }
-			CLM = { has_country_flag = CLM_national_party_renamed }
-		}
-		localization_key = CLM_ELECTORAL_SENATE_ST_RED_SDP
 	}
 	text = {
 		trigger = {
@@ -2335,6 +3398,13 @@ defined_text = {
 			check_variable = { CLM.CLM_sel_sen = 3 }
 		}
 		localization_key = CLM_ELECTORAL_SENATE_ST_YELLOW
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_sel_sen = 4 }
+		}
+		localization_key = CLM_ELECTORAL_SENATE_ST_SD
 	}
 	text = {
 		localization_key = CLM_ELECTORAL_SENATE_NAT
@@ -2375,6 +3445,19 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetElPartyDim1
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_active_1 = 0 }
+		}
+		localization_key = GFX_terra_electoral_party_dim
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
 	name = GetElPartyRing2
 	text = {
 		trigger = {
@@ -2389,6 +3472,19 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetElPartyDim2
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_active_2 = 0 }
+		}
+		localization_key = GFX_terra_electoral_party_dim
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
 	name = GetElPartyRing3
 	text = {
 		trigger = {
@@ -2396,6 +3492,73 @@ defined_text = {
 			check_variable = { CLM.CLM_electoral_party_sel = 3 }
 		}
 		localization_key = GFX_terra_electoral_party_ring
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyDim3
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_active_3 = 0 }
+		}
+		localization_key = GFX_terra_electoral_party_dim
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyRing4
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 4 }
+		}
+		localization_key = GFX_terra_electoral_party_ring
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyDim4
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_active_4 = 0 }
+		}
+		localization_key = GFX_terra_electoral_party_dim
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyRing5
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 5 }
+		}
+		localization_key = GFX_terra_electoral_party_ring
+	}
+	text = {
+		localization_key = GFX_terra_electoral_dot_none
+	}
+}
+
+defined_text = {
+	name = GetElPartyDim5
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_electoral_active_5 = 0 }
+		}
+		localization_key = GFX_terra_electoral_party_dim
 	}
 	text = {
 		localization_key = GFX_terra_electoral_dot_none
@@ -2744,14 +3907,6 @@ defined_text = {
 		trigger = {
 			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
 			check_variable = { CLM.CLM_electoral_party_sel = 1 }
-			CLM = { has_country_flag = CLM_national_party_renamed }
-		}
-		localization_key = CLM_ELECTORAL_SUPPORT_RED_SDP
-	}
-	text = {
-		trigger = {
-			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
-			check_variable = { CLM.CLM_electoral_party_sel = 1 }
 		}
 		localization_key = CLM_ELECTORAL_SUPPORT_RED
 	}
@@ -2768,6 +3923,20 @@ defined_text = {
 			check_variable = { CLM.CLM_electoral_party_sel = 3 }
 		}
 		localization_key = CLM_ELECTORAL_SUPPORT_YELLOW
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 4 }
+		}
+		localization_key = CLM_ELECTORAL_SUPPORT_SD
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { CLM.CLM_electoral_selected = 0 } }
+			check_variable = { CLM.CLM_electoral_party_sel = 5 }
+		}
+		localization_key = CLM_ELECTORAL_SUPPORT_DIS
 	}
 	text = {
 		trigger = {
@@ -3133,13 +4302,6 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { CLM.CLM_visit_party = 1 }
-			CLM = { has_country_flag = CLM_national_party_renamed }
-		}
-		localization_key = CLM_ELECTORAL_PARTY_RED_SDP
-	}
-	text = {
-		trigger = {
-			check_variable = { CLM.CLM_visit_party = 1 }
 		}
 		localization_key = CLM_ELECTORAL_PARTY_RED
 	}
@@ -3156,19 +4318,24 @@ defined_text = {
 		localization_key = CLM_ELECTORAL_PARTY_YELLOW
 	}
 	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_party = 4 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_SD
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_visit_party = 5 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_DIS
+	}
+	text = {
 		localization_key = CLM_ELECTORAL_BLANK
 	}
 }
 
 defined_text = {
 	name = GetElFundPartyName
-	text = {
-		trigger = {
-			check_variable = { CLM.CLM_fund_party = 1 }
-			CLM = { has_country_flag = CLM_national_party_renamed }
-		}
-		localization_key = CLM_ELECTORAL_PARTY_RED_SDP
-	}
 	text = {
 		trigger = {
 			check_variable = { CLM.CLM_fund_party = 1 }
@@ -3186,6 +4353,18 @@ defined_text = {
 			check_variable = { CLM.CLM_fund_party = 3 }
 		}
 		localization_key = CLM_ELECTORAL_PARTY_YELLOW
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_party = 4 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_SD
+	}
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_fund_party = 5 }
+		}
+		localization_key = CLM_ELECTORAL_PARTY_DIS
 	}
 	text = {
 		localization_key = CLM_ELECTORAL_BLANK

@@ -9,6 +9,13 @@ country_event = {
 
 	option = {
 		name = CLM_election.1.a
+		trigger = {
+			OR = {
+				NOT = { check_variable = { CLM_house_red < CLM_house_sd } }
+				NOT = { check_variable = { CLM_house_blue < CLM_house_sd } }
+				NOT = { check_variable = { CLM_house_yellow < CLM_house_sd } }
+			}
+		}
 		CLM_great_experiment_stability_down = yes
 		set_country_flag = CLM_coalition_with_the_gentlemen
 		complete_national_focus = CLM_welcome_the_gentlemen
@@ -16,6 +23,11 @@ country_event = {
 
 	option = {
 		name = CLM_election.1.b
+		trigger = {
+			NOT = { check_variable = { CLM_house_red > CLM_house_sd } }
+			NOT = { check_variable = { CLM_house_blue > CLM_house_sd } }
+			NOT = { check_variable = { CLM_house_yellow > CLM_house_sd } }
+		}
 		complete_national_focus = CLM_a_rising_star
 	}
 }
@@ -49,21 +61,36 @@ country_event = {
 
 	option = {
 		name = CLM_election.3.a
+		trigger = {
+			NOT = { check_variable = { CLM_house_blue > CLM_house_red } }
+			NOT = { check_variable = { CLM_house_yellow > CLM_house_red } }
+		}
 		set_country_flag = CLM_vp_richard_grants
 	}
 
 	option = {
 		name = CLM_election.3.b
+		trigger = {
+			NOT = { check_variable = { CLM_house_red > CLM_house_blue } }
+			NOT = { check_variable = { CLM_house_yellow > CLM_house_blue } }
+		}
 		set_country_flag = CLM_vp_wallis_bonnet
 	}
 
 	option = {
 		name = CLM_election.3.c
+		trigger = {
+			NOT = { check_variable = { CLM_house_red > CLM_house_yellow } }
+			NOT = { check_variable = { CLM_house_blue > CLM_house_yellow } }
+		}
 		set_country_flag = CLM_vp_simeon_mercer
 	}
 
 	option = {
 		name = CLM_election.3.d
+		trigger = {
+			check_variable = { CLM_electoral_ok_sd = 1 }
+		}
 		CLM_great_experiment_stability_down = yes
 		set_country_flag = CLM_coalition_with_the_social_democrats
 	}
@@ -132,5 +159,9 @@ country_event = {
 	option = {
 		name = CLM_election.7.a
 		set_country_flag = CLM_1033_event_fired
+		if = {
+			limit = { has_completed_focus = CLM_welcome_the_gentlemen }
+			complete_national_focus = CLM_the_election_of_1033
+		}
 	}
 }
