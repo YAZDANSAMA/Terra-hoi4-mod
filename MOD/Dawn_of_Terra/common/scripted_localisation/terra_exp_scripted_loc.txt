@@ -1,0 +1,208 @@
+defined_text = {
+	name = GetExpCapIcon1
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot1 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt1
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot1 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon2
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot2 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt2
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot2 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon3
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot3 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt3
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot3 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon4
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot4 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt4
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot4 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon5
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot5 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt5
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot5 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon6
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot6 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt6
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot6 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon7
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot7 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt7
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot7 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+
+defined_text = {
+	name = GetExpCapIcon8
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot8 = 1 }
+		}
+		localization_key = GFX_idea_generic_mountain_warfare
+	}
+	text = {
+		localization_key = GFX_terra_exp_cap_empty
+	}
+}
+
+defined_text = {
+	name = GetExpCapTt8
+	text = {
+		trigger = {
+			check_variable = { CLM.CLM_exp_capslot8 = 1 }
+		}
+		localization_key = CLM_EXP_CAP_PIONEERS_TT
+	}
+	text = {
+		localization_key = CLM_EXP_CAP_NONE
+	}
+}
+

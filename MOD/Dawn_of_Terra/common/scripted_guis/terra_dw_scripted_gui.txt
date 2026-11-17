@@ -1,0 +1,3496 @@
+scripted_gui = {
+	terra_dw_cover_gui = {
+		context_type = player_context
+		window_name = "terra_dw_cover"
+		parent_window_token = politics_tab
+		visible = {
+			check_variable = { CLM_dw_open = 1 }
+		}
+		ai_enabled = {
+			always = no
+		}
+	}
+
+	terra_dw_slots_gui = {
+		context_type = player_context
+		window_name = "terra_dw_slots"
+		parent_window_token = politics_tab
+		visible = {
+			check_variable = { CLM_dw_open = 1 }
+		}
+		ai_enabled = {
+			always = no
+		}
+		properties = {
+			dw_sl1 = {
+				frame = CLM_dw_sf1
+			}
+			dw_sb1 = {
+				frame = CLM_dw_sb1
+			}
+			dw_sic1 = {
+				image = "[GetDwSlotIcon1]"
+			}
+			dw_sl2 = {
+				frame = CLM_dw_sf2
+			}
+			dw_sb2 = {
+				frame = CLM_dw_sb2
+			}
+			dw_sic2 = {
+				image = "[GetDwSlotIcon2]"
+			}
+			dw_sl3 = {
+				frame = CLM_dw_sf3
+			}
+			dw_sb3 = {
+				frame = CLM_dw_sb3
+			}
+			dw_sic3 = {
+				image = "[GetDwSlotIcon3]"
+			}
+			dw_sl4 = {
+				frame = CLM_dw_sf4
+			}
+			dw_sb4 = {
+				frame = CLM_dw_sb4
+			}
+			dw_sic4 = {
+				image = "[GetDwSlotIcon4]"
+			}
+		}
+		triggers = {
+			dw_sc1_click_enabled = {
+				check_variable = { CLM_dw_slot1 > 0 }
+			}
+			dw_sc2_click_enabled = {
+				check_variable = { CLM_dw_slot2 > 0 }
+			}
+			dw_sc3_click_enabled = {
+				check_variable = { CLM_dw_slot3 > 0 }
+			}
+			dw_sc4_click_enabled = {
+				check_variable = { CLM_dw_slot4 > 0 }
+			}
+		}
+		effects = {
+			dw_sc1_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_slot1 = 1 }
+					}
+					set_variable = { CLM_dw_p1 = CLM_dw_sp1 }
+					set_variable = { CLM_dw_n1 = 1 }
+				}
+				set_variable = { CLM_dw_slot1 = 0 }
+				set_variable = { CLM_dw_sp1 = 0 }
+				set_variable = { CLM_dw_sc1 = 0 }
+				set_variable = { CLM_dw_sf1 = 1 }
+				set_variable = { CLM_dw_sb1 = 1 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_sc1 > 0 }
+					}
+					set_variable = { CLM_dw_sb1 = CLM_dw_sp1 }
+					multiply_variable = { CLM_dw_sb1 = 10 }
+					divide_variable = { CLM_dw_sb1 = CLM_dw_sc1 }
+					round_variable = CLM_dw_sb1
+					add_to_variable = { CLM_dw_sb1 = 1 }
+				}
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_sc2_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_slot2 = 1 }
+					}
+					set_variable = { CLM_dw_p1 = CLM_dw_sp2 }
+					set_variable = { CLM_dw_n1 = 1 }
+				}
+				set_variable = { CLM_dw_slot2 = 0 }
+				set_variable = { CLM_dw_sp2 = 0 }
+				set_variable = { CLM_dw_sc2 = 0 }
+				set_variable = { CLM_dw_sf2 = 1 }
+				set_variable = { CLM_dw_sb2 = 1 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_sc2 > 0 }
+					}
+					set_variable = { CLM_dw_sb2 = CLM_dw_sp2 }
+					multiply_variable = { CLM_dw_sb2 = 10 }
+					divide_variable = { CLM_dw_sb2 = CLM_dw_sc2 }
+					round_variable = CLM_dw_sb2
+					add_to_variable = { CLM_dw_sb2 = 1 }
+				}
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_sc3_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_slot3 = 1 }
+					}
+					set_variable = { CLM_dw_p1 = CLM_dw_sp3 }
+					set_variable = { CLM_dw_n1 = 1 }
+				}
+				set_variable = { CLM_dw_slot3 = 0 }
+				set_variable = { CLM_dw_sp3 = 0 }
+				set_variable = { CLM_dw_sc3 = 0 }
+				set_variable = { CLM_dw_sf3 = 1 }
+				set_variable = { CLM_dw_sb3 = 1 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_sc3 > 0 }
+					}
+					set_variable = { CLM_dw_sb3 = CLM_dw_sp3 }
+					multiply_variable = { CLM_dw_sb3 = 10 }
+					divide_variable = { CLM_dw_sb3 = CLM_dw_sc3 }
+					round_variable = CLM_dw_sb3
+					add_to_variable = { CLM_dw_sb3 = 1 }
+				}
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_sc4_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_slot4 = 1 }
+					}
+					set_variable = { CLM_dw_p1 = CLM_dw_sp4 }
+					set_variable = { CLM_dw_n1 = 1 }
+				}
+				set_variable = { CLM_dw_slot4 = 0 }
+				set_variable = { CLM_dw_sp4 = 0 }
+				set_variable = { CLM_dw_sc4 = 0 }
+				set_variable = { CLM_dw_sf4 = 1 }
+				set_variable = { CLM_dw_sb4 = 1 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_sc4 > 0 }
+					}
+					set_variable = { CLM_dw_sb4 = CLM_dw_sp4 }
+					multiply_variable = { CLM_dw_sb4 = 10 }
+					divide_variable = { CLM_dw_sb4 = CLM_dw_sc4 }
+					round_variable = CLM_dw_sb4
+					add_to_variable = { CLM_dw_sb4 = 1 }
+				}
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+		}
+	}
+
+	terra_dw_gui = {
+		context_type = player_context
+		window_name = "terra_dw"
+		parent_window_token = politics_tab
+		visible = {
+			check_variable = { CLM_dw_open = 1 }
+		}
+		ai_enabled = {
+			always = no
+		}
+		properties = {
+			dw_cat1 = {
+				frame = CLM_dw_cf1_c
+			}
+			dw_cat2 = {
+				frame = CLM_dw_cf2_c
+			}
+			dw_cat3 = {
+				frame = CLM_dw_cf3_c
+			}
+			dw_cat4 = {
+				frame = CLM_dw_cf4_c
+			}
+			dw_cat5 = {
+				frame = CLM_dw_cf5_c
+			}
+			dw_ln1 = {
+				frame = CLM_dw_ln1
+			}
+			dw_ce1 = {
+				frame = CLM_dw_cf1
+			}
+			dw_ci1 = {
+				image = "[GetDwCellIcon1]"
+			}
+			dw_ln2 = {
+				frame = CLM_dw_ln2
+			}
+			dw_ce2 = {
+				frame = CLM_dw_cf2
+			}
+			dw_ci2 = {
+				image = "[GetDwCellIcon2]"
+			}
+			dw_ln3 = {
+				frame = CLM_dw_ln3
+			}
+			dw_ce3 = {
+				frame = CLM_dw_cf3
+			}
+			dw_ci3 = {
+				image = "[GetDwCellIcon3]"
+			}
+			dw_ln4 = {
+				frame = CLM_dw_ln4
+			}
+			dw_ce4 = {
+				frame = CLM_dw_cf4
+			}
+			dw_ci4 = {
+				image = "[GetDwCellIcon4]"
+			}
+			dw_ln5 = {
+				frame = CLM_dw_ln5
+			}
+			dw_ce5 = {
+				frame = CLM_dw_cf5
+			}
+			dw_ci5 = {
+				image = "[GetDwCellIcon5]"
+			}
+			dw_ln6 = {
+				frame = CLM_dw_ln6
+			}
+			dw_ce6 = {
+				frame = CLM_dw_cf6
+			}
+			dw_ci6 = {
+				image = "[GetDwCellIcon6]"
+			}
+			dw_ln7 = {
+				frame = CLM_dw_ln7
+			}
+			dw_ce7 = {
+				frame = CLM_dw_cf7
+			}
+			dw_ci7 = {
+				image = "[GetDwCellIcon7]"
+			}
+			dw_ln8 = {
+				frame = CLM_dw_ln8
+			}
+			dw_ce8 = {
+				frame = CLM_dw_cf8
+			}
+			dw_ci8 = {
+				image = "[GetDwCellIcon8]"
+			}
+			dw_ln9 = {
+				frame = CLM_dw_ln9
+			}
+			dw_ce9 = {
+				frame = CLM_dw_cf9
+			}
+			dw_ci9 = {
+				image = "[GetDwCellIcon9]"
+			}
+			dw_ln10 = {
+				frame = CLM_dw_ln10
+			}
+			dw_ce10 = {
+				frame = CLM_dw_cf10
+			}
+			dw_ci10 = {
+				image = "[GetDwCellIcon10]"
+			}
+			dw_ln11 = {
+				frame = CLM_dw_ln11
+			}
+			dw_ce11 = {
+				frame = CLM_dw_cf11
+			}
+			dw_ci11 = {
+				image = "[GetDwCellIcon11]"
+			}
+			dw_ln12 = {
+				frame = CLM_dw_ln12
+			}
+			dw_ce12 = {
+				frame = CLM_dw_cf12
+			}
+			dw_ci12 = {
+				image = "[GetDwCellIcon12]"
+			}
+			dw_ln13 = {
+				frame = CLM_dw_ln13
+			}
+			dw_ce13 = {
+				frame = CLM_dw_cf13
+			}
+			dw_ci13 = {
+				image = "[GetDwCellIcon13]"
+			}
+			dw_ln14 = {
+				frame = CLM_dw_ln14
+			}
+			dw_ce14 = {
+				frame = CLM_dw_cf14
+			}
+			dw_ci14 = {
+				image = "[GetDwCellIcon14]"
+			}
+			dw_ln15 = {
+				frame = CLM_dw_ln15
+			}
+			dw_ce15 = {
+				frame = CLM_dw_cf15
+			}
+			dw_ci15 = {
+				image = "[GetDwCellIcon15]"
+			}
+			dw_ln16 = {
+				frame = CLM_dw_ln16
+			}
+			dw_ce16 = {
+				frame = CLM_dw_cf16
+			}
+			dw_ci16 = {
+				image = "[GetDwCellIcon16]"
+			}
+			dw_ce17 = {
+				frame = CLM_dw_cf17
+			}
+			dw_ci17 = {
+				image = "[GetDwCellIcon17]"
+			}
+			dw_ce18 = {
+				frame = CLM_dw_cf18
+			}
+			dw_ci18 = {
+				image = "[GetDwCellIcon18]"
+			}
+			dw_ce19 = {
+				frame = CLM_dw_cf19
+			}
+			dw_ci19 = {
+				image = "[GetDwCellIcon19]"
+			}
+			dw_ce20 = {
+				frame = CLM_dw_cf20
+			}
+			dw_ci20 = {
+				image = "[GetDwCellIcon20]"
+			}
+		}
+		triggers = {
+			dw_ch1_click_enabled = {
+				check_variable = { CLM_dw_cell1 > 0 }
+			}
+			dw_ch2_click_enabled = {
+				check_variable = { CLM_dw_cell2 > 0 }
+			}
+			dw_ch3_click_enabled = {
+				check_variable = { CLM_dw_cell3 > 0 }
+			}
+			dw_ch4_click_enabled = {
+				check_variable = { CLM_dw_cell4 > 0 }
+			}
+			dw_ch5_click_enabled = {
+				check_variable = { CLM_dw_cell5 > 0 }
+			}
+			dw_ch6_click_enabled = {
+				check_variable = { CLM_dw_cell6 > 0 }
+			}
+			dw_ch7_click_enabled = {
+				check_variable = { CLM_dw_cell7 > 0 }
+			}
+			dw_ch8_click_enabled = {
+				check_variable = { CLM_dw_cell8 > 0 }
+			}
+			dw_ch9_click_enabled = {
+				check_variable = { CLM_dw_cell9 > 0 }
+			}
+			dw_ch10_click_enabled = {
+				check_variable = { CLM_dw_cell10 > 0 }
+			}
+			dw_ch11_click_enabled = {
+				check_variable = { CLM_dw_cell11 > 0 }
+			}
+			dw_ch12_click_enabled = {
+				check_variable = { CLM_dw_cell12 > 0 }
+			}
+			dw_ch13_click_enabled = {
+				check_variable = { CLM_dw_cell13 > 0 }
+			}
+			dw_ch14_click_enabled = {
+				check_variable = { CLM_dw_cell14 > 0 }
+			}
+			dw_ch15_click_enabled = {
+				check_variable = { CLM_dw_cell15 > 0 }
+			}
+			dw_ch16_click_enabled = {
+				check_variable = { CLM_dw_cell16 > 0 }
+			}
+			dw_ch17_click_enabled = {
+				check_variable = { CLM_dw_cell17 > 0 }
+			}
+			dw_ch18_click_enabled = {
+				check_variable = { CLM_dw_cell18 > 0 }
+			}
+			dw_ch19_click_enabled = {
+				check_variable = { CLM_dw_cell19 > 0 }
+			}
+			dw_ch20_click_enabled = {
+				check_variable = { CLM_dw_cell20 > 0 }
+			}
+		}
+		effects = {
+			dw_cath1_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf1_c = 2 }
+					}
+					set_variable = { CLM_dw_cf1_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf2_c = 2 }
+					}
+					set_variable = { CLM_dw_cf2_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf3_c = 2 }
+					}
+					set_variable = { CLM_dw_cf3_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf4_c = 2 }
+					}
+					set_variable = { CLM_dw_cf4_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf5_c = 2 }
+					}
+					set_variable = { CLM_dw_cf5_c = 1 }
+				}
+				set_variable = { CLM_dw_cf1_c = 2 }
+				set_variable = { CLM_dw_cat = 1 }
+				set_variable = { CLM_dw_sel = 0 }
+				set_variable = { CLM_dw_cell1 = 0 }
+				set_variable = { CLM_dw_ln1 = 1 }
+				set_variable = { CLM_dw_cell2 = 0 }
+				set_variable = { CLM_dw_ln2 = 1 }
+				set_variable = { CLM_dw_cell3 = 0 }
+				set_variable = { CLM_dw_ln3 = 1 }
+				set_variable = { CLM_dw_cell4 = 0 }
+				set_variable = { CLM_dw_ln4 = 1 }
+				set_variable = { CLM_dw_cell5 = 0 }
+				set_variable = { CLM_dw_ln5 = 1 }
+				set_variable = { CLM_dw_cell6 = 0 }
+				set_variable = { CLM_dw_ln6 = 1 }
+				set_variable = { CLM_dw_cell7 = 0 }
+				set_variable = { CLM_dw_ln7 = 1 }
+				set_variable = { CLM_dw_cell8 = 0 }
+				set_variable = { CLM_dw_ln8 = 1 }
+				set_variable = { CLM_dw_cell9 = 0 }
+				set_variable = { CLM_dw_ln9 = 1 }
+				set_variable = { CLM_dw_cell10 = 0 }
+				set_variable = { CLM_dw_ln10 = 1 }
+				set_variable = { CLM_dw_cell11 = 0 }
+				set_variable = { CLM_dw_ln11 = 1 }
+				set_variable = { CLM_dw_cell12 = 0 }
+				set_variable = { CLM_dw_ln12 = 1 }
+				set_variable = { CLM_dw_cell13 = 0 }
+				set_variable = { CLM_dw_ln13 = 1 }
+				set_variable = { CLM_dw_cell14 = 0 }
+				set_variable = { CLM_dw_ln14 = 1 }
+				set_variable = { CLM_dw_cell15 = 0 }
+				set_variable = { CLM_dw_ln15 = 1 }
+				set_variable = { CLM_dw_cell16 = 0 }
+				set_variable = { CLM_dw_ln16 = 1 }
+				set_variable = { CLM_dw_cell17 = 0 }
+				set_variable = { CLM_dw_ln17 = 1 }
+				set_variable = { CLM_dw_cell18 = 0 }
+				set_variable = { CLM_dw_ln18 = 1 }
+				set_variable = { CLM_dw_cell19 = 0 }
+				set_variable = { CLM_dw_ln19 = 1 }
+				set_variable = { CLM_dw_cell20 = 0 }
+				set_variable = { CLM_dw_ln20 = 1 }
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_cath2_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf1_c = 2 }
+					}
+					set_variable = { CLM_dw_cf1_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf2_c = 2 }
+					}
+					set_variable = { CLM_dw_cf2_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf3_c = 2 }
+					}
+					set_variable = { CLM_dw_cf3_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf4_c = 2 }
+					}
+					set_variable = { CLM_dw_cf4_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf5_c = 2 }
+					}
+					set_variable = { CLM_dw_cf5_c = 1 }
+				}
+				set_variable = { CLM_dw_cf2_c = 2 }
+				set_variable = { CLM_dw_cat = 2 }
+				set_variable = { CLM_dw_sel = 0 }
+				set_variable = { CLM_dw_cell1 = 0 }
+				set_variable = { CLM_dw_ln1 = 1 }
+				set_variable = { CLM_dw_cell2 = 0 }
+				set_variable = { CLM_dw_ln2 = 1 }
+				set_variable = { CLM_dw_cell3 = 0 }
+				set_variable = { CLM_dw_ln3 = 1 }
+				set_variable = { CLM_dw_cell4 = 0 }
+				set_variable = { CLM_dw_ln4 = 1 }
+				set_variable = { CLM_dw_cell5 = 0 }
+				set_variable = { CLM_dw_ln5 = 1 }
+				set_variable = { CLM_dw_cell6 = 0 }
+				set_variable = { CLM_dw_ln6 = 1 }
+				set_variable = { CLM_dw_cell7 = 0 }
+				set_variable = { CLM_dw_ln7 = 1 }
+				set_variable = { CLM_dw_cell8 = 0 }
+				set_variable = { CLM_dw_ln8 = 1 }
+				set_variable = { CLM_dw_cell9 = 0 }
+				set_variable = { CLM_dw_ln9 = 1 }
+				set_variable = { CLM_dw_cell10 = 0 }
+				set_variable = { CLM_dw_ln10 = 1 }
+				set_variable = { CLM_dw_cell11 = 0 }
+				set_variable = { CLM_dw_ln11 = 1 }
+				set_variable = { CLM_dw_cell12 = 0 }
+				set_variable = { CLM_dw_ln12 = 1 }
+				set_variable = { CLM_dw_cell13 = 0 }
+				set_variable = { CLM_dw_ln13 = 1 }
+				set_variable = { CLM_dw_cell14 = 0 }
+				set_variable = { CLM_dw_ln14 = 1 }
+				set_variable = { CLM_dw_cell15 = 0 }
+				set_variable = { CLM_dw_ln15 = 1 }
+				set_variable = { CLM_dw_cell16 = 0 }
+				set_variable = { CLM_dw_ln16 = 1 }
+				set_variable = { CLM_dw_cell17 = 0 }
+				set_variable = { CLM_dw_ln17 = 1 }
+				set_variable = { CLM_dw_cell18 = 0 }
+				set_variable = { CLM_dw_ln18 = 1 }
+				set_variable = { CLM_dw_cell19 = 0 }
+				set_variable = { CLM_dw_ln19 = 1 }
+				set_variable = { CLM_dw_cell20 = 0 }
+				set_variable = { CLM_dw_ln20 = 1 }
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_cath3_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf1_c = 2 }
+					}
+					set_variable = { CLM_dw_cf1_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf2_c = 2 }
+					}
+					set_variable = { CLM_dw_cf2_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf3_c = 2 }
+					}
+					set_variable = { CLM_dw_cf3_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf4_c = 2 }
+					}
+					set_variable = { CLM_dw_cf4_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf5_c = 2 }
+					}
+					set_variable = { CLM_dw_cf5_c = 1 }
+				}
+				set_variable = { CLM_dw_cf3_c = 2 }
+				set_variable = { CLM_dw_cat = 3 }
+				set_variable = { CLM_dw_sel = 0 }
+				set_variable = { CLM_dw_cell1 = 1 }
+				set_variable = { CLM_dw_ln1 = 1 }
+				set_variable = { CLM_dw_cell2 = 0 }
+				set_variable = { CLM_dw_ln2 = 1 }
+				set_variable = { CLM_dw_cell3 = 0 }
+				set_variable = { CLM_dw_ln3 = 1 }
+				set_variable = { CLM_dw_cell4 = 0 }
+				set_variable = { CLM_dw_ln4 = 1 }
+				set_variable = { CLM_dw_cell5 = 0 }
+				set_variable = { CLM_dw_ln5 = 1 }
+				set_variable = { CLM_dw_cell6 = 0 }
+				set_variable = { CLM_dw_ln6 = 1 }
+				set_variable = { CLM_dw_cell7 = 0 }
+				set_variable = { CLM_dw_ln7 = 1 }
+				set_variable = { CLM_dw_cell8 = 0 }
+				set_variable = { CLM_dw_ln8 = 1 }
+				set_variable = { CLM_dw_cell9 = 0 }
+				set_variable = { CLM_dw_ln9 = 1 }
+				set_variable = { CLM_dw_cell10 = 0 }
+				set_variable = { CLM_dw_ln10 = 1 }
+				set_variable = { CLM_dw_cell11 = 0 }
+				set_variable = { CLM_dw_ln11 = 1 }
+				set_variable = { CLM_dw_cell12 = 0 }
+				set_variable = { CLM_dw_ln12 = 1 }
+				set_variable = { CLM_dw_cell13 = 0 }
+				set_variable = { CLM_dw_ln13 = 1 }
+				set_variable = { CLM_dw_cell14 = 0 }
+				set_variable = { CLM_dw_ln14 = 1 }
+				set_variable = { CLM_dw_cell15 = 0 }
+				set_variable = { CLM_dw_ln15 = 1 }
+				set_variable = { CLM_dw_cell16 = 0 }
+				set_variable = { CLM_dw_ln16 = 1 }
+				set_variable = { CLM_dw_cell17 = 0 }
+				set_variable = { CLM_dw_ln17 = 1 }
+				set_variable = { CLM_dw_cell18 = 0 }
+				set_variable = { CLM_dw_ln18 = 1 }
+				set_variable = { CLM_dw_cell19 = 0 }
+				set_variable = { CLM_dw_ln19 = 1 }
+				set_variable = { CLM_dw_cell20 = 0 }
+				set_variable = { CLM_dw_ln20 = 1 }
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_cath4_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf1_c = 2 }
+					}
+					set_variable = { CLM_dw_cf1_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf2_c = 2 }
+					}
+					set_variable = { CLM_dw_cf2_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf3_c = 2 }
+					}
+					set_variable = { CLM_dw_cf3_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf4_c = 2 }
+					}
+					set_variable = { CLM_dw_cf4_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf5_c = 2 }
+					}
+					set_variable = { CLM_dw_cf5_c = 1 }
+				}
+				set_variable = { CLM_dw_cf4_c = 2 }
+				set_variable = { CLM_dw_cat = 4 }
+				set_variable = { CLM_dw_sel = 0 }
+				set_variable = { CLM_dw_cell1 = 0 }
+				set_variable = { CLM_dw_ln1 = 1 }
+				set_variable = { CLM_dw_cell2 = 0 }
+				set_variable = { CLM_dw_ln2 = 1 }
+				set_variable = { CLM_dw_cell3 = 0 }
+				set_variable = { CLM_dw_ln3 = 1 }
+				set_variable = { CLM_dw_cell4 = 0 }
+				set_variable = { CLM_dw_ln4 = 1 }
+				set_variable = { CLM_dw_cell5 = 0 }
+				set_variable = { CLM_dw_ln5 = 1 }
+				set_variable = { CLM_dw_cell6 = 0 }
+				set_variable = { CLM_dw_ln6 = 1 }
+				set_variable = { CLM_dw_cell7 = 0 }
+				set_variable = { CLM_dw_ln7 = 1 }
+				set_variable = { CLM_dw_cell8 = 0 }
+				set_variable = { CLM_dw_ln8 = 1 }
+				set_variable = { CLM_dw_cell9 = 0 }
+				set_variable = { CLM_dw_ln9 = 1 }
+				set_variable = { CLM_dw_cell10 = 0 }
+				set_variable = { CLM_dw_ln10 = 1 }
+				set_variable = { CLM_dw_cell11 = 0 }
+				set_variable = { CLM_dw_ln11 = 1 }
+				set_variable = { CLM_dw_cell12 = 0 }
+				set_variable = { CLM_dw_ln12 = 1 }
+				set_variable = { CLM_dw_cell13 = 0 }
+				set_variable = { CLM_dw_ln13 = 1 }
+				set_variable = { CLM_dw_cell14 = 0 }
+				set_variable = { CLM_dw_ln14 = 1 }
+				set_variable = { CLM_dw_cell15 = 0 }
+				set_variable = { CLM_dw_ln15 = 1 }
+				set_variable = { CLM_dw_cell16 = 0 }
+				set_variable = { CLM_dw_ln16 = 1 }
+				set_variable = { CLM_dw_cell17 = 0 }
+				set_variable = { CLM_dw_ln17 = 1 }
+				set_variable = { CLM_dw_cell18 = 0 }
+				set_variable = { CLM_dw_ln18 = 1 }
+				set_variable = { CLM_dw_cell19 = 0 }
+				set_variable = { CLM_dw_ln19 = 1 }
+				set_variable = { CLM_dw_cell20 = 0 }
+				set_variable = { CLM_dw_ln20 = 1 }
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_cath5_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf1_c = 2 }
+					}
+					set_variable = { CLM_dw_cf1_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf2_c = 2 }
+					}
+					set_variable = { CLM_dw_cf2_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf3_c = 2 }
+					}
+					set_variable = { CLM_dw_cf3_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf4_c = 2 }
+					}
+					set_variable = { CLM_dw_cf4_c = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cf5_c = 2 }
+					}
+					set_variable = { CLM_dw_cf5_c = 1 }
+				}
+				set_variable = { CLM_dw_cf5_c = 2 }
+				set_variable = { CLM_dw_cat = 5 }
+				set_variable = { CLM_dw_sel = 0 }
+				set_variable = { CLM_dw_cell1 = 0 }
+				set_variable = { CLM_dw_ln1 = 1 }
+				set_variable = { CLM_dw_cell2 = 0 }
+				set_variable = { CLM_dw_ln2 = 1 }
+				set_variable = { CLM_dw_cell3 = 0 }
+				set_variable = { CLM_dw_ln3 = 1 }
+				set_variable = { CLM_dw_cell4 = 0 }
+				set_variable = { CLM_dw_ln4 = 1 }
+				set_variable = { CLM_dw_cell5 = 0 }
+				set_variable = { CLM_dw_ln5 = 1 }
+				set_variable = { CLM_dw_cell6 = 0 }
+				set_variable = { CLM_dw_ln6 = 1 }
+				set_variable = { CLM_dw_cell7 = 0 }
+				set_variable = { CLM_dw_ln7 = 1 }
+				set_variable = { CLM_dw_cell8 = 0 }
+				set_variable = { CLM_dw_ln8 = 1 }
+				set_variable = { CLM_dw_cell9 = 0 }
+				set_variable = { CLM_dw_ln9 = 1 }
+				set_variable = { CLM_dw_cell10 = 0 }
+				set_variable = { CLM_dw_ln10 = 1 }
+				set_variable = { CLM_dw_cell11 = 0 }
+				set_variable = { CLM_dw_ln11 = 1 }
+				set_variable = { CLM_dw_cell12 = 0 }
+				set_variable = { CLM_dw_ln12 = 1 }
+				set_variable = { CLM_dw_cell13 = 0 }
+				set_variable = { CLM_dw_ln13 = 1 }
+				set_variable = { CLM_dw_cell14 = 0 }
+				set_variable = { CLM_dw_ln14 = 1 }
+				set_variable = { CLM_dw_cell15 = 0 }
+				set_variable = { CLM_dw_ln15 = 1 }
+				set_variable = { CLM_dw_cell16 = 0 }
+				set_variable = { CLM_dw_ln16 = 1 }
+				set_variable = { CLM_dw_cell17 = 0 }
+				set_variable = { CLM_dw_ln17 = 1 }
+				set_variable = { CLM_dw_cell18 = 0 }
+				set_variable = { CLM_dw_ln18 = 1 }
+				set_variable = { CLM_dw_cell19 = 0 }
+				set_variable = { CLM_dw_ln19 = 1 }
+				set_variable = { CLM_dw_cell20 = 0 }
+				set_variable = { CLM_dw_ln20 = 1 }
+				set_variable = { CLM_dw_cf1 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf1 = 1 }
+				}
+				set_variable = { CLM_dw_cf2 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell2 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf2 = 1 }
+				}
+				set_variable = { CLM_dw_cf3 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell3 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf3 = 1 }
+				}
+				set_variable = { CLM_dw_cf4 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell4 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf4 = 1 }
+				}
+				set_variable = { CLM_dw_cf5 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell5 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf5 = 1 }
+				}
+				set_variable = { CLM_dw_cf6 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell6 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf6 = 1 }
+				}
+				set_variable = { CLM_dw_cf7 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell7 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf7 = 1 }
+				}
+				set_variable = { CLM_dw_cf8 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell8 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf8 = 1 }
+				}
+				set_variable = { CLM_dw_cf9 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell9 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf9 = 1 }
+				}
+				set_variable = { CLM_dw_cf10 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell10 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf10 = 1 }
+				}
+				set_variable = { CLM_dw_cf11 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell11 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf11 = 1 }
+				}
+				set_variable = { CLM_dw_cf12 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell12 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf12 = 1 }
+				}
+				set_variable = { CLM_dw_cf13 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell13 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf13 = 1 }
+				}
+				set_variable = { CLM_dw_cf14 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell14 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf14 = 1 }
+				}
+				set_variable = { CLM_dw_cf15 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell15 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf15 = 1 }
+				}
+				set_variable = { CLM_dw_cf16 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell16 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf16 = 1 }
+				}
+				set_variable = { CLM_dw_cf17 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell17 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf17 = 1 }
+				}
+				set_variable = { CLM_dw_cf18 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell18 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf18 = 1 }
+				}
+				set_variable = { CLM_dw_cf19 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell19 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf19 = 1 }
+				}
+				set_variable = { CLM_dw_cf20 = 5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_cell20 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+					add_to_variable = { CLM_dw_cf20 = 1 }
+				}
+			}
+			dw_ch1_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell1 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell1 }
+				}
+			}
+			dw_ch2_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell2 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell2 }
+				}
+			}
+			dw_ch3_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell3 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell3 }
+				}
+			}
+			dw_ch4_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell4 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell4 }
+				}
+			}
+			dw_ch5_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell5 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell5 }
+				}
+			}
+			dw_ch6_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell6 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell6 }
+				}
+			}
+			dw_ch7_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell7 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell7 }
+				}
+			}
+			dw_ch8_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell8 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell8 }
+				}
+			}
+			dw_ch9_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell9 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell9 }
+				}
+			}
+			dw_ch10_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell10 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell10 }
+				}
+			}
+			dw_ch11_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell11 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell11 }
+				}
+			}
+			dw_ch12_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell12 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell12 }
+				}
+			}
+			dw_ch13_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell13 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell13 }
+				}
+			}
+			dw_ch14_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell14 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell14 }
+				}
+			}
+			dw_ch15_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell15 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell15 }
+				}
+			}
+			dw_ch16_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell16 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell16 }
+				}
+			}
+			dw_ch17_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell17 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell17 }
+				}
+			}
+			dw_ch18_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell18 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell18 }
+				}
+			}
+			dw_ch19_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell19 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell19 }
+				}
+			}
+			dw_ch20_click = {
+				set_variable = { CLM_dw_tg = CLM_dw_sel }
+				subtract_from_variable = { CLM_dw_tg = CLM_dw_cell20 }
+				if = {
+					limit = {
+						check_variable = { CLM_dw_tg = 0 }
+					}
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_sel = CLM_dw_cell20 }
+				}
+			}
+			dw_close_click = {
+				set_variable = { CLM_dw_open = 0 }
+			}
+		}
+	}
+
+	terra_dw_info_gui = {
+		context_type = player_context
+		window_name = "terra_dw_info"
+		parent_window_token = politics_tab
+		visible = {
+			check_variable = { CLM_dw_open = 1 }
+			check_variable = { CLM_dw_sel > 0 }
+		}
+		ai_enabled = {
+			always = no
+		}
+		properties = {
+			iw_ic = {
+				image = "[GetDwSelIcon]"
+			}
+		}
+		triggers = {
+			iw_go_click_enabled = {
+				OR = {
+					AND = { check_variable = { CLM_dw_sel = 1 } check_variable = { CLM_dw_n1 = 1 } }
+				}
+				OR = {
+					AND = { check_variable = { CLM_dw_slot1 = 0 } check_variable = { CLM_dw_sf1 = 1 } }
+					AND = { check_variable = { CLM_dw_slot2 = 0 } check_variable = { CLM_dw_sf2 = 1 } }
+					AND = { check_variable = { CLM_dw_slot3 = 0 } check_variable = { CLM_dw_sf3 = 1 } }
+					AND = { check_variable = { CLM_dw_slot4 = 0 } check_variable = { CLM_dw_sf4 = 1 } }
+				}
+			}
+		}
+		effects = {
+			iw_close_click = {
+				set_variable = { CLM_dw_sel = 0 }
+			}
+			iw_go_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_slot1 = 0 }
+						check_variable = { CLM_dw_sf1 = 1 }
+					}
+					if = {
+						limit = {
+							check_variable = { CLM_dw_sel = 1 }
+						}
+						set_variable = { CLM_dw_slot1 = 1 }
+						set_variable = { CLM_dw_sp1 = CLM_dw_p1 }
+						set_variable = { CLM_dw_sc1 = 120 }
+						set_variable = { CLM_dw_n1 = 2 }
+					}
+					set_variable = { CLM_dw_sf1 = 2 }
+					set_variable = { CLM_dw_sb1 = 1 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_sc1 > 0 }
+						}
+						set_variable = { CLM_dw_sb1 = CLM_dw_sp1 }
+						multiply_variable = { CLM_dw_sb1 = 10 }
+						divide_variable = { CLM_dw_sb1 = CLM_dw_sc1 }
+						round_variable = CLM_dw_sb1
+						add_to_variable = { CLM_dw_sb1 = 1 }
+					}
+					set_variable = { CLM_dw_cf1 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell1 = 1 }
+						}
+						set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf1 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell2 = 1 }
+						}
+						set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf2 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell3 = 1 }
+						}
+						set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf3 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell4 = 1 }
+						}
+						set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf4 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell5 = 1 }
+						}
+						set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf5 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell6 = 1 }
+						}
+						set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf6 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell7 = 1 }
+						}
+						set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf7 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell8 = 1 }
+						}
+						set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf8 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell9 = 1 }
+						}
+						set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf9 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell10 = 1 }
+						}
+						set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf10 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell11 = 1 }
+						}
+						set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf11 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell12 = 1 }
+						}
+						set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf12 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell13 = 1 }
+						}
+						set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf13 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell14 = 1 }
+						}
+						set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf14 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell15 = 1 }
+						}
+						set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf15 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell16 = 1 }
+						}
+						set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf16 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell17 = 1 }
+						}
+						set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf17 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell18 = 1 }
+						}
+						set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf18 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell19 = 1 }
+						}
+						set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf19 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell20 = 1 }
+						}
+						set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf20 = 1 }
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							check_variable = { CLM_dw_slot2 = 0 }
+							check_variable = { CLM_dw_sf2 = 1 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_dw_sel = 1 }
+							}
+							set_variable = { CLM_dw_slot2 = 1 }
+							set_variable = { CLM_dw_sp2 = CLM_dw_p1 }
+							set_variable = { CLM_dw_sc2 = 120 }
+							set_variable = { CLM_dw_n1 = 2 }
+						}
+						set_variable = { CLM_dw_sf2 = 2 }
+						set_variable = { CLM_dw_sb2 = 1 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_sc2 > 0 }
+							}
+							set_variable = { CLM_dw_sb2 = CLM_dw_sp2 }
+							multiply_variable = { CLM_dw_sb2 = 10 }
+							divide_variable = { CLM_dw_sb2 = CLM_dw_sc2 }
+							round_variable = CLM_dw_sb2
+							add_to_variable = { CLM_dw_sb2 = 1 }
+						}
+						set_variable = { CLM_dw_cf1 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell1 = 1 }
+							}
+							set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf1 = 1 }
+						}
+						set_variable = { CLM_dw_cf2 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell2 = 1 }
+							}
+							set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf2 = 1 }
+						}
+						set_variable = { CLM_dw_cf3 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell3 = 1 }
+							}
+							set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf3 = 1 }
+						}
+						set_variable = { CLM_dw_cf4 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell4 = 1 }
+							}
+							set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf4 = 1 }
+						}
+						set_variable = { CLM_dw_cf5 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell5 = 1 }
+							}
+							set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf5 = 1 }
+						}
+						set_variable = { CLM_dw_cf6 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell6 = 1 }
+							}
+							set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf6 = 1 }
+						}
+						set_variable = { CLM_dw_cf7 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell7 = 1 }
+							}
+							set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf7 = 1 }
+						}
+						set_variable = { CLM_dw_cf8 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell8 = 1 }
+							}
+							set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf8 = 1 }
+						}
+						set_variable = { CLM_dw_cf9 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell9 = 1 }
+							}
+							set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf9 = 1 }
+						}
+						set_variable = { CLM_dw_cf10 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell10 = 1 }
+							}
+							set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf10 = 1 }
+						}
+						set_variable = { CLM_dw_cf11 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell11 = 1 }
+							}
+							set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf11 = 1 }
+						}
+						set_variable = { CLM_dw_cf12 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell12 = 1 }
+							}
+							set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf12 = 1 }
+						}
+						set_variable = { CLM_dw_cf13 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell13 = 1 }
+							}
+							set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf13 = 1 }
+						}
+						set_variable = { CLM_dw_cf14 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell14 = 1 }
+							}
+							set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf14 = 1 }
+						}
+						set_variable = { CLM_dw_cf15 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell15 = 1 }
+							}
+							set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf15 = 1 }
+						}
+						set_variable = { CLM_dw_cf16 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell16 = 1 }
+							}
+							set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf16 = 1 }
+						}
+						set_variable = { CLM_dw_cf17 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell17 = 1 }
+							}
+							set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf17 = 1 }
+						}
+						set_variable = { CLM_dw_cf18 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell18 = 1 }
+							}
+							set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf18 = 1 }
+						}
+						set_variable = { CLM_dw_cf19 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell19 = 1 }
+							}
+							set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf19 = 1 }
+						}
+						set_variable = { CLM_dw_cf20 = 5 }
+						if = {
+							limit = {
+								check_variable = { CLM_dw_cell20 = 1 }
+							}
+							set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+							add_to_variable = { CLM_dw_cf20 = 1 }
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								check_variable = { CLM_dw_slot3 = 0 }
+								check_variable = { CLM_dw_sf3 = 1 }
+							}
+							if = {
+								limit = {
+									check_variable = { CLM_dw_sel = 1 }
+								}
+								set_variable = { CLM_dw_slot3 = 1 }
+								set_variable = { CLM_dw_sp3 = CLM_dw_p1 }
+								set_variable = { CLM_dw_sc3 = 120 }
+								set_variable = { CLM_dw_n1 = 2 }
+							}
+							set_variable = { CLM_dw_sf3 = 2 }
+							set_variable = { CLM_dw_sb3 = 1 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_sc3 > 0 }
+								}
+								set_variable = { CLM_dw_sb3 = CLM_dw_sp3 }
+								multiply_variable = { CLM_dw_sb3 = 10 }
+								divide_variable = { CLM_dw_sb3 = CLM_dw_sc3 }
+								round_variable = CLM_dw_sb3
+								add_to_variable = { CLM_dw_sb3 = 1 }
+							}
+							set_variable = { CLM_dw_cf1 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell1 = 1 }
+								}
+								set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf1 = 1 }
+							}
+							set_variable = { CLM_dw_cf2 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell2 = 1 }
+								}
+								set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf2 = 1 }
+							}
+							set_variable = { CLM_dw_cf3 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell3 = 1 }
+								}
+								set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf3 = 1 }
+							}
+							set_variable = { CLM_dw_cf4 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell4 = 1 }
+								}
+								set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf4 = 1 }
+							}
+							set_variable = { CLM_dw_cf5 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell5 = 1 }
+								}
+								set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf5 = 1 }
+							}
+							set_variable = { CLM_dw_cf6 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell6 = 1 }
+								}
+								set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf6 = 1 }
+							}
+							set_variable = { CLM_dw_cf7 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell7 = 1 }
+								}
+								set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf7 = 1 }
+							}
+							set_variable = { CLM_dw_cf8 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell8 = 1 }
+								}
+								set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf8 = 1 }
+							}
+							set_variable = { CLM_dw_cf9 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell9 = 1 }
+								}
+								set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf9 = 1 }
+							}
+							set_variable = { CLM_dw_cf10 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell10 = 1 }
+								}
+								set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf10 = 1 }
+							}
+							set_variable = { CLM_dw_cf11 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell11 = 1 }
+								}
+								set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf11 = 1 }
+							}
+							set_variable = { CLM_dw_cf12 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell12 = 1 }
+								}
+								set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf12 = 1 }
+							}
+							set_variable = { CLM_dw_cf13 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell13 = 1 }
+								}
+								set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf13 = 1 }
+							}
+							set_variable = { CLM_dw_cf14 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell14 = 1 }
+								}
+								set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf14 = 1 }
+							}
+							set_variable = { CLM_dw_cf15 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell15 = 1 }
+								}
+								set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf15 = 1 }
+							}
+							set_variable = { CLM_dw_cf16 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell16 = 1 }
+								}
+								set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf16 = 1 }
+							}
+							set_variable = { CLM_dw_cf17 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell17 = 1 }
+								}
+								set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf17 = 1 }
+							}
+							set_variable = { CLM_dw_cf18 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell18 = 1 }
+								}
+								set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf18 = 1 }
+							}
+							set_variable = { CLM_dw_cf19 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell19 = 1 }
+								}
+								set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf19 = 1 }
+							}
+							set_variable = { CLM_dw_cf20 = 5 }
+							if = {
+								limit = {
+									check_variable = { CLM_dw_cell20 = 1 }
+								}
+								set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+								add_to_variable = { CLM_dw_cf20 = 1 }
+							}
+						}
+						else = {
+							if = {
+								limit = {
+									check_variable = { CLM_dw_slot4 = 0 }
+									check_variable = { CLM_dw_sf4 = 1 }
+								}
+								if = {
+									limit = {
+										check_variable = { CLM_dw_sel = 1 }
+									}
+									set_variable = { CLM_dw_slot4 = 1 }
+									set_variable = { CLM_dw_sp4 = CLM_dw_p1 }
+									set_variable = { CLM_dw_sc4 = 120 }
+									set_variable = { CLM_dw_n1 = 2 }
+								}
+								set_variable = { CLM_dw_sf4 = 2 }
+								set_variable = { CLM_dw_sb4 = 1 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_sc4 > 0 }
+									}
+									set_variable = { CLM_dw_sb4 = CLM_dw_sp4 }
+									multiply_variable = { CLM_dw_sb4 = 10 }
+									divide_variable = { CLM_dw_sb4 = CLM_dw_sc4 }
+									round_variable = CLM_dw_sb4
+									add_to_variable = { CLM_dw_sb4 = 1 }
+								}
+								set_variable = { CLM_dw_cf1 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell1 = 1 }
+									}
+									set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf1 = 1 }
+								}
+								set_variable = { CLM_dw_cf2 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell2 = 1 }
+									}
+									set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf2 = 1 }
+								}
+								set_variable = { CLM_dw_cf3 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell3 = 1 }
+									}
+									set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf3 = 1 }
+								}
+								set_variable = { CLM_dw_cf4 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell4 = 1 }
+									}
+									set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf4 = 1 }
+								}
+								set_variable = { CLM_dw_cf5 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell5 = 1 }
+									}
+									set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf5 = 1 }
+								}
+								set_variable = { CLM_dw_cf6 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell6 = 1 }
+									}
+									set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf6 = 1 }
+								}
+								set_variable = { CLM_dw_cf7 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell7 = 1 }
+									}
+									set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf7 = 1 }
+								}
+								set_variable = { CLM_dw_cf8 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell8 = 1 }
+									}
+									set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf8 = 1 }
+								}
+								set_variable = { CLM_dw_cf9 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell9 = 1 }
+									}
+									set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf9 = 1 }
+								}
+								set_variable = { CLM_dw_cf10 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell10 = 1 }
+									}
+									set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf10 = 1 }
+								}
+								set_variable = { CLM_dw_cf11 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell11 = 1 }
+									}
+									set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf11 = 1 }
+								}
+								set_variable = { CLM_dw_cf12 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell12 = 1 }
+									}
+									set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf12 = 1 }
+								}
+								set_variable = { CLM_dw_cf13 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell13 = 1 }
+									}
+									set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf13 = 1 }
+								}
+								set_variable = { CLM_dw_cf14 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell14 = 1 }
+									}
+									set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf14 = 1 }
+								}
+								set_variable = { CLM_dw_cf15 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell15 = 1 }
+									}
+									set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf15 = 1 }
+								}
+								set_variable = { CLM_dw_cf16 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell16 = 1 }
+									}
+									set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf16 = 1 }
+								}
+								set_variable = { CLM_dw_cf17 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell17 = 1 }
+									}
+									set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf17 = 1 }
+								}
+								set_variable = { CLM_dw_cf18 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell18 = 1 }
+									}
+									set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf18 = 1 }
+								}
+								set_variable = { CLM_dw_cf19 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell19 = 1 }
+									}
+									set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf19 = 1 }
+								}
+								set_variable = { CLM_dw_cf20 = 5 }
+								if = {
+									limit = {
+										check_variable = { CLM_dw_cell20 = 1 }
+									}
+									set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+									add_to_variable = { CLM_dw_cf20 = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	terra_dw_btn_gui = {
+		context_type = player_context
+		window_name = "terra_dw_btn"
+		parent_window_token = politics_tab
+		visible = {
+			original_tag = CLM
+		}
+		ai_enabled = {
+			always = no
+		}
+		effects = {
+			national_control_button_3_click = {
+				if = {
+					limit = {
+						check_variable = { CLM_dw_open = 1 }
+					}
+					set_variable = { CLM_dw_open = 0 }
+					set_variable = { CLM_dw_sel = 0 }
+				}
+				else = {
+					set_variable = { CLM_dw_open = 1 }
+					set_variable = { CLM_exp_view = 0 }
+					set_variable = { CLM_dw_sel = 0 }
+					clr_country_flag = CLM_electoral_map_open
+					set_variable = { CLM_dw_cf1 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell1 = 1 }
+						}
+						set_variable = { CLM_dw_cf1 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf1 = 1 }
+					}
+					set_variable = { CLM_dw_cf2 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell2 = 1 }
+						}
+						set_variable = { CLM_dw_cf2 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf2 = 1 }
+					}
+					set_variable = { CLM_dw_cf3 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell3 = 1 }
+						}
+						set_variable = { CLM_dw_cf3 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf3 = 1 }
+					}
+					set_variable = { CLM_dw_cf4 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell4 = 1 }
+						}
+						set_variable = { CLM_dw_cf4 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf4 = 1 }
+					}
+					set_variable = { CLM_dw_cf5 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell5 = 1 }
+						}
+						set_variable = { CLM_dw_cf5 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf5 = 1 }
+					}
+					set_variable = { CLM_dw_cf6 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell6 = 1 }
+						}
+						set_variable = { CLM_dw_cf6 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf6 = 1 }
+					}
+					set_variable = { CLM_dw_cf7 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell7 = 1 }
+						}
+						set_variable = { CLM_dw_cf7 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf7 = 1 }
+					}
+					set_variable = { CLM_dw_cf8 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell8 = 1 }
+						}
+						set_variable = { CLM_dw_cf8 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf8 = 1 }
+					}
+					set_variable = { CLM_dw_cf9 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell9 = 1 }
+						}
+						set_variable = { CLM_dw_cf9 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf9 = 1 }
+					}
+					set_variable = { CLM_dw_cf10 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell10 = 1 }
+						}
+						set_variable = { CLM_dw_cf10 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf10 = 1 }
+					}
+					set_variable = { CLM_dw_cf11 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell11 = 1 }
+						}
+						set_variable = { CLM_dw_cf11 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf11 = 1 }
+					}
+					set_variable = { CLM_dw_cf12 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell12 = 1 }
+						}
+						set_variable = { CLM_dw_cf12 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf12 = 1 }
+					}
+					set_variable = { CLM_dw_cf13 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell13 = 1 }
+						}
+						set_variable = { CLM_dw_cf13 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf13 = 1 }
+					}
+					set_variable = { CLM_dw_cf14 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell14 = 1 }
+						}
+						set_variable = { CLM_dw_cf14 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf14 = 1 }
+					}
+					set_variable = { CLM_dw_cf15 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell15 = 1 }
+						}
+						set_variable = { CLM_dw_cf15 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf15 = 1 }
+					}
+					set_variable = { CLM_dw_cf16 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell16 = 1 }
+						}
+						set_variable = { CLM_dw_cf16 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf16 = 1 }
+					}
+					set_variable = { CLM_dw_cf17 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell17 = 1 }
+						}
+						set_variable = { CLM_dw_cf17 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf17 = 1 }
+					}
+					set_variable = { CLM_dw_cf18 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell18 = 1 }
+						}
+						set_variable = { CLM_dw_cf18 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf18 = 1 }
+					}
+					set_variable = { CLM_dw_cf19 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell19 = 1 }
+						}
+						set_variable = { CLM_dw_cf19 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf19 = 1 }
+					}
+					set_variable = { CLM_dw_cf20 = 5 }
+					if = {
+						limit = {
+							check_variable = { CLM_dw_cell20 = 1 }
+						}
+						set_variable = { CLM_dw_cf20 = CLM_dw_n1 }
+						add_to_variable = { CLM_dw_cf20 = 1 }
+					}
+				}
+			}
+		}
+	}
+
+}

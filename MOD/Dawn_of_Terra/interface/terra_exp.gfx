@@ -1,0 +1,25 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_terra_exp_hit"
+		size = { x = 4 y = 4 }
+		textureFile = "gfx/interface/terra_exp/hit.png"
+		borderSize = { x = 1 y = 1 }
+		tilingCenter = yes
+	}
+	spriteType = {
+		name = "GFX_terra_exp_folder_base"
+		textureFile = "gfx/interface/terra_exp/folder_base.png"
+	}
+	spriteType = {
+		name = "GFX_terra_exp_tabact240_red"
+		textureFile = "gfx/interface/terra_exp/tabact240_red.png"
+	}
+	spriteType = {
+		name = "GFX_terra_exp_cap_panel"
+		textureFile = "gfx/interface/terra_exp/cap_panel.png"
+	}
+	spriteType = {
+		name = "GFX_terra_exp_cap_empty"
+		textureFile = "gfx/interface/terra_exp/cap_empty.png"
+	}
+}

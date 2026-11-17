@@ -1,0 +1,35 @@
+bitmapfonts = {
+	bitmapfont = {
+		name = "terra_event_typewriter16"
+		fontfiles = {
+			"gfx/fonts/hoi4_typewriter16"
+			"gfx/fonts/hoi_16typewriter"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+
+	bitmapfont = {
+		name = "terra_event_typewriter22"
+		fontfiles = {
+			"gfx/fonts/hoi4_typewriter22"
+			"gfx/fonts/hoi_22typewriter"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+}

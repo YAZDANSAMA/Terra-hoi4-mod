@@ -1,0 +1,51 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_terra_dw_icon_cold_weather"
+		textureFile = "gfx/interface/terra_dw/icon_cold_weather.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_icon_empty"
+		textureFile = "gfx/interface/terra_dw/icon_empty.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_black"
+		textureFile = "gfx/interface/terra_dw/black.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_slothead"
+		textureFile = "gfx/interface/terra_dw/slothead.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_cat"
+		textureFile = "gfx/interface/terra_dw/cat.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_terra_dw_slot"
+		textureFile = "gfx/interface/terra_dw/slot.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_terra_dw_bar"
+		textureFile = "gfx/interface/terra_dw/bar.png"
+		noOfFrames = 11
+	}
+	spriteType = {
+		name = "GFX_terra_dw_cell"
+		textureFile = "gfx/interface/terra_dw/cell.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_terra_dw_link"
+		textureFile = "gfx/interface/terra_dw/link.png"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_terra_dw_daysbox"
+		textureFile = "gfx/interface/terra_dw/daysbox.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_infopanel"
+		textureFile = "gfx/interface/terra_dw/infopanel.png"
+	}
+}

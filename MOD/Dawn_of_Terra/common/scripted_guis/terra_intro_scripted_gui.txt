@@ -1,0 +1,21 @@
+scripted_gui = {
+	terra_intro_gui = {
+		context_type = player_context
+		window_name = "terra_intro_window"
+		parent_window_token = top_bar
+
+		visible = {
+			NOT = { has_country_flag = terra_intro_seen }
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		effects = {
+			terra_intro_ok_click = {
+				set_country_flag = terra_intro_seen
+			}
+		}
+	}
+}

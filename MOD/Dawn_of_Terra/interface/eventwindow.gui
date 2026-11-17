@@ -6,107 +6,136 @@ guiTypes = {
 #  # #  # #  # #  #  #  #  #   #       #    # #  #   #  #  #    # 
  ##   ##   ##  #  #  #  #  #   #       ###   #   ### #  #  #  ##  
 
- containerWindowType = {
-  name = "EventWindow"
-  position = { x=-612 y=-364 }
-  size = { width = 1225 height = 728 }
-  moveable = yes
-  Orientation = CENTER
+	containerWindowType = {
+		name = "EventWindow"
+		position = { x=-282 y=-310 }	
+		size = { width = 581 height =427 }
+		moveable = yes
+		Orientation = CENTER		
+		
+		show_sound = event_popup
+		hide_sound = menu_close_window
+		
+		background = {
+			name = "Background"	
+			spriteType ="GFX_tiled_window_transparent"
+		}
 
-  show_sound = event_popup
-  hide_sound = menu_close_window
+		containerWindowType = {
+			name = "top_Window"
+			position = { x=0 y=0 }	
+			size = { width = 581 height =121 }
+			moveable = yes
+			Orientation = UPPER_LEFT
 
-  background = {
-   name = "Background"
-   spriteType = "GFX_event_page_bg"
-  }
+			background = {
+				name = "Background"	
+				spriteType ="GFX_terra_event_top_bg"
+			}			
+		
+			instantTextBoxType = {
+				name = "Title"
+				position = { x = 14 y = 70 }
+				font = "terra_event_typewriter22"
+				borderSize = {x = 0 y = 0}
+				text = "Title text here!"	
+				maxWidth = 551
+				maxHeight = 32
+				format = centre
+			}
 
-  containerWindowType = {
-   name = "top_Window"
-   position = { x=0 y=0 }
-   size = { width = 1225 height = 100 }
-   moveable = yes
-   Orientation = UPPER_LEFT
+			buttonType = {
+				name = "btn_minimize"
+				hide = yes
+				position = {x=10 y=45}
+				spriteType = "GFX_terra_electoral_dot_none"
+				clicksound = click_default
+				pdx_tooltip = "MINIMIZE_EVENT"
+			}
+		}
 
-   instantTextBoxType = {
-    name = "Title"
-    position = { x = 42 y = 74 }
-    font = "hoi_20b"
-    borderSize = {x = 0 y = 0}
-    text = "Title text here!"
-    maxWidth = 520
-    maxHeight = 28
-    fixedsize = yes
-    format = left
-   }
+		containerWindowType = {
+			name = "midsection"
+			position = { x=0 y=121 }	
+			size = { width = 580 height = 100 }
+			moveable = yes
+			clipping = no
+			Orientation = UPPER_LEFT
 
-   buttonType = {
-    name = "btn_minimize"
-    hide = yes
-    position = {x=10 y=45}
-    spriteType = "GFX_terra_electoral_dot_none"
-    clicksound = click_default
-    pdx_tooltip = "MINIMIZE_EVENT"
-   }
-  }
+			background = {
+				name = "Background"	
+				quadTextureSprite ="GFX_terra_event_mid_bg"
+			}
 
-  containerWindowType = {
-   name = "midsection"
-   position = { x=42 y=118 }
-   size = { width = 520 height = 480 }
-   verticalScrollbar = "right_vertical_slider"
-   scroll_wheel_factor = 40
-   smooth_scrolling = yes
-   moveable = yes
-   clipping = yes
-   Orientation = UPPER_LEFT
+			instantTextBoxType = {
+				name = "Description"
+				position = { x = 31 y = 0 }
+				font = "terra_event_typewriter16"
+				borderSize = {x = 0 y = 0}
+				text = "Long text here!"	
+				maxWidth = 512
+				maxHeight = 230
+				format = left
+			}	
+		}			
 
-   instantTextBoxType = {
-    name = "Description"
-    position = { x = 0 y = 0 }
-    font = "hoi_16mbs"
-    borderSize = {x = 0 y = 0}
-    text = "Long text here!"
-    maxWidth = 496
-    maxHeight = 480
-    fixedsize = yes
-    format = left
-   }
-  }
+		containerWindowType = {
+			name = "bottom_Window"
+			position = { x=0 y=221 }	
+			size = { width = 581 height = 206 }
+			moveable = yes
+			clipping = no
+			Orientation = UPPER_LEFT
 
-  containerWindowType = {
-   name = "bottom_Window"
-   position = { x=0 y=598 }
-   size = { width = 1225 height = 130 }
-   moveable = yes
-   clipping = no
-   Orientation = UPPER_LEFT
+#			background = {
+#				name = "Background"	
+#				spriteType ="GFX_event_report_tileable_bottom_section"
+#			}
 
-   iconType = {
-    name = "event_picture"
-    spriteType = "GFX_report_event_001"
-    position = { x = -4000 y = 0 }
-    Orientation = "UPPER_LEFT"
-    alwaystransparent = yes
-   }
+			background = {
+				name = "Background"	
+				spriteType ="GFX_terra_event_bottom_bg"
+			}
 
-   iconType = {
-    name = "event_pic_clip"
-    spriteType = "GFX_event_pic_clip"
-    position = { x = -5000 y = 0 }
-    Orientation = "UPPER_LEFT"
-   }
+			iconType = {
+				name ="event_picture"
+				spriteType = "GFX_report_event_001"
+				position = { x = 5 y = 5 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes				
+			}
 
-   gridBoxType = {
-    name = "options_grid"
-    position = { x = 29 y = 44 }
-    size = { width = 544 height = 48 }
-    slotsize = { width = 136 height = 48 }
-    max_slots_horizontal = 4
-    format = "UPPER_LEFT"
-   }
-  }
- }
+			iconType = {
+				name ="event_pic_clip"
+				spriteType = "GFX_event_pic_clip"
+				position = { x = -3 y = 35 }
+				Orientation = "UPPER_LEFT"
+			}
+
+
+			gridBoxType = {
+				name = "options_grid"
+				position = { x = 215 y = -1 }
+				size = { width = 300 height = 30 }
+				slotsize = { width = 300 height = 47 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+
+#		containerWindowType = {
+#			name = "bottom_window_end"
+#			position = { x=0 y=-100 }
+#			size = { width = 581 height = 59 }
+#			moveable = yes
+#			Orientation = UPPER_LEFT
+#			
+#			background = {
+#				name = "Background"	
+#				spriteType ="GFX_event_report_bottom_win_end"
+#			}
+#		}
+	}
 
 
  ##  ###  ### ###   ##  ### ### #   # ###     ### #   # ### #  # ###  ## 
@@ -468,7 +497,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Title"
 				position = { x = 14 y = 70 }
-				font = "hoi_20b"
+				font = "terra_event_typewriter22"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
 				maxWidth = 872
@@ -502,7 +531,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 35 y = 0 }
-				font = "hoi_16mbs"
+				font = "terra_event_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 830
@@ -570,7 +599,7 @@ guiTypes = {
 	}
 containerWindowType = {
 		name = "event_option_entry"
-		size = { width = 136 height = 48 }
+		size = { width = 300 height = 47 }
 		clipping = no
 		
 		background = {
@@ -580,11 +609,10 @@ containerWindowType = {
 		
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = 4 y = 0 }
-			font = "hoi_16mbs"
-			maxWidth = 128
-			maxHeight = 48
-			fixedsize = yes
+			position = { x = 5 y = 0 }
+			font = "hoi_20bs"
+			maxWidth = 340
+			maxHeight = 40
 			format = center
 			vertical_alignment = center
 			alwaystransparent = yes
