@@ -299,6 +299,208 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetDwSubLabel6
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 1 }
+				check_variable = { CLM.CLM_dw_cat = 6 }
+				check_variable = { CLM.CLM_dw_cat = 7 }
+				check_variable = { CLM.CLM_dw_cat = 8 }
+				check_variable = { CLM.CLM_dw_cat = 9 }
+			}
+		}
+		localization_key = CLM_DW_SUB6
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel7
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 1 }
+				check_variable = { CLM.CLM_dw_cat = 6 }
+				check_variable = { CLM.CLM_dw_cat = 7 }
+				check_variable = { CLM.CLM_dw_cat = 8 }
+				check_variable = { CLM.CLM_dw_cat = 9 }
+			}
+		}
+		localization_key = CLM_DW_SUB7
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel8
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 1 }
+				check_variable = { CLM.CLM_dw_cat = 6 }
+				check_variable = { CLM.CLM_dw_cat = 7 }
+				check_variable = { CLM.CLM_dw_cat = 8 }
+				check_variable = { CLM.CLM_dw_cat = 9 }
+			}
+		}
+		localization_key = CLM_DW_SUB8
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel9
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 1 }
+				check_variable = { CLM.CLM_dw_cat = 6 }
+				check_variable = { CLM.CLM_dw_cat = 7 }
+				check_variable = { CLM.CLM_dw_cat = 8 }
+				check_variable = { CLM.CLM_dw_cat = 9 }
+			}
+		}
+		localization_key = CLM_DW_SUB9
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel10
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 4 }
+				check_variable = { CLM.CLM_dw_cat = 10 }
+				check_variable = { CLM.CLM_dw_cat = 11 }
+				check_variable = { CLM.CLM_dw_cat = 12 }
+				check_variable = { CLM.CLM_dw_cat = 13 }
+				check_variable = { CLM.CLM_dw_cat = 14 }
+				check_variable = { CLM.CLM_dw_cat = 15 }
+			}
+		}
+		localization_key = CLM_DW_SUB10
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel11
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 4 }
+				check_variable = { CLM.CLM_dw_cat = 10 }
+				check_variable = { CLM.CLM_dw_cat = 11 }
+				check_variable = { CLM.CLM_dw_cat = 12 }
+				check_variable = { CLM.CLM_dw_cat = 13 }
+				check_variable = { CLM.CLM_dw_cat = 14 }
+				check_variable = { CLM.CLM_dw_cat = 15 }
+			}
+		}
+		localization_key = CLM_DW_SUB11
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel12
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 4 }
+				check_variable = { CLM.CLM_dw_cat = 10 }
+				check_variable = { CLM.CLM_dw_cat = 11 }
+				check_variable = { CLM.CLM_dw_cat = 12 }
+				check_variable = { CLM.CLM_dw_cat = 13 }
+				check_variable = { CLM.CLM_dw_cat = 14 }
+				check_variable = { CLM.CLM_dw_cat = 15 }
+			}
+		}
+		localization_key = CLM_DW_SUB12
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel13
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 4 }
+				check_variable = { CLM.CLM_dw_cat = 10 }
+				check_variable = { CLM.CLM_dw_cat = 11 }
+				check_variable = { CLM.CLM_dw_cat = 12 }
+				check_variable = { CLM.CLM_dw_cat = 13 }
+				check_variable = { CLM.CLM_dw_cat = 14 }
+				check_variable = { CLM.CLM_dw_cat = 15 }
+			}
+		}
+		localization_key = CLM_DW_SUB13
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel14
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 4 }
+				check_variable = { CLM.CLM_dw_cat = 10 }
+				check_variable = { CLM.CLM_dw_cat = 11 }
+				check_variable = { CLM.CLM_dw_cat = 12 }
+				check_variable = { CLM.CLM_dw_cat = 13 }
+				check_variable = { CLM.CLM_dw_cat = 14 }
+				check_variable = { CLM.CLM_dw_cat = 15 }
+			}
+		}
+		localization_key = CLM_DW_SUB14
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
+	name = GetDwSubLabel15
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { CLM.CLM_dw_cat = 4 }
+				check_variable = { CLM.CLM_dw_cat = 10 }
+				check_variable = { CLM.CLM_dw_cat = 11 }
+				check_variable = { CLM.CLM_dw_cat = 12 }
+				check_variable = { CLM.CLM_dw_cat = 13 }
+				check_variable = { CLM.CLM_dw_cat = 14 }
+				check_variable = { CLM.CLM_dw_cat = 15 }
+			}
+		}
+		localization_key = CLM_DW_SUB15
+	}
+	text = {
+		localization_key = CLM_DW_BLANK
+	}
+}
+
+defined_text = {
 	name = GetDwCellIcon1
 	text = {
 		trigger = {

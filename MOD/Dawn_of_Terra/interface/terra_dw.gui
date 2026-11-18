@@ -140,7 +140,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "dw_sl3"
-			spriteType = "GFX_terra_dw_slot"
+			spriteType = "GFX_terra_dw_slot_comitaw"
 			position = { x = 12 y = 270 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
@@ -382,6 +382,256 @@ guiTypes = {
 			name = "dw_cath5"
 			position = { x = 768 y = 0 }
 			size = { x = 186 y = 46 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat6"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 8 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl6"
+			position = { x = 12 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL6"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath6"
+			position = { x = 8 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat7"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 164 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl7"
+			position = { x = 168 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL7"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath7"
+			position = { x = 164 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat8"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 320 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl8"
+			position = { x = 324 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL8"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath8"
+			position = { x = 320 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat9"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 476 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl9"
+			position = { x = 480 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL9"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath9"
+			position = { x = 476 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat10"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 8 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl10"
+			position = { x = 12 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL10"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath10"
+			position = { x = 8 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat11"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 164 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl11"
+			position = { x = 168 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL11"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath11"
+			position = { x = 164 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat12"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 320 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl12"
+			position = { x = 324 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL12"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath12"
+			position = { x = 320 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat13"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 476 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl13"
+			position = { x = 480 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL13"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath13"
+			position = { x = 476 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat14"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 632 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl14"
+			position = { x = 636 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL14"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath14"
+			position = { x = 632 y = 48 }
+			size = { x = 150 y = 24 }
+			quadTextureSprite = "GFX_terra_exp_hit"
+		}
+		iconType = {
+			name = "dw_cat15"
+			spriteType = "GFX_terra_dw_subcat"
+			position = { x = 788 y = 48 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "dw_catl15"
+			position = { x = 792 y = 48 }
+			font = "hoi_16mbs"
+			text = "CLM_DW_SUBL15"
+			format = center
+			maxWidth = 142
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+			vertical_alignment = center
+		}
+		buttonType = {
+			name = "dw_cath15"
+			position = { x = 788 y = 48 }
+			size = { x = 150 y = 24 }
 			quadTextureSprite = "GFX_terra_exp_hit"
 		}
 		iconType = {
@@ -1222,15 +1472,14 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "terra_dw_btn"
-		position = { x = 360 y = 185 }
-		size = { width = 60 height = 60 }
+		position = { x = 278 y = 185 }
+		size = { width = 120 height = 50 }
 		moveable = no
 		clipping = no
 		buttonType = {
 			name = "national_control_button_3"
 			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_icon_button_32x32"
-			scale = 1.4
+			quadTextureSprite = "GFX_terra_dw_button"
 			pdx_tooltip = "CLM_DW_TITLE"
 		}
 	}

@@ -212,15 +212,14 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "terra_exp_polbtn"
-		position = { x = 220 y = 185 }
-		size = { width = 60 height = 60 }
+		position = { x = 202 y = 185 }
+		size = { width = 76 height = 50 }
 		moveable = no
 		clipping = no
 		buttonType = {
 			name = "national_control_button_1"
 			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_icon_button_32x32"
-			scale = 1.4
+			quadTextureSprite = "GFX_terra_exp_button"
 			pdx_tooltip = "CLM_EXP_BTN_TT"
 		}
 	}

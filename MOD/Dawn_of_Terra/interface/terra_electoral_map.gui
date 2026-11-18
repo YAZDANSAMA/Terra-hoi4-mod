@@ -2,16 +2,29 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "terra_electoral_map_button_container"
-		position = { x = 290 y = 185 }
-		size = { width = 60 height = 60 }
+		position = { x = 330 y = 232 }
+		size = { width = 66 height = 68 }
 		clipping = no
 
 		buttonType = {
 			name = "national_control_button_2"
 			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_icon_button_32x32"
-			scale = 1.4
+			spriteType = "GFX_terra_party_classical_liberalism"
 			pdx_tooltip = "Electoral Map"
+		}
+	}
+
+	containerWindowType = {
+		name = "terra_pol_party_icon_container"
+		position = { x = 330 y = 232 }
+		size = { width = 66 height = 68 }
+		clipping = no
+
+		iconType = {
+			name = "terra_pol_party_icon"
+			spriteType = "GFX_ideology_classical_liberalism_group"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
 		}
 	}
 

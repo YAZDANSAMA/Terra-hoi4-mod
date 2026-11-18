@@ -12,6 +12,12 @@ scripted_gui = {
 			always = no
 		}
 
+		properties = {
+			national_control_button_2 = {
+				image = "[GetClmPartyIcon]"
+			}
+		}
+
 		triggers = {
 			national_control_button_2_click_enabled = {
 				NOT = { has_country_flag = CLM_electoral_map_locked }
@@ -27,6 +33,26 @@ scripted_gui = {
 				else = {
 					set_country_flag = CLM_electoral_map_open
 				}
+			}
+		}
+	}
+
+	terra_pol_party_icon_gui = {
+		context_type = player_context
+		window_name = "terra_pol_party_icon_container"
+		parent_window_token = politics_tab
+
+		visible = {
+			NOT = { original_tag = CLM }
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		properties = {
+			terra_pol_party_icon = {
+				image = "[GetPolPartyIcon]"
 			}
 		}
 	}

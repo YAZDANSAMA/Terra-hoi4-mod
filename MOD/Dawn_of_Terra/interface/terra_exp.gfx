@@ -22,4 +22,9 @@ spriteTypes = {
 		name = "GFX_terra_exp_cap_empty"
 		textureFile = "gfx/interface/terra_exp/cap_empty.png"
 	}
+	spriteType = {
+		name = "GFX_terra_exp_button"
+		textureFile = "gfx/interface/terra_exp/button.png"
+		noOfFrames = 2
+	}
 }

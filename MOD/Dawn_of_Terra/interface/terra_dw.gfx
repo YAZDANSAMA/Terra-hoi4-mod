@@ -38,6 +38,11 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 	spriteType = {
+		name = "GFX_terra_dw_slot_comitaw"
+		textureFile = "gfx/interface/terra_dw/slot_comitaw.png"
+		noOfFrames = 3
+	}
+	spriteType = {
 		name = "GFX_terra_dw_bar"
 		textureFile = "gfx/interface/terra_dw/bar.png"
 		noOfFrames = 11
@@ -53,11 +58,21 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_terra_dw_subcat"
+		textureFile = "gfx/interface/terra_dw/subcat.png"
+		noOfFrames = 4
+	}
+	spriteType = {
 		name = "GFX_terra_dw_daysbox"
 		textureFile = "gfx/interface/terra_dw/daysbox.png"
 	}
 	spriteType = {
 		name = "GFX_terra_dw_infopanel"
 		textureFile = "gfx/interface/terra_dw/infopanel.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_button"
+		textureFile = "gfx/interface/terra_dw/button.png"
+		noOfFrames = 2
 	}
 }

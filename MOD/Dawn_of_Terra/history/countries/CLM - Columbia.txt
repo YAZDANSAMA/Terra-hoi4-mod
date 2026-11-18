@@ -67,6 +67,16 @@ set_variable = { CLM_dw_cf2_c = 1 }
 set_variable = { CLM_dw_cf3_c = 1 }
 set_variable = { CLM_dw_cf4_c = 1 }
 set_variable = { CLM_dw_cf5_c = 1 }
+set_variable = { CLM_dw_cf6_c = 1 }
+set_variable = { CLM_dw_cf7_c = 1 }
+set_variable = { CLM_dw_cf8_c = 1 }
+set_variable = { CLM_dw_cf9_c = 1 }
+set_variable = { CLM_dw_cf10_c = 4 }
+set_variable = { CLM_dw_cf11_c = 4 }
+set_variable = { CLM_dw_cf12_c = 4 }
+set_variable = { CLM_dw_cf13_c = 4 }
+set_variable = { CLM_dw_cf14_c = 4 }
+set_variable = { CLM_dw_cf15_c = 4 }
 set_variable = { CLM_dw_cat = 1 }
 set_variable = { CLM_dw_sel = 0 }
 set_variable = { CLM_dw_tg = 0 }
@@ -758,15 +768,15 @@ set_politics = {
 }
 
 set_popularities = {
-    revolutionary = 11
-    junta = 11
-    ethnonationalism = 11
-    corporatism = 11
-    theocracy = 11
-    social_democracy = 11
-    classical_liberalism = 12
-    technocracy = 11
-    monarchism = 11
+    revolutionary = 0
+    junta = 0
+    ethnonationalism = 0
+    corporatism = 10
+    theocracy = 0
+    social_democracy = 14
+    classical_liberalism = 60
+    technocracy = 9
+    monarchism = 7
 }
 
 add_ideas = {

@@ -1,0 +1,109 @@
+defined_text = {
+	name = GetClmPartyIcon
+	text = {
+		trigger = {
+			has_government = classical_liberalism
+		}
+		localization_key = GFX_terra_party_classical_liberalism
+	}
+	text = {
+		trigger = {
+			has_government = social_democracy
+		}
+		localization_key = GFX_terra_party_social_democracy
+	}
+	text = {
+		trigger = {
+			has_government = ethnonationalism
+		}
+		localization_key = GFX_terra_party_ethnonationalism
+	}
+	text = {
+		trigger = {
+			has_government = monarchism
+		}
+		localization_key = GFX_terra_party_monarchism
+	}
+	text = {
+		trigger = {
+			has_government = corporatism
+		}
+		localization_key = GFX_terra_party_corporatism
+	}
+	text = {
+		trigger = {
+			has_government = technocracy
+		}
+		localization_key = GFX_terra_party_technocracy
+	}
+	text = {
+		trigger = {
+			has_government = junta
+		}
+		localization_key = GFX_terra_party_junta
+	}
+	text = {
+		localization_key = GFX_terra_party_classical_liberalism
+	}
+}
+
+defined_text = {
+	name = GetPolPartyIcon
+	text = {
+		trigger = {
+			has_government = classical_liberalism
+		}
+		localization_key = GFX_ideology_classical_liberalism_group
+	}
+	text = {
+		trigger = {
+			has_government = social_democracy
+		}
+		localization_key = GFX_ideology_social_democracy_group
+	}
+	text = {
+		trigger = {
+			has_government = ethnonationalism
+		}
+		localization_key = GFX_ideology_ethnonationalism_group
+	}
+	text = {
+		trigger = {
+			has_government = monarchism
+		}
+		localization_key = GFX_ideology_monarchism_group
+	}
+	text = {
+		trigger = {
+			has_government = corporatism
+		}
+		localization_key = GFX_ideology_corporatism_group
+	}
+	text = {
+		trigger = {
+			has_government = technocracy
+		}
+		localization_key = GFX_ideology_technocracy_group
+	}
+	text = {
+		trigger = {
+			has_government = junta
+		}
+		localization_key = GFX_ideology_junta_group
+	}
+	text = {
+		trigger = {
+			has_government = revolutionary
+		}
+		localization_key = GFX_ideology_revolutionary_group
+	}
+	text = {
+		trigger = {
+			has_government = theocracy
+		}
+		localization_key = GFX_ideology_theocracy_group
+	}
+	text = {
+		localization_key = GFX_ideology_classical_liberalism_group
+	}
+}
