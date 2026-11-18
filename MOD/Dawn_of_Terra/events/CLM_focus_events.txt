@@ -244,10 +244,12 @@ country_event = {
 		164 = {
 			transfer_state_to = SIS
 			add_core_of = SIS
+			remove_core_of = SST
 		}
 		149 = {
 			transfer_state_to = SIS
 			add_core_of = SIS
+			remove_core_of = SST
 		}
 		SIS = { inherit_technology = CLM }
 		add_stability = 0.05
@@ -257,10 +259,12 @@ country_event = {
 		164 = {
 			transfer_state_to = SIS
 			add_core_of = SIS
+			remove_core_of = SST
 		}
 		149 = {
 			transfer_state_to = SIS
 			add_core_of = SIS
+			remove_core_of = SST
 		}
 		SIS = { inherit_technology = CLM }
 	}

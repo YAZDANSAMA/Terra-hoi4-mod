@@ -41,12 +41,18 @@ country_event = {
 
 	option = {
 		name = CLM_election.2.a
+		ai_chance = {
+			base = 100
+		}
 		set_country_flag = CLM_trust_the_three_gentlemen
 		complete_national_focus = CLM_welcome_the_gentlemen
 	}
 
 	option = {
 		name = CLM_election.2.b
+		ai_chance = {
+			base = 0
+		}
 		set_country_flag = CLM_corpos_may_interfere
 		complete_national_focus = CLM_letting_the_corpos_interfere
 	}
@@ -61,6 +67,9 @@ country_event = {
 
 	option = {
 		name = CLM_election.3.a
+		ai_chance = {
+			base = 1
+		}
 		trigger = {
 			NOT = { check_variable = { CLM_house_blue > CLM_house_red } }
 			NOT = { check_variable = { CLM_house_yellow > CLM_house_red } }
@@ -70,6 +79,9 @@ country_event = {
 
 	option = {
 		name = CLM_election.3.b
+		ai_chance = {
+			base = 1
+		}
 		trigger = {
 			NOT = { check_variable = { CLM_house_red > CLM_house_blue } }
 			NOT = { check_variable = { CLM_house_yellow > CLM_house_blue } }
@@ -79,6 +91,9 @@ country_event = {
 
 	option = {
 		name = CLM_election.3.c
+		ai_chance = {
+			base = 1
+		}
 		trigger = {
 			NOT = { check_variable = { CLM_house_red > CLM_house_yellow } }
 			NOT = { check_variable = { CLM_house_blue > CLM_house_yellow } }
@@ -88,6 +103,9 @@ country_event = {
 
 	option = {
 		name = CLM_election.3.d
+		ai_chance = {
+			base = 0
+		}
 		trigger = {
 			check_variable = { CLM_electoral_ok_sd = 1 }
 		}
@@ -138,12 +156,18 @@ country_event = {
 
 	option = {
 		name = CLM_election.6.a
+		ai_chance = {
+			base = 100
+		}
 		set_country_flag = CLM_1029_event_fired
 		set_country_flag = CLM_1029_no_interference
 	}
 
 	option = {
 		name = CLM_election.6.b
+		ai_chance = {
+			base = 0
+		}
 		set_country_flag = CLM_1029_event_fired
 		set_country_flag = CLM_1029_interference
 	}
@@ -159,9 +183,6 @@ country_event = {
 	option = {
 		name = CLM_election.7.a
 		set_country_flag = CLM_1033_event_fired
-		if = {
-			limit = { has_completed_focus = CLM_welcome_the_gentlemen }
-			complete_national_focus = CLM_the_election_of_1033
-		}
+		complete_national_focus = CLM_the_election_of_1033
 	}
 }
