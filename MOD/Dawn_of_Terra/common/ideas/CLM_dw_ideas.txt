@@ -1,0 +1,40 @@
+ideas = {
+	hidden_ideas = {
+		CLM_dw_hidden_microphones = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				intelligence_agency_defense = 0.25
+			}
+		}
+		CLM_dw_hidden_cameras = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				intelligence_agency_defense = 0.25
+			}
+		}
+		CLM_dw_passive_rf_listening = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				intelligence_agency_defense = 0.25
+			}
+		}
+	}
+}

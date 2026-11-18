@@ -4,6 +4,18 @@ spriteTypes = {
 		textureFile = "gfx/interface/terra_dw/icon_cold_weather.png"
 	}
 	spriteType = {
+		name = "GFX_terra_dw_icon_hidden_microphones"
+		textureFile = "gfx/interface/terra_dw/icon_hidden_microphones.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_icon_hidden_cameras"
+		textureFile = "gfx/interface/terra_dw/icon_hidden_cameras.png"
+	}
+	spriteType = {
+		name = "GFX_terra_dw_icon_passive_rf_listening"
+		textureFile = "gfx/interface/terra_dw/icon_passive_rf_listening.png"
+	}
+	spriteType = {
 		name = "GFX_terra_dw_icon_empty"
 		textureFile = "gfx/interface/terra_dw/icon_empty.png"
 	}
