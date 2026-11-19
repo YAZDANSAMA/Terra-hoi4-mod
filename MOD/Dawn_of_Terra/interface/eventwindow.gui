@@ -36,7 +36,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Title"
 				position = { x = 14 y = 70 }
-				font = "terra_event_typewriter22"
+				font = "hoi_20b"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
 				maxWidth = 551
@@ -70,7 +70,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 31 y = 0 }
-				font = "terra_event_typewriter16"
+				font = "hoi_16mbs"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 512
@@ -497,7 +497,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Title"
 				position = { x = 14 y = 70 }
-				font = "terra_event_typewriter22"
+				font = "hoi_20b"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
 				maxWidth = 872
@@ -531,7 +531,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 35 y = 0 }
-				font = "terra_event_typewriter16"
+				font = "hoi_16mbs"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 830

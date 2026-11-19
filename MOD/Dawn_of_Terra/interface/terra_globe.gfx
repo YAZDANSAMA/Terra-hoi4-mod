@@ -1,0 +1,20 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_terra_event_page_bg"
+		texturefile = "gfx/interface/event_page_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+    name = "GFX_terra_globe_spin"
+    texturefile = "gfx/interface/terra_globe_spin_36f.dds"
+
+    noOfFrames = 36
+    animation_rate_fps = 15
+
+    looping = yes
+    play_on_show = yes
+    pause_on_loop = 0.0
+}
+
+}

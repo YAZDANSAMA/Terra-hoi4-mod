@@ -1,0 +1,25 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "terra_event_page"
+		position = { x = 0 y = 0 }
+		size = { width = 1225 height = 728 }
+
+		# page background (the DDS you sent, 1225x728)
+		iconType = {
+			name = "terra_bg"
+			spriteType = "GFX_terra_event_page_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		# spinning globe: ring centre (1089, 570) minus half of 144 px
+		iconType = {
+			name = "terra_globe"
+			spriteType = "GFX_terra_globe_spin"
+			position = { x = 1017 y = 498 }
+			scale = 1.0
+		}
+
+	}
+
+}

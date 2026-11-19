@@ -1,9 +1,13 @@
 spriteTypes = {
-
 	spriteType = {
-		name = "GFX_terra_intro_option_entry"
-		textureFile = "gfx/interface/terra_intro/option_entry.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
+		name = "GFX_intro_bg"
+		texturefile = "gfx/event_intro/event_page_bg.dds"
 	}
 
+spriteType = {
+	name = "GFX_terra_intro_button"
+	texturefile = "gfx/interface/terra_intro_button.dds"
+	noOfFrames = 1
+	effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+}
 }

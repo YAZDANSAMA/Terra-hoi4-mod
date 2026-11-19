@@ -5,6 +5,7 @@ scripted_gui = {
 		parent_window_token = top_bar
 
 		visible = {
+			is_ai = no
 			NOT = { has_country_flag = terra_intro_seen }
 		}
 
@@ -12,8 +13,14 @@ scripted_gui = {
 			always = no
 		}
 
+		triggers = {
+			terra_intro_close_click_enabled = {
+				always = yes
+			}
+		}
+
 		effects = {
-			terra_intro_ok_click = {
+			terra_intro_close_click = {
 				set_country_flag = terra_intro_seen
 			}
 		}
