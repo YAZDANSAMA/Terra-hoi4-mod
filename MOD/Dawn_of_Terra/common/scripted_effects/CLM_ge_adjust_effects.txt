@@ -157,3 +157,18 @@ CLM_ge_adj_opposition_organises = {
 	}
 }
 
+CLM_ge_adj_who_is_vp = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CLM_great_experiment_adjust } } }
+			set_variable = { CLM_ge_adj_stab = 0 }
+			set_variable = { CLM_ge_adj_ws = 0 }
+			set_variable = { CLM_ge_adj_pp = 0 }
+			set_variable = { CLM_ge_adj_drift = 0 }
+			add_dynamic_modifier = { modifier = CLM_great_experiment_adjust }
+		}
+		add_to_variable = { CLM_ge_adj_stab = -0.2 }
+		force_update_dynamic_modifier = yes
+	}
+}
+

@@ -150,6 +150,60 @@ scripted_gui = {
 							set_variable = { CLM_exp_capslot8 = 1 }
 						}
 					}
+					if = {
+						limit = {
+							CLM_exp_cap_hamilton = yes
+						}
+						add_to_variable = { CLM_exp_capn = 1 }
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 1 }
+							}
+							set_variable = { CLM_exp_capslot1 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 2 }
+							}
+							set_variable = { CLM_exp_capslot2 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 3 }
+							}
+							set_variable = { CLM_exp_capslot3 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 4 }
+							}
+							set_variable = { CLM_exp_capslot4 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 5 }
+							}
+							set_variable = { CLM_exp_capslot5 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 6 }
+							}
+							set_variable = { CLM_exp_capslot6 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 7 }
+							}
+							set_variable = { CLM_exp_capslot7 = 2 }
+						}
+						if = {
+							limit = {
+								check_variable = { CLM_exp_capn = 8 }
+							}
+							set_variable = { CLM_exp_capslot8 = 2 }
+						}
+					}
 				}
 			}
 		}

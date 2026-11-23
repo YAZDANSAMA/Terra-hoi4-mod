@@ -73,4 +73,10 @@ leader_traits = {
 		special_project_speed_factor = 0.05
 	}
 
+	CLM_computer_prodigy = {
+		random = no
+		special_project_speed_factor = 0.15
+		production_speed_buildings_factor = 0.05
+	}
+
 }

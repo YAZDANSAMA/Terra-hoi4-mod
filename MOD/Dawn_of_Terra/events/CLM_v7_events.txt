@@ -1,0 +1,30 @@
+add_namespace = CLM_v7
+
+news_event = {
+	id = CLM_v7.1
+	title = CLM_v7.1.t
+	desc = CLM_v7.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_v7.1.a
+		set_country_flag = CLM_conet_unlocked
+		activate_advisor = CLM_nataly_lagrange
+	}
+}
+
+country_event = {
+	id = CLM_v7.2
+	title = CLM_v7.2.t
+	desc = CLM_v7.2.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = CLM_v7.2.a
+		set_variable = { CLM_hk_base = num_of_civilian_factories }
+		set_variable = { CLM_hk_gain = 0 }
+		activate_mission = CLM_high_king_pledge_mission
+	}
+}

@@ -5,3 +5,10 @@ CLM_exp_cap_pioneers = {
 	}
 }
 
+CLM_exp_cap_hamilton = {
+	custom_trigger_tooltip = {
+		tooltip = CLM_EXP_REQ_HAMILTON
+		has_completed_focus = CLM_port_hamilton_coastal_fort
+	}
+}
+

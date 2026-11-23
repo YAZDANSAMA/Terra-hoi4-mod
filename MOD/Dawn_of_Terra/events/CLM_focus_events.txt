@@ -228,7 +228,15 @@ news_event = {
 	option = {
 		name = CLM_focus.18.a
 		add_manpower = 1
-		recruit_character = CLM_glacier
+		add_corps_commander_role = {
+			character = CLM_glacier
+			traits = { CLM_frontline_officer brave infantry_officer trickster commando swamp_fox jungle_rat urban_assault_specialist CLM_charismatic }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
 	}
 }
 
@@ -267,5 +275,10 @@ country_event = {
 			remove_core_of = SST
 		}
 		SIS = { inherit_technology = CLM }
+		if = {
+			limit = { is_ai = no }
+			custom_effect_tooltip = CLM_free_siesta_switch_tt
+			SIS = { change_tag_from = ROOT }
+		}
 	}
 }

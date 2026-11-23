@@ -188,56 +188,6 @@ guiTypes = {
 			buttonText = "CLM_DW_CANCEL"
 			buttonFont = "hoi_16mbs"
 		}
-		iconType = {
-			name = "dw_sl4"
-			spriteType = "GFX_terra_dw_slot"
-			position = { x = 12 y = 374 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-		iconType = {
-			name = "dw_sic4"
-			spriteType = "GFX_terra_dw_icon_empty"
-			position = { x = 22 y = 382 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "dw_sn4"
-			position = { x = 96 y = 382 }
-			font = "hoi_18mbs"
-			text = "CLM_DW_SN4"
-			format = left
-			maxWidth = 190
-			maxHeight = 40
-			fixedsize = yes
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "dw_si4"
-			position = { x = 96 y = 424 }
-			font = "hoi_16mbs"
-			text = "CLM_DW_SI4"
-			format = left
-			maxWidth = 190
-			maxHeight = 20
-			fixedsize = yes
-			alwaystransparent = yes
-		}
-		iconType = {
-			name = "dw_sb4"
-			spriteType = "GFX_terra_dw_bar"
-			position = { x = 26 y = 448 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-		buttonType = {
-			name = "dw_sc4"
-			position = { x = 298 y = 392 }
-			quadTextureSprite = "GFX_button_148x34"
-			buttonText = "CLM_DW_CANCEL"
-			buttonFont = "hoi_16mbs"
-		}
 	}
 
 	containerWindowType = {

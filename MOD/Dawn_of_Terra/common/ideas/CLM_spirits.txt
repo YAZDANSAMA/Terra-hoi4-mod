@@ -4150,7 +4150,7 @@ ideas = {
 			}
 		}
 
-		CLM_warden_of_the_torch = {
+		CLM_warden_of_the_torch_spirit = {
 			picture = generic_political_support
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
@@ -4174,7 +4174,7 @@ ideas = {
 			}
 		}
 
-		CLM_the_home_guard = {
+		CLM_the_home_guard_spirit = {
 			picture = generic_political_support
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
@@ -4259,6 +4259,155 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.025
 				production_speed_buildings_factor = -0.025
 				monthly_population = 0.1
+			}
+		}
+
+		CLM_columbian_volunteers = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 3
+			}
+		}
+
+		CLM_siracusan_influx = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 200
+				research_speed_factor = 0.1
+			}
+		}
+
+		CLM_siracusan_emigration = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = -200
+				research_speed_factor = -0.1
+			}
+		}
+
+		CLM_columbian_pioneers_spirit = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = 0.01
+			}
+		}
+
+		CLM_parliamentary_deadlock = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -1
+			}
+		}
+
+		CLM_real_army_budget = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		CLM_inter_species_army = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = 0.01
+				stability_factor = -0.1
+			}
+		}
+
+		CLM_age_of_reason = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = -0.1
+			}
+		}
+
+		CLM_columbia_incorporated = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		CLM_solidarity_forever = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		CLM_nation_in_arms = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = 0.2
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.2
+				stability_factor = -0.1
+			}
+		}
+
+		CLM_crown_of_columbia = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				political_power_factor = 0.1
+				stability_factor = -0.1
 			}
 		}
 	}

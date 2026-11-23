@@ -84,4 +84,25 @@ characters = {
 			traits = { CLM_public_health_pioneer }
 		}
 	}
+
+	CLM_nataly_lagrange = {
+		name = CLM_nataly_lagrange
+		gender = female
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_female_europe"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CLM_nataly_lagrange
+			allowed = {
+				original_tag = CLM
+			}
+			visible = {
+				has_country_flag = CLM_conet_unlocked
+			}
+			traits = { CLM_computer_prodigy }
+		}
+	}
 }

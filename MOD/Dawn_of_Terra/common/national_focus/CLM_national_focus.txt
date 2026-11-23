@@ -2387,6 +2387,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
+		completion_reward = {
+			custom_effect_tooltip = CLM_hail_victoria_tt
+			hidden_effect = {
+				if = {
+					limit = { country_exists = VCT }
+					add_opinion_modifier = { target = VCT modifier = CLM_victoria_pact }
+					VCT = { add_opinion_modifier = { target = CLM modifier = CLM_victoria_pact } }
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -2430,6 +2441,25 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CLM_hail_siracusa_tt
+			add_timed_idea = {
+				idea = CLM_siracusan_influx
+				days = 120
+			}
+			hidden_effect = {
+				if = {
+					limit = { country_exists = SRC }
+					SRC = {
+						add_timed_idea = {
+							idea = CLM_siracusan_emigration
+							days = 120
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -3180,6 +3210,11 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
+		}
+
+		completion_reward = {
+			set_country_flag = CLM_exp_below_freezing
+			custom_effect_tooltip = CLM_below_freezing_tt
 		}
 	}
 
@@ -5289,7 +5324,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = CLM_warden_of_the_torch
+			add_ideas = CLM_warden_of_the_torch_spirit
 		}
 	}
 
@@ -6274,6 +6309,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
+
+		completion_reward = {
+			country_event = { id = CLM_v7.2 }
+		}
 	}
 
 	focus = {
@@ -6556,6 +6595,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			custom_effect_tooltip = CLM_ge_tt_who_is_vp
+			CLM_ge_adj_who_is_vp = yes
+			add_ideas = CLM_parliamentary_deadlock
+		}
 	}
 
 	focus = {
@@ -6625,6 +6670,12 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CLM_comitaw_slot_tt
+			set_country_flag = CLM_comitaw_slot
+			set_variable = { CLM_dw_sf3 = 1 }
 		}
 	}
 
@@ -6870,6 +6921,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
+		}
+
+		completion_reward = {
+			add_ideas = CLM_columbian_pioneers_spirit
 		}
 	}
 
@@ -7346,6 +7401,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			add_ideas = CLM_real_army_budget
+		}
 	}
 
 	focus = {
@@ -7467,6 +7526,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			158 = {
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					province = 6072
+					instant_build = yes
+				}
+			}
+			army_experience = 25
+		}
 	}
 
 	focus = {
@@ -7481,6 +7552,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = CLM_revise_tactics_reduction
+				cost_reduction = 0.5
+				uses = 4
+				category = land_doctrine
+			}
+		}
 	}
 
 	focus = {
@@ -7494,6 +7574,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
+		}
+
+		completion_reward = {
+			add_ideas = CLM_inter_species_army
 		}
 	}
 
@@ -7785,6 +7869,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			add_ideas = CLM_solidarity_forever
+		}
 	}
 
 	focus = {
@@ -7800,6 +7888,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
+		}
+
+		completion_reward = {
+			add_ideas = CLM_age_of_reason
 		}
 	}
 
@@ -7817,6 +7909,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			add_ideas = CLM_columbia_incorporated
+		}
 	}
 
 	focus = {
@@ -7833,6 +7929,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
+		completion_reward = {
+			add_ideas = CLM_nation_in_arms
+		}
 	}
 
 	focus = {
@@ -7848,6 +7948,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
+		}
+
+		completion_reward = {
+			add_ideas = CLM_crown_of_columbia
 		}
 	}
 
@@ -8196,7 +8300,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 50000
-			add_ideas = CLM_the_home_guard
+			add_ideas = CLM_the_home_guard_spirit
 		}
 	}
 
@@ -9045,6 +9149,52 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = CLM_extra_total_war_unlocked
 			complete_national_focus = CLM_total_war
+		}
+	}
+
+	focus = {
+		id = CLM_conet
+		icon = GFX_focus_research
+		x = 23
+		y = 11
+		cost = 5
+
+		prerequisite = { focus = CLM_no_research_without_borders }
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+			country_event = { id = CLM_v7.1 }
+		}
+	}
+
+	focus = {
+		id = CLM_the_columbian_volunteers
+		icon = GFX_focus_JAP_korean_volunteer_army
+		x = 9
+		y = 18
+		cost = 1
+
+		prerequisite = { focus = CLM_hail_gaul }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLM_volunteers_war_tt
+				LGL = { has_country_flag = terra_story_gaul_war_started }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CLM_columbian_volunteers
+				days = 365
+			}
 		}
 	}
 }

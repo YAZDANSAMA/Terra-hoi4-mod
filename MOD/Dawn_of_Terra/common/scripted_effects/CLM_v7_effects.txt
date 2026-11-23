@@ -1,0 +1,7 @@
+CLM_hk_tick = {
+	if = {
+		limit = { has_active_mission = CLM_high_king_pledge_mission }
+		set_variable = { CLM_hk_gain = num_of_civilian_factories }
+		subtract_from_variable = { CLM_hk_gain = CLM_hk_base }
+	}
+}
