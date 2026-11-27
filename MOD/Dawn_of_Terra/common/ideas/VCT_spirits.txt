@@ -1,7 +1,16 @@
 ideas = {
     country = {
-        # Victoria
-        VCT_victorian_industrial_engine = {
+        # Victoria — starting national spirits (1 January 1028)
+        VCT_aristocratic_parliament = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = 0.02
+            }
+        }
+
+        VCT_victorian_industrial_supremacy = {
             picture = generic_production_bonus
             removal_cost = -1
             modifier = {
@@ -11,34 +20,35 @@ ideas = {
             }
         }
 
-        VCT_imperial_overextension = {
+        VCT_royal_land_system = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.03
+                consumer_goods_factor = 0.05
+            }
+        }
+
+        VCT_fredericks_military_reforms = {
+            picture = generic_infantry_bonus
+            removal_cost = -1
+            modifier = {
+                army_defence_factor = 0.05
+                experience_gain_army_factor = 0.05
+                max_planning_factor = 0.05
+            }
+        }
+
+        VCT_shadow_of_columbia = {
             picture = generic_infantry_bonus
             removal_cost = -1
             modifier = {
                 stability_factor = -0.05
                 political_power_factor = -0.05
-                supply_consumption_factor = 0.05
             }
         }
 
-        VCT_steam_knight_tradition = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                army_defence_factor = 0.05
-                experience_gain_army_factor = 0.10
-                max_planning_factor = 0.05
-            }
-        }
-
-        VCT_gallic_reparations = {
-            picture = generic_infantry_bonus
-            removal_cost = -1
-            modifier = {
-                consumer_goods_factor = 0.2
-            }
-        }
-
+        # Event-driven spirit; intentionally not active at game start.
         VCT_gusev_tracey_pact = {
             picture = generic_infantry_bonus
             removal_cost = -1

@@ -18,11 +18,12 @@ set_popularities = {
     monarchism = 100
 }
 
-# Terra v0.0.46 hotfix starting national spirits
-add_ideas = VCT_victorian_industrial_engine
-add_ideas = VCT_imperial_overextension
-add_ideas = VCT_steam_knight_tradition
-add_ideas = VCT_gallic_reparations
+# Victoria starting national spirits — 1 January 1028
+add_ideas = VCT_aristocratic_parliament
+add_ideas = VCT_victorian_industrial_supremacy
+add_ideas = VCT_royal_land_system
+add_ideas = VCT_fredericks_military_reforms
+add_ideas = VCT_shadow_of_columbia
 
 # Starting transport for the connected 1028 supply network.
 add_equipment_to_stockpile = { type = train_equipment_1 amount = 124 producer = VCT }
